@@ -6,7 +6,7 @@
 
 int main(int argc, char** argv) {
 
-    if (argc != 3) {
+    if (argc != 3) { //despues tiene que ser (argc != 4)
     	puts("\n No se introdujo la cantidad de argumentos necesarios"
     	        "\n   * Primer  argumento: <Archivo de configuracion>"
                 "\n   * Segundo argumento: <Archivo de log>");
