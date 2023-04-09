@@ -20,3 +20,6 @@
 
 	t_config* consola_config;
 	char *ip_kernel, *puerto_kernel;
+
+	void terminar_programa(t_log *logger, t_config* config);//, int conexion_kernel);
+

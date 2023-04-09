@@ -21,4 +21,15 @@ int main(int argc, char** argv) {
 
 	leer_configs(consola_logger, consola_config);
 
+
+	terminar_programa(consola_logger, consola_config);//, conexion_kernel);
+
+	return EXIT_SUCCESS;
+
+}
+void terminar_programa(t_log *logger, t_config* config){//, int conexion_kernel){
+	log_info(logger, "Entro a finalizar el programa");
+	log_destroy(logger);
+	config_destroy(config);
+	//close(conexion_kernel);
 }
