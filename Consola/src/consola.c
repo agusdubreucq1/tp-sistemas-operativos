@@ -6,16 +6,17 @@
 
 int main(int argc, char** argv) {
 
-    if (argc != 3) { //despues tiene que ser (argc != 4)
+    if (argc != 2) { //despues tiene que ser (argc != 3)
     	puts("\n No se introdujo la cantidad de argumentos necesarios"
-    	        "\n   * Primer  argumento: <Archivo de configuracion>"
-                "\n   * Segundo argumento: <Archivo de log>");
+    	        "\n   * Primer  argumento: <Archivo de configuracion>");
+        //       "\n   * Segundo argumento: <Archivo de log>");
     	//		"\n   * Tercer  argumento: <Archivo de pseudocodigo>"); Luego se va a implementar
     	return EXIT_FAILURE;
     }
 
 	consola_config = iniciar_config(argv[1]);
-    consola_logger = iniciar_logger(argv[2], "Consola");
+	consola_logger = iniciar_logger("../../logs/logConsola.log", "Consola");
+    //consola_logger = iniciar_logger(argv[2], "Consola");
 
 	log_info(consola_logger, "¡Consola iniciada correctamente!");
 
