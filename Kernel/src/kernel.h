@@ -13,4 +13,4 @@
 	t_config* kernel_config;
 
 
-void terminar_programa(t_log *logger, t_config *config, int conexion_cpu_interrupt, int conexion_cpu_dispatch, int conexion_memoria);
+//void terminar_programa(t_log *logger, t_config *config, int conexion_cpu_interrupt, int conexion_cpu_dispatch, int conexion_memoria);
