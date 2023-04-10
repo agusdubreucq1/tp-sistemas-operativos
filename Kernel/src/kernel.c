@@ -1,19 +1,18 @@
 #include "kernel.h"
-#include "logger.h"
-#include "config.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <commons/log.h>
+#include <commons/string.h>
 
-int main(int argc, char** argv){
+int main(void){
 
 
 	// ------------------------------------------------------------------- Configs
 
-	kernel_config = iniciar_config("../../config/ker");
-	kernel_logger = iniciar_logger(argv[2], "Kernel");
+	kernel_logger = iniciar_logger("./../logs/logKernel.log", "Kernel");
+	kernel_config = iniciar_config("./../config/Kernel.config");
 
 	leer_configs(kernel_config, kernel_logger);
-
 
 	log_info(kernel_logger, "¡Kernel iniciado correctamente!");
 

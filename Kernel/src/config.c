@@ -3,11 +3,11 @@
 
 t_config* iniciar_config(char* kernel_config){
 	t_config* nuevo_config = config_create(kernel_config);
-		if(nuevo_config == NULL){
-			printf("No se pudo crear a config de Kernel");
-			exit(2);
-		}
-		return nuevo_config;
+	if(nuevo_config == NULL){
+		printf("No se pudo crear a config de Kernel");
+		exit(2);
+	}
+	return nuevo_config;
 }
 
 
@@ -26,7 +26,10 @@ void leer_configs(t_config* kernel_config, t_log* kernel_logger){
 	instancias_recursos				=	config_get_array_value(kernel_config, "INSTANCIAS_RECURSOS");
 
 	loggear_configs(kernel_logger);
+	loggear_Recursos();
+
 }
+
 
 void loggear_configs(t_log* kernel_logger){
 	log_info(kernel_logger, "-------Valores del config-------");
@@ -40,15 +43,18 @@ void loggear_configs(t_log* kernel_logger){
 	log_info(kernel_logger, "Grado Máximo de Multiprogramación = %d", grado_maximo_multiprogramacion);
 }
 
-void loggear_Recursos(char* linea_Recurso){
-	log_info(kernel_logger, "  %s,", linea_Recurso);
+void loggear_Recursos(void){
 
-	log_info(kernel_logger, "RECURSOS = [");
-	string_iterate_lines(recursos, loggear_Recursos);
-	log_info(kernel_logger, "]");
+	log_info(kernel_logger, "--------Recursos----------------");
 
-	log_info(kernel_logger, "INSTANCIAS RECURSOS = [");
-	string_iterate_lines(instancias_recursos, loggear_Recursos);
-	log_info(kernel_logger, "]");
+	int i = 0;
+
+	char** ptr = recursos;
+	for (char* c = *ptr; c; c=*++ptr) {
+		log_info(kernel_logger, "%s %s %s", instancias_recursos[i], " ", c);
+		i++;
+	}
+
 	log_info(kernel_logger, "--------------------------------");
 }
+

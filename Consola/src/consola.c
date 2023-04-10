@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
 	buffer = parsearInstrucciones(argv[2]);
 
 	conexion_kernel = crear_conexion(ip_kernel, puerto_kernel);
-	//handshake(conexion_kernel);
+
 	paquete = crear_paquete();
 
 	agregar_a_paquete(paquete, buffer, strlen(buffer) + 1);
