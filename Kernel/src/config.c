@@ -38,11 +38,10 @@ void loggear_configs(t_log* kernel_logger){
 	log_info(kernel_logger, "Estimacion inicial = %s", estimacion_inicial);
 	log_info(kernel_logger, "HRRN alfa = %s", hrrn_alfa);
 	log_info(kernel_logger, "Grado Máximo de Multiprogramación = %d", grado_maximo_multiprogramacion);
+}
 
-	void loggear_Recursos(char* linea_Recurso){
-		log_info(kernel_logger, "  %s,", linea_Recurso);
-	}
-
+void loggear_Recursos(char* linea_Recurso){
+	log_info(kernel_logger, "  %s,", linea_Recurso);
 
 	log_info(kernel_logger, "RECURSOS = [");
 	string_iterate_lines(recursos, loggear_Recursos);

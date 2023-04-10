@@ -9,14 +9,7 @@ int main(int argc, char** argv){
 
 	// ------------------------------------------------------------------- Configs
 
-    if (argc != 3) {
-        puts("\n No se introdujo la cantidad de argumentos necesarios"
-                "\n   * Primer  argumento: <Archivo de configuracion>"
-                "\n   * Segundo argumento: <Archivo de log>");
-        return EXIT_FAILURE;
-    }
-
-	kernel_config = iniciar_config(argv[1]);
+	kernel_config = iniciar_config("../../config/ker");
 	kernel_logger = iniciar_logger(argv[2], "Kernel");
 
 	leer_configs(kernel_config, kernel_logger);

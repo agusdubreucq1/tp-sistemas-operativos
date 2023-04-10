@@ -39,7 +39,7 @@ typedef struct
 
 int crear_conexion(char* ip, char* puerto);
 //void enviar_mensaje(char* mensaje, int socket_cliente);
-void handshake(int);
+//void handshake(int);
 t_paquete* crear_paquete(void);
 void crear_buffer(t_paquete* paquete);
 void* serializar_paquete(t_paquete* paquete, int bytes);

@@ -38,14 +38,6 @@ int crear_conexion(char *ip, char* puerto)
 	return socket_cliente;
 }
 
-void handshake(int conexion){
-	uint32_t handshake = 1;
-	uint32_t result;
-
-	send(conexion, &handshake, sizeof(uint32_t), NULL);
-	recv(conexion, &result, sizeof(uint32_t), MSG_WAITALL);
-}
-
 t_paquete* crear_paquete(void)
 {
 	t_paquete* paquete = malloc(sizeof(t_paquete));
