@@ -85,6 +85,21 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente)
 
 	send(socket_cliente, a_enviar, bytes, 0);
 
+	/*printf("Datos enviados, esperando respuesta de Kernel... \n");
+	log_info(log_consola,"Datos enviados, esperando respuesta de Kernel...");
+	uint32_t respuesta;
+	recv(socket_cliente, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+
+	if(respuesta == 10){
+		printf("FINALIZACION OK ");
+		log_info(log_consola,"FINALIZACION OK");
+	}
+	else
+	{
+		printf("ERROR DE COMUNICACION ENTRE KERNEL Y CONSOLA \n");
+		log_error(log_consola,"Ha ocurrido un error en la comunicacion entre Kernel y Consola");
+	}*/
+
 	free(a_enviar);
 }
 
@@ -98,4 +113,12 @@ void eliminar_paquete(t_paquete* paquete)
 void liberar_conexion(int socket_cliente)
 {
 	close(socket_cliente);
+}
+
+void handshake(int conexion){
+	uint32_t handshake = 1;
+	uint32_t result;
+
+	send(conexion, &handshake, sizeof(uint32_t), 0);
+	recv(conexion, &result, sizeof(uint32_t), MSG_WAITALL);
 }

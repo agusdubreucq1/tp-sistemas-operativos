@@ -15,7 +15,6 @@ int main(int argc, char** argv) {
 
 	consola_config = iniciar_config(argv[1]);
 	consola_logger = iniciar_logger("../../logs/logConsola.log", "Consola");
-    //consola_logger = iniciar_logger(argv[2], "Consola");
 
 	log_info(consola_logger, "¡Consola iniciada correctamente!");
 
@@ -24,6 +23,7 @@ int main(int argc, char** argv) {
 	buffer = parsearInstrucciones(argv[2]);
 
 	conexion_kernel = crear_conexion(ip_kernel, puerto_kernel);
+	handshake(conexion_kernel);
 
 	paquete = crear_paquete();
 

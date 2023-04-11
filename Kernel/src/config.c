@@ -18,6 +18,7 @@ void leer_configs(t_config* kernel_config, t_log* kernel_logger){
 	puerto_filesystem 				= 	config_get_string_value(kernel_config,"PUERTO_FILESYSTEM");
 	ip_cpu 							=	config_get_string_value(kernel_config,"IP_CPU");
 	puerto_cpu 						=	config_get_string_value(kernel_config, "PUERTO_CPU");
+	puerto_escucha 					=	config_get_string_value(kernel_config, "PUERTO_ESCUCHA");
 	algoritmo_planificacion			=	config_get_string_value(kernel_config, "ALGORITMO_PLANIFICACION");
 	estimacion_inicial				=	config_get_string_value(kernel_config, "ESTIMACION_INICIAL");
 	hrrn_alfa						= 	config_get_string_value(kernel_config, "HRRN_ALFA");
@@ -36,7 +37,10 @@ void loggear_configs(t_log* kernel_logger){
 	log_info(kernel_logger, "IP Memoria = %s", ip_memoria);
 	log_info(kernel_logger, "Puerto Memoria = %s", puerto_memoria);
 	log_info(kernel_logger, "IP File System = %s", ip_filesystem);
-	log_info(kernel_logger, "Puerto File System = %s", puerto_cpu);
+	log_info(kernel_logger, "Puerto File System = %s", puerto_filesystem);
+	log_info(kernel_logger, "IP CPU = %s", ip_cpu);
+	log_info(kernel_logger, "Puerto CPU = %s", puerto_cpu);
+	log_info(kernel_logger, "Puerto Escucha = %s", puerto_escucha);
 	log_info(kernel_logger, "Algoritmo de Planificación = %s", algoritmo_planificacion);
 	log_info(kernel_logger, "Estimacion inicial = %s", estimacion_inicial);
 	log_info(kernel_logger, "HRRN alfa = %s", hrrn_alfa);
