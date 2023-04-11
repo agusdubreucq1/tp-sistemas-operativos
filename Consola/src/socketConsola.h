@@ -35,6 +35,12 @@ typedef struct
 	t_buffer* buffer;
 } t_paquete;
 
+// ------------------------------------------------------------------------------------------
+// -- Logger del proceso --
+// ------------------------------------------------------------------------------------------
+
+extern t_log* consola_logger;
+
 
 
 int crear_conexion(char* ip, char* puerto);
@@ -45,7 +51,7 @@ void crear_buffer(t_paquete* paquete);
 void* serializar_paquete(t_paquete* paquete, int bytes);
 //t_paquete* crear_super_paquete(void);
 void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio);
-void enviar_paquete(t_paquete* paquete, int socket_cliente);
+void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log *logger);
 void liberar_conexion(int socket_cliente);
 void eliminar_paquete(t_paquete* paquete);
 

@@ -97,7 +97,24 @@ t_list* recibir_paquete(int socket_cliente)
 		desplazamiento+=tamanio;
 		list_add(valores, valor);
 	}
+
+	//printf("TTTTTTTTT");
+	//printf("\n %i \n", desplazamiento);
+	//uint32_t handshake = 244;
+	//uint32_t handshake;
+	handshake = desplazamiento + sizeof(uint32_t) * 2;
+	send(socket_cliente, &handshake, sizeof(uint32_t), 0);
 	free(buffer);
 	return valores;
-	return NULL;
 }
+
+/*void verificarHandshake(int conexion, uint32_t respuestaOk, uint32_t resultOk, uint32_t resultError){
+	uint32_t respuesta;
+
+	recv(cliente_consola, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+	if(respuesta == respuestaOk)
+	   send(conexion, &resultOk, sizeof(uint32_t), 0);
+	else
+	   send(conexion, &resultError, sizeof(uint32_t), 0);
+}*/
+

@@ -29,7 +29,7 @@ typedef enum
 // -- Server del proceso --
 // ------------------------------------------------------------------------------------------
 
-
+	extern uint32_t handshake;
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
@@ -56,5 +56,6 @@ int esperar_cliente(int);
 t_list* recibir_paquete(int);
 void recibir_mensaje(int);
 int recibir_operacion(int);
+//void verificarHandshake(int conexion, uint32_t respuestaOk, uint32_t resultOk, uint32_t resultError);
 
 #endif /* SERVERKERNEL_H_ */

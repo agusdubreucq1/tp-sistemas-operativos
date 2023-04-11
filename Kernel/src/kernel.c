@@ -13,24 +13,29 @@ int main(void){
 
 	log_info(kernel_logger, "¡Kernel iniciado correctamente!");
 
-
-
-	int server_kernel = iniciar_servidor();
+	server_kernel = iniciar_servidor();
 	log_info(kernel_logger, "Servidor listo para recibir al cliente");
-	int cliente_consola = esperar_cliente(server_kernel);
 
-	uint32_t handshake;
-	uint32_t resultOk = 0;
-	uint32_t resultError = -1;
+	pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
+	pthread_join(atender_consolas, NULL);
 
-	recv(cliente_consola, &handshake, sizeof(uint32_t), MSG_WAITALL);
-	if(handshake == 1)
-	   send(cliente_consola, &resultOk, sizeof(uint32_t), 0);
-	else
-	   send(cliente_consola, &resultError, sizeof(uint32_t), 0);
+	return EXIT_SUCCESS;
+}
 
-	t_list* lista;
+void* recibirProcesos() {
 	while (1) {
+		int cliente_consola = esperar_cliente(server_kernel);
+
+		uint32_t resultOk = 0;
+		uint32_t resultError = -1;
+
+		recv(cliente_consola, &handshake, sizeof(uint32_t), MSG_WAITALL);
+		if(handshake == 1)
+		   send(cliente_consola, &resultOk, sizeof(uint32_t), 0);
+		else
+		   send(cliente_consola, &resultError, sizeof(uint32_t), 0);
+
+		t_list* lista;
 		int cod_op = recibir_operacion(cliente_consola);
 		switch (cod_op) {
 		case MENSAJE:
@@ -41,16 +46,9 @@ int main(void){
 			log_info(kernel_logger, "Me llegaron los siguientes valores:");
 			list_iterate(lista, (void*)iterator);
 			break;
-		case -1:
-			log_error(kernel_logger, "el cliente se desconecto. Terminando servidor");
-			return EXIT_FAILURE;
-		default:
-			log_warning(kernel_logger,
-					"Operacion desconocida. No quieras meter la pata");
-			break;
 		}
 	}
-	return EXIT_SUCCESS;
+	return "";
 }
 
 

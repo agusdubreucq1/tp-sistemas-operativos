@@ -27,11 +27,15 @@ int crear_conexion(char *ip, char* puerto)
 
 	getaddrinfo(ip, puerto, &hints, &server_info);
 
-	// Ahora vamos a crear el socket.
 	int socket_cliente = socket(server_info->ai_family, server_info->ai_socktype, server_info->ai_protocol);
 
-	// Ahora que tenemos el socket, vamos a conectarlo
-	connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen);
+	int resultado_conexion = connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen);
+
+	while(resultado_conexion == -1){
+		log_info(consola_logger, "Hubo un fallo al conectarse a la direccion %s:%s, reintentando...", ip, puerto);
+		sleep(1);
+		resultado_conexion = connect(socket_cliente, server_info -> ai_addr, server_info -> ai_addrlen );
+	}
 
 	freeaddrinfo(server_info);
 
@@ -78,27 +82,25 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 	paquete->buffer->size += tamanio + sizeof(int);
 }
 
-void enviar_paquete(t_paquete* paquete, int socket_cliente)
+void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log *logger)
 {
 	int bytes = paquete->buffer->size + 2*sizeof(int);
 	void* a_enviar = serializar_paquete(paquete, bytes);
 
 	send(socket_cliente, a_enviar, bytes, 0);
 
-	/*printf("Datos enviados, esperando respuesta de Kernel... \n");
-	log_info(log_consola,"Datos enviados, esperando respuesta de Kernel...");
+	log_info(consola_logger,"Datos enviados, esperando respuesta de Kernel...");
+
 	uint32_t respuesta;
 	recv(socket_cliente, &respuesta, sizeof(uint32_t), MSG_WAITALL);
 
-	if(respuesta == 10){
-		printf("FINALIZACION OK ");
-		log_info(log_consola,"FINALIZACION OK");
+	if(respuesta == bytes){
+		log_info(consola_logger,"Datos enviados correctamente");
 	}
 	else
 	{
-		printf("ERROR DE COMUNICACION ENTRE KERNEL Y CONSOLA \n");
-		log_error(log_consola,"Ha ocurrido un error en la comunicacion entre Kernel y Consola");
-	}*/
+		log_error(consola_logger,"Ha ocurrido un error en la comunicacion entre Kernel y Consola");
+	}
 
 	free(a_enviar);
 }
@@ -121,4 +123,9 @@ void handshake(int conexion){
 
 	send(conexion, &handshake, sizeof(uint32_t), 0);
 	recv(conexion, &result, sizeof(uint32_t), MSG_WAITALL);
+
+	if(result == 0)
+		log_info(consola_logger,"Conexion establecida");
+	else
+		log_error(consola_logger,"Error en la comunicacion");
 }
