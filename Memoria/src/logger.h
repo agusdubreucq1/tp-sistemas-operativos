@@ -1,4 +1,8 @@
 #ifndef LOGGER_H_
+#define LOGGER_H_
+
+#ifndef LOGGER
+#define LOGGER
 
 #include <stdio.h>
 #include <unistd.h>

@@ -1,0 +1,75 @@
+[INFO] 00:37:21:231 memoria/(10223:10223): Logger creado
+[INFO] 00:39:18:907 memoria/(10350:10350): Logger creado
+[INFO] 00:43:42:556 memoria/(10451:10451): Logger creado
+[INFO] 00:46:10:301 memoria/(10551:10551): Logger creado
+[INFO] 00:47:25:395 memoria/(10627:10627): Logger creado
+[INFO] 00:48:48:113 memoria/(10719:10719): Logger creado
+[INFO] 00:50:37:641 memoria/(10879:10879): Logger creado
+[INFO] 00:51:52:446 memoria/(10930:10930): Logger creado
+[INFO] 00:54:04:628 memoria/(11045:11045): Logger creado
+[INFO] 00:56:04:973 memoria/(11106:11106): Logger creado
+[INFO] 00:59:45:301 memoria/(11267:11267): Logger creado
+[INFO] 01:01:13:763 memoria/(11352:11352): Logger creado
+[INFO] 01:02:14:924 memoria/(11447:11447): Logger creado
+[INFO] 01:04:53:025 memoria/(11605:11605): Logger creado
+[INFO] 01:05:57:799 memoria/(11715:11715): Logger creado
+[INFO] 01:05:57:800 memoria/(11715:11715): -------Valores del config-------
+[INFO] 01:05:57:800 memoria/(11715:11715): puerto_escucha = 8002
+[INFO] 01:05:57:800 memoria/(11715:11715): tamaño memoria = 4096
+[INFO] 01:05:57:800 memoria/(11715:11715): tamaño segmento = 128
+[INFO] 01:05:57:801 memoria/(11715:11715): cantidad de segmentos = 16
+[INFO] 01:05:57:801 memoria/(11715:11715): retardo memoria = 1000
+[INFO] 01:05:57:801 memoria/(11715:11715): retardo compactacion = 60000
+[INFO] 01:05:57:801 memoria/(11715:11715): algoritmo asignacion = BEST
+[INFO] 01:05:57:801 memoria/(11715:11715): --------------------------------
+[INFO] 01:07:28:885 memoria/(11814:11814): Logger creado
+[INFO] 01:07:28:886 memoria/(11814:11814): -------Valores del config-------
+[INFO] 01:07:28:886 memoria/(11814:11814): puerto_escucha = 8002
+[INFO] 01:07:28:886 memoria/(11814:11814): tamaño memoria = 4096
+[INFO] 01:07:28:887 memoria/(11814:11814): tamaño segmento = 128
+[INFO] 01:07:28:887 memoria/(11814:11814): cantidad de segmentos = 16
+[INFO] 01:07:28:887 memoria/(11814:11814): retardo memoria = 1000
+[INFO] 01:07:28:887 memoria/(11814:11814): retardo compactacion = 60000
+[INFO] 01:07:28:887 memoria/(11814:11814): algoritmo asignacion = BEST
+[INFO] 01:07:28:887 memoria/(11814:11814): --------------------------------
+[INFO] 14:06:35:268 memoria/(2682:2682): Logger creado
+[INFO] 14:06:35:268 memoria/(2682:2682): -------Valores del config-------
+[INFO] 14:06:35:268 memoria/(2682:2682): puerto_escucha = 8002
+[INFO] 14:06:35:268 memoria/(2682:2682): tamaño memoria = 4096
+[INFO] 14:06:35:268 memoria/(2682:2682): tamaño segmento = 128
+[INFO] 14:06:35:268 memoria/(2682:2682): cantidad de segmentos = 16
+[INFO] 14:06:35:268 memoria/(2682:2682): retardo memoria = 1000
+[INFO] 14:06:35:268 memoria/(2682:2682): retardo compactacion = 60000
+[INFO] 14:06:35:268 memoria/(2682:2682): algoritmo asignacion = BEST
+[INFO] 14:06:35:269 memoria/(2682:2682): --------------------------------
+[INFO] 14:45:33:860 memoria/(4587:4587): Logger creado
+[INFO] 14:45:33:863 memoria/(4587:4587): -------Valores del config-------
+[INFO] 14:45:33:866 memoria/(4587:4587): puerto_escucha = 8002
+[INFO] 14:45:33:867 memoria/(4587:4587): tamaño memoria = 4096
+[INFO] 14:45:33:867 memoria/(4587:4587): tamaño segmento = 128
+[INFO] 14:45:33:867 memoria/(4587:4587): cantidad de segmentos = 16
+[INFO] 14:45:33:867 memoria/(4587:4587): retardo memoria = 1000
+[INFO] 14:45:33:867 memoria/(4587:4587): retardo compactacion = 60000
+[INFO] 14:45:33:867 memoria/(4587:4587): algoritmo asignacion = BEST
+[INFO] 14:45:33:869 memoria/(4587:4587): --------------------------------
+[INFO] 14:47:03:183 memoria/(4784:4784): Logger creado
+[INFO] 14:47:03:190 memoria/(4784:4784): -------Valores del config-------
+[INFO] 14:47:03:197 memoria/(4784:4784): puerto_escucha = 8002
+[INFO] 14:47:03:197 memoria/(4784:4784): tamaño memoria = 4096
+[INFO] 14:47:03:198 memoria/(4784:4784): tamaño segmento = 128
+[INFO] 14:47:03:198 memoria/(4784:4784): cantidad de segmentos = 16
+[INFO] 14:47:03:198 memoria/(4784:4784): retardo memoria = 1000
+[INFO] 14:47:03:198 memoria/(4784:4784): retardo compactacion = 60000
+[INFO] 14:47:03:198 memoria/(4784:4784): algoritmo asignacion = BEST
+[INFO] 14:47:03:198 memoria/(4784:4784): --------------------------------
+[INFO] 15:32:31:329 memoria/(5121:5121): Logger creado
+[INFO] 15:32:31:336 memoria/(5121:5121): -------Valores del config-------
+[INFO] 15:32:31:337 memoria/(5121:5121): puerto_escucha = 8002
+[INFO] 15:32:31:338 memoria/(5121:5121): tamaño memoria = 4096
+[INFO] 15:32:31:340 memoria/(5121:5121): tamaño segmento = 128
+[INFO] 15:32:31:340 memoria/(5121:5121): cantidad de segmentos = 16
+[INFO] 15:32:31:340 memoria/(5121:5121): retardo memoria = 1000
+[INFO] 15:32:31:340 memoria/(5121:5121): retardo compactacion = 60000
+[INFO] 15:32:31:340 memoria/(5121:5121): algoritmo asignacion = BEST
+[INFO] 15:32:31:340 memoria/(5121:5121): --------------------------------
+[INFO] 15:32:31:340 memoria/(5121:5121): ¡Memoria iniciado correctamente!

@@ -1,17 +1,17 @@
-/*
- ============================================================================
- Name        : Memoria.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "Memoria.h"
+
+
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+
+    memoria_logger = iniciar_logger("./../logs/logMemoria.log", "memoria");
+	memoria_config = iniciar_config("./../config/Memoria.config");
+
+	leer_configs(memoria_config, memoria_logger);
+	log_info(memoria_logger, "¡Memoria iniciado correctamente!");
+
 	return EXIT_SUCCESS;
+
 }

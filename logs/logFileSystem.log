@@ -182,3 +182,29 @@
 [INFO] 11:32:54:630 FileSystem/(8133:8133): Servidor listo para recibir al cliente
 [INFO] 11:32:55:185 FileSystem/(8133:8133): Se conecto un cliente!
 [INFO] 11:32:55:185 FileSystem/(8133:8133): Me llego el mensaje Soy el Kernel
+[INFO] 15:32:50:175 FileSystem/(5213:5213): Logger creado
+[INFO] 15:32:50:180 FileSystem/(5213:5213): -------Valores del config-------
+[INFO] 15:32:50:185 FileSystem/(5213:5213): IP Memoria = 127.0.0.1
+[INFO] 15:32:50:185 FileSystem/(5213:5213): Puerto Memoria = 8003
+[INFO] 15:32:50:185 FileSystem/(5213:5213): Puerto Escucha = 8002
+[INFO] 15:32:50:185 FileSystem/(5213:5213): Path Superbloque = /home/utnso/fs/superbloque.dat
+[INFO] 15:32:50:185 FileSystem/(5213:5213): Path Bitmap = /home/utnso/fs/bitmap.dat
+[INFO] 15:32:50:185 FileSystem/(5213:5213): Path Bloques = /home/utnso/fs/bloques.dat
+[INFO] 15:32:50:187 FileSystem/(5213:5213): Path FCB = /home/utnso/fs/fcb
+[INFO] 15:32:50:187 FileSystem/(5213:5213): Retardo Acceso Bloque = 15000
+[INFO] 15:32:50:187 FileSystem/(5213:5213): ¡File System iniciado correctamente!
+[TRACE] 15:32:50:187 FileSystem/(5213:5213): Listo para escuchar a mi cliente
+[INFO] 15:32:50:187 FileSystem/(5213:5213): Servidor listo para recibir al cliente
+[INFO] 15:39:50:185 FileSystem/(5569:5569): Logger creado
+[INFO] 15:39:50:188 FileSystem/(5569:5569): -------Valores del config-------
+[INFO] 15:39:50:194 FileSystem/(5569:5569): IP Memoria = 127.0.0.1
+[INFO] 15:39:50:194 FileSystem/(5569:5569): Puerto Memoria = 8003
+[INFO] 15:39:50:194 FileSystem/(5569:5569): Puerto Escucha = 8002
+[INFO] 15:39:50:194 FileSystem/(5569:5569): Path Superbloque = /home/utnso/fs/superbloque.dat
+[INFO] 15:39:50:194 FileSystem/(5569:5569): Path Bitmap = /home/utnso/fs/bitmap.dat
+[INFO] 15:39:50:194 FileSystem/(5569:5569): Path Bloques = /home/utnso/fs/bloques.dat
+[INFO] 15:39:50:194 FileSystem/(5569:5569): Path FCB = /home/utnso/fs/fcb
+[INFO] 15:39:50:195 FileSystem/(5569:5569): Retardo Acceso Bloque = 15000
+[INFO] 15:39:50:195 FileSystem/(5569:5569): ¡File System iniciado correctamente!
+[TRACE] 15:39:50:195 FileSystem/(5569:5569): Listo para escuchar a mi cliente
+[INFO] 15:39:50:195 FileSystem/(5569:5569): Servidor listo para recibir al cliente

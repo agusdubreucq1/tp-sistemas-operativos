@@ -7,10 +7,7 @@
 #include <commons/config.h>
 #include <commons/string.h>
 #include <commons/log.h>
-
-extern char* ip_memoria;
-extern char* puerto_interrupt;
-extern char* puerto_dispatch;
+#include "logger.h"
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
@@ -21,15 +18,14 @@ extern char* puerto_dispatch;
 // -- Variables del archivo de configuración --
 // ------------------------------------------------------------------------------------------
 
-	extern u_int32_t tam_max_segmentos, retardo_instruccion;
-	extern char *ip_memoria, *puerto_memoria, *puerto_escucha, *reemplazo_tlb, *puerto_memoria;
+	extern char *retardo_instruccion, *tam_max_segmentos;
+	extern char *ip_memoria, *puerto_memoria, *puerto_escucha;
 
 
 // --------------------------------------
 
 t_config* iniciar_config(char*);
-
-void leer_configs(t_config*);
-void imprimir_configs();
+void leer_configs(t_config* cpu_config, t_log* cpu_logger);
+void loggear_configs(t_log* cpu_logger);
 
 #endif
