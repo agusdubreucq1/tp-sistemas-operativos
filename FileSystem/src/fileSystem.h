@@ -1,0 +1,24 @@
+/*
+ * filesystem.h
+ *
+ *  Created on: Apr 12, 2023
+ *      Author: utnso
+ */
+
+#ifndef FILESYSTEM_H_
+#define FILESYSTEM_H_
+
+#include "logger.h"
+#include "config.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <commons/log.h>
+#include <commons/string.h>
+#include <commons/config.h>
+
+
+t_log* fileSystem_logger;
+t_config* fileSystem_config;
+
+#endif /* FILESYSTEM_H_ */
