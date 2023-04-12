@@ -6,8 +6,8 @@
 
 int main(void) {
 
-    memoria_logger = iniciar_logger("./../logs/logMemoria.log", "memoria");
-	memoria_config = iniciar_config("./../config/Memoria.config");
+    memoria_logger = iniciar_logger("../../logs/logMemoria.log", "memoria");
+	memoria_config = iniciar_config("../../config/Memoria.config");
 
 	leer_configs(memoria_config, memoria_logger);
 	log_info(memoria_logger, "¡Memoria iniciado correctamente!");
