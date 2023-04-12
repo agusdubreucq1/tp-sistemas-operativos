@@ -9,14 +9,16 @@
 #include <commons/string.h>
 #include <commons/collections/list.h>
 
-	extern t_log* consola_logger;
-
 // ------------------------------------------------------------------------------------------
 // -- Configs --
 // ------------------------------------------------------------------------------------------
-	extern t_config* consola_config;
+
 	extern char *ip_kernel, *puerto_kernel;
 
-t_log* iniciar_logger(char* path, char* nombre_modulo);
+// ------------------------------------------------------------------------------------------
+// -- Funciones del proceso --
+// ------------------------------------------------------------------------------------------
+
+	t_log* iniciar_logger(char* path, char* nombre_modulo);
 
 #endif

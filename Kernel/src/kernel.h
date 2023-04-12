@@ -11,22 +11,22 @@
 
 #include "logger.h"
 #include "config.h"
-#include "serverKernel.h"
+#include "client.h"
 #include <commons/log.h>
 #include <pthread.h>
+#include "server.h"
 
-typedef struct {
-	uint32_t size;
-	void* stream;
-} t_buffer;
+// ------------------------------------------------------------------------------------------
+// -- Socket del proceso --
+// ------------------------------------------------------------------------------------------
 
-	uint32_t handshake;
+	uint32_t respuesta;
 	uint32_t resultOk;
 	uint32_t resultError;
 	pthread_t atender_consolas;
-
+	pthread_t conexionKernel;
 	int server_kernel;
-	t_buffer* buffer;
+	int socket_fileSystem;
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
@@ -48,7 +48,8 @@ typedef struct {
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
-void* recibirProcesos();
-void iterator(char* value);
+	void* conectarFileSystem();
+	void* recibirProcesos();
+	void iterator(char* value);
 
 #endif /* KERNEL_H_ */

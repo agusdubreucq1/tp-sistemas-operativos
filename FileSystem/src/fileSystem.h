@@ -10,6 +10,7 @@
 
 #include "logger.h"
 #include "config.h"
+#include "server.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -29,7 +30,16 @@
 
 	t_config* fileSystem_config;
 
-	char *file_ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
-	char *file_path_bitmap, *path_bloques, *path_fcb, *retardo_acceso_bloque;
+	char *ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
+	char *path_bitmap, *path_bloques, *path_fcb, *retardo_acceso_bloque;
+
+// ------------------------------------------------------------------------------------------
+// -- Server del proceso --
+// ------------------------------------------------------------------------------------------
+
+	uint32_t handshake;
+	int server_fileSystem;
+
+
 
 #endif /* FILESYSTEM_H_ */

@@ -16,10 +16,26 @@ int main(void){
 	server_kernel = iniciar_servidor();
 	log_info(kernel_logger, "Servidor listo para recibir al cliente");
 
+	pthread_create(&conexionKernel, NULL, conectarFileSystem, NULL);
+	pthread_detach(conexionKernel);
 	pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
 	pthread_join(atender_consolas, NULL);
 
 	return EXIT_SUCCESS;
+}
+
+void* conectarFileSystem(){
+	socket_fileSystem = crear_conexion(ip_filesystem, puerto_filesystem);
+	respuesta = handshake(socket_fileSystem);
+	if(respuesta == 0) {
+		log_info(kernel_logger, "Conexion establecida con el File System");
+	} else {
+		log_error(kernel_logger, "Error en la conexión con el File System");
+		return "";
+	}
+
+	enviar_mensaje("Soy el Kernel", socket_fileSystem);
+	return "";
 }
 
 void* recibirProcesos() {
@@ -29,8 +45,8 @@ void* recibirProcesos() {
 		uint32_t resultOk = 0;
 		uint32_t resultError = -1;
 
-		recv(cliente_consola, &handshake, sizeof(uint32_t), MSG_WAITALL);
-		if(handshake == 1)
+		recv(cliente_consola, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+		if(respuesta == 1)
 		   send(cliente_consola, &resultOk, sizeof(uint32_t), 0);
 		else
 		   send(cliente_consola, &resultError, sizeof(uint32_t), 0);
