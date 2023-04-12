@@ -13,6 +13,7 @@ int main(int argc, char** argv) {
     	return EXIT_FAILURE;
     }
 
+
 	consola_config = iniciar_config(argv[1]);
 	consola_logger = iniciar_logger("../../logs/logConsola.log", "Consola");
 
