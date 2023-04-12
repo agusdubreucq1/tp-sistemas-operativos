@@ -39,7 +39,7 @@
 
 	uint32_t handshake;
 	int server_fileSystem;
-
+	void abrirSocketKernel();
 
 
 #endif /* FILESYSTEM_H_ */

@@ -251,3 +251,18 @@
 [INFO] 18:37:28:114 FileSystem/(3242:3242): Servidor listo para recibir al cliente
 [INFO] 18:37:39:848 FileSystem/(3242:3242): Se conecto un cliente!
 [INFO] 18:37:39:849 FileSystem/(3242:3242): Me llego el mensaje Soy el Kernel
+[INFO] 18:51:14:164 FileSystem/(3612:3612): Logger creado
+[INFO] 18:51:14:164 FileSystem/(3612:3612): -------Valores del config-------
+[INFO] 18:51:14:164 FileSystem/(3612:3612): IP Memoria = 127.0.0.1
+[INFO] 18:51:14:164 FileSystem/(3612:3612): Puerto Memoria = 8003
+[INFO] 18:51:14:164 FileSystem/(3612:3612): Puerto Escucha = 8002
+[INFO] 18:51:14:164 FileSystem/(3612:3612): Path Superbloque = /home/utnso/fs/superbloque.dat
+[INFO] 18:51:14:164 FileSystem/(3612:3612): Path Bitmap = /home/utnso/fs/bitmap.dat
+[INFO] 18:51:14:164 FileSystem/(3612:3612): Path Bloques = /home/utnso/fs/bloques.dat
+[INFO] 18:51:14:164 FileSystem/(3612:3612): Path FCB = /home/utnso/fs/fcb
+[INFO] 18:51:14:164 FileSystem/(3612:3612): Retardo Acceso Bloque = 15000
+[INFO] 18:51:14:164 FileSystem/(3612:3612): ¡File System iniciado correctamente!
+[TRACE] 18:51:14:165 FileSystem/(3612:3612): Listo para escuchar a mi cliente
+[INFO] 18:51:14:165 FileSystem/(3612:3612): Servidor listo para recibir al cliente
+[INFO] 18:51:29:152 FileSystem/(3612:3612): Se conecto un cliente!
+[INFO] 18:51:29:152 FileSystem/(3612:3612): Me llego el mensaje Soy el Kernel

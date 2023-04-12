@@ -19,6 +19,12 @@ int main(void){
 	server_fileSystem = iniciar_servidor();
 	log_info(fileSystem_logger, "Servidor listo para recibir al cliente");
 
+	abrirSocketKernel();
+
+	return EXIT_SUCCESS;
+}
+
+void abrirSocketKernel(){
 	int socket_Kernel = esperar_cliente(server_fileSystem);
 
 	uint32_t resultOk = 0;
@@ -36,6 +42,4 @@ int main(void){
 		recibir_mensaje(socket_Kernel);
 		break;
 	}
-
-	return EXIT_SUCCESS;
 }
