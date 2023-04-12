@@ -1,0 +1,34 @@
+[INFO] 00:37:21:231 memoria/(10223:10223): Logger creado
+[INFO] 00:39:18:907 memoria/(10350:10350): Logger creado
+[INFO] 00:43:42:556 memoria/(10451:10451): Logger creado
+[INFO] 00:46:10:301 memoria/(10551:10551): Logger creado
+[INFO] 00:47:25:395 memoria/(10627:10627): Logger creado
+[INFO] 00:48:48:113 memoria/(10719:10719): Logger creado
+[INFO] 00:50:37:641 memoria/(10879:10879): Logger creado
+[INFO] 00:51:52:446 memoria/(10930:10930): Logger creado
+[INFO] 00:54:04:628 memoria/(11045:11045): Logger creado
+[INFO] 00:56:04:973 memoria/(11106:11106): Logger creado
+[INFO] 00:59:45:301 memoria/(11267:11267): Logger creado
+[INFO] 01:01:13:763 memoria/(11352:11352): Logger creado
+[INFO] 01:02:14:924 memoria/(11447:11447): Logger creado
+[INFO] 01:04:53:025 memoria/(11605:11605): Logger creado
+[INFO] 01:05:57:799 memoria/(11715:11715): Logger creado
+[INFO] 01:05:57:800 memoria/(11715:11715): -------Valores del config-------
+[INFO] 01:05:57:800 memoria/(11715:11715): puerto_escucha = 8002
+[INFO] 01:05:57:800 memoria/(11715:11715): tamaño memoria = 4096
+[INFO] 01:05:57:800 memoria/(11715:11715): tamaño segmento = 128
+[INFO] 01:05:57:801 memoria/(11715:11715): cantidad de segmentos = 16
+[INFO] 01:05:57:801 memoria/(11715:11715): retardo memoria = 1000
+[INFO] 01:05:57:801 memoria/(11715:11715): retardo compactacion = 60000
+[INFO] 01:05:57:801 memoria/(11715:11715): algoritmo asignacion = BEST
+[INFO] 01:05:57:801 memoria/(11715:11715): --------------------------------
+[INFO] 01:07:28:885 memoria/(11814:11814): Logger creado
+[INFO] 01:07:28:886 memoria/(11814:11814): -------Valores del config-------
+[INFO] 01:07:28:886 memoria/(11814:11814): puerto_escucha = 8002
+[INFO] 01:07:28:886 memoria/(11814:11814): tamaño memoria = 4096
+[INFO] 01:07:28:887 memoria/(11814:11814): tamaño segmento = 128
+[INFO] 01:07:28:887 memoria/(11814:11814): cantidad de segmentos = 16
+[INFO] 01:07:28:887 memoria/(11814:11814): retardo memoria = 1000
+[INFO] 01:07:28:887 memoria/(11814:11814): retardo compactacion = 60000
+[INFO] 01:07:28:887 memoria/(11814:11814): algoritmo asignacion = BEST
+[INFO] 01:07:28:887 memoria/(11814:11814): --------------------------------
