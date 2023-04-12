@@ -4,3 +4,25 @@
 [INFO] 23:41:22:422 FileSystem/(5532:5532): Logger creado
 [INFO] 23:41:22:442 FileSystem/(5532:5532): ¡File System iniciado correctamente!
 [INFO] 00:42:48:801 FileSystem/(3013:3013): Logger creado
+[INFO] 02:04:58:634 FileSystem/(9290:9290): Logger creado
+[INFO] 02:04:58:643 FileSystem/(9290:9290): ¡Kernel iniciado correctamente!
+[INFO] 02:04:58:643 FileSystem/(9290:9290): -------Valores del config-------
+[INFO] 02:04:58:643 FileSystem/(9290:9290): IP Memoria = 127.0.0.1
+[INFO] 02:04:58:644 FileSystem/(9290:9290): Puerto Memoria = 127.0.0.1
+[INFO] 02:04:58:644 FileSystem/(9290:9290): Puerto Escucha = 15471
+[INFO] 02:04:58:644 FileSystem/(9290:9290): Path Superbloque = /home/utnso/fs/superbloque.dat
+[INFO] 02:04:58:644 FileSystem/(9290:9290): Path Bitmap = /home/utnso/fs/bitmap.dat
+[INFO] 02:04:58:644 FileSystem/(9290:9290): Path Bloques = /home/utnso/fs/bloques.dat
+[INFO] 02:04:58:644 FileSystem/(9290:9290): Path FCB = /home/utnso/fs/fcb
+[INFO] 02:04:58:644 FileSystem/(9290:9290): Retardo Acceso Bloque = 15000
+[INFO] 02:10:48:381 FileSystem/(9816:9816): Logger creado
+[INFO] 02:10:48:383 FileSystem/(9816:9816): ¡Kernel iniciado correctamente!
+[INFO] 02:10:48:386 FileSystem/(9816:9816): -------Valores del config-------
+[INFO] 02:10:48:389 FileSystem/(9816:9816): IP Memoria = 127.0.0.1
+[INFO] 02:10:48:391 FileSystem/(9816:9816): Puerto Memoria = 127.0.0.1
+[INFO] 02:10:48:392 FileSystem/(9816:9816): Puerto Escucha = 15471
+[INFO] 02:10:48:392 FileSystem/(9816:9816): Path Superbloque = /home/utnso/fs/superbloque.dat
+[INFO] 02:10:48:392 FileSystem/(9816:9816): Path Bitmap = /home/utnso/fs/bitmap.dat
+[INFO] 02:10:48:392 FileSystem/(9816:9816): Path Bloques = /home/utnso/fs/bloques.dat
+[INFO] 02:10:48:392 FileSystem/(9816:9816): Path FCB = /home/utnso/fs/fcb
+[INFO] 02:10:48:392 FileSystem/(9816:9816): Retardo Acceso Bloque = 15000
