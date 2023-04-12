@@ -18,10 +18,19 @@
 // -- Logger del proceso --
 // ------------------------------------------------------------------------------------------
 
-extern t_log* fileSystem_logger;
-extern t_config* fileSystem_config;
-extern char *file_ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
-extern char *file_path_bitmap, *path_bloques, *path_fcb, *retardo_acceso_bloque;
+	extern t_log* fileSystem_logger;
+
+// ------------------------------------------------------------------------------------------
+// -- Config del proceso --
+// ------------------------------------------------------------------------------------------
+
+	extern t_config* fileSystem_config;
+	extern char *file_ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
+	extern char *file_path_bitmap, *path_bloques, *path_fcb, *retardo_acceso_bloque;
+
+// ------------------------------------------------------------------------------------------
+// -- Funciones del proceso --
+// ------------------------------------------------------------------------------------------
 
 t_config* iniciar_config(char* kernel_config);
 void leer_configs(t_config* kernel_config, t_log* fileSystem_logger);

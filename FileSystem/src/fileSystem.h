@@ -17,11 +17,19 @@
 #include <commons/string.h>
 #include <commons/config.h>
 
+// ------------------------------------------------------------------------------------------
+// -- Logger del proceso --
+// ------------------------------------------------------------------------------------------
 
-t_log* fileSystem_logger;
-t_config* fileSystem_config;
+	t_log* fileSystem_logger;
 
-char *file_ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
-char *file_path_bitmap, *path_bloques, *path_fcb, *retardo_acceso_bloque;
+// ------------------------------------------------------------------------------------------
+// -- Config del proceso --
+// ------------------------------------------------------------------------------------------
+
+	t_config* fileSystem_config;
+
+	char *file_ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
+	char *file_path_bitmap, *path_bloques, *path_fcb, *retardo_acceso_bloque;
 
 #endif /* FILESYSTEM_H_ */
