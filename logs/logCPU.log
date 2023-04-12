@@ -12,3 +12,21 @@
 [INFO] 16:49:16:664 CPU/(6312:6312): Tamanio maximo de segmentos = (null)
 [INFO] 16:49:16:664 CPU/(6312:6312): --------------------------------
 [INFO] 16:49:16:664 CPU/(6312:6312): ¡CPU iniciado correctamente!
+[INFO] 17:45:01:027 CPU/(7028:7028): Logger creado
+[INFO] 17:45:01:027 CPU/(7028:7028): -------Valores del config-------
+[INFO] 17:45:01:027 CPU/(7028:7028): Retardo Instrucción = 1000
+[INFO] 17:45:01:028 CPU/(7028:7028): IP Memoria = 127.0.0.1
+[INFO] 17:45:01:028 CPU/(7028:7028): Puerto Memoria = 8002
+[INFO] 17:45:01:028 CPU/(7028:7028): Puerto Escucha = 8001
+[INFO] 17:45:01:028 CPU/(7028:7028): Tamanio maximo de segmentos = (null)
+[INFO] 17:45:01:028 CPU/(7028:7028): --------------------------------
+[INFO] 17:45:01:028 CPU/(7028:7028): ¡CPU iniciado correctamente!
+[INFO] 18:35:52:726 CPU/(3238:3238): Logger creado
+[INFO] 18:35:52:727 CPU/(3238:3238): -------Valores del config-------
+[INFO] 18:35:52:727 CPU/(3238:3238): Retardo Instrucción = 1000
+[INFO] 18:35:52:727 CPU/(3238:3238): IP Memoria = 127.0.0.1
+[INFO] 18:35:52:727 CPU/(3238:3238): Puerto Memoria = 8002
+[INFO] 18:35:52:727 CPU/(3238:3238): Puerto Escucha = 8001
+[INFO] 18:35:52:727 CPU/(3238:3238): Tamanio maximo de segmentos = (null)
+[INFO] 18:35:52:727 CPU/(3238:3238): --------------------------------
+[INFO] 18:35:52:727 CPU/(3238:3238): ¡CPU iniciado correctamente!

@@ -6,8 +6,8 @@
 
 int main(void){
 
-	kernel_logger = iniciar_logger("./../logs/logKernel.log", "Kernel");
-	kernel_config = iniciar_config("./../config/Kernel.config");
+	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
+	kernel_config = iniciar_config("../../config/Kernel.config");
 
 	leer_configs(kernel_config, kernel_logger);
 
@@ -16,8 +16,8 @@ int main(void){
 	server_kernel = iniciar_servidor();
 	log_info(kernel_logger, "Servidor listo para recibir al cliente");
 
-	pthread_create(&conexionKernel, NULL, conectarFileSystem, NULL);
-	pthread_detach(conexionKernel);
+	pthread_create(&conexionFileSystem, NULL, conectarFileSystem, NULL);
+	pthread_detach(conexionFileSystem);
 	pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
 	pthread_join(atender_consolas, NULL);
 

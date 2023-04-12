@@ -24,7 +24,7 @@
 	uint32_t resultOk;
 	uint32_t resultError;
 	pthread_t atender_consolas;
-	pthread_t conexionKernel;
+	pthread_t conexionFileSystem;
 	int server_kernel;
 	int socket_fileSystem;
 
