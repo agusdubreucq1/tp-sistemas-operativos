@@ -26,9 +26,11 @@
 	pthread_t atender_consolas;
 	pthread_t conexionFileSystem;
 	pthread_t conexionCPU;
+	pthread_t conexionMemoria;
 	int server_kernel;
 	int socket_fileSystem;
 	int socket_cpu;
+	int socket_memoria;
 
 
 // ------------------------------------------------------------------------------------------
@@ -53,6 +55,7 @@
 
 	void* conectarFileSystem();
 	void* conectarCPU();
+	void* conectarMemoria();
 	void* recibirProcesos();
 	void iterator(char* value);
 

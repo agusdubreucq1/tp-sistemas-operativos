@@ -38,6 +38,9 @@ typedef struct
 // ------------------------------------------------------------------------------------------
 
 	extern t_log* fileSystem_logger;
+	extern t_log* cpu_logger;
+	extern t_log* memoria_logger;
+
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --

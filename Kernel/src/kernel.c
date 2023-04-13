@@ -20,6 +20,8 @@ int main(void){
 	pthread_detach(conexionFileSystem);
 	pthread_create(&conexionCPU, NULL, conectarCPU, NULL);
 	pthread_detach(conexionCPU);
+	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
+	pthread_detach(conexionMemoria);
 	pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
 	pthread_join(atender_consolas, NULL);
 
@@ -51,6 +53,20 @@ void* conectarCPU(){
 	}
 
 	enviar_mensaje("Soy el Kernel", socket_cpu);
+	return "";
+}
+
+void* conectarMemoria(){
+	socket_memoria = crear_conexion(ip_memoria, puerto_memoria);
+	respuesta = handshake(socket_memoria);
+	if(respuesta == 0) {
+		log_info(kernel_logger, "Conexion establecida con la Memoria");
+	} else {
+		log_error(kernel_logger, "Error en la conexión con la Memoria");
+		return "";
+	}
+
+	enviar_mensaje("Soy el Kernel", socket_memoria);
 	return "";
 }
 
