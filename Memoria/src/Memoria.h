@@ -22,8 +22,8 @@
 	t_config* memoria_config;
 
 	//int puerto_escucha, tam_memoria, tam_segmento_0, cant_segmentos, retardo_memoria, retardo_compactacion;
-	extern char *algoritmo_asignacion, *puerto_escucha, *tam_memoria, *tam_segmento_0, *cant_segmentos;
-	extern char *retardo_memoria, *retardo_compactacion;
+	char *algoritmo_asignacion, *puerto_escucha, *tam_memoria, *tam_segmento_0, *cant_segmentos;
+	char *retardo_memoria, *retardo_compactacion;
 
 
 //void leer_config(t_config*, t_log*);
