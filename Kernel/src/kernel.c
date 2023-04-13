@@ -18,6 +18,8 @@ int main(void){
 
 	pthread_create(&conexionFileSystem, NULL, conectarFileSystem, NULL);
 	pthread_detach(conexionFileSystem);
+	pthread_create(&conexionCPU, NULL, conectarCPU, NULL);
+	pthread_detach(conexionCPU);
 	pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
 	pthread_join(atender_consolas, NULL);
 
@@ -35,6 +37,20 @@ void* conectarFileSystem(){
 	}
 
 	enviar_mensaje("Soy el Kernel", socket_fileSystem);
+	return "";
+}
+
+void* conectarCPU(){
+	socket_cpu = crear_conexion(ip_cpu, puerto_cpu);
+	respuesta = handshake(socket_cpu);
+	if(respuesta == 0) {
+		log_info(kernel_logger, "Conexion establecida con el CPU");
+	} else {
+		log_error(kernel_logger, "Error en la conexión con el CPU");
+		return "";
+	}
+
+	enviar_mensaje("Soy el Kernel", socket_cpu);
 	return "";
 }
 

@@ -1,59 +1,59 @@
 /*
- * kernel.h
+ * socketKernel.h
  *
  *  Created on: Apr 10, 2023
  *      Author: utnso
  */
 
-#ifndef KERNEL_H_
-#define KERNEL_H_
+#ifndef SERVER_H_
+#define SERVER_H_
 
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/socket.h>
+#include<unistd.h>
+#include<netdb.h>
+#include<commons/log.h>
+#include<commons/collections/list.h>
+#include<string.h>
 
-#include "logger.h"
-#include "config.h"
-#include "client.h"
-#include <commons/log.h>
-#include <pthread.h>
-#include "server.h"
+#define IP "127.0.0.1"
+
+typedef enum
+{
+	MENSAJE,
+	PAQUETE
+}op_code;
 
 // ------------------------------------------------------------------------------------------
-// -- Socket del proceso --
+// -- Server del proceso --
 // ------------------------------------------------------------------------------------------
 
-	uint32_t respuesta;
-	uint32_t resultOk;
-	uint32_t resultError;
-	pthread_t atender_consolas;
-	pthread_t conexionFileSystem;
-	pthread_t conexionCPU;
-	int server_kernel;
-	int socket_fileSystem;
-	int socket_cpu;
-
+	//extern uint32_t handshake;
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
 // ------------------------------------------------------------------------------------------
 
-	t_log* kernel_logger;
+	extern t_log* cpu_logger;
 
 // ------------------------------------------------------------------------------------------
 // -- Config del proceso --
 // ------------------------------------------------------------------------------------------
 
-	t_config* kernel_config;
-	u_int32_t grado_maximo_multiprogramacion;
-	char *ip_memoria, *puerto_memoria, *ip_filesystem, *puerto_filesystem, *ip_cpu;
-	char *puerto_cpu, *puerto_escucha, *estimacion_inicial, *hrrn_alfa;
-	char *algoritmo_planificacion, **recursos, **instancias_recursos;
+	extern u_int32_t grado_maximo_multiprogramacion;
+	extern char *ip_memoria, *puerto_memoria, *ip_filesystem, *puerto_filesystem, *ip_cpu;
+	extern char *puerto_cpu, *puerto_escucha, *estimacion_inicial, *hrrn_alfa;
+	extern char *algoritmo_planificacion, **recursos, **instancias_recursos;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
-	void* conectarFileSystem();
-	void* conectarCPU();
-	void* recibirProcesos();
-	void iterator(char* value);
+	int iniciar_servidor(void);
+	int esperar_cliente(int socket_servidor);
+	int recibir_operacion(int socket_cliente);
+	void* recibir_buffer(int* size, int socket_cliente);
+	void recibir_mensaje(int socket_cliente);
 
-#endif /* KERNEL_H_ */
+#endif /* SERVER_H_ */
