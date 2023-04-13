@@ -1,10 +1,3 @@
-/*
- * socketKernel.c
- *
- *  Created on: Apr 10, 2023
- *      Author: utnso
- */
-
 #include "server.h"
 
 int iniciar_servidor(void)

@@ -1,10 +1,3 @@
-/*
- * logger.h
- *
- *  Created on: Apr 12, 2023
- *      Author: utnso
- */
-
 #ifndef LOGGER
 #define LOGGER
 

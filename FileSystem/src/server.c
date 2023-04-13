@@ -1,10 +1,3 @@
-/*
- * server.c
- *
- *  Created on: Apr 12, 2023
- *      Author: utnso
- */
-
 #include "server.h"
 
 int iniciar_servidor(void){

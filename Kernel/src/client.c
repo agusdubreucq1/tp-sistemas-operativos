@@ -1,9 +1,3 @@
-/*
- * client.c
- *
- *  Created on: Apr 12, 2023
- *      Author: utnso
- */
 #include "client.h"
 
 void* serializar_paquete(t_paquete* paquete, int bytes){

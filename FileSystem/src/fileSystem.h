@@ -1,10 +1,3 @@
-/*
- * filesystem.h
- *
- *  Created on: Apr 12, 2023
- *      Author: utnso
- */
-
 #ifndef FILESYSTEM_H_
 #define FILESYSTEM_H_
 

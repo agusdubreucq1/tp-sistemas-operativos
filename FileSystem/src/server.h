@@ -1,10 +1,3 @@
-/*
- * server.h
- *
- *  Created on: Apr 12, 2023
- *      Author: utnso
- */
-
 #ifndef SERVER_H_
 #define SERVER_H_
 

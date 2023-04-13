@@ -1,10 +1,3 @@
-/*
- * client.h
- *
- *  Created on: Apr 12, 2023
- *      Author: utnso
- */
-
 #ifndef CLIENT_H_
 #define CLIENT_H_
 
