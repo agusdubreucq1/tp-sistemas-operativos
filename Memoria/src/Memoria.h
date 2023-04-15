@@ -10,6 +10,7 @@
 #include <commons/log.h>
 #include <commons/string.h>
 #include <commons/config.h>
+#include <pthread.h>
 
 
 	t_log* memoria_logger;
@@ -28,9 +29,11 @@
 
 //void leer_config(t_config*, t_log*);
 
+	pthread_t atender_conexiones;
+
 uint32_t handshake;
 int server_memoria;
-void abrirSocketKernel();
+void* abrirSocket();
 
 
 #endif

@@ -1,12 +1,14 @@
 #include "logger.h"
 #include "config.h"
 #include "server.h"
+#include "client.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <commons/log.h>
 #include <commons/string.h>
 #include <commons/config.h>
+#include <pthread.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
@@ -27,7 +29,13 @@
 // -- Server del proceso --
 // ------------------------------------------------------------------------------------------
 
-	uint32_t handshake;
+	//uint32_t handshake;
 	int server_cpu;
-	void abrirSocketKernel();
+	int socket_memoria;
+	uint32_t respuesta;
+	pthread_t atender_kernel;
+	pthread_t conexionMemoria;
+
+	void* abrirSocketKernel();
+	void* conectarMemoria();
 

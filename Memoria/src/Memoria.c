@@ -15,27 +15,33 @@ int main(void) {
 	server_memoria = iniciar_servidor();
 	log_info(memoria_logger, "Servidor listo para recibir al cliente");
 
-	abrirSocketKernel();
+	pthread_create(&atender_conexiones, NULL, abrirSocket, NULL);
+	pthread_join(atender_conexiones, NULL);
+	//abrirSocketKernel();
 
 	return EXIT_SUCCESS;
 }
 
-void abrirSocketKernel(){
-	int socket_Kernel = esperar_cliente(server_memoria);
+void* abrirSocket(){
+	while (1) {
+		int socket_Kernel = esperar_cliente(server_memoria);
 
-	uint32_t resultOk = 0;
-	uint32_t resultError = -1;
+		uint32_t resultOk = 0;
+		uint32_t resultError = -1;
 
-	recv(socket_Kernel, &handshake, sizeof(uint32_t), MSG_WAITALL);
-	if(handshake == 1)
-	   send(socket_Kernel, &resultOk, sizeof(uint32_t), 0);
-	else
-	   send(socket_Kernel, &resultError, sizeof(uint32_t), 0);
+		recv(socket_Kernel, &handshake, sizeof(uint32_t), MSG_WAITALL);
+		if(handshake == 1)
+		   send(socket_Kernel, &resultOk, sizeof(uint32_t), 0);
+		else
+		   send(socket_Kernel, &resultError, sizeof(uint32_t), 0);
 
-	int cod_op = recibir_operacion(socket_Kernel);
-	switch (cod_op) {
-	case MENSAJE:
-		recibir_mensaje(socket_Kernel);
-		break;
+		int cod_op = recibir_operacion(socket_Kernel);
+		switch (cod_op) {
+		case MENSAJE:
+			recibir_mensaje(socket_Kernel);
+			break;
+		}
 	}
+	return "";
 }
+
