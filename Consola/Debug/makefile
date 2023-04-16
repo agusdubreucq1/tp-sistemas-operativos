@@ -40,7 +40,7 @@ main-build: Consola
 Consola: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L/home/utnso/so-commons-library -o "Consola" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons
+	gcc -L/home/utnso/so-commons-library -L"/home/utnso/tp-2023-1c-Simple-y-Funciona/utils/Debug" -o "Consola" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons -lutils
 	@echo 'Finished building target: $@'
 	@echo ' '
 

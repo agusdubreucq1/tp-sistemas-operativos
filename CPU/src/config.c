@@ -1,14 +1,5 @@
 #include "config.h"
 
-t_config* iniciar_config(char* cpu_config){
-	t_config* nuevo_config = config_create(cpu_config);
-		if(nuevo_config == NULL){
-			printf("No se pudo crear el config del CPU");
-			//exit(2);
-		}
-		return nuevo_config;
-}
-
 void leer_configs(t_config* cpu_config, t_log* cpu_logger){
 	retardo_instruccion = 	config_get_string_value(cpu_config, "RETARDO_INSTRUCCION");
 	ip_memoria 			= 	config_get_string_value(cpu_config,"IP_MEMORIA");

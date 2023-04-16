@@ -1,29 +1,30 @@
 #include "config.h"
 #include "parser.h"
-#include "socketConsola.h"
+
+#include <pthread.h>
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
-#include <commons/log.h>
-#include <commons/config.h>
 #include <commons/string.h>
-#include <readline/readline.h>
+#include <commons/log.h>
+#include <utils/utils.h>
+#include <utils/servidor.h>
+#include <utils/cliente.h>
+#include <utils/datos.h>
 
 // ------------------------------------------------------------------------------------------
-// -- Logger --
+// -- Logger del proceso --
 // ------------------------------------------------------------------------------------------
 
 	t_log* consola_logger;
 
 // ------------------------------------------------------------------------------------------
-// -- Configs --
+// -- Config del proceso --
 // ------------------------------------------------------------------------------------------
 
 	t_config* consola_config;
 	char *ip_kernel, *puerto_kernel;
-
-	void terminar_programa(int conexion, t_log *logger, t_config* config);
+	int conexion_kernel;
+	t_paquete* paquete;
 
 // ------------------------------------------------------------------------------------------
 // -- Parser --
@@ -32,8 +33,7 @@
 	char* buffer;
 
 // ------------------------------------------------------------------------------------------
-// -- Parser --
+// -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
-	int conexion_kernel;
-	t_paquete* paquete;
+	void terminar_programa(int conexion, t_log *logger, t_config* config);

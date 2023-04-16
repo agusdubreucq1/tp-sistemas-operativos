@@ -1,19 +1,24 @@
 #include "kernel.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <commons/log.h>
-#include <commons/string.h>
+
 
 int main(void){
 
 	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
-	kernel_config = iniciar_config("../../config/Kernel.config");
+
+	if (kernel_logger == NULL){
+		exit(1);
+	}
+
+	kernel_config = iniciar_config("../../config/Kernel.config", "Kernel");
+
+	if (kernel_config == NULL){
+		exit(2);
+	}
 
 	leer_configs(kernel_config, kernel_logger);
-
 	log_info(kernel_logger, "¡Kernel iniciado correctamente!");
 
-	server_kernel = iniciar_servidor();
+	server_kernel = iniciar_servidor(IP_SERVER, puerto_escucha, kernel_logger);
 	log_info(kernel_logger, "Servidor listo para recibir al cliente");
 
 	pthread_create(&conexionFileSystem, NULL, conectarFileSystem, NULL);
@@ -29,42 +34,24 @@ int main(void){
 }
 
 void* conectarFileSystem(){
-	socket_fileSystem = crear_conexion(ip_filesystem, puerto_filesystem);
-	respuesta = handshake(socket_fileSystem);
-	if(respuesta == 0) {
-		log_info(kernel_logger, "Conexion establecida con el File System");
-	} else {
-		log_error(kernel_logger, "Error en la conexión con el File System");
-		return "";
-	}
+	socket_fileSystem = crear_conexion(ip_filesystem, puerto_filesystem, kernel_logger, "File System");
+	handshake(socket_fileSystem, 1, kernel_logger, "File System");
 
 	enviar_mensaje("Soy el Kernel", socket_fileSystem);
 	return "";
 }
 
 void* conectarCPU(){
-	socket_cpu = crear_conexion(ip_cpu, puerto_cpu);
-	respuesta = handshake(socket_cpu);
-	if(respuesta == 0) {
-		log_info(kernel_logger, "Conexion establecida con el CPU");
-	} else {
-		log_error(kernel_logger, "Error en la conexión con el CPU");
-		return "";
-	}
+	socket_cpu = crear_conexion(ip_cpu, puerto_cpu, kernel_logger, "CPU");
+	handshake(socket_cpu, 1, kernel_logger, "CPU");
 
 	enviar_mensaje("Soy el Kernel", socket_cpu);
 	return "";
 }
 
 void* conectarMemoria(){
-	socket_memoria = crear_conexion(ip_memoria, puerto_memoria);
-	respuesta = handshake(socket_memoria);
-	if(respuesta == 0) {
-		log_info(kernel_logger, "Conexion establecida con la Memoria");
-	} else {
-		log_error(kernel_logger, "Error en la conexión con la Memoria");
-		return "";
-	}
+	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, kernel_logger, "Memoria");
+	handshake(socket_memoria, 1, kernel_logger, "Memoria");
 
 	enviar_mensaje("Soy el Kernel", socket_memoria);
 	return "";
@@ -72,7 +59,7 @@ void* conectarMemoria(){
 
 void* recibirProcesos() {
 	while (1) {
-		int cliente_consola = esperar_cliente(server_kernel);
+		int cliente_consola = esperar_cliente(server_kernel, kernel_logger);
 
 		uint32_t resultOk = 0;
 		uint32_t resultError = -1;
@@ -87,7 +74,7 @@ void* recibirProcesos() {
 		int cod_op = recibir_operacion(cliente_consola);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_mensaje(cliente_consola);
+			recibir_mensaje(cliente_consola, kernel_logger);
 			break;
 		case PAQUETE:
 			lista = recibir_paquete(cliente_consola);

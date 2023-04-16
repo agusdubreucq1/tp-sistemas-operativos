@@ -3,26 +3,30 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <commons/config.h>
 #include <commons/string.h>
 #include <commons/log.h>
-#include "logger.h"
-
-   extern t_log* memoria_logger;
+#include <commons/config.h>
 
 
-   // ------------------------------------------------------------------------------------------
-   // -- Variables del archivo de configuración --
-   // ------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
+// -- Logger del proceso --
+// ------------------------------------------------------------------------------------------
 
-   //int puerto_escucha, tam_memoria, tam_segmento_0, cant_segmentos, retardo_memoria, retardo_compactacion;
-   extern char *algoritmo_asignacion, *puerto_escucha, *tam_memoria;
-   extern char *tam_segmento_0, *cant_segmentos, *retardo_memoria, *retardo_compactacion;
+	extern t_log* memoria_logger;
 
-t_config* iniciar_config(char*);
-void leer_configs(t_config*, t_log*);
-void loggear_configs(t_log*);
+// ------------------------------------------------------------------------------------------
+// -- Variables del archivo de configuración --
+// ------------------------------------------------------------------------------------------
+
+	extern char *algoritmo_asignacion, *puerto_escucha, *tam_memoria;
+	extern char *tam_segmento_0, *cant_segmentos, *retardo_memoria, *retardo_compactacion;
+
+// ------------------------------------------------------------------------------------------
+// -- Funciones del proceso --
+// ------------------------------------------------------------------------------------------
+
+	void leer_configs(t_config*, t_log*);
+	void loggear_configs(t_log*);
 
 
 #endif

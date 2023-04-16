@@ -1,15 +1,23 @@
 #include "cpu.h"
 
-int main(int argc, char** argv){
+int main(void){
 
+	cpu_logger = iniciar_logger("../../logs/logCPU.log", "CPU");
 
-    cpu_logger = iniciar_logger("../../logs/logCPU.log", "CPU");
-    cpu_config = iniciar_config("../../config/CPU.config");
+	if (cpu_logger == NULL){
+		exit(1);
+	}
+
+	cpu_config = iniciar_config("../../config/CPU.config", "CPU");
+
+	if (cpu_config == NULL){
+		exit(2);
+	}
 
     leer_configs(cpu_config, cpu_logger);
     log_info(cpu_logger, "¡CPU iniciado correctamente!");
 
-	server_cpu = iniciar_servidor();
+	server_cpu = iniciar_servidor(IP_SERVER, puerto_escucha, cpu_logger);
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
 
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
@@ -23,7 +31,7 @@ int main(int argc, char** argv){
 }
 
 void* abrirSocketKernel(){
-	int socket_Kernel = esperar_cliente(server_cpu);
+	int socket_Kernel = esperar_cliente(server_cpu, cpu_logger);
 
 	uint32_t resultOk = 0;
 	uint32_t resultError = -1;
@@ -37,21 +45,15 @@ void* abrirSocketKernel(){
 	int cod_op = recibir_operacion(socket_Kernel);
 	switch (cod_op) {
 	case MENSAJE:
-		recibir_mensaje(socket_Kernel);
+		recibir_mensaje(socket_Kernel, cpu_logger);
 		break;
 	}
 	return "";
 }
 
 void* conectarMemoria(){
-	socket_memoria = crear_conexion(ip_memoria, puerto_memoria);
-	respuesta = handshake(socket_memoria);
-	if(respuesta == 0) {
-		log_info(cpu_logger, "Conexion establecida con la Memoria");
-	} else {
-		log_error(cpu_logger, "Error en la conexión con la Memoria");
-		return "";
-	}
+	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, cpu_logger, "Memoria");
+	handshake(socket_memoria, 1, cpu_logger, "Memoria");
 
 	enviar_mensaje("Soy el CPU", socket_memoria);
 	return "";

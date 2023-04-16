@@ -1,9 +1,7 @@
 #ifndef MEMORIA_H_
 #define MEMORIA_H_
 
-#include "logger.h"
 #include "config.h"
-#include "server.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,29 +9,39 @@
 #include <commons/string.h>
 #include <commons/config.h>
 #include <pthread.h>
+#include <utils/utils.h>
+#include <utils/servidor.h>
+#include <utils/cliente.h>
+#include <utils/datos.h>
 
+#define IP_SERVER "127.0.0.1"
+
+// ------------------------------------------------------------------------------------------
+// -- Logger del proceso --
+// ------------------------------------------------------------------------------------------
 
 	t_log* memoria_logger;
 
 // ------------------------------------------------------------------------------------------
-// -- Variables del archivo de configuración --
+// -- Config del proceso --
 // ------------------------------------------------------------------------------------------
 
-
 	t_config* memoria_config;
-
-	//int puerto_escucha, tam_memoria, tam_segmento_0, cant_segmentos, retardo_memoria, retardo_compactacion;
 	char *algoritmo_asignacion, *puerto_escucha, *tam_memoria, *tam_segmento_0, *cant_segmentos;
 	char *retardo_memoria, *retardo_compactacion;
 
-
-//void leer_config(t_config*, t_log*);
+// ------------------------------------------------------------------------------------------
+// -- Socket del proceso --
+// ------------------------------------------------------------------------------------------
 
 	pthread_t atender_conexiones;
+	uint32_t respuesta;
+	int server_memoria;
 
-uint32_t handshake;
-int server_memoria;
-void* abrirSocket();
+// ------------------------------------------------------------------------------------------
+// -- Funciones del proceso --
+// ------------------------------------------------------------------------------------------
 
+	void* abrirSocket();
 
 #endif

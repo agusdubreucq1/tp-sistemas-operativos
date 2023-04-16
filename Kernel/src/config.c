@@ -1,16 +1,5 @@
 #include "config.h"
 
-
-t_config* iniciar_config(char* kernel_config){
-	t_config* nuevo_config = config_create(kernel_config);
-	if(nuevo_config == NULL){
-		printf("No se pudo crear a config de Kernel");
-		exit(2);
-	}
-	return nuevo_config;
-}
-
-
 void leer_configs(t_config* kernel_config, t_log* kernel_logger){
 	ip_memoria 						= 	config_get_string_value(kernel_config,"IP_MEMORIA");
 	puerto_memoria					=	config_get_string_value(kernel_config,"PUERTO_MEMORIA");
@@ -30,7 +19,6 @@ void leer_configs(t_config* kernel_config, t_log* kernel_logger){
 	loggear_Recursos();
 
 }
-
 
 void loggear_configs(t_log* kernel_logger){
 	log_info(kernel_logger, "-------Valores del config-------");

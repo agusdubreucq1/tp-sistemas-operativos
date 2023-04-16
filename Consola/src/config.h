@@ -1,10 +1,28 @@
 #ifndef CONFIG
 #define CONFIG
 
-#include "logger.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <commons/string.h>
+#include <commons/log.h>
+#include <commons/config.h>
 
+// ------------------------------------------------------------------------------------------
+// -- Logger del proceso --
+// ------------------------------------------------------------------------------------------
 
-t_config* iniciar_config(char* ruta_config);
+	extern t_log* consola_logger;
+
+// ------------------------------------------------------------------------------------------
+// -- Variables del archivo de configuración --
+// ------------------------------------------------------------------------------------------
+
+	extern char *ip_kernel, *puerto_kernel;
+
+// ------------------------------------------------------------------------------------------
+// -- Funciones del proceso --
+// ------------------------------------------------------------------------------------------
+
 void leer_configs(t_log*, t_config*);
 void loggear_valores_config(t_log*);
 

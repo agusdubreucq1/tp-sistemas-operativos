@@ -13,9 +13,17 @@ int main(int argc, char** argv) {
     	return EXIT_FAILURE;
     }
 
+    consola_logger = iniciar_logger("../../logs/logConsola.log", "Consola");
 
-	consola_config = iniciar_config(argv[1]);
-	consola_logger = iniciar_logger("../../logs/logConsola.log", "Consola");
+	if (consola_logger == NULL){
+		exit(1);
+	}
+
+	consola_config = iniciar_config(argv[1], "Consola");
+
+	if (consola_config == NULL){
+		exit(2);
+	}
 
 	log_info(consola_logger, "¡Consola iniciada correctamente!");
 
@@ -23,14 +31,14 @@ int main(int argc, char** argv) {
 
 	buffer = parsearInstrucciones(argv[2]);
 
-	conexion_kernel = crear_conexion(ip_kernel, puerto_kernel);
-	handshake(conexion_kernel);
+	conexion_kernel = crear_conexion(ip_kernel, puerto_kernel, consola_logger, "Kernel");
+	handshake(conexion_kernel, 1, consola_logger, "Kernel");
 
 	paquete = crear_paquete();
 
 	agregar_a_paquete(paquete, buffer, strlen(buffer) + 1);
 
-	enviar_paquete(paquete, conexion_kernel, consola_logger);
+	enviar_paquete(paquete, conexion_kernel, consola_logger, "Kernel");
 	eliminar_paquete(paquete);
 
 	terminar_programa(conexion_kernel, consola_logger, consola_config);

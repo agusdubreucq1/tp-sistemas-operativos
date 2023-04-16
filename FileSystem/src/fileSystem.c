@@ -4,12 +4,21 @@
 int main(void){
 
 	fileSystem_logger = iniciar_logger("../../logs/logFileSystem.log", "FileSystem");
-	fileSystem_config = iniciar_config("../../config/FileSystem.config");
+
+	if (fileSystem_logger == NULL){
+		exit(1);
+	}
+
+	fileSystem_config = iniciar_config("../../config/FileSystem.config", "FileSystem");
+
+	if (fileSystem_config == NULL){
+		exit(2);
+	}
 
 	leer_configs(fileSystem_config, fileSystem_logger);
 	log_info(fileSystem_logger, "¡File System iniciado correctamente!");
 
-	server_fileSystem = iniciar_servidor();
+	server_fileSystem = iniciar_servidor(IP_SERVER, puerto_escucha, fileSystem_logger);
 	log_info(fileSystem_logger, "Servidor listo para recibir al cliente");
 
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
@@ -22,7 +31,7 @@ int main(void){
 }
 
 void* abrirSocketKernel(){
-	int socket_Kernel = esperar_cliente(server_fileSystem);
+	int socket_Kernel = esperar_cliente(server_fileSystem, fileSystem_logger);
 
 	uint32_t resultOk = 0;
 	uint32_t resultError = -1;
@@ -36,21 +45,15 @@ void* abrirSocketKernel(){
 	int cod_op = recibir_operacion(socket_Kernel);
 	switch (cod_op) {
 	case MENSAJE:
-		recibir_mensaje(socket_Kernel);
+		recibir_mensaje(socket_Kernel, fileSystem_logger);
 		break;
 	}
 	return "";
 }
 
 void* conectarMemoria(){
-	socket_memoria = crear_conexion(ip_memoria, puerto_memoria);
-	respuesta = handshake(socket_memoria);
-	if(respuesta == 0) {
-		log_info(fileSystem_logger, "Conexion establecida con la Memoria");
-	} else {
-		log_error(fileSystem_logger, "Error en la conexión con la Memoria");
-		return "";
-	}
+	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, fileSystem_logger, "Memoria");
+	handshake(socket_memoria, 1, fileSystem_logger, "Memoria");
 
 	enviar_mensaje("Soy el FileSystem", socket_memoria);
 	return "";

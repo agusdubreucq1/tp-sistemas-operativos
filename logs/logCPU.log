@@ -604,3 +604,65 @@
 [TRACE] 12:36:53:122 CPU/(6784:6784): Listo para escuchar a mi cliente
 [INFO] 12:36:53:122 CPU/(6784:6784): Servidor listo para recibir al cliente
 [INFO] 12:36:53:122 CPU/(6784:6786): Conexion establecida con la Memoria
+[INFO] 12:46:04:462 CPU/(7574:7574): Logger creado
+[INFO] 12:46:04:462 CPU/(7574:7574): -------Valores del config-------
+[INFO] 12:46:04:462 CPU/(7574:7574): Retardo Instrucción = 1000
+[INFO] 12:46:04:462 CPU/(7574:7574): IP Memoria = 127.0.0.1
+[INFO] 12:46:04:462 CPU/(7574:7574): Puerto Memoria = 8003
+[INFO] 12:46:04:462 CPU/(7574:7574): Puerto Escucha = 8001
+[INFO] 12:46:04:462 CPU/(7574:7574): Tamanio maximo de segmentos = (null)
+[INFO] 12:46:04:462 CPU/(7574:7574): --------------------------------
+[INFO] 12:46:04:462 CPU/(7574:7574): ¡CPU iniciado correctamente!
+[TRACE] 12:46:04:462 CPU/(7574:7574): Listo para escuchar a mi cliente
+[INFO] 12:46:04:462 CPU/(7574:7574): Servidor listo para recibir al cliente
+[INFO] 12:46:04:462 CPU/(7574:7576): Conexion establecida con la Memoria
+[INFO] 12:46:36:498 CPU/(7574:7575): Se conecto un cliente!
+[INFO] 12:46:36:498 CPU/(7574:7575): Me llego el mensaje Soy el Kernel
+[INFO] 19:03:26:099 CPU/(2224:2224): Logger creado
+[INFO] 19:03:26:100 CPU/(2224:2224): -------Valores del config-------
+[INFO] 19:03:26:100 CPU/(2224:2224): Retardo Instrucción = 1000
+[INFO] 19:03:26:100 CPU/(2224:2224): IP Memoria = 127.0.0.1
+[INFO] 19:03:26:100 CPU/(2224:2224): Puerto Memoria = 8003
+[INFO] 19:03:26:100 CPU/(2224:2224): Puerto Escucha = 8001
+[INFO] 19:03:26:100 CPU/(2224:2224): Tamanio maximo de segmentos = (null)
+[INFO] 19:03:26:100 CPU/(2224:2224): --------------------------------
+[INFO] 19:03:26:100 CPU/(2224:2224): ¡CPU iniciado correctamente!
+[TRACE] 19:03:26:101 CPU/(2224:2224): Listo para escuchar a mi cliente
+[INFO] 19:03:26:101 CPU/(2224:2224): Servidor listo para recibir al cliente
+[INFO] 19:03:26:102 CPU/(2224:2226): Conexion establecida con la Memoria
+[INFO] 19:05:50:671 CPU/(2224:2225): Se conecto un cliente!
+[INFO] 19:05:50:671 CPU/(2224:2225): Me llego el mensaje Soy el Kernel
+[INFO] 12:28:25:301 CPU/(12815:12815): Logger creado
+[INFO] 12:28:25:304 CPU/(12815:12815): -------Valores del config-------
+[INFO] 12:28:25:307 CPU/(12815:12815): Retardo Instrucción = 1000
+[INFO] 12:28:25:310 CPU/(12815:12815): IP Memoria = 127.0.0.1
+[INFO] 12:28:25:311 CPU/(12815:12815): Puerto Memoria = 8003
+[INFO] 12:28:25:312 CPU/(12815:12815): Puerto Escucha = 8001
+[INFO] 12:28:25:312 CPU/(12815:12815): Tamanio maximo de segmentos = (null)
+[INFO] 12:28:25:312 CPU/(12815:12815): --------------------------------
+[INFO] 12:28:25:312 CPU/(12815:12815): ¡CPU iniciado correctamente!
+[TRACE] 12:28:25:312 CPU/(12815:12815): Listo para escuchar a mi cliente
+[INFO] 12:28:25:312 CPU/(12815:12815): Servidor listo para recibir al cliente
+[INFO] 12:28:25:322 CPU/(12815:12821): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 12:28:26:323 CPU/(12815:12821): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 12:28:27:323 CPU/(12815:12821): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 12:28:28:324 CPU/(12815:12821): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 12:28:29:325 CPU/(12815:12821): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 12:28:30:325 CPU/(12815:12821): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 12:28:31:325 CPU/(12815:12821): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 12:28:32:325 CPU/(12815:12821): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 12:28:33:326 CPU/(12815:12821): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:09:50:940 CPU/(16218:16218): Logger creado
+[INFO] 13:09:50:941 CPU/(16218:16218): -------Valores del config-------
+[INFO] 13:09:50:941 CPU/(16218:16218): Retardo Instrucción = 1000
+[INFO] 13:09:50:941 CPU/(16218:16218): IP Memoria = 127.0.0.1
+[INFO] 13:09:50:941 CPU/(16218:16218): Puerto Memoria = 8003
+[INFO] 13:09:50:941 CPU/(16218:16218): Puerto Escucha = 8001
+[INFO] 13:09:50:941 CPU/(16218:16218): Tamanio maximo de segmentos = (null)
+[INFO] 13:09:50:941 CPU/(16218:16218): --------------------------------
+[INFO] 13:09:50:941 CPU/(16218:16218): ¡CPU iniciado correctamente!
+[TRACE] 13:09:50:941 CPU/(16218:16218): Listo para escuchar a mi cliente
+[INFO] 13:09:50:941 CPU/(16218:16218): Servidor listo para recibir al cliente
+[INFO] 13:09:50:942 CPU/(16218:16220): Conexion establecida con Memoria
+[INFO] 13:21:07:884 CPU/(16218:16219): Se conecto un cliente!
+[INFO] 13:21:07:885 CPU/(16218:16219): Me llego el mensaje Soy el Kernel

@@ -1,14 +1,20 @@
-#include "logger.h"
+#ifndef CPU_H_
+#define CPU_H_
+
+
 #include "config.h"
-#include "server.h"
-#include "client.h"
+
+#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <commons/log.h>
 #include <commons/string.h>
-#include <commons/config.h>
-#include <pthread.h>
+#include <commons/log.h>
+#include <utils/utils.h>
+#include <utils/servidor.h>
+#include <utils/cliente.h>
+#include <utils/datos.h>
+
+#define IP_SERVER "127.0.0.1"
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
@@ -29,13 +35,17 @@
 // -- Server del proceso --
 // ------------------------------------------------------------------------------------------
 
-	//uint32_t handshake;
 	int server_cpu;
 	int socket_memoria;
 	uint32_t respuesta;
 	pthread_t atender_kernel;
 	pthread_t conexionMemoria;
 
+// ------------------------------------------------------------------------------------------
+// -- Funciones del proceso --
+// ------------------------------------------------------------------------------------------
+
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 
+#endif /* CPU_H_ */

@@ -1,15 +1,6 @@
 #include "config.h"
 
 
-t_config* iniciar_config(char* file_config){
-	t_config* nuevo_config = config_create(file_config);
-	if(nuevo_config == NULL){
-		printf("No se pudo crear a config de File System");
-		exit(2);
-	}
-	return nuevo_config;
-}
-
 void leer_configs(t_config* file_config, t_log* file_logger){
 	ip_memoria 						= 	config_get_string_value(file_config,"IP_MEMORIA");
 	puerto_memoria					=	config_get_string_value(file_config,"PUERTO_MEMORIA");
