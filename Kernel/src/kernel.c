@@ -33,6 +33,14 @@ int main(void){
 	return EXIT_SUCCESS;
 }
 
+void* conectarModulo(char *ip, char *puerto, t_log *logger, char *modulo){
+	socket_modulo = crear_conexion(ip, puerto, logger, modulo);
+	handshake(socket_modulo, 1, logger, modulo);
+
+	enviar_mensaje("Soy el Kernel", socket_modulo);
+	return "";
+}
+
 void* conectarFileSystem(){
 	socket_fileSystem = crear_conexion(ip_filesystem, puerto_filesystem, kernel_logger, "File System");
 	handshake(socket_fileSystem, 1, kernel_logger, "File System");

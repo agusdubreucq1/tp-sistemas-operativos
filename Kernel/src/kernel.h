@@ -43,15 +43,18 @@
 	pthread_t conexionFileSystem;
 	pthread_t conexionCPU;
 	pthread_t conexionMemoria;
+	int socket_modulo;
 	int server_kernel;
 	int socket_fileSystem;
 	int socket_cpu;
 	int socket_memoria;
+	kernelThreadParams* fileSystemParams;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
+	void* conectarModulo(char *ip, char *puerto, t_log *logger, char *modulo);
 	void* conectarFileSystem();
 	void* conectarCPU();
 	void* conectarMemoria();

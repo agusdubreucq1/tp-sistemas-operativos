@@ -31,22 +31,24 @@ int main(void){
 }
 
 void* abrirSocketKernel(){
-	int socket_Kernel = esperar_cliente(server_cpu, cpu_logger);
+	while(1){
+		int socket_Kernel = esperar_cliente(server_cpu, cpu_logger);
 
-	uint32_t resultOk = 0;
-	uint32_t resultError = -1;
+		uint32_t resultOk = 0;
+		uint32_t resultError = -1;
 
-	recv(socket_Kernel, &respuesta, sizeof(uint32_t), MSG_WAITALL);
-	if(respuesta == 1)
-	   send(socket_Kernel, &resultOk, sizeof(uint32_t), 0);
-	else
-	   send(socket_Kernel, &resultError, sizeof(uint32_t), 0);
+		recv(socket_Kernel, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+		if(respuesta == 1)
+		   send(socket_Kernel, &resultOk, sizeof(uint32_t), 0);
+		else
+		   send(socket_Kernel, &resultError, sizeof(uint32_t), 0);
 
-	int cod_op = recibir_operacion(socket_Kernel);
-	switch (cod_op) {
-	case MENSAJE:
-		recibir_mensaje(socket_Kernel, cpu_logger);
-		break;
+		int cod_op = recibir_operacion(socket_Kernel);
+		switch (cod_op) {
+		case MENSAJE:
+			recibir_mensaje(socket_Kernel, cpu_logger);
+			break;
+		}
 	}
 	return "";
 }

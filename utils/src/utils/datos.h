@@ -17,10 +17,9 @@ typedef enum
 {
 	MENSAJE,
 	PAQUETE
-}op_code;
+} op_code;
 
-typedef struct
-{
+typedef struct{
 	int size;
 	void* stream;
 } t_buffer;
@@ -31,6 +30,12 @@ typedef struct
 	t_buffer* buffer;
 } t_paquete;
 
+typedef struct{
+	char *ip;
+	char *puerto;
+	t_log* logger;
+	char *modulo;
+}kernelThreadParams;
 
 
 #endif /* SRC_DATOS_H_ */
