@@ -13,6 +13,7 @@
 #include <utils/servidor.h>
 #include <utils/cliente.h>
 #include <utils/datos.h>
+#include <utils/pcb.h>
 
 #define IP_SERVER "127.0.0.1"
 
@@ -28,8 +29,9 @@
 
 	t_config* kernel_config;
 	u_int32_t grado_maximo_multiprogramacion;
+	u_int32_t estimacion_inicial;
 	char *ip_memoria, *puerto_memoria, *ip_filesystem, *puerto_filesystem, *ip_cpu;
-	char *puerto_cpu, *puerto_escucha, *estimacion_inicial, *hrrn_alfa;
+	char *puerto_cpu, *puerto_escucha, *hrrn_alfa;
 	char *algoritmo_planificacion, **recursos, **instancias_recursos;
 
 // ------------------------------------------------------------------------------------------
@@ -54,7 +56,6 @@
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
-	void* conectarModulo(char *ip, char *puerto, t_log *logger, char *modulo);
 	void* conectarFileSystem();
 	void* conectarCPU();
 	void* conectarMemoria();

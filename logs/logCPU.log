@@ -726,3 +726,73 @@
 [INFO] 18:17:08:798 CPU/(3953:3955): Conexion establecida con Memoria
 [INFO] 18:17:26:822 CPU/(3953:3954): Se conecto un cliente!
 [INFO] 18:17:26:822 CPU/(3953:3954): Me llego el mensaje Soy el Kernel
+[INFO] 21:32:20:558 CPU/(2627:2627): Logger creado
+[INFO] 21:32:20:559 CPU/(2627:2627): -------Valores del config-------
+[INFO] 21:32:20:559 CPU/(2627:2627): Retardo Instrucción = 1000
+[INFO] 21:32:20:559 CPU/(2627:2627): IP Memoria = 127.0.0.1
+[INFO] 21:32:20:559 CPU/(2627:2627): Puerto Memoria = 8003
+[INFO] 21:32:20:559 CPU/(2627:2627): Puerto Escucha = 8001
+[INFO] 21:32:20:559 CPU/(2627:2627): Tamanio maximo de segmentos = (null)
+[INFO] 21:32:20:559 CPU/(2627:2627): --------------------------------
+[INFO] 21:32:20:559 CPU/(2627:2627): ¡CPU iniciado correctamente!
+[TRACE] 21:32:20:559 CPU/(2627:2627): Listo para escuchar a mi cliente
+[INFO] 21:32:20:559 CPU/(2627:2627): Servidor listo para recibir al cliente
+[INFO] 21:32:20:559 CPU/(2627:2629): Conexion establecida con Memoria
+[INFO] 21:33:05:335 CPU/(2627:2628): Se conecto un cliente!
+[INFO] 21:33:05:335 CPU/(2627:2628): Me llego el mensaje Soy el Kernel
+[INFO] 02:09:49:824 CPU/(6280:6280): Logger creado
+[INFO] 02:09:49:824 CPU/(6280:6280): -------Valores del config-------
+[INFO] 02:09:49:824 CPU/(6280:6280): Retardo Instrucción = 1000
+[INFO] 02:09:49:824 CPU/(6280:6280): IP Memoria = 127.0.0.1
+[INFO] 02:09:49:824 CPU/(6280:6280): Puerto Memoria = 8003
+[INFO] 02:09:49:824 CPU/(6280:6280): Puerto Escucha = 8001
+[INFO] 02:09:49:824 CPU/(6280:6280): Tamanio maximo de segmentos = (null)
+[INFO] 02:09:49:824 CPU/(6280:6280): --------------------------------
+[INFO] 02:09:49:824 CPU/(6280:6280): ¡CPU iniciado correctamente!
+[TRACE] 02:09:49:824 CPU/(6280:6280): Listo para escuchar a mi cliente
+[INFO] 02:09:49:825 CPU/(6280:6280): Servidor listo para recibir al cliente
+[INFO] 02:09:49:825 CPU/(6280:6282): Conexion establecida con Memoria
+[INFO] 02:10:19:635 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 02:10:19:636 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 02:21:50:162 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 02:21:50:164 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 02:28:15:570 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 02:28:15:571 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 02:40:08:545 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 02:40:08:546 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:02:28:759 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:02:28:761 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:07:34:666 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:07:34:666 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:16:14:142 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:16:14:143 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:22:43:870 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:22:43:870 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:23:16:363 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:23:16:363 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:23:39:381 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:23:39:381 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:33:00:687 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:33:00:688 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:34:45:898 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:34:45:898 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:36:54:572 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:36:54:572 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:38:23:502 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:38:23:503 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:40:46:158 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:40:46:158 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:42:24:020 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:42:24:021 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:46:07:696 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:46:07:696 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:47:08:560 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:47:08:560 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:50:03:854 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:50:03:854 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:52:24:180 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:52:24:180 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:52:50:559 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:52:50:559 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 03:53:19:766 CPU/(6280:6281): Se conecto un cliente!
+[INFO] 03:53:19:766 CPU/(6280:6281): Me llego el mensaje Soy el Kernel

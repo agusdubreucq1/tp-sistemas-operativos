@@ -33,14 +33,6 @@ int main(void){
 	return EXIT_SUCCESS;
 }
 
-void* conectarModulo(char *ip, char *puerto, t_log *logger, char *modulo){
-	socket_modulo = crear_conexion(ip, puerto, logger, modulo);
-	handshake(socket_modulo, 1, logger, modulo);
-
-	enviar_mensaje("Soy el Kernel", socket_modulo);
-	return "";
-}
-
 void* conectarFileSystem(){
 	socket_fileSystem = crear_conexion(ip_filesystem, puerto_filesystem, kernel_logger, "File System");
 	handshake(socket_fileSystem, 1, kernel_logger, "File System");
@@ -85,11 +77,16 @@ void* recibirProcesos() {
 			recibir_mensaje(cliente_consola, kernel_logger);
 			break;
 		case PAQUETE:
-			lista = recibir_paquete(cliente_consola);
-			log_info(kernel_logger, "Me llegaron los siguientes valores:");
-			list_iterate(lista, (void*)iterator);
+			uint32_t tamanio;
+			lista = recibir_paquete(cliente_consola, &tamanio);
+			log_info(kernel_logger, "Paquete recibido con exito");
+			//list_iterate(lista, (void*)iterator);
+			t_pcb* pcb = crear_pcb(0, lista, estimacion_inicial, tamanio);
+			print_pcb(pcb);
 			break;
 		}
+
+
 	}
 	return "";
 }

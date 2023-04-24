@@ -73,7 +73,7 @@ void recibir_mensaje(int socket_cliente, t_log* logger)
 }
 
 
-t_list* recibir_paquete(int socket_cliente){
+t_list* recibir_paquete(int socket_cliente, uint32_t* tamanio_recibido){
 	int size;
 	int desplazamiento = 0;
 	void * buffer;
@@ -91,10 +91,11 @@ t_list* recibir_paquete(int socket_cliente){
 		list_add(valores, valor);
 	}
 
-	uint32_t handshake;
-	handshake = desplazamiento + sizeof(uint32_t) * 2;
-	send(socket_cliente, &handshake, sizeof(uint32_t), 0);
+	//uint32_t handshake;
+	*tamanio_recibido = desplazamiento + sizeof(uint32_t) * 2;
+	send(socket_cliente, &tamanio_recibido, sizeof(uint32_t), 0);
 	free(buffer);
+
 	return valores;
 }
 
