@@ -9,6 +9,7 @@
 #define PCB_H_
 
 #include "datos.h"
+#include "utils.h"
 #include <commons/collections/list.h>
 #include <string.h>
 #include <stdlib.h>

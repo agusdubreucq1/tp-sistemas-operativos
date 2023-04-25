@@ -48,6 +48,9 @@ int main(int argc, char** argv) {
 }
 
 void terminar_programa(int conexion, t_log *logger, t_config* config){
+	while(1){
+
+	}
 	log_info(logger, "Entro a finalizar el programa");
 	log_destroy(logger);
 	config_destroy(config);

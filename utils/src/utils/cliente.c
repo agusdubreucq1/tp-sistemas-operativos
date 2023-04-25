@@ -126,8 +126,7 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log* logger, char*
 	if(respuesta == bytes){
 		log_info(logger,"Datos enviados correctamente");
 	}
-	else
-	{
+	else {
 		log_error(logger,"Han llegado menos bytes que los enviados por %s", modulo);
 	}
 

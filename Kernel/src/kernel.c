@@ -21,14 +21,25 @@ int main(void){
 	server_kernel = iniciar_servidor(IP_SERVER, puerto_escucha, kernel_logger);
 	log_info(kernel_logger, "Servidor listo para recibir al cliente");
 
+	init_estructuras_planificacion();
+
 	pthread_create(&conexionFileSystem, NULL, conectarFileSystem, NULL);
 	pthread_detach(conexionFileSystem);
 	pthread_create(&conexionCPU, NULL, conectarCPU, NULL);
 	pthread_detach(conexionCPU);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
-	pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
-	pthread_join(atender_consolas, NULL);
+
+	//pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
+	//pthread_join(atender_consolas, NULL);
+
+    while(1){
+        int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
+        pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) &conexion_consola);
+        pthread_detach(atender_consolas);
+    }
+
+    close(server_kernel);
 
 	return EXIT_SUCCESS;
 }
@@ -57,40 +68,54 @@ void* conectarMemoria(){
 	return "";
 }
 
-void* recibirProcesos() {
-	while (1) {
-		int cliente_consola = esperar_cliente(server_kernel, kernel_logger);
+void* recibirProcesos(int* p_conexion) {
+	int conexion = *p_conexion;
+	uint32_t resultOk = 0;
+	uint32_t resultError = -1;
 
-		uint32_t resultOk = 0;
-		uint32_t resultError = -1;
+	recv(conexion, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+	if(respuesta == 1)
+	   send(conexion, &resultOk, sizeof(uint32_t), 0);
+	else
+	   send(conexion, &resultError, sizeof(uint32_t), 0);
 
-		recv(cliente_consola, &respuesta, sizeof(uint32_t), MSG_WAITALL);
-		if(respuesta == 1)
-		   send(cliente_consola, &resultOk, sizeof(uint32_t), 0);
-		else
-		   send(cliente_consola, &resultError, sizeof(uint32_t), 0);
-
-		t_list* lista;
-		int cod_op = recibir_operacion(cliente_consola);
-		switch (cod_op) {
-		case MENSAJE:
-			recibir_mensaje(cliente_consola, kernel_logger);
-			break;
-		case PAQUETE:
-			uint32_t tamanio;
-			lista = recibir_instrucciones(cliente_consola, &tamanio);
-			log_info(kernel_logger, "Paquete recibido con exito");
-			t_pcb* pcb = crear_pcb(0, lista, estimacion_inicial, tamanio);
-			print_pcb(pcb);
-			break;
-		}
+	t_list* lista;
+	int cod_op = recibir_operacion(conexion);
+	switch (cod_op) {
+	case MENSAJE:
+		recibir_mensaje(conexion, kernel_logger);
+		break;
+	case PAQUETE:
+		uint32_t tamanio;
+		lista = recibir_instrucciones(conexion, &tamanio);
+		printf("\n\nCCCCCC %d \n\n", tamanio);
+		log_info(kernel_logger, "Nuevo Proceso recibido con exito");
+		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial, tamanio);
+		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new);
 
 
+		t_pcb* pcb = list_get(lista_new, list_size(lista_new)-1);
+		print_pcb(pcb);
+
+		break;
 	}
 	return "";
 }
 
 
-void iterator(char* value) {
-	log_info(kernel_logger,"%s", value);
+void init_estructuras_planificacion(){
+    lista_new = list_create();
+    lista_ready = list_create();
+
+    sem_init(&semaforo_multiprogramacion, 0, grado_maximo_multiprogramacion);
+
+    sem_init(&cantidad_procesos_new, 0, 0);
+    sem_init(&cantidad_procesos_ready, 0, 0);
+
+    pthread_mutex_init(&semaforo_new, NULL);
+    pthread_mutex_init(&semaforo_ready, NULL);
 }
+
+
+
+

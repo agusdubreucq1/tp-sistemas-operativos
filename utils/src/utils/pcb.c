@@ -20,8 +20,6 @@ t_pcb* crear_pcb(uint32_t pid, t_list* instrucciones, uint32_t estimacion, uint3
 }
 
 
-
-
 void init_registros(t_registros** registros){
 	*registros = malloc(sizeof(t_registros));
 	strcpy((*registros)->ax, "");
@@ -55,7 +53,7 @@ void print_pcb(t_pcb* pcb){
 	printf("Program Counter = %u\n", pcb->program_counter);
 	printf("Estado = %s\n", print_estado(pcb->estado));
 	printf("Estimacion rafaga = %d\n", pcb->estimado_rafaga);
-	list_iterate(pcb->instrucciones, (void*)print_lista);
+	//list_iterate(pcb->instrucciones, (void*)iterator);
 	print_registos(pcb->registros_cpu);
 	print_segmento(pcb->tabla_segmentos);
 }
@@ -79,10 +77,6 @@ void print_registos(t_registros* registros){
 	printf("RDX = %s\n", registros->rdx);
 }
 
-void print_lista(char* value) {
-	printf("%s", value);
-}
-
 char* print_estado(estado_code estado){
 	if(estado == NEW) 		return "New";
 	if(estado == READY) 		return "Ready";
@@ -99,11 +93,4 @@ void print_segmento(t_segmento* segmento){
 	printf("Tamanio = %d\n", segmento->tamanio_segmento);
 }
 
-/*
-	t_segmento** tabla_segmentos;
-	uint32_t estimado_rafaga;
-	uint32_t tiempo_ready;
-	//uint32_t tabla_archivos;
-	estado_code estado;
-}t_pcb;
-*/
+

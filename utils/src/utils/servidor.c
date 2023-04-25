@@ -99,7 +99,7 @@ t_list* recibir_instrucciones(int socket_cliente, uint32_t* tamanio_recibido){
 	}
 
 	*tamanio_recibido = desplazamiento + sizeof(uint32_t) * 2;
-	send(socket_cliente, &tamanio_recibido, sizeof(uint32_t), 0);
+	send(socket_cliente, tamanio_recibido, sizeof(uint32_t), 0);
 	free(buffer);
 
 	return valores;
