@@ -30,6 +30,10 @@ int main(void){
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
 
+
+	pthread_create(&planificador_largo_plazo, NULL, planificarLargoPlazo, NULL);
+
+
 	//pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
 	//pthread_join(atender_consolas, NULL);
 
@@ -37,7 +41,11 @@ int main(void){
         int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
         pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) &conexion_consola);
         pthread_detach(atender_consolas);
+        //printf("\n\n lista ready: %d \n\n", list_size(lista_ready));
     }
+
+    pthread_detach(planificador_largo_plazo);
+
 
     close(server_kernel);
 
@@ -114,6 +122,21 @@ void init_estructuras_planificacion(){
 
     pthread_mutex_init(&semaforo_new, NULL);
     pthread_mutex_init(&semaforo_ready, NULL);
+}
+
+void* planificarLargoPlazo(){
+	while(1){
+		//el sem_post hay que hacerlo cuando un proceso termina
+		if(list_size(lista_new)>0){
+			sem_wait(&semaforo_multiprogramacion);
+			pthread_mutex_lock(&semaforo_new);
+			t_pcb* pcb = list_remove(lista_new, 0);
+			pthread_mutex_unlock(&semaforo_new);
+			ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready);
+		}
+
+	}
+	return "";
 }
 
 

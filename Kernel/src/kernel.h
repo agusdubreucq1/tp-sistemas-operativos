@@ -44,6 +44,7 @@
 	uint32_t resultOk;
 	uint32_t resultError;
 	pthread_t atender_consolas;
+	pthread_t planificador_largo_plazo;
 	pthread_t conexionFileSystem;
 	pthread_t conexionCPU;
 	pthread_t conexionMemoria;
@@ -77,5 +78,6 @@
 	void* conectarMemoria();
 	void* recibirProcesos(int* conexion_p);
 	void init_estructuras_planificacion();
+	void* planificarLargoPlazo();
 
 #endif /* KERNEL_H_ */
