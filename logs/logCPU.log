@@ -796,3 +796,111 @@
 [INFO] 03:52:50:559 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
 [INFO] 03:53:19:766 CPU/(6280:6281): Se conecto un cliente!
 [INFO] 03:53:19:766 CPU/(6280:6281): Me llego el mensaje Soy el Kernel
+[INFO] 12:47:08:647 CPU/(3227:3227): Logger creado
+[INFO] 12:47:08:648 CPU/(3227:3227): -------Valores del config-------
+[INFO] 12:47:08:648 CPU/(3227:3227): Retardo Instrucción = 1000
+[INFO] 12:47:08:648 CPU/(3227:3227): IP Memoria = 127.0.0.1
+[INFO] 12:47:08:648 CPU/(3227:3227): Puerto Memoria = 8003
+[INFO] 12:47:08:648 CPU/(3227:3227): Puerto Escucha = 8001
+[INFO] 12:47:08:648 CPU/(3227:3227): Tamanio maximo de segmentos = (null)
+[INFO] 12:47:08:648 CPU/(3227:3227): --------------------------------
+[INFO] 12:47:08:648 CPU/(3227:3227): ¡CPU iniciado correctamente!
+[TRACE] 12:47:08:648 CPU/(3227:3227): Listo para escuchar a mi cliente
+[INFO] 12:47:08:648 CPU/(3227:3227): Servidor listo para recibir al cliente
+[INFO] 12:47:08:648 CPU/(3227:3229): Conexion establecida con Memoria
+[INFO] 12:47:33:667 CPU/(3227:3228): Se conecto un cliente!
+[INFO] 12:47:33:667 CPU/(3227:3228): Me llego el mensaje Soy el Kernel
+[INFO] 12:48:53:229 CPU/(3227:3228): Se conecto un cliente!
+[INFO] 12:48:53:229 CPU/(3227:3228): Me llego el mensaje Soy el Kernel
+[INFO] 12:49:51:810 CPU/(3227:3228): Se conecto un cliente!
+[INFO] 12:49:51:810 CPU/(3227:3228): Me llego el mensaje Soy el Kernel
+[INFO] 12:55:49:521 CPU/(3389:3389): Logger creado
+[INFO] 12:55:49:522 CPU/(3389:3389): -------Valores del config-------
+[INFO] 12:55:49:522 CPU/(3389:3389): Retardo Instrucción = 1000
+[INFO] 12:55:49:522 CPU/(3389:3389): IP Memoria = 127.0.0.1
+[INFO] 12:55:49:522 CPU/(3389:3389): Puerto Memoria = 8003
+[INFO] 12:55:49:522 CPU/(3389:3389): Puerto Escucha = 8001
+[INFO] 12:55:49:522 CPU/(3389:3389): Tamanio maximo de segmentos = (null)
+[INFO] 12:55:49:523 CPU/(3389:3389): --------------------------------
+[INFO] 12:55:49:523 CPU/(3389:3389): ¡CPU iniciado correctamente!
+[TRACE] 12:55:49:523 CPU/(3389:3389): Listo para escuchar a mi cliente
+[INFO] 12:55:49:523 CPU/(3389:3389): Servidor listo para recibir al cliente
+[INFO] 12:55:49:523 CPU/(3389:3391): Conexion establecida con Memoria
+[INFO] 12:55:56:004 CPU/(3389:3390): Se conecto un cliente!
+[INFO] 12:55:56:004 CPU/(3389:3390): Me llego el mensaje Soy el Kernel
+[INFO] 12:57:55:546 CPU/(3389:3390): Se conecto un cliente!
+[INFO] 12:57:55:546 CPU/(3389:3390): Me llego el mensaje Soy el Kernel
+[INFO] 13:00:27:917 CPU/(3389:3390): Se conecto un cliente!
+[INFO] 13:00:27:917 CPU/(3389:3390): Me llego el mensaje Soy el Kernel
+[INFO] 13:01:12:455 CPU/(3389:3390): Se conecto un cliente!
+[INFO] 13:01:12:455 CPU/(3389:3390): Me llego el mensaje Soy el Kernel
+[INFO] 13:09:27:076 CPU/(3990:3990): Logger creado
+[INFO] 13:09:27:077 CPU/(3990:3990): -------Valores del config-------
+[INFO] 13:09:27:077 CPU/(3990:3990): Retardo Instrucción = 1000
+[INFO] 13:09:27:077 CPU/(3990:3990): IP Memoria = 127.0.0.1
+[INFO] 13:09:27:077 CPU/(3990:3990): Puerto Memoria = 8003
+[INFO] 13:09:27:077 CPU/(3990:3990): Puerto Escucha = 8001
+[INFO] 13:09:27:077 CPU/(3990:3990): Tamanio maximo de segmentos = (null)
+[INFO] 13:09:27:077 CPU/(3990:3990): --------------------------------
+[INFO] 13:09:27:077 CPU/(3990:3990): ¡CPU iniciado correctamente!
+[TRACE] 13:09:27:077 CPU/(3990:3990): Listo para escuchar a mi cliente
+[INFO] 13:09:27:077 CPU/(3990:3990): Servidor listo para recibir al cliente
+[INFO] 13:09:27:079 CPU/(3990:3992): Conexion establecida con Memoria
+[INFO] 13:09:34:434 CPU/(3990:3991): Se conecto un cliente!
+[INFO] 13:09:34:434 CPU/(3990:3991): Me llego el mensaje Soy el Kernel
+[INFO] 20:27:15:581 CPU/(5895:5895): Logger creado
+[INFO] 20:27:15:582 CPU/(5895:5895): -------Valores del config-------
+[INFO] 20:27:15:582 CPU/(5895:5895): Retardo Instrucción = 1000
+[INFO] 20:27:15:582 CPU/(5895:5895): IP Memoria = 127.0.0.1
+[INFO] 20:27:15:582 CPU/(5895:5895): Puerto Memoria = 8003
+[INFO] 20:27:15:582 CPU/(5895:5895): Puerto Escucha = 8001
+[INFO] 20:27:15:582 CPU/(5895:5895): Tamanio maximo de segmentos = (null)
+[INFO] 20:27:15:582 CPU/(5895:5895): --------------------------------
+[INFO] 20:27:15:582 CPU/(5895:5895): ¡CPU iniciado correctamente!
+[TRACE] 20:27:15:582 CPU/(5895:5895): Listo para escuchar a mi cliente
+[INFO] 20:27:15:583 CPU/(5895:5895): Servidor listo para recibir al cliente
+[INFO] 20:27:15:583 CPU/(5895:5897): Conexion establecida con Memoria
+[INFO] 20:27:28:566 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 20:27:28:566 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 20:28:47:575 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 20:28:47:575 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 20:30:01:826 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 20:30:01:826 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 20:31:46:826 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 20:31:46:826 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:18:28:226 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:18:28:227 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:20:20:117 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:20:20:118 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:22:07:507 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:22:07:508 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:23:23:317 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:23:23:318 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:25:23:828 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:25:23:828 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:27:08:989 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:27:08:990 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:29:16:800 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:29:16:800 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:50:56:951 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:50:56:952 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:52:55:329 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:52:55:329 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:56:48:334 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:56:48:335 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 23:59:41:091 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 23:59:41:091 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 00:00:17:157 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 00:00:17:158 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 00:01:24:412 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 00:01:24:413 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 00:04:26:327 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 00:04:26:328 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 00:05:33:083 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 00:05:33:083 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 00:07:36:165 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 00:07:36:166 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 00:10:31:598 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 00:10:31:599 CPU/(5895:5896): Me llego el mensaje Soy el Kernel
+[INFO] 00:11:55:317 CPU/(5895:5896): Se conecto un cliente!
+[INFO] 00:11:55:317 CPU/(5895:5896): Me llego el mensaje Soy el Kernel

@@ -78,9 +78,8 @@ void* recibirProcesos() {
 			break;
 		case PAQUETE:
 			uint32_t tamanio;
-			lista = recibir_paquete(cliente_consola, &tamanio);
+			lista = recibir_instrucciones(cliente_consola, &tamanio);
 			log_info(kernel_logger, "Paquete recibido con exito");
-			//list_iterate(lista, (void*)iterator);
 			t_pcb* pcb = crear_pcb(0, lista, estimacion_inicial, tamanio);
 			print_pcb(pcb);
 			break;

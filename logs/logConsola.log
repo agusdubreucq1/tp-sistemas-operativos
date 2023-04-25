@@ -2074,3 +2074,318 @@
 [INFO] 03:53:36:673 Consola/(11330:11330): Datos enviados, esperando respuesta de Kernel...
 [ERROR] 03:53:36:673 Consola/(11330:11330): Ha ocurrido un error en la comunicacion con Kernel
 [INFO] 03:53:36:673 Consola/(11330:11330): Entro a finalizar el programa
+[INFO] 12:47:58:012 Consola/(3244:3244): Logger creado
+[INFO] 12:47:58:013 Consola/(3244:3244): ¡Consola iniciada correctamente!
+[INFO] 12:47:58:013 Consola/(3244:3244): -------Valores del config-------
+[INFO] 12:47:58:013 Consola/(3244:3244): Ip = 127.0.0.1
+[INFO] 12:47:58:013 Consola/(3244:3244): Puerto = 8000
+[INFO] 12:47:58:013 Consola/(3244:3244): --------------------------------
+[INFO] 12:47:58:014 Consola/(3244:3244): Conexion establecida con Kernel
+[INFO] 12:47:58:014 Consola/(3244:3244): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:47:58:014 Consola/(3244:3244): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:47:58:014 Consola/(3244:3244): Entro a finalizar el programa
+[INFO] 12:48:57:059 Consola/(3281:3281): Logger creado
+[INFO] 12:48:57:060 Consola/(3281:3281): ¡Consola iniciada correctamente!
+[INFO] 12:48:57:060 Consola/(3281:3281): -------Valores del config-------
+[INFO] 12:48:57:061 Consola/(3281:3281): Ip = 127.0.0.1
+[INFO] 12:48:57:061 Consola/(3281:3281): Puerto = 8000
+[INFO] 12:48:57:061 Consola/(3281:3281): --------------------------------
+[INFO] 12:48:57:061 Consola/(3281:3281): Conexion establecida con Kernel
+[INFO] 12:48:57:061 Consola/(3281:3281): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:48:57:061 Consola/(3281:3281): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:48:57:061 Consola/(3281:3281): Entro a finalizar el programa
+[INFO] 12:49:46:382 Consola/(3320:3320): Logger creado
+[INFO] 12:49:46:383 Consola/(3320:3320): ¡Consola iniciada correctamente!
+[INFO] 12:49:46:383 Consola/(3320:3320): -------Valores del config-------
+[INFO] 12:49:46:383 Consola/(3320:3320): Ip = 127.0.0.1
+[INFO] 12:49:46:383 Consola/(3320:3320): Puerto = 8000
+[INFO] 12:49:46:383 Consola/(3320:3320): --------------------------------
+[INFO] 12:49:46:383 Consola/(3320:3320): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 12:49:47:383 Consola/(3320:3320): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 12:49:48:384 Consola/(3320:3320): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 12:49:49:384 Consola/(3320:3320): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 12:49:50:385 Consola/(3320:3320): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 12:49:51:385 Consola/(3320:3320): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 12:49:52:386 Consola/(3320:3320): Conexion establecida con Kernel
+[INFO] 12:49:52:386 Consola/(3320:3320): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:49:52:386 Consola/(3320:3320): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:49:52:386 Consola/(3320:3320): Entro a finalizar el programa
+[INFO] 12:55:59:992 Consola/(3400:3400): Logger creado
+[INFO] 12:55:59:993 Consola/(3400:3400): ¡Consola iniciada correctamente!
+[INFO] 12:55:59:993 Consola/(3400:3400): -------Valores del config-------
+[INFO] 12:55:59:993 Consola/(3400:3400): Ip = 127.0.0.1
+[INFO] 12:55:59:993 Consola/(3400:3400): Puerto = 8000
+[INFO] 12:55:59:993 Consola/(3400:3400): --------------------------------
+[INFO] 12:55:59:994 Consola/(3400:3400): Conexion establecida con Kernel
+[INFO] 12:55:59:994 Consola/(3400:3400): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:55:59:994 Consola/(3400:3400): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:55:59:994 Consola/(3400:3400): Entro a finalizar el programa
+[INFO] 12:57:58:180 Consola/(3499:3499): Logger creado
+[INFO] 12:57:58:180 Consola/(3499:3499): ¡Consola iniciada correctamente!
+[INFO] 12:57:58:180 Consola/(3499:3499): -------Valores del config-------
+[INFO] 12:57:58:180 Consola/(3499:3499): Ip = 127.0.0.1
+[INFO] 12:57:58:180 Consola/(3499:3499): Puerto = 8000
+[INFO] 12:57:58:180 Consola/(3499:3499): --------------------------------
+[INFO] 12:57:58:181 Consola/(3499:3499): Conexion establecida con Kernel
+[INFO] 12:57:58:181 Consola/(3499:3499): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:57:58:181 Consola/(3499:3499): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:57:58:181 Consola/(3499:3499): Entro a finalizar el programa
+[INFO] 13:00:31:581 Consola/(3655:3655): Logger creado
+[INFO] 13:00:31:582 Consola/(3655:3655): ¡Consola iniciada correctamente!
+[INFO] 13:00:31:582 Consola/(3655:3655): -------Valores del config-------
+[INFO] 13:00:31:582 Consola/(3655:3655): Ip = 127.0.0.1
+[INFO] 13:00:31:582 Consola/(3655:3655): Puerto = 8000
+[INFO] 13:00:31:582 Consola/(3655:3655): --------------------------------
+[INFO] 13:00:31:583 Consola/(3655:3655): Conexion establecida con Kernel
+[INFO] 13:00:31:583 Consola/(3655:3655): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 13:00:31:583 Consola/(3655:3655): Han llegado menos bytes que los enviados por Kernel
+[INFO] 13:00:31:583 Consola/(3655:3655): Entro a finalizar el programa
+[INFO] 13:01:15:257 Consola/(3699:3699): Logger creado
+[INFO] 13:01:15:258 Consola/(3699:3699): ¡Consola iniciada correctamente!
+[INFO] 13:01:15:258 Consola/(3699:3699): -------Valores del config-------
+[INFO] 13:01:15:258 Consola/(3699:3699): Ip = 127.0.0.1
+[INFO] 13:01:15:258 Consola/(3699:3699): Puerto = 8000
+[INFO] 13:01:15:258 Consola/(3699:3699): --------------------------------
+[INFO] 13:01:15:258 Consola/(3699:3699): Conexion establecida con Kernel
+[INFO] 13:01:15:258 Consola/(3699:3699): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 13:01:15:258 Consola/(3699:3699): Han llegado menos bytes que los enviados por Kernel
+[INFO] 13:01:15:258 Consola/(3699:3699): Entro a finalizar el programa
+[INFO] 13:09:37:323 Consola/(4001:4001): Logger creado
+[INFO] 13:09:37:324 Consola/(4001:4001): ¡Consola iniciada correctamente!
+[INFO] 13:09:37:324 Consola/(4001:4001): -------Valores del config-------
+[INFO] 13:09:37:324 Consola/(4001:4001): Ip = 127.0.0.1
+[INFO] 13:09:37:324 Consola/(4001:4001): Puerto = 8000
+[INFO] 13:09:37:324 Consola/(4001:4001): --------------------------------
+[INFO] 13:09:37:325 Consola/(4001:4001): Conexion establecida con Kernel
+[INFO] 13:09:37:325 Consola/(4001:4001): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 13:09:37:325 Consola/(4001:4001): Han llegado menos bytes que los enviados por Kernel
+[INFO] 13:09:37:325 Consola/(4001:4001): Entro a finalizar el programa
+[INFO] 20:27:48:327 Consola/(5908:5908): Logger creado
+[INFO] 20:27:48:328 Consola/(5908:5908): ¡Consola iniciada correctamente!
+[INFO] 20:27:48:328 Consola/(5908:5908): -------Valores del config-------
+[INFO] 20:27:48:328 Consola/(5908:5908): Ip = 127.0.0.1
+[INFO] 20:27:48:328 Consola/(5908:5908): Puerto = 8000
+[INFO] 20:27:48:328 Consola/(5908:5908): --------------------------------
+[INFO] 20:27:48:328 Consola/(5908:5908): Conexion establecida con Kernel
+[INFO] 20:27:48:329 Consola/(5908:5908): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 20:27:48:329 Consola/(5908:5908): Han llegado menos bytes que los enviados por Kernel
+[INFO] 20:27:48:329 Consola/(5908:5908): Entro a finalizar el programa
+[INFO] 20:28:39:388 Consola/(5998:5998): Logger creado
+[INFO] 20:28:39:389 Consola/(5998:5998): ¡Consola iniciada correctamente!
+[INFO] 20:28:39:389 Consola/(5998:5998): -------Valores del config-------
+[INFO] 20:28:39:389 Consola/(5998:5998): Ip = 127.0.0.1
+[INFO] 20:28:39:389 Consola/(5998:5998): Puerto = 8000
+[INFO] 20:28:39:389 Consola/(5998:5998): --------------------------------
+[INFO] 20:28:39:389 Consola/(5998:5998): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 20:28:40:390 Consola/(5998:5998): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 20:28:41:390 Consola/(5998:5998): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 20:28:42:390 Consola/(5998:5998): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 20:28:43:390 Consola/(5998:5998): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 20:28:44:390 Consola/(5998:5998): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 20:28:45:391 Consola/(5998:5998): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 20:28:46:391 Consola/(5998:5998): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 20:28:47:391 Consola/(5998:5998): Hubo un fallo al conectarse al modulo Kernel 127.0.0.1:8000, reintentando...
+[INFO] 20:28:48:391 Consola/(5998:5998): Conexion establecida con Kernel
+[INFO] 20:28:48:391 Consola/(5998:5998): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 20:28:48:391 Consola/(5998:5998): Han llegado menos bytes que los enviados por Kernel
+[INFO] 20:28:48:391 Consola/(5998:5998): Entro a finalizar el programa
+[INFO] 20:30:04:664 Consola/(6076:6076): Logger creado
+[INFO] 20:30:04:665 Consola/(6076:6076): ¡Consola iniciada correctamente!
+[INFO] 20:30:04:665 Consola/(6076:6076): -------Valores del config-------
+[INFO] 20:30:04:665 Consola/(6076:6076): Ip = 127.0.0.1
+[INFO] 20:30:04:665 Consola/(6076:6076): Puerto = 8000
+[INFO] 20:30:04:665 Consola/(6076:6076): --------------------------------
+[INFO] 20:30:04:665 Consola/(6076:6076): Conexion establecida con Kernel
+[INFO] 20:30:04:666 Consola/(6076:6076): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 20:30:04:666 Consola/(6076:6076): Han llegado menos bytes que los enviados por Kernel
+[INFO] 20:30:04:666 Consola/(6076:6076): Entro a finalizar el programa
+[INFO] 20:31:48:948 Consola/(6127:6127): Logger creado
+[INFO] 20:31:48:949 Consola/(6127:6127): ¡Consola iniciada correctamente!
+[INFO] 20:31:48:949 Consola/(6127:6127): -------Valores del config-------
+[INFO] 20:31:48:949 Consola/(6127:6127): Ip = 127.0.0.1
+[INFO] 20:31:48:949 Consola/(6127:6127): Puerto = 8000
+[INFO] 20:31:48:949 Consola/(6127:6127): --------------------------------
+[INFO] 20:31:48:949 Consola/(6127:6127): Conexion establecida con Kernel
+[INFO] 20:31:48:949 Consola/(6127:6127): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 20:31:48:949 Consola/(6127:6127): Han llegado menos bytes que los enviados por Kernel
+[INFO] 20:31:48:949 Consola/(6127:6127): Entro a finalizar el programa
+[INFO] 23:18:33:563 Consola/(6571:6571): Logger creado
+[INFO] 23:18:33:570 Consola/(6571:6571): ¡Consola iniciada correctamente!
+[INFO] 23:18:33:570 Consola/(6571:6571): -------Valores del config-------
+[INFO] 23:18:33:570 Consola/(6571:6571): Ip = 127.0.0.1
+[INFO] 23:18:33:571 Consola/(6571:6571): Puerto = 8000
+[INFO] 23:18:33:571 Consola/(6571:6571): --------------------------------
+[INFO] 23:18:33:571 Consola/(6571:6571): Conexion establecida con Kernel
+[INFO] 23:18:33:571 Consola/(6571:6571): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:18:33:571 Consola/(6571:6571): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:18:33:572 Consola/(6571:6571): Entro a finalizar el programa
+[INFO] 23:20:24:932 Consola/(6687:6687): Logger creado
+[INFO] 23:20:24:934 Consola/(6687:6687): ¡Consola iniciada correctamente!
+[INFO] 23:20:24:934 Consola/(6687:6687): -------Valores del config-------
+[INFO] 23:20:24:934 Consola/(6687:6687): Ip = 127.0.0.1
+[INFO] 23:20:24:934 Consola/(6687:6687): Puerto = 8000
+[INFO] 23:20:24:934 Consola/(6687:6687): --------------------------------
+[INFO] 23:20:24:935 Consola/(6687:6687): Conexion establecida con Kernel
+[INFO] 23:20:24:935 Consola/(6687:6687): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:20:24:935 Consola/(6687:6687): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:20:24:935 Consola/(6687:6687): Entro a finalizar el programa
+[INFO] 23:22:08:919 Consola/(6777:6777): Logger creado
+[INFO] 23:22:08:919 Consola/(6777:6777): ¡Consola iniciada correctamente!
+[INFO] 23:22:08:919 Consola/(6777:6777): -------Valores del config-------
+[INFO] 23:22:08:919 Consola/(6777:6777): Ip = 127.0.0.1
+[INFO] 23:22:08:919 Consola/(6777:6777): Puerto = 8000
+[INFO] 23:22:08:919 Consola/(6777:6777): --------------------------------
+[INFO] 23:22:08:920 Consola/(6777:6777): Conexion establecida con Kernel
+[INFO] 23:22:08:920 Consola/(6777:6777): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:22:08:921 Consola/(6777:6777): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:22:08:921 Consola/(6777:6777): Entro a finalizar el programa
+[INFO] 23:23:25:583 Consola/(6884:6884): Logger creado
+[INFO] 23:23:25:584 Consola/(6884:6884): ¡Consola iniciada correctamente!
+[INFO] 23:23:25:584 Consola/(6884:6884): -------Valores del config-------
+[INFO] 23:23:25:584 Consola/(6884:6884): Ip = 127.0.0.1
+[INFO] 23:23:25:585 Consola/(6884:6884): Puerto = 8000
+[INFO] 23:23:25:585 Consola/(6884:6884): --------------------------------
+[INFO] 23:23:25:585 Consola/(6884:6884): Conexion establecida con Kernel
+[INFO] 23:23:25:585 Consola/(6884:6884): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:23:25:585 Consola/(6884:6884): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:23:25:585 Consola/(6884:6884): Entro a finalizar el programa
+[INFO] 23:25:26:716 Consola/(6991:6991): Logger creado
+[INFO] 23:25:26:717 Consola/(6991:6991): ¡Consola iniciada correctamente!
+[INFO] 23:25:26:717 Consola/(6991:6991): -------Valores del config-------
+[INFO] 23:25:26:717 Consola/(6991:6991): Ip = 127.0.0.1
+[INFO] 23:25:26:717 Consola/(6991:6991): Puerto = 8000
+[INFO] 23:25:26:717 Consola/(6991:6991): --------------------------------
+[INFO] 23:25:26:718 Consola/(6991:6991): Conexion establecida con Kernel
+[INFO] 23:25:26:718 Consola/(6991:6991): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:25:26:718 Consola/(6991:6991): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:25:26:718 Consola/(6991:6991): Entro a finalizar el programa
+[INFO] 23:27:10:855 Consola/(7049:7049): Logger creado
+[INFO] 23:27:10:856 Consola/(7049:7049): ¡Consola iniciada correctamente!
+[INFO] 23:27:10:856 Consola/(7049:7049): -------Valores del config-------
+[INFO] 23:27:10:856 Consola/(7049:7049): Ip = 127.0.0.1
+[INFO] 23:27:10:856 Consola/(7049:7049): Puerto = 8000
+[INFO] 23:27:10:856 Consola/(7049:7049): --------------------------------
+[INFO] 23:27:10:857 Consola/(7049:7049): Conexion establecida con Kernel
+[INFO] 23:27:10:857 Consola/(7049:7049): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:27:10:857 Consola/(7049:7049): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:27:10:857 Consola/(7049:7049): Entro a finalizar el programa
+[INFO] 23:29:23:344 Consola/(7064:7064): Logger creado
+[INFO] 23:29:23:344 Consola/(7064:7064): ¡Consola iniciada correctamente!
+[INFO] 23:29:23:345 Consola/(7064:7064): -------Valores del config-------
+[INFO] 23:29:23:345 Consola/(7064:7064): Ip = 127.0.0.1
+[INFO] 23:29:23:345 Consola/(7064:7064): Puerto = 8000
+[INFO] 23:29:23:345 Consola/(7064:7064): --------------------------------
+[INFO] 23:29:23:345 Consola/(7064:7064): Conexion establecida con Kernel
+[INFO] 23:29:23:345 Consola/(7064:7064): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:29:23:345 Consola/(7064:7064): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:29:23:345 Consola/(7064:7064): Entro a finalizar el programa
+[INFO] 23:50:58:938 Consola/(7137:7137): Logger creado
+[INFO] 23:50:58:939 Consola/(7137:7137): ¡Consola iniciada correctamente!
+[INFO] 23:50:58:939 Consola/(7137:7137): -------Valores del config-------
+[INFO] 23:50:58:939 Consola/(7137:7137): Ip = 127.0.0.1
+[INFO] 23:50:58:939 Consola/(7137:7137): Puerto = 8000
+[INFO] 23:50:58:939 Consola/(7137:7137): --------------------------------
+[INFO] 23:50:58:939 Consola/(7137:7137): Conexion establecida con Kernel
+[INFO] 23:50:58:939 Consola/(7137:7137): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:50:58:939 Consola/(7137:7137): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:50:58:939 Consola/(7137:7137): Entro a finalizar el programa
+[INFO] 23:52:57:362 Consola/(7306:7306): Logger creado
+[INFO] 23:52:57:362 Consola/(7306:7306): ¡Consola iniciada correctamente!
+[INFO] 23:52:57:362 Consola/(7306:7306): -------Valores del config-------
+[INFO] 23:52:57:362 Consola/(7306:7306): Ip = 127.0.0.1
+[INFO] 23:52:57:362 Consola/(7306:7306): Puerto = 8000
+[INFO] 23:52:57:362 Consola/(7306:7306): --------------------------------
+[INFO] 23:52:57:362 Consola/(7306:7306): Conexion establecida con Kernel
+[INFO] 23:52:57:363 Consola/(7306:7306): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:52:57:363 Consola/(7306:7306): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:52:57:363 Consola/(7306:7306): Entro a finalizar el programa
+[INFO] 23:56:51:060 Consola/(7466:7466): Logger creado
+[INFO] 23:56:51:061 Consola/(7466:7466): ¡Consola iniciada correctamente!
+[INFO] 23:56:51:061 Consola/(7466:7466): -------Valores del config-------
+[INFO] 23:56:51:061 Consola/(7466:7466): Ip = 127.0.0.1
+[INFO] 23:56:51:061 Consola/(7466:7466): Puerto = 8000
+[INFO] 23:56:51:061 Consola/(7466:7466): --------------------------------
+[INFO] 23:56:51:062 Consola/(7466:7466): Conexion establecida con Kernel
+[INFO] 23:56:51:062 Consola/(7466:7466): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:56:51:062 Consola/(7466:7466): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:56:51:062 Consola/(7466:7466): Entro a finalizar el programa
+[INFO] 23:59:43:887 Consola/(7809:7809): Logger creado
+[INFO] 23:59:43:887 Consola/(7809:7809): ¡Consola iniciada correctamente!
+[INFO] 23:59:43:887 Consola/(7809:7809): -------Valores del config-------
+[INFO] 23:59:43:887 Consola/(7809:7809): Ip = 127.0.0.1
+[INFO] 23:59:43:887 Consola/(7809:7809): Puerto = 8000
+[INFO] 23:59:43:887 Consola/(7809:7809): --------------------------------
+[INFO] 23:59:43:887 Consola/(7809:7809): Conexion establecida con Kernel
+[INFO] 23:59:43:887 Consola/(7809:7809): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 23:59:43:887 Consola/(7809:7809): Han llegado menos bytes que los enviados por Kernel
+[INFO] 23:59:43:887 Consola/(7809:7809): Entro a finalizar el programa
+[INFO] 00:00:19:537 Consola/(7847:7847): Logger creado
+[INFO] 00:00:19:537 Consola/(7847:7847): ¡Consola iniciada correctamente!
+[INFO] 00:00:19:537 Consola/(7847:7847): -------Valores del config-------
+[INFO] 00:00:19:537 Consola/(7847:7847): Ip = 127.0.0.1
+[INFO] 00:00:19:537 Consola/(7847:7847): Puerto = 8000
+[INFO] 00:00:19:537 Consola/(7847:7847): --------------------------------
+[INFO] 00:00:19:537 Consola/(7847:7847): Conexion establecida con Kernel
+[INFO] 00:00:19:537 Consola/(7847:7847): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 00:00:19:537 Consola/(7847:7847): Han llegado menos bytes que los enviados por Kernel
+[INFO] 00:00:19:537 Consola/(7847:7847): Entro a finalizar el programa
+[INFO] 00:01:26:483 Consola/(8039:8039): Logger creado
+[INFO] 00:01:26:484 Consola/(8039:8039): ¡Consola iniciada correctamente!
+[INFO] 00:01:26:484 Consola/(8039:8039): -------Valores del config-------
+[INFO] 00:01:26:484 Consola/(8039:8039): Ip = 127.0.0.1
+[INFO] 00:01:26:484 Consola/(8039:8039): Puerto = 8000
+[INFO] 00:01:26:484 Consola/(8039:8039): --------------------------------
+[INFO] 00:01:26:484 Consola/(8039:8039): Conexion establecida con Kernel
+[INFO] 00:01:26:485 Consola/(8039:8039): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 00:01:26:485 Consola/(8039:8039): Han llegado menos bytes que los enviados por Kernel
+[INFO] 00:01:26:485 Consola/(8039:8039): Entro a finalizar el programa
+[INFO] 00:04:30:034 Consola/(8275:8275): Logger creado
+[INFO] 00:04:30:035 Consola/(8275:8275): ¡Consola iniciada correctamente!
+[INFO] 00:04:30:035 Consola/(8275:8275): -------Valores del config-------
+[INFO] 00:04:30:035 Consola/(8275:8275): Ip = 127.0.0.1
+[INFO] 00:04:30:035 Consola/(8275:8275): Puerto = 8000
+[INFO] 00:04:30:035 Consola/(8275:8275): --------------------------------
+[INFO] 00:04:30:035 Consola/(8275:8275): Conexion establecida con Kernel
+[INFO] 00:04:30:036 Consola/(8275:8275): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 00:04:30:036 Consola/(8275:8275): Han llegado menos bytes que los enviados por Kernel
+[INFO] 00:04:30:036 Consola/(8275:8275): Entro a finalizar el programa
+[INFO] 00:05:35:804 Consola/(8313:8313): Logger creado
+[INFO] 00:05:35:804 Consola/(8313:8313): ¡Consola iniciada correctamente!
+[INFO] 00:05:35:804 Consola/(8313:8313): -------Valores del config-------
+[INFO] 00:05:35:804 Consola/(8313:8313): Ip = 127.0.0.1
+[INFO] 00:05:35:804 Consola/(8313:8313): Puerto = 8000
+[INFO] 00:05:35:804 Consola/(8313:8313): --------------------------------
+[INFO] 00:05:35:804 Consola/(8313:8313): Conexion establecida con Kernel
+[INFO] 00:05:35:805 Consola/(8313:8313): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 00:05:35:805 Consola/(8313:8313): Han llegado menos bytes que los enviados por Kernel
+[INFO] 00:05:35:805 Consola/(8313:8313): Entro a finalizar el programa
+[INFO] 00:07:38:823 Consola/(8484:8484): Logger creado
+[INFO] 00:07:38:825 Consola/(8484:8484): ¡Consola iniciada correctamente!
+[INFO] 00:07:38:825 Consola/(8484:8484): -------Valores del config-------
+[INFO] 00:07:38:825 Consola/(8484:8484): Ip = 127.0.0.1
+[INFO] 00:07:38:825 Consola/(8484:8484): Puerto = 8000
+[INFO] 00:07:38:825 Consola/(8484:8484): --------------------------------
+[INFO] 00:07:38:826 Consola/(8484:8484): Conexion establecida con Kernel
+[INFO] 00:07:38:826 Consola/(8484:8484): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 00:07:38:826 Consola/(8484:8484): Han llegado menos bytes que los enviados por Kernel
+[INFO] 00:07:38:826 Consola/(8484:8484): Entro a finalizar el programa
+[INFO] 00:10:34:613 Consola/(8727:8727): Logger creado
+[INFO] 00:10:34:614 Consola/(8727:8727): ¡Consola iniciada correctamente!
+[INFO] 00:10:34:614 Consola/(8727:8727): -------Valores del config-------
+[INFO] 00:10:34:614 Consola/(8727:8727): Ip = 127.0.0.1
+[INFO] 00:10:34:614 Consola/(8727:8727): Puerto = 8000
+[INFO] 00:10:34:614 Consola/(8727:8727): --------------------------------
+[INFO] 00:10:34:615 Consola/(8727:8727): Conexion establecida con Kernel
+[INFO] 00:10:34:615 Consola/(8727:8727): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 00:10:34:615 Consola/(8727:8727): Han llegado menos bytes que los enviados por Kernel
+[INFO] 00:10:34:616 Consola/(8727:8727): Entro a finalizar el programa
+[INFO] 00:11:57:509 Consola/(8781:8781): Logger creado
+[INFO] 00:11:57:510 Consola/(8781:8781): ¡Consola iniciada correctamente!
+[INFO] 00:11:57:510 Consola/(8781:8781): -------Valores del config-------
+[INFO] 00:11:57:510 Consola/(8781:8781): Ip = 127.0.0.1
+[INFO] 00:11:57:510 Consola/(8781:8781): Puerto = 8000
+[INFO] 00:11:57:510 Consola/(8781:8781): --------------------------------
+[INFO] 00:11:57:510 Consola/(8781:8781): Conexion establecida con Kernel
+[INFO] 00:11:57:511 Consola/(8781:8781): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 00:11:57:511 Consola/(8781:8781): Han llegado menos bytes que los enviados por Kernel
+[INFO] 00:11:57:511 Consola/(8781:8781): Entro a finalizar el programa

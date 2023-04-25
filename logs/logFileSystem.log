@@ -1321,3 +1321,119 @@
 [INFO] 03:52:50:559 FileSystem/(6260:6262): Me llego el mensaje Soy el Kernel
 [INFO] 03:53:19:766 FileSystem/(6260:6262): Se conecto un cliente!
 [INFO] 03:53:19:766 FileSystem/(6260:6262): Me llego el mensaje Soy el Kernel
+[INFO] 12:47:15:329 FileSystem/(3230:3230): Logger creado
+[INFO] 12:47:15:330 FileSystem/(3230:3230): -------Valores del config-------
+[INFO] 12:47:15:330 FileSystem/(3230:3230): IP Memoria = 127.0.0.1
+[INFO] 12:47:15:330 FileSystem/(3230:3230): Puerto Memoria = 8003
+[INFO] 12:47:15:330 FileSystem/(3230:3230): Puerto Escucha = 8002
+[INFO] 12:47:15:330 FileSystem/(3230:3230): Path Superbloque = /home/utnso/fs/superbloque.dat
+[INFO] 12:47:15:330 FileSystem/(3230:3230): Path Bitmap = /home/utnso/fs/bitmap.dat
+[INFO] 12:47:15:330 FileSystem/(3230:3230): Path Bloques = /home/utnso/fs/bloques.dat
+[INFO] 12:47:15:330 FileSystem/(3230:3230): Path FCB = /home/utnso/fs/fcb
+[INFO] 12:47:15:330 FileSystem/(3230:3230): Retardo Acceso Bloque = 15000
+[INFO] 12:47:15:330 FileSystem/(3230:3230): ¡File System iniciado correctamente!
+[TRACE] 12:47:15:330 FileSystem/(3230:3230): Listo para escuchar a mi cliente
+[INFO] 12:47:15:330 FileSystem/(3230:3230): Servidor listo para recibir al cliente
+[INFO] 12:47:15:330 FileSystem/(3230:3231): Conexion establecida con Memoria
+[INFO] 12:47:33:667 FileSystem/(3230:3232): Se conecto un cliente!
+[INFO] 12:47:33:667 FileSystem/(3230:3232): Me llego el mensaje Soy el Kernel
+[INFO] 12:48:53:229 FileSystem/(3230:3232): Se conecto un cliente!
+[INFO] 12:48:53:229 FileSystem/(3230:3232): Me llego el mensaje Soy el Kernel
+[INFO] 12:49:51:811 FileSystem/(3230:3232): Se conecto un cliente!
+[INFO] 12:49:51:811 FileSystem/(3230:3232): Me llego el mensaje Soy el Kernel
+[INFO] 12:55:51:285 FileSystem/(3392:3392): Logger creado
+[INFO] 12:55:51:286 FileSystem/(3392:3392): -------Valores del config-------
+[INFO] 12:55:51:286 FileSystem/(3392:3392): IP Memoria = 127.0.0.1
+[INFO] 12:55:51:286 FileSystem/(3392:3392): Puerto Memoria = 8003
+[INFO] 12:55:51:286 FileSystem/(3392:3392): Puerto Escucha = 8002
+[INFO] 12:55:51:286 FileSystem/(3392:3392): Path Superbloque = /home/utnso/fs/superbloque.dat
+[INFO] 12:55:51:286 FileSystem/(3392:3392): Path Bitmap = /home/utnso/fs/bitmap.dat
+[INFO] 12:55:51:286 FileSystem/(3392:3392): Path Bloques = /home/utnso/fs/bloques.dat
+[INFO] 12:55:51:286 FileSystem/(3392:3392): Path FCB = /home/utnso/fs/fcb
+[INFO] 12:55:51:286 FileSystem/(3392:3392): Retardo Acceso Bloque = 15000
+[INFO] 12:55:51:286 FileSystem/(3392:3392): ¡File System iniciado correctamente!
+[TRACE] 12:55:51:287 FileSystem/(3392:3392): Listo para escuchar a mi cliente
+[INFO] 12:55:51:287 FileSystem/(3392:3392): Servidor listo para recibir al cliente
+[INFO] 12:55:51:287 FileSystem/(3392:3393): Conexion establecida con Memoria
+[INFO] 12:55:56:004 FileSystem/(3392:3394): Se conecto un cliente!
+[INFO] 12:55:56:004 FileSystem/(3392:3394): Me llego el mensaje Soy el Kernel
+[INFO] 12:57:55:546 FileSystem/(3392:3394): Se conecto un cliente!
+[INFO] 12:57:55:546 FileSystem/(3392:3394): Me llego el mensaje Soy el Kernel
+[INFO] 13:00:27:917 FileSystem/(3392:3394): Se conecto un cliente!
+[INFO] 13:00:27:917 FileSystem/(3392:3394): Me llego el mensaje Soy el Kernel
+[INFO] 13:01:12:455 FileSystem/(3392:3394): Se conecto un cliente!
+[INFO] 13:01:12:455 FileSystem/(3392:3394): Me llego el mensaje Soy el Kernel
+[INFO] 13:09:29:414 FileSystem/(3993:3993): Logger creado
+[INFO] 13:09:29:414 FileSystem/(3993:3993): -------Valores del config-------
+[INFO] 13:09:29:415 FileSystem/(3993:3993): IP Memoria = 127.0.0.1
+[INFO] 13:09:29:415 FileSystem/(3993:3993): Puerto Memoria = 8003
+[INFO] 13:09:29:415 FileSystem/(3993:3993): Puerto Escucha = 8002
+[INFO] 13:09:29:415 FileSystem/(3993:3993): Path Superbloque = /home/utnso/fs/superbloque.dat
+[INFO] 13:09:29:415 FileSystem/(3993:3993): Path Bitmap = /home/utnso/fs/bitmap.dat
+[INFO] 13:09:29:415 FileSystem/(3993:3993): Path Bloques = /home/utnso/fs/bloques.dat
+[INFO] 13:09:29:415 FileSystem/(3993:3993): Path FCB = /home/utnso/fs/fcb
+[INFO] 13:09:29:415 FileSystem/(3993:3993): Retardo Acceso Bloque = 15000
+[INFO] 13:09:29:415 FileSystem/(3993:3993): ¡File System iniciado correctamente!
+[TRACE] 13:09:29:415 FileSystem/(3993:3993): Listo para escuchar a mi cliente
+[INFO] 13:09:29:415 FileSystem/(3993:3993): Servidor listo para recibir al cliente
+[INFO] 13:09:29:416 FileSystem/(3993:3994): Conexion establecida con Memoria
+[INFO] 13:09:34:434 FileSystem/(3993:3995): Se conecto un cliente!
+[INFO] 13:09:34:435 FileSystem/(3993:3995): Me llego el mensaje Soy el Kernel
+[INFO] 20:27:19:813 FileSystem/(5898:5898): Logger creado
+[INFO] 20:27:19:814 FileSystem/(5898:5898): -------Valores del config-------
+[INFO] 20:27:19:814 FileSystem/(5898:5898): IP Memoria = 127.0.0.1
+[INFO] 20:27:19:814 FileSystem/(5898:5898): Puerto Memoria = 8003
+[INFO] 20:27:19:814 FileSystem/(5898:5898): Puerto Escucha = 8002
+[INFO] 20:27:19:814 FileSystem/(5898:5898): Path Superbloque = /home/utnso/fs/superbloque.dat
+[INFO] 20:27:19:814 FileSystem/(5898:5898): Path Bitmap = /home/utnso/fs/bitmap.dat
+[INFO] 20:27:19:814 FileSystem/(5898:5898): Path Bloques = /home/utnso/fs/bloques.dat
+[INFO] 20:27:19:814 FileSystem/(5898:5898): Path FCB = /home/utnso/fs/fcb
+[INFO] 20:27:19:814 FileSystem/(5898:5898): Retardo Acceso Bloque = 15000
+[INFO] 20:27:19:814 FileSystem/(5898:5898): ¡File System iniciado correctamente!
+[TRACE] 20:27:19:815 FileSystem/(5898:5898): Listo para escuchar a mi cliente
+[INFO] 20:27:19:815 FileSystem/(5898:5898): Servidor listo para recibir al cliente
+[INFO] 20:27:19:815 FileSystem/(5898:5899): Conexion establecida con Memoria
+[INFO] 20:27:28:566 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 20:27:28:567 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 20:28:47:575 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 20:28:47:576 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 20:30:01:826 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 20:30:01:826 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 20:31:46:826 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 20:31:46:826 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:18:28:224 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:18:28:226 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:20:20:117 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:20:20:118 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:22:07:507 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:22:07:508 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:23:23:317 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:23:23:318 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:25:23:828 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:25:23:829 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:27:08:989 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:27:08:990 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:29:16:800 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:29:16:800 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:50:56:951 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:50:56:952 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:52:55:329 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:52:55:329 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:56:48:334 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:56:48:335 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 23:59:41:091 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 23:59:41:091 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 00:00:17:158 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 00:00:17:158 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 00:01:24:412 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 00:01:24:413 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 00:04:26:328 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 00:04:26:328 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 00:05:33:083 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 00:05:33:083 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 00:07:36:165 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 00:07:36:166 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 00:10:31:597 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 00:10:31:599 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel
+[INFO] 00:11:55:317 FileSystem/(5898:5900): Se conecto un cliente!
+[INFO] 00:11:55:317 FileSystem/(5898:5900): Me llego el mensaje Soy el Kernel

@@ -128,7 +128,7 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log* logger, char*
 	}
 	else
 	{
-		log_error(logger,"Ha ocurrido un error en la comunicacion con %s", modulo);
+		log_error(logger,"Han llegado menos bytes que los enviados por %s", modulo);
 	}
 
 	free(a_enviar);
