@@ -34,6 +34,9 @@ int main(void){
 	pthread_create(&planificador_largo_plazo, NULL, (void*) planificarLargoPlazo, NULL);
     pthread_detach(planificador_largo_plazo);
 
+    pthread_create(&planificador_corto_plazo, NULL, (void*) planificarCortoPlazoFIFO, NULL);
+    pthread_detach(planificador_corto_plazo);
+
 	//pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
 	//pthread_join(atender_consolas, NULL);
 
@@ -134,6 +137,18 @@ void planificarLargoPlazo(){
 		pthread_mutex_unlock(&semaforo_new);
 		//mandar a memoria el proceso para iniciar estructuras
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready);
+		sem_post(&cantidad_procesos_ready);
+	}
+}
+
+void planficarCortoPlazoFIFO(){
+	while(1){
+		sem_wait(&cantidad_procesos_ready);
+		pthread_mutex_lock(&semaforo_ready);
+		t_pcb* pcb_a_ejecutar = list_remove(lista_ready, 0);
+		pthread_mutex_unlock(&semaforo_ready);
+		//proceso pasa a execute(capaz hay que agregar estado al pcb y un semaforo)
+		//mandar a cpu serializado
 	}
 }
 
