@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <commons/log.h>
 
+
 int main(int argc, char** argv) {
 
     if (argc != 3) {
