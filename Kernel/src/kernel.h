@@ -78,6 +78,6 @@
 	void* conectarMemoria();
 	void* recibirProcesos(int* conexion_p);
 	void init_estructuras_planificacion();
-	void* planificarLargoPlazo();
+	void planificarLargoPlazo();
 
 #endif /* KERNEL_H_ */
