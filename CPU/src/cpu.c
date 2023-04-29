@@ -20,26 +20,19 @@ int main(void){
 	server_cpu = iniciar_servidor(IP_SERVER, puerto_escucha, cpu_logger);
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
 
-	conectarMemoria();
-	abrirSocketKernel();
+	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
+	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 
-	//pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
-	//pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
-
-	printf("\n\n main \n\n");
-	recibir_mensaje_kernel();
-
-	//pthread_detach(conexionMemoria);
-	//pthread_join(atender_kernel, NULL);
+	pthread_detach(conexionMemoria);
+	pthread_join(atender_kernel, NULL);
 	//abrirSocketKernel();
-
 
 	return EXIT_SUCCESS;
 }
 
 void* abrirSocketKernel(){
-	//while(1){
-		socket_Kernel = esperar_cliente(server_cpu, cpu_logger);
+	while(1){
+		int socket_Kernel = esperar_cliente(server_cpu, cpu_logger);
 
 		uint32_t resultOk = 0;
 		uint32_t resultError = -1;
@@ -54,10 +47,9 @@ void* abrirSocketKernel(){
 		switch (cod_op) {
 		case MENSAJE:
 			recibir_mensaje(socket_Kernel, cpu_logger);
-			printf("\n termino de leer 1° send\n");
 			break;
 		}
-	//}
+	}
 	return "";
 }
 
@@ -67,32 +59,4 @@ void* conectarMemoria(){
 
 	enviar_mensaje("Soy el CPU", socket_memoria);
 	return "";
-}
-
-void recibir_mensaje_kernel(){
-	printf("\n\n recibiendo mensaje\n\n");
-	int cod_op;
-	cod_op = recibir_operacion(socket_Kernel);
-	printf("\n\n recibi cod_op\n\n");
-	printf("\n cod_op: %d \n", cod_op);
-	switch (cod_op) {
-		case MENSAJE:
-			recibir_mensaje(socket_Kernel, cpu_logger);
-			break;
-		case PAQUETE:
-			int size;
-			void* buffer;
-			int tamanio;
-			printf("\n por recibir buffer\n");
-			buffer = recibir_buffer(&size, socket_Kernel);
-			printf("\n recibi buffer \n");
-
-			memcpy(&tamanio, buffer, sizeof(int));
-
-			t_pcb* pcb_recibido = malloc(tamanio);
-			memcpy(pcb_recibido, buffer + sizeof(int), tamanio);
-
-			printf("\n recibi pcb:\n");
-			print_pcb(pcb_recibido);
-	}
 }

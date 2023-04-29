@@ -3,8 +3,6 @@
 
 int main(void){
 
-	signal(SIGINT, cerrar_conexiones);
-
 	fileSystem_logger = iniciar_logger("../../logs/logFileSystem.log", "FileSystem");
 
 	if (fileSystem_logger == NULL){
@@ -34,7 +32,7 @@ int main(void){
 
 void* abrirSocketKernel(){
 	while(1){
-		socket_Kernel = esperar_cliente(server_fileSystem, fileSystem_logger);
+		int socket_Kernel = esperar_cliente(server_fileSystem, fileSystem_logger);
 
 		uint32_t resultOk = 0;
 		uint32_t resultError = -1;
@@ -61,12 +59,4 @@ void* conectarMemoria(){
 
 	enviar_mensaje("Soy el FileSystem", socket_memoria);
 	return "";
-}
-
-void cerrar_conexiones(){
-	close(socket_Kernel);
-	close(server_fileSystem);
-	close(socket_memoria);
-
-	exit(1);
 }

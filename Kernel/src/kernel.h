@@ -81,6 +81,5 @@
 	void init_estructuras_planificacion();
 	void planificarLargoPlazo();
 	void planificarCortoPlazoFIFO();
-	void cerrar_conexiones();
 
 #endif /* KERNEL_H_ */

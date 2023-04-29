@@ -35,7 +35,6 @@
 
 	int server_fileSystem;
 	int socket_memoria;
-	int socket_Kernel;
 	uint32_t respuesta;
 	pthread_t atender_kernel;
 	pthread_t conexionMemoria;
@@ -46,6 +45,5 @@
 
 	void* abrirSocketKernel();
 	void* conectarMemoria();
-	void cerrar_conexiones();
 
 #endif /* FILESYSTEM_H_ */
