@@ -37,11 +37,13 @@
 	pthread_t atender_conexiones;
 	uint32_t respuesta;
 	int server_memoria;
+	int socket_Kernel;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
 	void* abrirSocket();
+	void cerrar_conexiones();
 
 #endif

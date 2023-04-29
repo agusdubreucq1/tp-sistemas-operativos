@@ -3,6 +3,8 @@
 
 int main(void){
 
+	signal(SIGINT, cerrar_conexiones);
+
 	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
 
 	if (kernel_logger == NULL){
@@ -25,7 +27,7 @@ int main(void){
 
 	pthread_create(&conexionFileSystem, NULL, conectarFileSystem, NULL);
 	pthread_detach(conexionFileSystem);
-	pthread_create(&conexionCPU, NULL, conectarCPU, NULL);
+	pthread_create(&conexionCPU, NULL, (void*) conectarCPU, NULL);
 	pthread_detach(conexionCPU);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
@@ -141,15 +143,39 @@ void planificarLargoPlazo(){
 	}
 }
 
-void planficarCortoPlazoFIFO(){
+void planificarCortoPlazoFIFO(){
 	while(1){
+		printf("\n\n ejecuta planificador\n\n");
 		sem_wait(&cantidad_procesos_ready);
+		printf("\n\n 4 \n\n");
 		pthread_mutex_lock(&semaforo_ready);
 		t_pcb* pcb_a_ejecutar = list_remove(lista_ready, 0);
+		printf("\n\n saque de ready\n\n");
 		pthread_mutex_unlock(&semaforo_ready);
 		//proceso pasa a execute(capaz hay que agregar estado al pcb y un semaforo)
 		//mandar a cpu serializado
+		printf("\n\n 1\n\n");
+		t_paquete* paquete=crear_paquete();
+		paquete->codigo_operacion =1;
+		agregar_a_paquete(paquete, pcb_a_ejecutar, sizeof(pcb_a_ejecutar));
+		printf("\n cod_op: %d\n", paquete->codigo_operacion);
+		printf("\n size-buffer: %d\n", paquete->buffer->size);
+		printf("\n pcb a ejecutar:\n\n");
+		print_pcb(paquete->buffer->stream);
+
+		printf("\n\n 2\n\n");
+
+		enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
 	}
+}
+
+void cerrar_conexiones(){
+	close(server_kernel);
+	close(socket_cpu);
+	close(socket_memoria);
+	close(socket_fileSystem);
+
+	exit(1);
 }
 
 

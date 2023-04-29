@@ -6,6 +6,8 @@
 
 int main(void) {
 
+	signal(SIGINT, cerrar_conexiones);
+
 	memoria_logger = iniciar_logger("../../logs/logMemoria.log", "Memoria");
 
 	if (memoria_logger == NULL){
@@ -33,7 +35,7 @@ int main(void) {
 
 void* abrirSocket(){
 	while (1) {
-		int socket_Kernel = esperar_cliente(server_memoria, memoria_logger);
+		socket_Kernel = esperar_cliente(server_memoria, memoria_logger);
 
 		uint32_t resultOk = 0;
 		uint32_t resultError = -1;
@@ -52,5 +54,11 @@ void* abrirSocket(){
 		}
 	}
 	return "";
+}
+
+void cerrar_conexiones(){
+	close(server_memoria);
+	close(socket_Kernel);
+	exit(1);
 }
 
