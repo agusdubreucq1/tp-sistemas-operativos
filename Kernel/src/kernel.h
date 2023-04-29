@@ -81,6 +81,7 @@
 	void init_estructuras_planificacion();
 	void planificarLargoPlazo();
 	void planificarCortoPlazoFIFO();
+	t_paquete* serializar_contexto(t_pcb*);
 	void cerrar_conexiones();
 
 #endif /* KERNEL_H_ */
