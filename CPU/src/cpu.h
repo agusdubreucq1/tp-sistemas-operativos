@@ -50,5 +50,6 @@
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();
+	void cerrar_conexiones();
 
 #endif /* CPU_H_ */

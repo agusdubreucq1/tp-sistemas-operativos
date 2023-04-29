@@ -2,6 +2,8 @@
 
 int main(void){
 
+	signal(SIGINT, cerrar_conexiones);
+
 	cpu_logger = iniciar_logger("../../logs/logCPU.log", "CPU");
 
 	if (cpu_logger == NULL){
@@ -70,10 +72,8 @@ void* conectarMemoria(){
 }
 
 void recibir_mensaje_kernel(){
-	printf("\n\n recibiendo mensaje\n\n");
 	int cod_op;
 	cod_op = recibir_operacion(socket_Kernel);
-	printf("\n\n recibi cod_op\n\n");
 	printf("\n cod_op: %d \n", cod_op);
 	switch (cod_op) {
 		case MENSAJE:
@@ -83,16 +83,33 @@ void recibir_mensaje_kernel(){
 			int size;
 			void* buffer;
 			int tamanio;
-			printf("\n por recibir buffer\n");
+			t_pcb* pcb_recibido;
 			buffer = recibir_buffer(&size, socket_Kernel);
 			printf("\n recibi buffer \n");
 
 			memcpy(&tamanio, buffer, sizeof(int));
+			memcpy(&pcb_recibido, buffer + sizeof(int), sizeof(t_pcb*));
 
-			t_pcb* pcb_recibido = malloc(tamanio);
-			memcpy(pcb_recibido, buffer + sizeof(int), tamanio);
+
+			//t_pcb** p_pcb = (t_pcb**)(buffer + sizeof(int));
+			//pcb_recibido= *p_pcb;
+			int* tam_recibido;
+			*tam_recibido = sizeof(pcb_recibido)+ 3*sizeof(int);
+			printf("\n tamanio recibido: %d", *tam_recibido);
+			send(socket_Kernel, tam_recibido, sizeof(int), 0);
 
 			printf("\n recibi pcb:\n");
-			print_pcb(pcb_recibido);
+			printf("\n pcb_recibido: %p\n", pcb_recibido);
+			//print_pcb(pcb_recibido);
 	}
+}
+
+void cerrar_conexiones(){
+	printf("\ncerrando conexiones\n");
+
+	close(server_cpu);
+	close(socket_Kernel);
+	close(socket_memoria);
+printf("cerre conexiones");
+	exit(1);
 }

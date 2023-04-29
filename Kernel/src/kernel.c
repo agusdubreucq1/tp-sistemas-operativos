@@ -154,27 +154,44 @@ void planificarCortoPlazoFIFO(){
 		pthread_mutex_unlock(&semaforo_ready);
 		//proceso pasa a execute(capaz hay que agregar estado al pcb y un semaforo)
 		//mandar a cpu serializado
-		printf("\n\n 1\n\n");
 		t_paquete* paquete=crear_paquete();
 		paquete->codigo_operacion =1;
-		agregar_a_paquete(paquete, pcb_a_ejecutar, sizeof(pcb_a_ejecutar));
+		agregar_a_paquete(paquete, &pcb_a_ejecutar, sizeof(pcb_a_ejecutar));
+
+		void* buffer= malloc(sizeof(t_pcb*));
+		memcpy(buffer, &pcb_a_ejecutar, sizeof(t_pcb*));
+		t_pcb** buffer_casteado = paquete->buffer->stream + 4;
+
+		printf("buffer_del paquete: %p\n", *buffer_casteado);
 		printf("\n cod_op: %d\n", paquete->codigo_operacion);
 		printf("\n size-buffer: %d\n", paquete->buffer->size);
+
+		int tamanio_pcb;
+		memcpy(&tamanio_pcb, paquete->buffer->stream, sizeof(int));
+		//printf("\n size del pcb: %d \n sizeof(t_pcb): %ld \n sizeof(pcb_a_ejecutar): %ld \n", tamanio_pcb, sizeof(t_pcb), sizeof(pcb_a_ejecutar));
 		printf("\n pcb a ejecutar:\n\n");
-		print_pcb(paquete->buffer->stream);
+		t_pcb* pcb_empaquetado= malloc(sizeof(t_pcb));
+		memcpy(pcb_empaquetado, paquete->buffer->stream + sizeof(int), 8);
+		//printf("\ndir pcb_empaquetado: %p\n dir pcb_a_ejecutar: %p\n", pcb_empaquetado, pcb_a_ejecutar);
+		//print_pcb(pcb_empaquetado);
+		print_pcb(*buffer_casteado);
 
 		printf("\n\n 2\n\n");
+
+		printf("\tam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
 
 		enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
 	}
 }
 
 void cerrar_conexiones(){
+	printf("\ncerrando conexiones\n");
+
 	close(server_kernel);
 	close(socket_cpu);
 	close(socket_memoria);
 	close(socket_fileSystem);
-
+	printf("cerre conexiones");
 	exit(1);
 }
 

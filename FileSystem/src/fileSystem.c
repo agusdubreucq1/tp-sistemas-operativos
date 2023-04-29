@@ -64,9 +64,11 @@ void* conectarMemoria(){
 }
 
 void cerrar_conexiones(){
+	printf("\ncerrando conexiones\n");
+
 	close(socket_Kernel);
 	close(server_fileSystem);
 	close(socket_memoria);
-
+	printf("cerre conexiones");
 	exit(1);
 }

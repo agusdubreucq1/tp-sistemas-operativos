@@ -57,8 +57,11 @@ void* abrirSocket(){
 }
 
 void cerrar_conexiones(){
+	printf("\ncerrando conexiones\n");
+
 	close(server_memoria);
 	close(socket_Kernel);
+	printf("cerre conexiones");
 	exit(1);
 }
 
