@@ -50,6 +50,7 @@
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();
+	t_contexto_ejecucion* deserializar_contexto(void* stream, int size_buffer);
 	void cerrar_conexiones();
 
 #endif /* CPU_H_ */

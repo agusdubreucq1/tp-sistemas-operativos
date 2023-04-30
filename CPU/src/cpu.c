@@ -4,13 +4,13 @@ int main(void){
 
 	signal(SIGINT, cerrar_conexiones);
 
-	cpu_logger = iniciar_logger("../../logs/logCPU.log", "CPU");
+	cpu_logger = iniciar_logger("../logs/logCPU.log", "CPU");
 
 	if (cpu_logger == NULL){
 		exit(1);
 	}
 
-	cpu_config = iniciar_config("../../config/CPU.config", "CPU");
+	cpu_config = iniciar_config("../config/CPU.config", "CPU");
 
 	if (cpu_config == NULL){
 		exit(2);
@@ -82,26 +82,86 @@ void recibir_mensaje_kernel(){
 		case PAQUETE:
 			int size;
 			void* buffer;
-			int tamanio;
-			t_pcb* pcb_recibido;
+			//int tamanio;
 			buffer = recibir_buffer(&size, socket_Kernel);
 			printf("\n recibi buffer \n");
 
-			memcpy(&tamanio, buffer, sizeof(int));
-			memcpy(&pcb_recibido, buffer + sizeof(int), sizeof(t_pcb*));
+			//memcpy(&pcb_recibido, buffer + sizeof(int), sizeof(t_pcb*));
+			t_contexto_ejecucion* contexto_recibido = deserializar_contexto(buffer, size);
 
 
 			//t_pcb** p_pcb = (t_pcb**)(buffer + sizeof(int));
 			//pcb_recibido= *p_pcb;
 			int* tam_recibido;
-			*tam_recibido = sizeof(pcb_recibido)+ 3*sizeof(int);
+			(*tam_recibido) = sizeof(contexto_recibido)+ 3*sizeof(int);
 			printf("\n tamanio recibido: %d", *tam_recibido);
-			send(socket_Kernel, tam_recibido, sizeof(int), 0);
+			int var_send_ = send(socket_Kernel, tam_recibido, sizeof(int), 0);
 
 			printf("\n recibi pcb:\n");
-			printf("\n pcb_recibido: %p\n", pcb_recibido);
-			//print_pcb(pcb_recibido);
+			//printf("\n pcb_recibido: %p\n", pcb_recibido);
+			print_contexto(contexto_recibido);
 	}
+}
+
+t_contexto_ejecucion* deserializar_contexto(void* stream, int size_buffer){
+	t_contexto_ejecucion* contexto_deserializado= malloc(sizeof(t_contexto_ejecucion));
+	int desplazamiento = 0;
+	int tamanio =0;
+	int cant_instrucciones;
+	int cant_segmentos;
+	t_list* lista_instrucciones= list_create();
+	t_list* tabla_segmentos= list_create();
+
+	//memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+	//desplazamiento+=sizeof(int);
+
+	memcpy(&tamanio, stream + desplazamiento, sizeof(uint32_t));
+	desplazamiento+= sizeof(uint32_t);
+	memcpy(&(contexto_deserializado->pid),stream + desplazamiento, tamanio);
+	desplazamiento+= tamanio;
+
+	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+	desplazamiento+=sizeof(int);
+	memcpy(&cant_instrucciones, stream + desplazamiento, sizeof(int));
+	desplazamiento+= sizeof(int);
+
+	for(int i=0; i<cant_instrucciones; i++){
+		char* instruccion;
+		memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+		desplazamiento+=sizeof(int);
+		instruccion = malloc(tamanio);
+		memcpy(instruccion, stream + desplazamiento, tamanio);
+		desplazamiento+=tamanio;
+		printf("instruccion: %s", instruccion);
+
+		list_add(lista_instrucciones, instruccion);
+	}
+
+	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+	desplazamiento+=sizeof(int);
+	memcpy(&(contexto_deserializado->program_counter), stream + desplazamiento, tamanio);
+	desplazamiento+=tamanio;
+
+	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+	desplazamiento+=sizeof(int);
+	memcpy(contexto_deserializado->registros_cpu, stream + desplazamiento, tamanio);
+	desplazamiento+=tamanio;
+
+	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+	desplazamiento+=sizeof(int);
+	memcpy(&cant_segmentos, stream + desplazamiento, sizeof(int));
+	desplazamiento+= sizeof(int);
+
+	for(int j=0; j<cant_segmentos; j++){
+		t_segmento segmento;
+		memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+		desplazamiento += sizeof(int);
+		memcpy(&segmento, stream + desplazamiento, sizeof(t_segmento));
+		desplazamiento += sizeof(t_segmento);
+		list_add(tabla_segmentos, &segmento);
+	}
+
+	return contexto_deserializado;
 }
 
 void cerrar_conexiones(){

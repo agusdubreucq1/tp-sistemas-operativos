@@ -3,7 +3,7 @@
 
 int main(void){
 
-	signal(SIGINT, cerrar_conexiones);
+	//signal(SIGINT, cerrar_conexiones);
 
 	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
 
@@ -103,7 +103,7 @@ void* recibirProcesos(int* p_conexion) {
 		lista = recibir_instrucciones(conexion, &tamanio);
 		printf("\n\nCCCCCC %d \n\n", tamanio);
 		log_info(kernel_logger, "Nuevo Proceso recibido con exito");
-		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial, tamanio);
+		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial);
 		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new);
 		print_pcb(nuevo_pcb);
 		sem_post(&cantidad_procesos_new);
@@ -162,7 +162,7 @@ void planificarCortoPlazoFIFO(){
 		memcpy(&tamanio_pcb, paquete->buffer->stream, sizeof(int));
 		printf("\n pcb a ejecutar:\n\n");
 
-		printf("\tam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+		printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
 
 		enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
 	}
@@ -181,16 +181,30 @@ void cerrar_conexiones(){
 
 t_paquete* serializar_contexto(t_pcb* pcb){
 	t_paquete* paquete = crear_paquete();
-	agregar_a_paquete(paquete, &(pcb->pid), sizeof(uint32_t));
+	agregar_a_paquete(paquete, &(pcb->pid), sizeof(int));
+	printf("\nstream: %d\n", (int)paquete->buffer->stream);
+	printf("\nstream-pid: %d\n", (int)(paquete->buffer->stream+sizeof(int)));
 	int cant_instrucciones = list_size(pcb->instrucciones);
 	agregar_a_paquete(paquete, &cant_instrucciones, sizeof(int));
+	printf("\n 1 \n");
 	for(int i=0;list_size(pcb->instrucciones)>i;i++){
-		agregar_a_paquete(paquete, lista_get(pcb->instrucciones, i));
+		printf("\n instruccion %d: %s -> tam: %ld \n", i, (char*)list_get(pcb->instrucciones, i), strlen(list_get(pcb->instrucciones, i)));
+		agregar_a_paquete(paquete, list_get(pcb->instrucciones, i), strlen(list_get(pcb->instrucciones, i)));
 	}
+	printf("\n 2 \n");
 	agregar_a_paquete(paquete, &(pcb->program_counter), sizeof(uint32_t));
 	agregar_a_paquete(paquete, pcb->registros_cpu, sizeof(t_registros));
+	print_registos(pcb->registros_cpu);
+	int cant_segmentos = list_size(pcb->tabla_segmentos);
+	printf("\n cant_segmentos: %d\n", cant_segmentos);
+	agregar_a_paquete(paquete, &cant_segmentos, sizeof(int));
+	for(int j=0;list_size(pcb->tabla_segmentos)>j;j++){
+		agregar_a_paquete(paquete, list_get(pcb->tabla_segmentos,j), sizeof(t_segmento));
+		printf("\n NO \n");
+	}
 	//agregar_a_paquete(paquete, *(pcb->tabla_segmentos), sizeof(t_segmento);
-
+	printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
+	return paquete;
 }
 
 
