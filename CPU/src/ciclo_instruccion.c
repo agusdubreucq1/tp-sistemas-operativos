@@ -37,6 +37,22 @@ void leer_instruccion_y_ejecutar_pcb(t_instruccion* instruccion_auxiliar, t_pcb*
 
     		break;
 
+    	case MOV_IN:   		break;
+    	case MOV_OUT:  		break;
+    	case I_O:   		break;
+    	case F_OPEN:   		break;
+    	case F_CLOSE:  		break;
+    	case F_SEEK:		break;
+    	case F_READ:		break;
+    	case F_WRITE:		break;
+    	case F_TRUNCATE:	break;
+    	case WAIT:			break;
+    	case SIGNAL:    	break;
+    	case CRATE_SEGMENT: break;
+    	case DELETE_SEGMENT:break;
+    	case YIELD:    		break;
+
+
         case EXITT:
             log_info(cpu_logger, "Iniciamos etapa Execute");
     		log_info(cpu_logger, "PID: <%u> - Ejecutando: <EXIT> - <%s> - <%s>", pcb->id,
