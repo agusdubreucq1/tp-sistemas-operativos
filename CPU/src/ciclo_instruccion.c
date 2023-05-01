@@ -55,7 +55,7 @@ void leer_instruccion_y_ejecutar_pcb(t_instruccion* instruccion_auxiliar, t_pcb*
 
         case EXITT:
             log_info(cpu_logger, "Iniciamos etapa Execute");
-    		log_info(cpu_logger, "PID: <%u> - Ejecutando: <EXIT> - <%s> - <%s>", pcb->id,
+    		log_info(cpu_logger, "PID: <%u> - Ejecutando: <EXIT> - <%s> - <%s>", pcb->pid,
     				instruccion_auxiliar->parametro[0], instruccion_auxiliar->parametro[1], instruccion_auxiliar->parametro[2]);
 
         	pcb->estado = EXITT;
