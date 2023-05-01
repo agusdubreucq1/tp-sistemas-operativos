@@ -109,7 +109,7 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), valor, tamanio);
 
 	paquete->buffer->size += tamanio + sizeof(int);
-	printf("\n buffer->size: %d\n", *((int*) paquete->buffer->stream));
+	printf("\n buffer->size: %d\n", paquete->buffer->size);
 }
 
 void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log* logger, char* modulo)
@@ -126,6 +126,8 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log* logger, char*
 
 	uint32_t respuesta;
 	int var_recv=recv(socket_cliente, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+	printf("var_recv: %d\n", var_recv);
+	printf("respuesta: %d\n", respuesta);
 
 	if(respuesta == bytes){
 		log_info(logger,"Datos enviados correctamente");

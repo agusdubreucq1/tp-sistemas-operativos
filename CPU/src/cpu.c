@@ -83,19 +83,24 @@ void recibir_mensaje_kernel(){
 			int size;
 			void* buffer;
 			//int tamanio;
+			int* tam_recibido= malloc(sizeof(int));
 			buffer = recibir_buffer(&size, socket_Kernel);
 			printf("\n recibi buffer \n");
 
 			//memcpy(&pcb_recibido, buffer + sizeof(int), sizeof(t_pcb*));
-			t_contexto_ejecucion* contexto_recibido = deserializar_contexto(buffer, size);
+			t_contexto_ejecucion* contexto_recibido = deserializar_contexto(buffer, tam_recibido);
 
 
 			//t_pcb** p_pcb = (t_pcb**)(buffer + sizeof(int));
 			//pcb_recibido= *p_pcb;
-			int* tam_recibido;
-			(*tam_recibido) = sizeof(contexto_recibido)+ 3*sizeof(int);
-			printf("\n tamanio recibido: %d", *tam_recibido);
+			//int* tam_recibido= malloc(sizeof(int));
+			//(*tam_recibido) = sizeof(*contexto_recibido)+ 3*sizeof(int);
+			*tam_recibido+=2*sizeof(int);
+			printf("\n tamanio recibido: %d\n", tam_recibido);
+			printf("\n 1-tamanio recibido: %d\n", *tam_recibido);
+			printf("puntero: %p\n", tam_recibido);
 			int var_send_ = send(socket_Kernel, tam_recibido, sizeof(int), 0);
+			printf("var_send: %d\n", var_send_);
 
 			printf("\n recibi pcb:\n");
 			//printf("\n pcb_recibido: %p\n", pcb_recibido);
@@ -103,14 +108,15 @@ void recibir_mensaje_kernel(){
 	}
 }
 
-t_contexto_ejecucion* deserializar_contexto(void* stream, int size_buffer){
+t_contexto_ejecucion* deserializar_contexto(void* stream,int* bytes_recibidos){
 	t_contexto_ejecucion* contexto_deserializado= malloc(sizeof(t_contexto_ejecucion));
 	int desplazamiento = 0;
 	int tamanio =0;
 	int cant_instrucciones;
 	int cant_segmentos;
-	t_list* lista_instrucciones= list_create();
-	t_list* tabla_segmentos= list_create();
+	contexto_deserializado->instrucciones= list_create();
+	//contexto_deserializado->registros_cpu = malloc(sizeof(t_registros));
+	contexto_deserializado->tabla_segmentos= list_create();
 
 	//memcpy(&tamanio, stream + desplazamiento, sizeof(int));
 	//desplazamiento+=sizeof(int);
@@ -132,9 +138,10 @@ t_contexto_ejecucion* deserializar_contexto(void* stream, int size_buffer){
 		instruccion = malloc(tamanio);
 		memcpy(instruccion, stream + desplazamiento, tamanio);
 		desplazamiento+=tamanio;
-		printf("instruccion: %s", instruccion);
+		instruccion[tamanio-1]='\0';
+		printf("instruccion: %s \n", instruccion);
 
-		list_add(lista_instrucciones, instruccion);
+		list_add(contexto_deserializado->instrucciones, instruccion);
 	}
 
 	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
@@ -142,10 +149,13 @@ t_contexto_ejecucion* deserializar_contexto(void* stream, int size_buffer){
 	memcpy(&(contexto_deserializado->program_counter), stream + desplazamiento, tamanio);
 	desplazamiento+=tamanio;
 
-	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
-	desplazamiento+=sizeof(int);
-	memcpy(contexto_deserializado->registros_cpu, stream + desplazamiento, tamanio);
-	desplazamiento+=tamanio;
+	//memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+	//desplazamiento+=sizeof(int);
+	//memcpy(contexto_deserializado->registros_cpu, stream + desplazamiento, tamanio);
+	//desplazamiento+=tamanio;
+	printf("\n desplazamiento: %p, valor: %d\n", &desplazamiento, desplazamiento);
+	contexto_deserializado->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
+	print_registos(contexto_deserializado->registros_cpu);
 
 	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
 	desplazamiento+=sizeof(int);
@@ -158,10 +168,80 @@ t_contexto_ejecucion* deserializar_contexto(void* stream, int size_buffer){
 		desplazamiento += sizeof(int);
 		memcpy(&segmento, stream + desplazamiento, sizeof(t_segmento));
 		desplazamiento += sizeof(t_segmento);
-		list_add(tabla_segmentos, &segmento);
+		list_add(contexto_deserializado->tabla_segmentos, &segmento);
 	}
+	print_segmento(contexto_deserializado->tabla_segmentos);
+
+	*bytes_recibidos = desplazamiento;
 
 	return contexto_deserializado;
+}
+
+ t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento){
+	int tamanio=0;
+	t_registros* registros=malloc(sizeof(t_registros));
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->ax, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->bx, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->cx, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->dx, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->eax, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->ebx, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->ecx, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->edx, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->rax, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->rbx, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->rcx, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	memcpy(registros->rdx, stream + *desplazamiento, tamanio);
+	*desplazamiento += tamanio;
+
+	return registros;
 }
 
 void cerrar_conexiones(){

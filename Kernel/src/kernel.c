@@ -182,18 +182,30 @@ void cerrar_conexiones(){
 t_paquete* serializar_contexto(t_pcb* pcb){
 	t_paquete* paquete = crear_paquete();
 	agregar_a_paquete(paquete, &(pcb->pid), sizeof(int));
-	printf("\nstream: %d\n", (int)paquete->buffer->stream);
-	printf("\nstream-pid: %d\n", (int)(paquete->buffer->stream+sizeof(int)));
+	//printf("\nstream: %d\n", (int)paquete->buffer->stream);
+	//printf("\nstream-pid: %d\n", (int)(paquete->buffer->stream+sizeof(int)));
 	int cant_instrucciones = list_size(pcb->instrucciones);
 	agregar_a_paquete(paquete, &cant_instrucciones, sizeof(int));
 	printf("\n 1 \n");
 	for(int i=0;list_size(pcb->instrucciones)>i;i++){
 		printf("\n instruccion %d: %s -> tam: %ld \n", i, (char*)list_get(pcb->instrucciones, i), strlen(list_get(pcb->instrucciones, i)));
-		agregar_a_paquete(paquete, list_get(pcb->instrucciones, i), strlen(list_get(pcb->instrucciones, i)));
+		agregar_a_paquete(paquete, list_get(pcb->instrucciones, i), strlen(list_get(pcb->instrucciones, i))+1);
 	}
 	printf("\n 2 \n");
 	agregar_a_paquete(paquete, &(pcb->program_counter), sizeof(uint32_t));
-	agregar_a_paquete(paquete, pcb->registros_cpu, sizeof(t_registros));
+	//agregar_a_paquete(paquete, pcb->registros_cpu, sizeof(t_registros));
+	agregar_a_paquete(paquete, pcb->registros_cpu->ax, 4);
+	agregar_a_paquete(paquete, pcb->registros_cpu->bx, 4);
+	agregar_a_paquete(paquete, pcb->registros_cpu->cx, 4);
+	agregar_a_paquete(paquete, pcb->registros_cpu->dx, 4);
+	agregar_a_paquete(paquete, pcb->registros_cpu->eax, 8);
+	agregar_a_paquete(paquete, pcb->registros_cpu->ebx, 8);
+	agregar_a_paquete(paquete, pcb->registros_cpu->ecx, 8);
+	agregar_a_paquete(paquete, pcb->registros_cpu->edx, 8);
+	agregar_a_paquete(paquete, pcb->registros_cpu->rax, 16);
+	agregar_a_paquete(paquete, pcb->registros_cpu->rbx, 16);
+	agregar_a_paquete(paquete, pcb->registros_cpu->rcx, 16);
+	agregar_a_paquete(paquete, pcb->registros_cpu->rdx, 16);
 	print_registos(pcb->registros_cpu);
 	int cant_segmentos = list_size(pcb->tabla_segmentos);
 	printf("\n cant_segmentos: %d\n", cant_segmentos);
