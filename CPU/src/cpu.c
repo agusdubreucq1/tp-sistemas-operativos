@@ -111,27 +111,25 @@ void recibir_mensaje_kernel(){
 t_contexto_ejecucion* deserializar_contexto(void* stream,int* bytes_recibidos){
 	t_contexto_ejecucion* contexto_deserializado= malloc(sizeof(t_contexto_ejecucion));
 	int desplazamiento = 0;
-	int tamanio =0;
+	//int tamanio =0;
 	int cant_instrucciones;
 	int cant_segmentos;
-	contexto_deserializado->instrucciones= list_create();
-	//contexto_deserializado->registros_cpu = malloc(sizeof(t_registros));
-	contexto_deserializado->tabla_segmentos= list_create();
+	//contexto_deserializado->instrucciones= list_create();
+	//contexto_deserializado->tabla_segmentos= list_create();
 
-	//memcpy(&tamanio, stream + desplazamiento, sizeof(int));
-	//desplazamiento+=sizeof(int);
-
-	memcpy(&tamanio, stream + desplazamiento, sizeof(uint32_t));
+	/*memcpy(&tamanio, stream + desplazamiento, sizeof(uint32_t));
 	desplazamiento+= sizeof(uint32_t);
 	memcpy(&(contexto_deserializado->pid),stream + desplazamiento, tamanio);
-	desplazamiento+= tamanio;
+	desplazamiento+= tamanio;*/
+	contexto_deserializado->pid = deserializar_uint32(stream, &desplazamiento);
 
-	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+	/*memcpy(&tamanio, stream + desplazamiento, sizeof(int));
 	desplazamiento+=sizeof(int);
 	memcpy(&cant_instrucciones, stream + desplazamiento, sizeof(int));
-	desplazamiento+= sizeof(int);
+	desplazamiento+= sizeof(int);*/
+	cant_instrucciones = deserializar_uint32(stream, &desplazamiento);
 
-	for(int i=0; i<cant_instrucciones; i++){
+	/*for(int i=0; i<cant_instrucciones; i++){
 		char* instruccion;
 		memcpy(&tamanio, stream + desplazamiento, sizeof(int));
 		desplazamiento+=sizeof(int);
@@ -142,34 +140,35 @@ t_contexto_ejecucion* deserializar_contexto(void* stream,int* bytes_recibidos){
 		printf("instruccion: %s \n", instruccion);
 
 		list_add(contexto_deserializado->instrucciones, instruccion);
-	}
+	}*/
+	contexto_deserializado->instrucciones = deserializar_instrucciones(stream, cant_instrucciones, &desplazamiento);
 
-	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+	/*memcpy(&tamanio, stream + desplazamiento, sizeof(int));
 	desplazamiento+=sizeof(int);
 	memcpy(&(contexto_deserializado->program_counter), stream + desplazamiento, tamanio);
-	desplazamiento+=tamanio;
+	desplazamiento+=tamanio;*/
+	contexto_deserializado->program_counter = deserializar_uint32(stream, &desplazamiento);
 
-	//memcpy(&tamanio, stream + desplazamiento, sizeof(int));
-	//desplazamiento+=sizeof(int);
-	//memcpy(contexto_deserializado->registros_cpu, stream + desplazamiento, tamanio);
-	//desplazamiento+=tamanio;
-	printf("\n desplazamiento: %p, valor: %d\n", &desplazamiento, desplazamiento);
+
 	contexto_deserializado->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
 	print_registos(contexto_deserializado->registros_cpu);
 
-	memcpy(&tamanio, stream + desplazamiento, sizeof(int));
+	/*memcpy(&tamanio, stream + desplazamiento, sizeof(int));
 	desplazamiento+=sizeof(int);
 	memcpy(&cant_segmentos, stream + desplazamiento, sizeof(int));
-	desplazamiento+= sizeof(int);
+	desplazamiento+= sizeof(int);*/
 
-	for(int j=0; j<cant_segmentos; j++){
+	cant_segmentos = deserializar_uint32(stream, &desplazamiento);
+
+	/*for(int j=0; j<cant_segmentos; j++){
 		t_segmento segmento;
 		memcpy(&tamanio, stream + desplazamiento, sizeof(int));
 		desplazamiento += sizeof(int);
 		memcpy(&segmento, stream + desplazamiento, sizeof(t_segmento));
 		desplazamiento += sizeof(t_segmento);
 		list_add(contexto_deserializado->tabla_segmentos, &segmento);
-	}
+	}*/
+	contexto_deserializado->tabla_segmentos = deserializar_tabla_segmentos(stream, &desplazamiento, cant_segmentos);
 	print_segmento(contexto_deserializado->tabla_segmentos);
 
 	*bytes_recibidos = desplazamiento;
@@ -180,13 +179,39 @@ t_contexto_ejecucion* deserializar_contexto(void* stream,int* bytes_recibidos){
  t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento){
 	int tamanio=0;
 	t_registros* registros=malloc(sizeof(t_registros));
+	//char*[12]=[registros->ax, ]
 
-	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	/*memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
 	*desplazamiento += sizeof(int);
 	memcpy(registros->ax, stream + *desplazamiento, tamanio);
-	*desplazamiento += tamanio;
+	*desplazamiento += tamanio;*/
+	strcpy(registros->ax, deserializar_char(stream, desplazamiento));
+	strcpy(registros->bx, deserializar_char(stream, desplazamiento));
+	strcpy(registros->cx, deserializar_char(stream, desplazamiento));
+	strcpy(registros->dx, deserializar_char(stream, desplazamiento));
+	strcpy(registros->eax, deserializar_char(stream, desplazamiento));
+	strcpy(registros->ebx, deserializar_char(stream, desplazamiento));
+	strcpy(registros->ecx, deserializar_char(stream, desplazamiento));
+	strcpy(registros->edx, deserializar_char(stream, desplazamiento));
+	strcpy(registros->rax, deserializar_char(stream, desplazamiento));
+	strcpy(registros->rbx, deserializar_char(stream, desplazamiento));
+	strcpy(registros->rcx, deserializar_char(stream, desplazamiento));
+	strcpy(registros->rdx, deserializar_char(stream, desplazamiento));
 
-	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	/*registros->bx = deserializar_char(stream, desplazamiento);
+	registros->cx = deserializar_char(stream, desplazamiento);
+	registros->dx = deserializar_char(stream, desplazamiento);
+	registros->eax = deserializar_char(stream, desplazamiento);
+	registros->ebx = deserializar_char(stream, desplazamiento);
+	registros->ecx = deserializar_char(stream, desplazamiento);
+	registros->edx = deserializar_char(stream, desplazamiento);
+	registros->rax = deserializar_char(stream, desplazamiento);
+	registros->rbx = deserializar_char(stream, desplazamiento);
+	registros->rcx = deserializar_char(stream, desplazamiento);
+	registros->rdx = deserializar_char(stream, desplazamiento);*/
+
+
+	/*memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
 	*desplazamiento += sizeof(int);
 	memcpy(registros->bx, stream + *desplazamiento, tamanio);
 	*desplazamiento += tamanio;
@@ -239,9 +264,72 @@ t_contexto_ejecucion* deserializar_contexto(void* stream,int* bytes_recibidos){
 	memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
 	*desplazamiento += sizeof(int);
 	memcpy(registros->rdx, stream + *desplazamiento, tamanio);
-	*desplazamiento += tamanio;
+	*desplazamiento += tamanio;*/
 
 	return registros;
+}
+
+t_list* deserializar_tabla_segmentos(void* stream, int* desplazamiento, int cant_segmentos){
+	t_list* tabla_segmentos= list_create();
+	int tamanio;
+
+	for(int j=0; j<cant_segmentos; j++){
+			t_segmento segmento;
+			memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+			*desplazamiento += sizeof(int);
+			memcpy(&segmento, stream + *desplazamiento, sizeof(t_segmento));
+			*desplazamiento += sizeof(t_segmento);
+			list_add(tabla_segmentos, &segmento);
+		}
+	return tabla_segmentos;
+}
+
+ char* deserializar_char(void* stream, int* desplazamiento){
+	 int tamanio;
+
+	 memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+	 *desplazamiento += sizeof(int);
+	 char registro[tamanio];
+	 char* ptr_registro = registro;
+
+	 memcpy(ptr_registro, stream + *desplazamiento, tamanio);
+	 *desplazamiento += tamanio;
+
+	 return ptr_registro;
+ }
+
+uint32_t deserializar_uint32(void* stream, int* desplazamiento){
+	uint32_t* variable;
+	uint32_t tamanio;
+	uint32_t valor;
+
+	memcpy(&tamanio, stream + *desplazamiento, sizeof(uint32_t));
+	*desplazamiento+= sizeof(uint32_t);
+	variable = malloc(tamanio);
+	memcpy(variable,stream + *desplazamiento, tamanio);
+	*desplazamiento+= tamanio;
+
+	valor=*variable;
+	free(variable);
+	return valor;
+}
+
+t_list* deserializar_instrucciones(void* stream, uint32_t cant_instrucciones, int* desplazamiento){
+	int tamanio;
+	t_list* lista_instrucciones= list_create();
+	for(int i=0; i<cant_instrucciones; i++){
+			char* instruccion;
+			memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+			*desplazamiento+=sizeof(int);
+			instruccion = malloc(tamanio);
+			memcpy(instruccion, stream + *desplazamiento, tamanio);
+			*desplazamiento+=tamanio;
+			instruccion[tamanio-1]='\0';
+			printf("instruccion: %s \n", instruccion);
+
+			list_add(lista_instrucciones, instruccion);
+		}
+	return lista_instrucciones;
 }
 
 void cerrar_conexiones(){
