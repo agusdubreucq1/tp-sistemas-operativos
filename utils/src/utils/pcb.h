@@ -28,6 +28,7 @@ void print_lista(char* value);
 char* print_estado(estado_code estado);
 void print_segmento(t_list* tabla_segmentos);
 void print_contexto(t_contexto_ejecucion* contexto);
+void print_registro(char* nombre, int tamanio, char* registro);
 
 
 

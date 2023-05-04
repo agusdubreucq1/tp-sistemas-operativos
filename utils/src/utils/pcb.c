@@ -108,7 +108,7 @@ char* print_estado(estado_code estado){
 
 void print_segmento(t_list* tabla_segmentos){
 
-	printf("cantidad segmentos: %d\n", list_size(tabla_segmentos));
+	printf("\ncantidad segmentos: %d\n", list_size(tabla_segmentos));
 	for(int i=0;i<list_size(tabla_segmentos);i++){
 		t_segmento* segmento = list_get(tabla_segmentos, i);
 		printf("Segmento:\n");
