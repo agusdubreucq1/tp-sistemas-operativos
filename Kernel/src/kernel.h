@@ -69,6 +69,8 @@
 
 	pthread_mutex_t semaforo_new;
 	pthread_mutex_t semaforo_ready;
+	pthread_mutex_t semaforo_execute;
+
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
@@ -82,6 +84,10 @@
 	void planificarLargoPlazo();
 	void planificarCortoPlazoFIFO();
 	t_paquete* serializar_contexto(t_pcb*);
+	void serializar_registros_cpu(t_paquete* paquete, t_pcb* pcb);
+	void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb);
+	void serializar_tabla_segmentos(t_paquete* paquete, t_pcb* pcb);
+	void agregar_variable_a_paquete(t_paquete* paquete, void* valor, int tamanio);
 	void cerrar_conexiones();
 
 #endif /* KERNEL_H_ */

@@ -53,9 +53,9 @@
 	t_contexto_ejecucion* deserializar_contexto(void* stream, int* tam_recibido);
 	void cerrar_conexiones();
 	t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento);
-	t_list* deserializar_tabla_segmentos(void* stream, int* desplazamiento, int cant_segmentos);
-	 char* deserializar_char(void* stream, int* desplazamiento);
+	t_list* deserializar_tabla_segmentos(void* stream, int* desplazamiento);
+	 char* deserializar_char(void* stream, int* desplazamiento, int tamanio);
 	 uint32_t deserializar_uint32(void* stream, int* desplazamiento);
-	 t_list* deserializar_instrucciones(void* stream, uint32_t cant_instrucciones, int* desplazamiento);
+	 t_list* deserializar_instrucciones(void* stream, int* desplazamiento);
 
 #endif /* CPU_H_ */
