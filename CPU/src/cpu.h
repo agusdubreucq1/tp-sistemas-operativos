@@ -13,6 +13,9 @@
 #include <utils/servidor.h>
 #include <utils/cliente.h>
 #include <utils/datos.h>
+#include <utils/pcb.h>
+#include <utils/deserializar.h>
+
 
 #define IP_SERVER "127.0.0.1"
 
@@ -47,5 +50,8 @@
 
 	void* abrirSocketKernel();
 	void* conectarMemoria();
+	void recibir_mensaje_kernel();
+	void cerrar_conexiones();
+
 
 #endif /* CPU_H_ */

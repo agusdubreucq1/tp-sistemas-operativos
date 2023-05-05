@@ -3,6 +3,8 @@
 
 int main(void){
 
+	signal(SIGINT, cerrar_conexiones);
+
 	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
 
 	if (kernel_logger == NULL){
@@ -101,7 +103,7 @@ void* recibirProcesos(int* p_conexion) {
 		lista = recibir_instrucciones(conexion, &tamanio);
 		printf("\n\nCCCCCC %d \n\n", tamanio);
 		log_info(kernel_logger, "Nuevo Proceso recibido con exito");
-		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial, tamanio);
+		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial);
 		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new);
 		print_pcb(nuevo_pcb);
 		sem_post(&cantidad_procesos_new);
@@ -125,6 +127,8 @@ void init_estructuras_planificacion(){
 
     pthread_mutex_init(&semaforo_new, NULL);
     pthread_mutex_init(&semaforo_ready, NULL);
+    pthread_mutex_init(&semaforo_execute, NULL);
+
 }
 
 void planificarLargoPlazo(){
@@ -147,11 +151,33 @@ void planficarCortoPlazoFIFO(){
 		pthread_mutex_lock(&semaforo_ready);
 		t_pcb* pcb_a_ejecutar = list_remove(lista_ready, 0);
 		pthread_mutex_unlock(&semaforo_ready);
-		//proceso pasa a execute(capaz hay que agregar estado al pcb y un semaforo)
+		//proceso pasa a execute(capaz hay que agregar un semaforo)
 		//mandar a cpu serializado
+
+		t_paquete* paquete;
+		pthread_mutex_lock(&semaforo_execute);
+		paquete = serializar_contexto(pcb_a_ejecutar);
+
+
+		int tamanio_pcb;
+		memcpy(&tamanio_pcb, paquete->buffer->stream, sizeof(int));
+		printf("\n pcb a ejecutar:\n\n");
+
+		printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+
+		enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
 	}
 }
 
+void cerrar_conexiones(){
+	printf("\ncerrando conexiones\n");
 
+	close(server_kernel);
+	close(socket_cpu);
+	close(socket_memoria);
+	close(socket_fileSystem);
+	printf("cerre conexiones");
+	exit(1);
+}
 
 

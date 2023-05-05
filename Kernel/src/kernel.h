@@ -16,6 +16,7 @@
 #include <utils/pcb.h>
 #include <commons/collections/list.h>
 #include "planificador_largo_plazo.h"
+#include <utils/serializar.h>
 
 #define IP_SERVER "127.0.0.1"
 
@@ -69,6 +70,8 @@
 
 	pthread_mutex_t semaforo_new;
 	pthread_mutex_t semaforo_ready;
+	pthread_mutex_t semaforo_execute;
+
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
@@ -81,5 +84,7 @@
 	void init_estructuras_planificacion();
 	void planificarLargoPlazo();
 	void planificarCortoPlazoFIFO();
+
+
 
 #endif /* KERNEL_H_ */

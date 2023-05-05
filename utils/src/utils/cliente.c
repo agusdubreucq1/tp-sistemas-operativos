@@ -109,19 +109,25 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), valor, tamanio);
 
 	paquete->buffer->size += tamanio + sizeof(int);
+	printf("\n buffer->size: %d\n", paquete->buffer->size);
 }
 
 void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log* logger, char* modulo)
 {
 	int bytes = paquete->buffer->size + 2*sizeof(int);
+	printf("\n bytes : %d\n", bytes);
 	void* a_enviar = serializar_paquete(paquete, bytes);
 
-	send(socket_cliente, a_enviar, bytes, 0);
+	int var_send = send(socket_cliente, a_enviar, bytes, 0);
+	printf("\n send: %d", var_send);
+
 
 	log_info(logger,"Datos enviados, esperando respuesta de %s...", modulo);
 
 	uint32_t respuesta;
-	recv(socket_cliente, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+	int var_recv=recv(socket_cliente, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+	printf("var_recv: %d\n", var_recv);
+	printf("respuesta: %d\n", respuesta);
 
 	if(respuesta == bytes){
 		log_info(logger,"Datos enviados correctamente");
