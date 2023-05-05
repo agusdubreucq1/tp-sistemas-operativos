@@ -16,6 +16,7 @@
 #include <utils/pcb.h>
 #include <commons/collections/list.h>
 #include "planificador_largo_plazo.h"
+#include <utils/serializar.h>
 
 #define IP_SERVER "127.0.0.1"
 
@@ -83,11 +84,8 @@
 	void init_estructuras_planificacion();
 	void planificarLargoPlazo();
 	void planificarCortoPlazoFIFO();
-	t_paquete* serializar_contexto(t_pcb*);
-	void serializar_registros_cpu(t_paquete* paquete, t_pcb* pcb);
-	void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb);
-	void serializar_tabla_segmentos(t_paquete* paquete, t_pcb* pcb);
-	void agregar_variable_a_paquete(t_paquete* paquete, void* valor, int tamanio);
 	void cerrar_conexiones();
+
+
 
 #endif /* KERNEL_H_ */

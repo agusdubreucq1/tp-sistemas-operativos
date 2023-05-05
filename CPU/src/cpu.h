@@ -14,6 +14,7 @@
 #include <utils/cliente.h>
 #include <utils/datos.h>
 #include <utils/pcb.h>
+#include <utils/deserializar.h>
 
 #define IP_SERVER "127.0.0.1"
 
@@ -50,12 +51,7 @@
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();
-	t_contexto_ejecucion* deserializar_contexto(void* stream, int* tam_recibido);
 	void cerrar_conexiones();
-	t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento);
-	t_list* deserializar_tabla_segmentos(void* stream, int* desplazamiento);
-	 char* deserializar_char(void* stream, int* desplazamiento, int tamanio);
-	 uint32_t deserializar_uint32(void* stream, int* desplazamiento);
-	 t_list* deserializar_instrucciones(void* stream, int* desplazamiento);
+
 
 #endif /* CPU_H_ */
