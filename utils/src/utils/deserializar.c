@@ -7,7 +7,7 @@
 #include "deserializar.h"
 
 
-t_contexto_ejecucion* deserializar_contexto(void* stream,int* bytes_recibidos){
+t_contexto_ejecucion* deserializar_pcb(void* stream,int* bytes_recibidos){
 	t_contexto_ejecucion* contexto_deserializado= malloc(sizeof(t_contexto_ejecucion));
 	int desplazamiento = 0;
 

@@ -6,7 +6,7 @@
  */
 #include "serializar.h"
 
-t_paquete* serializar_contexto(t_pcb* pcb){
+t_paquete* serializar_pcb(t_pcb* pcb){
 	t_paquete* paquete = crear_paquete();
 
 	agregar_variable_a_paquete(paquete, &(pcb->pid), sizeof(int));
@@ -14,6 +14,19 @@ t_paquete* serializar_contexto(t_pcb* pcb){
 	agregar_variable_a_paquete(paquete, &(pcb->program_counter), sizeof(uint32_t));
 	serializar_registros_cpu(paquete, pcb);
 	serializar_tabla_segmentos(paquete, pcb);
+	printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
+
+	return paquete;
+}
+
+t_paquete* serializar_contexto(t_contexto_ejecucion* contexto){
+	t_paquete* paquete = crear_paquete();
+
+	agregar_variable_a_paquete(paquete, &(contexto->pid), sizeof(int));
+	//serializar_instrucciones(paquete, contexto);
+	agregar_variable_a_paquete(paquete, &(contexto->program_counter), sizeof(uint32_t));
+	serializar_registros_contexto(paquete, contexto);
+	//serializar_tabla_segmentos(paquete, contexto);
 	printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
 
 	return paquete;
@@ -45,6 +58,23 @@ void serializar_registros_cpu(t_paquete* paquete, t_pcb* pcb){
 	agregar_variable_a_paquete(paquete, pcb->registros_cpu->rdx, 16);
 	print_registos(pcb->registros_cpu);
 }
+
+void serializar_registros_contexto(t_paquete* paquete, t_contexto_ejecucion* contexto){
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->ax, 4);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->bx, 4);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->cx, 4);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->dx, 4);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->eax, 8);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->ebx, 8);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->ecx, 8);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->edx, 8);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->rax, 16);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->rbx, 16);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->rcx, 16);
+	agregar_variable_a_paquete(paquete, contexto->registros_cpu->rdx, 16);
+	print_registos(contexto->registros_cpu);
+}
+
 
 void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb){
 	int cant_instrucciones = list_size(pcb->instrucciones);

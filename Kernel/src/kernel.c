@@ -3,7 +3,7 @@
 
 int main(void){
 
-	signal(SIGINT, cerrar_conexiones);
+	//signal(SIGINT, cerrar_conexiones);
 
 	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
 
@@ -145,7 +145,7 @@ void planificarLargoPlazo(){
 	}
 }
 
-void planficarCortoPlazoFIFO(){
+void planificarCortoPlazoFIFO(){
 	while(1){
 		sem_wait(&cantidad_procesos_ready);
 		pthread_mutex_lock(&semaforo_ready);
@@ -156,7 +156,7 @@ void planficarCortoPlazoFIFO(){
 
 		t_paquete* paquete;
 		pthread_mutex_lock(&semaforo_execute);
-		paquete = serializar_contexto(pcb_a_ejecutar);
+		paquete = serializar_pcb(pcb_a_ejecutar);
 
 
 		int tamanio_pcb;

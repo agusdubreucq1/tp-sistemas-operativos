@@ -21,9 +21,11 @@
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
 
-t_paquete* serializar_contexto(t_pcb* pcb);
+t_paquete* serializar_pcb(t_pcb* pcb);
+t_paquete* serializar_contexto(t_contexto_ejecucion* contexto);
 void agregar_variable_a_paquete(t_paquete* paquete, void* valor, int tamanio);
 void serializar_registros_cpu(t_paquete* paquete, t_pcb* pcb);
+void serializar_registros_contexto(t_paquete* paquete, t_contexto_ejecucion* contexto);
 void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb);
 void serializar_tabla_segmentos(t_paquete* paquete, t_pcb* pcb);
 

@@ -33,12 +33,18 @@
 	char *tam_max_segmentos, *retardo_instruccion;
 	char *ip_memoria, *puerto_memoria, *puerto_escucha;
 
+// ------------------------------------------------------------------------------------------
+// -- Variables CPU
+// ------------------------------------------------------------------------------------------
+
+	t_contexto_ejecucion* contexto_de_Ejecucion;
 
 // ------------------------------------------------------------------------------------------
 // -- Server del proceso --
 // ------------------------------------------------------------------------------------------
 
 	int server_cpu;
+	int socket_Kernel;
 	int socket_memoria;
 	uint32_t respuesta;
 	pthread_t atender_kernel;
@@ -48,6 +54,7 @@
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
+	void enviarContexto();
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();

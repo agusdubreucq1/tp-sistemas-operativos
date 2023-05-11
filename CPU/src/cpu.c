@@ -2,15 +2,15 @@
 
 int main(void){
 
-	signal(SIGINT, cerrar_conexiones);
+	//signal(SIGINT, cerrar_conexiones);
 
-	cpu_logger = iniciar_logger("../logs/logCPU.log", "CPU");
+	cpu_logger = iniciar_logger("../../logs/logCPU.log", "CPU");
 
 	if (cpu_logger == NULL){
 		exit(1);
 	}
 
-	cpu_config = iniciar_config("../config/CPU.config", "CPU");
+	cpu_config = iniciar_config("../../config/CPU.config", "CPU");
 
 	if (cpu_config == NULL){
 		exit(2);
@@ -27,8 +27,6 @@ int main(void){
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 
-
-
 	pthread_detach(conexionMemoria);
 	pthread_join(atender_kernel, NULL);
 
@@ -38,7 +36,7 @@ int main(void){
 
 void* abrirSocketKernel(){
 
-		int socket_Kernel = esperar_cliente(server_cpu, cpu_logger);
+		socket_Kernel = esperar_cliente(server_cpu, cpu_logger);
 
 
 		uint32_t resultOk = 0;
@@ -59,9 +57,23 @@ void* abrirSocketKernel(){
 
 		while(1){
 			recibir_mensaje_kernel();
+			enviarContexto();
+
 		}
 
 	return "";
+}
+
+void enviarContexto(){
+	t_paquete* paquete;
+	paquete = serializar_contexto(contexto_de_Ejecucion);
+
+	int tamanio_contexto;
+	memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
+	printf("\n Contexto enviado:\n\n");
+	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+
+	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
 }
 
 void* conectarMemoria(){
@@ -88,7 +100,7 @@ void recibir_mensaje_kernel(){
 			buffer = recibir_buffer(&size, socket_Kernel);
 			printf("\n recibi buffer \n");
 
-			t_contexto_ejecucion* contexto_recibido = deserializar_contexto(buffer, tam_recibido);
+			contexto_de_Ejecucion = deserializar_pcb(buffer, tam_recibido);
 
 			*tam_recibido+=2*sizeof(int);
 			printf("\n tamanio recibido: %d\n", *tam_recibido);
@@ -97,7 +109,7 @@ void recibir_mensaje_kernel(){
 			printf("var_send: %d\n", var_send_);
 
 			printf("\n recibi contexto:\n");
-			print_contexto(contexto_recibido);
+			print_contexto(contexto_de_Ejecucion);
 	}
 }
 
@@ -106,8 +118,8 @@ void cerrar_conexiones(){
 	printf("\ncerrando conexiones\n");
 
 	close(server_cpu);
-	close(socket_Kernel);
+	//close(socket_Kernel);
 	close(socket_memoria);
-printf("cerre conexiones");
+	printf("cerre conexiones");
 	exit(1);
 }

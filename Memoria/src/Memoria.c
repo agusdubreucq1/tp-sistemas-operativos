@@ -6,7 +6,7 @@
 
 int main(void) {
 
-	signal(SIGINT, cerrar_conexiones);
+	//signal(SIGINT, cerrar_conexiones);
 
 	memoria_logger = iniciar_logger("../../logs/logMemoria.log", "Memoria");
 
@@ -61,7 +61,7 @@ void cerrar_conexiones(){
 	printf("\ncerrando conexiones\n");
 
 	close(server_memoria);
-	close(socket_Kernel);
+	//close(socket_Kernel);
 	printf("cerre conexiones");
 	exit(1);
 }
