@@ -19,16 +19,18 @@ int main(void){
     leer_configs(cpu_config, cpu_logger);
     log_info(cpu_logger, "¡CPU iniciado correctamente!");
 
+	iniciar_servidor_cpu();
+/*
 	server_cpu = iniciar_servidor(IP_SERVER, puerto_escucha, cpu_logger);
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
-
-
 
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 
 	pthread_detach(conexionMemoria);
 	pthread_join(atender_kernel, NULL);
+	//abrirSocketKernel();
+*/
 
 
 	return EXIT_SUCCESS;

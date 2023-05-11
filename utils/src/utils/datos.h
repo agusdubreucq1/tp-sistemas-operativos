@@ -51,6 +51,8 @@ typedef struct registros_cpu{
 	char eax[8], ebx[8], ecx[8], edx[8];
 	char rax[16], rbx[16], rcx[16], rdx[16];
 }t_registros;
+//TODO Creemos que son char*
+
 
 // ------------------------------------------------------------------------------------------
 // -- MEMORIA --
@@ -77,6 +79,7 @@ typedef enum {
 } estado_code;
 
 
+
 typedef struct pcb {
 	uint32_t pid;
 	t_list* instrucciones;
@@ -89,7 +92,6 @@ typedef struct pcb {
 	estado_code estado;
 }t_pcb;
 
-
 typedef struct contexto_ejecucion {
 	uint32_t pid;
 	t_list* instrucciones;
@@ -97,7 +99,6 @@ typedef struct contexto_ejecucion {
 	t_registros* registros_cpu;
 	t_list* tabla_segmentos;
 }t_contexto_ejecucion;
-
 
 
 

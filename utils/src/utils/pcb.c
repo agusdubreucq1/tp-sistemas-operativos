@@ -34,8 +34,6 @@ void init_registros(t_registros** registros){
 	strcpy((*registros)->rbx, "                ");
 	strcpy((*registros)->rcx, "                ");
 	strcpy((*registros)->rdx, "                ");
-	//memset((*registros)->ax, "", 4);
-	//registros->ax={'\0'}
 }
 
 void init_segmento(t_list** tabla_segmentos){
@@ -73,6 +71,7 @@ void print_contexto(t_contexto_ejecucion* contexto){
 
 
 void print_registos(t_registros* registros){
+
 	printf("Registros:\n");
 	print_registro("AX",4, registros->ax);
 	print_registro("BX",4, registros->bx);
@@ -99,11 +98,11 @@ void print_registro(char* nombre, int tamanio, char* registro){
 
 char* print_estado(estado_code estado){
 	if(estado == NEW) 		return "New";
-	if(estado == READY) 		return "Ready";
+	if(estado == READY) 	return "Ready";
 	if(estado == BLOCKED) 	return "Blocked";
-	if(estado == EXEC) 	return "Exec";
-	if(estado == EXIT) 	return "Exit";
-	else			 			return "Error";
+	if(estado == EXEC) 		return "Exec";
+	if(estado == EXIT) 		return "Exit";
+	else			 		return "Error";
 }
 
 void print_segmento(t_list* tabla_segmentos){
