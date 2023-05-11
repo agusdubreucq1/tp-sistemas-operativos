@@ -60,3 +60,5 @@ void* conectarMemoria(){
 	enviar_mensaje("Soy el FileSystem", socket_memoria);
 	return "";
 }
+
+

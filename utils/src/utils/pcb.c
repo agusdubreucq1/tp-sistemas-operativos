@@ -7,14 +7,14 @@
 
 #include "pcb.h"
 
-t_pcb* crear_pcb(uint32_t pid, t_list* instrucciones, uint32_t estimacion, uint32_t tamanio){
+t_pcb* crear_pcb(uint32_t pid, t_list* instrucciones, uint32_t estimacion){
 	t_pcb* pcb = malloc(sizeof(t_pcb));
 	pcb->pid = pid;
 	pcb->instrucciones = instrucciones;
 	pcb->program_counter = 0;
 	pcb->estado = 0;
 	init_registros(&pcb->registros_cpu);
-	init_segmento(&pcb->tabla_segmentos, tamanio);
+	init_segmento(&pcb->tabla_segmentos);
 	pcb->estimado_rafaga = estimacion;
 	return pcb;
 }
@@ -36,11 +36,14 @@ void init_registros(t_registros** registros){
 	strcpy((*registros)->rdx, "                ");
 }
 
-void init_segmento(t_segmento** segmento, uint32_t tamanio){
-	*segmento = malloc(sizeof(t_segmento));
+void init_segmento(t_list** tabla_segmentos){
+	printf("inicializando segmento\n");
+	(*tabla_segmentos)=list_create();
+	printf("list_size: %d\n", list_size(*tabla_segmentos));
+	/**segmento = malloc(sizeof(t_segmento));
 	(*segmento)->id = 0;
 	(*segmento)->direccio_base = 0;
-	(*segmento)->tamanio_segmento = tamanio;
+	(*segmento)->tamanio_segmento = tamanio;*/
 }
 
 // ------------------------------------------------------------------------------------------
@@ -58,8 +61,18 @@ void print_pcb(t_pcb* pcb){
 	print_segmento(pcb->tabla_segmentos);
 }
 
+void print_contexto(t_contexto_ejecucion* contexto){
+	printf("PCB: \n");
+	printf("PID = %d\n", contexto->pid);
+	printf("Program Counter = %u\n", contexto->program_counter);
+	print_registos(contexto->registros_cpu);
+	print_segmento(contexto->tabla_segmentos);
+}
+
 
 void print_registos(t_registros* registros){
+
+	printf("Registros:\n");
 	print_registro("AX",4, registros->ax);
 	print_registro("BX",4, registros->bx);
 	print_registro("CX",4, registros->cx);
@@ -92,11 +105,17 @@ char* print_estado(estado_code estado){
 	else			 		return "Error";
 }
 
-void print_segmento(t_segmento* segmento){
-	printf("Segmento:\n");
-	printf("Id = %d\n", segmento->id);
-	printf("Direccion = %d\n", segmento->direccio_base);
-	printf("Tamanio = %d\n", segmento->tamanio_segmento);
+void print_segmento(t_list* tabla_segmentos){
+
+	printf("\ncantidad segmentos: %d\n", list_size(tabla_segmentos));
+	for(int i=0;i<list_size(tabla_segmentos);i++){
+		t_segmento* segmento = list_get(tabla_segmentos, i);
+		printf("Segmento:\n");
+		printf("Id = %d\n", segmento->id);
+		printf("Direccion = %d\n", segmento->direccio_base);
+		printf("Tamanio = %d\n", segmento->tamanio_segmento);
+	}
+
 }
 
 

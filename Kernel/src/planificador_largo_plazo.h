@@ -14,6 +14,7 @@
 #include <commons/log.h>
 #include <utils/datos.h>
 #include <utils/pcb.h>
+#include <pthread.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --

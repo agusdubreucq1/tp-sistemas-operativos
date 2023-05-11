@@ -3,6 +3,8 @@
 
 int main(void){
 
+	//signal(SIGINT, cerrar_conexiones);
+
 	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
 
 	if (kernel_logger == NULL){
@@ -30,6 +32,13 @@ int main(void){
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
 
+
+	pthread_create(&planificador_largo_plazo, NULL, (void*) planificarLargoPlazo, NULL);
+    pthread_detach(planificador_largo_plazo);
+
+    pthread_create(&planificador_corto_plazo, NULL, (void*) planificarCortoPlazoFIFO, NULL);
+    pthread_detach(planificador_corto_plazo);
+
 	//pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
 	//pthread_join(atender_consolas, NULL);
 
@@ -37,7 +46,11 @@ int main(void){
         int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
         pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) &conexion_consola);
         pthread_detach(atender_consolas);
+        printf("\n\n lista ready: %d \n\n", list_size(lista_ready));
     }
+
+
+
 
     close(server_kernel);
 
@@ -90,12 +103,12 @@ void* recibirProcesos(int* p_conexion) {
 		lista = recibir_instrucciones(conexion, &tamanio);
 		printf("\n\nCCCCCC %d \n\n", tamanio);
 		log_info(kernel_logger, "Nuevo Proceso recibido con exito");
-		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial, tamanio);
+		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial);
 		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new);
+		print_pcb(nuevo_pcb);
+		sem_post(&cantidad_procesos_new);
 
-
-		t_pcb* pcb = list_get(lista_new, list_size(lista_new)-1);
-		print_pcb(pcb);
+		//t_pcb* pcb = list_get(lista_new, list_size(lista_new)-1); -> el pcb ya paso a ready, por lo q da segmentation fault
 
 		break;
 	}
@@ -114,8 +127,57 @@ void init_estructuras_planificacion(){
 
     pthread_mutex_init(&semaforo_new, NULL);
     pthread_mutex_init(&semaforo_ready, NULL);
+    pthread_mutex_init(&semaforo_execute, NULL);
+
 }
 
+void planificarLargoPlazo(){
+	while(1){
+		//el sem_post hay que hacerlo cuando un proceso termina
+		sem_wait(&semaforo_multiprogramacion);
+		sem_wait(&cantidad_procesos_new);
+		pthread_mutex_lock(&semaforo_new);
+		t_pcb* pcb = list_remove(lista_new, 0);
+		pthread_mutex_unlock(&semaforo_new);
+		//mandar a memoria el proceso para iniciar estructuras
+		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready);
+		sem_post(&cantidad_procesos_ready);
+	}
+}
 
+void planificarCortoPlazoFIFO(){
+	while(1){
+		sem_wait(&cantidad_procesos_ready);
+		pthread_mutex_lock(&semaforo_ready);
+		t_pcb* pcb_a_ejecutar = list_remove(lista_ready, 0);
+		pthread_mutex_unlock(&semaforo_ready);
+		//proceso pasa a execute(capaz hay que agregar un semaforo)
+		//mandar a cpu serializado
+
+		t_paquete* paquete;
+		pthread_mutex_lock(&semaforo_execute);
+		paquete = serializar_pcb(pcb_a_ejecutar);
+
+
+		int tamanio_pcb;
+		memcpy(&tamanio_pcb, paquete->buffer->stream, sizeof(int));
+		printf("\n pcb a ejecutar:\n\n");
+
+		printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+
+		enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
+	}
+}
+
+void cerrar_conexiones(){
+	printf("\ncerrando conexiones\n");
+
+	close(server_kernel);
+	close(socket_cpu);
+	close(socket_memoria);
+	close(socket_fileSystem);
+	printf("cerre conexiones");
+	exit(1);
+}
 
 

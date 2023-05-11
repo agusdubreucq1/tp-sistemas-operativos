@@ -6,6 +6,8 @@
 
 int main(void) {
 
+	//signal(SIGINT, cerrar_conexiones);
+
 	memoria_logger = iniciar_logger("../../logs/logMemoria.log", "Memoria");
 
 	if (memoria_logger == NULL){
@@ -52,5 +54,15 @@ void* abrirSocket(){
 		}
 	}
 	return "";
+}
+
+
+void cerrar_conexiones(){
+	printf("\ncerrando conexiones\n");
+
+	close(server_memoria);
+	//close(socket_Kernel);
+	printf("cerre conexiones");
+	exit(1);
 }
 

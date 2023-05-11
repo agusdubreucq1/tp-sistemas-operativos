@@ -1073,3 +1073,31 @@
 [INFO] 03:02:17:789 CPU/(15160:15162): Conexion establecida con Memoria
 [INFO] 03:02:23:085 CPU/(15160:15161): Se conecto un cliente!
 [INFO] 03:02:23:085 CPU/(15160:15161): Me llego el mensaje Soy el Kernel
+[INFO] 15:09:54:049 CPU/(44270:44270): Logger creado
+[INFO] 15:09:54:050 CPU/(44270:44270): -------Valores del config-------
+[INFO] 15:09:54:050 CPU/(44270:44270): Retardo Instrucción = 1000
+[INFO] 15:09:54:050 CPU/(44270:44270): IP Memoria = 127.0.0.1
+[INFO] 15:09:54:050 CPU/(44270:44270): Puerto Memoria = 8003
+[INFO] 15:09:54:050 CPU/(44270:44270): Puerto Escucha = 8001
+[INFO] 15:09:54:050 CPU/(44270:44270): Tamanio maximo de segmentos = (null)
+[INFO] 15:09:54:050 CPU/(44270:44270): --------------------------------
+[INFO] 15:09:54:050 CPU/(44270:44270): ¡CPU iniciado correctamente!
+[TRACE] 15:09:54:050 CPU/(44270:44270): Listo para escuchar a mi cliente
+[INFO] 15:09:54:050 CPU/(44270:44270): Servidor listo para recibir al cliente
+[INFO] 15:09:54:053 CPU/(44270:44272): Conexion establecida con Memoria
+[INFO] 15:10:23:061 CPU/(44270:44271): Se conecto un cliente!
+[INFO] 15:10:23:062 CPU/(44270:44271): Me llego el mensaje Soy el Kernel
+[INFO] 15:26:40:669 CPU/(46626:46626): Logger creado
+[INFO] 15:26:40:670 CPU/(46626:46626): -------Valores del config-------
+[INFO] 15:26:40:670 CPU/(46626:46626): Retardo Instrucción = 1000
+[INFO] 15:26:40:671 CPU/(46626:46626): IP Memoria = 127.0.0.1
+[INFO] 15:26:40:671 CPU/(46626:46626): Puerto Memoria = 8003
+[INFO] 15:26:40:671 CPU/(46626:46626): Puerto Escucha = 8001
+[INFO] 15:26:40:671 CPU/(46626:46626): Tamanio maximo de segmentos = (null)
+[INFO] 15:26:40:671 CPU/(46626:46626): --------------------------------
+[INFO] 15:26:40:671 CPU/(46626:46626): ¡CPU iniciado correctamente!
+[TRACE] 15:26:40:671 CPU/(46626:46626): Listo para escuchar a mi cliente
+[INFO] 15:26:40:671 CPU/(46626:46626): Servidor listo para recibir al cliente
+[INFO] 15:26:40:671 CPU/(46626:46628): Conexion establecida con Memoria
+[INFO] 15:27:13:987 CPU/(46626:46627): Se conecto un cliente!
+[INFO] 15:27:13:987 CPU/(46626:46627): Me llego el mensaje Soy el Kernel
