@@ -1,6 +1,6 @@
 #ifndef BUFFER_H_
 #define BUFFER_H_
-
+//TODO ESTO NOS PUEDE SERVIR PARA USAR SERIALIZACIONES GENERICAS
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
