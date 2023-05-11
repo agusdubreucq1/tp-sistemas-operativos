@@ -47,9 +47,9 @@ typedef struct{
 // ------------------------------------------------------------------------------------------
 
 typedef struct registros_cpu{
-	char* ax[4], bx[4], cx[4], dx[4];
-	char* eax[8], ebx[8], ecx[8], edx[8];
-	char* rax[16], rbx[16], rcx[16], rdx[16];
+	char ax[4], bx[4], cx[4], dx[4];
+	char eax[8], ebx[8], ecx[8], edx[8];
+	char rax[16], rbx[16], rcx[16], rdx[16];
 }t_registros;
 //TODO Creemos que son char*
 
