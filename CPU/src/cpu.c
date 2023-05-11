@@ -75,6 +75,7 @@ void enviarContexto(){
 	t_paquete* paquete;
 	paquete = serializar_contexto(contexto_de_Ejecucion);
 
+
 	int tamanio_contexto;
 	memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
 	printf("\n Contexto enviado:\n\n");
