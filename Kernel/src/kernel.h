@@ -84,6 +84,7 @@
 	void init_estructuras_planificacion();
 	void planificarLargoPlazo();
 	void planificarCortoPlazoFIFO();
+	void enviar_pcb(t_pcb* pcb);
 	void cerrar_conexiones();
 
 

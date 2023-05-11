@@ -57,7 +57,7 @@ void* abrirSocketKernel(){
 
 		while(1){
 			recibir_mensaje_kernel();
-			enviarContexto();
+			//enviarContexto();
 
 		}
 

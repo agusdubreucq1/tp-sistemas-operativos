@@ -153,21 +153,26 @@ void planificarCortoPlazoFIFO(){
 		pthread_mutex_unlock(&semaforo_ready);
 		//proceso pasa a execute(capaz hay que agregar un semaforo)
 		//mandar a cpu serializado
-
-		t_paquete* paquete;
+		enviar_pcb(pcb_a_ejecutar);
 		pthread_mutex_lock(&semaforo_execute);
-		paquete = serializar_pcb(pcb_a_ejecutar);
 
-
-		int tamanio_pcb;
-		memcpy(&tamanio_pcb, paquete->buffer->stream, sizeof(int));
-		printf("\n pcb a ejecutar:\n\n");
-
-		printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
-
-		enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
 	}
 }
+
+void enviar_pcb(t_pcb* pcb){
+	t_paquete* paquete;
+	paquete = serializar_pcb(pcb);
+
+
+	int tamanio_pcb;
+	memcpy(&tamanio_pcb, paquete->buffer->stream, sizeof(int));
+	printf("\n pcb a ejecutar:\n\n");
+
+	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+
+	enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
+}
+
 
 void cerrar_conexiones(){
 	printf("\ncerrando conexiones\n");
