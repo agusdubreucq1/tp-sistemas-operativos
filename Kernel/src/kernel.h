@@ -86,6 +86,7 @@
 	void planificarCortoPlazoFIFO();
 	void enviar_pcb(t_pcb* pcb);
 	void cerrar_conexiones();
+	void recibir_mensaje_cpu(t_pcb* pcb);
 
 
 

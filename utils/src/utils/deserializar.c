@@ -29,6 +29,18 @@ t_contexto_ejecucion* deserializar_pcb(void* stream,int* bytes_recibidos){
 	return contexto_deserializado;
 }
 
+void deserializar_contexto(void* stream,int* bytes_recibidos, t_pcb* pcb){
+	int desplazamiento = 0;
+
+	pcb->pid = deserializar_uint32(stream, &desplazamiento);
+	pcb->program_counter = deserializar_uint32(stream, &desplazamiento);
+
+	pcb->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
+	print_registos(pcb->registros_cpu);
+
+	*bytes_recibidos = desplazamiento;
+}
+
 t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento){
 	t_registros* registros=malloc(sizeof(t_registros));
 

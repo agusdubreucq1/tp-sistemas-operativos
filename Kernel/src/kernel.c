@@ -153,9 +153,14 @@ void planificarCortoPlazoFIFO(){
 		pthread_mutex_unlock(&semaforo_ready);
 		//proceso pasa a execute(capaz hay que agregar un semaforo)
 		//mandar a cpu serializado
-		enviar_pcb(pcb_a_ejecutar);
-
 		pthread_mutex_lock(&semaforo_execute);
+		enviar_pcb(pcb_a_ejecutar);
+		printf("/n/n/n/n/n/ CCDCDCDCDCDCDCDCDCDCDCCDC /n/n/n/n/n/n/n/n/n/n/n");
+		recibir_mensaje_cpu(pcb_a_ejecutar);
+
+		pthread_mutex_unlock(&semaforo_execute);
+
+
 
 	}
 }
@@ -173,6 +178,36 @@ void enviar_pcb(t_pcb* pcb){
 
 	enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
 }
+
+void recibir_mensaje_cpu(t_pcb* pcb){
+	int cod_op;
+	cod_op = recibir_operacion(socket_cpu);
+	printf("\n cod_op: %d \n", cod_op);
+	switch (cod_op) {
+		case MENSAJE:
+			recibir_mensaje(socket_cpu, kernel_logger);
+			break;
+		case PAQUETE:
+			int size;
+			void* buffer;
+			int* tam_recibido= malloc(sizeof(int));
+			buffer = recibir_buffer(&size, socket_cpu);
+			printf("\n recibi buffer \n");
+
+			deserializar_contexto(buffer + sizeof(int),tam_recibido, pcb);
+			//contexto_de_Ejecucion = deserializar_pcb(buffer, tam_recibido);
+
+			*tam_recibido+=2*sizeof(int);
+			printf("\n tamanio recibido: %d\n", *tam_recibido);
+			printf("puntero: %p\n", tam_recibido);
+			int var_send_ = send(socket_cpu, tam_recibido, sizeof(int), 0);
+			printf("var_send: %d\n", var_send_);
+
+			printf("\n recibi contexto:\n");
+			print_pcb(pcb);
+	}
+}
+
 
 
 void cerrar_conexiones(){

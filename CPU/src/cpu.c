@@ -62,9 +62,9 @@ void* abrirSocketKernel(){
 			//
 
 			// ACA INTERPRETAMOS LAS INSTRUCCIONES
-
+			printf("/n/n/n/n/n/ ASASASASASASASASSASASASASASAS /n/n/n/n/n/n/n/n/n/n/n");
 			//
-			//enviarContexto();
+			enviarContexto();
 
 		}
 
