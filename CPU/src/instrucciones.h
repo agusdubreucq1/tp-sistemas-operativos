@@ -8,10 +8,11 @@
 #include <sys/stat.h>
 #include <commons/string.h>
 #include <commons/collections/list.h>
+#include <utils/buffer.h>
 
 //#include "pcb.h"
 #include "string.h"
-#include "buffer.h"
+//#include "buffer.h"
 
 
 typedef enum {
@@ -30,7 +31,7 @@ typedef enum {
 	 CRATE_SEGMENT,
 	 DELETE_SEGMENT,
 	 YIELD,
-	 EXITT//TODO VER EXIT
+	 EXITT //TODO VER EXIT
 
 }cod_instruccion;
 

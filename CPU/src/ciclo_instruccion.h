@@ -9,6 +9,9 @@
 #include <stdbool.h>
 #include <commons/log.h>
 #include <utils/datos.h>
+#include <utils/buffer.h>
+#include "instrucciones.h"
+
 
 
 void comenzar_ciclo_instruccion(t_pcb*, int);
