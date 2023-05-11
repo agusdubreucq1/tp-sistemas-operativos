@@ -1143,3 +1143,17 @@
 [INFO] 18:48:32:720 CPU/(67082:67084): Conexion establecida con Memoria
 [INFO] 18:48:35:918 CPU/(67082:67083): Se conecto un cliente!
 [INFO] 18:48:35:918 CPU/(67082:67083): Me llego el mensaje Soy el Kernel
+[INFO] 19:43:18:250 CPU/(73173:73173): Logger creado
+[INFO] 19:43:18:251 CPU/(73173:73173): -------Valores del config-------
+[INFO] 19:43:18:251 CPU/(73173:73173): Retardo Instrucción = 1000
+[INFO] 19:43:18:251 CPU/(73173:73173): IP Memoria = 127.0.0.1
+[INFO] 19:43:18:251 CPU/(73173:73173): Puerto Memoria = 8003
+[INFO] 19:43:18:251 CPU/(73173:73173): Puerto Escucha = 8001
+[INFO] 19:43:18:251 CPU/(73173:73173): Tamanio maximo de segmentos = (null)
+[INFO] 19:43:18:251 CPU/(73173:73173): --------------------------------
+[INFO] 19:43:18:251 CPU/(73173:73173): ¡CPU iniciado correctamente!
+[TRACE] 19:43:18:251 CPU/(73173:73173): Listo para escuchar a mi cliente
+[INFO] 19:43:18:251 CPU/(73173:73173): Servidor listo para recibir al cliente
+[INFO] 19:43:18:251 CPU/(73173:73175): Conexion establecida con Memoria
+[INFO] 19:43:20:986 CPU/(73173:73174): Se conecto un cliente!
+[INFO] 19:43:20:986 CPU/(73173:73174): Me llego el mensaje Soy el Kernel

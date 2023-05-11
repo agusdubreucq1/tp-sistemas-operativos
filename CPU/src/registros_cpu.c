@@ -1,5 +1,5 @@
 #include "registros_cpu.h"
-
+/*
 
 void iniciar_registros(t_registros** registros){
 	*registros = malloc(sizeof(t_registros));
@@ -164,3 +164,4 @@ void destruir_registro_unitario(t_registro_unitario* registro){
 	free(registro->registro);
 	free(registro);
 }
+*/

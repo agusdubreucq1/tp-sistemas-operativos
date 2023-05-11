@@ -1,6 +1,6 @@
 #ifndef INSTRUCCIONES_H_
 #define INSTRUCCIONES_H_
-
+/*
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,5 +51,5 @@ void imprimir_lista_instrucciones(t_list *lista_de_instrucciones);
 t_buffer* instruccion_serializar(t_instruccion* it);
 t_instruccion* instruccion_deserializar(t_buffer** it);
 
-
+*/
 #endif /* INSTRUCCIONES_H_ */

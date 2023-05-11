@@ -1,5 +1,5 @@
 #include "instrucciones.h"
-
+/*
 char* obtener_string_codigo_instruccion(cod_instruccion co_inst){
 	if(co_inst == SET) 			 return "SET";
 	if(co_inst == MOV_IN) 		 return "MOV_IN";
@@ -111,3 +111,4 @@ t_instruccion* instruccion_deserializar(t_buffer** buffer) {
     instruccion->parametro[1] = buffer_deserializar_string(buffer);
     return instruccion;
 }
+*/

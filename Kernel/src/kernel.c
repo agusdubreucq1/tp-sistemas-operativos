@@ -154,6 +154,7 @@ void planificarCortoPlazoFIFO(){
 		//proceso pasa a execute(capaz hay que agregar un semaforo)
 		//mandar a cpu serializado
 		enviar_pcb(pcb_a_ejecutar);
+
 		pthread_mutex_lock(&semaforo_execute);
 
 	}

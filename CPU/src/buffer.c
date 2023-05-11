@@ -1,5 +1,5 @@
 #include "buffer.h"
-
+/*
 t_buffer* buffer_create() {
     return buffer_create_for(0, NULL);
 }
@@ -244,3 +244,4 @@ void buffer_agregar_serializacion_list(t_buffer* buffer, t_list* list, t_buffer*
 void eliminar_buffer(t_buffer* buffer) {
     buffer_destroy(&buffer);
 }
+*/

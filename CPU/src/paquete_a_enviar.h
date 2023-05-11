@@ -1,6 +1,6 @@
 #ifndef PAQUETE_A_ENVIAR_H_
 #define PAQUETE_A_ENVIAR_H_
-
+/*
 #include <stdio.h>
 #include <netdb.h>
 #include <unistd.h>
@@ -62,5 +62,5 @@ int agregar_eof_en_stream(int offset, t_buffer *buffer);
 int agregar_new_line_en_stream(int offset, t_buffer *buffer);
 int agregar_espacio_en_stream(int offset, t_buffer *buffer);
 int agregar_char_en_stream(int offset, t_buffer *buffer, char caracter);
-
+*/
 #endif /* PAQUETE_A_ENVIAR_H_ */

@@ -1,5 +1,5 @@
 #include "ciclo_instruccion.h"
-
+/*
 
 void comenzar_ciclo_instruccion(t_pcb* pcb, int conexion_kernel) {
 	log_trace(cpu_logger, "Comienza ciclo de instrucción para ejecución de proceso %u.", pcb->pid);
@@ -78,3 +78,4 @@ void leer_instruccion_y_ejecutar_pcb(t_instruccion* instruccion_auxiliar, t_pcb*
     }
 
 }
+*/

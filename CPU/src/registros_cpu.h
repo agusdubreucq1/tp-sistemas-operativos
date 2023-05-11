@@ -1,6 +1,6 @@
 #ifndef REGISTROS_CPU_H_
 #define REGISTROS_CPU_H_
-
+/*
 #include "paquete_a_enviar.h"
 
 #include <stdio.h>
@@ -31,5 +31,5 @@ void destruir_registro_unitario(t_registro_unitario* registro);
 t_registro_unitario* recibir_registro_unitario(int socket, t_log* logger);
 void imprimir_registro_unitario_por_pantalla(t_registro_unitario* registro);
 void enviar_registro_unitario(char* registro, u_int32_t valor, op_code operacion, t_log* logger, int socket);
-
+*/
 #endif

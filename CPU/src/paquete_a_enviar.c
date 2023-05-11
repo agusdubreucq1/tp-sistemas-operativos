@@ -1,5 +1,5 @@
 #include "paquete_a_enviar.h"
-
+/*
 // ------------------------------------------------------------------------------------------
 // -- Funciones parapaquetes y buffers en general --
 // ------------------------------------------------------------------------------------------
@@ -128,3 +128,4 @@ int agregar_espacio_en_stream(int offset, t_buffer *buffer) {
 	//Agregar espacio entre codigo_instruccion y primer_parametro
 	return agregar_char_en_stream(offset, buffer, ' ');
 }
+*/
