@@ -192,7 +192,7 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 			printf("\n recibi buffer \n");
 
 			deserializar_contexto(buffer,tam_recibido, pcb);
-			//contexto_de_Ejecucion = deserializar_pcb(buffer, tam_recibido);
+			//contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
 
 			*tam_recibido+=2*sizeof(int);
 			printf("\n tamanio recibido: %d\n", *tam_recibido);

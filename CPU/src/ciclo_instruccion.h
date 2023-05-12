@@ -23,7 +23,7 @@
 // -- Contexto --
 // ------------------------------------------------------------------------------------------
 
-	extern t_contexto_ejecucion* contexto_de_Ejecucion;
+	extern t_contexto_ejecucion* contexto_de_ejecucion;
 	extern u_int32_t retardo_instruccion;
 
 // ------------------------------------------------------------------------------------------
@@ -39,7 +39,7 @@
 
 	void comenzar_ciclo_instruccion();
 	t_instruccion* fetch_instruccion();
-	void ejecutar_instruccion(t_instruccion* instruccion);
+	int ejecutar_instruccion(t_instruccion* instruccion);
 	void enviarContexto();
 
 #endif /* CICLO_DE_INSTRUCCION_H_ */

@@ -1,11 +1,14 @@
 #include "ciclo_instruccion.h"
 
 void comenzar_ciclo_instruccion() {
-	log_info(cpu_logger,"Comenzar ejecucion del proceso: %u.", contexto_de_Ejecucion->pid);
+	log_info(cpu_logger,"Comenzar ejecucion del proceso: %u.", contexto_de_ejecucion->pid);
 
-    t_instruccion* instruccion = fetch_instruccion();
+	int salida = 1;
 
-    ejecutar_instruccion(instruccion);
+	while(salida){
+		t_instruccion* instruccion = fetch_instruccion();
+		salida = ejecutar_instruccion(instruccion);
+	}
 
 
 
@@ -15,26 +18,26 @@ void comenzar_ciclo_instruccion() {
 t_instruccion* fetch_instruccion() {
     printf("Fetch Instruccion");
 
-    t_instruccion* instruccion = parsear_instruccion(list_get(contexto_de_Ejecucion->instrucciones, contexto_de_Ejecucion->program_counter));
-    contexto_de_Ejecucion->program_counter += 1;
+    t_instruccion* instruccion = parsear_instruccion(list_get(contexto_de_ejecucion->instrucciones, contexto_de_ejecucion->program_counter));
+    contexto_de_ejecucion->program_counter += 1;
 
     return instruccion;
 }
 
 
-void ejecutar_instruccion(t_instruccion* instruccion){
+int ejecutar_instruccion(t_instruccion* instruccion){
 	log_info(cpu_logger, "Instruccion Ejecutada");
-
+	int salida = 1;
 	switch(instruccion->codigo_instruccion) {
 		case SET:
-			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s %s", contexto_de_Ejecucion->pid,
-																		codigo_instruccion_string(instruccion->codigo_instruccion),
-																				instruccion->parametro[0],
-																				instruccion->parametro[1]);
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s %s", contexto_de_ejecucion->pid,
+																   codigo_instruccion_string(instruccion->codigo_instruccion),
+																   instruccion->parametro[0],
+																   instruccion->parametro[1]);
 
 			usleep(retardo_instruccion);
-			registros_put(contexto_de_Ejecucion->registros_cpu, instruccion->parametro[0], instruccion->parametro[1]);
-			imprimir_registros(contexto_de_Ejecucion->registros_cpu);
+			registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], instruccion->parametro[1]);
+			imprimir_registros(contexto_de_ejecucion->registros_cpu);
 
 			break;
 		case MOV_IN:   		break;
@@ -52,8 +55,15 @@ void ejecutar_instruccion(t_instruccion* instruccion){
 		case DELETE_SEGMENT:break;
 		case YIELD:
 			enviarContexto();
+			salida = 0;
 			break;
-		//case EXIT: 			break;
+		/*case EXIT:
+			//salida = 0;
+			break;
+			*/
+
+
+
 			/*log_info(cpu_logger, "Iniciamos etapa Execute");
 			log_info(cpu_logger, "PID: <%u> - Ejecutando: <EXIT> - <%s> - <%s>", pcb->pid,
 					instruccion_auxiliar->parametro[0], instruccion_auxiliar->parametro[1], instruccion_auxiliar->parametro[2]);
@@ -76,12 +86,12 @@ void ejecutar_instruccion(t_instruccion* instruccion){
 		default:
 			log_error(cpu_logger, "Instruccion inválida");
 	}
-
+	return salida;
 }
 
 void enviarContexto(){
 	t_paquete* paquete;
-	paquete = serializar_contexto(contexto_de_Ejecucion);
+	paquete = serializar_contexto(contexto_de_ejecucion);
 
 
 	int tamanio_contexto;

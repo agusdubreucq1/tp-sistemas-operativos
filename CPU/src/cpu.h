@@ -41,7 +41,7 @@
 // -- Variables CPU
 // ------------------------------------------------------------------------------------------
 
-	t_contexto_ejecucion* contexto_de_Ejecucion;
+	t_contexto_ejecucion* contexto_de_ejecucion;
 
 // ------------------------------------------------------------------------------------------
 // -- Server del proceso --

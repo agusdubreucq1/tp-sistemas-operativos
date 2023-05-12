@@ -24,7 +24,7 @@ int main(void){
 	server_cpu = iniciar_servidor(IP_SERVER, puerto_escucha, cpu_logger);
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
 
-	contexto_de_Ejecucion =  malloc(sizeof(t_contexto_ejecucion));
+	contexto_de_ejecucion =  malloc(sizeof(t_contexto_ejecucion));
 
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
@@ -61,13 +61,13 @@ void* abrirSocketKernel(){
 
 		while(1){
 			recibir_mensaje_kernel();
-			comenzar_ciclo_instruccion(contexto_de_Ejecucion);
+			comenzar_ciclo_instruccion(contexto_de_ejecucion);
 
 
 			// ACA INTERPRETAMOS LAS INSTRUCCIONES
 			//printf("/n/n/n/n/n/ ASASASASASASASASSASASASASASAS /n/n/n/n/n/n/n/n/n/n/n");
 			//
-			enviarContexto();
+			//enviarContexto();
 
 		}
 
@@ -98,7 +98,7 @@ void recibir_mensaje_kernel(){
 			buffer = recibir_buffer(&size, socket_Kernel);
 			printf("\n recibi buffer \n");
 
-			contexto_de_Ejecucion = deserializar_pcb(buffer, tam_recibido);
+			contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
 
 			*tam_recibido+=2*sizeof(int);
 			printf("\n tamanio recibido: %d\n", *tam_recibido);
@@ -107,7 +107,7 @@ void recibir_mensaje_kernel(){
 			printf("var_send: %d\n", var_send_);
 
 			printf("\n recibi contexto:\n");
-			print_contexto(contexto_de_Ejecucion);
+			print_contexto(contexto_de_ejecucion);
 	}
 }
 
