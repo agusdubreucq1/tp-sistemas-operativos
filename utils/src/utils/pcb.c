@@ -26,7 +26,7 @@ void init_registros(t_registros** registros){
 	strcpy((*registros)->bx, "    ");
 	strcpy((*registros)->cx, "    ");
 	strcpy((*registros)->dx, "    ");
-	strcpy((*registros)->eax, "eaxeaxea");
+	strcpy((*registros)->eax, "        ");
 	strcpy((*registros)->ebx, "        ");
 	strcpy((*registros)->ecx, "        ");
 	strcpy((*registros)->edx, "        ");
@@ -101,7 +101,7 @@ char* print_estado(estado_code estado){
 	if(estado == READY) 	return "Ready";
 	if(estado == BLOCKED) 	return "Blocked";
 	if(estado == EXEC) 		return "Exec";
-	if(estado == EXIT) 		return "Exit";
+	if(estado == EXITT) 		return "Exit";
 	else			 		return "Error";
 }
 

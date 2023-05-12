@@ -3,6 +3,8 @@
 
 
 #include "config.h"
+#include "ciclo_instruccion.h"
+#include "registros_cpu.h"
 
 #include <pthread.h>
 #include <stdio.h>
@@ -38,6 +40,7 @@
 // ------------------------------------------------------------------------------------------
 
 	t_contexto_ejecucion* contexto_de_Ejecucion;
+	t_registros* registros_contexto;
 
 // ------------------------------------------------------------------------------------------
 // -- Server del proceso --

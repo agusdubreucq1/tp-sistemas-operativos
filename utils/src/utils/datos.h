@@ -51,7 +51,6 @@ typedef struct registros_cpu{
 	char eax[8], ebx[8], ecx[8], edx[8];
 	char rax[16], rbx[16], rcx[16], rdx[16];
 }t_registros;
-//TODO Creemos que son char*
 
 
 // ------------------------------------------------------------------------------------------
@@ -74,11 +73,9 @@ typedef enum {
     READY,
     EXEC,
     BLOCKED,
-	EXIT,
+	EXITT,
 	ERROR
 } estado_code;
-
-
 
 typedef struct pcb {
 	uint32_t pid;

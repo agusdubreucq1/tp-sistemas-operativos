@@ -45,7 +45,7 @@ t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento){
 	t_registros* registros=malloc(sizeof(t_registros));
 
 		strncpy(registros->ax, deserializar_char(stream, desplazamiento, 4), 4);
-		strncpy(registros->bx, deserializar_char(stream, desplazamiento, 4),4);
+		strncpy(registros->bx, deserializar_char(stream, desplazamiento, 4), 4);
 		strncpy(registros->cx, deserializar_char(stream, desplazamiento, 4), 4);
 		strncpy(registros->dx, deserializar_char(stream, desplazamiento, 4), 4);
 		strncpy(registros->eax, deserializar_char(stream, desplazamiento, 8), 8); /*-> usar strncpy, sino se copiara hasta encontrar un \0*/
