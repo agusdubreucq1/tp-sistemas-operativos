@@ -24,8 +24,7 @@ int main(void){
 	server_cpu = iniciar_servidor(IP_SERVER, puerto_escucha, cpu_logger);
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
 
-	contexto_de_Ejecucion = malloc(sizeof(t_contexto_ejecucion));
-	iniciar_registros(contexto_de_Ejecucion->registros_cpu);
+	contexto_de_Ejecucion =  malloc(sizeof(t_contexto_ejecucion));
 
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
@@ -68,7 +67,7 @@ void* abrirSocketKernel(){
 			// ACA INTERPRETAMOS LAS INSTRUCCIONES
 			printf("/n/n/n/n/n/ ASASASASASASASASSASASASASASAS /n/n/n/n/n/n/n/n/n/n/n");
 			//
-			enviarContexto();
+			//enviarContexto();
 
 		}
 

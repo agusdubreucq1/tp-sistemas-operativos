@@ -4,16 +4,12 @@ void comenzar_ciclo_instruccion() {
 	log_info(cpu_logger,"Comenzar ejecucion del proceso: %u.", contexto_de_Ejecucion->pid);
 
     t_instruccion* instruccion = fetch_instruccion();
-    printf("\nBABABABBABABABABABA\n");
-   // printf("%u", instruccion->codigo_instruccion);
-   // printf("%s", instruccion->parametro[0]);
-   // printf("%s", instruccion->parametro[1]);
+
     ejecutar_instruccion(instruccion);
 }
 
 t_instruccion* fetch_instruccion() {
     printf("Fetch Instruccion");
-	//log_info(cpu_logger, "Fetch Instruccion");
 
     t_instruccion* instruccion = parsear_instruccion(list_get(contexto_de_Ejecucion->instrucciones, contexto_de_Ejecucion->program_counter));
     contexto_de_Ejecucion->program_counter += 1;
@@ -24,21 +20,16 @@ t_instruccion* fetch_instruccion() {
 
 void ejecutar_instruccion(t_instruccion* instruccion){
 	log_info(cpu_logger, "Instruccion Ejecutada");
-	log_info(cpu_logger, "PID: %u - Ejecutando: %s %s %s %s %s", contexto_de_Ejecucion->pid,
-																codigo_instruccion_string(instruccion->codigo_instruccion),
-			    														instruccion->parametro[0],
-																		instruccion->parametro[1],
-																		instruccion->parametro[2]);
-
-    printf("PID: %u - Ejecutando: %s %s %s %s %s", contexto_de_Ejecucion->pid,
-			codigo_instruccion_string(instruccion->codigo_instruccion),
-					instruccion->parametro[0],
-					instruccion->parametro[1],
-					instruccion->parametro[2]);
 
     switch(instruccion->codigo_instruccion) {
     	case SET:
-            usleep((int) retardo_instruccion);
+    		log_info(cpu_logger, "PID: %u - Ejecutando: %s %s %s", contexto_de_Ejecucion->pid,
+    																	codigo_instruccion_string(instruccion->codigo_instruccion),
+    				    														instruccion->parametro[0],
+    																			instruccion->parametro[1]);
+
+
+            usleep(retardo_instruccion);
             registros_put(contexto_de_Ejecucion->registros_cpu, instruccion->parametro[0], instruccion->parametro[1]);
         	imprimir_registros(contexto_de_Ejecucion->registros_cpu);
 

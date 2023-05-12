@@ -13,17 +13,17 @@ t_instruccion* parsear_instruccion(char* linea){
 	nueva_instruccion->codigo_instruccion = obtener_codigo_instruccion(parametros[0]);
 
 	if(contarElementos(parametros) == 1 ){
-		nueva_instruccion->parametro[0] = "";
-		nueva_instruccion->parametro[1] = "";
-		nueva_instruccion->parametro[2] = "";
+		nueva_instruccion->parametro[0] = "                ";
+		nueva_instruccion->parametro[1] = "                ";
+		nueva_instruccion->parametro[2] = "                ";
 	} else if(contarElementos(parametros) == 2 ){
 		nueva_instruccion->parametro[0] = string_duplicate(parametros[1]);
-		nueva_instruccion->parametro[1] = "";
-		nueva_instruccion->parametro[2] = "";
+		nueva_instruccion->parametro[1] = "                ";
+		nueva_instruccion->parametro[2] = "                ";
 	} else if(contarElementos(parametros) == 3 ){
 		nueva_instruccion->parametro[0] = string_duplicate(parametros[1]);
 		nueva_instruccion->parametro[1] = string_duplicate(parametros[2]);
-		nueva_instruccion->parametro[2] = "";
+		nueva_instruccion->parametro[2] = "                ";
 	} else{
 		nueva_instruccion->parametro[0] = string_duplicate(parametros[1]);
 		nueva_instruccion->parametro[1] = string_duplicate(parametros[2]);

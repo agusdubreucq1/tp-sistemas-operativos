@@ -9,7 +9,7 @@
 #include <commons/config.h>
 #include <utils/instruccion.h>
 #include <utils/datos.h>
-
+#include <unistd.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
@@ -22,7 +22,7 @@
 // ------------------------------------------------------------------------------------------
 
 	extern t_contexto_ejecucion* contexto_de_Ejecucion;
-	extern char* retardo_instruccion;
+	extern u_int32_t retardo_instruccion;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --

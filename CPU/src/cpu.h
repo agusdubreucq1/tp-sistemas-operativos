@@ -9,6 +9,7 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <commons/string.h>
 #include <commons/log.h>
 #include <utils/utils.h>
@@ -32,7 +33,8 @@
 // ------------------------------------------------------------------------------------------
 
 	t_config* cpu_config;
-	char *tam_max_segmentos, *retardo_instruccion;
+	u_int32_t retardo_instruccion;
+	char *tam_max_segmentos;
 	char *ip_memoria, *puerto_memoria, *puerto_escucha;
 
 // ------------------------------------------------------------------------------------------
@@ -40,7 +42,6 @@
 // ------------------------------------------------------------------------------------------
 
 	t_contexto_ejecucion* contexto_de_Ejecucion;
-	t_registros* registros_contexto;
 
 // ------------------------------------------------------------------------------------------
 // -- Server del proceso --
