@@ -74,19 +74,6 @@ void* abrirSocketKernel(){
 	return "";
 }
 
-void enviarContexto(){
-	t_paquete* paquete;
-	paquete = serializar_contexto(contexto_de_Ejecucion);
-
-
-	int tamanio_contexto;
-	memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
-	printf("\n Contexto enviado:\n\n");
-	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
-
-	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
-}
-
 void* conectarMemoria(){
 	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, cpu_logger, "Memoria");
 	handshake(socket_memoria, 1, cpu_logger, "Memoria");

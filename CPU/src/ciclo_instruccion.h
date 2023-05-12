@@ -10,6 +10,8 @@
 #include <utils/instruccion.h>
 #include <utils/datos.h>
 #include <unistd.h>
+#include <utils/cliente.h>
+#include <utils/serializar.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
@@ -25,11 +27,19 @@
 	extern u_int32_t retardo_instruccion;
 
 // ------------------------------------------------------------------------------------------
+// -- Server del proceso --
+// ------------------------------------------------------------------------------------------
+
+	extern int socket_Kernel;
+
+
+// ------------------------------------------------------------------------------------------
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
 
 	void comenzar_ciclo_instruccion();
 	t_instruccion* fetch_instruccion();
 	void ejecutar_instruccion(t_instruccion* instruccion);
+	void enviarContexto();
 
 #endif /* CICLO_DE_INSTRUCCION_H_ */

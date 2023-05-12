@@ -17,6 +17,7 @@
 #include <commons/collections/list.h>
 #include "planificador_largo_plazo.h"
 #include <utils/serializar.h>
+#include <utils/deserializar.h>
 
 #define IP_SERVER "127.0.0.1"
 

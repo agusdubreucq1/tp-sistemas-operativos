@@ -6,6 +6,12 @@ void comenzar_ciclo_instruccion() {
     t_instruccion* instruccion = fetch_instruccion();
 
     ejecutar_instruccion(instruccion);
+
+    printf("ASAASASASASSA");
+    printf("%d", contexto_de_Ejecucion->program_counter);
+    printf("RFRFRFRFRFRFRF");
+    enviarContexto();
+    enviar_instruccion("SET perro", socket_Kernel);
 }
 
 t_instruccion* fetch_instruccion() {
@@ -27,7 +33,6 @@ void ejecutar_instruccion(t_instruccion* instruccion){
     																	codigo_instruccion_string(instruccion->codigo_instruccion),
     				    														instruccion->parametro[0],
     																			instruccion->parametro[1]);
-
 
             usleep(retardo_instruccion);
             registros_put(contexto_de_Ejecucion->registros_cpu, instruccion->parametro[0], instruccion->parametro[1]);
@@ -73,6 +78,19 @@ void ejecutar_instruccion(t_instruccion* instruccion){
             log_error(cpu_logger, "Instruccion inválida");
     }
 
+}
+
+void enviarContexto(){
+	t_paquete* paquete;
+	paquete = serializar_contexto(contexto_de_Ejecucion);
+
+
+	int tamanio_contexto;
+	memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
+	printf("\n Contexto enviado:\n\n");
+	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+
+	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
 }
 
 

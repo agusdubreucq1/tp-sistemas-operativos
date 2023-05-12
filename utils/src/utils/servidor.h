@@ -27,6 +27,7 @@
 	int recibir_operacion(int socket_cliente);
 	void* recibir_buffer(int* size, int socket_cliente);
 	void recibir_mensaje(int socket_cliente, t_log* logger);
+	char* recibir_instruccion_cpu(int socket_cliente, t_log* logger);
 	t_list* recibir_instrucciones(int socket_cliente, uint32_t* tamanio_recibido);
 	t_paquete* serializar_contexto(t_contexto_ejecucion* contexto);
 

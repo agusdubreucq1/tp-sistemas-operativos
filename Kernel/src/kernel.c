@@ -104,7 +104,7 @@ void* recibirProcesos(int* p_conexion) {
 		printf("\n\nCCCCCC %d \n\n", tamanio);
 		log_info(kernel_logger, "Nuevo Proceso recibido con exito");
 		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial);
-		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new);
+		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new, NEW);
 		print_pcb(nuevo_pcb);
 		sem_post(&cantidad_procesos_new);
 
@@ -140,7 +140,7 @@ void planificarLargoPlazo(){
 		t_pcb* pcb = list_remove(lista_new, 0);
 		pthread_mutex_unlock(&semaforo_new);
 		//mandar a memoria el proceso para iniciar estructuras
-		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready);
+		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
 		sem_post(&cantidad_procesos_ready);
 	}
 }
@@ -157,7 +157,8 @@ void planificarCortoPlazoFIFO(){
 		enviar_pcb(pcb_a_ejecutar);
 		printf("/n/n/n/n/n/ CCDCDCDCDCDCDCDCDCDCDCCDC /n/n/n/n/n/n/n/n/n/n/n");
 		recibir_mensaje_cpu(pcb_a_ejecutar);
-
+		print_pcb(pcb_a_ejecutar);
+		recibir_instruccion_cpu(socket_cpu, kernel_logger);
 		pthread_mutex_unlock(&semaforo_execute);
 
 
@@ -205,6 +206,10 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 
 			printf("\n recibi contexto:\n");
 			print_pcb(pcb);
+		case INSTRUCCION:
+			char* instruccion_de_cpu = recibir_instruccion_cpu(socket_cpu, kernel_logger);
+			printf("%s", instruccion_de_cpu);
+			break;
 	}
 }
 

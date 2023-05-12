@@ -22,7 +22,8 @@ typedef enum
 {
 	MENSAJE,
 	PAQUETE,
-	PCB
+	PCB,
+	INSTRUCCION
 } op_code;
 
 typedef struct{
@@ -97,7 +98,11 @@ typedef struct contexto_ejecucion {
 	t_list* tabla_segmentos;
 }t_contexto_ejecucion;
 
-
+typedef struct retorno_contexto {
+	uint32_t pid;
+	uint32_t program_counter;
+	t_registros* registros_cpu;
+}t_retorno_contexto;
 
 
 

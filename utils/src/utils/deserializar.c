@@ -20,7 +20,6 @@ t_contexto_ejecucion* deserializar_pcb(void* stream,int* bytes_recibidos){
 	contexto_deserializado->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
 	print_registos(contexto_deserializado->registros_cpu);
 
-
 	contexto_deserializado->tabla_segmentos = deserializar_tabla_segmentos(stream, &desplazamiento);
 	print_segmento(contexto_deserializado->tabla_segmentos);
 
@@ -30,13 +29,23 @@ t_contexto_ejecucion* deserializar_pcb(void* stream,int* bytes_recibidos){
 }
 
 void deserializar_contexto(void* stream,int* bytes_recibidos, t_pcb* pcb){
+	//t_retorno_contexto* contexto_cpu= malloc(sizeof(t_retorno_contexto));
 	int desplazamiento = 0;
 
-	pcb->pid = deserializar_uint32(stream, &desplazamiento);
-	pcb->program_counter = deserializar_uint32(stream, &desplazamiento);
+	//contexto_cpu->pid = deserializar_uint32(stream, &desplazamiento);
+	//contexto_cpu->program_counter = deserializar_uint32(stream, &desplazamiento);
+	//contexto_cpu->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
 
+	//pcb->pid = contexto_cpu->pid;
+	//pcb->program_counter = contexto_cpu->program_counter;
+	//pcb->registros_cpu = contexto_cpu->registros_cpu;
+
+	//pcb->pid = deserializar_uint32(stream, &desplazamiento);
+	pcb->program_counter = deserializar_uint32(stream, &desplazamiento);
 	pcb->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
-	print_registos(pcb->registros_cpu);
+
+	//print_registos(pcb->registros_cpu);
+	//free(contexto_cpu);
 
 	*bytes_recibidos = desplazamiento;
 }

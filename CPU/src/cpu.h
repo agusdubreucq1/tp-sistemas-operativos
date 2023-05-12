@@ -58,7 +58,6 @@
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
-	void enviarContexto();
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();
