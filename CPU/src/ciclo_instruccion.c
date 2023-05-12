@@ -26,6 +26,7 @@ t_instruccion* fetch_instruccion() {
 
 
 int ejecutar_instruccion(t_instruccion* instruccion){
+
 	log_info(cpu_logger, "Instruccion Ejecutada");
 	int salida = 1;
 	switch(instruccion->codigo_instruccion) {
