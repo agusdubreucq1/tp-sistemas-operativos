@@ -95,6 +95,7 @@ void enviar_instruccion(char* mensaje, int socket_cliente){
 	paquete->buffer->stream = malloc(paquete->buffer->size);
 	memcpy(paquete->buffer->stream, mensaje, paquete->buffer->size);
 
+
 	int bytes = paquete->buffer->size + 2*sizeof(int);
 
 	void* a_enviar = serializar_paquete(paquete, bytes);
@@ -171,20 +172,5 @@ void liberar_conexion(int socket_cliente)
 	close(socket_cliente);
 }
 
-/*t_buffer* buffer_serializar_uint32_t(uint32_t* it) {
-    uint32_t size = sizeof(uint32_t);
-    void* stream = malloc(size);
-    memcpy(stream, it, size);
-    return buffer_create_for(size, stream);
-}
-
-
-void buffer_agregar_uint32_t(t_buffer* buffer, uint32_t* it) {
-	t_buffer* buf = buffer_serializar_uint32_t(it);
-	buffer->stream = realloc(buffer->stream, buffer->size + buf->size);
-	memcpy(buffer->stream + buffer->size, buf->stream, buf->size);
-	buffer->size += buf->size;
-	buffer_destroy(&buf);
-}*/
 
 

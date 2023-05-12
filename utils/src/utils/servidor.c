@@ -77,9 +77,10 @@ char* recibir_instruccion_cpu(int socket_cliente, t_log* logger)
 	int size;
 	char* buffer = recibir_buffer(&size, socket_cliente);
 	log_info(logger, "Instruccion de CPU %s", buffer);
-	free(buffer);
 	return buffer;
 }
+
+
 
 t_list* recibir_instrucciones(int socket_cliente, uint32_t* tamanio_recibido){
 	int size;
