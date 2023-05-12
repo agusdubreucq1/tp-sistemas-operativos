@@ -17,7 +17,8 @@
 // -- Variables del archivo de configuración --
 // ------------------------------------------------------------------------------------------
 
-	extern char *retardo_instruccion, *tam_max_segmentos;
+	extern u_int32_t retardo_instruccion;
+	extern char *tam_max_segmentos;
 	extern char *ip_memoria, *puerto_memoria, *puerto_escucha;
 
 // ------------------------------------------------------------------------------------------

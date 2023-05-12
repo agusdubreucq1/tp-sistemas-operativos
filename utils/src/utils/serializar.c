@@ -22,7 +22,7 @@ t_paquete* serializar_pcb(t_pcb* pcb){
 t_paquete* serializar_contexto(t_contexto_ejecucion* contexto){
 	t_paquete* paquete = crear_paquete();
 
-	agregar_variable_a_paquete(paquete, &(contexto->pid), sizeof(int));
+	//agregar_variable_a_paquete(paquete, &(contexto->pid), sizeof(uint32_t));
 	agregar_variable_a_paquete(paquete, &(contexto->program_counter), sizeof(uint32_t));
 	serializar_registros_cpu(paquete, contexto->registros_cpu);
 	printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));

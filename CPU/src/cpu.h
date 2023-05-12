@@ -3,10 +3,13 @@
 
 
 #include "config.h"
+#include "ciclo_instruccion.h"
+#include "registros_cpu.h"
 
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <commons/string.h>
 #include <commons/log.h>
 #include <utils/utils.h>
@@ -30,14 +33,15 @@
 // ------------------------------------------------------------------------------------------
 
 	t_config* cpu_config;
-	char *tam_max_segmentos, *retardo_instruccion;
+	u_int32_t retardo_instruccion;
+	char *tam_max_segmentos;
 	char *ip_memoria, *puerto_memoria, *puerto_escucha;
 
 // ------------------------------------------------------------------------------------------
 // -- Variables CPU
 // ------------------------------------------------------------------------------------------
 
-	t_contexto_ejecucion* contexto_de_Ejecucion;
+	t_contexto_ejecucion* contexto_de_ejecucion;
 
 // ------------------------------------------------------------------------------------------
 // -- Server del proceso --
@@ -54,7 +58,6 @@
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
-	void enviarContexto();
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();

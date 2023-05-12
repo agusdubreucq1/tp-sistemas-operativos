@@ -32,7 +32,7 @@
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
 
-	void ingresar_en_lista(t_pcb* pcb, t_list* lista, char* modulo, pthread_mutex_t* semaforo_mutex);
+	void ingresar_en_lista(t_pcb* pcb, t_list* lista, char* modulo, pthread_mutex_t* semaforo_mutex, estado_code estado);
 
 
 #endif /* PLANIFICADOR_LARGO_PLAZO_H_ */

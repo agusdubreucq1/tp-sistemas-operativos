@@ -22,7 +22,8 @@ typedef enum
 {
 	MENSAJE,
 	PAQUETE,
-	PCB
+	PCB,
+	INSTRUCCION
 } op_code;
 
 typedef struct{
@@ -51,7 +52,6 @@ typedef struct registros_cpu{
 	char eax[8], ebx[8], ecx[8], edx[8];
 	char rax[16], rbx[16], rcx[16], rdx[16];
 }t_registros;
-//TODO Creemos que son char*
 
 
 // ------------------------------------------------------------------------------------------
@@ -74,11 +74,9 @@ typedef enum {
     READY,
     EXEC,
     BLOCKED,
-	EXIT,
+	EXITT,
 	ERROR
 } estado_code;
-
-
 
 typedef struct pcb {
 	uint32_t pid;
@@ -99,9 +97,6 @@ typedef struct contexto_ejecucion {
 	t_registros* registros_cpu;
 	t_list* tabla_segmentos;
 }t_contexto_ejecucion;
-
-
-
 
 
 #endif /* SRC_DATOS_H_ */

@@ -20,7 +20,6 @@ t_contexto_ejecucion* deserializar_pcb(void* stream,int* bytes_recibidos){
 	contexto_deserializado->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
 	print_registos(contexto_deserializado->registros_cpu);
 
-
 	contexto_deserializado->tabla_segmentos = deserializar_tabla_segmentos(stream, &desplazamiento);
 	print_segmento(contexto_deserializado->tabla_segmentos);
 
@@ -32,11 +31,8 @@ t_contexto_ejecucion* deserializar_pcb(void* stream,int* bytes_recibidos){
 void deserializar_contexto(void* stream,int* bytes_recibidos, t_pcb* pcb){
 	int desplazamiento = 0;
 
-	pcb->pid = deserializar_uint32(stream, &desplazamiento);
 	pcb->program_counter = deserializar_uint32(stream, &desplazamiento);
-
 	pcb->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
-	print_registos(pcb->registros_cpu);
 
 	*bytes_recibidos = desplazamiento;
 }
@@ -45,7 +41,7 @@ t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento){
 	t_registros* registros=malloc(sizeof(t_registros));
 
 		strncpy(registros->ax, deserializar_char(stream, desplazamiento, 4), 4);
-		strncpy(registros->bx, deserializar_char(stream, desplazamiento, 4),4);
+		strncpy(registros->bx, deserializar_char(stream, desplazamiento, 4), 4);
 		strncpy(registros->cx, deserializar_char(stream, desplazamiento, 4), 4);
 		strncpy(registros->dx, deserializar_char(stream, desplazamiento, 4), 4);
 		strncpy(registros->eax, deserializar_char(stream, desplazamiento, 8), 8); /*-> usar strncpy, sino se copiara hasta encontrar un \0*/
