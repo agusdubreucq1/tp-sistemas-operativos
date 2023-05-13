@@ -55,13 +55,14 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 		case CREATE_SEGMENT:break;
 		case DELETE_SEGMENT:break;
 		case YIELD:
-			enviarContexto();
+			enviarContexto("YIELD");
 			salida = 0;
 			break;
-		/*case EXIT:
-			//salida = 0;
+		case EXIT:
+			enviarContexto("EXIT");
+			salida = 0;
 			break;
-			*/
+
 
 
 
@@ -90,15 +91,16 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 	return salida;
 }
 
-void enviarContexto(){
+void enviarContexto(char* valor){
 	t_paquete* paquete;
 	paquete = serializar_contexto(contexto_de_ejecucion);
-
+	agregar_a_paquete(paquete, valor, strlen(valor)+1);
 
 	int tamanio_contexto;
 	memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
 	printf("\n Contexto enviado:\n\n");
 	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+	printf("\EL VALOR ES: %s\n", valor);
 
 	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
 }

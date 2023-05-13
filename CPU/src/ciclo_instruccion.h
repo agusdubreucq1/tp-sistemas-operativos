@@ -40,6 +40,6 @@
 	void comenzar_ciclo_instruccion();
 	t_instruccion* fetch_instruccion();
 	int ejecutar_instruccion(t_instruccion* instruccion);
-	void enviarContexto();
+	void enviarContexto(char*);
 
 #endif /* CICLO_DE_INSTRUCCION_H_ */
