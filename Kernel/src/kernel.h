@@ -88,6 +88,7 @@
 	void enviar_pcb(t_pcb* pcb);
 	void cerrar_conexiones();
 	void recibir_mensaje_cpu(t_pcb* pcb);
+	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
 
 
 

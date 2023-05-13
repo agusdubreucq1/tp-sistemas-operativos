@@ -22,6 +22,7 @@
 
 t_contexto_ejecucion* deserializar_pcb(void* stream,int* bytes_recibidos);
 void deserializar_contexto(void* stream,int* bytes_recibidos, t_pcb* pcb);
+char* deserializar_motivo(void* stream, int* desplazamiento);
 t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento);
 t_list* deserializar_tabla_segmentos(void* stream, int* desplazamiento);
  char* deserializar_char(void* stream, int* desplazamiento, int tamanio);

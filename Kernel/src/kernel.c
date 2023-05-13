@@ -150,14 +150,12 @@ void planificarCortoPlazoFIFO(){
 		pthread_mutex_lock(&semaforo_ready);
 		t_pcb* pcb_a_ejecutar = list_remove(lista_ready, 0);
 		pthread_mutex_unlock(&semaforo_ready);
-		//proceso pasa a execute(capaz hay que agregar un semaforo)
-		//mandar a cpu serializado
 		pthread_mutex_lock(&semaforo_execute);
 		enviar_pcb(pcb_a_ejecutar);
 		recibir_mensaje_cpu(pcb_a_ejecutar);
-		print_pcb(pcb_a_ejecutar);
+		//print_pcb(pcb_a_ejecutar);
 		printf("AHIVAAAAAAAAA");
-		recibir_instruccion_cpu(socket_cpu, kernel_logger);
+		//recibir_instruccion_cpu(socket_cpu, kernel_logger);
 		pthread_mutex_unlock(&semaforo_execute);
 	}
 }
@@ -187,25 +185,41 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 		case PAQUETE:
 			int size;
 			void* buffer;
+			char* motivo;
 			int* tam_recibido= malloc(sizeof(int));
 			buffer = recibir_buffer(&size, socket_cpu);
 			printf("\n recibi buffer \n");
 
 			deserializar_contexto(buffer,tam_recibido, pcb);
+			motivo = deserializar_motivo(buffer, tam_recibido);
+			ejecutar_segun_motivo(motivo, pcb);
 			//contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
 
 			*tam_recibido+=2*sizeof(int);
 			printf("\n tamanio recibido: %d\n", *tam_recibido);
-			printf("puntero: %p\n", tam_recibido);
+			//printf("puntero: %p\n", tam_recibido);
 			int var_send_ = send(socket_cpu, tam_recibido, sizeof(int), 0);
-			printf("var_send: %d\n", var_send_);
+			//printf("var_send: %d\n", var_send_);
 
 			printf("\n recibi contexto:\n");
 			print_pcb(pcb);
-		case INSTRUCCION:
+		/*case INSTRUCCION:
 			char* instruccion_de_cpu = recibir_instruccion_cpu(socket_cpu, kernel_logger);
 			printf("%s", instruccion_de_cpu);
-			break;
+			break;*/
+	}
+}
+
+void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
+	if(strcmp(motivo, "YIELD")==0){
+		//agregar al final de la lista ready
+		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+		sem_post(&cantidad_procesos_ready);
+		printf("ejecutando yield");
+
+	}else if(strcmp(motivo, "EXIT")==0){
+		pcb->estado = EXITT;
+		printf("ejecutando exit");
 	}
 }
 

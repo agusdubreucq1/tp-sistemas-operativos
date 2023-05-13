@@ -74,7 +74,7 @@ typedef enum {
     READY,
     EXEC,
     BLOCKED,
-	EXIT,
+	EXITT,
 	ERROR
 } estado_code;
 

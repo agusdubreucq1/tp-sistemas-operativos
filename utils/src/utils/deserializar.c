@@ -37,6 +37,13 @@ void deserializar_contexto(void* stream,int* bytes_recibidos, t_pcb* pcb){
 	*bytes_recibidos = desplazamiento;
 }
 
+char* deserializar_motivo(void* stream, int* desplazamiento){
+	int tam_char = deserializar_uint32(stream, desplazamiento);
+	char* motivo = deserializar_char(stream, desplazamiento, tam_char);
+	return motivo;
+
+}
+
 t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento){
 	t_registros* registros=malloc(sizeof(t_registros));
 
@@ -103,7 +110,7 @@ t_list* deserializar_instrucciones(void* stream, int* desplazamiento){
 			memcpy(instruccion, stream + *desplazamiento, tamanio);
 			*desplazamiento+=tamanio;
 			instruccion[tamanio-1]='\0';
-			printf("instruccion: %s \n", instruccion);
+			//printf("instruccion: %s \n", instruccion);
 
 			list_add(lista_instrucciones, instruccion);
 		}

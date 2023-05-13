@@ -37,7 +37,7 @@ void agregar_variable_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 	memcpy(paquete->buffer->stream + paquete->buffer->size, valor, tamanio);
 
 	paquete->buffer->size += tamanio;
-	printf("\n buffer->size: %d\n", paquete->buffer->size);
+	//printf("\n buffer->size: %d\n", paquete->buffer->size);
 }
 
 
@@ -61,7 +61,7 @@ void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb){
 	int cant_instrucciones = list_size(pcb->instrucciones);
 	agregar_variable_a_paquete(paquete, &cant_instrucciones, sizeof(int));
 	for(int i=0;list_size(pcb->instrucciones)>i;i++){
-		printf("\n instruccion %d: %s -> tam: %ld \n", i, (char*)list_get(pcb->instrucciones, i), strlen(list_get(pcb->instrucciones, i)));
+		//printf("\n instruccion %d: %s -> tam: %ld \n", i, (char*)list_get(pcb->instrucciones, i), strlen(list_get(pcb->instrucciones, i)));
 		agregar_a_paquete(paquete, list_get(pcb->instrucciones, i), strlen(list_get(pcb->instrucciones, i))+1);
 	}
 }

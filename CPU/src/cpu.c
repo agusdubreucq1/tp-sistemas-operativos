@@ -102,9 +102,9 @@ void recibir_mensaje_kernel(){
 
 			*tam_recibido+=2*sizeof(int);
 			printf("\n tamanio recibido: %d\n", *tam_recibido);
-			printf("puntero: %p\n", tam_recibido);
+			//printf("puntero: %p\n", tam_recibido);
 			int var_send_ = send(socket_Kernel, tam_recibido, sizeof(int), 0);
-			printf("var_send: %d\n", var_send_);
+			//printf("var_send: %d\n", var_send_);
 
 			printf("\n recibi contexto:\n");
 			print_contexto(contexto_de_ejecucion);

@@ -91,16 +91,16 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 	return salida;
 }
 
-void enviarContexto(char* valor){
+void enviarContexto(char* motivo){
 	t_paquete* paquete;
 	paquete = serializar_contexto(contexto_de_ejecucion);
-	agregar_a_paquete(paquete, valor, strlen(valor)+1);
+	agregar_a_paquete(paquete, motivo, strlen(motivo)+1);
 
-	int tamanio_contexto;
-	memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
+	//int tamanio_contexto;
+	//memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
 	printf("\n Contexto enviado:\n\n");
 	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
-	printf("\EL VALOR ES: %s\n", valor);
+	printf("\EL VALOR ES: %s\n", motivo);
 
 	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
 }
