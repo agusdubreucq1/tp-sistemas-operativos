@@ -40,7 +40,6 @@ int main(int argc, char** argv) {
 	agregar_a_paquete(paquete, buffer, strlen(buffer) + 1);
 
 	enviar_paquete(paquete, conexion_kernel, consola_logger, "Kernel");
-	eliminar_paquete(paquete);
 
 	terminar_programa(conexion_kernel, consola_logger, consola_config);
 
@@ -49,11 +48,11 @@ int main(int argc, char** argv) {
 }
 
 void terminar_programa(int conexion, t_log *logger, t_config* config){
-	while(1){
+	while(conexion == 1){
 
 	}
 	log_info(logger, "Entro a finalizar el programa");
 	log_destroy(logger);
 	config_destroy(config);
-	liberar_conexion(conexion);
+	close(conexion);
 }

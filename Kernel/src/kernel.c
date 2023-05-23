@@ -49,9 +49,6 @@ int main(void){
         printf("\n\n lista ready: %d \n\n", list_size(lista_ready));
     }
 
-
-
-
     close(server_kernel);
 
 	return EXIT_SUCCESS;
@@ -220,6 +217,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 	}else if(strcmp(motivo, "EXIT")==0){
 		pcb->estado = EXITT;
 		printf("ejecutando exit");
+		liberar_conexion(pcb->pid);
 	}
 }
 

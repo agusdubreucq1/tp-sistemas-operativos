@@ -1988,3 +1988,548 @@
 [INFO] 15:39:55:497 CPU/(46137:46138): PID: 5 - Ejecutando: SET AX HOLA
 [INFO] 15:39:55:499 CPU/(46137:46138): Datos enviados, esperando respuesta de cpu...
 [INFO] 15:39:55:542 CPU/(46137:46138): Datos enviados correctamente
+[INFO] 13:12:57:232 CPU/(4122:4122): Logger creado
+[INFO] 13:12:57:233 CPU/(4122:4122): -------Valores del config-------
+[INFO] 13:12:57:233 CPU/(4122:4122): Retardo Instrucción = 1000
+[INFO] 13:12:57:233 CPU/(4122:4122): IP Memoria = 127.0.0.1
+[INFO] 13:12:57:233 CPU/(4122:4122): Puerto Memoria = 8003
+[INFO] 13:12:57:233 CPU/(4122:4122): Puerto Escucha = 8001
+[INFO] 13:12:57:233 CPU/(4122:4122): Tamanio maximo de segmentos = (null)
+[INFO] 13:12:57:234 CPU/(4122:4122): --------------------------------
+[INFO] 13:12:57:234 CPU/(4122:4122): ¡CPU iniciado correctamente!
+[TRACE] 13:12:57:234 CPU/(4122:4122): Listo para escuchar a mi cliente
+[INFO] 13:12:57:234 CPU/(4122:4122): Servidor listo para recibir al cliente
+[INFO] 13:12:57:234 CPU/(4122:4124): Conexion establecida con Memoria
+[INFO] 13:13:17:025 CPU/(4122:4123): Se conecto un cliente!
+[INFO] 13:13:17:025 CPU/(4122:4123): Me llego el mensaje Soy el Kernel
+[INFO] 13:13:48:610 CPU/(4122:4123): Comenzar ejecucion del proceso: 5.
+[INFO] 13:13:48:610 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:610 CPU/(4122:4123): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 13:13:48:612 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:612 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:612 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:612 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:612 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:612 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:612 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:612 CPU/(4122:4123): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:13:48:660 CPU/(4122:4123): Datos enviados correctamente
+[INFO] 13:13:48:709 CPU/(4122:4123): Comenzar ejecucion del proceso: 5.
+[INFO] 13:13:48:709 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:709 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:709 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:709 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:709 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:709 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:709 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:709 CPU/(4122:4123): Instruccion Ejecutada
+[INFO] 13:13:48:709 CPU/(4122:4123): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:13:48:753 CPU/(4122:4123): Datos enviados correctamente
+[INFO] 13:15:21:019 CPU/(4122:4123): Comenzar ejecucion del proceso: 5.
+[INFO] 13:17:11:633 CPU/(4736:4736): Logger creado
+[INFO] 13:17:11:635 CPU/(4736:4736): -------Valores del config-------
+[INFO] 13:17:11:636 CPU/(4736:4736): Retardo Instrucción = 1000
+[INFO] 13:17:11:636 CPU/(4736:4736): IP Memoria = 127.0.0.1
+[INFO] 13:17:11:636 CPU/(4736:4736): Puerto Memoria = 8003
+[INFO] 13:17:11:636 CPU/(4736:4736): Puerto Escucha = 8001
+[INFO] 13:17:11:636 CPU/(4736:4736): Tamanio maximo de segmentos = (null)
+[INFO] 13:17:11:636 CPU/(4736:4736): --------------------------------
+[INFO] 13:17:11:636 CPU/(4736:4736): ¡CPU iniciado correctamente!
+[TRACE] 13:17:11:636 CPU/(4736:4736): Listo para escuchar a mi cliente
+[INFO] 13:17:11:636 CPU/(4736:4736): Servidor listo para recibir al cliente
+[INFO] 13:17:11:637 CPU/(4736:4738): Conexion establecida con Memoria
+[INFO] 13:17:15:250 CPU/(4736:4737): Se conecto un cliente!
+[INFO] 13:17:15:250 CPU/(4736:4737): Me llego el mensaje Soy el Kernel
+[INFO] 13:17:21:923 CPU/(4736:4737): Comenzar ejecucion del proceso: 5.
+[INFO] 13:17:21:923 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:21:923 CPU/(4736:4737): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 13:17:21:925 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:21:925 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:21:925 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:21:925 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:21:925 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:21:925 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:21:925 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:21:925 CPU/(4736:4737): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:17:21:975 CPU/(4736:4737): Datos enviados correctamente
+[INFO] 13:17:22:020 CPU/(4736:4737): Comenzar ejecucion del proceso: 5.
+[INFO] 13:17:22:020 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:22:020 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:22:020 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:22:020 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:22:020 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:22:020 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:22:020 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:22:020 CPU/(4736:4737): Instruccion Ejecutada
+[INFO] 13:17:22:021 CPU/(4736:4737): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:17:22:066 CPU/(4736:4737): Datos enviados correctamente
+[INFO] 13:19:31:691 CPU/(4736:4737): Comenzar ejecucion del proceso: 5.
+[INFO] 13:32:22:340 CPU/(6234:6234): Logger creado
+[INFO] 13:32:22:387 CPU/(6234:6234): -------Valores del config-------
+[INFO] 13:32:22:389 CPU/(6234:6234): Retardo Instrucción = 1000
+[INFO] 13:32:22:389 CPU/(6234:6234): IP Memoria = 127.0.0.1
+[INFO] 13:32:22:389 CPU/(6234:6234): Puerto Memoria = 8003
+[INFO] 13:32:22:389 CPU/(6234:6234): Puerto Escucha = 8001
+[INFO] 13:32:22:390 CPU/(6234:6234): Tamanio maximo de segmentos = (null)
+[INFO] 13:32:22:390 CPU/(6234:6234): --------------------------------
+[INFO] 13:32:22:390 CPU/(6234:6234): ¡CPU iniciado correctamente!
+[TRACE] 13:32:22:397 CPU/(6234:6234): Listo para escuchar a mi cliente
+[INFO] 13:32:22:397 CPU/(6234:6234): Servidor listo para recibir al cliente
+[INFO] 13:32:22:457 CPU/(6234:6239): Conexion establecida con Memoria
+[INFO] 13:34:08:765 CPU/(6418:6418): Logger creado
+[INFO] 13:34:08:813 CPU/(6418:6418): -------Valores del config-------
+[INFO] 13:34:08:815 CPU/(6418:6418): Retardo Instrucción = 1000
+[INFO] 13:34:08:815 CPU/(6418:6418): IP Memoria = 127.0.0.1
+[INFO] 13:34:08:815 CPU/(6418:6418): Puerto Memoria = 8003
+[INFO] 13:34:08:816 CPU/(6418:6418): Puerto Escucha = 8001
+[INFO] 13:34:08:817 CPU/(6418:6418): Tamanio maximo de segmentos = (null)
+[INFO] 13:34:08:817 CPU/(6418:6418): --------------------------------
+[INFO] 13:34:08:817 CPU/(6418:6418): ¡CPU iniciado correctamente!
+[TRACE] 13:34:08:824 CPU/(6418:6418): Listo para escuchar a mi cliente
+[INFO] 13:34:08:825 CPU/(6418:6418): Servidor listo para recibir al cliente
+[INFO] 13:34:08:882 CPU/(6418:6420): Conexion establecida con Memoria
+[INFO] 13:34:21:138 CPU/(6418:6419): Se conecto un cliente!
+[INFO] 13:34:21:141 CPU/(6418:6419): Me llego el mensaje Soy el Kernel
+[INFO] 13:34:28:435 CPU/(6418:6419): Comenzar ejecucion del proceso: 5.
+[INFO] 13:34:28:440 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:441 CPU/(6418:6419): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 13:34:28:464 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:465 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:467 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:467 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:467 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:468 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:470 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:474 CPU/(6418:6419): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:34:28:475 CPU/(6418:6419): Datos enviados correctamente
+[INFO] 13:34:28:485 CPU/(6418:6419): Comenzar ejecucion del proceso: 5.
+[INFO] 13:34:28:486 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:486 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:486 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:486 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:487 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:487 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:487 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:487 CPU/(6418:6419): Instruccion Ejecutada
+[INFO] 13:34:28:488 CPU/(6418:6419): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:34:28:526 CPU/(6418:6419): Datos enviados correctamente
+[INFO] 13:35:44:579 CPU/(6418:6419): Comenzar ejecucion del proceso: 5.
+[INFO] 11:28:00:254 CPU/(2914:2914): Logger creado
+[INFO] 11:28:00:255 CPU/(2914:2914): -------Valores del config-------
+[INFO] 11:28:00:255 CPU/(2914:2914): Retardo Instrucción = 1000
+[INFO] 11:28:00:255 CPU/(2914:2914): IP Memoria = 127.0.0.1
+[INFO] 11:28:00:255 CPU/(2914:2914): Puerto Memoria = 8003
+[INFO] 11:28:00:255 CPU/(2914:2914): Puerto Escucha = 8001
+[INFO] 11:28:00:255 CPU/(2914:2914): Tamanio maximo de segmentos = (null)
+[INFO] 11:28:00:255 CPU/(2914:2914): --------------------------------
+[INFO] 11:28:00:255 CPU/(2914:2914): ¡CPU iniciado correctamente!
+[TRACE] 11:28:00:255 CPU/(2914:2914): Listo para escuchar a mi cliente
+[INFO] 11:28:00:255 CPU/(2914:2914): Servidor listo para recibir al cliente
+[INFO] 11:28:00:256 CPU/(2914:2916): Conexion establecida con Memoria
+[INFO] 11:28:19:813 CPU/(2914:2915): Se conecto un cliente!
+[INFO] 11:28:19:813 CPU/(2914:2915): Me llego el mensaje Soy el Kernel
+[INFO] 11:29:48:423 CPU/(2914:2915): Comenzar ejecucion del proceso: 5.
+[INFO] 11:29:48:423 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:423 CPU/(2914:2915): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:29:48:426 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:426 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:426 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:426 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:426 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:426 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:426 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:427 CPU/(2914:2915): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:29:48:468 CPU/(2914:2915): Datos enviados correctamente
+[INFO] 11:29:48:521 CPU/(2914:2915): Comenzar ejecucion del proceso: 5.
+[INFO] 11:29:48:521 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:521 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:521 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:521 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:521 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:521 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:521 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:521 CPU/(2914:2915): Instruccion Ejecutada
+[INFO] 11:29:48:521 CPU/(2914:2915): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:29:48:572 CPU/(2914:2915): Datos enviados correctamente
+[INFO] 11:30:08:273 CPU/(2914:2915): Comenzar ejecucion del proceso: 5.
+[INFO] 11:50:37:681 CPU/(5461:5461): Logger creado
+[INFO] 11:50:37:681 CPU/(5461:5461): -------Valores del config-------
+[INFO] 11:50:37:681 CPU/(5461:5461): Retardo Instrucción = 1000
+[INFO] 11:50:37:681 CPU/(5461:5461): IP Memoria = 127.0.0.1
+[INFO] 11:50:37:681 CPU/(5461:5461): Puerto Memoria = 8003
+[INFO] 11:50:37:681 CPU/(5461:5461): Puerto Escucha = 8001
+[INFO] 11:50:37:681 CPU/(5461:5461): Tamanio maximo de segmentos = (null)
+[INFO] 11:50:37:681 CPU/(5461:5461): --------------------------------
+[INFO] 11:50:37:681 CPU/(5461:5461): ¡CPU iniciado correctamente!
+[TRACE] 11:50:37:682 CPU/(5461:5461): Listo para escuchar a mi cliente
+[INFO] 11:50:37:682 CPU/(5461:5461): Servidor listo para recibir al cliente
+[INFO] 11:50:37:682 CPU/(5461:5463): Conexion establecida con Memoria
+[INFO] 11:50:39:396 CPU/(5461:5462): Se conecto un cliente!
+[INFO] 11:50:39:396 CPU/(5461:5462): Me llego el mensaje Soy el Kernel
+[INFO] 11:50:42:641 CPU/(5461:5462): Comenzar ejecucion del proceso: 5.
+[INFO] 11:50:42:641 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:641 CPU/(5461:5462): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:50:42:642 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:642 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:642 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:643 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:643 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:643 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:643 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:643 CPU/(5461:5462): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:50:42:682 CPU/(5461:5462): Datos enviados correctamente
+[INFO] 11:50:42:726 CPU/(5461:5462): Comenzar ejecucion del proceso: 5.
+[INFO] 11:50:42:726 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:726 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:726 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:726 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:726 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:726 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:726 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:726 CPU/(5461:5462): Instruccion Ejecutada
+[INFO] 11:50:42:726 CPU/(5461:5462): Datos enviados, esperando respuesta de cpu...
+[ERROR] 11:50:42:770 CPU/(5461:5462): Han llegado menos bytes que los enviados por cpu
+[INFO] 11:50:42:770 CPU/(5461:5462): Comenzar ejecucion del proceso: 5.
+[INFO] 11:53:54:249 CPU/(5806:5806): Logger creado
+[INFO] 11:53:54:249 CPU/(5806:5806): -------Valores del config-------
+[INFO] 11:53:54:249 CPU/(5806:5806): Retardo Instrucción = 1000
+[INFO] 11:53:54:249 CPU/(5806:5806): IP Memoria = 127.0.0.1
+[INFO] 11:53:54:249 CPU/(5806:5806): Puerto Memoria = 8003
+[INFO] 11:53:54:249 CPU/(5806:5806): Puerto Escucha = 8001
+[INFO] 11:53:54:249 CPU/(5806:5806): Tamanio maximo de segmentos = (null)
+[INFO] 11:53:54:249 CPU/(5806:5806): --------------------------------
+[INFO] 11:53:54:249 CPU/(5806:5806): ¡CPU iniciado correctamente!
+[TRACE] 11:53:54:249 CPU/(5806:5806): Listo para escuchar a mi cliente
+[INFO] 11:53:54:249 CPU/(5806:5806): Servidor listo para recibir al cliente
+[INFO] 11:53:54:249 CPU/(5806:5808): Conexion establecida con Memoria
+[INFO] 11:53:55:507 CPU/(5806:5807): Se conecto un cliente!
+[INFO] 11:53:55:507 CPU/(5806:5807): Me llego el mensaje Soy el Kernel
+[INFO] 11:53:58:995 CPU/(5806:5807): Comenzar ejecucion del proceso: 5.
+[INFO] 11:53:58:995 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:58:995 CPU/(5806:5807): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:53:58:997 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:58:997 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:58:997 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:58:997 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:58:997 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:58:997 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:58:997 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:58:997 CPU/(5806:5807): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:53:59:038 CPU/(5806:5807): Datos enviados correctamente
+[INFO] 11:53:59:083 CPU/(5806:5807): Comenzar ejecucion del proceso: 5.
+[INFO] 11:53:59:083 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:59:083 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:59:083 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:59:083 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:59:083 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:59:083 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:59:083 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:59:083 CPU/(5806:5807): Instruccion Ejecutada
+[INFO] 11:53:59:083 CPU/(5806:5807): Datos enviados, esperando respuesta de cpu...
+[ERROR] 11:53:59:127 CPU/(5806:5807): Han llegado menos bytes que los enviados por cpu
+[INFO] 11:53:59:127 CPU/(5806:5807): Comenzar ejecucion del proceso: 5.
+[INFO] 11:58:51:271 CPU/(6506:6506): Logger creado
+[INFO] 11:58:51:271 CPU/(6506:6506): -------Valores del config-------
+[INFO] 11:58:51:272 CPU/(6506:6506): Retardo Instrucción = 1000
+[INFO] 11:58:51:272 CPU/(6506:6506): IP Memoria = 127.0.0.1
+[INFO] 11:58:51:272 CPU/(6506:6506): Puerto Memoria = 8003
+[INFO] 11:58:51:272 CPU/(6506:6506): Puerto Escucha = 8001
+[INFO] 11:58:51:272 CPU/(6506:6506): Tamanio maximo de segmentos = (null)
+[INFO] 11:58:51:272 CPU/(6506:6506): --------------------------------
+[INFO] 11:58:51:272 CPU/(6506:6506): ¡CPU iniciado correctamente!
+[TRACE] 11:58:51:272 CPU/(6506:6506): Listo para escuchar a mi cliente
+[INFO] 11:58:51:272 CPU/(6506:6506): Servidor listo para recibir al cliente
+[INFO] 11:58:51:272 CPU/(6506:6508): Conexion establecida con Memoria
+[INFO] 11:58:52:545 CPU/(6506:6507): Se conecto un cliente!
+[INFO] 11:58:52:545 CPU/(6506:6507): Me llego el mensaje Soy el Kernel
+[INFO] 11:59:06:277 CPU/(6506:6507): Comenzar ejecucion del proceso: 5.
+[INFO] 11:59:06:277 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:277 CPU/(6506:6507): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:59:06:279 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:279 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:279 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:279 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:279 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:279 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:279 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:279 CPU/(6506:6507): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:59:06:319 CPU/(6506:6507): Datos enviados correctamente
+[INFO] 11:59:06:362 CPU/(6506:6507): Comenzar ejecucion del proceso: 5.
+[INFO] 11:59:06:362 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:362 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:362 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:362 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:362 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:362 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:362 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:362 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:06:362 CPU/(6506:6507): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:59:06:406 CPU/(6506:6507): Datos enviados correctamente
+[INFO] 11:59:44:989 CPU/(6506:6507): Comenzar ejecucion del proceso: 9.
+[INFO] 11:59:44:989 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:44:989 CPU/(6506:6507): PID: 9 - Ejecutando: SET AX HOLA
+[INFO] 11:59:44:990 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:44:991 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:44:991 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:44:991 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:44:991 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:44:991 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:44:991 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:44:991 CPU/(6506:6507): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:59:45:031 CPU/(6506:6507): Datos enviados correctamente
+[INFO] 11:59:45:074 CPU/(6506:6507): Comenzar ejecucion del proceso: 9.
+[INFO] 11:59:45:074 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:45:074 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:45:074 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:45:074 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:45:074 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:45:074 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:45:074 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:45:074 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 11:59:45:074 CPU/(6506:6507): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:59:45:118 CPU/(6506:6507): Datos enviados correctamente
+[INFO] 12:00:07:106 CPU/(6506:6507): Comenzar ejecucion del proceso: 5.
+[INFO] 12:00:07:106 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:106 CPU/(6506:6507): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:00:07:115 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:115 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:115 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:115 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:115 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:115 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:115 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:115 CPU/(6506:6507): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:00:07:149 CPU/(6506:6507): Datos enviados correctamente
+[INFO] 12:00:07:194 CPU/(6506:6507): Comenzar ejecucion del proceso: 5.
+[INFO] 12:00:07:194 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:194 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:195 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:195 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:195 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:195 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:195 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:195 CPU/(6506:6507): Instruccion Ejecutada
+[INFO] 12:00:07:195 CPU/(6506:6507): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:00:07:238 CPU/(6506:6507): Datos enviados correctamente
+[INFO] 12:00:21:172 CPU/(6506:6507): Comenzar ejecucion del proceso: 5.
+[INFO] 12:03:23:767 CPU/(7034:7034): Logger creado
+[INFO] 12:03:23:768 CPU/(7034:7034): -------Valores del config-------
+[INFO] 12:03:23:768 CPU/(7034:7034): Retardo Instrucción = 1000
+[INFO] 12:03:23:768 CPU/(7034:7034): IP Memoria = 127.0.0.1
+[INFO] 12:03:23:768 CPU/(7034:7034): Puerto Memoria = 8003
+[INFO] 12:03:23:768 CPU/(7034:7034): Puerto Escucha = 8001
+[INFO] 12:03:23:768 CPU/(7034:7034): Tamanio maximo de segmentos = (null)
+[INFO] 12:03:23:768 CPU/(7034:7034): --------------------------------
+[INFO] 12:03:23:768 CPU/(7034:7034): ¡CPU iniciado correctamente!
+[TRACE] 12:03:23:768 CPU/(7034:7034): Listo para escuchar a mi cliente
+[INFO] 12:03:23:768 CPU/(7034:7034): Servidor listo para recibir al cliente
+[INFO] 12:03:23:768 CPU/(7034:7036): Conexion establecida con Memoria
+[INFO] 12:03:25:213 CPU/(7034:7035): Se conecto un cliente!
+[INFO] 12:03:25:214 CPU/(7034:7035): Me llego el mensaje Soy el Kernel
+[INFO] 12:03:27:638 CPU/(7034:7035): Comenzar ejecucion del proceso: 5.
+[INFO] 12:03:27:638 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:638 CPU/(7034:7035): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:03:27:639 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:639 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:639 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:639 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:639 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:639 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:639 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:639 CPU/(7034:7035): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:03:27:678 CPU/(7034:7035): Datos enviados correctamente
+[INFO] 12:03:27:722 CPU/(7034:7035): Comenzar ejecucion del proceso: 5.
+[INFO] 12:03:27:722 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:722 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:722 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:722 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:722 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:722 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:722 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:722 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:27:722 CPU/(7034:7035): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:03:27:766 CPU/(7034:7035): Datos enviados correctamente
+[INFO] 12:03:45:943 CPU/(7034:7035): Comenzar ejecucion del proceso: 9.
+[INFO] 12:03:45:943 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:45:943 CPU/(7034:7035): PID: 9 - Ejecutando: SET AX HOLA
+[INFO] 12:03:45:946 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:45:946 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:45:946 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:45:946 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:45:946 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:45:946 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:45:946 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:45:946 CPU/(7034:7035): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:03:45:990 CPU/(7034:7035): Datos enviados correctamente
+[INFO] 12:03:46:035 CPU/(7034:7035): Comenzar ejecucion del proceso: 9.
+[INFO] 12:03:46:035 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:46:035 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:46:035 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:46:035 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:46:035 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:46:035 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:46:035 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:46:035 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:46:035 CPU/(7034:7035): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:03:46:078 CPU/(7034:7035): Datos enviados correctamente
+[INFO] 12:03:47:953 CPU/(7034:7035): Comenzar ejecucion del proceso: 5.
+[INFO] 12:03:47:953 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:47:953 CPU/(7034:7035): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:03:47:956 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:47:956 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:47:956 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:47:956 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:47:956 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:47:956 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:47:956 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:47:956 CPU/(7034:7035): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:03:47:999 CPU/(7034:7035): Datos enviados correctamente
+[INFO] 12:03:48:040 CPU/(7034:7035): Comenzar ejecucion del proceso: 5.
+[INFO] 12:03:48:040 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:48:040 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:48:040 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:48:040 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:48:040 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:48:040 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:48:040 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:48:040 CPU/(7034:7035): Instruccion Ejecutada
+[INFO] 12:03:48:040 CPU/(7034:7035): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:03:48:082 CPU/(7034:7035): Datos enviados correctamente
+[INFO] 12:04:09:819 CPU/(7034:7035): Comenzar ejecucion del proceso: 5.
+[INFO] 12:05:33:482 CPU/(7333:7333): Logger creado
+[INFO] 12:05:33:490 CPU/(7333:7333): -------Valores del config-------
+[INFO] 12:05:33:490 CPU/(7333:7333): Retardo Instrucción = 1000
+[INFO] 12:05:33:490 CPU/(7333:7333): IP Memoria = 127.0.0.1
+[INFO] 12:05:33:491 CPU/(7333:7333): Puerto Memoria = 8003
+[INFO] 12:05:33:491 CPU/(7333:7333): Puerto Escucha = 8001
+[INFO] 12:05:33:491 CPU/(7333:7333): Tamanio maximo de segmentos = (null)
+[INFO] 12:05:33:491 CPU/(7333:7333): --------------------------------
+[INFO] 12:05:33:491 CPU/(7333:7333): ¡CPU iniciado correctamente!
+[TRACE] 12:05:33:491 CPU/(7333:7333): Listo para escuchar a mi cliente
+[INFO] 12:05:33:491 CPU/(7333:7333): Servidor listo para recibir al cliente
+[INFO] 12:05:33:491 CPU/(7333:7335): Conexion establecida con Memoria
+[INFO] 12:05:34:867 CPU/(7333:7334): Se conecto un cliente!
+[INFO] 12:05:34:868 CPU/(7333:7334): Me llego el mensaje Soy el Kernel
+[INFO] 12:05:37:371 CPU/(7333:7334): Comenzar ejecucion del proceso: 5.
+[INFO] 12:05:37:371 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:371 CPU/(7333:7334): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:05:37:373 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:373 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:373 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:373 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:373 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:373 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:373 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:373 CPU/(7333:7334): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:05:37:415 CPU/(7333:7334): Datos enviados correctamente
+[INFO] 12:05:37:459 CPU/(7333:7334): Comenzar ejecucion del proceso: 5.
+[INFO] 12:05:37:459 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:459 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:459 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:459 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:459 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:459 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:459 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:459 CPU/(7333:7334): Instruccion Ejecutada
+[INFO] 12:05:37:459 CPU/(7333:7334): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:05:37:502 CPU/(7333:7334): Datos enviados correctamente
+[INFO] 12:05:54:336 CPU/(7333:7334): Comenzar ejecucion del proceso: 5.
+[INFO] 12:06:38:328 CPU/(7482:7482): Logger creado
+[INFO] 12:06:38:328 CPU/(7482:7482): -------Valores del config-------
+[INFO] 12:06:38:328 CPU/(7482:7482): Retardo Instrucción = 1000
+[INFO] 12:06:38:328 CPU/(7482:7482): IP Memoria = 127.0.0.1
+[INFO] 12:06:38:328 CPU/(7482:7482): Puerto Memoria = 8003
+[INFO] 12:06:38:328 CPU/(7482:7482): Puerto Escucha = 8001
+[INFO] 12:06:38:328 CPU/(7482:7482): Tamanio maximo de segmentos = (null)
+[INFO] 12:06:38:328 CPU/(7482:7482): --------------------------------
+[INFO] 12:06:38:329 CPU/(7482:7482): ¡CPU iniciado correctamente!
+[TRACE] 12:06:38:329 CPU/(7482:7482): Listo para escuchar a mi cliente
+[INFO] 12:06:38:329 CPU/(7482:7482): Servidor listo para recibir al cliente
+[INFO] 12:06:38:329 CPU/(7482:7484): Conexion establecida con Memoria
+[INFO] 12:06:39:184 CPU/(7482:7483): Se conecto un cliente!
+[INFO] 12:06:39:184 CPU/(7482:7483): Me llego el mensaje Soy el Kernel
+[INFO] 12:06:40:270 CPU/(7482:7483): Comenzar ejecucion del proceso: 5.
+[INFO] 12:06:40:270 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:270 CPU/(7482:7483): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:06:40:273 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:273 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:273 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:273 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:273 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:273 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:273 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:273 CPU/(7482:7483): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:06:40:317 CPU/(7482:7483): Datos enviados correctamente
+[INFO] 12:06:40:361 CPU/(7482:7483): Comenzar ejecucion del proceso: 5.
+[INFO] 12:06:40:361 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:361 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:361 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:361 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:361 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:361 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:361 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:361 CPU/(7482:7483): Instruccion Ejecutada
+[INFO] 12:06:40:361 CPU/(7482:7483): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:06:40:403 CPU/(7482:7483): Datos enviados correctamente
+[INFO] 12:06:43:805 CPU/(7482:7483): Comenzar ejecucion del proceso: 5.
+[INFO] 12:08:45:515 CPU/(7778:7778): Logger creado
+[INFO] 12:08:45:515 CPU/(7778:7778): -------Valores del config-------
+[INFO] 12:08:45:515 CPU/(7778:7778): Retardo Instrucción = 1000
+[INFO] 12:08:45:515 CPU/(7778:7778): IP Memoria = 127.0.0.1
+[INFO] 12:08:45:516 CPU/(7778:7778): Puerto Memoria = 8003
+[INFO] 12:08:45:516 CPU/(7778:7778): Puerto Escucha = 8001
+[INFO] 12:08:45:516 CPU/(7778:7778): Tamanio maximo de segmentos = (null)
+[INFO] 12:08:45:516 CPU/(7778:7778): --------------------------------
+[INFO] 12:08:45:516 CPU/(7778:7778): ¡CPU iniciado correctamente!
+[TRACE] 12:08:45:516 CPU/(7778:7778): Listo para escuchar a mi cliente
+[INFO] 12:08:45:516 CPU/(7778:7778): Servidor listo para recibir al cliente
+[INFO] 12:08:45:516 CPU/(7778:7780): Conexion establecida con Memoria
+[INFO] 12:08:48:124 CPU/(7778:7779): Se conecto un cliente!
+[INFO] 12:08:48:124 CPU/(7778:7779): Me llego el mensaje Soy el Kernel
+[INFO] 12:08:49:394 CPU/(7778:7779): Comenzar ejecucion del proceso: 5.
+[INFO] 12:08:49:394 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:394 CPU/(7778:7779): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:08:49:396 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:396 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:396 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:396 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:396 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:396 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:396 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:396 CPU/(7778:7779): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:08:49:439 CPU/(7778:7779): Datos enviados correctamente
+[INFO] 12:08:49:483 CPU/(7778:7779): Comenzar ejecucion del proceso: 5.
+[INFO] 12:08:49:483 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:483 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:483 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:483 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:483 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:483 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:483 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:483 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:08:49:483 CPU/(7778:7779): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:08:49:527 CPU/(7778:7779): Datos enviados correctamente
+[INFO] 12:09:03:406 CPU/(7778:7779): Comenzar ejecucion del proceso: 9.
+[INFO] 12:09:03:406 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:406 CPU/(7778:7779): PID: 9 - Ejecutando: SET AX HOLA
+[INFO] 12:09:03:407 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:407 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:407 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:407 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:407 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:407 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:407 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:407 CPU/(7778:7779): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:09:03:446 CPU/(7778:7779): Datos enviados correctamente
+[INFO] 12:09:03:491 CPU/(7778:7779): Comenzar ejecucion del proceso: 9.
+[INFO] 12:09:03:491 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:491 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:491 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:491 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:491 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:491 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:491 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:491 CPU/(7778:7779): Instruccion Ejecutada
+[INFO] 12:09:03:491 CPU/(7778:7779): Datos enviados, esperando respuesta de cpu...
+[INFO] 12:09:03:535 CPU/(7778:7779): Datos enviados correctamente
+[INFO] 12:09:22:743 CPU/(7778:7779): Comenzar ejecucion del proceso: 9.

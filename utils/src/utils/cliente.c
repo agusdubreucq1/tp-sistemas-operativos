@@ -158,6 +158,7 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log* logger, char*
 	}
 
 	free(a_enviar);
+	eliminar_paquete(paquete);
 }
 
 void eliminar_paquete(t_paquete* paquete)
@@ -170,6 +171,7 @@ void eliminar_paquete(t_paquete* paquete)
 void liberar_conexion(int socket_cliente)
 {
 	close(socket_cliente);
+	printf("Cerre conexion %d", socket_cliente);
 }
 
 

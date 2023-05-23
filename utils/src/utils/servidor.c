@@ -119,3 +119,8 @@ t_list* recibir_instrucciones(int socket_cliente, uint32_t* tamanio_recibido){
 	return valores;
 }
 
+
+void cerrar_conexion(int socket_cliente) {
+    close(socket_cliente);
+    socket_cliente = -1;
+}
