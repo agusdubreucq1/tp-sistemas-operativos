@@ -142,13 +142,12 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log* logger, char*
 	int var_send = send(socket_cliente, a_enviar, bytes, 0);
 	//printf("\n send: %d", var_send);
 
-
 	log_info(logger,"Datos enviados, esperando respuesta de %s...", modulo);
 
 	uint32_t respuesta;
 	int var_recv=recv(socket_cliente, &respuesta, sizeof(uint32_t), MSG_WAITALL);
 	//printf("var_recv: %d\n", var_recv);
-	printf("respuesta: %d\n", respuesta);
+	//printf("respuesta: %d\n", respuesta);
 
 	if(respuesta == bytes){
 		log_info(logger,"Datos enviados correctamente");

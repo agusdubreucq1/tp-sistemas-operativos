@@ -2533,3 +2533,133 @@
 [INFO] 12:09:03:491 CPU/(7778:7779): Datos enviados, esperando respuesta de cpu...
 [INFO] 12:09:03:535 CPU/(7778:7779): Datos enviados correctamente
 [INFO] 12:09:22:743 CPU/(7778:7779): Comenzar ejecucion del proceso: 9.
+[INFO] 13:17:28:074 CPU/(15294:15294): Logger creado
+[INFO] 13:17:28:074 CPU/(15294:15294): -------Valores del config-------
+[INFO] 13:17:28:075 CPU/(15294:15294): Retardo Instrucción = 1000
+[INFO] 13:17:28:075 CPU/(15294:15294): IP Memoria = 127.0.0.1
+[INFO] 13:17:28:075 CPU/(15294:15294): Puerto Memoria = 8003
+[INFO] 13:17:28:075 CPU/(15294:15294): Puerto Escucha = 8001
+[INFO] 13:17:28:075 CPU/(15294:15294): Tamanio maximo de segmentos = (null)
+[INFO] 13:17:28:075 CPU/(15294:15294): --------------------------------
+[INFO] 13:17:28:075 CPU/(15294:15294): ¡CPU iniciado correctamente!
+[TRACE] 13:17:28:075 CPU/(15294:15294): Listo para escuchar a mi cliente
+[INFO] 13:17:28:075 CPU/(15294:15294): Servidor listo para recibir al cliente
+[INFO] 13:17:28:075 CPU/(15294:15296): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:17:29:075 CPU/(15294:15296): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:17:30:076 CPU/(15294:15296): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:17:31:077 CPU/(15294:15296): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:17:32:077 CPU/(15294:15296): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:17:33:078 CPU/(15294:15296): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:19:23:730 CPU/(15590:15590): Logger creado
+[INFO] 13:19:23:731 CPU/(15590:15590): -------Valores del config-------
+[INFO] 13:19:23:731 CPU/(15590:15590): Retardo Instrucción = 1000
+[INFO] 13:19:23:731 CPU/(15590:15590): IP Memoria = 127.0.0.1
+[INFO] 13:19:23:731 CPU/(15590:15590): Puerto Memoria = 8003
+[INFO] 13:19:23:731 CPU/(15590:15590): Puerto Escucha = 8001
+[INFO] 13:19:23:731 CPU/(15590:15590): Tamanio maximo de segmentos = (null)
+[INFO] 13:19:23:731 CPU/(15590:15590): --------------------------------
+[INFO] 13:19:23:731 CPU/(15590:15590): ¡CPU iniciado correctamente!
+[TRACE] 13:19:23:731 CPU/(15590:15590): Listo para escuchar a mi cliente
+[INFO] 13:19:23:731 CPU/(15590:15590): Servidor listo para recibir al cliente
+[INFO] 13:19:23:731 CPU/(15590:15592): Conexion establecida con Memoria
+[INFO] 13:19:35:288 CPU/(15590:15591): Se conecto un cliente!
+[INFO] 13:19:35:288 CPU/(15590:15591): Me llego el mensaje Soy el Kernel
+[INFO] 13:19:41:800 CPU/(15590:15591): Comenzar ejecucion del proceso: 180703941.
+[INFO] 13:21:05:005 CPU/(15769:15769): Logger creado
+[INFO] 13:21:05:005 CPU/(15769:15769): -------Valores del config-------
+[INFO] 13:21:05:005 CPU/(15769:15769): Retardo Instrucción = 1000
+[INFO] 13:21:05:005 CPU/(15769:15769): IP Memoria = 127.0.0.1
+[INFO] 13:21:05:005 CPU/(15769:15769): Puerto Memoria = 8003
+[INFO] 13:21:05:005 CPU/(15769:15769): Puerto Escucha = 8001
+[INFO] 13:21:05:005 CPU/(15769:15769): Tamanio maximo de segmentos = (null)
+[INFO] 13:21:05:006 CPU/(15769:15769): --------------------------------
+[INFO] 13:21:05:006 CPU/(15769:15769): ¡CPU iniciado correctamente!
+[TRACE] 13:21:05:006 CPU/(15769:15769): Listo para escuchar a mi cliente
+[INFO] 13:21:05:006 CPU/(15769:15769): Servidor listo para recibir al cliente
+[INFO] 13:21:05:006 CPU/(15769:15771): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:21:05:026 CPU/(15769:15770): Se conecto un cliente!
+[INFO] 13:21:05:026 CPU/(15769:15770): Me llego el mensaje Soy el Kernel
+[INFO] 13:21:06:006 CPU/(15769:15771): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:21:07:006 CPU/(15769:15771): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:21:08:006 CPU/(15769:15771): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:21:09:007 CPU/(15769:15771): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:21:10:007 CPU/(15769:15771): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:21:11:007 CPU/(15769:15771): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:21:12:008 CPU/(15769:15771): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 13:21:12:086 CPU/(15769:15770): Comenzar ejecucion del proceso: 2904945263.
+[INFO] 13:24:23:381 CPU/(16322:16322): Logger creado
+[INFO] 13:24:23:381 CPU/(16322:16322): -------Valores del config-------
+[INFO] 13:24:23:381 CPU/(16322:16322): Retardo Instrucción = 1000
+[INFO] 13:24:23:381 CPU/(16322:16322): IP Memoria = 127.0.0.1
+[INFO] 13:24:23:381 CPU/(16322:16322): Puerto Memoria = 8003
+[INFO] 13:24:23:381 CPU/(16322:16322): Puerto Escucha = 8001
+[INFO] 13:24:23:381 CPU/(16322:16322): Tamanio maximo de segmentos = (null)
+[INFO] 13:24:23:381 CPU/(16322:16322): --------------------------------
+[INFO] 13:24:23:381 CPU/(16322:16322): ¡CPU iniciado correctamente!
+[TRACE] 13:24:23:382 CPU/(16322:16322): Listo para escuchar a mi cliente
+[INFO] 13:24:23:382 CPU/(16322:16322): Servidor listo para recibir al cliente
+[INFO] 13:24:23:382 CPU/(16322:16324): Conexion establecida con Memoria
+[INFO] 13:24:26:851 CPU/(16322:16323): Se conecto un cliente!
+[INFO] 13:24:26:852 CPU/(16322:16323): Me llego el mensaje Soy el Kernel
+[INFO] 13:24:37:810 CPU/(16322:16323): Comenzar ejecucion del proceso: 5.
+[INFO] 13:24:37:810 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:810 CPU/(16322:16323): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 13:24:37:811 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:811 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:811 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:811 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:811 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:811 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:811 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:811 CPU/(16322:16323): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:24:37:850 CPU/(16322:16323): Datos enviados correctamente
+[INFO] 13:24:37:896 CPU/(16322:16323): Comenzar ejecucion del proceso: 5.
+[INFO] 13:24:37:896 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:896 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:896 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:896 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:896 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:896 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:896 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:896 CPU/(16322:16323): Instruccion Ejecutada
+[INFO] 13:24:37:896 CPU/(16322:16323): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:24:37:939 CPU/(16322:16323): Datos enviados correctamente
+[INFO] 13:24:44:451 CPU/(16322:16323): Comenzar ejecucion del proceso: 5.
+[INFO] 13:28:33:895 CPU/(17129:17129): Logger creado
+[INFO] 13:28:33:896 CPU/(17129:17129): -------Valores del config-------
+[INFO] 13:28:33:896 CPU/(17129:17129): Retardo Instrucción = 1000
+[INFO] 13:28:33:896 CPU/(17129:17129): IP Memoria = 127.0.0.1
+[INFO] 13:28:33:896 CPU/(17129:17129): Puerto Memoria = 8003
+[INFO] 13:28:33:896 CPU/(17129:17129): Puerto Escucha = 8001
+[INFO] 13:28:33:896 CPU/(17129:17129): Tamanio maximo de segmentos = (null)
+[INFO] 13:28:33:896 CPU/(17129:17129): --------------------------------
+[INFO] 13:28:33:896 CPU/(17129:17129): ¡CPU iniciado correctamente!
+[TRACE] 13:28:33:896 CPU/(17129:17129): Listo para escuchar a mi cliente
+[INFO] 13:28:33:896 CPU/(17129:17129): Servidor listo para recibir al cliente
+[INFO] 13:28:33:896 CPU/(17129:17131): Conexion establecida con Memoria
+[INFO] 13:28:36:361 CPU/(17129:17130): Se conecto un cliente!
+[INFO] 13:28:36:361 CPU/(17129:17130): Me llego el mensaje Soy el Kernel
+[INFO] 13:28:40:381 CPU/(17129:17130): Comenzar ejecucion del proceso: 5.
+[INFO] 13:28:40:381 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:381 CPU/(17129:17130): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 13:28:40:382 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:382 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:382 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:382 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:382 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:382 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:382 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:382 CPU/(17129:17130): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:28:40:423 CPU/(17129:17130): Datos enviados correctamente
+[INFO] 13:28:40:467 CPU/(17129:17130): Comenzar ejecucion del proceso: 5.
+[INFO] 13:28:40:467 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:467 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:467 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:467 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:467 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:467 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:467 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:467 CPU/(17129:17130): Instruccion Ejecutada
+[INFO] 13:28:40:467 CPU/(17129:17130): Datos enviados, esperando respuesta de cpu...
+[INFO] 13:28:40:510 CPU/(17129:17130): Datos enviados correctamente
+[INFO] 13:28:43:374 CPU/(17129:17130): Comenzar ejecucion del proceso: 5.

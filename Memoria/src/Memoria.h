@@ -34,7 +34,9 @@
 // -- Socket del proceso --
 // ------------------------------------------------------------------------------------------
 
-	pthread_t atender_conexiones;
+	pthread_t hilo_conexion_Kernel;
+	pthread_t hilo_conexion_CPU;
+	pthread_t hilo_conexion_FileSystem;
 	uint32_t respuesta;
 	int server_memoria;
 
@@ -42,7 +44,10 @@
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
-	void* abrirSocket();
+	void* atenderKernel();
+	void* atenderCPU();
+	void* atenderFileSystem();
+	int abrir_socket();
 	void cerrar_conexiones();
 
 #endif
