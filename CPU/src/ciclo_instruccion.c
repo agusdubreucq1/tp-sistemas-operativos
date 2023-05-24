@@ -50,15 +50,37 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 		case F_READ:		break;
 		case F_WRITE:		break;
 		case F_TRUNCATE:	break;
-		case WAIT:			break;
-		case SIGNAL:    	break;
+		case WAIT:
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s", contexto_de_ejecucion->pid,
+																   codigo_instruccion_string(instruccion->codigo_instruccion),
+																   instruccion->parametro[0]);
+
+			char* string = "WAIT ";
+			strcat(string, instruccion->parametro[0]);
+			printf("%s", string);
+			enviarContexto(string);
+			free(string);
+			salida = 0;
+			break;
+		case SIGNAL:
+
+
+
+
+
+
+			break;
 		case CREATE_SEGMENT:break;
 		case DELETE_SEGMENT:break;
 		case YIELD:
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s", contexto_de_ejecucion->pid,
+														   codigo_instruccion_string(instruccion->codigo_instruccion));
 			enviarContexto("YIELD");
 			salida = 0;
 			break;
 		case EXIT:
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s", contexto_de_ejecucion->pid,
+														   codigo_instruccion_string(instruccion->codigo_instruccion));
 			enviarContexto("EXIT");
 			salida = 0;
 			break;

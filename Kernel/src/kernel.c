@@ -274,6 +274,11 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		sem_post(&cantidad_procesos_ready);
 		printf("ejecutando yield");
 
+	}else if(strstr(motivo, "WAIT") != NULL){
+		//pcb->estado = EXITT;
+		printf("ejecutando %s", motivo);
+		//enviar_mensaje("-1", pcb->pid);
+		//liberar_conexion(pcb->pid);
 	}else if(strcmp(motivo, "EXIT")==0){
 		pcb->estado = EXITT;
 		printf("ejecutando exit");

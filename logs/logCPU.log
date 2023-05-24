@@ -4648,3 +4648,63 @@
 [INFO] 10:57:09:129 CPU/(127215:127216): Datos enviados, esperando respuesta de cpu...
 [INFO] 10:57:09:174 CPU/(127215:127216): Datos enviados correctamente
 [INFO] 11:01:32:009 CPU/(127215:127216): Comenzar ejecucion del proceso: 9.
+[INFO] 12:03:19:242 CPU/(134238:134238): Logger creado
+[INFO] 12:03:19:242 CPU/(134238:134238): -------Valores del config-------
+[INFO] 12:03:19:242 CPU/(134238:134238): Retardo Instrucción = 1000
+[INFO] 12:03:19:243 CPU/(134238:134238): IP Memoria = 127.0.0.1
+[INFO] 12:03:19:243 CPU/(134238:134238): Puerto Memoria = 8003
+[INFO] 12:03:19:243 CPU/(134238:134238): Puerto Escucha = 8001
+[INFO] 12:03:19:243 CPU/(134238:134238): Tamanio maximo de segmentos = (null)
+[INFO] 12:03:19:243 CPU/(134238:134238): --------------------------------
+[INFO] 12:03:19:243 CPU/(134238:134238): ¡CPU iniciado correctamente!
+[TRACE] 12:03:19:243 CPU/(134238:134238): Listo para escuchar a mi cliente
+[INFO] 12:03:19:243 CPU/(134238:134238): Servidor listo para recibir al cliente
+[INFO] 12:03:19:243 CPU/(134238:134240): Conexion establecida con Memoria
+[INFO] 12:03:24:906 CPU/(134238:134239): Se conecto un cliente!
+[INFO] 12:03:24:906 CPU/(134238:134239): Me llego el mensaje Soy el Kernel
+[INFO] 12:03:44:906 CPU/(134238:134239): Comenzar ejecucion del proceso: 5.
+[INFO] 12:03:44:906 CPU/(134238:134239): Instruccion Ejecutada
+[INFO] 12:03:44:906 CPU/(134238:134239): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:03:44:907 CPU/(134238:134239): Instruccion Ejecutada
+[INFO] 12:03:44:907 CPU/(134238:134239): Instruccion Ejecutada
+[INFO] 12:03:44:907 CPU/(134238:134239): PID: 5 - Ejecutando: WAIT DISCO 
+[INFO] 13:07:41:490 CPU/(140303:140303): Logger creado
+[INFO] 13:07:41:492 CPU/(140303:140303): -------Valores del config-------
+[INFO] 13:07:41:492 CPU/(140303:140303): Retardo Instrucción = 1000
+[INFO] 13:07:41:492 CPU/(140303:140303): IP Memoria = 127.0.0.1
+[INFO] 13:07:41:492 CPU/(140303:140303): Puerto Memoria = 8003
+[INFO] 13:07:41:492 CPU/(140303:140303): Puerto Escucha = 8001
+[INFO] 13:07:41:492 CPU/(140303:140303): Tamanio maximo de segmentos = (null)
+[INFO] 13:07:41:492 CPU/(140303:140303): --------------------------------
+[INFO] 13:07:41:492 CPU/(140303:140303): ¡CPU iniciado correctamente!
+[TRACE] 13:07:41:492 CPU/(140303:140303): Listo para escuchar a mi cliente
+[INFO] 13:07:41:492 CPU/(140303:140303): Servidor listo para recibir al cliente
+[INFO] 13:07:41:492 CPU/(140303:140305): Conexion establecida con Memoria
+[INFO] 13:07:44:281 CPU/(140303:140304): Se conecto un cliente!
+[INFO] 13:07:44:281 CPU/(140303:140304): Me llego el mensaje Soy el Kernel
+[INFO] 13:08:04:281 CPU/(140303:140304): Comenzar ejecucion del proceso: 5.
+[INFO] 13:08:04:281 CPU/(140303:140304): Instruccion Ejecutada
+[INFO] 13:08:04:281 CPU/(140303:140304): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 13:08:04:282 CPU/(140303:140304): Instruccion Ejecutada
+[INFO] 13:08:04:282 CPU/(140303:140304): Instruccion Ejecutada
+[INFO] 13:08:04:282 CPU/(140303:140304): PID: 5 - Ejecutando: WAIT DISCO 
+[INFO] 13:13:01:182 CPU/(140879:140879): Logger creado
+[INFO] 13:13:01:182 CPU/(140879:140879): -------Valores del config-------
+[INFO] 13:13:01:182 CPU/(140879:140879): Retardo Instrucción = 1000
+[INFO] 13:13:01:182 CPU/(140879:140879): IP Memoria = 127.0.0.1
+[INFO] 13:13:01:182 CPU/(140879:140879): Puerto Memoria = 8003
+[INFO] 13:13:01:182 CPU/(140879:140879): Puerto Escucha = 8001
+[INFO] 13:13:01:182 CPU/(140879:140879): Tamanio maximo de segmentos = (null)
+[INFO] 13:13:01:182 CPU/(140879:140879): --------------------------------
+[INFO] 13:13:01:182 CPU/(140879:140879): ¡CPU iniciado correctamente!
+[TRACE] 13:13:01:182 CPU/(140879:140879): Listo para escuchar a mi cliente
+[INFO] 13:13:01:182 CPU/(140879:140879): Servidor listo para recibir al cliente
+[INFO] 13:13:01:183 CPU/(140879:140881): Conexion establecida con Memoria
+[INFO] 13:13:03:087 CPU/(140879:140880): Se conecto un cliente!
+[INFO] 13:13:03:087 CPU/(140879:140880): Me llego el mensaje Soy el Kernel
+[INFO] 13:13:23:088 CPU/(140879:140880): Comenzar ejecucion del proceso: 5.
+[INFO] 13:13:23:088 CPU/(140879:140880): Instruccion Ejecutada
+[INFO] 13:13:23:088 CPU/(140879:140880): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 13:13:23:089 CPU/(140879:140880): Instruccion Ejecutada
+[INFO] 13:13:23:089 CPU/(140879:140880): Instruccion Ejecutada
+[INFO] 13:13:23:089 CPU/(140879:140880): PID: 5 - Ejecutando: WAIT DISCO
