@@ -13,6 +13,7 @@
 #include <commons/config.h>
 #include <stdint.h>
 
+
 // ------------------------------------------------------------------------------------------
 // -- Structs --
 // ------------------------------------------------------------------------------------------
@@ -97,6 +98,8 @@ typedef struct contexto_ejecucion {
 	t_registros* registros_cpu;
 	t_list* tabla_segmentos;
 }t_contexto_ejecucion;
+
+
 
 
 #endif /* SRC_DATOS_H_ */

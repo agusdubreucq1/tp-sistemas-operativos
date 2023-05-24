@@ -46,10 +46,10 @@ int main(void){
         int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
         pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) &conexion_consola);
         pthread_detach(atender_consolas);
-        printf("\n\n lista ready: %d \n\n", list_size(lista_ready));
+        //printf("\n\n lista ready: %d \n\n", list_size(lista_ready));
     }
 
-    close(server_kernel);
+    liberar_conexion(server_kernel);
 
 	return EXIT_SUCCESS;
 }
@@ -101,7 +101,7 @@ void* recibirProcesos(int* p_conexion) {
 		log_info(kernel_logger, "Nuevo Proceso recibido con exito");
 		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial);
 		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new, NEW);
-		print_pcb(nuevo_pcb);
+		//print_pcb(nuevo_pcb);
 		sem_post(&cantidad_procesos_new);
 
 		//t_pcb* pcb = list_get(lista_new, list_size(lista_new)-1); -> el pcb ya paso a ready, por lo q da segmentation fault
@@ -116,6 +116,7 @@ void init_estructuras_planificacion(){
     lista_new = list_create();
     lista_ready = list_create();
 
+    hora_inicio = (long long)tiempo.tv_sec * 1000 + (long long)tiempo.tv_usec / 1000;
     sem_init(&semaforo_multiprogramacion, 0, grado_maximo_multiprogramacion);
 
     sem_init(&cantidad_procesos_new, 0, 0);
@@ -132,9 +133,14 @@ void planificarLargoPlazo(){
 		//el sem_post hay que hacerlo cuando un proceso termina
 		sem_wait(&semaforo_multiprogramacion);
 		sem_wait(&cantidad_procesos_new);
+
 		pthread_mutex_lock(&semaforo_new);
 		t_pcb* pcb = list_remove(lista_new, 0);
+		struct timeval tiempo;
+		gettimeofday(&tiempo, NULL);
+		pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
 		pthread_mutex_unlock(&semaforo_new);
+
 		//mandar a memoria el proceso para iniciar estructuras
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
 		sem_post(&cantidad_procesos_ready);
@@ -142,30 +148,76 @@ void planificarLargoPlazo(){
 }
 
 void planificarCortoPlazoFIFO(){
+	sleep(20);
+
 	while(1){
-		sem_wait(&cantidad_procesos_ready);
-		pthread_mutex_lock(&semaforo_ready);
-		t_pcb* pcb_a_ejecutar = list_remove(lista_ready, 0);
-		pthread_mutex_unlock(&semaforo_ready);
-		pthread_mutex_lock(&semaforo_execute);
-		enviar_pcb(pcb_a_ejecutar);
-		recibir_mensaje_cpu(pcb_a_ejecutar);
-		//print_pcb(pcb_a_ejecutar);
-		printf("AHIVAAAAAAAAA");
-		//recibir_instruccion_cpu(socket_cpu, kernel_logger);
-		pthread_mutex_unlock(&semaforo_execute);
+		if(!(strcmp(algoritmo_planificacion, "FIFO"))){
+			//sleep(5);
+			sem_wait(&cantidad_procesos_ready);
+			pthread_mutex_lock(&semaforo_ready);
+			t_pcb* pcb_a_ejecutar = list_remove(lista_ready, 0);
+			pthread_mutex_unlock(&semaforo_ready);
+			pthread_mutex_lock(&semaforo_execute);
+			enviar_pcb(pcb_a_ejecutar);
+			recibir_mensaje_cpu(pcb_a_ejecutar);
+			//print_pcb(pcb_a_ejecutar);
+			//printf("AHIVAAAAAAAAA");
+			//recibir_instruccion_cpu(socket_cpu, kernel_logger);
+			pthread_mutex_unlock(&semaforo_execute);
+		} else{
+			sem_wait(&cantidad_procesos_ready);
+			pthread_mutex_lock(&semaforo_ready);
+			t_pcb* pcb_a_ejecutar = tcb_elegido_HRRN();
+			pthread_mutex_unlock(&semaforo_ready);
+			pthread_mutex_lock(&semaforo_execute);
+			enviar_pcb(pcb_a_ejecutar);
+			recibir_mensaje_cpu(pcb_a_ejecutar);
+			pthread_mutex_unlock(&semaforo_execute);
+			//printf("PID %d\n", pcb_a_ejecutar->pid);
+		}
 	}
 }
+
+t_pcb* tcb_elegido_HRRN(){
+	int tcb_index = 0;
+	float ratio_mayor = 0.0;
+	t_pcb* pcb = malloc(sizeof(t_pcb));
+	struct timeval hora_actual;
+	for (int i = 0; i < list_size(lista_ready); i++) {
+		t_pcb* pcb = list_get(lista_ready, i);
+		gettimeofday(&hora_actual, NULL);
+		int tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000) - pcb->tiempo_ready;
+
+		printf("PCB %i\n", pcb->pid);
+		printf("tiempo %d\n", tiempo);
+		printf("estimado %d\n", pcb->estimado_rafaga);
+
+		float ratio = ((float) (pcb->estimado_rafaga + tiempo)) / (float) pcb->estimado_rafaga;
+		if (ratio > ratio_mayor){
+			ratio_mayor = ratio;
+			tcb_index = i;
+		}
+
+		printf("ratio %f\n\n", ratio);
+
+	}
+
+	pcb = list_remove(lista_ready, tcb_index);
+	printf("\nratio mayor %f\n", ratio_mayor);
+	printf("PCB %d\n", pcb->pid);
+	printf("estimado %d\n\n", pcb->estimado_rafaga);
+
+	return pcb;
+}
+
 
 void enviar_pcb(t_pcb* pcb){
 	t_paquete* paquete;
 	paquete = serializar_pcb(pcb);
 
-
 	int tamanio_pcb;
 	memcpy(&tamanio_pcb, paquete->buffer->stream, sizeof(int));
 	printf("\n pcb a ejecutar:\n\n");
-
 	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
 
 	enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
@@ -210,6 +262,14 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 	if(strcmp(motivo, "YIELD")==0){
 		//agregar al final de la lista ready
+		uint32_t tiempo_viejo = pcb->tiempo_ready;
+		uint32_t estimado_viejo = pcb->estimado_rafaga;
+		struct timeval tiempo;
+		gettimeofday(&tiempo, NULL);
+		pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
+		float alpha = 1 - hrrn_alfa;
+		pcb->estimado_rafaga = (alpha * estimado_viejo + hrrn_alfa * (pcb->tiempo_ready - tiempo_viejo));
+
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
 		sem_post(&cantidad_procesos_ready);
 		printf("ejecutando yield");
@@ -217,6 +277,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 	}else if(strcmp(motivo, "EXIT")==0){
 		pcb->estado = EXITT;
 		printf("ejecutando exit");
+		enviar_mensaje("-1", pcb->pid);
 		liberar_conexion(pcb->pid);
 	}
 }

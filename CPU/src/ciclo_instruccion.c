@@ -98,7 +98,7 @@ void enviarContexto(char* motivo){
 
 	//int tamanio_contexto;
 	//memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
-	printf("\n Contexto enviado:\n\n");
+	//printf("\n Contexto enviado:\n\n");
 	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
 	printf("\EL VALOR ES: %s\n", motivo);
 

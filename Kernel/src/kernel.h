@@ -18,6 +18,7 @@
 #include "planificador_largo_plazo.h"
 #include <utils/serializar.h>
 #include <utils/deserializar.h>
+#include <sys/time.h>
 
 #define IP_SERVER "127.0.0.1"
 
@@ -34,8 +35,9 @@
 	t_config* kernel_config;
 	u_int32_t grado_maximo_multiprogramacion;
 	u_int32_t estimacion_inicial;
+	float hrrn_alfa;
 	char *ip_memoria, *puerto_memoria, *ip_filesystem, *puerto_filesystem, *ip_cpu;
-	char *puerto_cpu, *puerto_escucha, *hrrn_alfa;
+	char *puerto_cpu, *puerto_escucha;
 	char *algoritmo_planificacion, **recursos, **instancias_recursos;
 
 // ------------------------------------------------------------------------------------------
@@ -73,6 +75,9 @@
 	pthread_mutex_t semaforo_ready;
 	pthread_mutex_t semaforo_execute;
 
+	struct timeval tiempo;
+	long long hora_inicio;
+
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
@@ -89,6 +94,7 @@
 	void cerrar_conexiones();
 	void recibir_mensaje_cpu(t_pcb* pcb);
 	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
+	t_pcb* tcb_elegido_HRRN();
 
 
 

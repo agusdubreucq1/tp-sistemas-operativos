@@ -13,6 +13,7 @@
 #include <utils/servidor.h>
 #include <utils/cliente.h>
 #include <utils/datos.h>
+#include <semaphore.h>
 
 #define IP_SERVER "127.0.0.1"
 
@@ -37,8 +38,14 @@
 	pthread_t hilo_conexion_Kernel;
 	pthread_t hilo_conexion_CPU;
 	pthread_t hilo_conexion_FileSystem;
+	pthread_t hilo_estructuras;
 	uint32_t respuesta;
 	int server_memoria;
+	int socket_kernel;
+	int socket_cpu;
+	int socket_filesystem;
+
+	sem_t semaforo_conexiones;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
@@ -49,5 +56,6 @@
 	void* atenderFileSystem();
 	int abrir_socket();
 	void cerrar_conexiones();
+	void crear_estructuras();
 
 #endif

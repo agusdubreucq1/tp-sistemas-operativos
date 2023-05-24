@@ -31,6 +31,7 @@
 	t_list* recibir_instrucciones(int socket_cliente, uint32_t* tamanio_recibido);
 	t_paquete* serializar_contexto(t_contexto_ejecucion* contexto);
 	void cerrar_conexion(int socket_cliente);
+	void cerrar_consola(int socket_cliente);
 
 
 #endif /* SRC_SERVIDOR_H_ */

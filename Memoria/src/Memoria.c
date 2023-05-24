@@ -26,21 +26,30 @@ int main(void) {
 	server_memoria = iniciar_servidor(IP_SERVER, puerto_escucha, memoria_logger);
 	log_info(memoria_logger, "Servidor listo para recibir al cliente");
 
-	pthread_create(&hilo_conexion_Kernel, NULL, atenderKernel, NULL);
-	pthread_detach(hilo_conexion_Kernel);
+	sem_init(&semaforo_conexiones, 0, 0);
+	//sem_wait(&semaforo_conexiones);
+	//sem_wait(&semaforo_conexiones);
+
+	pthread_create(&hilo_estructuras, NULL, (void *) crear_estructuras, NULL);
+	pthread_detach(hilo_estructuras);
+
+	pthread_create(&hilo_conexion_FileSystem, NULL, atenderFileSystem, NULL);
+	pthread_detach(hilo_conexion_FileSystem);
 
 	pthread_create(&hilo_conexion_CPU, NULL, atenderCPU, NULL);
 	pthread_detach(hilo_conexion_CPU);
 
-	pthread_create(&hilo_conexion_FileSystem, NULL, atenderFileSystem, NULL);
-	pthread_join(hilo_conexion_FileSystem, NULL);
+	pthread_create(&hilo_conexion_Kernel, NULL, atenderKernel, NULL);
+	pthread_join(hilo_conexion_Kernel, NULL);
 
 
 	return EXIT_SUCCESS;
 }
 
 void* atenderKernel(){
+
 	int socket_kernel = abrir_socket();
+	sem_post(&semaforo_conexiones);
 
 	while(1){
 		int cod_op = recibir_operacion(socket_kernel);
@@ -55,13 +64,15 @@ void* atenderKernel(){
 
 
 void* atenderCPU(){
-	int socket_CPU = abrir_socket();
+
+	int socket_cpu = abrir_socket();
+	sem_post(&semaforo_conexiones);
 
 	while(1){
-		int cod_op = recibir_operacion(socket_CPU);
+		int cod_op = recibir_operacion(socket_cpu);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_mensaje(socket_CPU, memoria_logger);
+			recibir_mensaje(socket_cpu, memoria_logger);
 			break;
 		}
 	}
@@ -69,13 +80,15 @@ void* atenderCPU(){
 }
 
 void* atenderFileSystem(){
-	int socket_FileSystem = abrir_socket();
+
+	int socket_filesystem = abrir_socket();
+	sem_post(&semaforo_conexiones);
 
 	while(1){
-		int cod_op = recibir_operacion(socket_FileSystem);
+		int cod_op = recibir_operacion(socket_filesystem);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_mensaje(socket_FileSystem, memoria_logger);
+			recibir_mensaje(socket_filesystem, memoria_logger);
 			break;
 		}
 	}
@@ -97,6 +110,16 @@ int abrir_socket(){
 	return socket;
 }
 
+
+void crear_estructuras(){
+
+	sem_wait(&semaforo_conexiones);
+	sem_wait(&semaforo_conexiones);
+	sem_wait(&semaforo_conexiones);
+
+	printf("EEFDEEDEDEDEDFRRRFFFR\n\n\n\n");
+	printf("todo listo");
+}
 
 void cerrar_conexiones(){
 	printf("\ncerrando conexiones\n");

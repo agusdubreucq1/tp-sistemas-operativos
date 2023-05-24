@@ -107,7 +107,7 @@ void recibir_mensaje_kernel(){
 			//printf("var_send: %d\n", var_send_);
 
 			printf("\n recibi contexto:\n");
-			print_contexto(contexto_de_ejecucion);
+			//print_contexto(contexto_de_ejecucion);
 	}
 }
 

@@ -48,10 +48,8 @@ int main(int argc, char** argv) {
 }
 
 void terminar_programa(int conexion, t_log *logger, t_config* config){
-	while(conexion == 1){
-
-	}
-	log_info(logger, "Entro a finalizar el programa");
+	cerrar_consola(conexion);
+	log_info(logger, "Cerrando conexion");
 	log_destroy(logger);
 	config_destroy(config);
 	close(conexion);

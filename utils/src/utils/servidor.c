@@ -72,6 +72,13 @@ void recibir_mensaje(int socket_cliente, t_log* logger)
 	free(buffer);
 }
 
+void cerrar_consola(int socket_cliente)
+{
+	int size;
+	char* buffer = recibir_buffer(&size, socket_cliente);
+	free(buffer);
+}
+
 char* recibir_instruccion_cpu(int socket_cliente, t_log* logger)
 {
 	int size;

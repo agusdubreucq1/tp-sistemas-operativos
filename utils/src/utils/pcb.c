@@ -37,9 +37,9 @@ void init_registros(t_registros** registros){
 }
 
 void init_segmento(t_list** tabla_segmentos){
-	printf("inicializando segmento\n");
+	//printf("inicializando segmento\n");
 	(*tabla_segmentos)=list_create();
-	printf("list_size: %d\n", list_size(*tabla_segmentos));
+	//printf("list_size: %d\n", list_size(*tabla_segmentos));
 	/**segmento = malloc(sizeof(t_segmento));
 	(*segmento)->id = 0;
 	(*segmento)->direccio_base = 0;
@@ -55,6 +55,7 @@ void print_pcb(t_pcb* pcb){
 	printf("PID = %d\n", pcb->pid);
 	printf("Program Counter = %u\n", pcb->program_counter);
 	printf("Estado = %s\n", print_estado(pcb->estado));
+	printf("Tiempo en ready= %u\n", pcb->tiempo_ready);
 	printf("Estimacion rafaga = %d\n", pcb->estimado_rafaga);
 	//list_iterate(pcb->instrucciones, (void*)iterator);
 	print_registos(pcb->registros_cpu);
