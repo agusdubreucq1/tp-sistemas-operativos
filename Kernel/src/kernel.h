@@ -56,12 +56,15 @@
 	pthread_t conexionFileSystem;
 	pthread_t conexionCPU;
 	pthread_t conexionMemoria;
+	pthread_t io_procesos;
 	int socket_modulo;
 	int server_kernel;
 	int socket_fileSystem;
 	int socket_cpu;
 	int socket_memoria;
 	kernelThreadParams* fileSystemParams;
+
+	t_thread_args argumentos_hilo;
 
 // ------------------------------------------------------------------------------------------
 // -- Estructuras Planificacion --
@@ -103,6 +106,7 @@
 	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
 	t_pcb* tcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
+	void ejecutar_io(t_pcb* pcb, int duracion);
 
 
 

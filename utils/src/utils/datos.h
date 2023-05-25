@@ -106,4 +106,9 @@ typedef struct recurso{
 	t_list* listaBloqueados;
 } t_recurso;
 
+typedef struct args_io{
+   t_pcb* pcb;
+   int duracion;
+} t_thread_args;
+
 #endif /* SRC_DATOS_H_ */

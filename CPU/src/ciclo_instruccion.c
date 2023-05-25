@@ -43,7 +43,16 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			break;
 		case MOV_IN:   		break;
 		case MOV_OUT:  		break;
-		case I_O:   		break;
+		case I_O:
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s", contexto_de_ejecucion->pid,
+																   codigo_instruccion_string(instruccion->codigo_instruccion),
+																   instruccion->parametro[0]);
+
+			char str2[30] = "I_O ";
+			strcat(str2, instruccion->parametro[0]);
+			//enviarContexto(str2);
+			//salida = 0;
+			break;
 		case F_OPEN:   		break;
 		case F_CLOSE:  		break;
 		case F_SEEK:		break;

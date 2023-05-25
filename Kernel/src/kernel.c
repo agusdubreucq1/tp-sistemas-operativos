@@ -176,6 +176,7 @@ void planificarCortoPlazoFIFO(){
 			} else {
 				pcb_a_ejecutar = list_remove(lista_ready, 0);
 			}
+			sem_post(&semaforo_multiprogramacion);
 			pthread_mutex_unlock(&semaforo_ready);
 			pthread_mutex_lock(&semaforo_execute);
 
@@ -196,6 +197,7 @@ void planificarCortoPlazoFIFO(){
 			} else {
 				pcb_a_ejecutar = tcb_elegido_HRRN();
 			}
+			sem_post(&semaforo_multiprogramacion);
 			pthread_mutex_unlock(&semaforo_ready);
 			pthread_mutex_lock(&semaforo_execute);
 			enviar_pcb(pcb_a_ejecutar);
@@ -291,6 +293,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 	if(strcmp(motivo, "YIELD")==0){
 		//agregar al final de la lista ready
 		estimar_rafaga(pcb);
+		sem_wait(&semaforo_multiprogramacion);
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
 		sem_post(&cantidad_procesos_ready);
 		printf("ejecutando yield");
@@ -328,6 +331,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 			enviar_mensaje("-1", pcb->pid);
 			liberar_conexion(pcb->pid);
 		} else {
+			sem_wait(&semaforo_multiprogramacion);
 			ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
 			devolver_ejecucion = 1;
 			pcb_ejecutando = pcb;
@@ -336,7 +340,35 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 			imprimir_recurso(list_get(lista_recursos, existe));
 		}
 		printf("ejecutando signal");
+	} else if(strstr(motivo, "I_O") != NULL){
+		printf("BUDBUEDBUEBDUEBD\n\n\n\n\n\n");
+		estimar_rafaga(pcb);
+		pcb->estado = BLOCKED;
+		printf("ejecutando %s", motivo);
+		char** parametros = string_split(motivo, " ");
+		int tiempo = atoi(parametros[1]);
+
+		t_thread_args* argumentos_hilo = malloc(sizeof(t_thread_args));
+		argumentos_hilo->pcb = pcb;
+		argumentos_hilo->duracion = tiempo;
+
+		printf("PERRO");
+		pthread_create(&io_procesos, NULL,(void*) ejecutar_io, argumentos_hilo);
+		pthread_detach(io_procesos);
+		pth
+
+		free(argumentos_hilo);
+		printf("ejecutando I-O");
 	}
+}
+
+void ejecutar_io(t_pcb* pcb, int duracion){
+	printf("BBBBBB PID %u", pcb->pid);
+	sleep(duracion);
+	sem_wait(&semaforo_multiprogramacion);
+	ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+	sem_post(&cantidad_procesos_ready);
+	printf("HAIVA");
 }
 
 void estimar_rafaga(t_pcb* pcb){

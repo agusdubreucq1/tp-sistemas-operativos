@@ -6189,3 +6189,1595 @@
 [INFO] 13:49:08:064 CPU/(242957:242958): Datos enviados, esperando respuesta de cpu...
 [INFO] 13:49:08:107 CPU/(242957:242958): Datos enviados correctamente
 [INFO] 13:49:21:883 CPU/(242957:242958): Comenzar ejecucion del proceso: 9.
+[INFO] 21:28:51:656 CPU/(287389:287389): Logger creado
+[INFO] 21:28:51:657 CPU/(287389:287389): -------Valores del config-------
+[INFO] 21:28:51:657 CPU/(287389:287389): Retardo InstrucciÃ³n = 1000
+[INFO] 21:28:51:657 CPU/(287389:287389): IP Memoria = 127.0.0.1
+[INFO] 21:28:51:657 CPU/(287389:287389): Puerto Memoria = 8003
+[INFO] 21:28:51:657 CPU/(287389:287389): Puerto Escucha = 8001
+[INFO] 21:28:51:657 CPU/(287389:287389): Tamanio maximo de segmentos = (null)
+[INFO] 21:28:51:657 CPU/(287389:287389): --------------------------------
+[INFO] 21:28:51:657 CPU/(287389:287389): Â¡CPU iniciado correctamente!
+[TRACE] 21:28:51:658 CPU/(287389:287389): Listo para escuchar a mi cliente
+[INFO] 21:28:51:658 CPU/(287389:287389): Servidor listo para recibir al cliente
+[INFO] 21:28:51:658 CPU/(287389:287391): Conexion establecida con Memoria
+[INFO] 21:28:55:520 CPU/(287389:287390): Se conecto un cliente!
+[INFO] 21:28:55:520 CPU/(287389:287390): Me llego el mensaje Soy el Kernel
+[INFO] 21:29:05:520 CPU/(287389:287390): Comenzar ejecucion del proceso: 5.
+[INFO] 21:29:05:520 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:520 CPU/(287389:287390): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 21:29:05:522 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:522 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:522 CPU/(287389:287390): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 21:29:05:522 CPU/(287389:287390): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:29:05:562 CPU/(287389:287390): Datos enviados correctamente
+[INFO] 21:29:05:607 CPU/(287389:287390): Comenzar ejecucion del proceso: 9.
+[INFO] 21:29:05:607 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:607 CPU/(287389:287390): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 21:29:05:608 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:608 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:608 CPU/(287389:287390): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 21:29:05:608 CPU/(287389:287390): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:29:05:650 CPU/(287389:287390): Datos enviados correctamente
+[INFO] 21:29:05:695 CPU/(287389:287390): Comenzar ejecucion del proceso: 5.
+[INFO] 21:29:05:695 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:695 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:695 CPU/(287389:287390): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 21:29:05:695 CPU/(287389:287390): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:29:05:739 CPU/(287389:287390): Datos enviados correctamente
+[INFO] 21:29:05:783 CPU/(287389:287390): Comenzar ejecucion del proceso: 5.
+[INFO] 21:29:05:783 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:783 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:783 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:783 CPU/(287389:287390): PID: 5 - Ejecutando: YIELD
+[INFO] 21:29:05:783 CPU/(287389:287390): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:29:05:826 CPU/(287389:287390): Datos enviados correctamente
+[INFO] 21:29:05:871 CPU/(287389:287390): Comenzar ejecucion del proceso: 9.
+[INFO] 21:29:05:871 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:871 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:871 CPU/(287389:287390): PID: 9 - Ejecutando: SIGNAL DISCO
+[INFO] 21:29:05:871 CPU/(287389:287390): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:29:05:914 CPU/(287389:287390): Datos enviados correctamente
+[INFO] 21:29:05:959 CPU/(287389:287390): Comenzar ejecucion del proceso: 9.
+[INFO] 21:29:05:959 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:959 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:959 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:05:959 CPU/(287389:287390): PID: 9 - Ejecutando: YIELD
+[INFO] 21:29:05:959 CPU/(287389:287390): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:29:06:002 CPU/(287389:287390): Datos enviados correctamente
+[INFO] 21:29:06:047 CPU/(287389:287390): Comenzar ejecucion del proceso: 5.
+[INFO] 21:29:06:047 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:047 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:047 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:047 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:047 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:047 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:047 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:047 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:047 CPU/(287389:287390): PID: 5 - Ejecutando: EXIT
+[INFO] 21:29:06:047 CPU/(287389:287390): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:29:06:091 CPU/(287389:287390): Datos enviados correctamente
+[INFO] 21:29:06:135 CPU/(287389:287390): Comenzar ejecucion del proceso: 9.
+[INFO] 21:29:06:135 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:135 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:135 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:135 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:135 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:135 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:135 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:135 CPU/(287389:287390): Instruccion Ejecutada
+[INFO] 21:29:06:135 CPU/(287389:287390): PID: 9 - Ejecutando: EXIT
+[INFO] 21:29:06:135 CPU/(287389:287390): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:29:06:179 CPU/(287389:287390): Datos enviados correctamente
+[INFO] 21:29:14:686 CPU/(287389:287390): Comenzar ejecucion del proceso: 9.
+[INFO] 21:32:46:347 CPU/(287883:287883): Logger creado
+[INFO] 21:32:46:348 CPU/(287883:287883): -------Valores del config-------
+[INFO] 21:32:46:348 CPU/(287883:287883): Retardo InstrucciÃ³n = 1000
+[INFO] 21:32:46:348 CPU/(287883:287883): IP Memoria = 127.0.0.1
+[INFO] 21:32:46:348 CPU/(287883:287883): Puerto Memoria = 8003
+[INFO] 21:32:46:348 CPU/(287883:287883): Puerto Escucha = 8001
+[INFO] 21:32:46:348 CPU/(287883:287883): Tamanio maximo de segmentos = (null)
+[INFO] 21:32:46:348 CPU/(287883:287883): --------------------------------
+[INFO] 21:32:46:348 CPU/(287883:287883): Â¡CPU iniciado correctamente!
+[TRACE] 21:32:46:348 CPU/(287883:287883): Listo para escuchar a mi cliente
+[INFO] 21:32:46:348 CPU/(287883:287883): Servidor listo para recibir al cliente
+[INFO] 21:32:46:348 CPU/(287883:287885): Conexion establecida con Memoria
+[INFO] 21:32:49:657 CPU/(287883:287884): Se conecto un cliente!
+[INFO] 21:32:49:657 CPU/(287883:287884): Me llego el mensaje Soy el Kernel
+[INFO] 21:32:59:657 CPU/(287883:287884): Comenzar ejecucion del proceso: 5.
+[INFO] 21:32:59:657 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:32:59:657 CPU/(287883:287884): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 21:32:59:658 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:32:59:658 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:32:59:658 CPU/(287883:287884): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 21:32:59:658 CPU/(287883:287884): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:32:59:698 CPU/(287883:287884): Datos enviados correctamente
+[INFO] 21:32:59:742 CPU/(287883:287884): Comenzar ejecucion del proceso: 9.
+[INFO] 21:32:59:742 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:32:59:742 CPU/(287883:287884): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 21:32:59:743 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:32:59:743 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:32:59:743 CPU/(287883:287884): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 21:32:59:744 CPU/(287883:287884): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:32:59:786 CPU/(287883:287884): Datos enviados correctamente
+[INFO] 21:32:59:831 CPU/(287883:287884): Comenzar ejecucion del proceso: 5.
+[INFO] 21:32:59:831 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:32:59:831 CPU/(287883:287884): PID: 5 - Ejecutando: I/O 10
+[INFO] 21:32:59:831 CPU/(287883:287884): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:32:59:874 CPU/(287883:287884): Datos enviados correctamente
+[INFO] 21:33:03:454 CPU/(287883:287884): Comenzar ejecucion del proceso: 5.
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 21:33:03:455 CPU/(287883:287884): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:33:03:455 CPU/(287883:287884): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:33:03:455 CPU/(287883:287884): Me llego el mensaje Ò-°ÿü
+[INFO] 21:33:03:455 CPU/(287883:287884): Comenzar ejecucion del proceso: 5.
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): PID: 5 - Ejecutando: YIELD
+[INFO] 21:33:03:455 CPU/(287883:287884): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:33:03:455 CPU/(287883:287884): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:33:03:455 CPU/(287883:287884): Comenzar ejecucion del proceso: 5.
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): Instruccion Ejecutada
+[INFO] 21:33:03:455 CPU/(287883:287884): PID: 5 - Ejecutando: EXIT
+[INFO] 21:33:03:455 CPU/(287883:287884): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:33:03:455 CPU/(287883:287884): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:33:03:455 CPU/(287883:287884): Comenzar ejecucion del proceso: 5.
+[INFO] 21:35:10:853 CPU/(288126:288126): Logger creado
+[INFO] 21:35:10:853 CPU/(288126:288126): -------Valores del config-------
+[INFO] 21:35:10:853 CPU/(288126:288126): Retardo InstrucciÃ³n = 1000
+[INFO] 21:35:10:853 CPU/(288126:288126): IP Memoria = 127.0.0.1
+[INFO] 21:35:10:853 CPU/(288126:288126): Puerto Memoria = 8003
+[INFO] 21:35:10:853 CPU/(288126:288126): Puerto Escucha = 8001
+[INFO] 21:35:10:853 CPU/(288126:288126): Tamanio maximo de segmentos = (null)
+[INFO] 21:35:10:854 CPU/(288126:288126): --------------------------------
+[INFO] 21:35:10:854 CPU/(288126:288126): Â¡CPU iniciado correctamente!
+[TRACE] 21:35:10:854 CPU/(288126:288126): Listo para escuchar a mi cliente
+[INFO] 21:35:10:854 CPU/(288126:288126): Servidor listo para recibir al cliente
+[INFO] 21:35:10:854 CPU/(288126:288128): Conexion establecida con Memoria
+[INFO] 21:35:14:625 CPU/(288126:288127): Se conecto un cliente!
+[INFO] 21:35:14:625 CPU/(288126:288127): Me llego el mensaje Soy el Kernel
+[INFO] 21:35:24:626 CPU/(288126:288127): Comenzar ejecucion del proceso: 5.
+[INFO] 21:35:24:626 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:35:24:626 CPU/(288126:288127): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 21:35:24:627 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:35:24:627 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:35:24:627 CPU/(288126:288127): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 21:35:24:627 CPU/(288126:288127): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:35:24:666 CPU/(288126:288127): Datos enviados correctamente
+[INFO] 21:35:24:710 CPU/(288126:288127): Comenzar ejecucion del proceso: 9.
+[INFO] 21:35:24:710 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:35:24:710 CPU/(288126:288127): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 21:35:24:711 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:35:24:711 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:35:24:711 CPU/(288126:288127): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 21:35:24:711 CPU/(288126:288127): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:35:24:755 CPU/(288126:288127): Datos enviados correctamente
+[INFO] 21:35:24:798 CPU/(288126:288127): Comenzar ejecucion del proceso: 5.
+[INFO] 21:35:24:798 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:35:24:798 CPU/(288126:288127): PID: 5 - Ejecutando: I/O 10
+[INFO] 21:35:24:798 CPU/(288126:288127): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:35:24:843 CPU/(288126:288127): Datos enviados correctamente
+[INFO] 21:36:45:031 CPU/(288126:288127): Comenzar ejecucion del proceso: 5.
+[INFO] 21:36:45:034 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:034 CPU/(288126:288127): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 21:36:45:034 CPU/(288126:288127): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:36:45:034 CPU/(288126:288127): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:36:45:034 CPU/(288126:288127): Me llego el mensaje Òm4µ
+[INFO] 21:36:45:034 CPU/(288126:288127): Comenzar ejecucion del proceso: 5.
+[INFO] 21:36:45:034 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:034 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:034 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:034 CPU/(288126:288127): PID: 5 - Ejecutando: YIELD
+[INFO] 21:36:45:034 CPU/(288126:288127): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:36:45:034 CPU/(288126:288127): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:36:45:034 CPU/(288126:288127): Comenzar ejecucion del proceso: 5.
+[INFO] 21:36:45:034 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:034 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:034 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:034 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:034 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:035 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:035 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:035 CPU/(288126:288127): Instruccion Ejecutada
+[INFO] 21:36:45:035 CPU/(288126:288127): PID: 5 - Ejecutando: EXIT
+[INFO] 21:36:45:035 CPU/(288126:288127): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:36:45:035 CPU/(288126:288127): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:36:45:035 CPU/(288126:288127): Comenzar ejecucion del proceso: 5.
+[INFO] 21:39:34:198 CPU/(288767:288767): Logger creado
+[INFO] 21:39:34:198 CPU/(288767:288767): -------Valores del config-------
+[INFO] 21:39:34:198 CPU/(288767:288767): Retardo InstrucciÃ³n = 1000
+[INFO] 21:39:34:198 CPU/(288767:288767): IP Memoria = 127.0.0.1
+[INFO] 21:39:34:198 CPU/(288767:288767): Puerto Memoria = 8003
+[INFO] 21:39:34:198 CPU/(288767:288767): Puerto Escucha = 8001
+[INFO] 21:39:34:198 CPU/(288767:288767): Tamanio maximo de segmentos = (null)
+[INFO] 21:39:34:198 CPU/(288767:288767): --------------------------------
+[INFO] 21:39:34:198 CPU/(288767:288767): Â¡CPU iniciado correctamente!
+[TRACE] 21:39:34:199 CPU/(288767:288767): Listo para escuchar a mi cliente
+[INFO] 21:39:34:199 CPU/(288767:288767): Servidor listo para recibir al cliente
+[INFO] 21:39:34:199 CPU/(288767:288769): Conexion establecida con Memoria
+[INFO] 21:39:39:874 CPU/(288767:288768): Se conecto un cliente!
+[INFO] 21:39:39:874 CPU/(288767:288768): Me llego el mensaje Soy el Kernel
+[INFO] 21:39:49:875 CPU/(288767:288768): Comenzar ejecucion del proceso: 5.
+[INFO] 21:39:49:875 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:39:49:875 CPU/(288767:288768): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 21:39:49:876 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:39:49:876 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:39:49:876 CPU/(288767:288768): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 21:39:49:876 CPU/(288767:288768): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:39:49:918 CPU/(288767:288768): Datos enviados correctamente
+[INFO] 21:39:49:963 CPU/(288767:288768): Comenzar ejecucion del proceso: 9.
+[INFO] 21:39:49:963 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:39:49:963 CPU/(288767:288768): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 21:39:49:964 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:39:49:964 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:39:49:964 CPU/(288767:288768): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 21:39:49:964 CPU/(288767:288768): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:39:50:006 CPU/(288767:288768): Datos enviados correctamente
+[INFO] 21:39:50:050 CPU/(288767:288768): Comenzar ejecucion del proceso: 5.
+[INFO] 21:39:50:050 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:39:50:050 CPU/(288767:288768): PID: 5 - Ejecutando: I/O 10
+[INFO] 21:39:50:050 CPU/(288767:288768): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:39:50:095 CPU/(288767:288768): Datos enviados correctamente
+[INFO] 21:40:18:573 CPU/(288767:288768): Comenzar ejecucion del proceso: 10.
+[INFO] 21:40:18:573 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:40:18:573 CPU/(288767:288768): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 21:40:18:574 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:40:18:574 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:40:18:574 CPU/(288767:288768): PID: 10 - Ejecutando: WAIT DISCO
+[INFO] 21:40:18:574 CPU/(288767:288768): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:40:18:614 CPU/(288767:288768): Datos enviados correctamente
+[INFO] 21:40:36:086 CPU/(288767:288768): Comenzar ejecucion del proceso: 11.
+[INFO] 21:40:36:086 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:40:36:086 CPU/(288767:288768): PID: 11 - Ejecutando: SET AX HOLA
+[INFO] 21:40:36:087 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:40:36:087 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:40:36:087 CPU/(288767:288768): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 21:40:36:087 CPU/(288767:288768): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:40:36:126 CPU/(288767:288768): Datos enviados correctamente
+[INFO] 21:41:06:703 CPU/(288767:288768): Comenzar ejecucion del proceso: 11.
+[INFO] 21:41:06:703 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:703 CPU/(288767:288768): PID: 11 - Ejecutando: I/O 10
+[INFO] 21:41:06:703 CPU/(288767:288768): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:41:06:704 CPU/(288767:288768): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:41:06:704 CPU/(288767:288768): Me llego el mensaje i_œ1Þ
+[INFO] 21:41:06:704 CPU/(288767:288768): Comenzar ejecucion del proceso: 11.
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 21:41:06:704 CPU/(288767:288768): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:41:06:704 CPU/(288767:288768): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:41:06:704 CPU/(288767:288768): Me llego el mensaje i_œ1Þ
+[INFO] 21:41:06:704 CPU/(288767:288768): Comenzar ejecucion del proceso: 11.
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): PID: 11 - Ejecutando: YIELD
+[INFO] 21:41:06:704 CPU/(288767:288768): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:41:06:704 CPU/(288767:288768): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:41:06:704 CPU/(288767:288768): Comenzar ejecucion del proceso: 11.
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): Instruccion Ejecutada
+[INFO] 21:41:06:704 CPU/(288767:288768): PID: 11 - Ejecutando: EXIT
+[INFO] 21:41:06:704 CPU/(288767:288768): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:41:06:704 CPU/(288767:288768): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:41:06:704 CPU/(288767:288768): Comenzar ejecucion del proceso: 11.
+[INFO] 21:46:06:366 CPU/(289564:289564): Logger creado
+[INFO] 21:46:06:367 CPU/(289564:289564): -------Valores del config-------
+[INFO] 21:46:06:367 CPU/(289564:289564): Retardo InstrucciÃ³n = 1000
+[INFO] 21:46:06:367 CPU/(289564:289564): IP Memoria = 127.0.0.1
+[INFO] 21:46:06:367 CPU/(289564:289564): Puerto Memoria = 8003
+[INFO] 21:46:06:367 CPU/(289564:289564): Puerto Escucha = 8001
+[INFO] 21:46:06:367 CPU/(289564:289564): Tamanio maximo de segmentos = (null)
+[INFO] 21:46:06:367 CPU/(289564:289564): --------------------------------
+[INFO] 21:46:06:367 CPU/(289564:289564): Â¡CPU iniciado correctamente!
+[TRACE] 21:46:06:367 CPU/(289564:289564): Listo para escuchar a mi cliente
+[INFO] 21:46:06:368 CPU/(289564:289564): Servidor listo para recibir al cliente
+[INFO] 21:46:06:368 CPU/(289564:289566): Conexion establecida con Memoria
+[INFO] 21:46:10:364 CPU/(289564:289565): Se conecto un cliente!
+[INFO] 21:46:10:365 CPU/(289564:289565): Me llego el mensaje Soy el Kernel
+[INFO] 21:46:20:365 CPU/(289564:289565): Comenzar ejecucion del proceso: 5.
+[INFO] 21:46:20:365 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:365 CPU/(289564:289565): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 21:46:20:367 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:367 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:367 CPU/(289564:289565): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 21:46:20:367 CPU/(289564:289565): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:46:20:406 CPU/(289564:289565): Datos enviados correctamente
+[INFO] 21:46:20:450 CPU/(289564:289565): Comenzar ejecucion del proceso: 9.
+[INFO] 21:46:20:450 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:450 CPU/(289564:289565): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 21:46:20:452 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:452 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:452 CPU/(289564:289565): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 21:46:20:452 CPU/(289564:289565): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:46:20:494 CPU/(289564:289565): Datos enviados correctamente
+[INFO] 21:46:20:538 CPU/(289564:289565): Comenzar ejecucion del proceso: 10.
+[INFO] 21:46:20:538 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:538 CPU/(289564:289565): PID: 10 - Ejecutando: SET AX PERO
+[INFO] 21:46:20:539 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:539 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:540 CPU/(289564:289565): PID: 10 - Ejecutando: WAIT DISCO
+[INFO] 21:46:20:540 CPU/(289564:289565): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:46:20:582 CPU/(289564:289565): Datos enviados correctamente
+[INFO] 21:46:20:626 CPU/(289564:289565): Comenzar ejecucion del proceso: 11.
+[INFO] 21:46:20:627 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:627 CPU/(289564:289565): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 21:46:20:628 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:628 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:628 CPU/(289564:289565): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 21:46:20:628 CPU/(289564:289565): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:46:20:672 CPU/(289564:289565): Datos enviados correctamente
+[INFO] 21:46:20:715 CPU/(289564:289565): Comenzar ejecucion del proceso: 5.
+[INFO] 21:46:20:715 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:46:20:715 CPU/(289564:289565): PID: 5 - Ejecutando: I/O 10
+[INFO] 21:46:20:715 CPU/(289564:289565): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:46:20:759 CPU/(289564:289565): Datos enviados correctamente
+[INFO] 21:47:15:737 CPU/(289564:289565): Comenzar ejecucion del proceso: 5.
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 21:47:15:737 CPU/(289564:289565): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:47:15:737 CPU/(289564:289565): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:47:15:737 CPU/(289564:289565): Me llego el mensaje I]-R
+[INFO] 21:47:15:737 CPU/(289564:289565): Comenzar ejecucion del proceso: 5.
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): PID: 5 - Ejecutando: YIELD
+[INFO] 21:47:15:737 CPU/(289564:289565): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:47:15:737 CPU/(289564:289565): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:47:15:737 CPU/(289564:289565): Comenzar ejecucion del proceso: 5.
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): Instruccion Ejecutada
+[INFO] 21:47:15:737 CPU/(289564:289565): PID: 5 - Ejecutando: EXIT
+[INFO] 21:47:15:738 CPU/(289564:289565): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:47:15:738 CPU/(289564:289565): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:47:15:738 CPU/(289564:289565): Comenzar ejecucion del proceso: 5.
+[INFO] 21:52:54:322 CPU/(290256:290256): Logger creado
+[INFO] 21:52:54:322 CPU/(290256:290256): -------Valores del config-------
+[INFO] 21:52:54:322 CPU/(290256:290256): Retardo InstrucciÃ³n = 1000
+[INFO] 21:52:54:322 CPU/(290256:290256): IP Memoria = 127.0.0.1
+[INFO] 21:52:54:322 CPU/(290256:290256): Puerto Memoria = 8003
+[INFO] 21:52:54:322 CPU/(290256:290256): Puerto Escucha = 8001
+[INFO] 21:52:54:322 CPU/(290256:290256): Tamanio maximo de segmentos = (null)
+[INFO] 21:52:54:322 CPU/(290256:290256): --------------------------------
+[INFO] 21:52:54:322 CPU/(290256:290256): Â¡CPU iniciado correctamente!
+[TRACE] 21:52:54:322 CPU/(290256:290256): Listo para escuchar a mi cliente
+[INFO] 21:52:54:322 CPU/(290256:290256): Servidor listo para recibir al cliente
+[INFO] 21:52:54:322 CPU/(290256:290258): Conexion establecida con Memoria
+[INFO] 21:52:57:054 CPU/(290256:290257): Se conecto un cliente!
+[INFO] 21:52:57:055 CPU/(290256:290257): Me llego el mensaje Soy el Kernel
+[INFO] 21:53:07:054 CPU/(290256:290257): Comenzar ejecucion del proceso: 5.
+[INFO] 21:53:07:054 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:054 CPU/(290256:290257): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 21:53:07:056 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:056 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:056 CPU/(290256:290257): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 21:53:07:056 CPU/(290256:290257): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:53:07:095 CPU/(290256:290257): Datos enviados correctamente
+[INFO] 21:53:07:139 CPU/(290256:290257): Comenzar ejecucion del proceso: 9.
+[INFO] 21:53:07:139 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:139 CPU/(290256:290257): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 21:53:07:140 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:140 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:140 CPU/(290256:290257): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 21:53:07:140 CPU/(290256:290257): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:53:07:183 CPU/(290256:290257): Datos enviados correctamente
+[INFO] 21:53:07:226 CPU/(290256:290257): Comenzar ejecucion del proceso: 10.
+[INFO] 21:53:07:226 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:226 CPU/(290256:290257): PID: 10 - Ejecutando: SET AX PERO
+[INFO] 21:53:07:227 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:227 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:227 CPU/(290256:290257): PID: 10 - Ejecutando: WAIT DISCO
+[INFO] 21:53:07:227 CPU/(290256:290257): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:53:07:270 CPU/(290256:290257): Datos enviados correctamente
+[INFO] 21:53:07:314 CPU/(290256:290257): Comenzar ejecucion del proceso: 11.
+[INFO] 21:53:07:314 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:314 CPU/(290256:290257): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 21:53:07:316 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:316 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:316 CPU/(290256:290257): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 21:53:07:316 CPU/(290256:290257): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:53:07:359 CPU/(290256:290257): Datos enviados correctamente
+[INFO] 21:53:07:403 CPU/(290256:290257): Comenzar ejecucion del proceso: 5.
+[INFO] 21:53:07:403 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:53:07:403 CPU/(290256:290257): PID: 5 - Ejecutando: I/O 10
+[INFO] 21:53:07:404 CPU/(290256:290257): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:54:17:915 CPU/(290256:290257): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:54:17:919 CPU/(290256:290257): Comenzar ejecucion del proceso: 5.
+[INFO] 21:54:17:919 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:919 CPU/(290256:290257): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 21:54:17:920 CPU/(290256:290257): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:54:17:920 CPU/(290256:290257): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:54:17:920 CPU/(290256:290257): Me llego el mensaje IßPùÒ
+[INFO] 21:54:17:920 CPU/(290256:290257): Comenzar ejecucion del proceso: 5.
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): PID: 5 - Ejecutando: YIELD
+[INFO] 21:54:17:920 CPU/(290256:290257): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:54:17:920 CPU/(290256:290257): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:54:17:920 CPU/(290256:290257): Comenzar ejecucion del proceso: 5.
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): Instruccion Ejecutada
+[INFO] 21:54:17:920 CPU/(290256:290257): PID: 5 - Ejecutando: EXIT
+[INFO] 21:54:17:920 CPU/(290256:290257): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:54:17:920 CPU/(290256:290257): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:54:17:920 CPU/(290256:290257): Comenzar ejecucion del proceso: 5.
+[INFO] 21:55:33:009 CPU/(290605:290605): Logger creado
+[INFO] 21:55:33:010 CPU/(290605:290605): -------Valores del config-------
+[INFO] 21:55:33:010 CPU/(290605:290605): Retardo InstrucciÃ³n = 1000
+[INFO] 21:55:33:010 CPU/(290605:290605): IP Memoria = 127.0.0.1
+[INFO] 21:55:33:010 CPU/(290605:290605): Puerto Memoria = 8003
+[INFO] 21:55:33:010 CPU/(290605:290605): Puerto Escucha = 8001
+[INFO] 21:55:33:010 CPU/(290605:290605): Tamanio maximo de segmentos = (null)
+[INFO] 21:55:33:010 CPU/(290605:290605): --------------------------------
+[INFO] 21:55:33:010 CPU/(290605:290605): Â¡CPU iniciado correctamente!
+[TRACE] 21:55:33:010 CPU/(290605:290605): Listo para escuchar a mi cliente
+[INFO] 21:55:33:010 CPU/(290605:290605): Servidor listo para recibir al cliente
+[INFO] 21:55:33:010 CPU/(290605:290607): Conexion establecida con Memoria
+[INFO] 21:55:35:804 CPU/(290605:290606): Se conecto un cliente!
+[INFO] 21:55:35:804 CPU/(290605:290606): Me llego el mensaje Soy el Kernel
+[INFO] 21:55:45:805 CPU/(290605:290606): Comenzar ejecucion del proceso: 5.
+[INFO] 21:55:45:805 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:45:805 CPU/(290605:290606): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 21:55:45:806 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:45:806 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:45:806 CPU/(290605:290606): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 21:55:45:806 CPU/(290605:290606): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:55:45:847 CPU/(290605:290606): Datos enviados correctamente
+[INFO] 21:55:45:891 CPU/(290605:290606): Comenzar ejecucion del proceso: 9.
+[INFO] 21:55:45:891 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:45:891 CPU/(290605:290606): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 21:55:45:892 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:45:892 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:45:892 CPU/(290605:290606): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 21:55:45:892 CPU/(290605:290606): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:55:45:934 CPU/(290605:290606): Datos enviados correctamente
+[INFO] 21:55:45:978 CPU/(290605:290606): Comenzar ejecucion del proceso: 10.
+[INFO] 21:55:45:978 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:45:978 CPU/(290605:290606): PID: 10 - Ejecutando: SET AX PERO
+[INFO] 21:55:45:979 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:45:979 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:45:979 CPU/(290605:290606): PID: 10 - Ejecutando: WAIT DISCO
+[INFO] 21:55:45:979 CPU/(290605:290606): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:55:46:023 CPU/(290605:290606): Datos enviados correctamente
+[INFO] 21:55:46:067 CPU/(290605:290606): Comenzar ejecucion del proceso: 11.
+[INFO] 21:55:46:067 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:46:067 CPU/(290605:290606): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 21:55:46:068 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:46:068 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:46:068 CPU/(290605:290606): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 21:55:46:068 CPU/(290605:290606): Datos enviados, esperando respuesta de cpu...
+[INFO] 21:55:46:110 CPU/(290605:290606): Datos enviados correctamente
+[INFO] 21:55:46:154 CPU/(290605:290606): Comenzar ejecucion del proceso: 5.
+[INFO] 21:55:46:154 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:55:46:154 CPU/(290605:290606): PID: 5 - Ejecutando: I/O 10
+[INFO] 21:55:46:154 CPU/(290605:290606): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:56:24:106 CPU/(290605:290606): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:56:24:111 CPU/(290605:290606): Comenzar ejecucion del proceso: 5.
+[INFO] 21:56:24:111 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:111 CPU/(290605:290606): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 21:56:24:111 CPU/(290605:290606): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:56:24:111 CPU/(290605:290606): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:56:24:111 CPU/(290605:290606): Me llego el mensaje IŸõ¨ˆ
+[INFO] 21:56:24:111 CPU/(290605:290606): Comenzar ejecucion del proceso: 5.
+[INFO] 21:56:24:111 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): PID: 5 - Ejecutando: YIELD
+[INFO] 21:56:24:112 CPU/(290605:290606): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:56:24:112 CPU/(290605:290606): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:56:24:112 CPU/(290605:290606): Comenzar ejecucion del proceso: 5.
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): Instruccion Ejecutada
+[INFO] 21:56:24:112 CPU/(290605:290606): PID: 5 - Ejecutando: EXIT
+[INFO] 21:56:24:112 CPU/(290605:290606): Datos enviados, esperando respuesta de cpu...
+[ERROR] 21:56:24:112 CPU/(290605:290606): Han llegado menos bytes que los enviados por cpu
+[INFO] 21:56:24:112 CPU/(290605:290606): Comenzar ejecucion del proceso: 5.
+[INFO] 22:39:05:987 CPU/(294759:294759): Logger creado
+[INFO] 22:39:05:988 CPU/(294759:294759): -------Valores del config-------
+[INFO] 22:39:05:988 CPU/(294759:294759): Retardo InstrucciÃ³n = 1000
+[INFO] 22:39:05:988 CPU/(294759:294759): IP Memoria = 127.0.0.1
+[INFO] 22:39:05:988 CPU/(294759:294759): Puerto Memoria = 8003
+[INFO] 22:39:05:988 CPU/(294759:294759): Puerto Escucha = 8001
+[INFO] 22:39:05:988 CPU/(294759:294759): Tamanio maximo de segmentos = (null)
+[INFO] 22:39:05:988 CPU/(294759:294759): --------------------------------
+[INFO] 22:39:05:988 CPU/(294759:294759): Â¡CPU iniciado correctamente!
+[TRACE] 22:39:05:988 CPU/(294759:294759): Listo para escuchar a mi cliente
+[INFO] 22:39:05:988 CPU/(294759:294759): Servidor listo para recibir al cliente
+[INFO] 22:39:05:989 CPU/(294759:294761): Conexion establecida con Memoria
+[INFO] 22:39:06:961 CPU/(294759:294760): Se conecto un cliente!
+[INFO] 22:39:06:961 CPU/(294759:294760): Me llego el mensaje Soy el Kernel
+[INFO] 22:39:16:961 CPU/(294759:294760): Comenzar ejecucion del proceso: 5.
+[INFO] 22:39:16:961 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:16:961 CPU/(294759:294760): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 22:39:16:962 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:16:962 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:16:962 CPU/(294759:294760): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 22:39:16:962 CPU/(294759:294760): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:39:17:003 CPU/(294759:294760): Datos enviados correctamente
+[INFO] 22:39:17:046 CPU/(294759:294760): Comenzar ejecucion del proceso: 5.
+[INFO] 22:39:17:046 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:17:046 CPU/(294759:294760): PID: 5 - Ejecutando: I/O 10
+[INFO] 22:39:17:046 CPU/(294759:294760): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:39:17:091 CPU/(294759:294760): Datos enviados correctamente
+[INFO] 22:39:40:778 CPU/(294759:294760): Comenzar ejecucion del proceso: 5.
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 22:39:40:779 CPU/(294759:294760): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:39:40:779 CPU/(294759:294760): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:39:40:779 CPU/(294759:294760): Me llego el mensaje ò£Ä»;
+[INFO] 22:39:40:779 CPU/(294759:294760): Comenzar ejecucion del proceso: 5.
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): PID: 5 - Ejecutando: YIELD
+[INFO] 22:39:40:779 CPU/(294759:294760): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:39:40:779 CPU/(294759:294760): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:39:40:779 CPU/(294759:294760): Comenzar ejecucion del proceso: 5.
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): Instruccion Ejecutada
+[INFO] 22:39:40:779 CPU/(294759:294760): PID: 5 - Ejecutando: EXIT
+[INFO] 22:39:40:779 CPU/(294759:294760): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:39:40:779 CPU/(294759:294760): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:39:40:779 CPU/(294759:294760): Comenzar ejecucion del proceso: 5.
+[INFO] 22:41:35:775 CPU/(295110:295110): Logger creado
+[INFO] 22:41:35:776 CPU/(295110:295110): -------Valores del config-------
+[INFO] 22:41:35:776 CPU/(295110:295110): Retardo InstrucciÃ³n = 1000
+[INFO] 22:41:35:776 CPU/(295110:295110): IP Memoria = 127.0.0.1
+[INFO] 22:41:35:776 CPU/(295110:295110): Puerto Memoria = 8003
+[INFO] 22:41:35:776 CPU/(295110:295110): Puerto Escucha = 8001
+[INFO] 22:41:35:777 CPU/(295110:295110): Tamanio maximo de segmentos = (null)
+[INFO] 22:41:35:777 CPU/(295110:295110): --------------------------------
+[INFO] 22:41:35:777 CPU/(295110:295110): Â¡CPU iniciado correctamente!
+[TRACE] 22:41:35:777 CPU/(295110:295110): Listo para escuchar a mi cliente
+[INFO] 22:41:35:777 CPU/(295110:295110): Servidor listo para recibir al cliente
+[INFO] 22:41:35:777 CPU/(295110:295112): Conexion establecida con Memoria
+[INFO] 22:41:36:332 CPU/(295110:295111): Se conecto un cliente!
+[INFO] 22:41:36:332 CPU/(295110:295111): Me llego el mensaje Soy el Kernel
+[INFO] 22:41:46:332 CPU/(295110:295111): Comenzar ejecucion del proceso: 5.
+[INFO] 22:41:46:332 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:41:46:332 CPU/(295110:295111): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 22:41:46:333 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:41:46:333 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:41:46:334 CPU/(295110:295111): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 22:41:46:334 CPU/(295110:295111): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:41:46:375 CPU/(295110:295111): Datos enviados correctamente
+[INFO] 22:41:46:419 CPU/(295110:295111): Comenzar ejecucion del proceso: 5.
+[INFO] 22:41:46:419 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:41:46:419 CPU/(295110:295111): PID: 5 - Ejecutando: I/O 10
+[INFO] 22:41:46:419 CPU/(295110:295111): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:41:46:463 CPU/(295110:295111): Datos enviados correctamente
+[INFO] 22:42:06:679 CPU/(295110:295111): Comenzar ejecucion del proceso: 5.
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 22:42:06:679 CPU/(295110:295111): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:42:06:679 CPU/(295110:295111): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:42:06:679 CPU/(295110:295111): Me llego el mensaje ò#œ3>
+[INFO] 22:42:06:679 CPU/(295110:295111): Comenzar ejecucion del proceso: 5.
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): PID: 5 - Ejecutando: YIELD
+[INFO] 22:42:06:679 CPU/(295110:295111): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:42:06:679 CPU/(295110:295111): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:42:06:679 CPU/(295110:295111): Comenzar ejecucion del proceso: 5.
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): Instruccion Ejecutada
+[INFO] 22:42:06:679 CPU/(295110:295111): PID: 5 - Ejecutando: EXIT
+[INFO] 22:42:06:679 CPU/(295110:295111): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:42:06:679 CPU/(295110:295111): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:42:06:679 CPU/(295110:295111): Comenzar ejecucion del proceso: 5.
+[INFO] 22:43:28:173 CPU/(295353:295353): Logger creado
+[INFO] 22:43:28:173 CPU/(295353:295353): -------Valores del config-------
+[INFO] 22:43:28:173 CPU/(295353:295353): Retardo InstrucciÃ³n = 1000
+[INFO] 22:43:28:173 CPU/(295353:295353): IP Memoria = 127.0.0.1
+[INFO] 22:43:28:173 CPU/(295353:295353): Puerto Memoria = 8003
+[INFO] 22:43:28:173 CPU/(295353:295353): Puerto Escucha = 8001
+[INFO] 22:43:28:174 CPU/(295353:295353): Tamanio maximo de segmentos = (null)
+[INFO] 22:43:28:174 CPU/(295353:295353): --------------------------------
+[INFO] 22:43:28:174 CPU/(295353:295353): Â¡CPU iniciado correctamente!
+[TRACE] 22:43:28:174 CPU/(295353:295353): Listo para escuchar a mi cliente
+[INFO] 22:43:28:174 CPU/(295353:295353): Servidor listo para recibir al cliente
+[INFO] 22:43:28:174 CPU/(295353:295355): Conexion establecida con Memoria
+[INFO] 22:43:28:819 CPU/(295353:295354): Se conecto un cliente!
+[INFO] 22:43:28:819 CPU/(295353:295354): Me llego el mensaje Soy el Kernel
+[INFO] 22:43:38:819 CPU/(295353:295354): Comenzar ejecucion del proceso: 5.
+[INFO] 22:43:38:819 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:43:38:819 CPU/(295353:295354): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 22:43:38:820 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:43:38:820 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:43:38:820 CPU/(295353:295354): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 22:43:38:820 CPU/(295353:295354): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:43:38:862 CPU/(295353:295354): Datos enviados correctamente
+[INFO] 22:43:38:907 CPU/(295353:295354): Comenzar ejecucion del proceso: 5.
+[INFO] 22:43:38:907 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:43:38:907 CPU/(295353:295354): PID: 5 - Ejecutando: I/O 10
+[INFO] 22:43:38:907 CPU/(295353:295354): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:44:23:518 CPU/(295353:295354): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:44:23:518 CPU/(295353:295354): Comenzar ejecucion del proceso: 5.
+[INFO] 22:44:23:518 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:518 CPU/(295353:295354): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 22:44:23:519 CPU/(295353:295354): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:44:23:519 CPU/(295353:295354): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:44:23:519 CPU/(295353:295354): Me llego el mensaje òc(w5
+[INFO] 22:44:23:519 CPU/(295353:295354): Comenzar ejecucion del proceso: 5.
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): PID: 5 - Ejecutando: YIELD
+[INFO] 22:44:23:519 CPU/(295353:295354): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:44:23:519 CPU/(295353:295354): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:44:23:519 CPU/(295353:295354): Comenzar ejecucion del proceso: 5.
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): Instruccion Ejecutada
+[INFO] 22:44:23:519 CPU/(295353:295354): PID: 5 - Ejecutando: EXIT
+[INFO] 22:44:23:519 CPU/(295353:295354): Datos enviados, esperando respuesta de cpu...
+[ERROR] 22:44:23:519 CPU/(295353:295354): Han llegado menos bytes que los enviados por cpu
+[INFO] 22:44:23:522 CPU/(295353:295354): Comenzar ejecucion del proceso: 5.
+[INFO] 22:48:53:207 CPU/(295975:295975): Logger creado
+[INFO] 22:48:53:208 CPU/(295975:295975): -------Valores del config-------
+[INFO] 22:48:53:209 CPU/(295975:295975): Retardo InstrucciÃ³n = 1000
+[INFO] 22:48:53:209 CPU/(295975:295975): IP Memoria = 127.0.0.1
+[INFO] 22:48:53:209 CPU/(295975:295975): Puerto Memoria = 8003
+[INFO] 22:48:53:209 CPU/(295975:295975): Puerto Escucha = 8001
+[INFO] 22:48:53:209 CPU/(295975:295975): Tamanio maximo de segmentos = (null)
+[INFO] 22:48:53:209 CPU/(295975:295975): --------------------------------
+[INFO] 22:48:53:209 CPU/(295975:295975): Â¡CPU iniciado correctamente!
+[TRACE] 22:48:53:209 CPU/(295975:295975): Listo para escuchar a mi cliente
+[INFO] 22:48:53:209 CPU/(295975:295975): Servidor listo para recibir al cliente
+[INFO] 22:48:53:209 CPU/(295975:295977): Conexion establecida con Memoria
+[INFO] 22:48:53:773 CPU/(295975:295976): Se conecto un cliente!
+[INFO] 22:48:53:773 CPU/(295975:295976): Me llego el mensaje Soy el Kernel
+[INFO] 22:49:03:772 CPU/(295975:295976): Comenzar ejecucion del proceso: 5.
+[INFO] 22:49:03:772 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:03:772 CPU/(295975:295976): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 22:49:03:773 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:03:773 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:03:773 CPU/(295975:295976): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 22:49:03:773 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:03:814 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:03:859 CPU/(295975:295976): Comenzar ejecucion del proceso: 9.
+[INFO] 22:49:03:859 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:03:859 CPU/(295975:295976): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 22:49:03:860 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:03:860 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:03:860 CPU/(295975:295976): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 22:49:03:860 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:03:902 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:03:946 CPU/(295975:295976): Comenzar ejecucion del proceso: 10.
+[INFO] 22:49:03:946 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:03:946 CPU/(295975:295976): PID: 10 - Ejecutando: SET AX PERO
+[INFO] 22:49:03:947 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:03:947 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:03:947 CPU/(295975:295976): PID: 10 - Ejecutando: WAIT DISCO
+[INFO] 22:49:03:947 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:03:990 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:036 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:04:036 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:036 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:04:037 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:037 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:037 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:04:037 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:078 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:122 CPU/(295975:295976): Comenzar ejecucion del proceso: 12.
+[INFO] 22:49:04:122 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:122 CPU/(295975:295976): PID: 12 - Ejecutando: SET AX HOLA
+[INFO] 22:49:04:123 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:123 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:123 CPU/(295975:295976): PID: 12 - Ejecutando: WAIT DISCO
+[INFO] 22:49:04:123 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:167 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:210 CPU/(295975:295976): Comenzar ejecucion del proceso: 5.
+[INFO] 22:49:04:210 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:210 CPU/(295975:295976): PID: 5 - Ejecutando: I/O 10
+[INFO] 22:49:04:210 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:210 CPU/(295975:295976): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:04:210 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:254 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:299 CPU/(295975:295976): Comenzar ejecucion del proceso: 5.
+[INFO] 22:49:04:299 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:299 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:299 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:299 CPU/(295975:295976): PID: 5 - Ejecutando: YIELD
+[INFO] 22:49:04:299 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:343 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:387 CPU/(295975:295976): Comenzar ejecucion del proceso: 9.
+[INFO] 22:49:04:387 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:387 CPU/(295975:295976): PID: 9 - Ejecutando: I/O 10
+[INFO] 22:49:04:387 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:387 CPU/(295975:295976): PID: 9 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:04:387 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:430 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:475 CPU/(295975:295976): Comenzar ejecucion del proceso: 9.
+[INFO] 22:49:04:475 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:475 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:475 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:475 CPU/(295975:295976): PID: 9 - Ejecutando: YIELD
+[INFO] 22:49:04:475 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:519 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:562 CPU/(295975:295976): Comenzar ejecucion del proceso: 5.
+[INFO] 22:49:04:562 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:563 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:563 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:563 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:563 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:563 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:563 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:563 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:563 CPU/(295975:295976): PID: 5 - Ejecutando: EXIT
+[INFO] 22:49:04:563 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:606 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:650 CPU/(295975:295976): Comenzar ejecucion del proceso: 10.
+[INFO] 22:49:04:650 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:650 CPU/(295975:295976): PID: 10 - Ejecutando: I/O 10
+[INFO] 22:49:04:650 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:650 CPU/(295975:295976): PID: 10 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:04:650 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:694 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:738 CPU/(295975:295976): Comenzar ejecucion del proceso: 10.
+[INFO] 22:49:04:738 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:738 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:738 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:738 CPU/(295975:295976): PID: 10 - Ejecutando: YIELD
+[INFO] 22:49:04:739 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:783 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:826 CPU/(295975:295976): Comenzar ejecucion del proceso: 9.
+[INFO] 22:49:04:826 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:826 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:826 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:826 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:826 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:826 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:826 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:826 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:826 CPU/(295975:295976): PID: 9 - Ejecutando: EXIT
+[INFO] 22:49:04:826 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:871 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:04:915 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:04:915 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:915 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:04:915 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:04:915 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:04:915 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:04:959 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:003 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:05:003 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:003 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:003 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:003 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:05:004 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:004 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:004 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:05:004 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:046 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:091 CPU/(295975:295976): Comenzar ejecucion del proceso: 12.
+[INFO] 22:49:05:091 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:091 CPU/(295975:295976): PID: 12 - Ejecutando: I/O 10
+[INFO] 22:49:05:091 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:091 CPU/(295975:295976): PID: 12 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:05:091 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:134 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:178 CPU/(295975:295976): Comenzar ejecucion del proceso: 12.
+[INFO] 22:49:05:178 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:178 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:178 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:178 CPU/(295975:295976): PID: 12 - Ejecutando: YIELD
+[INFO] 22:49:05:178 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:222 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:267 CPU/(295975:295976): Comenzar ejecucion del proceso: 10.
+[INFO] 22:49:05:267 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:267 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:267 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:267 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:267 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:267 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:267 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:267 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:267 CPU/(295975:295976): PID: 10 - Ejecutando: EXIT
+[INFO] 22:49:05:267 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:311 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:355 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:05:355 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:355 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:05:355 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:355 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:05:355 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:399 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:443 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:05:443 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:443 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:443 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:443 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:05:444 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:444 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:444 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:05:444 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:486 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:531 CPU/(295975:295976): Comenzar ejecucion del proceso: 12.
+[INFO] 22:49:05:531 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:531 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:531 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:531 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:531 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:531 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:531 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:531 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:531 CPU/(295975:295976): PID: 12 - Ejecutando: EXIT
+[INFO] 22:49:05:531 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:575 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:618 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:05:618 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:618 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:05:618 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:618 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:05:618 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:662 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:707 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:05:707 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:707 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:707 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:707 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:05:708 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:708 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:708 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:05:708 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:751 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:795 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:05:795 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:795 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:05:795 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:795 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:05:795 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:839 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:882 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:05:882 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:882 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:882 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:882 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:05:883 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:883 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:883 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:05:883 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:05:927 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:05:970 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:05:970 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:970 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:05:970 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:05:970 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:05:970 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:016 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:058 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:059 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:059 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:059 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:059 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:06:060 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:060 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:060 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:06:060 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:102 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:147 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:147 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:147 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:06:147 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:147 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:06:147 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:191 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:235 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:235 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:235 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:235 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:235 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:06:236 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:236 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:236 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:06:236 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:279 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:323 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:323 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:323 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:06:323 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:323 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:06:323 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:367 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:411 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:411 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:411 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:411 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:411 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:06:412 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:412 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:412 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:06:412 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:454 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:499 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:499 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:499 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:06:499 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:499 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:06:499 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:542 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:587 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:587 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:587 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:587 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:587 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:06:588 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:588 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:588 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:06:588 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:631 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:674 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:674 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:674 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:06:674 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:674 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:06:674 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:718 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:763 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:763 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:763 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:763 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:763 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:06:764 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:764 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:764 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:06:764 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:807 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:851 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:851 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:851 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:06:851 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:851 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:06:851 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:894 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:06:939 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:06:939 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:939 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:939 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:939 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:06:940 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:940 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:06:940 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:06:940 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:06:983 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:026 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:026 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:026 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:07:026 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:026 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:07:026 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:072 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:114 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:114 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:114 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:114 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:114 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:07:115 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:115 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:115 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:07:115 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:158 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:203 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:203 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:203 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:07:203 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:203 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:07:203 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:247 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:291 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:291 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:291 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:291 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:291 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:07:292 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:292 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:292 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:07:292 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:335 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:378 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:378 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:378 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:07:378 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:378 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:07:379 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:423 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:466 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:466 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:466 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:466 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:466 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:07:467 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:467 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:467 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:07:467 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:511 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:554 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:554 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:554 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:07:554 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:554 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:07:554 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:599 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:643 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:643 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:643 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:643 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:643 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:07:644 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:644 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:644 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:07:644 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:687 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:730 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:730 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:731 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:07:731 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:731 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:07:731 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:774 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:819 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:819 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:819 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:819 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:819 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:07:820 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:820 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:820 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:07:820 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:863 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:911 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:911 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:911 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:07:911 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:911 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:07:911 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:07:951 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:07:995 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:07:995 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:995 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:995 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:995 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:07:996 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:996 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:07:996 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:07:997 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:039 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:083 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:083 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:083 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:08:083 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:083 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:08:083 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:126 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:171 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:171 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:171 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:171 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:171 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:08:173 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:173 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:173 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:08:173 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:215 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:259 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:259 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:259 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:08:259 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:259 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:08:259 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:303 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:346 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:346 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:346 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:346 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:346 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:08:347 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:347 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:347 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:08:347 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:391 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:435 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:435 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:435 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:08:435 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:435 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:08:435 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:479 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:523 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:523 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:523 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:523 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:523 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:08:526 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:526 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:526 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:08:526 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:567 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:611 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:611 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:611 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:08:611 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:611 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:08:611 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:655 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:698 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:698 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:698 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:698 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:698 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:08:700 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:700 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:700 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:08:700 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:743 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:786 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:786 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:786 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:08:786 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:786 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:08:787 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:830 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:875 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:875 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:875 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:875 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:875 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:08:877 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:877 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:877 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:08:877 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:08:919 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:08:963 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:08:963 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:963 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:08:963 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:08:963 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:08:963 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:007 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:051 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:051 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:051 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:051 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:051 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:09:052 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:052 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:052 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:09:052 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:094 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:139 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:139 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:139 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:09:139 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:139 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:09:139 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:182 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:227 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:227 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:227 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:227 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:227 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:09:228 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:228 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:228 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:09:228 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:270 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:315 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:315 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:315 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:09:315 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:315 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:09:315 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:358 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:402 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:402 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:402 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:402 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:402 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:09:403 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:403 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:403 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:09:403 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:446 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:492 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:492 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:492 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:09:492 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:492 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:09:492 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:535 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:579 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:579 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:579 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:579 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:579 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:09:580 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:580 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:580 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:09:580 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:623 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:667 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:667 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:667 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:09:667 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:667 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:09:667 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:710 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:755 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:755 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:755 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:755 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:755 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:09:756 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:756 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:756 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:09:756 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:800 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:843 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:843 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:843 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:09:843 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:843 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:09:843 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:887 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:09:931 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:09:931 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:931 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:931 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:931 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:09:932 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:932 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:09:932 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:09:932 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:09:975 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:019 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:019 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:019 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:10:019 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:019 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:10:019 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:063 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:106 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:106 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:106 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:106 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:106 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:10:107 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:107 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:107 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:10:107 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:150 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:194 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:194 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:194 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:10:194 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:194 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:10:194 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:239 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:283 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:283 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:283 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:283 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:283 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:10:285 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:285 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:285 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:10:285 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:327 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:371 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:371 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:371 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:10:371 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:371 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:10:371 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:414 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:458 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:458 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:458 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:458 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:458 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:10:460 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:460 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:460 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:10:460 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:503 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:547 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:547 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:547 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:10:547 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:547 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:10:547 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:591 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:635 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:635 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:635 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:635 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:635 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:10:636 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:636 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:636 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:10:636 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:679 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:723 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:723 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:723 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:10:723 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:723 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:10:723 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:767 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:810 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:810 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:810 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:810 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:810 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:10:812 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:812 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:812 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:10:812 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:855 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:898 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:898 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:898 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:10:898 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:898 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:10:898 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:10:943 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:10:986 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:10:986 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:986 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:986 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:986 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:10:988 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:988 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:10:988 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:10:988 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:031 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:075 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:075 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:075 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:11:075 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:075 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:11:075 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:118 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:163 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:163 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:163 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:163 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:163 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:11:164 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:164 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:164 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:11:164 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:207 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:251 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:251 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:251 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:11:251 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:251 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:11:251 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:294 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:339 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:339 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:339 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:339 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:339 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:11:340 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:340 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:340 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:11:340 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:382 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:427 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:427 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:427 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:11:427 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:427 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:11:427 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:470 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:514 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:514 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:514 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:514 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:514 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:11:516 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:516 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:516 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:11:516 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:560 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:603 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:603 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:603 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:11:603 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:603 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:11:603 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:647 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:690 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:690 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:690 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:690 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:690 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:11:691 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:691 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:691 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:11:691 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:735 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:778 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:778 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:778 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:11:778 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:778 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:11:778 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:823 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:867 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:867 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:867 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:867 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:867 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:11:869 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:869 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:869 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:11:869 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:911 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:11:954 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:11:954 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:954 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:11:954 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:11:954 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:11:954 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:11:999 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:042 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:042 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:042 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:042 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:042 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:12:043 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:043 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:043 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:12:044 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:086 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:131 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:131 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:131 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:12:131 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:131 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:12:131 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:176 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:219 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:219 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:219 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:219 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:219 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:12:220 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:220 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:220 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:12:220 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:263 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:306 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:306 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:306 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:12:306 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:306 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:12:306 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:351 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:395 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:395 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:395 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:395 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:395 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:12:396 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:396 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:396 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:12:396 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:439 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:483 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:483 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:483 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:12:483 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:483 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:12:483 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:527 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:571 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:571 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:571 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:571 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:571 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:12:572 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:572 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:572 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:12:572 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:614 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:659 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:659 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:659 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:12:659 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:659 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:12:659 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:703 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:747 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:747 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:747 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:747 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:747 CPU/(295975:295976): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 22:49:12:748 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:748 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:748 CPU/(295975:295976): PID: 11 - Ejecutando: WAIT DISCO
+[INFO] 22:49:12:748 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:791 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:835 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:835 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:835 CPU/(295975:295976): PID: 11 - Ejecutando: I/O 10
+[INFO] 22:49:12:835 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:835 CPU/(295975:295976): PID: 11 - Ejecutando: SIGNAL DISCO
+[INFO] 22:49:12:835 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:878 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:12:922 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:12:922 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:922 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:923 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:12:923 CPU/(295975:295976): PID: 11 - Ejecutando: YIELD
+[INFO] 22:49:12:923 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:12:967 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:13:011 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
+[INFO] 22:49:13:011 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:13:011 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:13:011 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:13:011 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:13:011 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:13:011 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:13:011 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:13:011 CPU/(295975:295976): Instruccion Ejecutada
+[INFO] 22:49:13:011 CPU/(295975:295976): PID: 11 - Ejecutando: EXIT
+[INFO] 22:49:13:011 CPU/(295975:295976): Datos enviados, esperando respuesta de cpu...
+[INFO] 22:49:13:055 CPU/(295975:295976): Datos enviados correctamente
+[INFO] 22:49:18:722 CPU/(295975:295976): Comenzar ejecucion del proceso: 11.
