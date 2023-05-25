@@ -61,12 +61,14 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			salida = 0;
 			break;
 		case SIGNAL:
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s", contexto_de_ejecucion->pid,
+																   codigo_instruccion_string(instruccion->codigo_instruccion),
+																   instruccion->parametro[0]);
 
-
-
-
-
-
+			char str1[30] = "SIGNAL ";
+			strcat(str1, instruccion->parametro[0]);
+			enviarContexto(str1);
+			salida = 0;
 			break;
 		case CREATE_SEGMENT:break;
 		case DELETE_SEGMENT:break;

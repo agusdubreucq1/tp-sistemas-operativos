@@ -71,6 +71,9 @@
 	t_list* lista_ready;
 	t_list* lista_recursos;
 
+	int devolver_ejecucion;
+	t_pcb* pcb_ejecutando;
+
 	sem_t semaforo_multiprogramacion;
 	sem_t cantidad_procesos_new;
 	sem_t cantidad_procesos_ready;

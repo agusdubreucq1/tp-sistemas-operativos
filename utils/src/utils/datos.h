@@ -101,7 +101,7 @@ typedef struct contexto_ejecucion {
 
 
 typedef struct recurso{
-	uint32_t cantidad;
+	int cantidad;
 	char nombre[20];
 	t_list* listaBloqueados;
 } t_recurso;

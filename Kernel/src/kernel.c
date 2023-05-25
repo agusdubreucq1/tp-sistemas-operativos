@@ -117,6 +117,8 @@ void init_estructuras_planificacion(){
     lista_ready = list_create();
     lista_recursos = list_create();
 
+    devolver_ejecucion = 0;
+
     int i = 0;
 	char** ptr = recursos;
 	for (char* c = *ptr; c; c=*++ptr) {
@@ -166,9 +168,17 @@ void planificarCortoPlazoFIFO(){
 		if(!(strcmp(algoritmo_planificacion, "FIFO"))){
 			sem_wait(&cantidad_procesos_ready);
 			pthread_mutex_lock(&semaforo_ready);
-			t_pcb* pcb_a_ejecutar = list_remove(lista_ready, 0);
+			t_pcb* pcb_a_ejecutar;
+			if (devolver_ejecucion == 1){
+				list_remove_element(lista_ready, pcb_ejecutando);
+				pcb_a_ejecutar = pcb_ejecutando;
+				devolver_ejecucion = 0;
+			} else {
+				pcb_a_ejecutar = list_remove(lista_ready, 0);
+			}
 			pthread_mutex_unlock(&semaforo_ready);
 			pthread_mutex_lock(&semaforo_execute);
+
 			enviar_pcb(pcb_a_ejecutar);
 			recibir_mensaje_cpu(pcb_a_ejecutar);
 			//print_pcb(pcb_a_ejecutar);
@@ -178,7 +188,14 @@ void planificarCortoPlazoFIFO(){
 		} else{
 			sem_wait(&cantidad_procesos_ready);
 			pthread_mutex_lock(&semaforo_ready);
-			t_pcb* pcb_a_ejecutar = tcb_elegido_HRRN();
+			t_pcb* pcb_a_ejecutar;
+			if (devolver_ejecucion == 1){
+				list_remove_element(lista_ready, pcb_ejecutando);
+				pcb_a_ejecutar = pcb_ejecutando;
+				devolver_ejecucion = 0;
+			} else {
+				pcb_a_ejecutar = tcb_elegido_HRRN();
+			}
 			pthread_mutex_unlock(&semaforo_ready);
 			pthread_mutex_lock(&semaforo_execute);
 			enviar_pcb(pcb_a_ejecutar);
@@ -231,7 +248,7 @@ void enviar_pcb(t_pcb* pcb){
 	printf("\n pcb a ejecutar:\n\n");
 	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
 
-	enviar_paquete(paquete, socket_cpu, kernel_logger, "kernel");
+	enviar_paquete(paquete, socket_cpu, kernel_logger, "cpu");
 }
 
 void recibir_mensaje_cpu(t_pcb* pcb){
@@ -283,7 +300,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		printf("ejecutando exit");
 		enviar_mensaje("-1", pcb->pid);
 		liberar_conexion(pcb->pid);
-	}else if(strstr(motivo, "WAIT") != NULL){
+	} else if(strstr(motivo, "WAIT") != NULL){
 		estimar_rafaga(pcb);
 		printf("ejecutando %s", motivo);
 		char** parametros = string_split(motivo, " ");
@@ -294,15 +311,31 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 			pcb->estado = EXITT;
 			enviar_mensaje("-1", pcb->pid);
 			liberar_conexion(pcb->pid);
+		} else {
+			descontar_recurso(list_get(lista_recursos, existe), pcb);
+			imprimir_recurso(list_get(lista_recursos, existe));
 		}
-
-		imprimir_recurso(list_get(lista_recursos, existe));
-		descontar_recurso(list_get(lista_recursos, existe), pcb);
-		//ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
-		//sem_post(&cantidad_procesos_ready);
 		printf("ejecutando wait");
-		//enviar_mensaje("-1", pcb->pid);
-		//liberar_conexion(pcb->pid);
+	} else if(strstr(motivo, "SIGNAL") != NULL){
+		estimar_rafaga(pcb);
+		printf("ejecutando %s", motivo);
+		char** parametros = string_split(motivo, " ");
+		int existe = recurso_existe(parametros[1]);
+
+		if (existe == -1){
+			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
+			pcb->estado = EXITT;
+			enviar_mensaje("-1", pcb->pid);
+			liberar_conexion(pcb->pid);
+		} else {
+			ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+			devolver_ejecucion = 1;
+			pcb_ejecutando = pcb;
+			sem_post(&cantidad_procesos_ready);
+			sumar_recurso(list_get(lista_recursos, existe));
+			imprimir_recurso(list_get(lista_recursos, existe));
+		}
+		printf("ejecutando signal");
 	}
 }
 

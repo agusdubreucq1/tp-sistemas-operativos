@@ -30,5 +30,6 @@
 
 	int recurso_existe(char nombre[20]);
 	void descontar_recurso(t_recurso* recurso, t_pcb* pcb);
+	void sumar_recurso(t_recurso* recurso);
 
 #endif /* RECURSOS_H_ */

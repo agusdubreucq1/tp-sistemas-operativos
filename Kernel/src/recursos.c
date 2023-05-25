@@ -25,8 +25,19 @@ void descontar_recurso(t_recurso* recurso, t_pcb* pcb){
 	if (recurso->cantidad < 0){
 		list_add(recurso->listaBloqueados, pcb);
 		pcb->estado = BLOCKED;
+		printf("\n\n\n\n\n\nBLOQUEADOOOOOOOOOOOO\n\n\n\n\n");
 	} else {
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+		sem_post(&cantidad_procesos_ready);
+	}
+}
+
+void sumar_recurso(t_recurso* recurso){
+	recurso->cantidad += 1;
+	if (list_size(recurso->listaBloqueados) > 0){
+		t_pcb* pcb_bloqueado = list_remove(recurso->listaBloqueados, 0);
+		ingresar_en_lista(pcb_bloqueado, lista_ready, "READY", &semaforo_ready, READY);
+		printf("\n\n\n\n\n\nDESBLOQUEADOOOOOOOOOOOO\n\n\n\n\n");
 		sem_post(&cantidad_procesos_ready);
 	}
 }

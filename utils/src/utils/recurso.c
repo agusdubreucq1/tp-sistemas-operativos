@@ -7,7 +7,7 @@
 
 #include "recurso.h"
 
-t_recurso* crear_recurso(char nombre[20], uint32_t cantidad){
+t_recurso* crear_recurso(char nombre[20], int cantidad){
 	t_recurso* recurso = malloc(sizeof(t_recurso));
 	strcpy(recurso->nombre,nombre);
 	recurso->cantidad = cantidad;
@@ -18,6 +18,6 @@ t_recurso* crear_recurso(char nombre[20], uint32_t cantidad){
 
 void imprimir_recurso(t_recurso* recurso){
 	printf("Recurso: %s", recurso->nombre);
-	printf("Cantidad: %d", recurso->cantidad);
+	printf("Cantidad: %i", recurso->cantidad);
 	//printf("Procesos Bloqueados: \n");
 }
