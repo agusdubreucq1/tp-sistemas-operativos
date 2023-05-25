@@ -100,6 +100,10 @@ typedef struct contexto_ejecucion {
 }t_contexto_ejecucion;
 
 
-
+typedef struct recurso{
+	uint32_t cantidad;
+	char nombre[20];
+	t_list* listaBloqueados;
+} t_recurso;
 
 #endif /* SRC_DATOS_H_ */

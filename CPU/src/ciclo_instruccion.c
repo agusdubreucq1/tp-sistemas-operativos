@@ -55,11 +55,9 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   codigo_instruccion_string(instruccion->codigo_instruccion),
 																   instruccion->parametro[0]);
 
-			char* string = "WAIT ";
-			strcat(string, instruccion->parametro[0]);
-			printf("%s", string);
-			enviarContexto(string);
-			free(string);
+			char str[30] = "WAIT ";
+			strcat(str, instruccion->parametro[0]);
+			enviarContexto(str);
 			salida = 0;
 			break;
 		case SIGNAL:

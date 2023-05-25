@@ -115,6 +115,18 @@ void* recibirProcesos(int* p_conexion) {
 void init_estructuras_planificacion(){
     lista_new = list_create();
     lista_ready = list_create();
+    lista_recursos = list_create();
+
+    int i = 0;
+	char** ptr = recursos;
+	for (char* c = *ptr; c; c=*++ptr) {
+		char str[20] = "";
+		strcat(str, c);
+		uint32_t cantidad = atoi(instancias_recursos[i]);
+		t_recurso* recurso = crear_recurso(str,cantidad);
+		list_add(lista_recursos, recurso);
+		i++;
+	}
 
     hora_inicio = (long long)tiempo.tv_sec * 1000 + (long long)tiempo.tv_usec / 1000;
     sem_init(&semaforo_multiprogramacion, 0, grado_maximo_multiprogramacion);
@@ -148,11 +160,10 @@ void planificarLargoPlazo(){
 }
 
 void planificarCortoPlazoFIFO(){
-	sleep(20);
+	sleep(10);
 
 	while(1){
 		if(!(strcmp(algoritmo_planificacion, "FIFO"))){
-			//sleep(5);
 			sem_wait(&cantidad_procesos_ready);
 			pthread_mutex_lock(&semaforo_ready);
 			t_pcb* pcb_a_ejecutar = list_remove(lista_ready, 0);
@@ -188,9 +199,9 @@ t_pcb* tcb_elegido_HRRN(){
 		gettimeofday(&hora_actual, NULL);
 		int tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000) - pcb->tiempo_ready;
 
-		printf("PCB %i\n", pcb->pid);
-		printf("tiempo %d\n", tiempo);
-		printf("estimado %d\n", pcb->estimado_rafaga);
+		//printf("PCB %i\n", pcb->pid);
+		//printf("tiempo %d\n", tiempo);
+		//printf("estimado %d\n", pcb->estimado_rafaga);
 
 		float ratio = ((float) (pcb->estimado_rafaga + tiempo)) / (float) pcb->estimado_rafaga;
 		if (ratio > ratio_mayor){
@@ -198,7 +209,7 @@ t_pcb* tcb_elegido_HRRN(){
 			tcb_index = i;
 		}
 
-		printf("ratio %f\n\n", ratio);
+		//printf("ratio %f\n\n", ratio);
 
 	}
 
@@ -262,31 +273,48 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 	if(strcmp(motivo, "YIELD")==0){
 		//agregar al final de la lista ready
-		uint32_t tiempo_viejo = pcb->tiempo_ready;
-		uint32_t estimado_viejo = pcb->estimado_rafaga;
-		struct timeval tiempo;
-		gettimeofday(&tiempo, NULL);
-		pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
-		float alpha = 1 - hrrn_alfa;
-		pcb->estimado_rafaga = (alpha * estimado_viejo + hrrn_alfa * (pcb->tiempo_ready - tiempo_viejo));
-
+		estimar_rafaga(pcb);
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
 		sem_post(&cantidad_procesos_ready);
 		printf("ejecutando yield");
 
-	}else if(strstr(motivo, "WAIT") != NULL){
-		//pcb->estado = EXITT;
-		printf("ejecutando %s", motivo);
-		//enviar_mensaje("-1", pcb->pid);
-		//liberar_conexion(pcb->pid);
-	}else if(strcmp(motivo, "EXIT")==0){
+	}else if(strcmp(motivo, "EXIT") == 0){
 		pcb->estado = EXITT;
 		printf("ejecutando exit");
 		enviar_mensaje("-1", pcb->pid);
 		liberar_conexion(pcb->pid);
+	}else if(strstr(motivo, "WAIT") != NULL){
+		estimar_rafaga(pcb);
+		printf("ejecutando %s", motivo);
+		char** parametros = string_split(motivo, " ");
+		int existe = recurso_existe(parametros[1]);
+
+		if (existe == -1){
+			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
+			pcb->estado = EXITT;
+			enviar_mensaje("-1", pcb->pid);
+			liberar_conexion(pcb->pid);
+		}
+
+		imprimir_recurso(list_get(lista_recursos, existe));
+		descontar_recurso(list_get(lista_recursos, existe), pcb);
+		//ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+		//sem_post(&cantidad_procesos_ready);
+		printf("ejecutando wait");
+		//enviar_mensaje("-1", pcb->pid);
+		//liberar_conexion(pcb->pid);
 	}
 }
 
+void estimar_rafaga(t_pcb* pcb){
+	uint32_t tiempo_viejo = pcb->tiempo_ready;
+	uint32_t estimado_viejo = pcb->estimado_rafaga;
+	struct timeval tiempo;
+	gettimeofday(&tiempo, NULL);
+	pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
+	float alpha = 1 - hrrn_alfa;
+	pcb->estimado_rafaga = (alpha * estimado_viejo + hrrn_alfa * (pcb->tiempo_ready - tiempo_viejo));
+}
 
 
 void cerrar_conexiones(){

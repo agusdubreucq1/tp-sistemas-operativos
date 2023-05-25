@@ -12,6 +12,7 @@
 #include <unistd.h>
 #include <utils/cliente.h>
 #include <utils/serializar.h>
+#include <string.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --

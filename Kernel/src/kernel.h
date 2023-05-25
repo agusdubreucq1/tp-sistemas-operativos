@@ -3,6 +3,7 @@
 
 
 #include "config.h"
+#include "recursos.h"
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,6 +20,8 @@
 #include <utils/serializar.h>
 #include <utils/deserializar.h>
 #include <sys/time.h>
+#include <utils/recurso.h>
+
 
 #define IP_SERVER "127.0.0.1"
 
@@ -66,6 +69,7 @@
 
 	t_list* lista_new;
 	t_list* lista_ready;
+	t_list* lista_recursos;
 
 	sem_t semaforo_multiprogramacion;
 	sem_t cantidad_procesos_new;
@@ -95,6 +99,7 @@
 	void recibir_mensaje_cpu(t_pcb* pcb);
 	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
 	t_pcb* tcb_elegido_HRRN();
+	void estimar_rafaga(t_pcb* pcb);
 
 
 
