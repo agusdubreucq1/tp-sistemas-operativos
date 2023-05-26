@@ -50,8 +50,8 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 			char str2[30] = "I_O ";
 			strcat(str2, instruccion->parametro[0]);
-			//enviarContexto(str2);
-			//salida = 0;
+			enviarContexto(str2);
+			salida = 0;
 			break;
 		case F_OPEN:   		break;
 		case F_CLOSE:  		break;

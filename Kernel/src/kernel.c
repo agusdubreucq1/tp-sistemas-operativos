@@ -354,19 +354,20 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 
 		printf("PERRO");
 		pthread_create(&io_procesos, NULL,(void*) ejecutar_io, argumentos_hilo);
-		pthread_detach(io_procesos);
-		pth
+		//pthread_detach(io_procesos);
+		pthread_join(io_procesos, NULL);
 
 		free(argumentos_hilo);
 		printf("ejecutando I-O");
 	}
 }
 
-void ejecutar_io(t_pcb* pcb, int duracion){
-	printf("BBBBBB PID %u", pcb->pid);
-	sleep(duracion);
+void ejecutar_io(t_thread_args* args){
+	printf("GUGUGUGUGUGUGUGU PID %u\n\n\n\n", args->pcb->pid);
+	sleep(args->duracion);
+	printf("ASASASASASASASAS PID %u\n\n\n\n", args->pcb->pid);
 	sem_wait(&semaforo_multiprogramacion);
-	ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+	ingresar_en_lista(args->pcb, lista_ready, "READY", &semaforo_ready, READY);
 	sem_post(&cantidad_procesos_ready);
 	printf("HAIVA");
 }

@@ -106,7 +106,7 @@
 	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
 	t_pcb* tcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
-	void ejecutar_io(t_pcb* pcb, int duracion);
+	void ejecutar_io(t_thread_args* args);
 
 
 
