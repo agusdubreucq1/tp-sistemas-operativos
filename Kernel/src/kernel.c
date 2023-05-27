@@ -291,11 +291,11 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 
 void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 
-	int num_instruccion = obtener_codigo_instruccion(string_split(motivo, " ")[0]);
+	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(string_split(motivo, " ")[0]);
 	char** parametros = string_split(motivo, " ");
 	int existe = recurso_existe(parametros[1]);
 
-	switch(num_instruccion) {
+	switch(cod_instruccion) {
 
 	case YIELD:
 		estimar_rafaga(pcb);
