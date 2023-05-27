@@ -292,8 +292,8 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 
 	int num_instruccion = obtener_codigo_instruccion(string_split(motivo, " ")[0]);
-	int existe = recurso_existe(parametros[1]);
 	char** parametros = string_split(motivo, " ");
+	int existe = recurso_existe(parametros[1]);
 
 	switch(num_instruccion) {
 
