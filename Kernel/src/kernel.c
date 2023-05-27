@@ -403,6 +403,7 @@ void cerrar_conexiones(){
 	printf("cerre conexiones");
 	exit(1);
 }
+}
 
 
 /*
