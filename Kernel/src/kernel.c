@@ -371,6 +371,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		break;
 
 	}
+}
 
 void ejecutar_io(t_thread_args* args){
 	printf("GUGUGUGUGUGUGUGU PID %u\n\n\n\n", args->pcb->pid);
@@ -402,7 +403,6 @@ void cerrar_conexiones(){
 	close(socket_fileSystem);
 	printf("cerre conexiones");
 	exit(1);
-}
 }
 
 
