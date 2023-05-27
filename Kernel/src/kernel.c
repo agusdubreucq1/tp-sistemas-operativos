@@ -291,9 +291,13 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 
 void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 
-	switch(string_split(motivo, " ")[0]) {
+	int num_instruccion = obtener_codigo_instruccion(string_split(motivo, " ")[0]);
+	int existe = recurso_existe(parametros[1]);
+	char** parametros = string_split(motivo, " ");
 
-	case "YIELD":
+	switch(num_instruccion) {
+
+	case YIELD:
 		estimar_rafaga(pcb);
 		sem_wait(&semaforo_multiprogramacion);
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
@@ -301,18 +305,16 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		printf("ejecutando yield");
 		break;
 
-	case "EXIT":
+	case EXIT:
 		pcb->estado = EXITT;
 		printf("ejecutando exit");
 		enviar_mensaje("-1", pcb->pid);
 		liberar_conexion(pcb->pid);
 		break;
 
-	case "WAIT":
+	case WAIT:
 		estimar_rafaga(pcb);
 		printf("ejecutando %s", motivo);
-		char** parametros = string_split(motivo, " ");
-		int existe = recurso_existe(parametros[1]);
 
 		if (existe == -1){
 			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
@@ -327,11 +329,9 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		printf("ejecutando wait");
 		break;
 
-	case "SIGNAL":
+	case SIGNAL:
 		estimar_rafaga(pcb);
 		printf("ejecutando %s", motivo);
-		char** parametros = string_split(motivo, " ");
-		int existe = recurso_existe(parametros[1]);
 
 		if (existe == -1){
 			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
@@ -350,12 +350,11 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		printf("ejecutando signal");
 		break;
 
-	case "I_O":
+	case I_O:
 		printf("BUDBUEDBUEBDUEBD\n\n\n\n\n\n");
 		estimar_rafaga(pcb);
 		pcb->estado = BLOCKED;
 		printf("ejecutando %s", motivo);
-		char** parametros = string_split(motivo, " ");
 		int tiempo = atoi(parametros[1]);
 
 		t_thread_args* argumentos_hilo = malloc(sizeof(t_thread_args));

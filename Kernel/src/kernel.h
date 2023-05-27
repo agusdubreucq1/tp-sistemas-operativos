@@ -15,6 +15,7 @@
 #include <utils/cliente.h>
 #include <utils/datos.h>
 #include <utils/pcb.h>
+#include <utils/instruccion.h>
 #include <commons/collections/list.h>
 #include "planificador_largo_plazo.h"
 #include <utils/serializar.h>
