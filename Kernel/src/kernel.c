@@ -290,40 +290,48 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 }
 
 void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
-	if(strcmp(motivo, "YIELD")==0){
-		//agregar al final de la lista ready
+
+	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(string_split(motivo, " ")[0]);
+	char** parametros = string_split(motivo, " ");
+	int existe = recurso_existe(parametros[1]);
+
+	switch(cod_instruccion) {
+
+	case YIELD:
 		estimar_rafaga(pcb);
 		sem_wait(&semaforo_multiprogramacion);
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
 		sem_post(&cantidad_procesos_ready);
 		printf("ejecutando yield");
+		break;
 
-	}else if(strcmp(motivo, "EXIT") == 0){
+	case EXIT:
 		pcb->estado = EXITT;
 		printf("ejecutando exit");
 		enviar_mensaje("-1", pcb->pid);
 		liberar_conexion(pcb->pid);
-	} else if(strstr(motivo, "WAIT") != NULL){
+		break;
+
+	case WAIT:
 		estimar_rafaga(pcb);
 		printf("ejecutando %s", motivo);
-		char** parametros = string_split(motivo, " ");
-		int existe = recurso_existe(parametros[1]);
 
 		if (existe == -1){
 			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
 			pcb->estado = EXITT;
 			enviar_mensaje("-1", pcb->pid);
 			liberar_conexion(pcb->pid);
-		} else {
+		}
+		else {
 			descontar_recurso(list_get(lista_recursos, existe), pcb);
 			imprimir_recurso(list_get(lista_recursos, existe));
 		}
 		printf("ejecutando wait");
-	} else if(strstr(motivo, "SIGNAL") != NULL){
+		break;
+
+	case SIGNAL:
 		estimar_rafaga(pcb);
 		printf("ejecutando %s", motivo);
-		char** parametros = string_split(motivo, " ");
-		int existe = recurso_existe(parametros[1]);
 
 		if (existe == -1){
 			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
@@ -340,12 +348,13 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 			imprimir_recurso(list_get(lista_recursos, existe));
 		}
 		printf("ejecutando signal");
-	} else if(strstr(motivo, "I_O") != NULL){
+		break;
+
+	case I_O:
 		printf("BUDBUEDBUEBDUEBD\n\n\n\n\n\n");
 		estimar_rafaga(pcb);
 		pcb->estado = BLOCKED;
 		printf("ejecutando %s", motivo);
-		char** parametros = string_split(motivo, " ");
 		int tiempo = atoi(parametros[1]);
 
 		t_thread_args* argumentos_hilo = malloc(sizeof(t_thread_args));
@@ -359,6 +368,8 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 
 		free(argumentos_hilo);
 		printf("ejecutando I-O");
+		break;
+
 	}
 }
 
@@ -395,3 +406,75 @@ void cerrar_conexiones(){
 }
 
 
+/*
+if(strcmp(motivo, "YIELD")==0){
+	//agregar al final de la lista ready
+	estimar_rafaga(pcb);
+	sem_wait(&semaforo_multiprogramacion);
+	ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+	sem_post(&cantidad_procesos_ready);
+	printf("ejecutando yield");
+
+}else if(strcmp(motivo, "EXIT") == 0){
+	pcb->estado = EXITT;
+	printf("ejecutando exit");
+	enviar_mensaje("-1", pcb->pid);
+	liberar_conexion(pcb->pid);
+} else if(strstr(motivo, "WAIT") != NULL){
+	estimar_rafaga(pcb);
+	printf("ejecutando %s", motivo);
+	char** parametros = string_split(motivo, " ");
+	int existe = recurso_existe(parametros[1]);
+
+	if (existe == -1){
+		log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
+		pcb->estado = EXITT;
+		enviar_mensaje("-1", pcb->pid);
+		liberar_conexion(pcb->pid);
+	} else {
+		descontar_recurso(list_get(lista_recursos, existe), pcb);
+		imprimir_recurso(list_get(lista_recursos, existe));
+	}
+	printf("ejecutando wait");
+} else if(strstr(motivo, "SIGNAL") != NULL){
+	estimar_rafaga(pcb);
+	printf("ejecutando %s", motivo);
+	char** parametros = string_split(motivo, " ");
+	int existe = recurso_existe(parametros[1]);
+
+	if (existe == -1){
+		log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
+		pcb->estado = EXITT;
+		enviar_mensaje("-1", pcb->pid);
+		liberar_conexion(pcb->pid);
+	} else {
+		sem_wait(&semaforo_multiprogramacion);
+		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb;
+		sem_post(&cantidad_procesos_ready);
+		sumar_recurso(list_get(lista_recursos, existe));
+		imprimir_recurso(list_get(lista_recursos, existe));
+	}
+	printf("ejecutando signal");
+} else if(strstr(motivo, "I_O") != NULL){
+	printf("BUDBUEDBUEBDUEBD\n\n\n\n\n\n");
+	estimar_rafaga(pcb);
+	pcb->estado = BLOCKED;
+	printf("ejecutando %s", motivo);
+	char** parametros = string_split(motivo, " ");
+	int tiempo = atoi(parametros[1]);
+
+	t_thread_args* argumentos_hilo = malloc(sizeof(t_thread_args));
+	argumentos_hilo->pcb = pcb;
+	argumentos_hilo->duracion = tiempo;
+
+	printf("PERRO");
+	pthread_create(&io_procesos, NULL,(void*) ejecutar_io, argumentos_hilo);
+	//pthread_detach(io_procesos);
+	pthread_join(io_procesos, NULL);
+
+	free(argumentos_hilo);
+	printf("ejecutando I-O");
+}
+}*/
