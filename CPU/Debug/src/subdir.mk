@@ -7,21 +7,18 @@ C_SRCS += \
 ../src/ciclo_instruccion.c \
 ../src/config.c \
 ../src/cpu.c \
-../src/instrucciones.c \
 ../src/registros_cpu.c 
 
 C_DEPS += \
 ./src/ciclo_instruccion.d \
 ./src/config.d \
 ./src/cpu.d \
-./src/instrucciones.d \
 ./src/registros_cpu.d 
 
 OBJS += \
 ./src/ciclo_instruccion.o \
 ./src/config.o \
 ./src/cpu.o \
-./src/instrucciones.o \
 ./src/registros_cpu.o 
 
 
@@ -37,7 +34,7 @@ src/%.o: ../src/%.c src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/ciclo_instruccion.d ./src/ciclo_instruccion.o ./src/config.d ./src/config.o ./src/cpu.d ./src/cpu.o ./src/instrucciones.d ./src/instrucciones.o ./src/registros_cpu.d ./src/registros_cpu.o
+	-$(RM) ./src/ciclo_instruccion.d ./src/ciclo_instruccion.o ./src/config.d ./src/config.o ./src/cpu.d ./src/cpu.o ./src/registros_cpu.d ./src/registros_cpu.o
 
 .PHONY: clean-src
 

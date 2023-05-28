@@ -93,29 +93,6 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			enviarContexto("EXIT");
 			salida = 0;
 			break;
-
-
-
-
-			/*log_info(cpu_logger, "Iniciamos etapa Execute");
-			log_info(cpu_logger, "PID: <%u> - Ejecutando: <EXIT> - <%s> - <%s>", pcb->pid,
-					instruccion_auxiliar->parametro[0], instruccion_auxiliar->parametro[1], instruccion_auxiliar->parametro[2]);
-
-			pcb->estado = EXITT;
-
-			preparar_pcb_para_envio(pcb);
-
-			//enviar_pcb(pcb, conexion_kernel, cpu_logger, TERMINO_PCB);
-			//destruir_pcb(pcb);
-
-			//iniciar_registros(&registros_cpu); //Vuelve a inicializar la variable externa en cero
-			log_trace(cpu_logger, "Proceso Terminado en CPU.");
-
-			//resetear_proceso_a_interrumpir();
-
-			return;*/
-
-
 		default:
 			log_error(cpu_logger, "Instruccion inválida");
 	}

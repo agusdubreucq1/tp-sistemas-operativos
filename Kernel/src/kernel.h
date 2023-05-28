@@ -21,6 +21,7 @@
 #include <utils/deserializar.h>
 #include <sys/time.h>
 #include <utils/recurso.h>
+#include <utils/instruccion.h>
 
 
 #define IP_SERVER "127.0.0.1"
@@ -87,6 +88,7 @@
 
 	struct timeval tiempo;
 	long long hora_inicio;
+	int existeRecurso;
 
 
 // ------------------------------------------------------------------------------------------
@@ -104,7 +106,7 @@
 	void cerrar_conexiones();
 	void recibir_mensaje_cpu(t_pcb* pcb);
 	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
-	t_pcb* tcb_elegido_HRRN();
+	t_pcb* pcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
 	void ejecutar_io(t_thread_args* args);
 

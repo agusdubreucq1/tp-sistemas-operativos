@@ -38,6 +38,7 @@ codigo_instruccion obtener_codigo_instruccion(char* codigo){
 	if(string_equals_ignore_case(codigo, "MOV_IN")) 		return MOV_IN;
 	if(string_equals_ignore_case(codigo, "MOV_OUT")) 		return MOV_OUT;
 	if(string_equals_ignore_case(codigo, "I/O")) 			return I_O;
+	if(string_equals_ignore_case(codigo, "I_O")) 			return I_O;
 	if(string_equals_ignore_case(codigo, "F_OPEN")) 		return F_OPEN;
 	if(string_equals_ignore_case(codigo, "F_CLOSE")) 		return F_CLOSE;
 	if(string_equals_ignore_case(codigo, "F_SEEK")) 		return F_SEEK;
