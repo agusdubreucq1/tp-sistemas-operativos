@@ -62,13 +62,6 @@ void* abrirSocketKernel(){
 		while(1){
 			recibir_mensaje_kernel();
 			comenzar_ciclo_instruccion(contexto_de_ejecucion);
-
-
-			// ACA INTERPRETAMOS LAS INSTRUCCIONES
-			//printf("/n/n/n/n/n/ ASASASASASASASASSASASASASASAS /n/n/n/n/n/n/n/n/n/n/n");
-			//
-			//enviarContexto();
-
 		}
 
 	return "";

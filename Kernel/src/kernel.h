@@ -105,7 +105,7 @@
 	void cerrar_conexiones();
 	void recibir_mensaje_cpu(t_pcb* pcb);
 	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
-	t_pcb* tcb_elegido_HRRN();
+	t_pcb* pcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
 	void ejecutar_io(t_thread_args* args);
 

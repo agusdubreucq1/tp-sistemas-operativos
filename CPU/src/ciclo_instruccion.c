@@ -9,10 +9,6 @@ void comenzar_ciclo_instruccion() {
 		t_instruccion* instruccion = fetch_instruccion();
 		salida = ejecutar_instruccion(instruccion);
 	}
-
-
-
-    //enviar_instruccion("SET perro", socket_Kernel);
 }
 
 t_instruccion* fetch_instruccion() {
@@ -94,28 +90,6 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			salida = 0;
 			break;
 
-
-
-
-			/*log_info(cpu_logger, "Iniciamos etapa Execute");
-			log_info(cpu_logger, "PID: <%u> - Ejecutando: <EXIT> - <%s> - <%s>", pcb->pid,
-					instruccion_auxiliar->parametro[0], instruccion_auxiliar->parametro[1], instruccion_auxiliar->parametro[2]);
-
-			pcb->estado = EXITT;
-
-			preparar_pcb_para_envio(pcb);
-
-			//enviar_pcb(pcb, conexion_kernel, cpu_logger, TERMINO_PCB);
-			//destruir_pcb(pcb);
-
-			//iniciar_registros(&registros_cpu); //Vuelve a inicializar la variable externa en cero
-			log_trace(cpu_logger, "Proceso Terminado en CPU.");
-
-			//resetear_proceso_a_interrumpir();
-
-			return;*/
-
-
 		default:
 			log_error(cpu_logger, "Instruccion inválida");
 	}
@@ -133,7 +107,7 @@ void enviarContexto(char* motivo){
 	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
 	printf("\EL VALOR ES: %s\n", motivo);
 
-	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
+	enviar_paquete(paquete, socket_Kernel, cpu_logger, "Kernel");
 }
 
 

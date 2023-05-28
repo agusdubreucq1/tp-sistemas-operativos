@@ -182,9 +182,6 @@ void planificarCortoPlazoFIFO(){
 
 			enviar_pcb(pcb_a_ejecutar);
 			recibir_mensaje_cpu(pcb_a_ejecutar);
-			//print_pcb(pcb_a_ejecutar);
-			//printf("AHIVAAAAAAAAA");
-			//recibir_instruccion_cpu(socket_cpu, kernel_logger);
 			pthread_mutex_unlock(&semaforo_execute);
 		} else{
 			sem_wait(&cantidad_procesos_ready);
@@ -195,7 +192,7 @@ void planificarCortoPlazoFIFO(){
 				pcb_a_ejecutar = pcb_ejecutando;
 				devolver_ejecucion = 0;
 			} else {
-				pcb_a_ejecutar = tcb_elegido_HRRN();
+				pcb_a_ejecutar = pcb_elegido_HRRN();
 			}
 			sem_post(&semaforo_multiprogramacion);
 			pthread_mutex_unlock(&semaforo_ready);
@@ -203,12 +200,11 @@ void planificarCortoPlazoFIFO(){
 			enviar_pcb(pcb_a_ejecutar);
 			recibir_mensaje_cpu(pcb_a_ejecutar);
 			pthread_mutex_unlock(&semaforo_execute);
-			//printf("PID %d\n", pcb_a_ejecutar->pid);
 		}
 	}
 }
 
-t_pcb* tcb_elegido_HRRN(){
+t_pcb* pcb_elegido_HRRN(){
 	int tcb_index = 0;
 	float ratio_mayor = 0.0;
 	t_pcb* pcb = malloc(sizeof(t_pcb));
@@ -218,25 +214,14 @@ t_pcb* tcb_elegido_HRRN(){
 		gettimeofday(&hora_actual, NULL);
 		int tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000) - pcb->tiempo_ready;
 
-		//printf("PCB %i\n", pcb->pid);
-		//printf("tiempo %d\n", tiempo);
-		//printf("estimado %d\n", pcb->estimado_rafaga);
-
 		float ratio = ((float) (pcb->estimado_rafaga + tiempo)) / (float) pcb->estimado_rafaga;
 		if (ratio > ratio_mayor){
 			ratio_mayor = ratio;
 			tcb_index = i;
 		}
-
-		//printf("ratio %f\n\n", ratio);
-
 	}
 
 	pcb = list_remove(lista_ready, tcb_index);
-	printf("\nratio mayor %f\n", ratio_mayor);
-	printf("PCB %d\n", pcb->pid);
-	printf("estimado %d\n\n", pcb->estimado_rafaga);
-
 	return pcb;
 }
 
@@ -247,8 +232,8 @@ void enviar_pcb(t_pcb* pcb){
 
 	int tamanio_pcb;
 	memcpy(&tamanio_pcb, paquete->buffer->stream, sizeof(int));
-	printf("\n pcb a ejecutar:\n\n");
-	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+	//printf("\n pcb a ejecutar:\n\n");
+	//printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
 
 	enviar_paquete(paquete, socket_cpu, kernel_logger, "cpu");
 }
@@ -280,8 +265,8 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 			int var_send_ = send(socket_cpu, tam_recibido, sizeof(int), 0);
 			//printf("var_send: %d\n", var_send_);
 
-			printf("\n recibi contexto:\n");
-			print_pcb(pcb);
+			//printf("\n recibi contexto:\n");
+			//print_pcb(pcb);
 		/*case INSTRUCCION:
 			char* instruccion_de_cpu = recibir_instruccion_cpu(socket_cpu, kernel_logger);
 			printf("%s", instruccion_de_cpu);
@@ -293,16 +278,15 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 
 	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(string_split(motivo, " ")[0]);
 	char** parametros = string_split(motivo, " ");
-	int existe = recurso_existe(parametros[1]);
+	int existe;
 
 	switch(cod_instruccion) {
-
 	case YIELD:
 		estimar_rafaga(pcb);
+		printf("ejecutando yield");
 		sem_wait(&semaforo_multiprogramacion);
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
 		sem_post(&cantidad_procesos_ready);
-		printf("ejecutando yield");
 		break;
 
 	case EXIT:
@@ -315,6 +299,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 	case WAIT:
 		estimar_rafaga(pcb);
 		printf("ejecutando %s", motivo);
+		existe = recurso_existe(parametros[1]);
 
 		if (existe == -1){
 			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
@@ -326,12 +311,13 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 			descontar_recurso(list_get(lista_recursos, existe), pcb);
 			imprimir_recurso(list_get(lista_recursos, existe));
 		}
-		printf("ejecutando wait");
+
 		break;
 
 	case SIGNAL:
 		estimar_rafaga(pcb);
 		printf("ejecutando %s", motivo);
+		existe = recurso_existe(parametros[1]);
 
 		if (existe == -1){
 			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
@@ -347,9 +333,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 			sumar_recurso(list_get(lista_recursos, existe));
 			imprimir_recurso(list_get(lista_recursos, existe));
 		}
-		printf("ejecutando signal");
 		break;
-
 	case I_O:
 		printf("BUDBUEDBUEBDUEBD\n\n\n\n\n\n");
 		estimar_rafaga(pcb);
@@ -369,7 +353,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		free(argumentos_hilo);
 		printf("ejecutando I-O");
 		break;
-
+	default: break;
 	}
 }
 
