@@ -12,7 +12,7 @@ void comenzar_ciclo_instruccion() {
 }
 
 t_instruccion* fetch_instruccion() {
-    printf("Fetch Instruccion");
+    //printf("Fetch Instruccion");
 
     t_instruccion* instruccion = parsear_instruccion(list_get(contexto_de_ejecucion->instrucciones, contexto_de_ejecucion->program_counter));
     contexto_de_ejecucion->program_counter += 1;
@@ -22,8 +22,6 @@ t_instruccion* fetch_instruccion() {
 
 
 int ejecutar_instruccion(t_instruccion* instruccion){
-
-	log_info(cpu_logger, "Instruccion Ejecutada");
 	int salida = 1;
 	switch(instruccion->codigo_instruccion) {
 
@@ -48,6 +46,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			strcat(mensaje_mov_in, instruccion->parametro[0]);
 			strcat(mensaje_mov_in, " ");
 			strcat(mensaje_mov_in, instruccion->parametro[1]);
+			log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
 			enviar_mensaje(mensaje_mov_in, socket_memoria);
 			break;
 
@@ -60,6 +59,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			strcat(mensaje_mov_out, instruccion->parametro[0]);
 			strcat(mensaje_mov_out, " ");
 			strcat(mensaje_mov_out, instruccion->parametro[1]);
+			log_info(cpu_logger, "PID: %u - Accion: Escribir ", contexto_de_ejecucion->pid);
 			enviar_mensaje(mensaje_mov_out, socket_memoria);
 			break;
 
@@ -81,6 +81,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			char mensaje_f_open[30] = "F_OPEN ";
 			strcat(mensaje_f_open, instruccion->parametro[0]);
 			enviar_mensaje(mensaje_f_open, socket_Kernel);
+
 			break;
 
 		case F_CLOSE:
@@ -218,8 +219,8 @@ void enviarContexto(char* motivo){
 	//int tamanio_contexto;
 	//memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
 	//printf("\n Contexto enviado:\n\n");
-	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
-	printf("\EL VALOR ES: %s\n", motivo);
+	//printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+	//printf("\EL VALOR ES: %s\n", motivo);
 
 	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
 }

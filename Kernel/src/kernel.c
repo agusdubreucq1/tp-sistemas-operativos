@@ -407,12 +407,11 @@ void ejecutar_segun_motivo(char* motivo){
 		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 		enviar_mensaje(motivo, socket_memoria);
 		break;
-
 	case DELETE_SEGMENT:
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
+		enviar_mensaje(motivo, socket_memoria);
 		break;
-
 	default:
 		break;
 	}

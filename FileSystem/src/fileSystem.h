@@ -46,5 +46,6 @@
 
 	void* abrirSocketKernel();
 	void* conectarMemoria();
+	void recibir_mensaje_kernel();
 
 #endif /* FILESYSTEM_H_ */

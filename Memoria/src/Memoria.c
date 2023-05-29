@@ -55,7 +55,7 @@ void* atenderKernel(){
 		int cod_op = recibir_operacion(socket_kernel);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_mensaje(socket_kernel, memoria_logger);
+			recibir_instruccion(socket_kernel, memoria_logger);
 			break;
 		}
 	}
@@ -72,7 +72,7 @@ void* atenderCPU(){
 		int cod_op = recibir_operacion(socket_cpu);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_mensaje(socket_cpu, memoria_logger);
+			recibir_instruccion(socket_cpu, memoria_logger);
 			break;
 		}
 	}
@@ -88,7 +88,7 @@ void* atenderFileSystem(){
 		int cod_op = recibir_operacion(socket_filesystem);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_mensaje(socket_filesystem, memoria_logger);
+			recibir_instruccion(socket_filesystem, memoria_logger);
 			break;
 		}
 	}

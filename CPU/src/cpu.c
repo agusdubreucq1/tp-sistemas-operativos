@@ -63,12 +63,6 @@ void* abrirSocketKernel(){
 			recibir_mensaje_kernel();
 			comenzar_ciclo_instruccion(contexto_de_ejecucion);
 
-
-			// ACA INTERPRETAMOS LAS INSTRUCCIONES
-			//printf("/n/n/n/n/n/ ASASASASASASASASSASASASASASAS /n/n/n/n/n/n/n/n/n/n/n");
-			//
-			//enviarContexto();
-
 		}
 
 	return "";
@@ -88,31 +82,34 @@ void recibir_mensaje_kernel(){
 	cod_op = recibir_operacion(socket_Kernel);
 	switch (cod_op) {
 		case MENSAJE:
-			recibir_mensaje(socket_Kernel, cpu_logger);
+			recibir_instruccion(socket_Kernel, cpu_logger);
 			break;
 		case PAQUETE:
 			int size;
 			void* buffer;
 			int* tam_recibido= malloc(sizeof(int));
 			buffer = recibir_buffer(&size, socket_Kernel);
-			printf("\n recibi buffer \n");
+			//printf("\n recibi buffer \n");
 
 			contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
 
 			*tam_recibido+=2*sizeof(int);
-			printf("\n tamanio recibido: %d\n", *tam_recibido);
+			//printf("\n tamanio recibido: %d\n", *tam_recibido);
 			//printf("puntero: %p\n", tam_recibido);
-			int var_send_ = send(socket_Kernel, tam_recibido, sizeof(int), 0);
+
+			send(socket_Kernel, tam_recibido, sizeof(int), 0);
+			//int var_send_ = send(socket_Kernel, tam_recibido, sizeof(int), 0);
 			//printf("var_send: %d\n", var_send_);
 
-			printf("\n recibi contexto:\n");
+			log_trace(cpu_logger, "Recibi contexto de ejecucion - PID: %d", contexto_de_ejecucion->pid);
+			//printf("\n recibi contexto:\n");
 			//print_contexto(contexto_de_ejecucion);
 	}
 }
 
 
 void cerrar_conexiones(){
-	printf("\ncerrando conexiones\n");
+	//printf("\ncerrando conexiones\n");
 
 	close(server_cpu);
 	//close(socket_Kernel);

@@ -52,12 +52,7 @@ void* abrirSocketKernel(){
 	}
 
 	while(1){
-		int cod_op;
-		cod_op = recibir_operacion(socket_Kernel);
-		switch (cod_op) {
-			case MENSAJE:
-				recibir_instruccion(socket_Kernel, fileSystem_logger);
-				break;
+		recibir_mensaje_kernel();
 	}
 
 
@@ -72,4 +67,13 @@ void* conectarMemoria(){
 	return "";
 }
 
-
+void recibir_mensaje_kernel(){
+	int cod_op;
+	cod_op = recibir_operacion(socket_Kernel);
+	switch (cod_op) {
+		case MENSAJE:
+			recibir_instruccion(socket_Kernel, fileSystem_logger);
+			break;
+		default: break;
+	}
+}

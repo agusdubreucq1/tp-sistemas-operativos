@@ -5446,3 +5446,124 @@
 [INFO] 12:22:14:127 Memoria/(66157:66160): Me llego el mensaje: MOV_OUT 120 AX
 [INFO] 12:22:24:343 Memoria/(66157:66160): Me llego el mensaje: MOV_IN BX 120
 [INFO] 12:22:24:475 Memoria/(66157:66159): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:28:34:776 Memoria/(66842:66842): Logger creado
+[INFO] 12:28:34:777 Memoria/(66842:66842): -------Valores del config-------
+[INFO] 12:28:34:777 Memoria/(66842:66842): puerto_escucha = 8003
+[INFO] 12:28:34:777 Memoria/(66842:66842): tamaño memoria = 4096
+[INFO] 12:28:34:777 Memoria/(66842:66842): tamaño segmento = 128
+[INFO] 12:28:34:777 Memoria/(66842:66842): cantidad de segmentos = 16
+[INFO] 12:28:34:777 Memoria/(66842:66842): retardo memoria = 1000
+[INFO] 12:28:34:777 Memoria/(66842:66842): retardo compactacion = 60000
+[INFO] 12:28:34:777 Memoria/(66842:66842): algoritmo asignacion = BEST
+[INFO] 12:28:34:777 Memoria/(66842:66842): --------------------------------
+[INFO] 12:28:34:777 Memoria/(66842:66842): ¡Memoria iniciado correctamente!
+[TRACE] 12:28:34:778 Memoria/(66842:66842): Listo para escuchar a mi cliente
+[INFO] 12:28:34:778 Memoria/(66842:66842): Servidor listo para recibir al cliente
+[INFO] 12:28:35:470 Memoria/(66842:66846): Se conecto un cliente!
+[INFO] 12:28:35:470 Memoria/(66842:66846): Me llego el mensaje: Conectado al FileSystem
+[INFO] 12:28:36:076 Memoria/(66842:66845): Se conecto un cliente!
+[INFO] 12:28:36:077 Memoria/(66842:66845): Me llego el mensaje: Conectado al CPU
+[INFO] 12:28:36:649 Memoria/(66842:66844): Se conecto un cliente!
+[INFO] 12:28:36:649 Memoria/(66842:66844): Me llego el mensaje: Conectado al Kernel
+[INFO] 12:28:46:651 Memoria/(66842:66845): Me llego el mensaje: MOV_OUT 120 AX
+[INFO] 12:28:46:737 Memoria/(66842:66845): Me llego el mensaje: MOV_OUT 120 AX
+[INFO] 12:28:46:824 Memoria/(66842:66845): Me llego el mensaje: MOV_OUT 120 AX
+[INFO] 12:28:57:043 Memoria/(66842:66845): Me llego el mensaje: MOV_IN BX 120
+[INFO] 12:28:58:220 Memoria/(66842:66844): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:28:58:351 Memoria/(66842:66845): Me llego el mensaje: MOV_IN BX 120
+[INFO] 12:28:59:527 Memoria/(66842:66844): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:28:59:659 Memoria/(66842:66845): Me llego el mensaje: MOV_IN BX 120
+[INFO] 12:28:59:791 Memoria/(66842:66844): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:35:39:662 Memoria/(67958:67958): Logger creado
+[INFO] 12:35:39:663 Memoria/(67958:67958): -------Valores del config-------
+[INFO] 12:35:39:663 Memoria/(67958:67958): puerto_escucha = 8003
+[INFO] 12:35:39:663 Memoria/(67958:67958): tamaño memoria = 4096
+[INFO] 12:35:39:663 Memoria/(67958:67958): tamaño segmento = 128
+[INFO] 12:35:39:663 Memoria/(67958:67958): cantidad de segmentos = 16
+[INFO] 12:35:39:663 Memoria/(67958:67958): retardo memoria = 1000
+[INFO] 12:35:39:663 Memoria/(67958:67958): retardo compactacion = 60000
+[INFO] 12:35:39:663 Memoria/(67958:67958): algoritmo asignacion = BEST
+[INFO] 12:35:39:663 Memoria/(67958:67958): --------------------------------
+[INFO] 12:35:39:663 Memoria/(67958:67958): ¡Memoria iniciado correctamente!
+[TRACE] 12:35:39:664 Memoria/(67958:67958): Listo para escuchar a mi cliente
+[INFO] 12:35:39:664 Memoria/(67958:67958): Servidor listo para recibir al cliente
+[INFO] 12:35:41:852 Memoria/(67958:67962): Se conecto un cliente!
+[INFO] 12:35:41:852 Memoria/(67958:67962): Me llego el mensaje: Conectado al FileSystem
+[INFO] 12:35:44:542 Memoria/(67958:67961): Se conecto un cliente!
+[INFO] 12:35:44:543 Memoria/(67958:67961): Me llego el mensaje: Conectado al CPU
+[INFO] 12:35:47:330 Memoria/(67958:67960): Se conecto un cliente!
+[INFO] 12:35:47:330 Memoria/(67958:67960): Me llego el mensaje: Conectado al Kernel
+[INFO] 12:35:57:332 Memoria/(67958:67961): Me llego el mensaje: MOV_OUT 120 AX
+[INFO] 12:36:07:547 Memoria/(67958:67961): Me llego el mensaje: MOV_IN BX 120
+[INFO] 12:36:07:679 Memoria/(67958:67960): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:49:27:752 Memoria/(69616:69616): Logger creado
+[INFO] 12:49:27:753 Memoria/(69616:69616): -------Valores del config-------
+[INFO] 12:49:27:753 Memoria/(69616:69616): puerto_escucha = 8003
+[INFO] 12:49:27:753 Memoria/(69616:69616): tamaño memoria = 4096
+[INFO] 12:49:27:753 Memoria/(69616:69616): tamaño segmento = 128
+[INFO] 12:49:27:753 Memoria/(69616:69616): cantidad de segmentos = 16
+[INFO] 12:49:27:753 Memoria/(69616:69616): retardo memoria = 1000
+[INFO] 12:49:27:753 Memoria/(69616:69616): retardo compactacion = 60000
+[INFO] 12:49:27:754 Memoria/(69616:69616): algoritmo asignacion = BEST
+[INFO] 12:49:27:754 Memoria/(69616:69616): --------------------------------
+[INFO] 12:49:27:754 Memoria/(69616:69616): ¡Memoria iniciado correctamente!
+[TRACE] 12:49:27:754 Memoria/(69616:69616): Listo para escuchar a mi cliente
+[INFO] 12:49:27:754 Memoria/(69616:69616): Servidor listo para recibir al cliente
+[INFO] 12:49:29:695 Memoria/(69616:69620): Se conecto un cliente!
+[INFO] 12:49:29:695 Memoria/(69616:69620): Me llego el mensaje: Conectado al FileSystem
+[INFO] 12:49:33:242 Memoria/(69616:69619): Se conecto un cliente!
+[INFO] 12:49:33:242 Memoria/(69616:69619): Me llego el mensaje: Conectado al CPU
+[INFO] 12:49:35:415 Memoria/(69616:69618): Se conecto un cliente!
+[INFO] 12:49:35:415 Memoria/(69616:69618): Me llego el mensaje: Conectado al Kernel
+[INFO] 12:49:45:416 Memoria/(69616:69619): Me llego el mensaje: MOV_OUT 120 AX
+[INFO] 12:49:45:504 Memoria/(69616:69619): Me llego el mensaje: MOV_OUT 120 AX
+[INFO] 12:49:55:723 Memoria/(69616:69619): Me llego el mensaje: MOV_IN BX 120
+[INFO] 12:49:56:900 Memoria/(69616:69618): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:49:56:901 Memoria/(69616:69618): Me llego el mensaje: DELETE_SEGMENT 1
+[INFO] 12:49:57:031 Memoria/(69616:69619): Me llego el mensaje: MOV_IN BX 120
+[INFO] 12:49:57:164 Memoria/(69616:69618): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:49:57:164 Memoria/(69616:69618): Me llego el mensaje: DELETE_SEGMENT 1
+[INFO] 12:54:24:735 Memoria/(70191:70191): Logger creado
+[INFO] 12:54:24:736 Memoria/(70191:70191): -------Valores del config-------
+[INFO] 12:54:24:736 Memoria/(70191:70191): puerto_escucha = 8003
+[INFO] 12:54:24:736 Memoria/(70191:70191): tamaño memoria = 4096
+[INFO] 12:54:24:736 Memoria/(70191:70191): tamaño segmento = 128
+[INFO] 12:54:24:736 Memoria/(70191:70191): cantidad de segmentos = 16
+[INFO] 12:54:24:736 Memoria/(70191:70191): retardo memoria = 1000
+[INFO] 12:54:24:736 Memoria/(70191:70191): retardo compactacion = 60000
+[INFO] 12:54:24:737 Memoria/(70191:70191): algoritmo asignacion = BEST
+[INFO] 12:54:24:737 Memoria/(70191:70191): --------------------------------
+[INFO] 12:54:24:737 Memoria/(70191:70191): ¡Memoria iniciado correctamente!
+[TRACE] 12:54:24:737 Memoria/(70191:70191): Listo para escuchar a mi cliente
+[INFO] 12:54:24:737 Memoria/(70191:70191): Servidor listo para recibir al cliente
+[INFO] 12:54:26:791 Memoria/(70191:70195): Se conecto un cliente!
+[INFO] 12:54:26:791 Memoria/(70191:70195): Me llego el mensaje: Conectado al FileSystem
+[INFO] 12:54:29:106 Memoria/(70191:70194): Se conecto un cliente!
+[TRACE] 12:54:29:106 Memoria/(70191:70194): Recibi Instruccion: Conectado al CPU
+[INFO] 12:54:31:567 Memoria/(70191:70193): Se conecto un cliente!
+[INFO] 12:54:31:567 Memoria/(70191:70193): Me llego el mensaje: Conectado al Kernel
+[TRACE] 12:54:41:569 Memoria/(70191:70194): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:54:41:656 Memoria/(70191:70194): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:54:41:745 Memoria/(70191:70194): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:54:51:963 Memoria/(70191:70194): Recibi Instruccion: MOV_IN BX 120
+[INFO] 12:54:53:140 Memoria/(70191:70193): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:54:53:140 Memoria/(70191:70193): Me llego el mensaje: DELETE_SEGMENT 1
+[TRACE] 12:54:53:271 Memoria/(70191:70194): Recibi Instruccion: MOV_IN BX 120
+[INFO] 12:54:54:447 Memoria/(70191:70193): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:54:54:448 Memoria/(70191:70193): Me llego el mensaje: DELETE_SEGMENT 1
+[TRACE] 12:54:54:580 Memoria/(70191:70194): Recibi Instruccion: MOV_IN BX 120
+[INFO] 12:54:54:711 Memoria/(70191:70193): Me llego el mensaje: CREATE_SEGMENT 1 128
+[INFO] 12:54:54:711 Memoria/(70191:70193): Me llego el mensaje: DELETE_SEGMENT 1
+[INFO] 12:56:46:681 Memoria/(70478:70478): Logger creado
+[INFO] 12:56:46:682 Memoria/(70478:70478): -------Valores del config-------
+[INFO] 12:56:46:682 Memoria/(70478:70478): puerto_escucha = 8003
+[INFO] 12:56:46:682 Memoria/(70478:70478): tamaño memoria = 4096
+[INFO] 12:56:46:682 Memoria/(70478:70478): tamaño segmento = 128
+[INFO] 12:56:46:682 Memoria/(70478:70478): cantidad de segmentos = 16
+[INFO] 12:56:46:682 Memoria/(70478:70478): retardo memoria = 1000
+[INFO] 12:56:46:682 Memoria/(70478:70478): retardo compactacion = 60000
+[INFO] 12:56:46:682 Memoria/(70478:70478): algoritmo asignacion = BEST
+[INFO] 12:56:46:682 Memoria/(70478:70478): --------------------------------
+[INFO] 12:56:46:682 Memoria/(70478:70478): ¡Memoria iniciado correctamente!
+[TRACE] 12:56:46:683 Memoria/(70478:70478): Listo para escuchar a mi cliente
+[INFO] 12:56:46:683 Memoria/(70478:70478): Servidor listo para recibir al cliente

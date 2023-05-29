@@ -41,7 +41,7 @@ void sumar_recurso(t_recurso* recurso, int pid, t_log* logger){
 		t_pcb* pcb_bloqueado = list_remove(recurso->listaBloqueados, 0);
 		log_info(logger, "PID: %d - Desbloqueado por: %s", pcb_bloqueado->pid, recurso->nombre);
 		ingresar_en_lista(pcb_bloqueado, lista_ready, "READY", &semaforo_ready, READY);
-		printf("\n\n\n\n\n\nDESBLOQUEADOOOOOOOOOOOO\n\n\n\n\n");
+		//printf("\n\n\n\n\n\nDESBLOQUEADOOOOOOOOOOOO\n\n\n\n\n");
 		sem_post(&cantidad_procesos_ready);
 	}
 
