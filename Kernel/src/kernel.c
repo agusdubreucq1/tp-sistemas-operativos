@@ -281,9 +281,12 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 }
 
 void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
+
 	char** parametros = string_split(motivo, " ");
 	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(parametros[0]);
+
 	switch(cod_instruccion) {
+
 	case WAIT:
 		estimar_rafaga(pcb);
 		printf("ejecutando %s", motivo);
@@ -301,6 +304,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		}
 		printf("ejecutando wait");
 		break;
+
 	case YIELD:
 		estimar_rafaga(pcb);
 		sem_wait(&semaforo_multiprogramacion);
@@ -308,12 +312,14 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		sem_post(&cantidad_procesos_ready);
 		printf("ejecutando yield");
 		break;
+
 	case EXIT:
 		pcb->estado = EXITT;
 		printf("ejecutando exit");
 		enviar_mensaje("-1", pcb->pid);
 		liberar_conexion(pcb->pid);
 		break;
+
 	case SIGNAL:
 		estimar_rafaga(pcb);
 		printf("ejecutando %s", motivo);
@@ -336,6 +342,7 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		}
 		printf("ejecutando signal");
 		break;
+
 	case I_O:
 		printf("BUDBUEDBUEBDUEBD\n\n\n\n\n\n");
 		print_pcb(pcb);
@@ -359,7 +366,49 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 		free(argumentos_hilo);
 		printf("ejecutando I-O");
 		break;
-	default: break;
+
+	case F_OPEN:
+		printf("\nMe llego F_OPEN\n");
+		printf("\nMotivo: %s\n", motivo);
+		break;
+
+	case F_CLOSE:
+		printf("\nMe llego F_OPEN\n");
+		printf("\nMotivo: %s\n", motivo);
+		break;
+
+	case F_SEEK:
+		printf("\nMe llego F_SEEK\n");
+		printf("\nMotivo: %s\n", motivo);
+		break;
+
+	case F_READ:
+		printf("\nMe llego F_READ\n");
+		printf("\nMotivo: %s\n", motivo);
+		break;
+
+	case F_WRITE:
+		printf("\nMe llego F_WRITE\n");
+		printf("\nMotivo: %s\n", motivo);
+		break;
+
+	case F_TRUNCATE:
+		printf("\nMe llego F_TRUNCATE\n");
+		printf("\nMotivo: %s\n", motivo);
+		break;
+
+	case CREATE_SEGMENT:
+		printf("\nMe llego CREATE_SEGMENT\n");
+		printf("\nMotivo: %s\n", motivo);
+		break;
+
+	case DELETE_SEGMENT:
+		printf("\nMe llego DELETE_SEGMENT\n");
+		printf("\nMotivo: %s\n", motivo);
+		break;
+
+	default:
+		break;
 	}
 }
 
