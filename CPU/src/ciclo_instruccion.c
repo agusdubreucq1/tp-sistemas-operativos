@@ -30,7 +30,6 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   codigo_instruccion_string(instruccion->codigo_instruccion),
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
-
 			usleep(retardo_instruccion);
 			registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], instruccion->parametro[1]);
 			imprimir_registros(contexto_de_ejecucion->registros_cpu);
@@ -43,10 +42,11 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
 			char mensaje_mov_in[30] = "MOV_IN ";
-			strcat(mensaje_mov_in, instruccion->parametro[0]);
-			strcat(mensaje_mov_in, " ");
-			strcat(mensaje_mov_in, instruccion->parametro[1]);
+
+			concatenar_mensaje_con_2_parametros(mensaje_mov_in[30], instruccion);
+
 			log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
+
 			enviar_mensaje(mensaje_mov_in, socket_memoria);
 			break;
 
@@ -56,10 +56,11 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
 			char mensaje_mov_out[30] = "MOV_OUT ";
-			strcat(mensaje_mov_out, instruccion->parametro[0]);
-			strcat(mensaje_mov_out, " ");
-			strcat(mensaje_mov_out, instruccion->parametro[1]);
+
+			concatenar_mensaje_con_2_parametros(mensaje_mov_out[30], instruccion);
+
 			log_info(cpu_logger, "PID: %u - Accion: Escribir ", contexto_de_ejecucion->pid);
+
 			enviar_mensaje(mensaje_mov_out, socket_memoria);
 			break;
 
@@ -69,7 +70,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																instruccion->parametro[0]);
 
 			char mensaje_io[30] = "I_O ";
-			strcat(mensaje_io, instruccion->parametro[0]);
+			concatenar_mensaje_con_1_parametro(mensaje_io[30], instruccion);
 			enviarContexto(mensaje_io);
 			salida = 0;
 			break;
@@ -79,7 +80,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																codigo_instruccion_string(instruccion->codigo_instruccion),
 																instruccion->parametro[0]);
 			char mensaje_f_open[30] = "F_OPEN ";
-			strcat(mensaje_f_open, instruccion->parametro[0]);
+			concatenar_mensaje_con_1_parametro(mensaje_f_open[30], instruccion);
 			enviar_mensaje(mensaje_f_open, socket_Kernel);
 
 			break;
@@ -89,7 +90,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																codigo_instruccion_string(instruccion->codigo_instruccion),
 																instruccion->parametro[0]);
 			char mensaje_f_close[30] = "F_CLOSE ";
-			strcat(mensaje_f_close, instruccion->parametro[0]);
+			concatenar_mensaje_con_1_parametro(mensaje_f_close[30], instruccion);
 			enviar_mensaje(mensaje_f_close, socket_Kernel);
 			break;
 
@@ -99,9 +100,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	instruccion->parametro[0],
 																	instruccion->parametro[1]);
 			char mensaje_f_seek[30] = "F_SEEK ";
-			strcat(mensaje_f_seek, instruccion->parametro[0]);
-			strcat(mensaje_f_seek, " ");
-			strcat(mensaje_f_seek, instruccion->parametro[1]);
+			concatenar_mensaje_con_2_parametros(mensaje_f_seek[30], instruccion);
 			enviar_mensaje(mensaje_f_seek, socket_Kernel);
 			break;
 
@@ -112,11 +111,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	   instruccion->parametro[1],
 																	   instruccion->parametro[2]);
 			char mensaje_f_read[30] = "F_READ ";
-			strcat(mensaje_f_read, instruccion->parametro[0]);
-			strcat(mensaje_f_read, " ");
-			strcat(mensaje_f_read, instruccion->parametro[1]);
-			strcat(mensaje_f_read, " ");
-			strcat(mensaje_f_read, instruccion->parametro[2]);
+			concatenar_mensaje_con_3_parametros(mensaje_f_read[30], instruccion);
 			enviar_mensaje(mensaje_f_read, socket_Kernel);
 			break;
 
@@ -127,11 +122,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	   instruccion->parametro[1],
 																	   instruccion->parametro[2]);
 			char mensaje_f_write[30] = "F_WRITE ";
-			strcat(mensaje_f_write, instruccion->parametro[0]);
-			strcat(mensaje_f_write, " ");
-			strcat(mensaje_f_write, instruccion->parametro[1]);
-			strcat(mensaje_f_write, " ");
-			strcat(mensaje_f_write, instruccion->parametro[2]);
+			concatenar_mensaje_con_3_parametros(mensaje_f_write[30], instruccion);
 			enviar_mensaje(mensaje_f_write, socket_Kernel);
 			break;
 
@@ -141,9 +132,9 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	instruccion->parametro[0],
 																	instruccion->parametro[1]);
 			char mensaje_f_truncate[30] = "F_TRUNCATE ";
-			strcat(mensaje_f_truncate, instruccion->parametro[0]);
-			strcat(mensaje_f_truncate, " ");
-			strcat(mensaje_f_truncate, instruccion->parametro[1]);
+
+			concatenar_mensaje_con_2_parametros(mensaje_f_truncate[30], instruccion);
+
 			enviar_mensaje(mensaje_f_truncate, socket_Kernel);
 			break;
 
@@ -153,7 +144,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																instruccion->parametro[0]);
 
 			char str[30] = "WAIT ";
-			strcat(str, instruccion->parametro[0]);
+			concatenar_mensaje_con_1_parametro(str[30], instruccion);
 			enviarContexto(str);
 			salida = 0;
 			break;
@@ -164,7 +155,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																instruccion->parametro[0]);
 
 			char str1[30] = "SIGNAL ";
-			strcat(str1, instruccion->parametro[0]);
+			concatenar_mensaje_con_1_parametro(str1[30], instruccion);
 			enviarContexto(str1);
 			salida = 0;
 			break;
@@ -175,9 +166,9 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																			instruccion->parametro[0],
 																			instruccion->parametro[1]);
 					char mensaje_create_segment[30] = "CREATE_SEGMENT ";
-					strcat(mensaje_create_segment, instruccion->parametro[0]);
-					strcat(mensaje_create_segment, " ");
-					strcat(mensaje_create_segment, instruccion->parametro[1]);
+
+					concatenar_mensaje_con_2_parametros(mensaje_create_segment[30], instruccion);
+
 					enviar_mensaje(mensaje_create_segment, socket_Kernel);
 					break;
 
@@ -186,7 +177,9 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																codigo_instruccion_string(instruccion->codigo_instruccion),
 																instruccion->parametro[0]);
 			char mensaje_delete_segment[30] = "DELETE_SEGMENT ";
-			strcat(mensaje_delete_segment, instruccion->parametro[0]);
+
+			concatenar_mensaje_con_1_parametro(mensaje_delete_segment[30], instruccion);
+
 			enviar_mensaje(mensaje_delete_segment, socket_Kernel);
 			break;
 
@@ -211,6 +204,8 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 	return salida;
 }
 
+
+
 void enviarContexto(char* motivo){
 	t_paquete* paquete;
 	paquete = serializar_contexto(contexto_de_ejecucion);
@@ -224,5 +219,22 @@ void enviarContexto(char* motivo){
 
 	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
 }
-
+char* concatenar_mensaje_con_3_parametros(char mensaje[30], t_instruccion* instruccion){
+strcat(mensaje, instruccion->parametro[0]);
+strcat(mensaje, " ");
+strcat(mensaje, instruccion->parametro[1]);
+strcat(mensaje, " ");
+strcat(mensaje, instruccion->parametro[2]);
+return mensaje;
+}
+char* concatenar_mensaje_con_2_parametros(char mensaje[30], t_instruccion* instruccion){
+strcat(mensaje, instruccion->parametro[0]);
+strcat(mensaje, " ");
+strcat(mensaje, instruccion->parametro[1]);
+return mensaje;
+}
+char* concatenar_mensaje_con_1_parametro(char mensaje[30], t_instruccion* instruccion){
+strcat(mensaje, instruccion->parametro[0]);
+return mensaje;
+}
 
