@@ -220,21 +220,21 @@ void enviarContexto(char* motivo){
 	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
 }
 char* concatenar_mensaje_con_3_parametros(char mensaje[30], t_instruccion* instruccion){
-strcat(mensaje, instruccion->parametro[0]);
-strcat(mensaje, " ");
-strcat(mensaje, instruccion->parametro[1]);
-strcat(mensaje, " ");
-strcat(mensaje, instruccion->parametro[2]);
-return mensaje;
+	strcat(mensaje, instruccion->parametro[0]);
+	strcat(mensaje, " ");
+	strcat(mensaje, instruccion->parametro[1]);
+	strcat(mensaje, " ");
+	strcat(mensaje, instruccion->parametro[2]);
+	return mensaje;
 }
 char* concatenar_mensaje_con_2_parametros(char mensaje[30], t_instruccion* instruccion){
-strcat(mensaje, instruccion->parametro[0]);
-strcat(mensaje, " ");
-strcat(mensaje, instruccion->parametro[1]);
-return mensaje;
+	strcat(mensaje, instruccion->parametro[0]);
+	strcat(mensaje, " ");
+	strcat(mensaje, instruccion->parametro[1]);
+	return mensaje;
 }
 char* concatenar_mensaje_con_1_parametro(char mensaje[30], t_instruccion* instruccion){
-strcat(mensaje, instruccion->parametro[0]);
-return mensaje;
+	strcat(mensaje, instruccion->parametro[0]);
+	return mensaje;
 }
 
