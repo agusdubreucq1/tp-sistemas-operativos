@@ -58,7 +58,7 @@ void* conectarFileSystem(){
 	socket_fileSystem = crear_conexion(ip_filesystem, puerto_filesystem, kernel_logger, "File System");
 	handshake(socket_fileSystem, 1, kernel_logger, "File System");
 
-	enviar_mensaje("Soy el Kernel", socket_fileSystem);
+	enviar_mensaje("Conectado al Kernel", socket_fileSystem);
 	return "";
 }
 
@@ -66,7 +66,7 @@ void* conectarCPU(){
 	socket_cpu = crear_conexion(ip_cpu, puerto_cpu, kernel_logger, "CPU");
 	handshake(socket_cpu, 1, kernel_logger, "CPU");
 
-	enviar_mensaje("Soy el Kernel", socket_cpu);
+	enviar_mensaje("Conectado al Kernel", socket_cpu);
 	return "";
 }
 
@@ -74,7 +74,7 @@ void* conectarMemoria(){
 	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, kernel_logger, "Memoria");
 	handshake(socket_memoria, 1, kernel_logger, "Memoria");
 
-	enviar_mensaje("Soy el Kernel", socket_memoria);
+	enviar_mensaje("Conectado al Kernel", socket_memoria);
 	return "";
 }
 

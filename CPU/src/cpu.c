@@ -78,7 +78,7 @@ void* conectarMemoria(){
 	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, cpu_logger, "Memoria");
 	handshake(socket_memoria, 1, cpu_logger, "Memoria");
 
-	enviar_mensaje("Soy el CPU", socket_memoria);
+	enviar_mensaje("Conectado al CPU", socket_memoria);
 	return "";
 }
 

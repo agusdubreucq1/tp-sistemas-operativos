@@ -11482,3 +11482,148 @@
 [INFO] 00:23:51:732 CPU/(18456:18457): Datos enviados, esperando respuesta de cpu...
 [INFO] 00:23:51:777 CPU/(18456:18457): Datos enviados correctamente
 [INFO] 00:25:44:612 CPU/(18456:18457): Comenzar ejecucion del proceso: 9.
+[INFO] 01:28:09:079 CPU/(24869:24869): Logger creado
+[INFO] 01:28:09:080 CPU/(24869:24869): -------Valores del config-------
+[INFO] 01:28:09:080 CPU/(24869:24869): Retardo Instrucción = 1000
+[INFO] 01:28:09:080 CPU/(24869:24869): IP Memoria = 127.0.0.1
+[INFO] 01:28:09:080 CPU/(24869:24869): Puerto Memoria = 8003
+[INFO] 01:28:09:080 CPU/(24869:24869): Puerto Escucha = 8001
+[INFO] 01:28:09:080 CPU/(24869:24869): Tamanio maximo de segmentos = (null)
+[INFO] 01:28:09:080 CPU/(24869:24869): --------------------------------
+[INFO] 01:28:09:080 CPU/(24869:24869): ¡CPU iniciado correctamente!
+[TRACE] 01:28:09:080 CPU/(24869:24869): Listo para escuchar a mi cliente
+[INFO] 01:28:09:080 CPU/(24869:24869): Servidor listo para recibir al cliente
+[INFO] 01:28:09:081 CPU/(24869:24871): Conexion establecida con Memoria
+[INFO] 01:28:09:565 CPU/(24869:24870): Se conecto un cliente!
+[INFO] 01:28:09:565 CPU/(24869:24870): Soy el Kernel
+[INFO] 01:32:32:000 CPU/(25601:25601): Logger creado
+[INFO] 01:32:32:001 CPU/(25601:25601): -------Valores del config-------
+[INFO] 01:32:32:001 CPU/(25601:25601): Retardo Instrucción = 1000
+[INFO] 01:32:32:001 CPU/(25601:25601): IP Memoria = 127.0.0.1
+[INFO] 01:32:32:001 CPU/(25601:25601): Puerto Memoria = 8003
+[INFO] 01:32:32:001 CPU/(25601:25601): Puerto Escucha = 8001
+[INFO] 01:32:32:002 CPU/(25601:25601): Tamanio maximo de segmentos = (null)
+[INFO] 01:32:32:002 CPU/(25601:25601): --------------------------------
+[INFO] 01:32:32:002 CPU/(25601:25601): ¡CPU iniciado correctamente!
+[TRACE] 01:32:32:002 CPU/(25601:25601): Listo para escuchar a mi cliente
+[INFO] 01:32:32:002 CPU/(25601:25601): Servidor listo para recibir al cliente
+[INFO] 01:32:32:002 CPU/(25601:25603): Conexion establecida con Memoria
+[INFO] 01:32:34:103 CPU/(25601:25602): Se conecto un cliente!
+[INFO] 01:32:34:104 CPU/(25601:25602): Conectado al Kernel
+[INFO] 01:32:44:104 CPU/(25601:25602): Comenzar ejecucion del proceso: 5.
+[INFO] 01:32:44:104 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:104 CPU/(25601:25602): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 01:32:44:105 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:105 CPU/(25601:25602): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 01:32:44:105 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:105 CPU/(25601:25602): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 01:32:44:105 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:44:145 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:44:188 CPU/(25601:25602): Comenzar ejecucion del proceso: 9.
+[INFO] 01:32:44:188 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:188 CPU/(25601:25602): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 01:32:44:189 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:189 CPU/(25601:25602): PID: 9 - Ejecutando: MOV_OUT 120 AX
+[INFO] 01:32:44:190 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:190 CPU/(25601:25602): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 01:32:44:190 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:44:232 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:44:276 CPU/(25601:25602): Comenzar ejecucion del proceso: 10.
+[INFO] 01:32:44:276 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:276 CPU/(25601:25602): PID: 10 - Ejecutando: SET AX PERO
+[INFO] 01:32:44:277 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:277 CPU/(25601:25602): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 01:32:44:277 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:277 CPU/(25601:25602): PID: 10 - Ejecutando: WAIT DISCO
+[INFO] 01:32:44:278 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:44:320 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:44:364 CPU/(25601:25602): Comenzar ejecucion del proceso: 5.
+[INFO] 01:32:44:364 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:44:364 CPU/(25601:25602): PID: 5 - Ejecutando: I/O 10
+[INFO] 01:32:44:364 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:54:409 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:54:453 CPU/(25601:25602): Comenzar ejecucion del proceso: 5.
+[INFO] 01:32:54:453 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:54:453 CPU/(25601:25602): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 01:32:54:453 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:54:453 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:54:496 CPU/(25601:25602): Comenzar ejecucion del proceso: 5.
+[INFO] 01:32:54:496 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:54:496 CPU/(25601:25602): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 01:32:54:497 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:54:497 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:54:497 CPU/(25601:25602): PID: 5 - Ejecutando: YIELD
+[INFO] 01:32:54:497 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:54:540 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:54:585 CPU/(25601:25602): Comenzar ejecucion del proceso: 9.
+[INFO] 01:32:54:585 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:54:585 CPU/(25601:25602): PID: 9 - Ejecutando: I/O 1
+[INFO] 01:32:54:585 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:55:631 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:55:672 CPU/(25601:25602): Comenzar ejecucion del proceso: 5.
+[INFO] 01:32:55:672 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:672 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:672 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:672 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:672 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:673 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:673 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:673 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:673 CPU/(25601:25602): PID: 5 - Ejecutando: EXIT
+[INFO] 01:32:55:673 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:55:673 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:55:716 CPU/(25601:25602): Comenzar ejecucion del proceso: 9.
+[INFO] 01:32:55:716 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:716 CPU/(25601:25602): PID: 9 - Ejecutando: SIGNAL DISCO
+[INFO] 01:32:55:716 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:55:762 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:55:804 CPU/(25601:25602): Comenzar ejecucion del proceso: 9.
+[INFO] 01:32:55:804 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:804 CPU/(25601:25602): PID: 9 - Ejecutando: MOV_IN BX 120
+[INFO] 01:32:55:804 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:804 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:804 CPU/(25601:25602): PID: 9 - Ejecutando: YIELD
+[INFO] 01:32:55:804 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:55:848 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:55:892 CPU/(25601:25602): Comenzar ejecucion del proceso: 10.
+[INFO] 01:32:55:893 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:55:893 CPU/(25601:25602): PID: 10 - Ejecutando: I/O 1
+[INFO] 01:32:55:893 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:56:936 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:56:981 CPU/(25601:25602): Comenzar ejecucion del proceso: 9.
+[INFO] 01:32:56:981 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:56:981 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:56:981 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:56:981 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:56:981 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:56:981 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:56:981 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:56:981 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:56:981 CPU/(25601:25602): PID: 9 - Ejecutando: EXIT
+[INFO] 01:32:56:981 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:56:982 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:57:024 CPU/(25601:25602): Comenzar ejecucion del proceso: 10.
+[INFO] 01:32:57:024 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:024 CPU/(25601:25602): PID: 10 - Ejecutando: SIGNAL DISCO
+[INFO] 01:32:57:024 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:57:069 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:57:112 CPU/(25601:25602): Comenzar ejecucion del proceso: 10.
+[INFO] 01:32:57:112 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:112 CPU/(25601:25602): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 01:32:57:112 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:112 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:112 CPU/(25601:25602): PID: 10 - Ejecutando: YIELD
+[INFO] 01:32:57:112 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:57:156 CPU/(25601:25602): Datos enviados correctamente
+[INFO] 01:32:57:201 CPU/(25601:25602): Comenzar ejecucion del proceso: 10.
+[INFO] 01:32:57:201 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:201 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:201 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:201 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:201 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:201 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:201 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:201 CPU/(25601:25602): Instruccion Ejecutada
+[INFO] 01:32:57:201 CPU/(25601:25602): PID: 10 - Ejecutando: EXIT
+[INFO] 01:32:57:201 CPU/(25601:25602): Datos enviados, esperando respuesta de cpu...
+[INFO] 01:32:57:245 CPU/(25601:25602): Datos enviados correctamente

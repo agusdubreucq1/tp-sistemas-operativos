@@ -57,7 +57,7 @@ void* conectarMemoria(){
 	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, fileSystem_logger, "Memoria");
 	handshake(socket_memoria, 1, fileSystem_logger, "Memoria");
 
-	enviar_mensaje("Soy el FileSystem", socket_memoria);
+	enviar_mensaje("Conectado al FileSystem", socket_memoria);
 	return "";
 }
 

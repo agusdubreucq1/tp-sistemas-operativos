@@ -5217,3 +5217,33 @@
 [INFO] 00:23:32:872 Consola/(18473:18473): Datos enviados correctamente
 [INFO] 00:23:51:513 Consola/(18468:18468): Cerrando conexion
 [INFO] 00:23:51:776 Consola/(18473:18473): Cerrando conexion
+[INFO] 01:32:35:213 Consola/(25616:25616): Logger creado
+[INFO] 01:32:35:214 Consola/(25616:25616): ¡Consola iniciada correctamente!
+[INFO] 01:32:35:214 Consola/(25616:25616): -------Valores del config-------
+[INFO] 01:32:35:214 Consola/(25616:25616): Ip = 127.0.0.1
+[INFO] 01:32:35:214 Consola/(25616:25616): Puerto = 8000
+[INFO] 01:32:35:214 Consola/(25616:25616): --------------------------------
+[INFO] 01:32:35:215 Consola/(25616:25616): Conexion establecida con Kernel
+[INFO] 01:32:35:215 Consola/(25616:25616): Datos enviados, esperando respuesta de Kernel...
+[INFO] 01:32:35:215 Consola/(25616:25616): Datos enviados correctamente
+[INFO] 01:32:35:680 Consola/(25621:25621): Logger creado
+[INFO] 01:32:35:680 Consola/(25621:25621): ¡Consola iniciada correctamente!
+[INFO] 01:32:35:680 Consola/(25621:25621): -------Valores del config-------
+[INFO] 01:32:35:681 Consola/(25621:25621): Ip = 127.0.0.1
+[INFO] 01:32:35:681 Consola/(25621:25621): Puerto = 8000
+[INFO] 01:32:35:681 Consola/(25621:25621): --------------------------------
+[INFO] 01:32:35:681 Consola/(25621:25621): Conexion establecida con Kernel
+[INFO] 01:32:35:681 Consola/(25621:25621): Datos enviados, esperando respuesta de Kernel...
+[INFO] 01:32:35:681 Consola/(25621:25621): Datos enviados correctamente
+[INFO] 01:32:36:116 Consola/(25623:25623): Logger creado
+[INFO] 01:32:36:116 Consola/(25623:25623): ¡Consola iniciada correctamente!
+[INFO] 01:32:36:116 Consola/(25623:25623): -------Valores del config-------
+[INFO] 01:32:36:116 Consola/(25623:25623): Ip = 127.0.0.1
+[INFO] 01:32:36:117 Consola/(25623:25623): Puerto = 8000
+[INFO] 01:32:36:117 Consola/(25623:25623): --------------------------------
+[INFO] 01:32:36:117 Consola/(25623:25623): Conexion establecida con Kernel
+[INFO] 01:32:36:117 Consola/(25623:25623): Datos enviados, esperando respuesta de Kernel...
+[INFO] 01:32:36:117 Consola/(25623:25623): Datos enviados correctamente
+[INFO] 01:32:55:673 Consola/(25616:25616): Cerrando conexion
+[INFO] 01:32:56:981 Consola/(25621:25621): Cerrando conexion
+[INFO] 01:32:57:244 Consola/(25623:25623): Cerrando conexion
