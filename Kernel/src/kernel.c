@@ -36,7 +36,7 @@ int main(void){
 	pthread_create(&planificador_largo_plazo, NULL, (void*) planificarLargoPlazo, NULL);
     pthread_detach(planificador_largo_plazo);
 
-    pthread_create(&planificador_corto_plazo, NULL, (void*) planificarCortoPlazoFIFO, NULL);
+    pthread_create(&planificador_corto_plazo, NULL, (void*) planificarCortoPlazo, NULL);
     pthread_detach(planificador_corto_plazo);
 
     while(1){
@@ -157,7 +157,7 @@ void planificarLargoPlazo(){
 	}
 }
 
-void planificarCortoPlazoFIFO(){
+void planificarCortoPlazo(){
 	sleep(10);
 
 	while(1){

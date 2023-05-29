@@ -103,7 +103,7 @@
 	void* recibirProcesos(int* conexion_p);
 	void init_estructuras_planificacion();
 	void planificarLargoPlazo();
-	void planificarCortoPlazoFIFO();
+	void planificarCortoPlazo();
 	void enviar_pcb(t_pcb* pcb);
 	void cerrar_conexiones();
 	void recibir_mensaje_cpu();
