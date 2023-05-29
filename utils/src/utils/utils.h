@@ -33,5 +33,6 @@
 // ------------------------------------------------------------------------------------------
 
 	void iterator(char* value);
+	char* codigo_estado_string(estado_code codigo);
 
 #endif /* SRC_UTILS_H_ */

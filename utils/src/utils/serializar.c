@@ -14,7 +14,7 @@ t_paquete* serializar_pcb(t_pcb* pcb){
 	agregar_variable_a_paquete(paquete, &(pcb->program_counter), sizeof(uint32_t));
 	serializar_registros_cpu(paquete, pcb->registros_cpu);
 	serializar_tabla_segmentos(paquete, pcb);
-	printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
+	//printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
 
 	return paquete;
 }
@@ -25,7 +25,7 @@ t_paquete* serializar_contexto(t_contexto_ejecucion* contexto){
 	//agregar_variable_a_paquete(paquete, &(contexto->pid), sizeof(uint32_t));
 	agregar_variable_a_paquete(paquete, &(contexto->program_counter), sizeof(uint32_t));
 	serializar_registros_cpu(paquete, contexto->registros_cpu);
-	printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
+	//printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
 
 	return paquete;
 }
@@ -54,7 +54,7 @@ void serializar_registros_cpu(t_paquete* paquete, t_registros* registro){
 	agregar_variable_a_paquete(paquete, registro->rbx, 16);
 	agregar_variable_a_paquete(paquete, registro->rcx, 16);
 	agregar_variable_a_paquete(paquete, registro->rdx, 16);
-	print_registos(registro);
+	//print_registos(registro);
 }
 
 void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb){
@@ -68,11 +68,11 @@ void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb){
 
 void serializar_tabla_segmentos(t_paquete* paquete, t_pcb* pcb){
 	int cant_segmentos = list_size(pcb->tabla_segmentos);
-		printf("\n cant_segmentos: %d\n", cant_segmentos);
+		//printf("\n cant_segmentos: %d\n", cant_segmentos);
 		agregar_variable_a_paquete(paquete, &cant_segmentos, sizeof(int));
 		for(int j=0;list_size(pcb->tabla_segmentos)>j;j++){
 			agregar_a_paquete(paquete, list_get(pcb->tabla_segmentos,j), sizeof(t_segmento));
-			printf("\n NO \n");
+			//printf("\n NO \n");
 		}
 }
 

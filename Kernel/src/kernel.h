@@ -77,6 +77,7 @@
 
 	int devolver_ejecucion;
 	t_pcb* pcb_ejecutando;
+	t_pcb* pcb_a_ejecutar;
 
 	sem_t semaforo_multiprogramacion;
 	sem_t cantidad_procesos_new;
@@ -89,6 +90,7 @@
 	struct timeval tiempo;
 	long long hora_inicio;
 	int existeRecurso;
+	int recibi_instruccion;
 
 
 // ------------------------------------------------------------------------------------------
@@ -104,8 +106,8 @@
 	void planificarCortoPlazoFIFO();
 	void enviar_pcb(t_pcb* pcb);
 	void cerrar_conexiones();
-	void recibir_mensaje_cpu(t_pcb* pcb);
-	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
+	void recibir_mensaje_cpu();
+	void ejecutar_segun_motivo(char* motivo);
 	t_pcb* pcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
 	void ejecutar_io(t_thread_args* args);

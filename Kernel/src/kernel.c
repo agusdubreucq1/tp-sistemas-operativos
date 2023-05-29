@@ -39,9 +39,6 @@ int main(void){
     pthread_create(&planificador_corto_plazo, NULL, (void*) planificarCortoPlazoFIFO, NULL);
     pthread_detach(planificador_corto_plazo);
 
-	//pthread_create(&atender_consolas, NULL, recibirProcesos, NULL);
-	//pthread_join(atender_consolas, NULL);
-
     while(1){
         int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
         pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) &conexion_consola);
@@ -69,6 +66,7 @@ void* conectarCPU(){
 	enviar_mensaje("Conectado al Kernel", socket_cpu);
 	return "";
 }
+
 
 void* conectarMemoria(){
 	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, kernel_logger, "Memoria");
@@ -100,12 +98,9 @@ void* recibirProcesos(int* p_conexion) {
 		lista = recibir_instrucciones(conexion, &tamanio);
 		log_info(kernel_logger, "Nuevo Proceso recibido con exito");
 		t_pcb* nuevo_pcb = crear_pcb(conexion, lista, estimacion_inicial);
+		log_info(kernel_logger, "Se crea el proceso %d en NEW", nuevo_pcb->pid);
 		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new, NEW);
-		//print_pcb(nuevo_pcb);
 		sem_post(&cantidad_procesos_new);
-
-		//t_pcb* pcb = list_get(lista_new, list_size(lista_new)-1); -> el pcb ya paso a ready, por lo q da segmentation fault
-
 		break;
 	}
 	return "";
@@ -118,6 +113,7 @@ void init_estructuras_planificacion(){
     lista_recursos = list_create();
 
     devolver_ejecucion = 0;
+    recibi_instruccion = 0;
 
     int i = 0;
 	char** ptr = recursos;
@@ -166,41 +162,48 @@ void planificarCortoPlazoFIFO(){
 
 	while(1){
 		if(!(strcmp(algoritmo_planificacion, "FIFO"))){
-			sem_wait(&cantidad_procesos_ready);
-			pthread_mutex_lock(&semaforo_ready);
-			t_pcb* pcb_a_ejecutar;
-			if (devolver_ejecucion == 1){
-				list_remove_element(lista_ready, pcb_ejecutando);
-				pcb_a_ejecutar = pcb_ejecutando;
-				devolver_ejecucion = 0;
-			} else {
-				pcb_a_ejecutar = list_remove(lista_ready, 0);
-			}
-			sem_post(&semaforo_multiprogramacion);
-			pthread_mutex_unlock(&semaforo_ready);
-			pthread_mutex_lock(&semaforo_execute);
+			if (recibi_instruccion == 0){
+				sem_wait(&cantidad_procesos_ready);
+				pthread_mutex_lock(&semaforo_ready);
+				if (devolver_ejecucion == 1){
+					list_remove_element(lista_ready, pcb_ejecutando);
+					pcb_a_ejecutar = pcb_ejecutando;
+					devolver_ejecucion = 0;
+				} else {
+					pcb_a_ejecutar = list_remove(lista_ready, 0);
+				}
+				sem_post(&semaforo_multiprogramacion);
+				pthread_mutex_unlock(&semaforo_ready);
+				pthread_mutex_lock(&semaforo_execute);
 
-			enviar_pcb(pcb_a_ejecutar);
-			recibir_mensaje_cpu(pcb_a_ejecutar);
-			pthread_mutex_unlock(&semaforo_execute);
-		} else{
-			sem_wait(&cantidad_procesos_ready);
-			pthread_mutex_lock(&semaforo_ready);
-			t_pcb* pcb_a_ejecutar;
-			if (devolver_ejecucion == 1){
-				list_remove_element(lista_ready, pcb_ejecutando);
-				pcb_a_ejecutar = pcb_ejecutando;
-				devolver_ejecucion = 0;
+				pcb_a_ejecutar->estado = EXEC;
+				enviar_pcb(pcb_a_ejecutar);
+				recibir_mensaje_cpu();
+				pthread_mutex_unlock(&semaforo_execute);
 			} else {
-				pcb_a_ejecutar = pcb_elegido_HRRN();
+				recibir_mensaje_cpu();
 			}
-			sem_post(&semaforo_multiprogramacion);
-			pthread_mutex_unlock(&semaforo_ready);
-			pthread_mutex_lock(&semaforo_execute);
-			enviar_pcb(pcb_a_ejecutar);
-			recibir_mensaje_cpu(pcb_a_ejecutar);
-			pthread_mutex_unlock(&semaforo_execute);
-			//printf("PID %d\n", pcb_a_ejecutar->pid);
+		} else{
+			if (recibi_instruccion == 0){
+				sem_wait(&cantidad_procesos_ready);
+				pthread_mutex_lock(&semaforo_ready);
+				if (devolver_ejecucion == 1){
+					list_remove_element(lista_ready, pcb_ejecutando);
+					pcb_a_ejecutar = pcb_ejecutando;
+					devolver_ejecucion = 0;
+				} else {
+					pcb_a_ejecutar = pcb_elegido_HRRN();
+				}
+				sem_post(&semaforo_multiprogramacion);
+				pthread_mutex_unlock(&semaforo_ready);
+				pthread_mutex_lock(&semaforo_execute);
+				pcb_a_ejecutar->estado = EXEC;
+				enviar_pcb(pcb_a_ejecutar);
+				recibir_mensaje_cpu();
+				pthread_mutex_unlock(&semaforo_execute);
+			} else {
+				recibir_mensaje_cpu();
+			}
 		}
 	}
 }
@@ -220,17 +223,11 @@ t_pcb* pcb_elegido_HRRN(){
 			ratio_mayor = ratio;
 			tcb_index = i;
 		}
-
 	}
 
 	pcb = list_remove(lista_ready, tcb_index);
-	printf("\nratio mayor %f\n", ratio_mayor);
-	printf("PCB %d\n", pcb->pid);
-	printf("estimado %d\n\n", pcb->estimado_rafaga);
-
 	return pcb;
 }
-
 
 void enviar_pcb(t_pcb* pcb){
 	t_paquete* paquete;
@@ -238,19 +235,21 @@ void enviar_pcb(t_pcb* pcb){
 
 	int tamanio_pcb;
 	memcpy(&tamanio_pcb, paquete->buffer->stream, sizeof(int));
-	printf("\n pcb a ejecutar:\n\n");
-	printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
+	//printf("\n pcb a ejecutar:\n\n");
+	//printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
 
 	enviar_paquete(paquete, socket_cpu, kernel_logger, "cpu");
 }
 
-void recibir_mensaje_cpu(t_pcb* pcb){
+void recibir_mensaje_cpu(){
 	int cod_op;
 	cod_op = recibir_operacion(socket_cpu);
-	printf("\n cod_op: %d \n", cod_op);
 	switch (cod_op) {
 		case MENSAJE:
-			recibir_mensaje(socket_cpu, kernel_logger);
+			char mensaje[30] = "";
+			strcat(mensaje, recibir_instruccion(socket_cpu, kernel_logger));
+			ejecutar_segun_motivo(mensaje);
+			recibi_instruccion = 1;
 			break;
 		case PAQUETE:
 			int size;
@@ -258,29 +257,25 @@ void recibir_mensaje_cpu(t_pcb* pcb){
 			char* motivo;
 			int* tam_recibido= malloc(sizeof(int));
 			buffer = recibir_buffer(&size, socket_cpu);
-			printf("\n recibi buffer \n");
+			//printf("\n recibi buffer \n");
 
-			deserializar_contexto(buffer,tam_recibido, pcb);
+			deserializar_contexto(buffer,tam_recibido, pcb_a_ejecutar);
 			motivo = deserializar_motivo(buffer, tam_recibido);
-			ejecutar_segun_motivo(motivo, pcb);
-			//contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
+			log_trace(kernel_logger, "Recibi contexto de ejecucion - PID: %d", pcb_a_ejecutar->pid);
+			ejecutar_segun_motivo(motivo);
 
 			*tam_recibido+=2*sizeof(int);
-			printf("\n tamanio recibido: %d\n", *tam_recibido);
-			//printf("puntero: %p\n", tam_recibido);
-			int var_send_ = send(socket_cpu, tam_recibido, sizeof(int), 0);
-			//printf("var_send: %d\n", var_send_);
+			//printf("\n tamanio recibido: %d\n", *tam_recibido);
+			send(socket_cpu, tam_recibido, sizeof(int), 0);
 
-			printf("\n recibi contexto:\n");
-			print_pcb(pcb);
-		/*case INSTRUCCION:
-			char* instruccion_de_cpu = recibir_instruccion_cpu(socket_cpu, kernel_logger);
-			printf("%s", instruccion_de_cpu);
-			break;*/
+
+			//printf("\n recibi contexto:\n");
+			//print_pcb(pcb_a_ejecutar);
+			recibi_instruccion = 0;
 	}
 }
 
-void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
+void ejecutar_segun_motivo(char* motivo){
 
 	char** parametros = string_split(motivo, " ");
 	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(parametros[0]);
@@ -288,123 +283,134 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 	switch(cod_instruccion) {
 
 	case WAIT:
-		estimar_rafaga(pcb);
-		printf("ejecutando %s", motivo);
+		estimar_rafaga(pcb_a_ejecutar);
+		//printf("ejecutando %s", motivo);
 		char** parametros = string_split(motivo, " ");
 		existeRecurso = recurso_existe(parametros[1]);
 
 		if (existeRecurso == -1){
-			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
-			pcb->estado = EXITT;
-			enviar_mensaje("-1", pcb->pid);
-			liberar_conexion(pcb->pid);
+			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb_a_ejecutar->pid, parametros[1]);
+			pcb_a_ejecutar->estado = EXITT;
+			enviar_mensaje("-1", pcb_a_ejecutar->pid);
+			liberar_conexion(pcb_a_ejecutar->pid);
 		} else {
-			descontar_recurso(list_get(lista_recursos, existeRecurso), pcb);
-			imprimir_recurso(list_get(lista_recursos, existeRecurso));
+			descontar_recurso(list_get(lista_recursos, existeRecurso), pcb_a_ejecutar, kernel_logger);
+			//imprimir_recurso(list_get(lista_recursos, existeRecurso));
 		}
-		printf("ejecutando wait");
 		break;
 
 	case YIELD:
-		estimar_rafaga(pcb);
+		estimar_rafaga(pcb_a_ejecutar);
 		sem_wait(&semaforo_multiprogramacion);
-		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, READY);
 		sem_post(&cantidad_procesos_ready);
-		printf("ejecutando yield");
+		//printf("ejecutando yield");
 		break;
 
 	case EXIT:
-		pcb->estado = EXITT;
-		printf("ejecutando exit");
-		enviar_mensaje("-1", pcb->pid);
-		liberar_conexion(pcb->pid);
+		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
+		pcb_a_ejecutar->estado = EXITT;
+		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SUCCESS ", pcb_a_ejecutar->pid);
+		enviar_mensaje("-1", pcb_a_ejecutar->pid);
+		liberar_conexion(pcb_a_ejecutar->pid);
 		break;
 
 	case SIGNAL:
-		estimar_rafaga(pcb);
-		printf("ejecutando %s", motivo);
+		estimar_rafaga(pcb_a_ejecutar);
+		//printf("ejecutando %s", motivo);
 		parametros = string_split(motivo, " ");
 		existeRecurso = recurso_existe(parametros[1]);
 
 		if (existeRecurso == -1){
-			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
-			pcb->estado = EXITT;
-			enviar_mensaje("-1", pcb->pid);
-			liberar_conexion(pcb->pid);
+			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb_a_ejecutar->pid, parametros[1]);
+			pcb_a_ejecutar->estado = EXITT;
+			enviar_mensaje("-1", pcb_a_ejecutar->pid);
+			liberar_conexion(pcb_a_ejecutar->pid);
 		} else {
 			sem_wait(&semaforo_multiprogramacion);
-			ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
+			ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, READY);
 			devolver_ejecucion = 1;
-			pcb_ejecutando = pcb;
+			pcb_ejecutando = pcb_a_ejecutar;
 			sem_post(&cantidad_procesos_ready);
-			sumar_recurso(list_get(lista_recursos, existeRecurso));
-			imprimir_recurso(list_get(lista_recursos, existeRecurso));
+			sumar_recurso(list_get(lista_recursos, existeRecurso), pcb_ejecutando->pid, kernel_logger);
+			//imprimir_recurso(list_get(lista_recursos, existeRecurso));
 		}
-		printf("ejecutando signal");
+		//printf("ejecutando signal");
 		break;
 
 	case I_O:
-		printf("BUDBUEDBUEBDUEBD\n\n\n\n\n\n");
-		print_pcb(pcb);
-		estimar_rafaga(pcb);
-		pcb->estado = BLOCKED;
-
-		//printf("ejecutando %s", motivo);
+		estimar_rafaga(pcb_a_ejecutar);
 		parametros = string_split(motivo, " ");
+
+		log_info(kernel_logger, "PID: %d - Ejecuta IO: %s", pcb_a_ejecutar->pid, parametros[1]);
+		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, BLOCKED);
+		log_info(kernel_logger, "PID: %d - Bloqueado por: %s", pcb_a_ejecutar->pid, "IO");
+		pcb_a_ejecutar->estado = BLOCKED;
+
 		int tiempo = atoi(parametros[1]);
-		printf("BUDBUEDBUEBDUEBD\n\n\n\n\n\n");
 
 		t_thread_args* argumentos_hilo = malloc(sizeof(t_thread_args));
-		argumentos_hilo->pcb = pcb;
+		argumentos_hilo->pcb = pcb_a_ejecutar;
 		argumentos_hilo->duracion = tiempo;
 
-		printf("PERRO");
 		pthread_create(&io_procesos, NULL,(void*) ejecutar_io, argumentos_hilo);
 		//pthread_detach(io_procesos);
 		pthread_join(io_procesos, NULL);
 
 		free(argumentos_hilo);
-		printf("ejecutando I-O");
 		break;
 
 	case F_OPEN:
-		printf("\nMe llego F_OPEN\n");
-		printf("\nMotivo: %s\n", motivo);
+		parametros = string_split(motivo, " ");
+		log_info(kernel_logger, "PID: %d - Abrir Archivo: %s", pcb_a_ejecutar->pid, parametros[1]);
+		enviar_mensaje(motivo, socket_fileSystem);
 		break;
 
 	case F_CLOSE:
-		printf("\nMe llego F_OPEN\n");
-		printf("\nMotivo: %s\n", motivo);
+		parametros = string_split(motivo, " ");
+		log_info(kernel_logger, "PID: %d - Cerrar Archivo: %s", pcb_a_ejecutar->pid, parametros[1]);
+		enviar_mensaje(motivo, socket_fileSystem);
 		break;
 
 	case F_SEEK:
-		printf("\nMe llego F_SEEK\n");
-		printf("\nMotivo: %s\n", motivo);
+		parametros = string_split(motivo, " ");
+		log_info(kernel_logger, "PID: %d - Actualizar puntero Archivo: %s -> %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
+		enviar_mensaje(motivo, socket_fileSystem);
 		break;
 
 	case F_READ:
-		printf("\nMe llego F_READ\n");
-		printf("\nMotivo: %s\n", motivo);
+		parametros = string_split(motivo, " ");
+		log_info(kernel_logger, "PID: %d - Leer Archivo: %s "
+				"- Puntero: %s "
+				"- Direccion Memoria: %s "
+				"- Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2], parametros[3], parametros[4]);
+		enviar_mensaje(motivo, socket_fileSystem);
 		break;
 
 	case F_WRITE:
-		printf("\nMe llego F_WRITE\n");
-		printf("\nMotivo: %s\n", motivo);
+		parametros = string_split(motivo, " ");
+		log_info(kernel_logger, "PID: %d - Escribir Archivo: %s "
+				"- Puntero: %s "
+				"- Direccion Memoria: %s "
+				"- Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2], parametros[3], parametros[4]);
+		enviar_mensaje(motivo, socket_fileSystem);
 		break;
 
 	case F_TRUNCATE:
-		printf("\nMe llego F_TRUNCATE\n");
-		printf("\nMotivo: %s\n", motivo);
+		parametros = string_split(motivo, " ");
+		log_info(kernel_logger, "PID: %d - Truncar Archivo: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
+		enviar_mensaje(motivo, socket_fileSystem);
 		break;
 
 	case CREATE_SEGMENT:
-		printf("\nMe llego CREATE_SEGMENT\n");
-		printf("\nMotivo: %s\n", motivo);
+		parametros = string_split(motivo, " ");
+		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
+		enviar_mensaje(motivo, socket_memoria);
 		break;
 
 	case DELETE_SEGMENT:
-		printf("\nMe llego DELETE_SEGMENT\n");
-		printf("\nMotivo: %s\n", motivo);
+		parametros = string_split(motivo, " ");
+		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 		break;
 
 	default:
@@ -413,13 +419,12 @@ void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
 }
 
 void ejecutar_io(t_thread_args* args){
-	printf("GUGUGUGUGUGUGUGU PID %u\n\n\n\n", args->pcb->pid);
+	//printf("GUGUGUGUGUGUGUGU PID %u\n\n\n\n", args->pcb->pid);
 	sleep(args->duracion);
-	printf("ASASASASASASASAS PID %u\n\n\n\n", args->pcb->pid);
+	//printf("ASASASASASASASAS PID %u\n\n\n\n", args->pcb->pid);
 	sem_wait(&semaforo_multiprogramacion);
 	ingresar_en_lista(args->pcb, lista_ready, "READY", &semaforo_ready, READY);
 	sem_post(&cantidad_procesos_ready);
-	printf("HAIVA");
 }
 
 void estimar_rafaga(t_pcb* pcb){
@@ -443,5 +448,6 @@ void cerrar_conexiones(){
 	printf("cerre conexiones");
 	exit(1);
 }
+
 
 

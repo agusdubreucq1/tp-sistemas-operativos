@@ -9,10 +9,6 @@ void comenzar_ciclo_instruccion() {
 		t_instruccion* instruccion = fetch_instruccion();
 		salida = ejecutar_instruccion(instruccion);
 	}
-
-
-
-    //enviar_instruccion("SET perro", socket_Kernel);
 }
 
 t_instruccion* fetch_instruccion() {
@@ -72,20 +68,20 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																codigo_instruccion_string(instruccion->codigo_instruccion),
 																instruccion->parametro[0]);
 
-			char str2[30] = "I_O ";
-			strcat(str2, instruccion->parametro[0]);
-			enviarContexto(str2);
+			char mensaje_io[30] = "I_O ";
+			strcat(mensaje_io, instruccion->parametro[0]);
+			enviarContexto(mensaje_io);
 			salida = 0;
 			break;
 
 		case F_OPEN:
-					log_info(cpu_logger, "PID: %u - Ejecutando: %s %s", contexto_de_ejecucion->pid,
-																		codigo_instruccion_string(instruccion->codigo_instruccion),
-																		instruccion->parametro[0]);
-					char mensaje_f_open[30] = "F_OPEN ";
-					strcat(mensaje_f_open, instruccion->parametro[0]);
-					enviar_mensaje(mensaje_f_open, socket_Kernel);
-					break;
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s", contexto_de_ejecucion->pid,
+																codigo_instruccion_string(instruccion->codigo_instruccion),
+																instruccion->parametro[0]);
+			char mensaje_f_open[30] = "F_OPEN ";
+			strcat(mensaje_f_open, instruccion->parametro[0]);
+			enviar_mensaje(mensaje_f_open, socket_Kernel);
+			break;
 
 		case F_CLOSE:
 			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s", contexto_de_ejecucion->pid,

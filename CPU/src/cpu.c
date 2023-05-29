@@ -86,7 +86,6 @@ void* conectarMemoria(){
 void recibir_mensaje_kernel(){
 	int cod_op;
 	cod_op = recibir_operacion(socket_Kernel);
-	printf("\n cod_op: %d \n", cod_op);
 	switch (cod_op) {
 		case MENSAJE:
 			recibir_mensaje(socket_Kernel, cpu_logger);

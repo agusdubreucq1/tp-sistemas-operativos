@@ -12146,3 +12146,1565 @@
 [INFO] 02:04:40:242 CPU/(146204:146205): Datos enviados, esperando respuesta de cpu...
 [ERROR] 02:04:40:243 CPU/(146204:146205): Han llegado menos bytes que los enviados por cpu
 [INFO] 02:04:40:243 CPU/(146204:146205): Comenzar ejecucion del proceso: 5.
+[INFO] 08:40:24:293 CPU/(34984:34984): Logger creado
+[INFO] 08:40:24:293 CPU/(34984:34984): -------Valores del config-------
+[INFO] 08:40:24:293 CPU/(34984:34984): Retardo Instrucción = 1000
+[INFO] 08:40:24:293 CPU/(34984:34984): IP Memoria = 127.0.0.1
+[INFO] 08:40:24:293 CPU/(34984:34984): Puerto Memoria = 8003
+[INFO] 08:40:24:293 CPU/(34984:34984): Puerto Escucha = 8001
+[INFO] 08:40:24:293 CPU/(34984:34984): Tamanio maximo de segmentos = (null)
+[INFO] 08:40:24:294 CPU/(34984:34984): --------------------------------
+[INFO] 08:40:24:294 CPU/(34984:34984): ¡CPU iniciado correctamente!
+[TRACE] 08:40:24:294 CPU/(34984:34984): Listo para escuchar a mi cliente
+[INFO] 08:40:24:294 CPU/(34984:34984): Servidor listo para recibir al cliente
+[INFO] 08:40:24:294 CPU/(34984:34986): Conexion establecida con Memoria
+[INFO] 08:40:26:270 CPU/(34984:34985): Se conecto un cliente!
+[INFO] 08:40:26:271 CPU/(34984:34985): Me llego el mensaje: Conectado al Kernel
+[INFO] 08:40:36:271 CPU/(34984:34985): Comenzar ejecucion del proceso: 5.
+[INFO] 08:40:36:271 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:271 CPU/(34984:34985): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 08:40:36:272 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:272 CPU/(34984:34985): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 08:40:36:272 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:272 CPU/(34984:34985): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 08:40:36:272 CPU/(34984:34985): Datos enviados, esperando respuesta de cpu...
+[INFO] 08:40:36:315 CPU/(34984:34985): Datos enviados correctamente
+[INFO] 08:40:36:359 CPU/(34984:34985): Comenzar ejecucion del proceso: 9.
+[INFO] 08:40:36:359 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:359 CPU/(34984:34985): PID: 9 - Ejecutando: SET AX PERO
+[INFO] 08:40:36:362 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:362 CPU/(34984:34985): PID: 9 - Ejecutando: MOV_OUT 120 AX
+[INFO] 08:40:36:362 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:362 CPU/(34984:34985): PID: 9 - Ejecutando: WAIT DISCO
+[INFO] 08:40:36:362 CPU/(34984:34985): Datos enviados, esperando respuesta de cpu...
+[INFO] 08:40:36:403 CPU/(34984:34985): Datos enviados correctamente
+[INFO] 08:40:36:446 CPU/(34984:34985): Comenzar ejecucion del proceso: 10.
+[INFO] 08:40:36:446 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:446 CPU/(34984:34985): PID: 10 - Ejecutando: SET AX PERO
+[INFO] 08:40:36:448 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:448 CPU/(34984:34985): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 08:40:36:448 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:448 CPU/(34984:34985): PID: 10 - Ejecutando: WAIT DISCO
+[INFO] 08:40:36:448 CPU/(34984:34985): Datos enviados, esperando respuesta de cpu...
+[INFO] 08:40:36:490 CPU/(34984:34985): Datos enviados correctamente
+[INFO] 08:40:36:535 CPU/(34984:34985): Comenzar ejecucion del proceso: 5.
+[INFO] 08:40:36:535 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:36:535 CPU/(34984:34985): PID: 5 - Ejecutando: I/O 10
+[INFO] 08:40:36:535 CPU/(34984:34985): Datos enviados, esperando respuesta de cpu...
+[INFO] 08:40:46:580 CPU/(34984:34985): Datos enviados correctamente
+[INFO] 08:40:46:623 CPU/(34984:34985): Comenzar ejecucion del proceso: 5.
+[INFO] 08:40:46:623 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:623 CPU/(34984:34985): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 08:40:46:623 CPU/(34984:34985): Datos enviados, esperando respuesta de cpu...
+[INFO] 08:40:46:623 CPU/(34984:34985): Datos enviados correctamente
+[INFO] 08:40:46:667 CPU/(34984:34985): Comenzar ejecucion del proceso: 5.
+[INFO] 08:40:46:667 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:667 CPU/(34984:34985): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 08:40:46:667 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:667 CPU/(34984:34985): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 08:40:46:667 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:667 CPU/(34984:34985): PID: 5 - Ejecutando: YIELD
+[INFO] 08:40:46:667 CPU/(34984:34985): Datos enviados, esperando respuesta de cpu...
+[ERROR] 08:40:46:710 CPU/(34984:34985): Han llegado menos bytes que los enviados por cpu
+[INFO] 08:40:46:710 CPU/(34984:34985): Comenzar ejecucion del proceso: 5.
+[INFO] 08:40:46:711 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:711 CPU/(34984:34985): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 08:40:46:711 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:711 CPU/(34984:34985): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 08:40:46:711 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:711 CPU/(34984:34985): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 08:40:46:711 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:711 CPU/(34984:34985): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 08:40:46:711 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:711 CPU/(34984:34985): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 08:40:46:711 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:711 CPU/(34984:34985): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 08:40:46:711 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:711 CPU/(34984:34985): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 08:40:46:711 CPU/(34984:34985): Instruccion Ejecutada
+[INFO] 08:40:46:711 CPU/(34984:34985): PID: 5 - Ejecutando: EXIT
+[INFO] 08:40:46:711 CPU/(34984:34985): Datos enviados, esperando respuesta de cpu...
+[ERROR] 08:40:46:711 CPU/(34984:34985): Han llegado menos bytes que los enviados por cpu
+[INFO] 08:40:46:711 CPU/(34984:34985): Comenzar ejecucion del proceso: 5.
+[INFO] 08:47:19:184 CPU/(35770:35770): Logger creado
+[INFO] 08:47:19:185 CPU/(35770:35770): -------Valores del config-------
+[INFO] 08:47:19:185 CPU/(35770:35770): Retardo Instrucción = 1000
+[INFO] 08:47:19:185 CPU/(35770:35770): IP Memoria = 127.0.0.1
+[INFO] 08:47:19:185 CPU/(35770:35770): Puerto Memoria = 8003
+[INFO] 08:47:19:185 CPU/(35770:35770): Puerto Escucha = 8001
+[INFO] 08:47:19:185 CPU/(35770:35770): Tamanio maximo de segmentos = (null)
+[INFO] 08:47:19:185 CPU/(35770:35770): --------------------------------
+[INFO] 08:47:19:185 CPU/(35770:35770): ¡CPU iniciado correctamente!
+[TRACE] 08:47:19:185 CPU/(35770:35770): Listo para escuchar a mi cliente
+[INFO] 08:47:19:185 CPU/(35770:35770): Servidor listo para recibir al cliente
+[INFO] 08:47:19:186 CPU/(35770:35772): Conexion establecida con Memoria
+[INFO] 08:47:19:528 CPU/(35770:35771): Se conecto un cliente!
+[INFO] 08:47:19:528 CPU/(35770:35771): Me llego el mensaje: Conectado al Kernel
+[INFO] 08:47:29:528 CPU/(35770:35771): Comenzar ejecucion del proceso: 5.
+[INFO] 08:47:29:528 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:47:29:528 CPU/(35770:35771): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 08:47:29:529 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:47:29:529 CPU/(35770:35771): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 08:47:29:529 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:47:29:529 CPU/(35770:35771): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 08:47:29:530 CPU/(35770:35771): Datos enviados, esperando respuesta de cpu...
+[INFO] 08:47:29:571 CPU/(35770:35771): Datos enviados correctamente
+[INFO] 08:47:29:615 CPU/(35770:35771): Comenzar ejecucion del proceso: 5.
+[INFO] 08:47:29:615 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:47:29:615 CPU/(35770:35771): PID: 5 - Ejecutando: I/O 10
+[INFO] 08:47:29:615 CPU/(35770:35771): Datos enviados, esperando respuesta de cpu...
+[INFO] 08:47:39:659 CPU/(35770:35771): Datos enviados correctamente
+[INFO] 08:47:39:703 CPU/(35770:35771): Comenzar ejecucion del proceso: 5.
+[INFO] 08:47:39:703 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:47:39:703 CPU/(35770:35771): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 08:47:39:703 CPU/(35770:35771): Datos enviados, esperando respuesta de cpu...
+[INFO] 08:47:39:703 CPU/(35770:35771): Datos enviados correctamente
+[INFO] 08:47:39:747 CPU/(35770:35771): Comenzar ejecucion del proceso: 5.
+[INFO] 08:47:39:747 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:47:39:747 CPU/(35770:35771): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 08:47:39:747 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:47:39:747 CPU/(35770:35771): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 08:47:39:747 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:47:39:747 CPU/(35770:35771): PID: 5 - Ejecutando: YIELD
+[INFO] 08:47:39:747 CPU/(35770:35771): Datos enviados, esperando respuesta de cpu...
+[ERROR] 08:49:08:491 CPU/(35770:35771): Han llegado menos bytes que los enviados por cpu
+[INFO] 08:49:08:491 CPU/(35770:35771): Comenzar ejecucion del proceso: 5.
+[INFO] 08:49:08:491 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:49:08:491 CPU/(35770:35771): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 08:49:08:491 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:49:08:491 CPU/(35770:35771): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 08:49:08:491 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:49:08:491 CPU/(35770:35771): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 08:49:08:491 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:49:08:491 CPU/(35770:35771): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 08:49:08:491 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:49:08:491 CPU/(35770:35771): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 08:49:08:491 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:49:08:491 CPU/(35770:35771): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 08:49:08:491 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:49:08:491 CPU/(35770:35771): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 08:49:08:491 CPU/(35770:35771): Instruccion Ejecutada
+[INFO] 08:49:08:491 CPU/(35770:35771): PID: 5 - Ejecutando: EXIT
+[INFO] 08:49:08:491 CPU/(35770:35771): Datos enviados, esperando respuesta de cpu...
+[ERROR] 08:49:08:491 CPU/(35770:35771): Han llegado menos bytes que los enviados por cpu
+[INFO] 08:49:08:491 CPU/(35770:35771): Comenzar ejecucion del proceso: 5.
+[INFO] 09:32:06:585 CPU/(41456:41456): Logger creado
+[INFO] 09:32:06:585 CPU/(41456:41456): -------Valores del config-------
+[INFO] 09:32:06:585 CPU/(41456:41456): Retardo Instrucción = 1000
+[INFO] 09:32:06:585 CPU/(41456:41456): IP Memoria = 127.0.0.1
+[INFO] 09:32:06:586 CPU/(41456:41456): Puerto Memoria = 8003
+[INFO] 09:32:06:586 CPU/(41456:41456): Puerto Escucha = 8001
+[INFO] 09:32:06:586 CPU/(41456:41456): Tamanio maximo de segmentos = (null)
+[INFO] 09:32:06:586 CPU/(41456:41456): --------------------------------
+[INFO] 09:32:06:586 CPU/(41456:41456): ¡CPU iniciado correctamente!
+[TRACE] 09:32:06:586 CPU/(41456:41456): Listo para escuchar a mi cliente
+[INFO] 09:32:06:586 CPU/(41456:41456): Servidor listo para recibir al cliente
+[INFO] 09:32:06:586 CPU/(41456:41458): Conexion establecida con Memoria
+[INFO] 09:32:07:218 CPU/(41456:41457): Se conecto un cliente!
+[INFO] 09:32:07:218 CPU/(41456:41457): Me llego el mensaje: Conectado al Kernel
+[INFO] 09:32:17:218 CPU/(41456:41457): Comenzar ejecucion del proceso: 5.
+[INFO] 09:32:17:218 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:218 CPU/(41456:41457): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 09:32:17:219 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:219 CPU/(41456:41457): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 09:32:17:219 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:219 CPU/(41456:41457): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 09:32:17:219 CPU/(41456:41457): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:32:17:478 CPU/(41456:41457): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:32:17:478 CPU/(41456:41457): Comenzar ejecucion del proceso: 5.
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: I/O 10
+[INFO] 09:32:17:478 CPU/(41456:41457): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:32:17:478 CPU/(41456:41457): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:32:17:478 CPU/(41456:41457): Comenzar ejecucion del proceso: 5.
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 09:32:17:478 CPU/(41456:41457): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:32:17:478 CPU/(41456:41457): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:32:17:478 CPU/(41456:41457): Comenzar ejecucion del proceso: 5.
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: YIELD
+[INFO] 09:32:17:478 CPU/(41456:41457): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:32:17:478 CPU/(41456:41457): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:32:17:478 CPU/(41456:41457): Comenzar ejecucion del proceso: 5.
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 09:32:17:478 CPU/(41456:41457): Instruccion Ejecutada
+[INFO] 09:32:17:478 CPU/(41456:41457): PID: 5 - Ejecutando: EXIT
+[INFO] 09:32:17:478 CPU/(41456:41457): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:32:17:478 CPU/(41456:41457): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:32:17:478 CPU/(41456:41457): Comenzar ejecucion del proceso: 5.
+[INFO] 09:34:32:900 CPU/(41747:41747): Logger creado
+[INFO] 09:34:32:901 CPU/(41747:41747): -------Valores del config-------
+[INFO] 09:34:32:901 CPU/(41747:41747): Retardo Instrucción = 1000
+[INFO] 09:34:32:901 CPU/(41747:41747): IP Memoria = 127.0.0.1
+[INFO] 09:34:32:901 CPU/(41747:41747): Puerto Memoria = 8003
+[INFO] 09:34:32:901 CPU/(41747:41747): Puerto Escucha = 8001
+[INFO] 09:34:32:901 CPU/(41747:41747): Tamanio maximo de segmentos = (null)
+[INFO] 09:34:32:901 CPU/(41747:41747): --------------------------------
+[INFO] 09:34:32:901 CPU/(41747:41747): ¡CPU iniciado correctamente!
+[TRACE] 09:34:32:901 CPU/(41747:41747): Listo para escuchar a mi cliente
+[INFO] 09:34:32:901 CPU/(41747:41747): Servidor listo para recibir al cliente
+[INFO] 09:34:32:901 CPU/(41747:41749): Conexion establecida con Memoria
+[INFO] 09:34:35:813 CPU/(41747:41748): Se conecto un cliente!
+[INFO] 09:34:35:814 CPU/(41747:41748): Me llego el mensaje: Conectado al Kernel
+[INFO] 09:34:45:813 CPU/(41747:41748): Comenzar ejecucion del proceso: 5.
+[INFO] 09:34:45:813 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:45:813 CPU/(41747:41748): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 09:34:45:814 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:45:814 CPU/(41747:41748): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 09:34:45:815 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:45:815 CPU/(41747:41748): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 09:34:45:815 CPU/(41747:41748): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:34:46:069 CPU/(41747:41748): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:34:46:069 CPU/(41747:41748): Comenzar ejecucion del proceso: 5.
+[INFO] 09:34:46:069 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:069 CPU/(41747:41748): PID: 5 - Ejecutando: I/O 10
+[INFO] 09:34:46:069 CPU/(41747:41748): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:34:46:069 CPU/(41747:41748): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:34:46:069 CPU/(41747:41748): Comenzar ejecucion del proceso: 5.
+[INFO] 09:34:46:069 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:069 CPU/(41747:41748): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 09:34:46:069 CPU/(41747:41748): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:34:46:069 CPU/(41747:41748): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:34:46:069 CPU/(41747:41748): Comenzar ejecucion del proceso: 5.
+[INFO] 09:34:46:069 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:069 CPU/(41747:41748): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: YIELD
+[INFO] 09:34:46:070 CPU/(41747:41748): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:34:46:070 CPU/(41747:41748): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:34:46:070 CPU/(41747:41748): Comenzar ejecucion del proceso: 5.
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 09:34:46:070 CPU/(41747:41748): Instruccion Ejecutada
+[INFO] 09:34:46:070 CPU/(41747:41748): PID: 5 - Ejecutando: EXIT
+[INFO] 09:34:46:070 CPU/(41747:41748): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:34:46:070 CPU/(41747:41748): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:34:46:070 CPU/(41747:41748): Comenzar ejecucion del proceso: 5.
+[INFO] 09:36:13:897 CPU/(42002:42002): Logger creado
+[INFO] 09:36:13:897 CPU/(42002:42002): -------Valores del config-------
+[INFO] 09:36:13:897 CPU/(42002:42002): Retardo Instrucción = 1000
+[INFO] 09:36:13:897 CPU/(42002:42002): IP Memoria = 127.0.0.1
+[INFO] 09:36:13:898 CPU/(42002:42002): Puerto Memoria = 8003
+[INFO] 09:36:13:898 CPU/(42002:42002): Puerto Escucha = 8001
+[INFO] 09:36:13:898 CPU/(42002:42002): Tamanio maximo de segmentos = (null)
+[INFO] 09:36:13:898 CPU/(42002:42002): --------------------------------
+[INFO] 09:36:13:898 CPU/(42002:42002): ¡CPU iniciado correctamente!
+[TRACE] 09:36:13:898 CPU/(42002:42002): Listo para escuchar a mi cliente
+[INFO] 09:36:13:898 CPU/(42002:42002): Servidor listo para recibir al cliente
+[INFO] 09:36:13:898 CPU/(42002:42004): Conexion establecida con Memoria
+[INFO] 09:36:14:824 CPU/(42002:42003): Se conecto un cliente!
+[INFO] 09:36:14:824 CPU/(42002:42003): Me llego el mensaje: Conectado al Kernel
+[INFO] 09:36:24:824 CPU/(42002:42003): Comenzar ejecucion del proceso: 5.
+[INFO] 09:36:24:824 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:24:824 CPU/(42002:42003): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 09:36:24:825 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:24:825 CPU/(42002:42003): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 09:36:24:825 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:24:825 CPU/(42002:42003): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 09:36:24:825 CPU/(42002:42003): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:36:25:084 CPU/(42002:42003): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:36:25:084 CPU/(42002:42003): Comenzar ejecucion del proceso: 5.
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: I/O 10
+[INFO] 09:36:25:084 CPU/(42002:42003): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:36:25:084 CPU/(42002:42003): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:36:25:084 CPU/(42002:42003): Comenzar ejecucion del proceso: 5.
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 09:36:25:084 CPU/(42002:42003): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:36:25:084 CPU/(42002:42003): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:36:25:084 CPU/(42002:42003): Comenzar ejecucion del proceso: 5.
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: YIELD
+[INFO] 09:36:25:084 CPU/(42002:42003): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:36:25:084 CPU/(42002:42003): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:36:25:084 CPU/(42002:42003): Comenzar ejecucion del proceso: 5.
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 09:36:25:084 CPU/(42002:42003): Instruccion Ejecutada
+[INFO] 09:36:25:084 CPU/(42002:42003): PID: 5 - Ejecutando: EXIT
+[INFO] 09:36:25:084 CPU/(42002:42003): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:36:25:084 CPU/(42002:42003): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:36:25:084 CPU/(42002:42003): Comenzar ejecucion del proceso: 5.
+[INFO] 09:41:59:526 CPU/(42711:42711): Logger creado
+[INFO] 09:41:59:532 CPU/(42711:42711): -------Valores del config-------
+[INFO] 09:41:59:532 CPU/(42711:42711): Retardo Instrucción = 1000
+[INFO] 09:41:59:532 CPU/(42711:42711): IP Memoria = 127.0.0.1
+[INFO] 09:41:59:533 CPU/(42711:42711): Puerto Memoria = 8003
+[INFO] 09:41:59:533 CPU/(42711:42711): Puerto Escucha = 8001
+[INFO] 09:41:59:533 CPU/(42711:42711): Tamanio maximo de segmentos = (null)
+[INFO] 09:41:59:533 CPU/(42711:42711): --------------------------------
+[INFO] 09:41:59:533 CPU/(42711:42711): ¡CPU iniciado correctamente!
+[TRACE] 09:41:59:533 CPU/(42711:42711): Listo para escuchar a mi cliente
+[INFO] 09:41:59:533 CPU/(42711:42711): Servidor listo para recibir al cliente
+[INFO] 09:41:59:534 CPU/(42711:42713): Conexion establecida con Memoria
+[INFO] 09:42:02:492 CPU/(42711:42712): Se conecto un cliente!
+[INFO] 09:42:02:492 CPU/(42711:42712): Me llego el mensaje: Conectado al Kernel
+[INFO] 09:42:12:492 CPU/(42711:42712): Comenzar ejecucion del proceso: 5.
+[INFO] 09:42:12:492 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:492 CPU/(42711:42712): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 09:42:12:494 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:494 CPU/(42711:42712): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 09:42:12:494 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:494 CPU/(42711:42712): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 09:42:12:494 CPU/(42711:42712): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:42:12:792 CPU/(42711:42712): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:42:12:792 CPU/(42711:42712): Comenzar ejecucion del proceso: 5.
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: I/O 10
+[INFO] 09:42:12:792 CPU/(42711:42712): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:42:12:792 CPU/(42711:42712): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:42:12:792 CPU/(42711:42712): Comenzar ejecucion del proceso: 5.
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 09:42:12:792 CPU/(42711:42712): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:42:12:792 CPU/(42711:42712): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:42:12:792 CPU/(42711:42712): Comenzar ejecucion del proceso: 5.
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: YIELD
+[INFO] 09:42:12:792 CPU/(42711:42712): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:42:12:792 CPU/(42711:42712): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:42:12:792 CPU/(42711:42712): Comenzar ejecucion del proceso: 5.
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 09:42:12:792 CPU/(42711:42712): Instruccion Ejecutada
+[INFO] 09:42:12:792 CPU/(42711:42712): PID: 5 - Ejecutando: EXIT
+[INFO] 09:42:12:792 CPU/(42711:42712): Datos enviados, esperando respuesta de cpu...
+[ERROR] 09:42:12:792 CPU/(42711:42712): Han llegado menos bytes que los enviados por cpu
+[INFO] 09:42:12:792 CPU/(42711:42712): Comenzar ejecucion del proceso: 5.
+[INFO] 09:44:53:090 CPU/(43046:43046): Logger creado
+[INFO] 09:44:53:091 CPU/(43046:43046): -------Valores del config-------
+[INFO] 09:44:53:091 CPU/(43046:43046): Retardo Instrucción = 1000
+[INFO] 09:44:53:091 CPU/(43046:43046): IP Memoria = 127.0.0.1
+[INFO] 09:44:53:091 CPU/(43046:43046): Puerto Memoria = 8003
+[INFO] 09:44:53:091 CPU/(43046:43046): Puerto Escucha = 8001
+[INFO] 09:44:53:091 CPU/(43046:43046): Tamanio maximo de segmentos = (null)
+[INFO] 09:44:53:091 CPU/(43046:43046): --------------------------------
+[INFO] 09:44:53:091 CPU/(43046:43046): ¡CPU iniciado correctamente!
+[TRACE] 09:44:53:091 CPU/(43046:43046): Listo para escuchar a mi cliente
+[INFO] 09:44:53:091 CPU/(43046:43046): Servidor listo para recibir al cliente
+[INFO] 09:44:53:092 CPU/(43046:43048): Conexion establecida con Memoria
+[INFO] 09:44:55:285 CPU/(43046:43047): Se conecto un cliente!
+[INFO] 09:44:55:285 CPU/(43046:43047): Me llego el mensaje: Conectado al Kernel
+[INFO] 09:45:05:285 CPU/(43046:43047): Comenzar ejecucion del proceso: 5.
+[INFO] 09:45:05:285 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:05:285 CPU/(43046:43047): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 09:45:05:286 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:05:286 CPU/(43046:43047): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 09:45:05:286 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:05:286 CPU/(43046:43047): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 09:45:05:286 CPU/(43046:43047): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:45:05:327 CPU/(43046:43047): Datos enviados correctamente
+[INFO] 09:45:05:371 CPU/(43046:43047): Comenzar ejecucion del proceso: 5.
+[INFO] 09:45:05:371 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:05:371 CPU/(43046:43047): PID: 5 - Ejecutando: I/O 10
+[INFO] 09:45:05:371 CPU/(43046:43047): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:45:15:415 CPU/(43046:43047): Datos enviados correctamente
+[INFO] 09:45:15:459 CPU/(43046:43047): Comenzar ejecucion del proceso: 5.
+[INFO] 09:45:15:459 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:459 CPU/(43046:43047): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 09:45:15:459 CPU/(43046:43047): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:45:15:460 CPU/(43046:43047): Datos enviados correctamente
+[INFO] 09:45:15:503 CPU/(43046:43047): Comenzar ejecucion del proceso: 5.
+[INFO] 09:45:15:503 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:503 CPU/(43046:43047): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 09:45:15:503 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:504 CPU/(43046:43047): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 09:45:15:504 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:504 CPU/(43046:43047): PID: 5 - Ejecutando: YIELD
+[INFO] 09:45:15:504 CPU/(43046:43047): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:45:15:547 CPU/(43046:43047): Datos enviados correctamente
+[INFO] 09:45:15:590 CPU/(43046:43047): Comenzar ejecucion del proceso: 5.
+[INFO] 09:45:15:590 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:590 CPU/(43046:43047): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 09:45:15:590 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:590 CPU/(43046:43047): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 09:45:15:590 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:590 CPU/(43046:43047): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 09:45:15:590 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:590 CPU/(43046:43047): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 09:45:15:590 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:590 CPU/(43046:43047): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 09:45:15:590 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:590 CPU/(43046:43047): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 09:45:15:590 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:590 CPU/(43046:43047): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 09:45:15:591 CPU/(43046:43047): Instruccion Ejecutada
+[INFO] 09:45:15:591 CPU/(43046:43047): PID: 5 - Ejecutando: EXIT
+[INFO] 09:45:15:591 CPU/(43046:43047): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:45:15:635 CPU/(43046:43047): Datos enviados correctamente
+[INFO] 09:45:44:883 CPU/(43046:43047): Comenzar ejecucion del proceso: 5.
+[INFO] 09:49:32:064 CPU/(44339:44339): Logger creado
+[INFO] 09:49:32:064 CPU/(44339:44339): -------Valores del config-------
+[INFO] 09:49:32:064 CPU/(44339:44339): Retardo Instrucción = 1000
+[INFO] 09:49:32:064 CPU/(44339:44339): IP Memoria = 127.0.0.1
+[INFO] 09:49:32:064 CPU/(44339:44339): Puerto Memoria = 8003
+[INFO] 09:49:32:064 CPU/(44339:44339): Puerto Escucha = 8001
+[INFO] 09:49:32:064 CPU/(44339:44339): Tamanio maximo de segmentos = (null)
+[INFO] 09:49:32:064 CPU/(44339:44339): --------------------------------
+[INFO] 09:49:32:064 CPU/(44339:44339): ¡CPU iniciado correctamente!
+[TRACE] 09:49:32:064 CPU/(44339:44339): Listo para escuchar a mi cliente
+[INFO] 09:49:32:064 CPU/(44339:44339): Servidor listo para recibir al cliente
+[INFO] 09:49:32:066 CPU/(44339:44341): Conexion establecida con Memoria
+[INFO] 09:49:32:747 CPU/(44339:44340): Se conecto un cliente!
+[INFO] 09:49:32:747 CPU/(44339:44340): Me llego el mensaje: Conectado al Kernel
+[INFO] 09:49:42:747 CPU/(44339:44340): Comenzar ejecucion del proceso: 5.
+[INFO] 09:49:42:747 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:42:747 CPU/(44339:44340): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 09:49:42:748 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:42:748 CPU/(44339:44340): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 09:49:42:748 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:42:748 CPU/(44339:44340): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 09:49:42:748 CPU/(44339:44340): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:49:42:791 CPU/(44339:44340): Datos enviados correctamente
+[INFO] 09:49:42:835 CPU/(44339:44340): Comenzar ejecucion del proceso: 5.
+[INFO] 09:49:42:835 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:42:835 CPU/(44339:44340): PID: 5 - Ejecutando: I/O 10
+[INFO] 09:49:42:835 CPU/(44339:44340): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:49:52:879 CPU/(44339:44340): Datos enviados correctamente
+[INFO] 09:49:52:923 CPU/(44339:44340): Comenzar ejecucion del proceso: 5.
+[INFO] 09:49:52:923 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:52:923 CPU/(44339:44340): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 09:49:52:923 CPU/(44339:44340): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:49:52:923 CPU/(44339:44340): Datos enviados correctamente
+[INFO] 09:49:52:967 CPU/(44339:44340): Comenzar ejecucion del proceso: 5.
+[INFO] 09:49:52:967 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:52:967 CPU/(44339:44340): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 09:49:52:967 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:52:967 CPU/(44339:44340): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 09:49:52:967 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:52:967 CPU/(44339:44340): PID: 5 - Ejecutando: YIELD
+[INFO] 09:49:52:967 CPU/(44339:44340): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:49:53:011 CPU/(44339:44340): Datos enviados correctamente
+[INFO] 09:49:53:055 CPU/(44339:44340): Comenzar ejecucion del proceso: 5.
+[INFO] 09:49:53:055 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:53:055 CPU/(44339:44340): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 09:49:53:055 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:53:055 CPU/(44339:44340): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 09:49:53:055 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:53:055 CPU/(44339:44340): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 09:49:53:055 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:53:055 CPU/(44339:44340): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 09:49:53:055 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:53:055 CPU/(44339:44340): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 09:49:53:055 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:53:055 CPU/(44339:44340): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 09:49:53:055 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:53:055 CPU/(44339:44340): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 09:49:53:055 CPU/(44339:44340): Instruccion Ejecutada
+[INFO] 09:49:53:055 CPU/(44339:44340): PID: 5 - Ejecutando: EXIT
+[INFO] 09:49:53:055 CPU/(44339:44340): Datos enviados, esperando respuesta de cpu...
+[INFO] 09:49:53:099 CPU/(44339:44340): Datos enviados correctamente
+[INFO] 09:50:16:454 CPU/(44339:44340): Comenzar ejecucion del proceso: 5.
+[INFO] 10:21:49:420 CPU/(49675:49675): Logger creado
+[INFO] 10:21:49:420 CPU/(49675:49675): -------Valores del config-------
+[INFO] 10:21:49:421 CPU/(49675:49675): Retardo Instrucción = 1000
+[INFO] 10:21:49:421 CPU/(49675:49675): IP Memoria = 127.0.0.1
+[INFO] 10:21:49:421 CPU/(49675:49675): Puerto Memoria = 8003
+[INFO] 10:21:49:421 CPU/(49675:49675): Puerto Escucha = 8001
+[INFO] 10:21:49:421 CPU/(49675:49675): Tamanio maximo de segmentos = (null)
+[INFO] 10:21:49:421 CPU/(49675:49675): --------------------------------
+[INFO] 10:21:49:421 CPU/(49675:49675): ¡CPU iniciado correctamente!
+[TRACE] 10:21:49:421 CPU/(49675:49675): Listo para escuchar a mi cliente
+[INFO] 10:21:49:421 CPU/(49675:49675): Servidor listo para recibir al cliente
+[INFO] 10:21:49:421 CPU/(49675:49677): Conexion establecida con Memoria
+[INFO] 10:21:50:003 CPU/(49675:49676): Se conecto un cliente!
+[INFO] 10:21:50:004 CPU/(49675:49676): Me llego el mensaje: Conectado al Kernel
+[INFO] 10:22:00:003 CPU/(49675:49676): Comenzar ejecucion del proceso: 5.
+[INFO] 10:22:00:003 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:00:003 CPU/(49675:49676): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 10:22:00:005 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:00:005 CPU/(49675:49676): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 10:22:00:005 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:00:005 CPU/(49675:49676): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 10:22:00:005 CPU/(49675:49676): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:22:00:047 CPU/(49675:49676): Datos enviados correctamente
+[INFO] 10:22:00:090 CPU/(49675:49676): Comenzar ejecucion del proceso: 5.
+[INFO] 10:22:00:091 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:00:091 CPU/(49675:49676): PID: 5 - Ejecutando: I/O 10
+[INFO] 10:22:00:091 CPU/(49675:49676): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:22:10:136 CPU/(49675:49676): Datos enviados correctamente
+[INFO] 10:22:10:178 CPU/(49675:49676): Comenzar ejecucion del proceso: 5.
+[INFO] 10:22:10:179 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:179 CPU/(49675:49676): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 10:22:10:179 CPU/(49675:49676): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:22:10:179 CPU/(49675:49676): Datos enviados correctamente
+[INFO] 10:22:10:223 CPU/(49675:49676): Comenzar ejecucion del proceso: 5.
+[INFO] 10:22:10:223 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:223 CPU/(49675:49676): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 10:22:10:223 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:223 CPU/(49675:49676): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 10:22:10:223 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:223 CPU/(49675:49676): PID: 5 - Ejecutando: YIELD
+[INFO] 10:22:10:223 CPU/(49675:49676): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:22:10:267 CPU/(49675:49676): Datos enviados correctamente
+[INFO] 10:22:10:311 CPU/(49675:49676): Comenzar ejecucion del proceso: 5.
+[INFO] 10:22:10:311 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:311 CPU/(49675:49676): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 10:22:10:311 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:311 CPU/(49675:49676): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 10:22:10:311 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:311 CPU/(49675:49676): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 10:22:10:311 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:311 CPU/(49675:49676): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 10:22:10:311 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:311 CPU/(49675:49676): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 10:22:10:311 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:311 CPU/(49675:49676): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 10:22:10:311 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:311 CPU/(49675:49676): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 10:22:10:311 CPU/(49675:49676): Instruccion Ejecutada
+[INFO] 10:22:10:311 CPU/(49675:49676): PID: 5 - Ejecutando: EXIT
+[INFO] 10:22:10:311 CPU/(49675:49676): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:22:10:356 CPU/(49675:49676): Datos enviados correctamente
+[INFO] 10:22:16:479 CPU/(49675:49676): Comenzar ejecucion del proceso: 5.
+[INFO] 10:36:32:665 CPU/(51735:51735): Logger creado
+[INFO] 10:36:32:666 CPU/(51735:51735): -------Valores del config-------
+[INFO] 10:36:32:666 CPU/(51735:51735): Retardo Instrucción = 1000
+[INFO] 10:36:32:666 CPU/(51735:51735): IP Memoria = 127.0.0.1
+[INFO] 10:36:32:666 CPU/(51735:51735): Puerto Memoria = 8003
+[INFO] 10:36:32:666 CPU/(51735:51735): Puerto Escucha = 8001
+[INFO] 10:36:32:666 CPU/(51735:51735): Tamanio maximo de segmentos = (null)
+[INFO] 10:36:32:666 CPU/(51735:51735): --------------------------------
+[INFO] 10:36:32:666 CPU/(51735:51735): ¡CPU iniciado correctamente!
+[TRACE] 10:36:32:666 CPU/(51735:51735): Listo para escuchar a mi cliente
+[INFO] 10:36:32:666 CPU/(51735:51735): Servidor listo para recibir al cliente
+[INFO] 10:36:32:667 CPU/(51735:51737): Conexion establecida con Memoria
+[INFO] 10:36:33:486 CPU/(51735:51736): Se conecto un cliente!
+[INFO] 10:36:33:486 CPU/(51735:51736): Me llego el mensaje: Conectado al Kernel
+[INFO] 10:36:43:486 CPU/(51735:51736): Comenzar ejecucion del proceso: 5.
+[INFO] 10:36:43:486 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:43:486 CPU/(51735:51736): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 10:36:43:487 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:43:487 CPU/(51735:51736): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 10:36:43:487 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:43:487 CPU/(51735:51736): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 10:36:43:487 CPU/(51735:51736): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:36:43:527 CPU/(51735:51736): Datos enviados correctamente
+[INFO] 10:36:43:571 CPU/(51735:51736): Comenzar ejecucion del proceso: 5.
+[INFO] 10:36:43:571 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:43:571 CPU/(51735:51736): PID: 5 - Ejecutando: I/O 10
+[INFO] 10:36:43:571 CPU/(51735:51736): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:36:53:615 CPU/(51735:51736): Datos enviados correctamente
+[INFO] 10:36:53:659 CPU/(51735:51736): Comenzar ejecucion del proceso: 5.
+[INFO] 10:36:53:660 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:660 CPU/(51735:51736): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 10:36:53:660 CPU/(51735:51736): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:36:53:660 CPU/(51735:51736): Datos enviados correctamente
+[INFO] 10:36:53:703 CPU/(51735:51736): Comenzar ejecucion del proceso: 5.
+[INFO] 10:36:53:703 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:703 CPU/(51735:51736): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 10:36:53:703 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:703 CPU/(51735:51736): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 10:36:53:703 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:703 CPU/(51735:51736): PID: 5 - Ejecutando: YIELD
+[INFO] 10:36:53:703 CPU/(51735:51736): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:36:53:747 CPU/(51735:51736): Datos enviados correctamente
+[INFO] 10:36:53:791 CPU/(51735:51736): Comenzar ejecucion del proceso: 5.
+[INFO] 10:36:53:791 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:791 CPU/(51735:51736): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 10:36:53:791 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:791 CPU/(51735:51736): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 10:36:53:791 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:791 CPU/(51735:51736): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 10:36:53:791 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:791 CPU/(51735:51736): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 10:36:53:791 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:791 CPU/(51735:51736): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 10:36:53:791 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:791 CPU/(51735:51736): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 10:36:53:791 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:791 CPU/(51735:51736): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 10:36:53:791 CPU/(51735:51736): Instruccion Ejecutada
+[INFO] 10:36:53:791 CPU/(51735:51736): PID: 5 - Ejecutando: EXIT
+[INFO] 10:36:53:791 CPU/(51735:51736): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:36:53:836 CPU/(51735:51736): Datos enviados correctamente
+[INFO] 10:37:03:118 CPU/(51735:51736): Comenzar ejecucion del proceso: 5.
+[INFO] 10:42:47:021 CPU/(52426:52426): Logger creado
+[INFO] 10:42:47:022 CPU/(52426:52426): -------Valores del config-------
+[INFO] 10:42:47:022 CPU/(52426:52426): Retardo Instrucción = 1000
+[INFO] 10:42:47:022 CPU/(52426:52426): IP Memoria = 127.0.0.1
+[INFO] 10:42:47:022 CPU/(52426:52426): Puerto Memoria = 8003
+[INFO] 10:42:47:022 CPU/(52426:52426): Puerto Escucha = 8001
+[INFO] 10:42:47:022 CPU/(52426:52426): Tamanio maximo de segmentos = (null)
+[INFO] 10:42:47:022 CPU/(52426:52426): --------------------------------
+[INFO] 10:42:47:023 CPU/(52426:52426): ¡CPU iniciado correctamente!
+[TRACE] 10:42:47:023 CPU/(52426:52426): Listo para escuchar a mi cliente
+[INFO] 10:42:47:023 CPU/(52426:52426): Servidor listo para recibir al cliente
+[INFO] 10:42:47:023 CPU/(52426:52428): Conexion establecida con Memoria
+[INFO] 10:43:06:715 CPU/(52426:52427): Se conecto un cliente!
+[INFO] 10:43:06:715 CPU/(52426:52427): Me llego el mensaje: Conectado al Kernel
+[INFO] 10:43:16:715 CPU/(52426:52427): Comenzar ejecucion del proceso: 5.
+[INFO] 10:43:16:715 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:16:715 CPU/(52426:52427): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 10:43:16:716 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:16:716 CPU/(52426:52427): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 10:43:16:716 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:16:716 CPU/(52426:52427): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 10:43:16:716 CPU/(52426:52427): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:43:16:759 CPU/(52426:52427): Datos enviados correctamente
+[INFO] 10:43:16:803 CPU/(52426:52427): Comenzar ejecucion del proceso: 5.
+[INFO] 10:43:16:803 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:16:803 CPU/(52426:52427): PID: 5 - Ejecutando: I/O 10
+[INFO] 10:43:16:803 CPU/(52426:52427): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:43:26:847 CPU/(52426:52427): Datos enviados correctamente
+[INFO] 10:43:26:891 CPU/(52426:52427): Comenzar ejecucion del proceso: 5.
+[INFO] 10:43:26:891 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:26:891 CPU/(52426:52427): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 10:43:26:891 CPU/(52426:52427): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:43:26:891 CPU/(52426:52427): Datos enviados correctamente
+[INFO] 10:43:26:935 CPU/(52426:52427): Comenzar ejecucion del proceso: 5.
+[INFO] 10:43:26:935 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:26:935 CPU/(52426:52427): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 10:43:26:935 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:26:935 CPU/(52426:52427): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 10:43:26:935 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:26:935 CPU/(52426:52427): PID: 5 - Ejecutando: YIELD
+[INFO] 10:43:26:935 CPU/(52426:52427): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:43:26:979 CPU/(52426:52427): Datos enviados correctamente
+[INFO] 10:43:27:023 CPU/(52426:52427): Comenzar ejecucion del proceso: 5.
+[INFO] 10:43:27:023 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:27:023 CPU/(52426:52427): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 10:43:27:023 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:27:023 CPU/(52426:52427): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 10:43:27:023 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:27:023 CPU/(52426:52427): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 10:43:27:023 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:27:023 CPU/(52426:52427): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 10:43:27:023 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:27:023 CPU/(52426:52427): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 10:43:27:023 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:27:023 CPU/(52426:52427): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 10:43:27:023 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:27:023 CPU/(52426:52427): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 10:43:27:023 CPU/(52426:52427): Instruccion Ejecutada
+[INFO] 10:43:27:023 CPU/(52426:52427): PID: 5 - Ejecutando: EXIT
+[INFO] 10:43:27:023 CPU/(52426:52427): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:43:27:067 CPU/(52426:52427): Datos enviados correctamente
+[INFO] 10:43:29:801 CPU/(52426:52427): Comenzar ejecucion del proceso: 5.
+[INFO] 10:53:18:185 CPU/(54111:54111): Logger creado
+[INFO] 10:53:18:186 CPU/(54111:54111): -------Valores del config-------
+[INFO] 10:53:18:186 CPU/(54111:54111): Retardo Instrucción = 1000
+[INFO] 10:53:18:186 CPU/(54111:54111): IP Memoria = 127.0.0.1
+[INFO] 10:53:18:186 CPU/(54111:54111): Puerto Memoria = 8003
+[INFO] 10:53:18:186 CPU/(54111:54111): Puerto Escucha = 8001
+[INFO] 10:53:18:186 CPU/(54111:54111): Tamanio maximo de segmentos = (null)
+[INFO] 10:53:18:186 CPU/(54111:54111): --------------------------------
+[INFO] 10:53:18:186 CPU/(54111:54111): ¡CPU iniciado correctamente!
+[TRACE] 10:53:18:186 CPU/(54111:54111): Listo para escuchar a mi cliente
+[INFO] 10:53:18:186 CPU/(54111:54111): Servidor listo para recibir al cliente
+[INFO] 10:53:18:186 CPU/(54111:54113): Conexion establecida con Memoria
+[INFO] 10:53:18:869 CPU/(54111:54112): Se conecto un cliente!
+[INFO] 10:53:18:869 CPU/(54111:54112): Me llego el mensaje: Conectado al Kernel
+[INFO] 10:53:28:869 CPU/(54111:54112): Comenzar ejecucion del proceso: 5.
+[INFO] 10:53:28:869 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:28:869 CPU/(54111:54112): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 10:53:28:870 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:28:870 CPU/(54111:54112): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 10:53:28:870 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:28:870 CPU/(54111:54112): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 10:53:28:870 CPU/(54111:54112): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:53:28:911 CPU/(54111:54112): Datos enviados correctamente
+[INFO] 10:53:28:954 CPU/(54111:54112): Comenzar ejecucion del proceso: 5.
+[INFO] 10:53:28:954 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:28:954 CPU/(54111:54112): PID: 5 - Ejecutando: I/O 10
+[INFO] 10:53:28:955 CPU/(54111:54112): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:53:38:999 CPU/(54111:54112): Datos enviados correctamente
+[INFO] 10:53:39:043 CPU/(54111:54112): Comenzar ejecucion del proceso: 5.
+[INFO] 10:53:39:043 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:043 CPU/(54111:54112): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 10:53:39:044 CPU/(54111:54112): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:53:39:044 CPU/(54111:54112): Datos enviados correctamente
+[INFO] 10:53:39:087 CPU/(54111:54112): Comenzar ejecucion del proceso: 5.
+[INFO] 10:53:39:087 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:087 CPU/(54111:54112): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 10:53:39:087 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:087 CPU/(54111:54112): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 10:53:39:087 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:087 CPU/(54111:54112): PID: 5 - Ejecutando: YIELD
+[INFO] 10:53:39:087 CPU/(54111:54112): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:53:39:131 CPU/(54111:54112): Datos enviados correctamente
+[INFO] 10:53:39:175 CPU/(54111:54112): Comenzar ejecucion del proceso: 5.
+[INFO] 10:53:39:175 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:175 CPU/(54111:54112): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 10:53:39:175 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:175 CPU/(54111:54112): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 10:53:39:175 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:175 CPU/(54111:54112): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 10:53:39:175 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:175 CPU/(54111:54112): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 10:53:39:175 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:175 CPU/(54111:54112): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 10:53:39:175 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:175 CPU/(54111:54112): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 10:53:39:175 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:175 CPU/(54111:54112): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 10:53:39:175 CPU/(54111:54112): Instruccion Ejecutada
+[INFO] 10:53:39:175 CPU/(54111:54112): PID: 5 - Ejecutando: EXIT
+[INFO] 10:53:39:175 CPU/(54111:54112): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:53:39:219 CPU/(54111:54112): Datos enviados correctamente
+[INFO] 10:58:18:391 CPU/(54829:54829): Logger creado
+[INFO] 10:58:18:392 CPU/(54829:54829): -------Valores del config-------
+[INFO] 10:58:18:392 CPU/(54829:54829): Retardo Instrucción = 1000
+[INFO] 10:58:18:392 CPU/(54829:54829): IP Memoria = 127.0.0.1
+[INFO] 10:58:18:392 CPU/(54829:54829): Puerto Memoria = 8003
+[INFO] 10:58:18:392 CPU/(54829:54829): Puerto Escucha = 8001
+[INFO] 10:58:18:392 CPU/(54829:54829): Tamanio maximo de segmentos = (null)
+[INFO] 10:58:18:392 CPU/(54829:54829): --------------------------------
+[INFO] 10:58:18:392 CPU/(54829:54829): ¡CPU iniciado correctamente!
+[TRACE] 10:58:18:392 CPU/(54829:54829): Listo para escuchar a mi cliente
+[INFO] 10:58:18:392 CPU/(54829:54829): Servidor listo para recibir al cliente
+[INFO] 10:58:18:393 CPU/(54829:54831): Conexion establecida con Memoria
+[INFO] 10:58:20:954 CPU/(54829:54830): Se conecto un cliente!
+[INFO] 10:58:20:954 CPU/(54829:54830): Me llego el mensaje: Conectado al Kernel
+[INFO] 10:58:30:955 CPU/(54829:54830): Comenzar ejecucion del proceso: 5.
+[INFO] 10:58:30:955 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:30:955 CPU/(54829:54830): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 10:58:30:956 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:30:956 CPU/(54829:54830): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 10:58:30:956 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:30:956 CPU/(54829:54830): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 10:58:30:956 CPU/(54829:54830): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:58:30:999 CPU/(54829:54830): Datos enviados correctamente
+[INFO] 10:58:31:042 CPU/(54829:54830): Comenzar ejecucion del proceso: 5.
+[INFO] 10:58:31:043 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:31:043 CPU/(54829:54830): PID: 5 - Ejecutando: I/O 10
+[INFO] 10:58:31:043 CPU/(54829:54830): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:58:41:088 CPU/(54829:54830): Datos enviados correctamente
+[INFO] 10:58:41:131 CPU/(54829:54830): Comenzar ejecucion del proceso: 5.
+[INFO] 10:58:41:131 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:131 CPU/(54829:54830): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 10:58:41:131 CPU/(54829:54830): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:58:41:131 CPU/(54829:54830): Datos enviados correctamente
+[INFO] 10:58:41:175 CPU/(54829:54830): Comenzar ejecucion del proceso: 5.
+[INFO] 10:58:41:175 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:175 CPU/(54829:54830): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 10:58:41:175 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:175 CPU/(54829:54830): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 10:58:41:175 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:175 CPU/(54829:54830): PID: 5 - Ejecutando: YIELD
+[INFO] 10:58:41:175 CPU/(54829:54830): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:58:41:219 CPU/(54829:54830): Datos enviados correctamente
+[INFO] 10:58:41:262 CPU/(54829:54830): Comenzar ejecucion del proceso: 5.
+[INFO] 10:58:41:262 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:262 CPU/(54829:54830): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 10:58:41:262 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:262 CPU/(54829:54830): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 10:58:41:262 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:262 CPU/(54829:54830): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 10:58:41:262 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:262 CPU/(54829:54830): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 10:58:41:262 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:263 CPU/(54829:54830): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 10:58:41:263 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:263 CPU/(54829:54830): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 10:58:41:263 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:263 CPU/(54829:54830): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 10:58:41:263 CPU/(54829:54830): Instruccion Ejecutada
+[INFO] 10:58:41:263 CPU/(54829:54830): PID: 5 - Ejecutando: EXIT
+[INFO] 10:58:41:263 CPU/(54829:54830): Datos enviados, esperando respuesta de cpu...
+[INFO] 10:58:41:307 CPU/(54829:54830): Datos enviados correctamente
+[INFO] 10:58:50:795 CPU/(54829:54830): Comenzar ejecucion del proceso: 5.
+[INFO] 11:01:19:166 CPU/(55384:55384): Logger creado
+[INFO] 11:01:19:167 CPU/(55384:55384): -------Valores del config-------
+[INFO] 11:01:19:167 CPU/(55384:55384): Retardo Instrucción = 1000
+[INFO] 11:01:19:167 CPU/(55384:55384): IP Memoria = 127.0.0.1
+[INFO] 11:01:19:167 CPU/(55384:55384): Puerto Memoria = 8003
+[INFO] 11:01:19:167 CPU/(55384:55384): Puerto Escucha = 8001
+[INFO] 11:01:19:168 CPU/(55384:55384): Tamanio maximo de segmentos = (null)
+[INFO] 11:01:19:168 CPU/(55384:55384): --------------------------------
+[INFO] 11:01:19:168 CPU/(55384:55384): ¡CPU iniciado correctamente!
+[TRACE] 11:01:19:168 CPU/(55384:55384): Listo para escuchar a mi cliente
+[INFO] 11:01:19:168 CPU/(55384:55384): Servidor listo para recibir al cliente
+[INFO] 11:01:19:168 CPU/(55384:55386): Conexion establecida con Memoria
+[INFO] 11:01:19:931 CPU/(55384:55385): Se conecto un cliente!
+[INFO] 11:01:19:931 CPU/(55384:55385): Me llego el mensaje: Conectado al Kernel
+[INFO] 11:01:29:950 CPU/(55384:55385): Comenzar ejecucion del proceso: 5.
+[INFO] 11:01:29:952 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:29:952 CPU/(55384:55385): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:01:29:953 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:29:953 CPU/(55384:55385): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 11:01:29:953 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:29:953 CPU/(55384:55385): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 11:01:29:953 CPU/(55384:55385): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:01:29:992 CPU/(55384:55385): Datos enviados correctamente
+[INFO] 11:01:30:034 CPU/(55384:55385): Comenzar ejecucion del proceso: 5.
+[INFO] 11:01:30:034 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:30:035 CPU/(55384:55385): PID: 5 - Ejecutando: I/O 10
+[INFO] 11:01:30:035 CPU/(55384:55385): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:01:40:079 CPU/(55384:55385): Datos enviados correctamente
+[INFO] 11:01:40:124 CPU/(55384:55385): Comenzar ejecucion del proceso: 5.
+[INFO] 11:01:40:124 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:124 CPU/(55384:55385): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 11:01:40:124 CPU/(55384:55385): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:01:40:124 CPU/(55384:55385): Datos enviados correctamente
+[INFO] 11:01:40:167 CPU/(55384:55385): Comenzar ejecucion del proceso: 5.
+[INFO] 11:01:40:167 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:167 CPU/(55384:55385): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 11:01:40:167 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:167 CPU/(55384:55385): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 11:01:40:167 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:167 CPU/(55384:55385): PID: 5 - Ejecutando: YIELD
+[INFO] 11:01:40:167 CPU/(55384:55385): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:01:40:211 CPU/(55384:55385): Datos enviados correctamente
+[INFO] 11:01:40:255 CPU/(55384:55385): Comenzar ejecucion del proceso: 5.
+[INFO] 11:01:40:255 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:255 CPU/(55384:55385): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 11:01:40:255 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:255 CPU/(55384:55385): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 11:01:40:255 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:255 CPU/(55384:55385): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 11:01:40:255 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:255 CPU/(55384:55385): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 11:01:40:255 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:255 CPU/(55384:55385): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 11:01:40:255 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:255 CPU/(55384:55385): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 11:01:40:255 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:255 CPU/(55384:55385): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 11:01:40:255 CPU/(55384:55385): Instruccion Ejecutada
+[INFO] 11:01:40:255 CPU/(55384:55385): PID: 5 - Ejecutando: EXIT
+[INFO] 11:01:40:255 CPU/(55384:55385): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:01:40:299 CPU/(55384:55385): Datos enviados correctamente
+[INFO] 11:01:50:777 CPU/(55384:55385): Comenzar ejecucion del proceso: 5.
+[INFO] 11:06:12:562 CPU/(56076:56076): Logger creado
+[INFO] 11:06:12:563 CPU/(56076:56076): -------Valores del config-------
+[INFO] 11:06:12:563 CPU/(56076:56076): Retardo Instrucción = 1000
+[INFO] 11:06:12:563 CPU/(56076:56076): IP Memoria = 127.0.0.1
+[INFO] 11:06:12:563 CPU/(56076:56076): Puerto Memoria = 8003
+[INFO] 11:06:12:563 CPU/(56076:56076): Puerto Escucha = 8001
+[INFO] 11:06:12:563 CPU/(56076:56076): Tamanio maximo de segmentos = (null)
+[INFO] 11:06:12:563 CPU/(56076:56076): --------------------------------
+[INFO] 11:06:12:563 CPU/(56076:56076): ¡CPU iniciado correctamente!
+[TRACE] 11:06:12:563 CPU/(56076:56076): Listo para escuchar a mi cliente
+[INFO] 11:06:12:563 CPU/(56076:56076): Servidor listo para recibir al cliente
+[INFO] 11:06:12:563 CPU/(56076:56078): Conexion establecida con Memoria
+[INFO] 11:06:13:283 CPU/(56076:56077): Se conecto un cliente!
+[INFO] 11:06:13:283 CPU/(56076:56077): Me llego el mensaje: Conectado al Kernel
+[INFO] 11:06:23:284 CPU/(56076:56077): Comenzar ejecucion del proceso: 5.
+[INFO] 11:06:23:284 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:23:284 CPU/(56076:56077): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:06:23:285 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:23:285 CPU/(56076:56077): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 11:06:23:285 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:23:285 CPU/(56076:56077): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 11:06:23:285 CPU/(56076:56077): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:06:23:327 CPU/(56076:56077): Datos enviados correctamente
+[INFO] 11:06:23:370 CPU/(56076:56077): Comenzar ejecucion del proceso: 5.
+[INFO] 11:06:23:370 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:23:370 CPU/(56076:56077): PID: 5 - Ejecutando: I/O 10
+[INFO] 11:06:23:370 CPU/(56076:56077): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:06:33:415 CPU/(56076:56077): Datos enviados correctamente
+[INFO] 11:06:33:458 CPU/(56076:56077): Comenzar ejecucion del proceso: 5.
+[INFO] 11:06:33:458 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:458 CPU/(56076:56077): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 11:06:33:458 CPU/(56076:56077): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:06:33:459 CPU/(56076:56077): Datos enviados correctamente
+[INFO] 11:06:33:503 CPU/(56076:56077): Comenzar ejecucion del proceso: 5.
+[INFO] 11:06:33:503 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:503 CPU/(56076:56077): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 11:06:33:503 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:503 CPU/(56076:56077): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 11:06:33:503 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:503 CPU/(56076:56077): PID: 5 - Ejecutando: YIELD
+[INFO] 11:06:33:503 CPU/(56076:56077): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:06:33:548 CPU/(56076:56077): Datos enviados correctamente
+[INFO] 11:06:33:591 CPU/(56076:56077): Comenzar ejecucion del proceso: 5.
+[INFO] 11:06:33:591 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:591 CPU/(56076:56077): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 11:06:33:591 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:591 CPU/(56076:56077): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 11:06:33:591 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:591 CPU/(56076:56077): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 11:06:33:591 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:591 CPU/(56076:56077): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 11:06:33:591 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:591 CPU/(56076:56077): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 11:06:33:591 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:591 CPU/(56076:56077): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 11:06:33:591 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:591 CPU/(56076:56077): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 11:06:33:591 CPU/(56076:56077): Instruccion Ejecutada
+[INFO] 11:06:33:591 CPU/(56076:56077): PID: 5 - Ejecutando: EXIT
+[INFO] 11:06:33:591 CPU/(56076:56077): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:06:33:635 CPU/(56076:56077): Datos enviados correctamente
+[INFO] 11:06:34:287 CPU/(56076:56077): Comenzar ejecucion del proceso: 5.
+[INFO] 11:07:47:746 CPU/(56299:56299): Logger creado
+[INFO] 11:07:47:747 CPU/(56299:56299): -------Valores del config-------
+[INFO] 11:07:47:747 CPU/(56299:56299): Retardo Instrucción = 1000
+[INFO] 11:07:47:747 CPU/(56299:56299): IP Memoria = 127.0.0.1
+[INFO] 11:07:47:747 CPU/(56299:56299): Puerto Memoria = 8003
+[INFO] 11:07:47:747 CPU/(56299:56299): Puerto Escucha = 8001
+[INFO] 11:07:47:747 CPU/(56299:56299): Tamanio maximo de segmentos = (null)
+[INFO] 11:07:47:747 CPU/(56299:56299): --------------------------------
+[INFO] 11:07:47:747 CPU/(56299:56299): ¡CPU iniciado correctamente!
+[TRACE] 11:07:47:747 CPU/(56299:56299): Listo para escuchar a mi cliente
+[INFO] 11:07:47:747 CPU/(56299:56299): Servidor listo para recibir al cliente
+[INFO] 11:07:47:747 CPU/(56299:56301): Conexion establecida con Memoria
+[INFO] 11:07:48:382 CPU/(56299:56300): Se conecto un cliente!
+[INFO] 11:07:48:382 CPU/(56299:56300): Me llego el mensaje: Conectado al Kernel
+[INFO] 11:07:58:382 CPU/(56299:56300): Comenzar ejecucion del proceso: 5.
+[INFO] 11:07:58:382 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:07:58:382 CPU/(56299:56300): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:07:58:383 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:07:58:383 CPU/(56299:56300): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 11:07:58:383 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:07:58:383 CPU/(56299:56300): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 11:07:58:383 CPU/(56299:56300): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:07:58:423 CPU/(56299:56300): Datos enviados correctamente
+[INFO] 11:07:58:468 CPU/(56299:56300): Comenzar ejecucion del proceso: 5.
+[INFO] 11:07:58:468 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:07:58:468 CPU/(56299:56300): PID: 5 - Ejecutando: I/O 10
+[INFO] 11:07:58:468 CPU/(56299:56300): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:08:08:511 CPU/(56299:56300): Datos enviados correctamente
+[INFO] 11:08:08:554 CPU/(56299:56300): Comenzar ejecucion del proceso: 5.
+[INFO] 11:08:08:555 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:555 CPU/(56299:56300): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 11:08:08:555 CPU/(56299:56300): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:08:08:555 CPU/(56299:56300): Datos enviados correctamente
+[INFO] 11:08:08:599 CPU/(56299:56300): Comenzar ejecucion del proceso: 5.
+[INFO] 11:08:08:599 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:599 CPU/(56299:56300): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 11:08:08:599 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:599 CPU/(56299:56300): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 11:08:08:599 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:599 CPU/(56299:56300): PID: 5 - Ejecutando: YIELD
+[INFO] 11:08:08:599 CPU/(56299:56300): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:08:08:643 CPU/(56299:56300): Datos enviados correctamente
+[INFO] 11:08:08:688 CPU/(56299:56300): Comenzar ejecucion del proceso: 5.
+[INFO] 11:08:08:688 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:688 CPU/(56299:56300): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 11:08:08:688 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:688 CPU/(56299:56300): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 11:08:08:688 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:688 CPU/(56299:56300): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 11:08:08:688 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:688 CPU/(56299:56300): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 11:08:08:688 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:688 CPU/(56299:56300): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 11:08:08:688 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:688 CPU/(56299:56300): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 11:08:08:688 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:688 CPU/(56299:56300): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 11:08:08:688 CPU/(56299:56300): Instruccion Ejecutada
+[INFO] 11:08:08:688 CPU/(56299:56300): PID: 5 - Ejecutando: EXIT
+[INFO] 11:08:08:688 CPU/(56299:56300): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:08:08:731 CPU/(56299:56300): Datos enviados correctamente
+[INFO] 11:08:31:375 CPU/(56299:56300): Comenzar ejecucion del proceso: 5.
+[INFO] 11:16:08:399 CPU/(57195:57195): Logger creado
+[INFO] 11:16:08:399 CPU/(57195:57195): -------Valores del config-------
+[INFO] 11:16:08:399 CPU/(57195:57195): Retardo Instrucción = 1000
+[INFO] 11:16:08:399 CPU/(57195:57195): IP Memoria = 127.0.0.1
+[INFO] 11:16:08:400 CPU/(57195:57195): Puerto Memoria = 8003
+[INFO] 11:16:08:400 CPU/(57195:57195): Puerto Escucha = 8001
+[INFO] 11:16:08:400 CPU/(57195:57195): Tamanio maximo de segmentos = (null)
+[INFO] 11:16:08:400 CPU/(57195:57195): --------------------------------
+[INFO] 11:16:08:400 CPU/(57195:57195): ¡CPU iniciado correctamente!
+[TRACE] 11:16:08:400 CPU/(57195:57195): Listo para escuchar a mi cliente
+[INFO] 11:16:08:400 CPU/(57195:57195): Servidor listo para recibir al cliente
+[INFO] 11:16:08:400 CPU/(57195:57197): Conexion establecida con Memoria
+[INFO] 11:16:09:284 CPU/(57195:57196): Se conecto un cliente!
+[INFO] 11:16:09:284 CPU/(57195:57196): Me llego el mensaje: Conectado al Kernel
+[INFO] 11:16:19:283 CPU/(57195:57196): Comenzar ejecucion del proceso: 5.
+[INFO] 11:16:19:283 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:19:283 CPU/(57195:57196): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:16:19:286 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:19:286 CPU/(57195:57196): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 11:16:19:286 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:19:286 CPU/(57195:57196): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 11:16:19:286 CPU/(57195:57196): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:16:19:327 CPU/(57195:57196): Datos enviados correctamente
+[INFO] 11:16:19:370 CPU/(57195:57196): Comenzar ejecucion del proceso: 5.
+[INFO] 11:16:19:371 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:19:371 CPU/(57195:57196): PID: 5 - Ejecutando: I/O 10
+[INFO] 11:16:19:371 CPU/(57195:57196): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:16:29:415 CPU/(57195:57196): Datos enviados correctamente
+[INFO] 11:16:29:459 CPU/(57195:57196): Comenzar ejecucion del proceso: 5.
+[INFO] 11:16:29:459 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:459 CPU/(57195:57196): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 11:16:29:459 CPU/(57195:57196): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:16:29:459 CPU/(57195:57196): Datos enviados correctamente
+[INFO] 11:16:29:503 CPU/(57195:57196): Comenzar ejecucion del proceso: 5.
+[INFO] 11:16:29:503 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:503 CPU/(57195:57196): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 11:16:29:503 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:503 CPU/(57195:57196): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 11:16:29:503 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:503 CPU/(57195:57196): PID: 5 - Ejecutando: YIELD
+[INFO] 11:16:29:503 CPU/(57195:57196): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:16:29:547 CPU/(57195:57196): Datos enviados correctamente
+[INFO] 11:16:29:590 CPU/(57195:57196): Comenzar ejecucion del proceso: 5.
+[INFO] 11:16:29:590 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:590 CPU/(57195:57196): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 11:16:29:590 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:591 CPU/(57195:57196): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 11:16:29:591 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:591 CPU/(57195:57196): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 11:16:29:591 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:591 CPU/(57195:57196): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 11:16:29:591 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:591 CPU/(57195:57196): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 11:16:29:591 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:591 CPU/(57195:57196): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 11:16:29:591 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:591 CPU/(57195:57196): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 11:16:29:591 CPU/(57195:57196): Instruccion Ejecutada
+[INFO] 11:16:29:591 CPU/(57195:57196): PID: 5 - Ejecutando: EXIT
+[INFO] 11:16:29:591 CPU/(57195:57196): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:16:29:635 CPU/(57195:57196): Datos enviados correctamente
+[INFO] 11:17:18:843 CPU/(57195:57196): Comenzar ejecucion del proceso: 5.
+[INFO] 11:22:58:851 CPU/(58114:58114): Logger creado
+[INFO] 11:22:58:855 CPU/(58114:58114): -------Valores del config-------
+[INFO] 11:22:58:855 CPU/(58114:58114): Retardo Instrucción = 1000
+[INFO] 11:22:58:855 CPU/(58114:58114): IP Memoria = 127.0.0.1
+[INFO] 11:22:58:855 CPU/(58114:58114): Puerto Memoria = 8003
+[INFO] 11:22:58:855 CPU/(58114:58114): Puerto Escucha = 8001
+[INFO] 11:22:58:855 CPU/(58114:58114): Tamanio maximo de segmentos = (null)
+[INFO] 11:22:58:856 CPU/(58114:58114): --------------------------------
+[INFO] 11:22:58:856 CPU/(58114:58114): ¡CPU iniciado correctamente!
+[TRACE] 11:22:58:856 CPU/(58114:58114): Listo para escuchar a mi cliente
+[INFO] 11:22:58:856 CPU/(58114:58114): Servidor listo para recibir al cliente
+[INFO] 11:22:58:856 CPU/(58114:58116): Conexion establecida con Memoria
+[INFO] 11:23:01:054 CPU/(58114:58115): Se conecto un cliente!
+[INFO] 11:23:01:054 CPU/(58114:58115): Me llego el mensaje: Conectado al Kernel
+[INFO] 11:23:11:054 CPU/(58114:58115): Comenzar ejecucion del proceso: 5.
+[INFO] 11:23:11:054 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:11:054 CPU/(58114:58115): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:23:11:055 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:11:055 CPU/(58114:58115): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 11:23:11:055 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:11:055 CPU/(58114:58115): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 11:23:11:055 CPU/(58114:58115): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:23:11:096 CPU/(58114:58115): Datos enviados correctamente
+[INFO] 11:23:11:138 CPU/(58114:58115): Comenzar ejecucion del proceso: 5.
+[INFO] 11:23:11:138 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:11:138 CPU/(58114:58115): PID: 5 - Ejecutando: I/O 10
+[INFO] 11:23:11:138 CPU/(58114:58115): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:23:21:184 CPU/(58114:58115): Datos enviados correctamente
+[INFO] 11:23:21:227 CPU/(58114:58115): Comenzar ejecucion del proceso: 5.
+[INFO] 11:23:21:227 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:227 CPU/(58114:58115): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 11:23:21:228 CPU/(58114:58115): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:23:21:228 CPU/(58114:58115): Datos enviados correctamente
+[INFO] 11:23:21:271 CPU/(58114:58115): Comenzar ejecucion del proceso: 5.
+[INFO] 11:23:21:271 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:271 CPU/(58114:58115): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 11:23:21:271 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:271 CPU/(58114:58115): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 11:23:21:271 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:271 CPU/(58114:58115): PID: 5 - Ejecutando: YIELD
+[INFO] 11:23:21:271 CPU/(58114:58115): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:23:21:314 CPU/(58114:58115): Datos enviados correctamente
+[INFO] 11:23:21:359 CPU/(58114:58115): Comenzar ejecucion del proceso: 5.
+[INFO] 11:23:21:359 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:359 CPU/(58114:58115): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 11:23:21:359 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:359 CPU/(58114:58115): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 11:23:21:359 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:359 CPU/(58114:58115): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 11:23:21:359 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:359 CPU/(58114:58115): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 11:23:21:359 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:359 CPU/(58114:58115): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 11:23:21:359 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:359 CPU/(58114:58115): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 11:23:21:359 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:359 CPU/(58114:58115): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 11:23:21:359 CPU/(58114:58115): Instruccion Ejecutada
+[INFO] 11:23:21:359 CPU/(58114:58115): PID: 5 - Ejecutando: EXIT
+[INFO] 11:23:21:359 CPU/(58114:58115): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:23:21:403 CPU/(58114:58115): Datos enviados correctamente
+[INFO] 11:23:47:279 CPU/(58114:58115): Comenzar ejecucion del proceso: 5.
+[INFO] 11:27:20:316 CPU/(58864:58864): Logger creado
+[INFO] 11:27:20:317 CPU/(58864:58864): -------Valores del config-------
+[INFO] 11:27:20:318 CPU/(58864:58864): Retardo Instrucción = 1000
+[INFO] 11:27:20:318 CPU/(58864:58864): IP Memoria = 127.0.0.1
+[INFO] 11:27:20:318 CPU/(58864:58864): Puerto Memoria = 8003
+[INFO] 11:27:20:318 CPU/(58864:58864): Puerto Escucha = 8001
+[INFO] 11:27:20:318 CPU/(58864:58864): Tamanio maximo de segmentos = (null)
+[INFO] 11:27:20:318 CPU/(58864:58864): --------------------------------
+[INFO] 11:27:20:318 CPU/(58864:58864): ¡CPU iniciado correctamente!
+[TRACE] 11:27:20:318 CPU/(58864:58864): Listo para escuchar a mi cliente
+[INFO] 11:27:20:318 CPU/(58864:58864): Servidor listo para recibir al cliente
+[INFO] 11:27:20:318 CPU/(58864:58866): Conexion establecida con Memoria
+[INFO] 11:27:22:547 CPU/(58864:58865): Se conecto un cliente!
+[INFO] 11:27:22:548 CPU/(58864:58865): Me llego el mensaje: Conectado al Kernel
+[INFO] 11:27:32:547 CPU/(58864:58865): Comenzar ejecucion del proceso: 5.
+[INFO] 11:27:32:547 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:32:547 CPU/(58864:58865): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:27:32:549 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:32:549 CPU/(58864:58865): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 11:27:32:549 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:32:549 CPU/(58864:58865): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 11:27:32:549 CPU/(58864:58865): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:27:32:591 CPU/(58864:58865): Datos enviados correctamente
+[INFO] 11:27:32:635 CPU/(58864:58865): Comenzar ejecucion del proceso: 5.
+[INFO] 11:27:32:635 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:32:635 CPU/(58864:58865): PID: 5 - Ejecutando: I/O 10
+[INFO] 11:27:32:635 CPU/(58864:58865): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:27:42:679 CPU/(58864:58865): Datos enviados correctamente
+[INFO] 11:27:42:723 CPU/(58864:58865): Comenzar ejecucion del proceso: 5.
+[INFO] 11:27:42:723 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:723 CPU/(58864:58865): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 11:27:42:723 CPU/(58864:58865): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:27:42:723 CPU/(58864:58865): Datos enviados correctamente
+[INFO] 11:27:42:767 CPU/(58864:58865): Comenzar ejecucion del proceso: 5.
+[INFO] 11:27:42:767 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:767 CPU/(58864:58865): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 11:27:42:767 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:767 CPU/(58864:58865): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 11:27:42:767 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:767 CPU/(58864:58865): PID: 5 - Ejecutando: YIELD
+[INFO] 11:27:42:767 CPU/(58864:58865): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:27:42:810 CPU/(58864:58865): Datos enviados correctamente
+[INFO] 11:27:42:854 CPU/(58864:58865): Comenzar ejecucion del proceso: 5.
+[INFO] 11:27:42:854 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:854 CPU/(58864:58865): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 11:27:42:854 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:854 CPU/(58864:58865): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 11:27:42:855 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:855 CPU/(58864:58865): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 11:27:42:855 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:855 CPU/(58864:58865): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 11:27:42:855 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:855 CPU/(58864:58865): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 11:27:42:855 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:855 CPU/(58864:58865): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 11:27:42:855 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:855 CPU/(58864:58865): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 11:27:42:855 CPU/(58864:58865): Instruccion Ejecutada
+[INFO] 11:27:42:855 CPU/(58864:58865): PID: 5 - Ejecutando: EXIT
+[INFO] 11:27:42:855 CPU/(58864:58865): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:27:42:899 CPU/(58864:58865): Datos enviados correctamente
+[INFO] 11:40:12:885 CPU/(60580:60580): Logger creado
+[INFO] 11:40:12:886 CPU/(60580:60580): -------Valores del config-------
+[INFO] 11:40:12:886 CPU/(60580:60580): Retardo Instrucción = 1000
+[INFO] 11:40:12:886 CPU/(60580:60580): IP Memoria = 127.0.0.1
+[INFO] 11:40:12:886 CPU/(60580:60580): Puerto Memoria = 8003
+[INFO] 11:40:12:886 CPU/(60580:60580): Puerto Escucha = 8001
+[INFO] 11:40:12:886 CPU/(60580:60580): Tamanio maximo de segmentos = (null)
+[INFO] 11:40:12:886 CPU/(60580:60580): --------------------------------
+[INFO] 11:40:12:886 CPU/(60580:60580): ¡CPU iniciado correctamente!
+[TRACE] 11:40:12:886 CPU/(60580:60580): Listo para escuchar a mi cliente
+[INFO] 11:40:12:886 CPU/(60580:60580): Servidor listo para recibir al cliente
+[INFO] 11:40:12:887 CPU/(60580:60582): Conexion establecida con Memoria
+[INFO] 11:40:16:935 CPU/(60580:60581): Se conecto un cliente!
+[INFO] 11:40:16:935 CPU/(60580:60581): Me llego el mensaje: Conectado al Kernel
+[INFO] 11:40:26:934 CPU/(60580:60581): Comenzar ejecucion del proceso: 5.
+[INFO] 11:40:26:935 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:26:935 CPU/(60580:60581): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:40:26:936 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:26:936 CPU/(60580:60581): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 11:40:26:936 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:26:936 CPU/(60580:60581): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 11:40:26:936 CPU/(60580:60581): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:40:26:980 CPU/(60580:60581): Datos enviados correctamente
+[INFO] 11:40:27:022 CPU/(60580:60581): Comenzar ejecucion del proceso: 5.
+[INFO] 11:40:27:022 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:27:022 CPU/(60580:60581): PID: 5 - Ejecutando: I/O 10
+[INFO] 11:40:27:023 CPU/(60580:60581): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:40:37:068 CPU/(60580:60581): Datos enviados correctamente
+[INFO] 11:40:37:111 CPU/(60580:60581): Comenzar ejecucion del proceso: 5.
+[INFO] 11:40:37:111 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:111 CPU/(60580:60581): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 11:40:37:111 CPU/(60580:60581): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:40:37:111 CPU/(60580:60581): Datos enviados correctamente
+[INFO] 11:40:37:155 CPU/(60580:60581): Comenzar ejecucion del proceso: 5.
+[INFO] 11:40:37:155 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:155 CPU/(60580:60581): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 11:40:37:155 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:155 CPU/(60580:60581): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 11:40:37:155 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:155 CPU/(60580:60581): PID: 5 - Ejecutando: YIELD
+[INFO] 11:40:37:155 CPU/(60580:60581): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:40:37:199 CPU/(60580:60581): Datos enviados correctamente
+[INFO] 11:40:37:242 CPU/(60580:60581): Comenzar ejecucion del proceso: 5.
+[INFO] 11:40:37:242 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:242 CPU/(60580:60581): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 11:40:37:242 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:243 CPU/(60580:60581): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 11:40:37:243 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:243 CPU/(60580:60581): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 11:40:37:243 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:243 CPU/(60580:60581): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 11:40:37:243 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:243 CPU/(60580:60581): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 11:40:37:243 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:243 CPU/(60580:60581): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 11:40:37:243 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:243 CPU/(60580:60581): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 11:40:37:243 CPU/(60580:60581): Instruccion Ejecutada
+[INFO] 11:40:37:243 CPU/(60580:60581): PID: 5 - Ejecutando: EXIT
+[INFO] 11:40:37:243 CPU/(60580:60581): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:40:37:288 CPU/(60580:60581): Datos enviados correctamente
+[INFO] 11:43:18:335 CPU/(60978:60978): Logger creado
+[INFO] 11:43:18:336 CPU/(60978:60978): -------Valores del config-------
+[INFO] 11:43:18:336 CPU/(60978:60978): Retardo Instrucción = 1000
+[INFO] 11:43:18:336 CPU/(60978:60978): IP Memoria = 127.0.0.1
+[INFO] 11:43:18:336 CPU/(60978:60978): Puerto Memoria = 8003
+[INFO] 11:43:18:336 CPU/(60978:60978): Puerto Escucha = 8001
+[INFO] 11:43:18:336 CPU/(60978:60978): Tamanio maximo de segmentos = (null)
+[INFO] 11:43:18:336 CPU/(60978:60978): --------------------------------
+[INFO] 11:43:18:336 CPU/(60978:60978): ¡CPU iniciado correctamente!
+[TRACE] 11:43:18:336 CPU/(60978:60978): Listo para escuchar a mi cliente
+[INFO] 11:43:18:336 CPU/(60978:60978): Servidor listo para recibir al cliente
+[INFO] 11:43:18:337 CPU/(60978:60980): Conexion establecida con Memoria
+[INFO] 11:43:21:885 CPU/(60978:60979): Se conecto un cliente!
+[INFO] 11:43:21:885 CPU/(60978:60979): Me llego el mensaje: Conectado al Kernel
+[INFO] 11:43:31:885 CPU/(60978:60979): Comenzar ejecucion del proceso: 5.
+[INFO] 11:43:31:885 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:31:885 CPU/(60978:60979): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:43:31:886 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:31:886 CPU/(60978:60979): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 11:43:31:886 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:31:886 CPU/(60978:60979): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 11:43:31:887 CPU/(60978:60979): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:43:31:927 CPU/(60978:60979): Datos enviados correctamente
+[INFO] 11:43:31:971 CPU/(60978:60979): Comenzar ejecucion del proceso: 5.
+[INFO] 11:43:31:971 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:31:971 CPU/(60978:60979): PID: 5 - Ejecutando: I/O 10
+[INFO] 11:43:31:971 CPU/(60978:60979): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:43:42:015 CPU/(60978:60979): Datos enviados correctamente
+[INFO] 11:43:42:059 CPU/(60978:60979): Comenzar ejecucion del proceso: 5.
+[INFO] 11:43:42:059 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:059 CPU/(60978:60979): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 11:43:42:059 CPU/(60978:60979): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:43:42:059 CPU/(60978:60979): Datos enviados correctamente
+[INFO] 11:43:42:102 CPU/(60978:60979): Comenzar ejecucion del proceso: 5.
+[INFO] 11:43:42:103 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:103 CPU/(60978:60979): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 11:43:42:103 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:103 CPU/(60978:60979): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 11:43:42:103 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:103 CPU/(60978:60979): PID: 5 - Ejecutando: YIELD
+[INFO] 11:43:42:103 CPU/(60978:60979): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:43:42:147 CPU/(60978:60979): Datos enviados correctamente
+[INFO] 11:43:42:191 CPU/(60978:60979): Comenzar ejecucion del proceso: 5.
+[INFO] 11:43:42:191 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:191 CPU/(60978:60979): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 11:43:42:191 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:191 CPU/(60978:60979): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 11:43:42:191 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:191 CPU/(60978:60979): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 11:43:42:191 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:191 CPU/(60978:60979): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 11:43:42:191 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:191 CPU/(60978:60979): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 11:43:42:191 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:191 CPU/(60978:60979): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 11:43:42:191 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:191 CPU/(60978:60979): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 11:43:42:191 CPU/(60978:60979): Instruccion Ejecutada
+[INFO] 11:43:42:191 CPU/(60978:60979): PID: 5 - Ejecutando: EXIT
+[INFO] 11:43:42:191 CPU/(60978:60979): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:43:42:235 CPU/(60978:60979): Datos enviados correctamente
+[INFO] 11:57:45:689 CPU/(62859:62859): Logger creado
+[INFO] 11:57:45:690 CPU/(62859:62859): -------Valores del config-------
+[INFO] 11:57:45:690 CPU/(62859:62859): Retardo Instrucción = 1000
+[INFO] 11:57:45:690 CPU/(62859:62859): IP Memoria = 127.0.0.1
+[INFO] 11:57:45:690 CPU/(62859:62859): Puerto Memoria = 8003
+[INFO] 11:57:45:690 CPU/(62859:62859): Puerto Escucha = 8001
+[INFO] 11:57:45:690 CPU/(62859:62859): Tamanio maximo de segmentos = (null)
+[INFO] 11:57:45:690 CPU/(62859:62859): --------------------------------
+[INFO] 11:57:45:690 CPU/(62859:62859): ¡CPU iniciado correctamente!
+[TRACE] 11:57:45:690 CPU/(62859:62859): Listo para escuchar a mi cliente
+[INFO] 11:57:45:691 CPU/(62859:62859): Servidor listo para recibir al cliente
+[INFO] 11:57:45:691 CPU/(62859:62861): Conexion establecida con Memoria
+[INFO] 11:57:48:316 CPU/(62859:62860): Se conecto un cliente!
+[INFO] 11:57:48:316 CPU/(62859:62860): Me llego el mensaje: Conectado al Kernel
+[INFO] 11:57:58:315 CPU/(62859:62860): Comenzar ejecucion del proceso: 5.
+[INFO] 11:57:58:315 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:57:58:316 CPU/(62859:62860): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 11:57:58:317 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:57:58:317 CPU/(62859:62860): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 11:57:58:317 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:57:58:317 CPU/(62859:62860): PID: 5 - Ejecutando: WAIT DISCO
+[INFO] 11:57:58:317 CPU/(62859:62860): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:57:58:359 CPU/(62859:62860): Datos enviados correctamente
+[INFO] 11:57:58:403 CPU/(62859:62860): Comenzar ejecucion del proceso: 5.
+[INFO] 11:57:58:403 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:57:58:403 CPU/(62859:62860): PID: 5 - Ejecutando: I/O 10
+[INFO] 11:57:58:403 CPU/(62859:62860): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:58:08:448 CPU/(62859:62860): Datos enviados correctamente
+[INFO] 11:58:08:490 CPU/(62859:62860): Comenzar ejecucion del proceso: 5.
+[INFO] 11:58:08:491 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:491 CPU/(62859:62860): PID: 5 - Ejecutando: SIGNAL DISCO
+[INFO] 11:58:08:491 CPU/(62859:62860): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:58:08:491 CPU/(62859:62860): Datos enviados correctamente
+[INFO] 11:58:08:534 CPU/(62859:62860): Comenzar ejecucion del proceso: 5.
+[INFO] 11:58:08:535 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:535 CPU/(62859:62860): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 11:58:08:535 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:535 CPU/(62859:62860): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 11:58:08:535 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:535 CPU/(62859:62860): PID: 5 - Ejecutando: YIELD
+[INFO] 11:58:08:535 CPU/(62859:62860): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:58:08:579 CPU/(62859:62860): Datos enviados correctamente
+[INFO] 11:58:08:622 CPU/(62859:62860): Comenzar ejecucion del proceso: 5.
+[INFO] 11:58:08:622 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:622 CPU/(62859:62860): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 11:58:08:622 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:622 CPU/(62859:62860): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 11:58:08:622 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:622 CPU/(62859:62860): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 11:58:08:623 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:623 CPU/(62859:62860): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 11:58:08:623 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:623 CPU/(62859:62860): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 11:58:08:623 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:623 CPU/(62859:62860): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 11:58:08:623 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:623 CPU/(62859:62860): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 11:58:08:623 CPU/(62859:62860): Instruccion Ejecutada
+[INFO] 11:58:08:623 CPU/(62859:62860): PID: 5 - Ejecutando: EXIT
+[INFO] 11:58:08:623 CPU/(62859:62860): Datos enviados, esperando respuesta de cpu...
+[INFO] 11:58:08:667 CPU/(62859:62860): Datos enviados correctamente
+[INFO] 12:05:22:719 CPU/(64073:64073): Logger creado
+[INFO] 12:05:22:720 CPU/(64073:64073): -------Valores del config-------
+[INFO] 12:05:22:720 CPU/(64073:64073): Retardo Instrucción = 1000
+[INFO] 12:05:22:720 CPU/(64073:64073): IP Memoria = 127.0.0.1
+[INFO] 12:05:22:721 CPU/(64073:64073): Puerto Memoria = 8003
+[INFO] 12:05:22:721 CPU/(64073:64073): Puerto Escucha = 8001
+[INFO] 12:05:22:721 CPU/(64073:64073): Tamanio maximo de segmentos = (null)
+[INFO] 12:05:22:721 CPU/(64073:64073): --------------------------------
+[INFO] 12:05:22:721 CPU/(64073:64073): ¡CPU iniciado correctamente!
+[TRACE] 12:05:22:721 CPU/(64073:64073): Listo para escuchar a mi cliente
+[INFO] 12:05:22:722 CPU/(64073:64073): Servidor listo para recibir al cliente
+[INFO] 12:05:22:722 CPU/(64073:64075): Conexion establecida con Memoria
+[INFO] 12:05:23:728 CPU/(64073:64074): Se conecto un cliente!
+[INFO] 12:05:23:729 CPU/(64073:64074): Me llego el mensaje: Conectado al Kernel
+[INFO] 12:05:33:727 CPU/(64073:64074): Comenzar ejecucion del proceso: 5.
+[INFO] 12:05:33:727 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:33:727 CPU/(64073:64074): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:05:33:728 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:33:728 CPU/(64073:64074): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 12:05:33:728 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:33:728 CPU/(64073:64074): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 12:05:33:728 CPU/(64073:64074): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:05:33:771 CPU/(64073:64074): Datos enviados correctamente
+[INFO] 12:05:33:815 CPU/(64073:64074): Comenzar ejecucion del proceso: 5.
+[INFO] 12:05:33:815 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:33:815 CPU/(64073:64074): PID: 5 - Ejecutando: I/O 10
+[TRACE] 12:05:33:815 CPU/(64073:64074): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:05:43:859 CPU/(64073:64074): Datos enviados correctamente
+[INFO] 12:05:43:903 CPU/(64073:64074): Comenzar ejecucion del proceso: 5.
+[INFO] 12:05:43:903 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:43:903 CPU/(64073:64074): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 12:05:43:903 CPU/(64073:64074): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:05:43:903 CPU/(64073:64074): Datos enviados correctamente
+[INFO] 12:05:43:947 CPU/(64073:64074): Comenzar ejecucion del proceso: 5.
+[INFO] 12:05:43:947 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:43:947 CPU/(64073:64074): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 12:05:43:947 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:43:947 CPU/(64073:64074): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 12:05:43:947 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:43:947 CPU/(64073:64074): PID: 5 - Ejecutando: YIELD
+[TRACE] 12:05:43:947 CPU/(64073:64074): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:05:43:991 CPU/(64073:64074): Datos enviados correctamente
+[INFO] 12:05:44:035 CPU/(64073:64074): Comenzar ejecucion del proceso: 5.
+[INFO] 12:05:44:035 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:44:035 CPU/(64073:64074): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 12:05:44:035 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:44:035 CPU/(64073:64074): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 12:05:44:035 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:44:035 CPU/(64073:64074): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 12:05:44:035 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:44:035 CPU/(64073:64074): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 12:05:44:035 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:44:035 CPU/(64073:64074): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 12:05:44:035 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:44:035 CPU/(64073:64074): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 12:05:44:035 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:44:035 CPU/(64073:64074): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 12:05:44:035 CPU/(64073:64074): Instruccion Ejecutada
+[INFO] 12:05:44:035 CPU/(64073:64074): PID: 5 - Ejecutando: EXIT
+[TRACE] 12:05:44:035 CPU/(64073:64074): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:05:44:079 CPU/(64073:64074): Datos enviados correctamente
+[INFO] 12:06:09:270 CPU/(64073:64074): Comenzar ejecucion del proceso: 5.
+[INFO] 12:19:14:688 CPU/(65773:65773): Logger creado
+[INFO] 12:19:14:689 CPU/(65773:65773): -------Valores del config-------
+[INFO] 12:19:14:689 CPU/(65773:65773): Retardo Instrucción = 1000
+[INFO] 12:19:14:689 CPU/(65773:65773): IP Memoria = 127.0.0.1
+[INFO] 12:19:14:689 CPU/(65773:65773): Puerto Memoria = 8003
+[INFO] 12:19:14:690 CPU/(65773:65773): Puerto Escucha = 8001
+[INFO] 12:19:14:690 CPU/(65773:65773): Tamanio maximo de segmentos = (null)
+[INFO] 12:19:14:690 CPU/(65773:65773): --------------------------------
+[INFO] 12:19:14:690 CPU/(65773:65773): ¡CPU iniciado correctamente!
+[TRACE] 12:19:14:690 CPU/(65773:65773): Listo para escuchar a mi cliente
+[INFO] 12:19:14:690 CPU/(65773:65773): Servidor listo para recibir al cliente
+[INFO] 12:19:14:690 CPU/(65773:65775): Conexion establecida con Memoria
+[INFO] 12:19:17:270 CPU/(65773:65774): Se conecto un cliente!
+[INFO] 12:19:17:270 CPU/(65773:65774): Me llego el mensaje: Conectado al Kernel
+[INFO] 12:19:27:269 CPU/(65773:65774): Comenzar ejecucion del proceso: 5.
+[INFO] 12:19:27:269 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:27:269 CPU/(65773:65774): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:19:27:271 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:27:271 CPU/(65773:65774): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 12:19:27:271 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:27:271 CPU/(65773:65774): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 12:19:27:271 CPU/(65773:65774): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:19:27:311 CPU/(65773:65774): Datos enviados correctamente
+[INFO] 12:19:27:354 CPU/(65773:65774): Comenzar ejecucion del proceso: 5.
+[INFO] 12:19:27:354 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:27:354 CPU/(65773:65774): PID: 5 - Ejecutando: I/O 10
+[TRACE] 12:19:27:354 CPU/(65773:65774): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:19:37:399 CPU/(65773:65774): Datos enviados correctamente
+[INFO] 12:19:37:443 CPU/(65773:65774): Comenzar ejecucion del proceso: 5.
+[INFO] 12:19:37:443 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:443 CPU/(65773:65774): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 12:19:37:443 CPU/(65773:65774): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:19:37:443 CPU/(65773:65774): Datos enviados correctamente
+[INFO] 12:19:37:487 CPU/(65773:65774): Comenzar ejecucion del proceso: 5.
+[INFO] 12:19:37:487 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:487 CPU/(65773:65774): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 12:19:37:487 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:487 CPU/(65773:65774): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 12:19:37:487 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:487 CPU/(65773:65774): PID: 5 - Ejecutando: YIELD
+[TRACE] 12:19:37:487 CPU/(65773:65774): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:19:37:531 CPU/(65773:65774): Datos enviados correctamente
+[INFO] 12:19:37:575 CPU/(65773:65774): Comenzar ejecucion del proceso: 5.
+[INFO] 12:19:37:575 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:575 CPU/(65773:65774): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 12:19:37:575 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:575 CPU/(65773:65774): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 12:19:37:575 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:575 CPU/(65773:65774): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 12:19:37:575 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:575 CPU/(65773:65774): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 12:19:37:575 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:575 CPU/(65773:65774): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 12:19:37:575 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:575 CPU/(65773:65774): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 12:19:37:575 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:575 CPU/(65773:65774): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 12:19:37:575 CPU/(65773:65774): Instruccion Ejecutada
+[INFO] 12:19:37:575 CPU/(65773:65774): PID: 5 - Ejecutando: EXIT
+[TRACE] 12:19:37:575 CPU/(65773:65774): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:19:37:619 CPU/(65773:65774): Datos enviados correctamente
+[INFO] 12:22:01:875 CPU/(66174:66174): Logger creado
+[INFO] 12:22:01:875 CPU/(66174:66174): -------Valores del config-------
+[INFO] 12:22:01:876 CPU/(66174:66174): Retardo Instrucción = 1000
+[INFO] 12:22:01:876 CPU/(66174:66174): IP Memoria = 127.0.0.1
+[INFO] 12:22:01:876 CPU/(66174:66174): Puerto Memoria = 8003
+[INFO] 12:22:01:876 CPU/(66174:66174): Puerto Escucha = 8001
+[INFO] 12:22:01:876 CPU/(66174:66174): Tamanio maximo de segmentos = (null)
+[INFO] 12:22:01:876 CPU/(66174:66174): --------------------------------
+[INFO] 12:22:01:876 CPU/(66174:66174): ¡CPU iniciado correctamente!
+[TRACE] 12:22:01:876 CPU/(66174:66174): Listo para escuchar a mi cliente
+[INFO] 12:22:01:876 CPU/(66174:66174): Servidor listo para recibir al cliente
+[INFO] 12:22:01:876 CPU/(66174:66176): Conexion establecida con Memoria
+[INFO] 12:22:04:126 CPU/(66174:66175): Se conecto un cliente!
+[INFO] 12:22:04:126 CPU/(66174:66175): Me llego el mensaje: Conectado al Kernel
+[INFO] 12:22:14:126 CPU/(66174:66175): Comenzar ejecucion del proceso: 5.
+[INFO] 12:22:14:126 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:14:126 CPU/(66174:66175): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:22:14:127 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:14:127 CPU/(66174:66175): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 12:22:14:127 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:14:127 CPU/(66174:66175): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 12:22:14:127 CPU/(66174:66175): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:22:14:166 CPU/(66174:66175): Datos enviados correctamente
+[INFO] 12:22:14:211 CPU/(66174:66175): Comenzar ejecucion del proceso: 5.
+[INFO] 12:22:14:211 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:14:211 CPU/(66174:66175): PID: 5 - Ejecutando: I/O 10
+[TRACE] 12:22:14:211 CPU/(66174:66175): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:22:24:256 CPU/(66174:66175): Datos enviados correctamente
+[INFO] 12:22:24:299 CPU/(66174:66175): Comenzar ejecucion del proceso: 5.
+[INFO] 12:22:24:299 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:299 CPU/(66174:66175): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 12:22:24:299 CPU/(66174:66175): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:22:24:299 CPU/(66174:66175): Datos enviados correctamente
+[INFO] 12:22:24:343 CPU/(66174:66175): Comenzar ejecucion del proceso: 5.
+[INFO] 12:22:24:343 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:343 CPU/(66174:66175): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 12:22:24:343 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:343 CPU/(66174:66175): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 12:22:24:343 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:343 CPU/(66174:66175): PID: 5 - Ejecutando: YIELD
+[TRACE] 12:22:24:343 CPU/(66174:66175): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:22:24:387 CPU/(66174:66175): Datos enviados correctamente
+[INFO] 12:22:24:432 CPU/(66174:66175): Comenzar ejecucion del proceso: 5.
+[INFO] 12:22:24:432 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:432 CPU/(66174:66175): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 12:22:24:432 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:432 CPU/(66174:66175): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 12:22:24:432 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:432 CPU/(66174:66175): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 12:22:24:432 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:432 CPU/(66174:66175): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 12:22:24:432 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:432 CPU/(66174:66175): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 12:22:24:432 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:432 CPU/(66174:66175): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 12:22:24:432 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:432 CPU/(66174:66175): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 12:22:24:432 CPU/(66174:66175): Instruccion Ejecutada
+[INFO] 12:22:24:432 CPU/(66174:66175): PID: 5 - Ejecutando: EXIT
+[TRACE] 12:22:24:432 CPU/(66174:66175): Datos enviados, esperando respuesta de cpu...
+[TRACE] 12:22:24:475 CPU/(66174:66175): Datos enviados correctamente
+[INFO] 12:23:52:847 CPU/(66174:66175): Comenzar ejecucion del proceso: 5.

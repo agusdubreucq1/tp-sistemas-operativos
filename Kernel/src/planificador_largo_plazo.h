@@ -15,6 +15,7 @@
 #include <utils/datos.h>
 #include <utils/pcb.h>
 #include <pthread.h>
+#include <utils/utils.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
@@ -33,6 +34,6 @@
 // ------------------------------------------------------------------------------------------
 
 	void ingresar_en_lista(t_pcb* pcb, t_list* lista, char* modulo, pthread_mutex_t* semaforo_mutex, estado_code estado);
-
+	void log_cambiar_estado(int pid, estado_code viejo, estado_code nuevo);
 
 #endif /* PLANIFICADOR_LARGO_PLAZO_H_ */
