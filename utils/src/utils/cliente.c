@@ -173,5 +173,3 @@ void liberar_conexion(int socket_cliente)
 	printf("Cerre conexion %d", socket_cliente);
 }
 
-
-

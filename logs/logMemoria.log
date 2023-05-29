@@ -4701,3 +4701,24 @@
 [INFO] 21:49:24:828 Memoria/(15484:15487): Me llego el mensaje Soy el CPU
 [INFO] 21:49:26:875 Memoria/(15484:15486): Se conecto un cliente!
 [INFO] 21:49:26:875 Memoria/(15484:15486): Me llego el mensaje Soy el Kernel
+[INFO] 00:23:27:330 Memoria/(18445:18445): Logger creado
+[INFO] 00:23:27:332 Memoria/(18445:18445): -------Valores del config-------
+[INFO] 00:23:27:332 Memoria/(18445:18445): puerto_escucha = 8003
+[INFO] 00:23:27:332 Memoria/(18445:18445): tamaño memoria = 4096
+[INFO] 00:23:27:332 Memoria/(18445:18445): tamaño segmento = 128
+[INFO] 00:23:27:332 Memoria/(18445:18445): cantidad de segmentos = 16
+[INFO] 00:23:27:332 Memoria/(18445:18445): retardo memoria = 1000
+[INFO] 00:23:27:332 Memoria/(18445:18445): retardo compactacion = 60000
+[INFO] 00:23:27:332 Memoria/(18445:18445): algoritmo asignacion = BEST
+[INFO] 00:23:27:332 Memoria/(18445:18445): --------------------------------
+[INFO] 00:23:27:333 Memoria/(18445:18445): ¡Memoria iniciado correctamente!
+[TRACE] 00:23:27:333 Memoria/(18445:18445): Listo para escuchar a mi cliente
+[INFO] 00:23:27:333 Memoria/(18445:18445): Servidor listo para recibir al cliente
+[INFO] 00:23:28:156 Memoria/(18445:18449): Se conecto un cliente!
+[INFO] 00:23:28:157 Memoria/(18445:18449): Me llego el mensaje Soy el FileSystem
+[INFO] 00:23:29:165 Memoria/(18445:18448): Se conecto un cliente!
+[INFO] 00:23:29:165 Memoria/(18445:18448): Me llego el mensaje Soy el CPU
+[INFO] 00:23:30:031 Memoria/(18445:18447): Se conecto un cliente!
+[INFO] 00:23:30:031 Memoria/(18445:18447): Me llego el mensaje Soy el Kernel
+[INFO] 00:23:50:337 Memoria/(18445:18448): Me llego el mensaje MOV_IN BX 120
+[INFO] 00:23:51:645 Memoria/(18445:18448): Me llego el mensaje MOV_IN BX 120

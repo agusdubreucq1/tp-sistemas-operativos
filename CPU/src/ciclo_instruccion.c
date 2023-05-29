@@ -41,8 +41,31 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			imprimir_registros(contexto_de_ejecucion->registros_cpu);
 
 			break;
-		case MOV_IN:   		break;
-		case MOV_OUT:  		break;
+		case MOV_IN:
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s %s", contexto_de_ejecucion->pid,
+																   codigo_instruccion_string(instruccion->codigo_instruccion),
+																   instruccion->parametro[0],
+																   instruccion->parametro[1]);
+			char mensaje_mov_in[30] = "MOV_IN ";
+			strcat(mensaje_mov_in, instruccion->parametro[0]);
+			strcat(mensaje_mov_in, " ");
+			strcat(mensaje_mov_in, instruccion->parametro[1]);
+			enviar_mensaje(mensaje_mov_in, socket_memoria);
+			//enviarContextoA("MEMORIA", mensaje_mov_in);
+			break;
+
+		case MOV_OUT:
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s %s", contexto_de_ejecucion->pid,
+																   codigo_instruccion_string(instruccion->codigo_instruccion),
+																   instruccion->parametro[0],
+																   instruccion->parametro[1]);
+			char mensaje_mov_out[30] = "MOV OUT ";
+			strcat(mensaje_mov_out, instruccion->parametro[0]);
+			strcat(mensaje_mov_out, " ");
+			strcat(mensaje_mov_out, instruccion->parametro[1]);
+			enviar_mensaje(mensaje_mov_out, socket_memoria);
+			//enviarContextoA("MEMORIA", mensaje_mov_out);
+			break;
 		case I_O:
 			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s", contexto_de_ejecucion->pid,
 																   codigo_instruccion_string(instruccion->codigo_instruccion),
