@@ -25101,3 +25101,145 @@
 [TRACE] 13:21:28:508 CPU/(26542:26543): Datos enviados, esperando respuesta de Kernel...
 [ERROR] 13:21:28:508 CPU/(26542:26543): Han llegado menos bytes que los enviados por Kernel
 [INFO] 13:21:28:508 CPU/(26542:26543): Comenzar ejecucion del proceso: 5.
+[INFO] 13:56:26:815 CPU/(3059:3059): Logger creado
+[INFO] 13:56:26:819 CPU/(3059:3059): -------Valores del config-------
+[INFO] 13:56:26:819 CPU/(3059:3059): Retardo Instrucción = 1000
+[INFO] 13:56:26:819 CPU/(3059:3059): IP Memoria = 127.0.0.1
+[INFO] 13:56:26:819 CPU/(3059:3059): Puerto Memoria = 8002
+[INFO] 13:56:26:819 CPU/(3059:3059): Puerto Escucha = 8001
+[INFO] 13:56:26:819 CPU/(3059:3059): Tamanio maximo de segmentos = (null)
+[INFO] 13:56:26:819 CPU/(3059:3059): --------------------------------
+[INFO] 13:56:26:820 CPU/(3059:3059): ¡CPU iniciado correctamente!
+[TRACE] 13:56:26:820 CPU/(3059:3059): Listo para escuchar a mi cliente
+[INFO] 13:56:26:820 CPU/(3059:3059): Servidor listo para recibir al cliente
+[INFO] 13:56:26:821 CPU/(3059:3061): Conexion establecida con Memoria
+[TRACE] 13:58:37:938 CPU/(3059:3060): Se conecto un cliente!
+[TRACE] 13:58:37:940 CPU/(3059:3060): Me llego el mensaje: Conectado al Kernel
+[TRACE] 13:58:47:946 CPU/(3059:3060): Recibi contexto de ejecucion - PID: 5
+[INFO] 13:58:47:946 CPU/(3059:3060): Comenzar ejecucion del proceso: 5.
+[INFO] 13:58:47:947 CPU/(3059:3060): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 13:58:47:947 CPU/(3059:3060): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 13:58:47:982 CPU/(3059:3060): Datos enviados correctamente
+[TRACE] 13:58:48:026 CPU/(3059:3060): Recibi contexto de ejecucion - PID: 9
+[INFO] 13:58:48:026 CPU/(3059:3060): Comenzar ejecucion del proceso: 9.
+[INFO] 13:58:48:026 CPU/(3059:3060): PID: 9 - Ejecutando: WAIT IMPRESORA
+[TRACE] 13:58:48:026 CPU/(3059:3060): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 13:58:48:070 CPU/(3059:3060): Datos enviados correctamente
+[TRACE] 13:58:48:113 CPU/(3059:3060): Recibi contexto de ejecucion - PID: 10
+[INFO] 13:58:48:113 CPU/(3059:3060): Comenzar ejecucion del proceso: 10.
+[INFO] 13:58:48:113 CPU/(3059:3060): PID: 10 - Ejecutando: WAIT SCANNER
+[TRACE] 13:58:48:113 CPU/(3059:3060): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 13:58:48:157 CPU/(3059:3060): Datos enviados correctamente
+[INFO] 13:59:18:183 CPU/(3059:3060): Comenzar ejecucion del proceso: 10.
+[INFO] 13:59:18:189 CPU/(3059:3060): PID: 10 - Ejecutando: I/O 10
+[TRACE] 13:59:18:189 CPU/(3059:3060): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 13:59:18:189 CPU/(3059:3060): Han llegado menos bytes que los enviados por Kernel
+[INFO] 13:59:18:189 CPU/(3059:3060): Comenzar ejecucion del proceso: 10.
+[INFO] 13:59:18:189 CPU/(3059:3060): PID: 10 - Ejecutando: WAIT DISCO
+[TRACE] 13:59:18:189 CPU/(3059:3060): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 13:59:18:189 CPU/(3059:3060): Han llegado menos bytes que los enviados por Kernel
+[INFO] 13:59:18:189 CPU/(3059:3060): Comenzar ejecucion del proceso: 10.
+[INFO] 13:59:18:189 CPU/(3059:3060): PID: 10 - Ejecutando: EXIT
+[TRACE] 13:59:18:189 CPU/(3059:3060): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 13:59:18:189 CPU/(3059:3060): Han llegado menos bytes que los enviados por Kernel
+[INFO] 13:59:18:189 CPU/(3059:3060): Comenzar ejecucion del proceso: 10.
+[INFO] 13:59:18:189 CPU/(3059:3060): PID: 10 - Ejecutando: SIGNAL DISCO
+[TRACE] 13:59:18:189 CPU/(3059:3060): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 13:59:18:189 CPU/(3059:3060): Han llegado menos bytes que los enviados por Kernel
+[INFO] 13:59:18:189 CPU/(3059:3060): Comenzar ejecucion del proceso: 10.
+[INFO] 13:59:18:189 CPU/(3059:3060): PID: 10 - Ejecutando: SIGNAL SCANNER
+[TRACE] 13:59:18:189 CPU/(3059:3060): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 13:59:18:189 CPU/(3059:3060): Han llegado menos bytes que los enviados por Kernel
+[INFO] 13:59:18:189 CPU/(3059:3060): Comenzar ejecucion del proceso: 10.
+[INFO] 13:59:18:189 CPU/(3059:3060): PID: 10 - Ejecutando: EXIT
+[TRACE] 13:59:18:189 CPU/(3059:3060): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 13:59:18:189 CPU/(3059:3060): Han llegado menos bytes que los enviados por Kernel
+[INFO] 13:59:18:189 CPU/(3059:3060): Comenzar ejecucion del proceso: 10.
+[INFO] 14:01:56:771 CPU/(4027:4027): Logger creado
+[INFO] 14:01:56:772 CPU/(4027:4027): -------Valores del config-------
+[INFO] 14:01:56:772 CPU/(4027:4027): Retardo Instrucción = 1000
+[INFO] 14:01:56:772 CPU/(4027:4027): IP Memoria = 127.0.0.1
+[INFO] 14:01:56:772 CPU/(4027:4027): Puerto Memoria = 8002
+[INFO] 14:01:56:773 CPU/(4027:4027): Puerto Escucha = 8001
+[INFO] 14:01:56:773 CPU/(4027:4027): Tamanio maximo de segmentos = (null)
+[INFO] 14:01:56:773 CPU/(4027:4027): --------------------------------
+[INFO] 14:01:56:773 CPU/(4027:4027): ¡CPU iniciado correctamente!
+[TRACE] 14:01:56:773 CPU/(4027:4027): Listo para escuchar a mi cliente
+[INFO] 14:01:56:773 CPU/(4027:4027): Servidor listo para recibir al cliente
+[INFO] 14:01:56:773 CPU/(4027:4029): Conexion establecida con Memoria
+[TRACE] 14:02:00:269 CPU/(4027:4028): Se conecto un cliente!
+[TRACE] 14:02:00:270 CPU/(4027:4028): Me llego el mensaje: Conectado al Kernel
+[TRACE] 14:02:10:269 CPU/(4027:4028): Recibi contexto de ejecucion - PID: 5
+[INFO] 14:02:10:269 CPU/(4027:4028): Comenzar ejecucion del proceso: 5.
+[INFO] 14:02:10:269 CPU/(4027:4028): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 14:02:10:269 CPU/(4027:4028): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 14:02:10:315 CPU/(4027:4028): Datos enviados correctamente
+[INFO] 14:02:43:644 CPU/(4027:4028): Comenzar ejecucion del proceso: 5.
+[INFO] 14:02:43:656 CPU/(4027:4028): PID: 5 - Ejecutando: I/O 10
+[TRACE] 14:02:43:656 CPU/(4027:4028): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:02:43:656 CPU/(4027:4028): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:02:43:656 CPU/(4027:4028): Comenzar ejecucion del proceso: 5.
+[INFO] 14:02:43:656 CPU/(4027:4028): PID: 5 - Ejecutando: WAIT IMPRESORA
+[TRACE] 14:02:43:656 CPU/(4027:4028): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:02:43:656 CPU/(4027:4028): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:02:43:656 CPU/(4027:4028): Comenzar ejecucion del proceso: 5.
+[INFO] 14:02:43:656 CPU/(4027:4028): PID: 5 - Ejecutando: EXIT
+[TRACE] 14:02:43:656 CPU/(4027:4028): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:02:43:656 CPU/(4027:4028): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:02:43:656 CPU/(4027:4028): Comenzar ejecucion del proceso: 5.
+[INFO] 14:02:43:656 CPU/(4027:4028): PID: 5 - Ejecutando: SIGNAL IMPRESORA
+[TRACE] 14:02:43:656 CPU/(4027:4028): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:02:43:656 CPU/(4027:4028): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:02:43:656 CPU/(4027:4028): Comenzar ejecucion del proceso: 5.
+[INFO] 14:02:43:656 CPU/(4027:4028): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 14:02:43:656 CPU/(4027:4028): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:02:43:656 CPU/(4027:4028): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:02:43:656 CPU/(4027:4028): Comenzar ejecucion del proceso: 5.
+[INFO] 14:02:43:656 CPU/(4027:4028): PID: 5 - Ejecutando: EXIT
+[TRACE] 14:02:43:656 CPU/(4027:4028): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:02:43:656 CPU/(4027:4028): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:02:43:656 CPU/(4027:4028): Comenzar ejecucion del proceso: 5.
+[INFO] 14:04:44:822 CPU/(4358:4358): Logger creado
+[INFO] 14:04:44:823 CPU/(4358:4358): -------Valores del config-------
+[INFO] 14:04:44:823 CPU/(4358:4358): Retardo Instrucción = 1000
+[INFO] 14:04:44:823 CPU/(4358:4358): IP Memoria = 127.0.0.1
+[INFO] 14:04:44:823 CPU/(4358:4358): Puerto Memoria = 8002
+[INFO] 14:04:44:824 CPU/(4358:4358): Puerto Escucha = 8001
+[INFO] 14:04:44:824 CPU/(4358:4358): Tamanio maximo de segmentos = (null)
+[INFO] 14:04:44:824 CPU/(4358:4358): --------------------------------
+[INFO] 14:04:44:824 CPU/(4358:4358): ¡CPU iniciado correctamente!
+[TRACE] 14:04:44:824 CPU/(4358:4358): Listo para escuchar a mi cliente
+[INFO] 14:04:44:824 CPU/(4358:4358): Servidor listo para recibir al cliente
+[INFO] 14:04:44:825 CPU/(4358:4360): Conexion establecida con Memoria
+[TRACE] 14:04:47:347 CPU/(4358:4359): Se conecto un cliente!
+[TRACE] 14:04:47:347 CPU/(4358:4359): Me llego el mensaje: Conectado al Kernel
+[TRACE] 14:04:57:347 CPU/(4358:4359): Recibi contexto de ejecucion - PID: 5
+[INFO] 14:04:57:347 CPU/(4358:4359): Comenzar ejecucion del proceso: 5.
+[INFO] 14:04:57:347 CPU/(4358:4359): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 14:04:57:347 CPU/(4358:4359): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 14:04:57:392 CPU/(4358:4359): Datos enviados correctamente
+[INFO] 14:05:08:374 CPU/(4358:4359): Comenzar ejecucion del proceso: 5.
+[INFO] 14:05:08:380 CPU/(4358:4359): PID: 5 - Ejecutando: I/O 10
+[TRACE] 14:05:08:380 CPU/(4358:4359): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:05:08:380 CPU/(4358:4359): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:05:08:380 CPU/(4358:4359): Comenzar ejecucion del proceso: 5.
+[INFO] 14:05:08:380 CPU/(4358:4359): PID: 5 - Ejecutando: WAIT IMPRESORA
+[TRACE] 14:05:08:380 CPU/(4358:4359): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:05:08:381 CPU/(4358:4359): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:05:08:381 CPU/(4358:4359): Comenzar ejecucion del proceso: 5.
+[INFO] 14:05:08:381 CPU/(4358:4359): PID: 5 - Ejecutando: EXIT
+[TRACE] 14:05:08:381 CPU/(4358:4359): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:05:08:381 CPU/(4358:4359): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:05:08:381 CPU/(4358:4359): Comenzar ejecucion del proceso: 5.
+[INFO] 14:05:08:381 CPU/(4358:4359): PID: 5 - Ejecutando: SIGNAL IMPRESORA
+[TRACE] 14:05:08:381 CPU/(4358:4359): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:05:08:381 CPU/(4358:4359): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:05:08:381 CPU/(4358:4359): Comenzar ejecucion del proceso: 5.
+[INFO] 14:05:08:381 CPU/(4358:4359): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 14:05:08:381 CPU/(4358:4359): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:05:08:381 CPU/(4358:4359): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:05:08:381 CPU/(4358:4359): Comenzar ejecucion del proceso: 5.
+[INFO] 14:05:08:381 CPU/(4358:4359): PID: 5 - Ejecutando: EXIT
+[TRACE] 14:05:08:381 CPU/(4358:4359): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 14:05:08:381 CPU/(4358:4359): Han llegado menos bytes que los enviados por Kernel
+[INFO] 14:05:08:381 CPU/(4358:4359): Comenzar ejecucion del proceso: 5.
