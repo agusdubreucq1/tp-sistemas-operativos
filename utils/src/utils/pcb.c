@@ -113,7 +113,7 @@ void print_segmento(t_list* tabla_segmentos){
 		t_segmento* segmento = list_get(tabla_segmentos, i);
 		printf("Segmento:\n");
 		printf("Id = %d\n", segmento->id);
-		printf("Direccion = %d\n", segmento->direccio_base);
+		printf("Direccion = %d\n", segmento->direccion_base);
 		printf("Tamanio = %d\n", segmento->tamanio_segmento);
 	}
 

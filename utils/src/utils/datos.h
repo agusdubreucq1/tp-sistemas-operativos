@@ -60,9 +60,9 @@ typedef struct registros_cpu{
 // ------------------------------------------------------------------------------------------
 
 typedef struct segmento{
-	uint32_t id;
-	uint32_t direccio_base;
-	uint32_t tamanio_segmento;
+	int id;
+	int direccion_base;
+	int tamanio_segmento;
 } t_segmento;
 
 

@@ -26,6 +26,9 @@ int main(void) {
 	server_memoria = iniciar_servidor(IP_SERVER, puerto_escucha, memoria_logger);
 	log_info(memoria_logger, "Servidor listo para recibir al cliente");
 
+	memoria_fisica = reservar_espacio_memoria();
+	printf("\nEspacio de memoria reservado: %lu Bytes\nDireccion de memoria: %p\n", sizeof(memoria_fisica), memoria_fisica);
+
 	sem_init(&semaforo_conexiones, 0, 0);
 	//sem_wait(&semaforo_conexiones);
 	//sem_wait(&semaforo_conexiones);
@@ -117,7 +120,11 @@ void crear_estructuras(){
 	sem_wait(&semaforo_conexiones);
 	sem_wait(&semaforo_conexiones);
 
-	//ACA ARMAMOS LAS ESTRUCTURAS
+	memoria_fisica = reservar_espacio_memoria();
+	printf("\nEspacio de memoria reservado: %lu Bytes\nDireccion de memoria: %p\n", sizeof(memoria_fisica), memoria_fisica);
+	tabla_segmentos = list_create();
+	segmento_cero = crear_segmento(0, 0, atoi(tam_segmento_0));
+	list_add(tabla_segmentos, segmento_cero);
 
 }
 
@@ -128,5 +135,18 @@ void cerrar_conexiones(){
 	//close(socket_Kernel);
 	printf("cerre conexiones");
 	exit(1);
+}
+
+t_segmento* crear_segmento(int id, int base, int tamanio){
+
+	t_segmento* segmento = malloc(sizeof(t_segmento)); //recordar hacer el free
+	segmento->id = id;
+	segmento->direccion_base = base;
+	segmento->tamanio_segmento = tamanio;
+
+	printf("\nSegmento Cero Creado!\n");
+	printf("PID: %d , BASE: %d , TAMANIO: %d\n\n", segmento->id, segmento->direccion_base, segmento->tamanio_segmento);
+
+	return segmento;
 }
 
