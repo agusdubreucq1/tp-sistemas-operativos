@@ -10,7 +10,7 @@ int main(void){
 		exit(1);
 	}
 
-	cpu_config = iniciar_config("../../config/Prueba_Deadlock/CPU.config", "CPU");
+	cpu_config = iniciar_config("../../config/CPU.config", "CPU");
 
 	if (cpu_config == NULL){
 		exit(2);
@@ -62,7 +62,6 @@ void* abrirSocketKernel(){
 		while(1){
 			recibir_mensaje_kernel();
 			comenzar_ciclo_instruccion(contexto_de_ejecucion);
-
 		}
 
 	return "";
@@ -89,21 +88,12 @@ void recibir_mensaje_kernel(){
 			void* buffer;
 			int* tam_recibido= malloc(sizeof(int));
 			buffer = recibir_buffer(&size, socket_Kernel);
-			//printf("\n recibi buffer \n");
 
 			contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
 
 			*tam_recibido+=2*sizeof(int);
-			//printf("\n tamanio recibido: %d\n", *tam_recibido);
-			//printf("puntero: %p\n", tam_recibido);
-
 			send(socket_Kernel, tam_recibido, sizeof(int), 0);
-			//int var_send_ = send(socket_Kernel, tam_recibido, sizeof(int), 0);
-			//printf("var_send: %d\n", var_send_);
-
 			log_trace(cpu_logger, "Recibi contexto de ejecucion - PID: %d", contexto_de_ejecucion->pid);
-			//printf("\n recibi contexto:\n");
-			//print_contexto(contexto_de_ejecucion);
 	}
 }
 

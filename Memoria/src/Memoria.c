@@ -14,7 +14,7 @@ int main(void) {
 		exit(1);
 	}
 
-	memoria_config = iniciar_config("../../config/Prueba_Deadlock/Memoria.config", "Memoria");
+	memoria_config = iniciar_config("../../config/Memoria.config", "Memoria");
 
 	if (memoria_config == NULL){
 		exit(2);

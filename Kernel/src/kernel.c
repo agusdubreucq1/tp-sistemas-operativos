@@ -5,13 +5,13 @@ int main(void){
 
 	//signal(SIGINT, cerrar_conexiones);
 
-	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
+	kernel_logger = iniciar_logger("./../logs/logKernel.log", "Kernel");
 
 	if (kernel_logger == NULL){
 		exit(1);
 	}
 
-	kernel_config = iniciar_config("../../config/Prueba_Deadlock/Kernel.config", "Kernel");
+	kernel_config = iniciar_config("./../config/Kernel.config", "Kernel");
 
 	if (kernel_config == NULL){
 		exit(2);
@@ -272,7 +272,6 @@ void recibir_mensaje_cpu(){
 			*tam_recibido+=2*sizeof(int);
 			send(socket_cpu, tam_recibido, sizeof(int), 0);
 
-			recibi_instruccion = 0;
 	}
 }
 
@@ -450,5 +449,4 @@ void imprimirSemaforos(){
 	sem_getvalue(&cantidad_procesos_ready, &semaphoreValue);
 	printf("Semaforo Ready %d \n\n\n\n", semaphoreValue);
 }
-
 

@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <commons/collections/list.h>
 #include <commons/log.h>
+#include <commons/string.h>
 #include <utils/datos.h>
 #include <utils/pcb.h>
 #include <pthread.h>
@@ -23,6 +24,7 @@
 // ------------------------------------------------------------------------------------------
 
 	extern t_log* kernel_logger;
+	extern char* algoritmo_planificacion;
 
 // ------------------------------------------------------------------------------------------
 // -- Estructuras Planificacion --
