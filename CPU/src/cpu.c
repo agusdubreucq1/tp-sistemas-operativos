@@ -10,7 +10,7 @@ int main(void){
 		exit(1);
 	}
 
-	cpu_config = iniciar_config("../../config/Prueba_Deadlock/CPU.config", "CPU");
+	cpu_config = iniciar_config("../../config/CPU.config", "CPU");
 
 	if (cpu_config == NULL){
 		exit(2);
