@@ -13,6 +13,7 @@
 #include <utils/recurso.h>
 #include <semaphore.h>
 #include "planificador_largo_plazo.h"
+#include <commons/string.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Estructuras Planificacion --
@@ -28,7 +29,7 @@
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
 
-	int recurso_existe(char nombre[20]);
+	int recurso_existe(char* nombre);
 	void descontar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger);
 	void sumar_recurso(t_recurso* recurso, int pid, t_log* logger);
 
