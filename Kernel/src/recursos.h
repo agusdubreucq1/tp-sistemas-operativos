@@ -13,6 +13,7 @@
 #include <utils/recurso.h>
 #include <semaphore.h>
 #include "planificador_largo_plazo.h"
+#include <commons/string.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Estructuras Planificacion --

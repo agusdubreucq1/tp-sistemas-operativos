@@ -148,6 +148,8 @@ void planificarLargoPlazo(){
 		struct timeval tiempo;
 		gettimeofday(&tiempo, NULL);
 		pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
+		//pcb->tiempo_ready = tiempo.tv_sec * 1000000 + tiempo.tv_usec;
+		//pcb->tiempo_ready = tiempo.tv_sec;
 
 		//mandar a memoria el proceso para iniciar estructuras
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
@@ -216,12 +218,20 @@ t_pcb* pcb_elegido_HRRN(){
 		t_pcb* pcb = list_get(lista_ready, i);
 		gettimeofday(&hora_actual, NULL);
 		int tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000) - pcb->tiempo_ready;
+		//int tiempo = (hora_actual.tv_sec * 1000000 + hora_actual.tv_usec) - pcb->tiempo_ready;
+		//int tiempo = (hora_actual.tv_sec + hora_actual.tv_sec) - pcb->tiempo_ready;
 
 		float ratio = ((float) (pcb->estimado_rafaga + tiempo)) / (float) pcb->estimado_rafaga;
 		if (ratio > ratio_mayor){
 			ratio_mayor = ratio;
 			tcb_index = i;
 		}
+
+		printf("\nPCB %d", pcb->pid);
+		printf("\nTiempo %d", tiempo);
+		printf("\nEstimado %d", pcb->estimado_rafaga);
+		printf("\nRatio %f\n", ratio);
+
 	}
 	pcb = list_remove(lista_ready, tcb_index);
 	return pcb;
@@ -275,6 +285,9 @@ void ejecutar_segun_motivo(char* motivo){
 		estimar_rafaga(pcb_a_ejecutar);
 		char** parametros = string_split(motivo, " ");
 		existeRecurso = recurso_existe(parametros[1]);
+
+		printf("\nRecurso: %s\n", parametros[1]);
+		printf("\nExiste: %d\n", existeRecurso);
 
 		if (existeRecurso == -1){
 			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb_a_ejecutar->pid, parametros[1]);
@@ -411,7 +424,9 @@ void estimar_rafaga(t_pcb* pcb){
 	uint32_t estimado_viejo = pcb->estimado_rafaga;
 	struct timeval tiempo;
 	gettimeofday(&tiempo, NULL);
-	pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
+	pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000; // milisec
+	//pcb->tiempo_ready = tiempo.tv_sec * 1000000 + tiempo.tv_usec; //micro
+	//pcb->tiempo_ready = tiempo.tv_sec; //seg
 	float alpha = 1 - hrrn_alfa;
 	pcb->estimado_rafaga = (alpha * estimado_viejo + hrrn_alfa * (pcb->tiempo_ready - tiempo_viejo));
 }
