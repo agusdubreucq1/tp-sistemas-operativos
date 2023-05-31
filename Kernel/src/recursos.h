@@ -29,7 +29,7 @@
 // ------------------------------------------------------------------------------------------
 
 	int recurso_existe(char nombre[20]);
-	void descontar_recurso(t_recurso* recurso, t_pcb* pcb);
-	void sumar_recurso(t_recurso* recurso);
+	void descontar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger);
+	void sumar_recurso(t_recurso* recurso, int pid, t_log* logger);
 
 #endif /* RECURSOS_H_ */

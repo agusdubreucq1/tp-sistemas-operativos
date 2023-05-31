@@ -44,3 +44,17 @@ t_config* iniciar_config(char* config, char* nombre_modulo){
 void iterator(char* value) {
 	printf("%s", value);
 }
+
+// ------------------------------------------------------------------------------------------
+// -- Estados --
+// ------------------------------------------------------------------------------------------
+
+char* codigo_estado_string(estado_code codigo){
+	if(codigo == NEW) 				return "NEW";
+	if(codigo == READY) 			return "READY";
+	if(codigo == EXEC) 				return "EXEC";
+	if(codigo == BLOCKED) 			return "BLOCKED";
+	if(codigo == EXITT) 			return "EXIT";
+	else							return "ERROR";
+}
+

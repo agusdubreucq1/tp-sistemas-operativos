@@ -22,6 +22,7 @@
 #include <utils/deserializar.h>
 #include <sys/time.h>
 #include <utils/recurso.h>
+#include <utils/instruccion.h>
 
 
 #define IP_SERVER "127.0.0.1"
@@ -57,7 +58,7 @@
 	pthread_t conexionFileSystem;
 	pthread_t conexionCPU;
 	pthread_t conexionMemoria;
-	pthread_t io_procesos;
+	//pthread_t io_procesos;
 	int socket_modulo;
 	int server_kernel;
 	int socket_fileSystem;
@@ -77,6 +78,7 @@
 
 	int devolver_ejecucion;
 	t_pcb* pcb_ejecutando;
+	t_pcb* pcb_a_ejecutar;
 
 	sem_t semaforo_multiprogramacion;
 	sem_t cantidad_procesos_new;
@@ -88,6 +90,8 @@
 
 	struct timeval tiempo;
 	long long hora_inicio;
+	int existeRecurso;
+	int recibi_instruccion;
 
 
 // ------------------------------------------------------------------------------------------
@@ -100,14 +104,20 @@
 	void* recibirProcesos(int* conexion_p);
 	void init_estructuras_planificacion();
 	void planificarLargoPlazo();
-	void planificarCortoPlazoFIFO();
+	void planificarCortoPlazo();
 	void enviar_pcb(t_pcb* pcb);
 	void cerrar_conexiones();
+<<<<<<< HEAD
 	void recibir_mensaje_cpu(t_pcb* pcb);
 	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
+=======
+	void recibir_mensaje_cpu();
+	void ejecutar_segun_motivo(char* motivo);
+>>>>>>> Mariano
 	t_pcb* pcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
 	void ejecutar_io(t_thread_args* args);
+	void imprimirSemaforos();
 
 
 

@@ -31,25 +31,31 @@ int main(void){
 }
 
 void* abrirSocketKernel(){
-	while(1){
-		int socket_Kernel = esperar_cliente(server_fileSystem, fileSystem_logger);
 
-		uint32_t resultOk = 0;
-		uint32_t resultError = -1;
+	socket_Kernel = esperar_cliente(server_fileSystem, fileSystem_logger);
 
-		recv(socket_Kernel, &respuesta, sizeof(uint32_t), MSG_WAITALL);
-		if(respuesta == 1)
-		   send(socket_Kernel, &resultOk, sizeof(uint32_t), 0);
-		else
-		   send(socket_Kernel, &resultError, sizeof(uint32_t), 0);
 
-		int cod_op = recibir_operacion(socket_Kernel);
-		switch (cod_op) {
-		case MENSAJE:
-			recibir_mensaje(socket_Kernel, fileSystem_logger);
-			break;
-		}
+	uint32_t resultOk = 0;
+	uint32_t resultError = -1;
+
+	recv(socket_Kernel, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+	if(respuesta == 1)
+	   send(socket_Kernel, &resultOk, sizeof(uint32_t), 0);
+	else
+	   send(socket_Kernel, &resultError, sizeof(uint32_t), 0);
+
+	int cod_op = recibir_operacion(socket_Kernel);
+	switch (cod_op) {
+	case MENSAJE:
+		recibir_mensaje(socket_Kernel, fileSystem_logger);
+		break;
 	}
+
+	while(1){
+		recibir_mensaje_kernel();
+	}
+
+
 	return "";
 }
 
@@ -57,8 +63,17 @@ void* conectarMemoria(){
 	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, fileSystem_logger, "Memoria");
 	handshake(socket_memoria, 1, fileSystem_logger, "Memoria");
 
-	enviar_mensaje("Soy el FileSystem", socket_memoria);
+	enviar_mensaje("Conectado al FileSystem", socket_memoria);
 	return "";
 }
 
-
+void recibir_mensaje_kernel(){
+	int cod_op;
+	cod_op = recibir_operacion(socket_Kernel);
+	switch (cod_op) {
+		case MENSAJE:
+			recibir_instruccion(socket_Kernel, fileSystem_logger);
+			break;
+		default: break;
+	}
+}

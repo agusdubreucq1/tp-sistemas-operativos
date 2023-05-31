@@ -18,10 +18,10 @@ t_contexto_ejecucion* deserializar_pcb(void* stream,int* bytes_recibidos){
 	contexto_deserializado->program_counter = deserializar_uint32(stream, &desplazamiento);
 
 	contexto_deserializado->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
-	print_registos(contexto_deserializado->registros_cpu);
+	//print_registos(contexto_deserializado->registros_cpu);
 
 	contexto_deserializado->tabla_segmentos = deserializar_tabla_segmentos(stream, &desplazamiento);
-	print_segmento(contexto_deserializado->tabla_segmentos);
+	//print_segmento(contexto_deserializado->tabla_segmentos);
 
 	*bytes_recibidos = desplazamiento;
 

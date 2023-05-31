@@ -32,6 +32,7 @@
 // ------------------------------------------------------------------------------------------
 
 	extern int socket_Kernel;
+	extern int socket_memoria;;
 
 
 // ------------------------------------------------------------------------------------------
@@ -40,7 +41,10 @@
 
 	void comenzar_ciclo_instruccion();
 	t_instruccion* fetch_instruccion();
-	int ejecutar_instruccion(t_instruccion* instruccion);
+	int ejecutar_instruccion(t_instruccion*);
 	void enviarContexto(char*);
+	char* concatenar_mensaje_con_3_parametros(char mensaje[30], t_instruccion* instruccion);
+	char* concatenar_mensaje_con_2_parametros(char mensaje[30], t_instruccion* instruccion);
+	char* concatenar_mensaje_con_1_parametro(char mensaje[30], t_instruccion* instruccion);
 
 #endif /* CICLO_DE_INSTRUCCION_H_ */

@@ -2,6 +2,7 @@
 #define MEMORIA_H_
 
 #include "config.h"
+#include "espacio_de_memoria.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -48,6 +49,14 @@
 	sem_t semaforo_conexiones;
 
 // ------------------------------------------------------------------------------------------
+// -- Variables del proceso --
+// ------------------------------------------------------------------------------------------
+
+	t_list* tabla_segmentos;
+	t_segmento* segmento_cero;
+	void* memoria_fisica;
+
+// ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
@@ -57,5 +66,6 @@
 	int abrir_socket();
 	void cerrar_conexiones();
 	void crear_estructuras();
+	t_segmento* crear_segmento(int, int, int);
 
 #endif

@@ -139,18 +139,20 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log* logger, char*
 	//printf("\n bytes : %d\n", bytes);
 	void* a_enviar = serializar_paquete(paquete, bytes);
 
-	int var_send = send(socket_cliente, a_enviar, bytes, 0);
+	send(socket_cliente, a_enviar, bytes, 0);
+	//int var_send = send(socket_cliente, a_enviar, bytes, 0);
 	//printf("\n send: %d", var_send);
 
-	log_info(logger,"Datos enviados, esperando respuesta de %s...", modulo);
+	log_trace(logger,"Datos enviados, esperando respuesta de %s...", modulo);
 
 	uint32_t respuesta;
-	int var_recv=recv(socket_cliente, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+	recv(socket_cliente, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+	//int var_recv=recv(socket_cliente, &respuesta, sizeof(uint32_t), MSG_WAITALL);
 	//printf("var_recv: %d\n", var_recv);
 	//printf("respuesta: %d\n", respuesta);
 
 	if(respuesta == bytes){
-		log_info(logger,"Datos enviados correctamente");
+		log_trace(logger,"Datos enviados correctamente");
 	}
 	else {
 		log_error(logger,"Han llegado menos bytes que los enviados por %s", modulo);
@@ -167,11 +169,9 @@ void eliminar_paquete(t_paquete* paquete)
 	free(paquete);
 }
 
-void liberar_conexion(int socket_cliente)
+void liberar_conexion(int socket_cliente, t_log* logger)
 {
+	log_trace(logger, "Cerre conexion %d", socket_cliente);
 	close(socket_cliente);
-	printf("Cerre conexion %d", socket_cliente);
 }
-
-
 

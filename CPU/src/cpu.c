@@ -62,6 +62,10 @@ void* abrirSocketKernel(){
 		while(1){
 			recibir_mensaje_kernel();
 			comenzar_ciclo_instruccion(contexto_de_ejecucion);
+<<<<<<< HEAD
+=======
+
+>>>>>>> Mariano
 		}
 
 	return "";
@@ -71,7 +75,7 @@ void* conectarMemoria(){
 	socket_memoria = crear_conexion(ip_memoria, puerto_memoria, cpu_logger, "Memoria");
 	handshake(socket_memoria, 1, cpu_logger, "Memoria");
 
-	enviar_mensaje("Soy el CPU", socket_memoria);
+	enviar_mensaje("Conectado al CPU", socket_memoria);
 	return "";
 }
 
@@ -79,34 +83,36 @@ void* conectarMemoria(){
 void recibir_mensaje_kernel(){
 	int cod_op;
 	cod_op = recibir_operacion(socket_Kernel);
-	printf("\n cod_op: %d \n", cod_op);
 	switch (cod_op) {
 		case MENSAJE:
-			recibir_mensaje(socket_Kernel, cpu_logger);
+			recibir_instruccion(socket_Kernel, cpu_logger);
 			break;
 		case PAQUETE:
 			int size;
 			void* buffer;
 			int* tam_recibido= malloc(sizeof(int));
 			buffer = recibir_buffer(&size, socket_Kernel);
-			printf("\n recibi buffer \n");
+			//printf("\n recibi buffer \n");
 
 			contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
 
 			*tam_recibido+=2*sizeof(int);
-			printf("\n tamanio recibido: %d\n", *tam_recibido);
+			//printf("\n tamanio recibido: %d\n", *tam_recibido);
 			//printf("puntero: %p\n", tam_recibido);
-			int var_send_ = send(socket_Kernel, tam_recibido, sizeof(int), 0);
+
+			send(socket_Kernel, tam_recibido, sizeof(int), 0);
+			//int var_send_ = send(socket_Kernel, tam_recibido, sizeof(int), 0);
 			//printf("var_send: %d\n", var_send_);
 
-			printf("\n recibi contexto:\n");
+			log_trace(cpu_logger, "Recibi contexto de ejecucion - PID: %d", contexto_de_ejecucion->pid);
+			//printf("\n recibi contexto:\n");
 			//print_contexto(contexto_de_ejecucion);
 	}
 }
 
 
 void cerrar_conexiones(){
-	printf("\ncerrando conexiones\n");
+	//printf("\ncerrando conexiones\n");
 
 	close(server_cpu);
 	//close(socket_Kernel);
