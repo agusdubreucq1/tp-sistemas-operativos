@@ -107,13 +107,8 @@
 	void planificarCortoPlazo();
 	void enviar_pcb(t_pcb* pcb);
 	void cerrar_conexiones();
-<<<<<<< HEAD
-	void recibir_mensaje_cpu(t_pcb* pcb);
-	void ejecutar_segun_motivo(char* motivo, t_pcb* pcb);
-=======
 	void recibir_mensaje_cpu();
 	void ejecutar_segun_motivo(char* motivo);
->>>>>>> Mariano
 	t_pcb* pcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
 	void ejecutar_io(t_thread_args* args);

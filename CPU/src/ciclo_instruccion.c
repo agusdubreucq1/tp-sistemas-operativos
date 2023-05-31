@@ -208,15 +208,7 @@ void enviarContexto(char* motivo){
 	paquete = serializar_contexto(contexto_de_ejecucion);
 	agregar_a_paquete(paquete, motivo, strlen(motivo)+1);
 
-	//int tamanio_contexto;
-	//memcpy(&tamanio_contexto, paquete->buffer->stream, sizeof(int));
-	//printf("\n Contexto enviado:\n\n");
-	//printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
-	//printf("\EL VALOR ES: %s\n", motivo);
-
 	enviar_paquete(paquete, socket_Kernel, cpu_logger, "Kernel");
-<<<<<<< HEAD
-=======
 }
 char* concatenar_mensaje_con_3_parametros(char mensaje[30], t_instruccion* instruccion){
 	strcat(mensaje, instruccion->parametro[0]);
@@ -235,6 +227,5 @@ char* concatenar_mensaje_con_2_parametros(char mensaje[30], t_instruccion* instr
 char* concatenar_mensaje_con_1_parametro(char mensaje[30], t_instruccion* instruccion){
 	strcat(mensaje, instruccion->parametro[0]);
 	return mensaje;
->>>>>>> Mariano
 }
 

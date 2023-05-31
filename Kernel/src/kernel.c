@@ -275,54 +275,6 @@ void recibir_mensaje_cpu(){
 	}
 }
 
-void ejecutar_segun_motivo(char* motivo, t_pcb* pcb){
-
-	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(string_split(motivo, " ")[0]);
-	char** parametros = string_split(motivo, " ");
-	int existe;
-
-	switch(cod_instruccion) {
-	case YIELD:
-		estimar_rafaga(pcb);
-		printf("ejecutando yield");
-		sem_wait(&semaforo_multiprogramacion);
-		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, READY);
-		sem_post(&cantidad_procesos_ready);
-		break;
-
-	case EXIT:
-		pcb->estado = EXITT;
-		printf("ejecutando exit");
-		enviar_mensaje("-1", pcb->pid);
-		liberar_conexion(pcb->pid);
-		break;
-
-	case WAIT:
-		estimar_rafaga(pcb);
-		printf("ejecutando %s", motivo);
-		existe = recurso_existe(parametros[1]);
-
-		if (existe == -1){
-			log_error(kernel_logger, "EL recurso %s no existe, se cerrar el proceso PID: %d", parametros[1], pcb->pid);
-			pcb->estado = EXITT;
-			enviar_mensaje("-1", pcb->pid);
-			liberar_conexion(pcb->pid);
-		}
-		else {
-			descontar_recurso(list_get(lista_recursos, existe), pcb);
-			imprimir_recurso(list_get(lista_recursos, existe));
-		}
-
-		break;
-
-	case SIGNAL:
-		estimar_rafaga(pcb);
-		printf("ejecutando %s", motivo);
-		existe = recurso_existe(parametros[1]);
-		recibi_instruccion = 0;
-	}
-}
-
 void ejecutar_segun_motivo(char* motivo){
 
 	char** parametros = string_split(motivo, " ");
@@ -333,14 +285,9 @@ void ejecutar_segun_motivo(char* motivo){
 	case WAIT:
 		estimar_rafaga(pcb_a_ejecutar);
 		char** parametros = string_split(motivo, " ");
-		printf("parametro: %s", parametros[1]);
 		existeRecurso = recurso_existe(parametros[1]);
-
-		printf("\nRecurso: %s\n", parametros[1]);
-		printf("\nExiste: %d\n", existeRecurso);
-
 		if (existeRecurso == -1){
-			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb_a_ejecutar->pid, parametros[1]);
+			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: WAIT - %s ", pcb_a_ejecutar->pid, parametros[1]);
 			log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
 			pcb_a_ejecutar->estado = EXITT;
 			sem_post(&semaforo_multiprogramacion);
@@ -370,7 +317,7 @@ void ejecutar_segun_motivo(char* motivo){
 		existeRecurso = recurso_existe(parametros[1]);
 
 		if (existeRecurso == -1){
-			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb_a_ejecutar->pid, parametros[1]);
+			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SIGNAL - %s ", pcb_a_ejecutar->pid, parametros[1]);
 			pcb_a_ejecutar->estado = EXITT;
 			sem_post(&semaforo_multiprogramacion);
 			enviar_mensaje("-1", pcb_a_ejecutar->pid);
@@ -382,7 +329,6 @@ void ejecutar_segun_motivo(char* motivo){
 			sumar_recurso(list_get(lista_recursos, existeRecurso), pcb_ejecutando->pid, kernel_logger);
 		}
 		break;
-
 
 	case I_O:
 		estimar_rafaga(pcb_a_ejecutar);
