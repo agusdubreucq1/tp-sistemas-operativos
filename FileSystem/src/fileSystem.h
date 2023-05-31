@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <commons/string.h>
 #include <commons/log.h>
+#include <commons/bitarray.h>
 #include <utils/utils.h>
 #include <utils/servidor.h>
 #include <utils/cliente.h>
@@ -49,6 +50,9 @@
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();
 
+// ------------------------------------------------------------------------------------------
+// -- SUPER BLOQUE--
+// ------------------------------------------------------------------------------------------
 	typedef struct
 	{
 		int tamanio_bloque;
@@ -57,6 +61,11 @@
 
 	t_superBloque* levantar_superBloque(char*);
 
+// ------------------------------------------------------------------------------------------
+// -- BITMAP de BLOQUES--
+// ------------------------------------------------------------------------------------------
+	t_bitarray* bitmap;
 
+	void iniciar_bitmap(char*path, t_superBloque* superbloque);
 
 #endif /* FILESYSTEM_H_ */
