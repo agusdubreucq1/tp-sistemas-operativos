@@ -26,8 +26,6 @@ int main(void) {
 	server_memoria = iniciar_servidor(IP_SERVER, puerto_escucha, memoria_logger);
 	log_info(memoria_logger, "Servidor listo para recibir al cliente");
 
-	memoria_fisica = reservar_espacio_memoria();
-	printf("\nEspacio de memoria reservado: %lu Bytes\nDireccion de memoria: %p\n", sizeof(memoria_fisica), memoria_fisica);
 
 	sem_init(&semaforo_conexiones, 0, 0);
 	//sem_wait(&semaforo_conexiones);
@@ -121,6 +119,7 @@ void crear_estructuras(){
 	sem_wait(&semaforo_conexiones);
 
 	memoria_fisica = reservar_espacio_memoria();
+	printf("\nsizeof(void*): %lu\n", sizeof(void*));
 	printf("\nEspacio de memoria reservado: %lu Bytes\nDireccion de memoria: %p\n", sizeof(memoria_fisica), memoria_fisica);
 	tabla_segmentos = list_create();
 	segmento_cero = crear_segmento(0, 0, atoi(tam_segmento_0));

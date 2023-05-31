@@ -7961,3 +7961,48 @@
 [INFO] 02:32:28:001 Memoria/(155614:155614): ¡Memoria iniciado correctamente!
 [TRACE] 02:32:28:002 Memoria/(155614:155614): Listo para escuchar a mi cliente
 [INFO] 02:32:28:002 Memoria/(155614:155614): Servidor listo para recibir al cliente
+[INFO] 02:38:21:560 Memoria/(155851:155851): Logger creado
+[INFO] 02:38:21:560 Memoria/(155851:155851): -------Valores del config-------
+[INFO] 02:38:21:560 Memoria/(155851:155851): puerto_escucha = 8003
+[INFO] 02:38:21:560 Memoria/(155851:155851): tamaño memoria = 4096
+[INFO] 02:38:21:561 Memoria/(155851:155851): tamaño segmento = 128
+[INFO] 02:38:21:561 Memoria/(155851:155851): cantidad de segmentos = 16
+[INFO] 02:38:21:561 Memoria/(155851:155851): retardo memoria = 1000
+[INFO] 02:38:21:561 Memoria/(155851:155851): retardo compactacion = 60000
+[INFO] 02:38:21:561 Memoria/(155851:155851): algoritmo asignacion = BEST
+[INFO] 02:38:21:561 Memoria/(155851:155851): --------------------------------
+[INFO] 02:38:21:561 Memoria/(155851:155851): ¡Memoria iniciado correctamente!
+[TRACE] 02:38:21:561 Memoria/(155851:155851): Listo para escuchar a mi cliente
+[INFO] 02:38:21:562 Memoria/(155851:155851): Servidor listo para recibir al cliente
+[INFO] 02:38:40:941 Memoria/(155882:155882): Logger creado
+[INFO] 02:38:40:942 Memoria/(155882:155882): -------Valores del config-------
+[INFO] 02:38:40:942 Memoria/(155882:155882): puerto_escucha = 8003
+[INFO] 02:38:40:942 Memoria/(155882:155882): tamaño memoria = 4096
+[INFO] 02:38:40:942 Memoria/(155882:155882): tamaño segmento = 128
+[INFO] 02:38:40:943 Memoria/(155882:155882): cantidad de segmentos = 16
+[INFO] 02:38:40:943 Memoria/(155882:155882): retardo memoria = 1000
+[INFO] 02:38:40:943 Memoria/(155882:155882): retardo compactacion = 60000
+[INFO] 02:38:40:943 Memoria/(155882:155882): algoritmo asignacion = BEST
+[INFO] 02:38:40:943 Memoria/(155882:155882): --------------------------------
+[INFO] 02:38:40:943 Memoria/(155882:155882): ¡Memoria iniciado correctamente!
+[TRACE] 02:38:40:943 Memoria/(155882:155882): Listo para escuchar a mi cliente
+[INFO] 02:38:40:943 Memoria/(155882:155882): Servidor listo para recibir al cliente
+[INFO] 02:39:51:158 Memoria/(155986:155986): Logger creado
+[INFO] 02:39:51:161 Memoria/(155986:155986): -------Valores del config-------
+[INFO] 02:39:51:161 Memoria/(155986:155986): puerto_escucha = 8003
+[INFO] 02:39:51:161 Memoria/(155986:155986): tamaño memoria = 4096
+[INFO] 02:39:51:162 Memoria/(155986:155986): tamaño segmento = 128
+[INFO] 02:39:51:162 Memoria/(155986:155986): cantidad de segmentos = 16
+[INFO] 02:39:51:163 Memoria/(155986:155986): retardo memoria = 1000
+[INFO] 02:39:51:163 Memoria/(155986:155986): retardo compactacion = 60000
+[INFO] 02:39:51:163 Memoria/(155986:155986): algoritmo asignacion = BEST
+[INFO] 02:39:51:164 Memoria/(155986:155986): --------------------------------
+[INFO] 02:39:51:164 Memoria/(155986:155986): ¡Memoria iniciado correctamente!
+[TRACE] 02:39:51:164 Memoria/(155986:155986): Listo para escuchar a mi cliente
+[INFO] 02:39:51:164 Memoria/(155986:155986): Servidor listo para recibir al cliente
+[INFO] 02:39:52:687 Memoria/(155986:155990): Se conecto un cliente!
+[TRACE] 02:39:52:689 Memoria/(155986:155990): Recibi Instruccion: Conectado al FileSystem
+[INFO] 02:39:53:973 Memoria/(155986:155989): Se conecto un cliente!
+[TRACE] 02:39:53:974 Memoria/(155986:155989): Recibi Instruccion: Conectado al CPU
+[INFO] 02:39:55:386 Memoria/(155986:155988): Se conecto un cliente!
+[TRACE] 02:39:55:391 Memoria/(155986:155988): Recibi Instruccion: Conectado al Kernel

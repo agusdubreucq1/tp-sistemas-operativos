@@ -20146,3 +20146,17 @@
 [TRACE] 02:30:14:123 CPU/(155366:155366): Listo para escuchar a mi cliente
 [INFO] 02:30:14:123 CPU/(155366:155366): Servidor listo para recibir al cliente
 [INFO] 02:30:14:125 CPU/(155366:155368): Conexion establecida con Memoria
+[INFO] 02:39:53:968 CPU/(155994:155994): Logger creado
+[INFO] 02:39:53:969 CPU/(155994:155994): -------Valores del config-------
+[INFO] 02:39:53:969 CPU/(155994:155994): Retardo Instrucción = 1000
+[INFO] 02:39:53:969 CPU/(155994:155994): IP Memoria = 127.0.0.1
+[INFO] 02:39:53:969 CPU/(155994:155994): Puerto Memoria = 8003
+[INFO] 02:39:53:971 CPU/(155994:155994): Puerto Escucha = 8001
+[INFO] 02:39:53:972 CPU/(155994:155994): Tamanio maximo de segmentos = (null)
+[INFO] 02:39:53:972 CPU/(155994:155994): --------------------------------
+[INFO] 02:39:53:972 CPU/(155994:155994): ¡CPU iniciado correctamente!
+[TRACE] 02:39:53:972 CPU/(155994:155994): Listo para escuchar a mi cliente
+[INFO] 02:39:53:972 CPU/(155994:155994): Servidor listo para recibir al cliente
+[INFO] 02:39:53:974 CPU/(155994:155996): Conexion establecida con Memoria
+[INFO] 02:39:55:390 CPU/(155994:155995): Se conecto un cliente!
+[INFO] 02:39:55:391 CPU/(155994:155995): Me llego el mensaje: Conectado al Kernel
