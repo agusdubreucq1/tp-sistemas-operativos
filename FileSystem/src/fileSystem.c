@@ -9,7 +9,7 @@ int main(void){
 		exit(1);
 	}
 
-	fileSystem_config = iniciar_config("../../config/Nuestra_config/FileSystem.config", "FileSystem");
+	fileSystem_config = iniciar_config("../../config/FileSystem.config", "FileSystem");
 
 	if (fileSystem_config == NULL){
 		exit(2);
@@ -26,8 +26,8 @@ int main(void){
 	t_superBloque* superbloque = levantar_superBloque(path_superbloque); //revisar si le esta llegando bien el path...
 
 
-    printf("Tamaño del bloque: %d\n", superbloque->tamanio_bloque);
-    printf("Cantidad de bloques: %d\n", superbloque->cant_bloques);
+    printf("Tamaño del bloque: %d\n", superbloque->tamanio_bloque); //En el enunciado tiene que tener valor de 64
+    printf("Cantidad de bloques: %d\n", superbloque->cant_bloques); //En el enunciado tiene que tener valor de 65536
 
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
