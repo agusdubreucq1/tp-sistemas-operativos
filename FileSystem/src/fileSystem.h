@@ -49,4 +49,14 @@
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();
 
+	typedef struct
+	{
+		int tamanio_bloque;
+		int cant_bloques;
+	}t_superBloque;
+
+	t_superBloque* levantar_superBloque(char*);
+
+
+
 #endif /* FILESYSTEM_H_ */

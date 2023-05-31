@@ -9,7 +9,7 @@ int main(void){
 		exit(1);
 	}
 
-	fileSystem_config = iniciar_config("../../config/FileSystem.config", "FileSystem");
+	fileSystem_config = iniciar_config("../../config/Nuestra_config/FileSystem.config", "FileSystem");
 
 	if (fileSystem_config == NULL){
 		exit(2);
@@ -20,6 +20,14 @@ int main(void){
 
 	server_fileSystem = iniciar_servidor(IP_SERVER, puerto_escucha, fileSystem_logger);
 	log_info(fileSystem_logger, "Servidor listo para recibir al cliente");
+
+    printf("El path de superbloque es: %s\n",path_superbloque);
+
+	t_superBloque* superbloque = levantar_superBloque(path_superbloque); //revisar si le esta llegando bien el path...
+
+
+    printf("Tamaño del bloque: %d\n", superbloque->tamanio_bloque);
+    printf("Cantidad de bloques: %d\n", superbloque->cant_bloques);
 
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
@@ -76,4 +84,13 @@ void recibir_mensaje_kernel(){
 			break;
 		default: break;
 	}
+}
+
+t_superBloque* levantar_superBloque(char* path){
+	t_config* configSuperBloque = config_create(path);
+	t_superBloque* superbloque = malloc(sizeof(t_superBloque));
+	superbloque->tamanio_bloque = config_get_int_value(configSuperBloque, "BLOCK_SIZE");
+	superbloque->cant_bloques = config_get_int_value(configSuperBloque, "BLOCK_COUNT");
+	config_destroy(configSuperBloque);
+	return superbloque;
 }
