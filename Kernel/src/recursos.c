@@ -7,20 +7,11 @@
 
 #include "recursos.h"
 
-int recurso_existe(char nombre[20]){
+int recurso_existe(char* nombre){
     int recurso_existe = -1;
-
-
-
     for (int i = 0; i < list_size(lista_recursos); i++) {
     	t_recurso* recurso = list_get(lista_recursos, i);
-
-    	printf("\nRecurso Param %s\n", nombre);
-    	printf("\nRecurso Lista %s\n", recurso->nombre);
-    	printf("\nComparar %d\n", string_starts_with(recurso->nombre, nombre));
-
-        if (string_starts_with(recurso->nombre, nombre)) {
-        	printf("AASASASASA");
+        if (string_starts_with(nombre, recurso->nombre)) {
         	recurso_existe = true;
         	return i;
         }

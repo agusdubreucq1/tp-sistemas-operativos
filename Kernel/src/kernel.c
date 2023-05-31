@@ -11,7 +11,7 @@ int main(void){
 		exit(1);
 	}
 
-	kernel_config = iniciar_config("../../config/Kernel.config", "Kernel");
+	kernel_config = iniciar_config("../../config/Prueba_Deadlock/Kernel.config", "Kernel");
 
 	if (kernel_config == NULL){
 		exit(2);
@@ -116,7 +116,9 @@ void init_estructuras_planificacion(){
     int i = 0;
 	char** ptr = recursos;
 	for (char* c = *ptr; c; c=*++ptr) {
-		char str[20] = "";
+		/*char str[20] = "";
+		strcat(str, c);*/
+		char* str = string_new();
 		strcat(str, c);
 		uint32_t cantidad = atoi(instancias_recursos[i]);
 		t_recurso* recurso = crear_recurso(str,cantidad);
@@ -285,12 +287,8 @@ void ejecutar_segun_motivo(char* motivo){
 		estimar_rafaga(pcb_a_ejecutar);
 		char** parametros = string_split(motivo, " ");
 		existeRecurso = recurso_existe(parametros[1]);
-
-		printf("\nRecurso: %s\n", parametros[1]);
-		printf("\nExiste: %d\n", existeRecurso);
-
 		if (existeRecurso == -1){
-			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb_a_ejecutar->pid, parametros[1]);
+			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: WAIT - %s ", pcb_a_ejecutar->pid, parametros[1]);
 			log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
 			pcb_a_ejecutar->estado = EXITT;
 			sem_post(&semaforo_multiprogramacion);
@@ -320,7 +318,7 @@ void ejecutar_segun_motivo(char* motivo){
 		existeRecurso = recurso_existe(parametros[1]);
 
 		if (existeRecurso == -1){
-			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb_a_ejecutar->pid, parametros[1]);
+			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SIGNAL - %s ", pcb_a_ejecutar->pid, parametros[1]);
 			pcb_a_ejecutar->estado = EXITT;
 			sem_post(&semaforo_multiprogramacion);
 			enviar_mensaje("-1", pcb_a_ejecutar->pid);
@@ -414,6 +412,9 @@ void ejecutar_segun_motivo(char* motivo){
 
 void ejecutar_io(t_thread_args* args){
 	sleep(args->duracion);
+	struct timeval tiempo;
+	gettimeofday(&tiempo, NULL);
+	args->pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
 	ingresar_en_lista(args->pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 	free(args);
 	pthread_exit(0);

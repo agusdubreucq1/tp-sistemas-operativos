@@ -9,7 +9,7 @@ int main(void){
 		exit(1);
 	}
 
-	fileSystem_config = iniciar_config("../../config/FileSystem.config", "FileSystem");
+	fileSystem_config = iniciar_config("../../config/Prueba_Deadlock/FileSystem.config", "FileSystem");
 
 	if (fileSystem_config == NULL){
 		exit(2);
