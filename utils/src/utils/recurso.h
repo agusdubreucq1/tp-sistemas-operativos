@@ -12,12 +12,13 @@
 #include "datos.h"
 #include <commons/collections/list.h>
 #include <string.h>
+#include <commons/string.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
 
-	t_recurso* crear_recurso(char nombre[20], int cantidad);
+	t_recurso* crear_recurso(char* nombre, int cantidad);
 	void imprimir_recurso(t_recurso* recurso);
 
 #endif /* UTILS_RECURSO_H_ */

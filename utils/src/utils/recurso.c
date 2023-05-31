@@ -7,9 +7,10 @@
 
 #include "recurso.h"
 
-t_recurso* crear_recurso(char nombre[20], int cantidad){
+t_recurso* crear_recurso(char* nombre, int cantidad){
 	t_recurso* recurso = malloc(sizeof(t_recurso));
-	strcpy(recurso->nombre,nombre);
+	recurso->nombre = string_new();
+	strcat(recurso->nombre,nombre);
 	recurso->cantidad = cantidad;
 	recurso->listaBloqueados = list_create();
 
