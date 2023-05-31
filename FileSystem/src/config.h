@@ -18,8 +18,8 @@
 // ------------------------------------------------------------------------------------------
 
 	extern char *ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
-	extern char *path_bitmap, *path_bloques, *path_fcb, *retardo_acceso_bloque;
-
+	extern char *path_bitmap, *path_bloques, *path_fcb;
+	extern u_int32_t retardo_acceso_bloque;
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------

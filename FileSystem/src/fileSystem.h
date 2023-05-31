@@ -27,7 +27,8 @@
 
 	t_config* fileSystem_config;
 	char *ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
-	char *path_bitmap, *path_bloques, *path_fcb, *retardo_acceso_bloque;
+	char *path_bitmap, *path_bloques, *path_fcb;
+	u_int32_t retardo_acceso_bloque;
 
 // ------------------------------------------------------------------------------------------
 // -- Socket del proceso --
