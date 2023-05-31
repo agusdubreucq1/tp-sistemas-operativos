@@ -19851,3 +19851,2234 @@
 [TRACE] 21:47:57:570 CPU/(3977:3978): Datos enviados, esperando respuesta de Kernel...
 [ERROR] 21:47:57:570 CPU/(3977:3978): Han llegado menos bytes que los enviados por Kernel
 [INFO] 21:47:57:570 CPU/(3977:3978): Comenzar ejecucion del proceso: 5.
+[INFO] 02:06:40:282 CPU/(3075:3075): Logger creado
+[INFO] 02:06:40:283 CPU/(3075:3075): -------Valores del config-------
+[INFO] 02:06:40:283 CPU/(3075:3075): Retardo Instrucción = 1000
+[INFO] 02:06:40:283 CPU/(3075:3075): IP Memoria = 127.0.0.1
+[INFO] 02:06:40:283 CPU/(3075:3075): Puerto Memoria = 8003
+[INFO] 02:06:40:283 CPU/(3075:3075): Puerto Escucha = 8001
+[INFO] 02:06:40:283 CPU/(3075:3075): Tamanio maximo de segmentos = (null)
+[INFO] 02:06:40:283 CPU/(3075:3075): --------------------------------
+[INFO] 02:06:40:283 CPU/(3075:3075): ¡CPU iniciado correctamente!
+[TRACE] 02:06:40:283 CPU/(3075:3075): Listo para escuchar a mi cliente
+[INFO] 02:06:40:283 CPU/(3075:3075): Servidor listo para recibir al cliente
+[INFO] 02:06:40:283 CPU/(3075:3077): Conexion establecida con Memoria
+[INFO] 02:06:41:462 CPU/(3075:3076): Se conecto un cliente!
+[INFO] 02:06:41:462 CPU/(3075:3076): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:06:54:122 CPU/(3075:3076): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:06:54:122 CPU/(3075:3076): Comenzar ejecucion del proceso: 5.
+[INFO] 02:06:54:122 CPU/(3075:3076): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:06:54:124 CPU/(3075:3076): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:06:54:124 CPU/(3075:3076): PID: 5 - Accion: Escribir 
+[INFO] 02:06:54:124 CPU/(3075:3076): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:06:54:124 CPU/(3075:3076): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:06:54:163 CPU/(3075:3076): Datos enviados correctamente
+[TRACE] 02:06:54:208 CPU/(3075:3076): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:06:54:208 CPU/(3075:3076): Comenzar ejecucion del proceso: 5.
+[INFO] 02:06:54:208 CPU/(3075:3076): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:06:54:208 CPU/(3075:3076): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:06:54:252 CPU/(3075:3076): Datos enviados correctamente
+[INFO] 02:06:54:451 CPU/(3075:3076): Comenzar ejecucion del proceso: 5.
+[INFO] 02:06:54:451 CPU/(3075:3076): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:06:54:451 CPU/(3075:3076): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:06:54:451 CPU/(3075:3076): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:06:54:451 CPU/(3075:3076): Comenzar ejecucion del proceso: 5.
+[INFO] 02:06:54:451 CPU/(3075:3076): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:06:54:451 CPU/(3075:3076): PID: 5 - Accion: Leer 
+[INFO] 02:06:54:451 CPU/(3075:3076): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:06:54:451 CPU/(3075:3076): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:06:54:451 CPU/(3075:3076): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:06:54:451 CPU/(3075:3076): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:06:54:451 CPU/(3075:3076): Comenzar ejecucion del proceso: 5.
+[INFO] 02:06:54:451 CPU/(3075:3076): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:06:54:451 CPU/(3075:3076): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:06:54:452 CPU/(3075:3076): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:06:54:452 CPU/(3075:3076): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:06:54:452 CPU/(3075:3076): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:06:54:452 CPU/(3075:3076): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:06:54:452 CPU/(3075:3076): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:06:54:452 CPU/(3075:3076): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:06:54:452 CPU/(3075:3076): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:06:54:452 CPU/(3075:3076): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:06:54:452 CPU/(3075:3076): Comenzar ejecucion del proceso: 5.
+[INFO] 02:10:38:585 CPU/(3498:3498): Logger creado
+[INFO] 02:10:38:586 CPU/(3498:3498): -------Valores del config-------
+[INFO] 02:10:38:586 CPU/(3498:3498): Retardo Instrucción = 1000
+[INFO] 02:10:38:586 CPU/(3498:3498): IP Memoria = 127.0.0.1
+[INFO] 02:10:38:586 CPU/(3498:3498): Puerto Memoria = 8003
+[INFO] 02:10:38:586 CPU/(3498:3498): Puerto Escucha = 8001
+[INFO] 02:10:38:586 CPU/(3498:3498): Tamanio maximo de segmentos = (null)
+[INFO] 02:10:38:586 CPU/(3498:3498): --------------------------------
+[INFO] 02:10:38:586 CPU/(3498:3498): ¡CPU iniciado correctamente!
+[TRACE] 02:10:38:586 CPU/(3498:3498): Listo para escuchar a mi cliente
+[INFO] 02:10:38:586 CPU/(3498:3498): Servidor listo para recibir al cliente
+[INFO] 02:10:38:587 CPU/(3498:3500): Conexion establecida con Memoria
+[INFO] 02:10:49:457 CPU/(3498:3499): Se conecto un cliente!
+[INFO] 02:10:49:457 CPU/(3498:3499): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:10:59:457 CPU/(3498:3499): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:10:59:457 CPU/(3498:3499): Comenzar ejecucion del proceso: 5.
+[INFO] 02:10:59:457 CPU/(3498:3499): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:10:59:458 CPU/(3498:3499): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:10:59:458 CPU/(3498:3499): PID: 5 - Accion: Escribir 
+[INFO] 02:10:59:458 CPU/(3498:3499): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:10:59:458 CPU/(3498:3499): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:10:59:500 CPU/(3498:3499): Datos enviados correctamente
+[TRACE] 02:10:59:544 CPU/(3498:3499): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:10:59:544 CPU/(3498:3499): Comenzar ejecucion del proceso: 5.
+[INFO] 02:10:59:544 CPU/(3498:3499): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:10:59:544 CPU/(3498:3499): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:10:59:588 CPU/(3498:3499): Datos enviados correctamente
+[INFO] 02:10:59:796 CPU/(3498:3499): Comenzar ejecucion del proceso: 5.
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:10:59:796 CPU/(3498:3499): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:10:59:796 CPU/(3498:3499): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:10:59:796 CPU/(3498:3499): Comenzar ejecucion del proceso: 5.
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Accion: Leer 
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:10:59:796 CPU/(3498:3499): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:10:59:796 CPU/(3498:3499): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:10:59:796 CPU/(3498:3499): Comenzar ejecucion del proceso: 5.
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:10:59:796 CPU/(3498:3499): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:10:59:796 CPU/(3498:3499): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:10:59:796 CPU/(3498:3499): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:10:59:796 CPU/(3498:3499): Comenzar ejecucion del proceso: 5.
+[INFO] 02:15:46:954 CPU/(4091:4091): Logger creado
+[INFO] 02:15:46:957 CPU/(4091:4091): -------Valores del config-------
+[INFO] 02:15:46:957 CPU/(4091:4091): Retardo Instrucción = 1000
+[INFO] 02:15:46:957 CPU/(4091:4091): IP Memoria = 127.0.0.1
+[INFO] 02:15:46:957 CPU/(4091:4091): Puerto Memoria = 8003
+[INFO] 02:15:46:957 CPU/(4091:4091): Puerto Escucha = 8001
+[INFO] 02:15:46:957 CPU/(4091:4091): Tamanio maximo de segmentos = (null)
+[INFO] 02:15:46:957 CPU/(4091:4091): --------------------------------
+[INFO] 02:15:46:957 CPU/(4091:4091): ¡CPU iniciado correctamente!
+[TRACE] 02:15:46:957 CPU/(4091:4091): Listo para escuchar a mi cliente
+[INFO] 02:15:46:957 CPU/(4091:4091): Servidor listo para recibir al cliente
+[INFO] 02:15:46:958 CPU/(4091:4093): Conexion establecida con Memoria
+[INFO] 02:15:47:983 CPU/(4091:4092): Se conecto un cliente!
+[INFO] 02:15:47:985 CPU/(4091:4092): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:15:57:984 CPU/(4091:4092): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:15:57:984 CPU/(4091:4092): Comenzar ejecucion del proceso: 5.
+[INFO] 02:15:57:984 CPU/(4091:4092): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:15:57:985 CPU/(4091:4092): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:15:57:985 CPU/(4091:4092): PID: 5 - Accion: Escribir 
+[INFO] 02:15:57:985 CPU/(4091:4092): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:15:57:985 CPU/(4091:4092): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:15:58:027 CPU/(4091:4092): Datos enviados correctamente
+[TRACE] 02:15:58:071 CPU/(4091:4092): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:15:58:071 CPU/(4091:4092): Comenzar ejecucion del proceso: 5.
+[INFO] 02:15:58:071 CPU/(4091:4092): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:15:58:071 CPU/(4091:4092): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:15:58:116 CPU/(4091:4092): Datos enviados correctamente
+[INFO] 02:15:58:333 CPU/(4091:4092): Comenzar ejecucion del proceso: 5.
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:15:58:333 CPU/(4091:4092): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:15:58:333 CPU/(4091:4092): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:15:58:333 CPU/(4091:4092): Comenzar ejecucion del proceso: 5.
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Accion: Leer 
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:15:58:333 CPU/(4091:4092): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:15:58:333 CPU/(4091:4092): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:15:58:333 CPU/(4091:4092): Comenzar ejecucion del proceso: 5.
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:15:58:333 CPU/(4091:4092): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:15:58:334 CPU/(4091:4092): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:15:58:334 CPU/(4091:4092): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:15:58:334 CPU/(4091:4092): Comenzar ejecucion del proceso: 5.
+[INFO] 02:19:42:427 CPU/(4638:4638): Logger creado
+[INFO] 02:19:42:428 CPU/(4638:4638): -------Valores del config-------
+[INFO] 02:19:42:428 CPU/(4638:4638): Retardo Instrucción = 1000
+[INFO] 02:19:42:429 CPU/(4638:4638): IP Memoria = 127.0.0.1
+[INFO] 02:19:42:429 CPU/(4638:4638): Puerto Memoria = 8003
+[INFO] 02:19:42:429 CPU/(4638:4638): Puerto Escucha = 8001
+[INFO] 02:19:42:429 CPU/(4638:4638): Tamanio maximo de segmentos = (null)
+[INFO] 02:19:42:429 CPU/(4638:4638): --------------------------------
+[INFO] 02:19:42:429 CPU/(4638:4638): ¡CPU iniciado correctamente!
+[TRACE] 02:19:42:429 CPU/(4638:4638): Listo para escuchar a mi cliente
+[INFO] 02:19:42:429 CPU/(4638:4638): Servidor listo para recibir al cliente
+[INFO] 02:19:42:429 CPU/(4638:4640): Conexion establecida con Memoria
+[INFO] 02:19:42:881 CPU/(4638:4639): Se conecto un cliente!
+[INFO] 02:19:42:881 CPU/(4638:4639): Me llego el mensaje: Conectado al Kernel
+[INFO] 02:20:13:059 CPU/(4638:4639): Comenzar ejecucion del proceso: 1326553675.
+[INFO] 02:21:20:330 CPU/(4839:4839): Logger creado
+[INFO] 02:21:20:330 CPU/(4839:4839): -------Valores del config-------
+[INFO] 02:21:20:330 CPU/(4839:4839): Retardo Instrucción = 1000
+[INFO] 02:21:20:330 CPU/(4839:4839): IP Memoria = 127.0.0.1
+[INFO] 02:21:20:330 CPU/(4839:4839): Puerto Memoria = 8003
+[INFO] 02:21:20:330 CPU/(4839:4839): Puerto Escucha = 8001
+[INFO] 02:21:20:330 CPU/(4839:4839): Tamanio maximo de segmentos = (null)
+[INFO] 02:21:20:330 CPU/(4839:4839): --------------------------------
+[INFO] 02:21:20:330 CPU/(4839:4839): ¡CPU iniciado correctamente!
+[TRACE] 02:21:20:330 CPU/(4839:4839): Listo para escuchar a mi cliente
+[INFO] 02:21:20:330 CPU/(4839:4839): Servidor listo para recibir al cliente
+[INFO] 02:21:20:331 CPU/(4839:4841): Conexion establecida con Memoria
+[INFO] 02:21:23:237 CPU/(4839:4840): Se conecto un cliente!
+[INFO] 02:21:23:237 CPU/(4839:4840): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:21:33:237 CPU/(4839:4840): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:21:33:237 CPU/(4839:4840): Comenzar ejecucion del proceso: 5.
+[INFO] 02:21:33:237 CPU/(4839:4840): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:21:33:238 CPU/(4839:4840): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:21:33:238 CPU/(4839:4840): PID: 5 - Accion: Escribir 
+[INFO] 02:21:33:238 CPU/(4839:4840): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:21:33:238 CPU/(4839:4840): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:21:33:280 CPU/(4839:4840): Datos enviados correctamente
+[TRACE] 02:21:33:323 CPU/(4839:4840): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:21:33:323 CPU/(4839:4840): Comenzar ejecucion del proceso: 5.
+[INFO] 02:21:33:323 CPU/(4839:4840): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:21:33:323 CPU/(4839:4840): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:21:33:368 CPU/(4839:4840): Datos enviados correctamente
+[INFO] 02:21:33:490 CPU/(4839:4840): Comenzar ejecucion del proceso: 5.
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:21:33:490 CPU/(4839:4840): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:21:33:490 CPU/(4839:4840): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:21:33:490 CPU/(4839:4840): Comenzar ejecucion del proceso: 5.
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Accion: Leer 
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:21:33:490 CPU/(4839:4840): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:21:33:490 CPU/(4839:4840): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:21:33:490 CPU/(4839:4840): Comenzar ejecucion del proceso: 5.
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:21:33:490 CPU/(4839:4840): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:21:33:490 CPU/(4839:4840): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:21:33:490 CPU/(4839:4840): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:21:33:490 CPU/(4839:4840): Comenzar ejecucion del proceso: 5.
+[INFO] 02:23:52:693 CPU/(5160:5160): Logger creado
+[INFO] 02:23:52:694 CPU/(5160:5160): -------Valores del config-------
+[INFO] 02:23:52:694 CPU/(5160:5160): Retardo Instrucción = 1000
+[INFO] 02:23:52:694 CPU/(5160:5160): IP Memoria = 127.0.0.1
+[INFO] 02:23:52:694 CPU/(5160:5160): Puerto Memoria = 8003
+[INFO] 02:23:52:694 CPU/(5160:5160): Puerto Escucha = 8001
+[INFO] 02:23:52:694 CPU/(5160:5160): Tamanio maximo de segmentos = (null)
+[INFO] 02:23:52:695 CPU/(5160:5160): --------------------------------
+[INFO] 02:23:52:695 CPU/(5160:5160): ¡CPU iniciado correctamente!
+[TRACE] 02:23:52:695 CPU/(5160:5160): Listo para escuchar a mi cliente
+[INFO] 02:23:52:695 CPU/(5160:5160): Servidor listo para recibir al cliente
+[INFO] 02:23:52:695 CPU/(5160:5162): Conexion establecida con Memoria
+[INFO] 02:23:53:157 CPU/(5160:5161): Se conecto un cliente!
+[INFO] 02:23:53:157 CPU/(5160:5161): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:24:03:157 CPU/(5160:5161): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:24:03:157 CPU/(5160:5161): Comenzar ejecucion del proceso: 5.
+[INFO] 02:24:03:157 CPU/(5160:5161): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:24:03:158 CPU/(5160:5161): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:24:03:158 CPU/(5160:5161): PID: 5 - Accion: Escribir 
+[INFO] 02:24:03:158 CPU/(5160:5161): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:24:03:158 CPU/(5160:5161): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:24:03:200 CPU/(5160:5161): Datos enviados correctamente
+[TRACE] 02:24:03:243 CPU/(5160:5161): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:24:03:243 CPU/(5160:5161): Comenzar ejecucion del proceso: 5.
+[INFO] 02:24:03:243 CPU/(5160:5161): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:24:03:243 CPU/(5160:5161): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:24:03:288 CPU/(5160:5161): Datos enviados correctamente
+[INFO] 02:24:03:499 CPU/(5160:5161): Comenzar ejecucion del proceso: 5.
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:24:03:500 CPU/(5160:5161): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:24:03:500 CPU/(5160:5161): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:24:03:500 CPU/(5160:5161): Comenzar ejecucion del proceso: 5.
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Accion: Leer 
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:24:03:500 CPU/(5160:5161): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:24:03:500 CPU/(5160:5161): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:24:03:500 CPU/(5160:5161): Comenzar ejecucion del proceso: 5.
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:24:03:500 CPU/(5160:5161): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:24:03:500 CPU/(5160:5161): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:24:03:500 CPU/(5160:5161): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:24:03:500 CPU/(5160:5161): Comenzar ejecucion del proceso: 5.
+[INFO] 02:25:35:214 CPU/(5398:5398): Logger creado
+[INFO] 02:25:35:215 CPU/(5398:5398): -------Valores del config-------
+[INFO] 02:25:35:215 CPU/(5398:5398): Retardo Instrucción = 1000
+[INFO] 02:25:35:215 CPU/(5398:5398): IP Memoria = 127.0.0.1
+[INFO] 02:25:35:215 CPU/(5398:5398): Puerto Memoria = 8003
+[INFO] 02:25:35:215 CPU/(5398:5398): Puerto Escucha = 8001
+[INFO] 02:25:35:216 CPU/(5398:5398): Tamanio maximo de segmentos = (null)
+[INFO] 02:25:35:216 CPU/(5398:5398): --------------------------------
+[INFO] 02:25:35:216 CPU/(5398:5398): ¡CPU iniciado correctamente!
+[TRACE] 02:25:35:216 CPU/(5398:5398): Listo para escuchar a mi cliente
+[INFO] 02:25:35:216 CPU/(5398:5398): Servidor listo para recibir al cliente
+[INFO] 02:25:35:216 CPU/(5398:5400): Conexion establecida con Memoria
+[INFO] 02:25:37:305 CPU/(5398:5399): Se conecto un cliente!
+[INFO] 02:25:37:305 CPU/(5398:5399): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:25:47:306 CPU/(5398:5399): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:25:47:306 CPU/(5398:5399): Comenzar ejecucion del proceso: 5.
+[INFO] 02:25:47:306 CPU/(5398:5399): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:25:47:307 CPU/(5398:5399): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:25:47:307 CPU/(5398:5399): PID: 5 - Accion: Escribir 
+[INFO] 02:25:47:307 CPU/(5398:5399): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:25:47:307 CPU/(5398:5399): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:25:47:347 CPU/(5398:5399): Datos enviados correctamente
+[TRACE] 02:25:47:391 CPU/(5398:5399): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:25:47:391 CPU/(5398:5399): Comenzar ejecucion del proceso: 5.
+[INFO] 02:25:47:391 CPU/(5398:5399): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:25:47:391 CPU/(5398:5399): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:26:30:458 CPU/(5398:5399): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:26:30:460 CPU/(5398:5399): Comenzar ejecucion del proceso: 5.
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:26:30:460 CPU/(5398:5399): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:26:30:460 CPU/(5398:5399): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:26:30:460 CPU/(5398:5399): Comenzar ejecucion del proceso: 5.
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Accion: Leer 
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:26:30:460 CPU/(5398:5399): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:26:30:460 CPU/(5398:5399): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:26:30:460 CPU/(5398:5399): Comenzar ejecucion del proceso: 5.
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:26:30:460 CPU/(5398:5399): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:26:30:460 CPU/(5398:5399): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:26:30:460 CPU/(5398:5399): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:26:30:460 CPU/(5398:5399): Comenzar ejecucion del proceso: 5.
+[INFO] 02:28:01:619 CPU/(5709:5709): Logger creado
+[INFO] 02:28:01:620 CPU/(5709:5709): -------Valores del config-------
+[INFO] 02:28:01:620 CPU/(5709:5709): Retardo Instrucción = 1000
+[INFO] 02:28:01:620 CPU/(5709:5709): IP Memoria = 127.0.0.1
+[INFO] 02:28:01:620 CPU/(5709:5709): Puerto Memoria = 8003
+[INFO] 02:28:01:620 CPU/(5709:5709): Puerto Escucha = 8001
+[INFO] 02:28:01:620 CPU/(5709:5709): Tamanio maximo de segmentos = (null)
+[INFO] 02:28:01:620 CPU/(5709:5709): --------------------------------
+[INFO] 02:28:01:620 CPU/(5709:5709): ¡CPU iniciado correctamente!
+[TRACE] 02:28:01:620 CPU/(5709:5709): Listo para escuchar a mi cliente
+[INFO] 02:28:01:620 CPU/(5709:5709): Servidor listo para recibir al cliente
+[INFO] 02:28:01:620 CPU/(5709:5711): Conexion establecida con Memoria
+[INFO] 02:28:04:371 CPU/(5709:5710): Se conecto un cliente!
+[INFO] 02:28:04:371 CPU/(5709:5710): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:28:14:371 CPU/(5709:5710): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:28:14:371 CPU/(5709:5710): Comenzar ejecucion del proceso: 5.
+[INFO] 02:28:14:371 CPU/(5709:5710): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:28:14:372 CPU/(5709:5710): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:28:14:372 CPU/(5709:5710): PID: 5 - Accion: Escribir 
+[INFO] 02:28:14:372 CPU/(5709:5710): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:28:14:372 CPU/(5709:5710): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:28:14:412 CPU/(5709:5710): Datos enviados correctamente
+[TRACE] 02:28:14:456 CPU/(5709:5710): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:28:14:456 CPU/(5709:5710): Comenzar ejecucion del proceso: 5.
+[INFO] 02:28:14:456 CPU/(5709:5710): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:28:14:456 CPU/(5709:5710): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:28:24:500 CPU/(5709:5710): Datos enviados correctamente
+[INFO] 02:28:49:192 CPU/(5709:5710): Comenzar ejecucion del proceso: 5.
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:28:49:200 CPU/(5709:5710): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:28:49:200 CPU/(5709:5710): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:28:49:200 CPU/(5709:5710): Comenzar ejecucion del proceso: 5.
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Accion: Leer 
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:28:49:200 CPU/(5709:5710): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:28:49:200 CPU/(5709:5710): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:28:49:200 CPU/(5709:5710): Comenzar ejecucion del proceso: 5.
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:28:49:200 CPU/(5709:5710): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:28:49:200 CPU/(5709:5710): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:28:49:200 CPU/(5709:5710): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:28:49:200 CPU/(5709:5710): Comenzar ejecucion del proceso: 5.
+[INFO] 02:29:57:204 CPU/(5965:5965): Logger creado
+[INFO] 02:29:57:206 CPU/(5965:5965): -------Valores del config-------
+[INFO] 02:29:57:206 CPU/(5965:5965): Retardo Instrucción = 1000
+[INFO] 02:29:57:206 CPU/(5965:5965): IP Memoria = 127.0.0.1
+[INFO] 02:29:57:206 CPU/(5965:5965): Puerto Memoria = 8003
+[INFO] 02:29:57:206 CPU/(5965:5965): Puerto Escucha = 8001
+[INFO] 02:29:57:207 CPU/(5965:5965): Tamanio maximo de segmentos = (null)
+[INFO] 02:29:57:207 CPU/(5965:5965): --------------------------------
+[INFO] 02:29:57:207 CPU/(5965:5965): ¡CPU iniciado correctamente!
+[TRACE] 02:29:57:207 CPU/(5965:5965): Listo para escuchar a mi cliente
+[INFO] 02:29:57:207 CPU/(5965:5965): Servidor listo para recibir al cliente
+[INFO] 02:29:57:207 CPU/(5965:5967): Conexion establecida con Memoria
+[INFO] 02:29:59:149 CPU/(5965:5966): Se conecto un cliente!
+[INFO] 02:29:59:149 CPU/(5965:5966): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:30:09:148 CPU/(5965:5966): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:30:09:148 CPU/(5965:5966): Comenzar ejecucion del proceso: 5.
+[INFO] 02:30:09:148 CPU/(5965:5966): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:30:09:150 CPU/(5965:5966): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:30:09:150 CPU/(5965:5966): PID: 5 - Accion: Escribir 
+[INFO] 02:30:09:150 CPU/(5965:5966): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:30:09:150 CPU/(5965:5966): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:30:09:192 CPU/(5965:5966): Datos enviados correctamente
+[TRACE] 02:30:09:235 CPU/(5965:5966): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:30:09:235 CPU/(5965:5966): Comenzar ejecucion del proceso: 5.
+[INFO] 02:30:09:235 CPU/(5965:5966): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:30:09:235 CPU/(5965:5966): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:30:09:479 CPU/(5965:5966): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:30:09:479 CPU/(5965:5966): Comenzar ejecucion del proceso: 5.
+[INFO] 02:30:09:479 CPU/(5965:5966): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:30:09:479 CPU/(5965:5966): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:30:09:480 CPU/(5965:5966): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:30:09:480 CPU/(5965:5966): Comenzar ejecucion del proceso: 5.
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Accion: Leer 
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:30:09:480 CPU/(5965:5966): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:30:09:480 CPU/(5965:5966): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:30:09:480 CPU/(5965:5966): Comenzar ejecucion del proceso: 5.
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:30:09:480 CPU/(5965:5966): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:30:09:480 CPU/(5965:5966): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:30:09:480 CPU/(5965:5966): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:30:09:480 CPU/(5965:5966): Comenzar ejecucion del proceso: 5.
+[INFO] 02:30:53:185 CPU/(6107:6107): Logger creado
+[INFO] 02:30:53:186 CPU/(6107:6107): -------Valores del config-------
+[INFO] 02:30:53:186 CPU/(6107:6107): Retardo Instrucción = 1000
+[INFO] 02:30:53:186 CPU/(6107:6107): IP Memoria = 127.0.0.1
+[INFO] 02:30:53:186 CPU/(6107:6107): Puerto Memoria = 8003
+[INFO] 02:30:53:186 CPU/(6107:6107): Puerto Escucha = 8001
+[INFO] 02:30:53:186 CPU/(6107:6107): Tamanio maximo de segmentos = (null)
+[INFO] 02:30:53:186 CPU/(6107:6107): --------------------------------
+[INFO] 02:30:53:186 CPU/(6107:6107): ¡CPU iniciado correctamente!
+[TRACE] 02:30:53:186 CPU/(6107:6107): Listo para escuchar a mi cliente
+[INFO] 02:30:53:186 CPU/(6107:6107): Servidor listo para recibir al cliente
+[INFO] 02:30:53:186 CPU/(6107:6109): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 02:30:54:187 CPU/(6107:6109): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 02:31:45:087 CPU/(6227:6227): Logger creado
+[INFO] 02:31:45:087 CPU/(6227:6227): -------Valores del config-------
+[INFO] 02:31:45:087 CPU/(6227:6227): Retardo Instrucción = 1000
+[INFO] 02:31:45:087 CPU/(6227:6227): IP Memoria = 127.0.0.1
+[INFO] 02:31:45:087 CPU/(6227:6227): Puerto Memoria = 8003
+[INFO] 02:31:45:087 CPU/(6227:6227): Puerto Escucha = 8001
+[INFO] 02:31:45:087 CPU/(6227:6227): Tamanio maximo de segmentos = (null)
+[INFO] 02:31:45:087 CPU/(6227:6227): --------------------------------
+[INFO] 02:31:45:087 CPU/(6227:6227): ¡CPU iniciado correctamente!
+[TRACE] 02:31:45:088 CPU/(6227:6227): Listo para escuchar a mi cliente
+[INFO] 02:31:45:088 CPU/(6227:6227): Servidor listo para recibir al cliente
+[INFO] 02:31:45:088 CPU/(6227:6229): Conexion establecida con Memoria
+[INFO] 02:31:45:583 CPU/(6227:6228): Se conecto un cliente!
+[INFO] 02:31:45:583 CPU/(6227:6228): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:31:55:583 CPU/(6227:6228): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:31:55:583 CPU/(6227:6228): Comenzar ejecucion del proceso: 5.
+[INFO] 02:31:55:583 CPU/(6227:6228): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:31:55:584 CPU/(6227:6228): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:31:55:584 CPU/(6227:6228): PID: 5 - Accion: Escribir 
+[INFO] 02:31:55:584 CPU/(6227:6228): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:31:55:584 CPU/(6227:6228): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:31:55:624 CPU/(6227:6228): Datos enviados correctamente
+[TRACE] 02:31:55:667 CPU/(6227:6228): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:31:55:667 CPU/(6227:6228): Comenzar ejecucion del proceso: 5.
+[INFO] 02:31:55:667 CPU/(6227:6228): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:31:55:667 CPU/(6227:6228): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:32:28:225 CPU/(6227:6228): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:32:28:242 CPU/(6227:6228): Comenzar ejecucion del proceso: 5.
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:32:28:242 CPU/(6227:6228): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:32:28:242 CPU/(6227:6228): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:32:28:242 CPU/(6227:6228): Comenzar ejecucion del proceso: 5.
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Accion: Leer 
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:32:28:242 CPU/(6227:6228): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:32:28:242 CPU/(6227:6228): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:32:28:242 CPU/(6227:6228): Comenzar ejecucion del proceso: 5.
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:32:28:242 CPU/(6227:6228): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:32:28:242 CPU/(6227:6228): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:32:28:242 CPU/(6227:6228): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:32:28:242 CPU/(6227:6228): Comenzar ejecucion del proceso: 5.
+[INFO] 02:33:40:585 CPU/(6475:6475): Logger creado
+[INFO] 02:33:40:585 CPU/(6475:6475): -------Valores del config-------
+[INFO] 02:33:40:585 CPU/(6475:6475): Retardo Instrucción = 1000
+[INFO] 02:33:40:585 CPU/(6475:6475): IP Memoria = 127.0.0.1
+[INFO] 02:33:40:585 CPU/(6475:6475): Puerto Memoria = 8003
+[INFO] 02:33:40:585 CPU/(6475:6475): Puerto Escucha = 8001
+[INFO] 02:33:40:585 CPU/(6475:6475): Tamanio maximo de segmentos = (null)
+[INFO] 02:33:40:585 CPU/(6475:6475): --------------------------------
+[INFO] 02:33:40:585 CPU/(6475:6475): ¡CPU iniciado correctamente!
+[TRACE] 02:33:40:585 CPU/(6475:6475): Listo para escuchar a mi cliente
+[INFO] 02:33:40:585 CPU/(6475:6475): Servidor listo para recibir al cliente
+[INFO] 02:33:40:586 CPU/(6475:6477): Conexion establecida con Memoria
+[INFO] 02:33:42:551 CPU/(6475:6476): Se conecto un cliente!
+[INFO] 02:33:42:551 CPU/(6475:6476): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:33:52:551 CPU/(6475:6476): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:33:52:551 CPU/(6475:6476): Comenzar ejecucion del proceso: 5.
+[INFO] 02:33:52:551 CPU/(6475:6476): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:33:52:552 CPU/(6475:6476): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:33:52:552 CPU/(6475:6476): PID: 5 - Accion: Escribir 
+[INFO] 02:33:52:552 CPU/(6475:6476): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:33:52:552 CPU/(6475:6476): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:33:52:591 CPU/(6475:6476): Datos enviados correctamente
+[TRACE] 02:33:52:636 CPU/(6475:6476): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:33:52:636 CPU/(6475:6476): Comenzar ejecucion del proceso: 5.
+[INFO] 02:33:52:636 CPU/(6475:6476): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:33:52:636 CPU/(6475:6476): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:34:02:680 CPU/(6475:6476): Datos enviados correctamente
+[TRACE] 02:34:02:723 CPU/(6475:6476): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:34:02:723 CPU/(6475:6476): Comenzar ejecucion del proceso: 5.
+[INFO] 02:34:02:723 CPU/(6475:6476): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:34:02:723 CPU/(6475:6476): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:34:02:723 CPU/(6475:6476): Datos enviados correctamente
+[TRACE] 02:34:02:767 CPU/(6475:6476): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:34:02:767 CPU/(6475:6476): Comenzar ejecucion del proceso: 5.
+[INFO] 02:34:02:767 CPU/(6475:6476): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:34:02:767 CPU/(6475:6476): PID: 5 - Accion: Leer 
+[INFO] 02:34:02:767 CPU/(6475:6476): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:34:02:767 CPU/(6475:6476): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:34:02:767 CPU/(6475:6476): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:34:02:812 CPU/(6475:6476): Datos enviados correctamente
+[TRACE] 02:34:02:855 CPU/(6475:6476): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:34:02:855 CPU/(6475:6476): Comenzar ejecucion del proceso: 5.
+[INFO] 02:34:02:855 CPU/(6475:6476): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:34:02:855 CPU/(6475:6476): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:34:02:855 CPU/(6475:6476): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:34:02:855 CPU/(6475:6476): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:34:02:855 CPU/(6475:6476): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:34:02:855 CPU/(6475:6476): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:34:02:855 CPU/(6475:6476): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:34:02:855 CPU/(6475:6476): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:34:02:855 CPU/(6475:6476): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:34:02:900 CPU/(6475:6476): Datos enviados correctamente
+[INFO] 02:34:10:802 CPU/(6475:6476): Comenzar ejecucion del proceso: 5.
+[INFO] 02:36:15:715 CPU/(6808:6808): Logger creado
+[INFO] 02:36:15:717 CPU/(6808:6808): -------Valores del config-------
+[INFO] 02:36:15:717 CPU/(6808:6808): Retardo Instrucción = 1000
+[INFO] 02:36:15:717 CPU/(6808:6808): IP Memoria = 127.0.0.1
+[INFO] 02:36:15:717 CPU/(6808:6808): Puerto Memoria = 8003
+[INFO] 02:36:15:717 CPU/(6808:6808): Puerto Escucha = 8001
+[INFO] 02:36:15:717 CPU/(6808:6808): Tamanio maximo de segmentos = (null)
+[INFO] 02:36:15:717 CPU/(6808:6808): --------------------------------
+[INFO] 02:36:15:717 CPU/(6808:6808): ¡CPU iniciado correctamente!
+[TRACE] 02:36:15:717 CPU/(6808:6808): Listo para escuchar a mi cliente
+[INFO] 02:36:15:717 CPU/(6808:6808): Servidor listo para recibir al cliente
+[INFO] 02:36:15:717 CPU/(6808:6810): Conexion establecida con Memoria
+[TRACE] 02:36:18:418 CPU/(6808:6809): Se conecto un cliente!
+[TRACE] 02:36:18:418 CPU/(6808:6809): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:36:28:418 CPU/(6808:6809): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:36:28:418 CPU/(6808:6809): Comenzar ejecucion del proceso: 5.
+[INFO] 02:36:28:418 CPU/(6808:6809): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:36:28:419 CPU/(6808:6809): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:36:28:419 CPU/(6808:6809): PID: 5 - Accion: Escribir 
+[INFO] 02:36:28:419 CPU/(6808:6809): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:36:28:419 CPU/(6808:6809): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:36:28:460 CPU/(6808:6809): Datos enviados correctamente
+[TRACE] 02:36:28:503 CPU/(6808:6809): Recibi contexto de ejecucion - PID: 9
+[INFO] 02:36:28:503 CPU/(6808:6809): Comenzar ejecucion del proceso: 9.
+[INFO] 02:36:28:503 CPU/(6808:6809): PID: 9 - Ejecutando: SET AX HOLA
+[INFO] 02:36:28:504 CPU/(6808:6809): PID: 9 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:36:28:504 CPU/(6808:6809): PID: 9 - Accion: Escribir 
+[INFO] 02:36:28:504 CPU/(6808:6809): PID: 9 - Ejecutando: WAIT DISCO
+[TRACE] 02:36:28:504 CPU/(6808:6809): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:36:28:547 CPU/(6808:6809): Datos enviados correctamente
+[TRACE] 02:36:28:592 CPU/(6808:6809): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:36:28:592 CPU/(6808:6809): Comenzar ejecucion del proceso: 5.
+[INFO] 02:36:28:592 CPU/(6808:6809): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:36:28:592 CPU/(6808:6809): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:36:38:636 CPU/(6808:6809): Datos enviados correctamente
+[TRACE] 02:36:38:679 CPU/(6808:6809): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:36:38:680 CPU/(6808:6809): Comenzar ejecucion del proceso: 5.
+[INFO] 02:36:38:680 CPU/(6808:6809): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:36:38:680 CPU/(6808:6809): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:36:38:680 CPU/(6808:6809): Datos enviados correctamente
+[TRACE] 02:36:38:724 CPU/(6808:6809): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:36:38:724 CPU/(6808:6809): Comenzar ejecucion del proceso: 5.
+[INFO] 02:36:38:724 CPU/(6808:6809): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:36:38:724 CPU/(6808:6809): PID: 5 - Accion: Leer 
+[INFO] 02:36:38:724 CPU/(6808:6809): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:36:38:724 CPU/(6808:6809): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:36:38:724 CPU/(6808:6809): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:36:38:768 CPU/(6808:6809): Datos enviados correctamente
+[TRACE] 02:36:38:811 CPU/(6808:6809): Recibi contexto de ejecucion - PID: 9
+[INFO] 02:36:38:811 CPU/(6808:6809): Comenzar ejecucion del proceso: 9.
+[INFO] 02:36:38:811 CPU/(6808:6809): PID: 9 - Ejecutando: I/O 10
+[TRACE] 02:36:38:811 CPU/(6808:6809): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:36:38:856 CPU/(6808:6809): Datos enviados correctamente
+[INFO] 02:37:37:935 CPU/(6808:6809): Comenzar ejecucion del proceso: 9.
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:37:37:940 CPU/(6808:6809): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:37:37:940 CPU/(6808:6809): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:37:37:940 CPU/(6808:6809): Comenzar ejecucion del proceso: 9.
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: MOV_IN BX 120
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Accion: Leer 
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: YIELD
+[TRACE] 02:37:37:940 CPU/(6808:6809): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:37:37:940 CPU/(6808:6809): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:37:37:940 CPU/(6808:6809): Comenzar ejecucion del proceso: 9.
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:37:37:940 CPU/(6808:6809): PID: 9 - Ejecutando: EXIT
+[TRACE] 02:37:37:940 CPU/(6808:6809): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:37:37:940 CPU/(6808:6809): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:37:37:940 CPU/(6808:6809): Comenzar ejecucion del proceso: 9.
+[INFO] 02:46:51:789 CPU/(8107:8107): Logger creado
+[INFO] 02:46:51:790 CPU/(8107:8107): -------Valores del config-------
+[INFO] 02:46:51:790 CPU/(8107:8107): Retardo Instrucción = 1000
+[INFO] 02:46:51:790 CPU/(8107:8107): IP Memoria = 127.0.0.1
+[INFO] 02:46:51:790 CPU/(8107:8107): Puerto Memoria = 8003
+[INFO] 02:46:51:790 CPU/(8107:8107): Puerto Escucha = 8001
+[INFO] 02:46:51:790 CPU/(8107:8107): Tamanio maximo de segmentos = (null)
+[INFO] 02:46:51:790 CPU/(8107:8107): --------------------------------
+[INFO] 02:46:51:790 CPU/(8107:8107): ¡CPU iniciado correctamente!
+[TRACE] 02:46:51:790 CPU/(8107:8107): Listo para escuchar a mi cliente
+[INFO] 02:46:51:790 CPU/(8107:8107): Servidor listo para recibir al cliente
+[INFO] 02:46:51:791 CPU/(8107:8109): Conexion establecida con Memoria
+[TRACE] 02:46:52:230 CPU/(8107:8108): Se conecto un cliente!
+[TRACE] 02:46:52:230 CPU/(8107:8108): Me llego el mensaje: Conectado al Kernel
+[TRACE] 02:47:02:230 CPU/(8107:8108): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:47:02:230 CPU/(8107:8108): Comenzar ejecucion del proceso: 5.
+[INFO] 02:47:02:230 CPU/(8107:8108): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 02:47:02:231 CPU/(8107:8108): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:47:02:231 CPU/(8107:8108): PID: 5 - Accion: Escribir 
+[INFO] 02:47:02:231 CPU/(8107:8108): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 02:47:02:231 CPU/(8107:8108): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:47:02:272 CPU/(8107:8108): Datos enviados correctamente
+[TRACE] 02:47:02:315 CPU/(8107:8108): Recibi contexto de ejecucion - PID: 9
+[INFO] 02:47:02:315 CPU/(8107:8108): Comenzar ejecucion del proceso: 9.
+[INFO] 02:47:02:315 CPU/(8107:8108): PID: 9 - Ejecutando: SET AX HOLA
+[INFO] 02:47:02:316 CPU/(8107:8108): PID: 9 - Ejecutando: MOV_OUT 120 AX
+[INFO] 02:47:02:316 CPU/(8107:8108): PID: 9 - Accion: Escribir 
+[INFO] 02:47:02:316 CPU/(8107:8108): PID: 9 - Ejecutando: WAIT DISCO
+[TRACE] 02:47:02:316 CPU/(8107:8108): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:47:02:359 CPU/(8107:8108): Datos enviados correctamente
+[TRACE] 02:47:02:404 CPU/(8107:8108): Recibi contexto de ejecucion - PID: 5
+[INFO] 02:47:02:404 CPU/(8107:8108): Comenzar ejecucion del proceso: 5.
+[INFO] 02:47:02:404 CPU/(8107:8108): PID: 5 - Ejecutando: I/O 10
+[TRACE] 02:47:02:404 CPU/(8107:8108): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:47:12:448 CPU/(8107:8108): Datos enviados correctamente
+[INFO] 02:48:04:415 CPU/(8107:8108): Comenzar ejecucion del proceso: 5.
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 02:48:04:420 CPU/(8107:8108): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:48:04:420 CPU/(8107:8108): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:48:04:420 CPU/(8107:8108): Comenzar ejecucion del proceso: 5.
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Accion: Leer 
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: YIELD
+[TRACE] 02:48:04:420 CPU/(8107:8108): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:48:04:420 CPU/(8107:8108): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:48:04:420 CPU/(8107:8108): Comenzar ejecucion del proceso: 5.
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 02:48:04:420 CPU/(8107:8108): PID: 5 - Ejecutando: EXIT
+[TRACE] 02:48:04:420 CPU/(8107:8108): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 02:48:04:420 CPU/(8107:8108): Han llegado menos bytes que los enviados por Kernel
+[INFO] 02:48:04:420 CPU/(8107:8108): Comenzar ejecucion del proceso: 5.
+[INFO] 03:04:32:951 CPU/(10105:10105): Logger creado
+[INFO] 03:04:32:951 CPU/(10105:10105): -------Valores del config-------
+[INFO] 03:04:32:951 CPU/(10105:10105): Retardo Instrucción = 1000
+[INFO] 03:04:32:952 CPU/(10105:10105): IP Memoria = 127.0.0.1
+[INFO] 03:04:32:952 CPU/(10105:10105): Puerto Memoria = 8003
+[INFO] 03:04:32:952 CPU/(10105:10105): Puerto Escucha = 8001
+[INFO] 03:04:32:952 CPU/(10105:10105): Tamanio maximo de segmentos = (null)
+[INFO] 03:04:32:952 CPU/(10105:10105): --------------------------------
+[INFO] 03:04:32:952 CPU/(10105:10105): ¡CPU iniciado correctamente!
+[TRACE] 03:04:32:952 CPU/(10105:10105): Listo para escuchar a mi cliente
+[INFO] 03:04:32:952 CPU/(10105:10105): Servidor listo para recibir al cliente
+[INFO] 03:04:32:952 CPU/(10105:10107): Conexion establecida con Memoria
+[TRACE] 03:04:36:063 CPU/(10105:10106): Se conecto un cliente!
+[TRACE] 03:04:36:063 CPU/(10105:10106): Me llego el mensaje: Conectado al Kernel
+[TRACE] 03:04:46:063 CPU/(10105:10106): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:04:46:063 CPU/(10105:10106): Comenzar ejecucion del proceso: 5.
+[INFO] 03:04:46:063 CPU/(10105:10106): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 03:04:46:064 CPU/(10105:10106): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 03:04:46:064 CPU/(10105:10106): PID: 5 - Accion: Escribir 
+[INFO] 03:04:46:064 CPU/(10105:10106): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 03:04:46:064 CPU/(10105:10106): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:04:46:103 CPU/(10105:10106): Datos enviados correctamente
+[TRACE] 03:04:46:147 CPU/(10105:10106): Recibi contexto de ejecucion - PID: 9
+[INFO] 03:04:46:147 CPU/(10105:10106): Comenzar ejecucion del proceso: 9.
+[INFO] 03:04:46:147 CPU/(10105:10106): PID: 9 - Ejecutando: SET AX HOLA
+[INFO] 03:04:46:148 CPU/(10105:10106): PID: 9 - Ejecutando: MOV_OUT 120 AX
+[INFO] 03:04:46:148 CPU/(10105:10106): PID: 9 - Accion: Escribir 
+[INFO] 03:04:46:148 CPU/(10105:10106): PID: 9 - Ejecutando: WAIT DISCO
+[TRACE] 03:04:46:149 CPU/(10105:10106): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:04:46:191 CPU/(10105:10106): Datos enviados correctamente
+[TRACE] 03:04:46:236 CPU/(10105:10106): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:04:46:236 CPU/(10105:10106): Comenzar ejecucion del proceso: 5.
+[INFO] 03:04:46:236 CPU/(10105:10106): PID: 5 - Ejecutando: I/O 10
+[TRACE] 03:04:46:236 CPU/(10105:10106): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:04:56:280 CPU/(10105:10106): Datos enviados correctamente
+[TRACE] 03:04:56:323 CPU/(10105:10106): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:04:56:323 CPU/(10105:10106): Comenzar ejecucion del proceso: 5.
+[INFO] 03:04:56:323 CPU/(10105:10106): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 03:04:56:323 CPU/(10105:10106): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:04:56:324 CPU/(10105:10106): Datos enviados correctamente
+[TRACE] 03:04:56:368 CPU/(10105:10106): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:04:56:368 CPU/(10105:10106): Comenzar ejecucion del proceso: 5.
+[INFO] 03:04:56:368 CPU/(10105:10106): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 03:04:56:368 CPU/(10105:10106): PID: 5 - Accion: Leer 
+[INFO] 03:04:56:368 CPU/(10105:10106): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 03:04:56:368 CPU/(10105:10106): PID: 5 - Ejecutando: YIELD
+[TRACE] 03:04:56:368 CPU/(10105:10106): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:04:56:411 CPU/(10105:10106): Datos enviados correctamente
+[TRACE] 03:04:56:456 CPU/(10105:10106): Recibi contexto de ejecucion - PID: 9
+[INFO] 03:04:56:456 CPU/(10105:10106): Comenzar ejecucion del proceso: 9.
+[INFO] 03:04:56:456 CPU/(10105:10106): PID: 9 - Ejecutando: I/O 10
+[TRACE] 03:04:56:456 CPU/(10105:10106): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:04:56:499 CPU/(10105:10106): Datos enviados correctamente
+[INFO] 03:07:15:492 CPU/(10105:10106): Comenzar ejecucion del proceso: 9.
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: SIGNAL DISCO
+[TRACE] 03:07:15:496 CPU/(10105:10106): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:07:15:496 CPU/(10105:10106): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:07:15:496 CPU/(10105:10106): Comenzar ejecucion del proceso: 9.
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: MOV_IN BX 120
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Accion: Leer 
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: YIELD
+[TRACE] 03:07:15:496 CPU/(10105:10106): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:07:15:496 CPU/(10105:10106): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:07:15:496 CPU/(10105:10106): Comenzar ejecucion del proceso: 9.
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 03:07:15:496 CPU/(10105:10106): PID: 9 - Ejecutando: EXIT
+[TRACE] 03:07:15:496 CPU/(10105:10106): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:07:15:496 CPU/(10105:10106): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:07:15:496 CPU/(10105:10106): Comenzar ejecucion del proceso: 9.
+[INFO] 03:25:09:406 CPU/(12976:12976): Logger creado
+[INFO] 03:25:09:407 CPU/(12976:12976): -------Valores del config-------
+[INFO] 03:25:09:407 CPU/(12976:12976): Retardo Instrucción = 1000
+[INFO] 03:25:09:407 CPU/(12976:12976): IP Memoria = 127.0.0.1
+[INFO] 03:25:09:407 CPU/(12976:12976): Puerto Memoria = 8003
+[INFO] 03:25:09:407 CPU/(12976:12976): Puerto Escucha = 8001
+[INFO] 03:25:09:407 CPU/(12976:12976): Tamanio maximo de segmentos = (null)
+[INFO] 03:25:09:408 CPU/(12976:12976): --------------------------------
+[INFO] 03:25:09:408 CPU/(12976:12976): ¡CPU iniciado correctamente!
+[TRACE] 03:25:09:408 CPU/(12976:12976): Listo para escuchar a mi cliente
+[INFO] 03:25:09:408 CPU/(12976:12976): Servidor listo para recibir al cliente
+[INFO] 03:25:09:408 CPU/(12976:12978): Conexion establecida con Memoria
+[TRACE] 03:25:11:485 CPU/(12976:12977): Se conecto un cliente!
+[TRACE] 03:25:11:485 CPU/(12976:12977): Me llego el mensaje: Conectado al Kernel
+[INFO] 03:25:42:985 CPU/(12976:12977): Comenzar ejecucion del proceso: 2210811261.
+[INFO] 03:28:08:120 CPU/(13431:13431): Logger creado
+[INFO] 03:28:08:121 CPU/(13431:13431): -------Valores del config-------
+[INFO] 03:28:08:121 CPU/(13431:13431): Retardo Instrucción = 1000
+[INFO] 03:28:08:121 CPU/(13431:13431): IP Memoria = 127.0.0.1
+[INFO] 03:28:08:121 CPU/(13431:13431): Puerto Memoria = 8003
+[INFO] 03:28:08:121 CPU/(13431:13431): Puerto Escucha = 8001
+[INFO] 03:28:08:121 CPU/(13431:13431): Tamanio maximo de segmentos = (null)
+[INFO] 03:28:08:121 CPU/(13431:13431): --------------------------------
+[INFO] 03:28:08:122 CPU/(13431:13431): ¡CPU iniciado correctamente!
+[TRACE] 03:28:08:122 CPU/(13431:13431): Listo para escuchar a mi cliente
+[INFO] 03:28:08:122 CPU/(13431:13431): Servidor listo para recibir al cliente
+[INFO] 03:28:08:122 CPU/(13431:13433): Conexion establecida con Memoria
+[TRACE] 03:28:08:664 CPU/(13431:13432): Se conecto un cliente!
+[TRACE] 03:28:08:665 CPU/(13431:13432): Me llego el mensaje: Conectado al Kernel
+[INFO] 03:28:22:989 CPU/(13431:13432): Comenzar ejecucion del proceso: 868805674.
+[INFO] 03:32:42:740 CPU/(14266:14266): Logger creado
+[INFO] 03:32:42:741 CPU/(14266:14266): -------Valores del config-------
+[INFO] 03:32:42:741 CPU/(14266:14266): Retardo Instrucción = 1000
+[INFO] 03:32:42:741 CPU/(14266:14266): IP Memoria = 127.0.0.1
+[INFO] 03:32:42:741 CPU/(14266:14266): Puerto Memoria = 8003
+[INFO] 03:32:42:741 CPU/(14266:14266): Puerto Escucha = 8001
+[INFO] 03:32:42:741 CPU/(14266:14266): Tamanio maximo de segmentos = (null)
+[INFO] 03:32:42:742 CPU/(14266:14266): --------------------------------
+[INFO] 03:32:42:742 CPU/(14266:14266): ¡CPU iniciado correctamente!
+[TRACE] 03:32:42:742 CPU/(14266:14266): Listo para escuchar a mi cliente
+[INFO] 03:32:42:742 CPU/(14266:14266): Servidor listo para recibir al cliente
+[INFO] 03:32:42:742 CPU/(14266:14268): Conexion establecida con Memoria
+[TRACE] 03:32:43:399 CPU/(14266:14267): Se conecto un cliente!
+[TRACE] 03:32:43:399 CPU/(14266:14267): Me llego el mensaje: Conectado al Kernel
+[INFO] 03:35:28:352 CPU/(14684:14684): Logger creado
+[INFO] 03:35:28:353 CPU/(14684:14684): -------Valores del config-------
+[INFO] 03:35:28:353 CPU/(14684:14684): Retardo Instrucción = 1000
+[INFO] 03:35:28:353 CPU/(14684:14684): IP Memoria = 127.0.0.1
+[INFO] 03:35:28:353 CPU/(14684:14684): Puerto Memoria = 8003
+[INFO] 03:35:28:353 CPU/(14684:14684): Puerto Escucha = 8001
+[INFO] 03:35:28:354 CPU/(14684:14684): Tamanio maximo de segmentos = (null)
+[INFO] 03:35:28:354 CPU/(14684:14684): --------------------------------
+[INFO] 03:35:28:354 CPU/(14684:14684): ¡CPU iniciado correctamente!
+[TRACE] 03:35:28:354 CPU/(14684:14684): Listo para escuchar a mi cliente
+[INFO] 03:35:28:354 CPU/(14684:14684): Servidor listo para recibir al cliente
+[INFO] 03:35:28:354 CPU/(14684:14686): Conexion establecida con Memoria
+[TRACE] 03:35:28:873 CPU/(14684:14685): Se conecto un cliente!
+[TRACE] 03:35:28:874 CPU/(14684:14685): Me llego el mensaje: Conectado al Kernel
+[INFO] 03:35:44:926 CPU/(14684:14685): Comenzar ejecucion del proceso: 2604499170.
+[INFO] 03:38:09:753 CPU/(15085:15085): Logger creado
+[INFO] 03:38:09:754 CPU/(15085:15085): -------Valores del config-------
+[INFO] 03:38:09:754 CPU/(15085:15085): Retardo Instrucción = 1000
+[INFO] 03:38:09:754 CPU/(15085:15085): IP Memoria = 127.0.0.1
+[INFO] 03:38:09:754 CPU/(15085:15085): Puerto Memoria = 8003
+[INFO] 03:38:09:754 CPU/(15085:15085): Puerto Escucha = 8001
+[INFO] 03:38:09:754 CPU/(15085:15085): Tamanio maximo de segmentos = (null)
+[INFO] 03:38:09:754 CPU/(15085:15085): --------------------------------
+[INFO] 03:38:09:754 CPU/(15085:15085): ¡CPU iniciado correctamente!
+[TRACE] 03:38:09:754 CPU/(15085:15085): Listo para escuchar a mi cliente
+[INFO] 03:38:09:755 CPU/(15085:15085): Servidor listo para recibir al cliente
+[INFO] 03:38:09:755 CPU/(15085:15087): Conexion establecida con Memoria
+[TRACE] 03:38:11:422 CPU/(15085:15086): Se conecto un cliente!
+[TRACE] 03:38:11:423 CPU/(15085:15086): Me llego el mensaje: Conectado al Kernel
+[INFO] 03:38:13:385 CPU/(15085:15086): Comenzar ejecucion del proceso: 863950973.
+[INFO] 03:38:50:060 CPU/(15200:15200): Logger creado
+[INFO] 03:38:50:061 CPU/(15200:15200): -------Valores del config-------
+[INFO] 03:38:50:062 CPU/(15200:15200): Retardo Instrucción = 1000
+[INFO] 03:38:50:062 CPU/(15200:15200): IP Memoria = 127.0.0.1
+[INFO] 03:38:50:062 CPU/(15200:15200): Puerto Memoria = 8003
+[INFO] 03:38:50:062 CPU/(15200:15200): Puerto Escucha = 8001
+[INFO] 03:38:50:062 CPU/(15200:15200): Tamanio maximo de segmentos = (null)
+[INFO] 03:38:50:062 CPU/(15200:15200): --------------------------------
+[INFO] 03:38:50:062 CPU/(15200:15200): ¡CPU iniciado correctamente!
+[TRACE] 03:38:50:062 CPU/(15200:15200): Listo para escuchar a mi cliente
+[INFO] 03:38:50:062 CPU/(15200:15200): Servidor listo para recibir al cliente
+[INFO] 03:38:50:062 CPU/(15200:15202): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[TRACE] 03:38:50:511 CPU/(15200:15201): Se conecto un cliente!
+[TRACE] 03:38:50:511 CPU/(15200:15201): Me llego el mensaje: Conectado al Kernel
+[INFO] 03:38:51:063 CPU/(15200:15202): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 03:38:52:063 CPU/(15200:15202): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 03:38:53:063 CPU/(15200:15202): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 03:38:54:064 CPU/(15200:15202): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 03:38:55:064 CPU/(15200:15202): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 03:38:56:065 CPU/(15200:15202): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8003, reintentando...
+[INFO] 03:40:10:046 CPU/(15365:15365): Logger creado
+[INFO] 03:40:10:055 CPU/(15365:15365): -------Valores del config-------
+[INFO] 03:40:10:055 CPU/(15365:15365): Retardo Instrucción = 1000
+[INFO] 03:40:10:055 CPU/(15365:15365): IP Memoria = 127.0.0.1
+[INFO] 03:40:10:055 CPU/(15365:15365): Puerto Memoria = 8003
+[INFO] 03:40:10:055 CPU/(15365:15365): Puerto Escucha = 8001
+[INFO] 03:40:10:055 CPU/(15365:15365): Tamanio maximo de segmentos = (null)
+[INFO] 03:40:10:055 CPU/(15365:15365): --------------------------------
+[INFO] 03:40:10:055 CPU/(15365:15365): ¡CPU iniciado correctamente!
+[TRACE] 03:40:10:055 CPU/(15365:15365): Listo para escuchar a mi cliente
+[INFO] 03:40:10:055 CPU/(15365:15365): Servidor listo para recibir al cliente
+[INFO] 03:40:10:056 CPU/(15365:15367): Conexion establecida con Memoria
+[TRACE] 03:40:11:086 CPU/(15365:15366): Se conecto un cliente!
+[TRACE] 03:40:11:086 CPU/(15365:15366): Me llego el mensaje: Conectado al Kernel
+[TRACE] 03:40:21:083 CPU/(15365:15366): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:40:21:083 CPU/(15365:15366): Comenzar ejecucion del proceso: 5.
+[INFO] 03:40:21:083 CPU/(15365:15366): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 03:40:21:084 CPU/(15365:15366): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 03:40:21:084 CPU/(15365:15366): PID: 5 - Accion: Escribir 
+[INFO] 03:40:21:085 CPU/(15365:15366): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 03:40:21:085 CPU/(15365:15366): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:40:21:128 CPU/(15365:15366): Datos enviados correctamente
+[TRACE] 03:40:21:171 CPU/(15365:15366): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:40:21:171 CPU/(15365:15366): Comenzar ejecucion del proceso: 5.
+[INFO] 03:40:21:171 CPU/(15365:15366): PID: 5 - Ejecutando: I/O 10
+[TRACE] 03:40:21:171 CPU/(15365:15366): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:40:21:215 CPU/(15365:15366): Datos enviados correctamente
+[INFO] 03:41:53:735 CPU/(15365:15366): Comenzar ejecucion del proceso: 5.
+[INFO] 03:41:53:739 CPU/(15365:15366): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 03:41:53:739 CPU/(15365:15366): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:41:53:739 CPU/(15365:15366): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:41:53:739 CPU/(15365:15366): Comenzar ejecucion del proceso: 5.
+[INFO] 03:41:53:739 CPU/(15365:15366): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 03:41:53:739 CPU/(15365:15366): PID: 5 - Accion: Leer 
+[INFO] 03:41:53:739 CPU/(15365:15366): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 03:41:53:740 CPU/(15365:15366): PID: 5 - Ejecutando: YIELD
+[TRACE] 03:41:53:740 CPU/(15365:15366): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:41:53:740 CPU/(15365:15366): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:41:53:740 CPU/(15365:15366): Comenzar ejecucion del proceso: 5.
+[INFO] 03:41:53:740 CPU/(15365:15366): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 03:41:53:740 CPU/(15365:15366): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 03:41:53:740 CPU/(15365:15366): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 03:41:53:740 CPU/(15365:15366): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 03:41:53:740 CPU/(15365:15366): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 03:41:53:740 CPU/(15365:15366): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 03:41:53:740 CPU/(15365:15366): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 03:41:53:740 CPU/(15365:15366): PID: 5 - Ejecutando: EXIT
+[TRACE] 03:41:53:740 CPU/(15365:15366): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:41:53:740 CPU/(15365:15366): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:41:53:740 CPU/(15365:15366): Comenzar ejecucion del proceso: 5.
+[INFO] 03:47:02:977 CPU/(16425:16425): Logger creado
+[INFO] 03:47:02:978 CPU/(16425:16425): -------Valores del config-------
+[INFO] 03:47:02:978 CPU/(16425:16425): Retardo Instrucción = 1000
+[INFO] 03:47:02:978 CPU/(16425:16425): IP Memoria = 127.0.0.1
+[INFO] 03:47:02:978 CPU/(16425:16425): Puerto Memoria = 8003
+[INFO] 03:47:02:978 CPU/(16425:16425): Puerto Escucha = 8001
+[INFO] 03:47:02:978 CPU/(16425:16425): Tamanio maximo de segmentos = (null)
+[INFO] 03:47:02:978 CPU/(16425:16425): --------------------------------
+[INFO] 03:47:02:978 CPU/(16425:16425): ¡CPU iniciado correctamente!
+[TRACE] 03:47:02:978 CPU/(16425:16425): Listo para escuchar a mi cliente
+[INFO] 03:47:02:978 CPU/(16425:16425): Servidor listo para recibir al cliente
+[INFO] 03:47:02:979 CPU/(16425:16427): Conexion establecida con Memoria
+[TRACE] 03:47:05:138 CPU/(16425:16426): Se conecto un cliente!
+[TRACE] 03:47:05:138 CPU/(16425:16426): Me llego el mensaje: Conectado al Kernel
+[TRACE] 03:47:15:138 CPU/(16425:16426): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:47:15:138 CPU/(16425:16426): Comenzar ejecucion del proceso: 5.
+[INFO] 03:47:15:138 CPU/(16425:16426): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 03:47:15:139 CPU/(16425:16426): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 03:47:15:139 CPU/(16425:16426): PID: 5 - Accion: Escribir 
+[INFO] 03:47:15:139 CPU/(16425:16426): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 03:47:15:139 CPU/(16425:16426): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:47:15:180 CPU/(16425:16426): Datos enviados correctamente
+[TRACE] 03:47:15:223 CPU/(16425:16426): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:47:15:223 CPU/(16425:16426): Comenzar ejecucion del proceso: 5.
+[INFO] 03:47:15:223 CPU/(16425:16426): PID: 5 - Ejecutando: I/O 10
+[TRACE] 03:47:15:223 CPU/(16425:16426): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:47:15:267 CPU/(16425:16426): Datos enviados correctamente
+[INFO] 03:47:56:065 CPU/(16425:16426): Comenzar ejecucion del proceso: 5.
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 03:47:56:068 CPU/(16425:16426): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:47:56:068 CPU/(16425:16426): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:47:56:068 CPU/(16425:16426): Comenzar ejecucion del proceso: 5.
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Accion: Leer 
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: YIELD
+[TRACE] 03:47:56:068 CPU/(16425:16426): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:47:56:068 CPU/(16425:16426): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:47:56:068 CPU/(16425:16426): Comenzar ejecucion del proceso: 5.
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 03:47:56:068 CPU/(16425:16426): PID: 5 - Ejecutando: EXIT
+[TRACE] 03:47:56:068 CPU/(16425:16426): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:47:56:068 CPU/(16425:16426): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:47:56:068 CPU/(16425:16426): Comenzar ejecucion del proceso: 5.
+[INFO] 03:49:05:771 CPU/(16671:16671): Logger creado
+[INFO] 03:49:05:771 CPU/(16671:16671): -------Valores del config-------
+[INFO] 03:49:05:772 CPU/(16671:16671): Retardo Instrucción = 1000
+[INFO] 03:49:05:772 CPU/(16671:16671): IP Memoria = 127.0.0.1
+[INFO] 03:49:05:772 CPU/(16671:16671): Puerto Memoria = 8003
+[INFO] 03:49:05:772 CPU/(16671:16671): Puerto Escucha = 8001
+[INFO] 03:49:05:772 CPU/(16671:16671): Tamanio maximo de segmentos = (null)
+[INFO] 03:49:05:772 CPU/(16671:16671): --------------------------------
+[INFO] 03:49:05:772 CPU/(16671:16671): ¡CPU iniciado correctamente!
+[TRACE] 03:49:05:772 CPU/(16671:16671): Listo para escuchar a mi cliente
+[INFO] 03:49:05:772 CPU/(16671:16671): Servidor listo para recibir al cliente
+[INFO] 03:49:05:773 CPU/(16671:16673): Conexion establecida con Memoria
+[TRACE] 03:49:06:300 CPU/(16671:16672): Se conecto un cliente!
+[TRACE] 03:49:06:300 CPU/(16671:16672): Me llego el mensaje: Conectado al Kernel
+[TRACE] 03:49:16:300 CPU/(16671:16672): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:49:16:300 CPU/(16671:16672): Comenzar ejecucion del proceso: 5.
+[INFO] 03:49:16:300 CPU/(16671:16672): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 03:49:16:301 CPU/(16671:16672): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 03:49:16:301 CPU/(16671:16672): PID: 5 - Accion: Escribir 
+[INFO] 03:49:16:301 CPU/(16671:16672): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 03:49:16:301 CPU/(16671:16672): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:49:16:343 CPU/(16671:16672): Datos enviados correctamente
+[TRACE] 03:49:16:387 CPU/(16671:16672): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:49:16:387 CPU/(16671:16672): Comenzar ejecucion del proceso: 5.
+[INFO] 03:49:16:387 CPU/(16671:16672): PID: 5 - Ejecutando: I/O 10
+[TRACE] 03:49:16:387 CPU/(16671:16672): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:49:16:432 CPU/(16671:16672): Datos enviados correctamente
+[INFO] 03:50:01:450 CPU/(16671:16672): Comenzar ejecucion del proceso: 5.
+[INFO] 03:50:01:452 CPU/(16671:16672): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 03:50:01:456 CPU/(16671:16672): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:50:01:456 CPU/(16671:16672): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:50:01:456 CPU/(16671:16672): Comenzar ejecucion del proceso: 5.
+[INFO] 03:50:01:456 CPU/(16671:16672): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 03:50:01:456 CPU/(16671:16672): PID: 5 - Accion: Leer 
+[INFO] 03:50:01:456 CPU/(16671:16672): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 03:50:01:456 CPU/(16671:16672): PID: 5 - Ejecutando: YIELD
+[TRACE] 03:50:01:456 CPU/(16671:16672): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:50:01:456 CPU/(16671:16672): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:50:01:456 CPU/(16671:16672): Comenzar ejecucion del proceso: 5.
+[INFO] 03:50:01:456 CPU/(16671:16672): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 03:50:01:457 CPU/(16671:16672): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 03:50:01:457 CPU/(16671:16672): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 03:50:01:457 CPU/(16671:16672): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 03:50:01:457 CPU/(16671:16672): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 03:50:01:457 CPU/(16671:16672): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 03:50:01:457 CPU/(16671:16672): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 03:50:01:457 CPU/(16671:16672): PID: 5 - Ejecutando: EXIT
+[TRACE] 03:50:01:457 CPU/(16671:16672): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 03:50:01:457 CPU/(16671:16672): Han llegado menos bytes que los enviados por Kernel
+[INFO] 03:50:01:457 CPU/(16671:16672): Comenzar ejecucion del proceso: 5.
+[INFO] 03:51:35:812 CPU/(17115:17115): Logger creado
+[INFO] 03:51:35:813 CPU/(17115:17115): -------Valores del config-------
+[INFO] 03:51:35:813 CPU/(17115:17115): Retardo Instrucción = 1000
+[INFO] 03:51:35:813 CPU/(17115:17115): IP Memoria = 127.0.0.1
+[INFO] 03:51:35:813 CPU/(17115:17115): Puerto Memoria = 8003
+[INFO] 03:51:35:813 CPU/(17115:17115): Puerto Escucha = 8001
+[INFO] 03:51:35:814 CPU/(17115:17115): Tamanio maximo de segmentos = (null)
+[INFO] 03:51:35:814 CPU/(17115:17115): --------------------------------
+[INFO] 03:51:35:814 CPU/(17115:17115): ¡CPU iniciado correctamente!
+[TRACE] 03:51:35:814 CPU/(17115:17115): Listo para escuchar a mi cliente
+[INFO] 03:51:35:814 CPU/(17115:17115): Servidor listo para recibir al cliente
+[INFO] 03:51:35:814 CPU/(17115:17117): Conexion establecida con Memoria
+[TRACE] 03:51:37:996 CPU/(17115:17116): Se conecto un cliente!
+[TRACE] 03:51:37:996 CPU/(17115:17116): Me llego el mensaje: Conectado al Kernel
+[TRACE] 03:51:47:996 CPU/(17115:17116): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:51:47:996 CPU/(17115:17116): Comenzar ejecucion del proceso: 5.
+[INFO] 03:51:47:996 CPU/(17115:17116): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 03:51:47:997 CPU/(17115:17116): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 03:51:47:997 CPU/(17115:17116): PID: 5 - Accion: Escribir 
+[INFO] 03:51:47:997 CPU/(17115:17116): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 03:51:47:998 CPU/(17115:17116): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:51:48:040 CPU/(17115:17116): Datos enviados correctamente
+[TRACE] 03:51:48:084 CPU/(17115:17116): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:51:48:084 CPU/(17115:17116): Comenzar ejecucion del proceso: 5.
+[INFO] 03:51:48:084 CPU/(17115:17116): PID: 5 - Ejecutando: I/O 10
+[TRACE] 03:51:48:084 CPU/(17115:17116): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:51:48:128 CPU/(17115:17116): Datos enviados correctamente
+[TRACE] 03:51:58:128 CPU/(17115:17116): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:51:58:128 CPU/(17115:17116): Comenzar ejecucion del proceso: 5.
+[INFO] 03:51:58:129 CPU/(17115:17116): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 03:51:58:129 CPU/(17115:17116): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:51:58:171 CPU/(17115:17116): Datos enviados correctamente
+[TRACE] 03:51:58:215 CPU/(17115:17116): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:51:58:215 CPU/(17115:17116): Comenzar ejecucion del proceso: 5.
+[INFO] 03:51:58:215 CPU/(17115:17116): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 03:51:58:215 CPU/(17115:17116): PID: 5 - Accion: Leer 
+[INFO] 03:51:58:215 CPU/(17115:17116): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 03:51:58:215 CPU/(17115:17116): PID: 5 - Ejecutando: YIELD
+[TRACE] 03:51:58:215 CPU/(17115:17116): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:51:58:260 CPU/(17115:17116): Datos enviados correctamente
+[TRACE] 03:51:58:303 CPU/(17115:17116): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:51:58:303 CPU/(17115:17116): Comenzar ejecucion del proceso: 5.
+[INFO] 03:51:58:303 CPU/(17115:17116): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 03:51:58:303 CPU/(17115:17116): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 03:51:58:303 CPU/(17115:17116): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 03:51:58:303 CPU/(17115:17116): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 03:51:58:303 CPU/(17115:17116): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 03:51:58:303 CPU/(17115:17116): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 03:51:58:303 CPU/(17115:17116): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 03:51:58:303 CPU/(17115:17116): PID: 5 - Ejecutando: EXIT
+[TRACE] 03:51:58:303 CPU/(17115:17116): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:51:58:348 CPU/(17115:17116): Datos enviados correctamente
+[INFO] 03:51:58:579 CPU/(17115:17116): Comenzar ejecucion del proceso: 5.
+[INFO] 03:54:52:167 CPU/(17473:17473): Logger creado
+[INFO] 03:54:52:168 CPU/(17473:17473): -------Valores del config-------
+[INFO] 03:54:52:168 CPU/(17473:17473): Retardo Instrucción = 1000
+[INFO] 03:54:52:169 CPU/(17473:17473): IP Memoria = 127.0.0.1
+[INFO] 03:54:52:169 CPU/(17473:17473): Puerto Memoria = 8003
+[INFO] 03:54:52:169 CPU/(17473:17473): Puerto Escucha = 8001
+[INFO] 03:54:52:169 CPU/(17473:17473): Tamanio maximo de segmentos = (null)
+[INFO] 03:54:52:169 CPU/(17473:17473): --------------------------------
+[INFO] 03:54:52:169 CPU/(17473:17473): ¡CPU iniciado correctamente!
+[TRACE] 03:54:52:169 CPU/(17473:17473): Listo para escuchar a mi cliente
+[INFO] 03:54:52:169 CPU/(17473:17473): Servidor listo para recibir al cliente
+[INFO] 03:54:52:169 CPU/(17473:17475): Conexion establecida con Memoria
+[TRACE] 03:54:52:727 CPU/(17473:17474): Se conecto un cliente!
+[TRACE] 03:54:52:727 CPU/(17473:17474): Me llego el mensaje: Conectado al Kernel
+[TRACE] 03:55:02:728 CPU/(17473:17474): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:55:02:728 CPU/(17473:17474): Comenzar ejecucion del proceso: 5.
+[INFO] 03:55:02:728 CPU/(17473:17474): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 03:55:02:729 CPU/(17473:17474): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 03:55:02:729 CPU/(17473:17474): PID: 5 - Accion: Escribir 
+[INFO] 03:55:02:729 CPU/(17473:17474): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 03:55:02:729 CPU/(17473:17474): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:55:02:771 CPU/(17473:17474): Datos enviados correctamente
+[TRACE] 03:55:02:816 CPU/(17473:17474): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:55:02:816 CPU/(17473:17474): Comenzar ejecucion del proceso: 5.
+[INFO] 03:55:02:816 CPU/(17473:17474): PID: 5 - Ejecutando: I/O 10
+[TRACE] 03:55:02:816 CPU/(17473:17474): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:55:02:859 CPU/(17473:17474): Datos enviados correctamente
+[TRACE] 03:55:12:860 CPU/(17473:17474): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:55:12:860 CPU/(17473:17474): Comenzar ejecucion del proceso: 5.
+[INFO] 03:55:12:860 CPU/(17473:17474): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 03:55:12:860 CPU/(17473:17474): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:55:12:904 CPU/(17473:17474): Datos enviados correctamente
+[TRACE] 03:55:12:948 CPU/(17473:17474): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:55:12:948 CPU/(17473:17474): Comenzar ejecucion del proceso: 5.
+[INFO] 03:55:12:948 CPU/(17473:17474): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 03:55:12:948 CPU/(17473:17474): PID: 5 - Accion: Leer 
+[INFO] 03:55:12:948 CPU/(17473:17474): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 03:55:12:948 CPU/(17473:17474): PID: 5 - Ejecutando: YIELD
+[TRACE] 03:55:12:948 CPU/(17473:17474): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:55:12:992 CPU/(17473:17474): Datos enviados correctamente
+[TRACE] 03:55:13:035 CPU/(17473:17474): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:55:13:035 CPU/(17473:17474): Comenzar ejecucion del proceso: 5.
+[INFO] 03:55:13:035 CPU/(17473:17474): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 03:55:13:036 CPU/(17473:17474): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 03:55:13:036 CPU/(17473:17474): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 03:55:13:036 CPU/(17473:17474): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 03:55:13:036 CPU/(17473:17474): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 03:55:13:036 CPU/(17473:17474): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 03:55:13:036 CPU/(17473:17474): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 03:55:13:036 CPU/(17473:17474): PID: 5 - Ejecutando: EXIT
+[TRACE] 03:55:13:036 CPU/(17473:17474): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:55:13:081 CPU/(17473:17474): Datos enviados correctamente
+[INFO] 03:58:08:125 CPU/(17883:17883): Logger creado
+[INFO] 03:58:08:126 CPU/(17883:17883): -------Valores del config-------
+[INFO] 03:58:08:126 CPU/(17883:17883): Retardo Instrucción = 1000
+[INFO] 03:58:08:126 CPU/(17883:17883): IP Memoria = 127.0.0.1
+[INFO] 03:58:08:126 CPU/(17883:17883): Puerto Memoria = 8003
+[INFO] 03:58:08:126 CPU/(17883:17883): Puerto Escucha = 8001
+[INFO] 03:58:08:126 CPU/(17883:17883): Tamanio maximo de segmentos = (null)
+[INFO] 03:58:08:126 CPU/(17883:17883): --------------------------------
+[INFO] 03:58:08:126 CPU/(17883:17883): ¡CPU iniciado correctamente!
+[TRACE] 03:58:08:126 CPU/(17883:17883): Listo para escuchar a mi cliente
+[INFO] 03:58:08:126 CPU/(17883:17883): Servidor listo para recibir al cliente
+[INFO] 03:58:08:126 CPU/(17883:17885): Conexion establecida con Memoria
+[TRACE] 03:58:08:758 CPU/(17883:17884): Se conecto un cliente!
+[TRACE] 03:58:08:758 CPU/(17883:17884): Me llego el mensaje: Conectado al Kernel
+[TRACE] 03:58:18:758 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:58:18:758 CPU/(17883:17884): Comenzar ejecucion del proceso: 5.
+[INFO] 03:58:18:758 CPU/(17883:17884): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 03:58:18:759 CPU/(17883:17884): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 03:58:18:759 CPU/(17883:17884): PID: 5 - Accion: Escribir 
+[INFO] 03:58:18:759 CPU/(17883:17884): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 03:58:18:759 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:18:799 CPU/(17883:17884): Datos enviados correctamente
+[TRACE] 03:58:18:844 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 9
+[INFO] 03:58:18:844 CPU/(17883:17884): Comenzar ejecucion del proceso: 9.
+[INFO] 03:58:18:844 CPU/(17883:17884): PID: 9 - Ejecutando: SET AX HOLA
+[INFO] 03:58:18:845 CPU/(17883:17884): PID: 9 - Ejecutando: MOV_OUT 120 AX
+[INFO] 03:58:18:845 CPU/(17883:17884): PID: 9 - Accion: Escribir 
+[INFO] 03:58:18:845 CPU/(17883:17884): PID: 9 - Ejecutando: WAIT DISCO
+[TRACE] 03:58:18:845 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:18:887 CPU/(17883:17884): Datos enviados correctamente
+[TRACE] 03:58:18:932 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:58:18:932 CPU/(17883:17884): Comenzar ejecucion del proceso: 5.
+[INFO] 03:58:18:932 CPU/(17883:17884): PID: 5 - Ejecutando: I/O 10
+[TRACE] 03:58:18:932 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:18:975 CPU/(17883:17884): Datos enviados correctamente
+[TRACE] 03:58:28:976 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:58:28:976 CPU/(17883:17884): Comenzar ejecucion del proceso: 5.
+[INFO] 03:58:28:976 CPU/(17883:17884): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 03:58:28:976 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:29:020 CPU/(17883:17884): Datos enviados correctamente
+[TRACE] 03:58:29:063 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:58:29:063 CPU/(17883:17884): Comenzar ejecucion del proceso: 5.
+[INFO] 03:58:29:063 CPU/(17883:17884): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 03:58:29:063 CPU/(17883:17884): PID: 5 - Accion: Leer 
+[INFO] 03:58:29:063 CPU/(17883:17884): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 03:58:29:063 CPU/(17883:17884): PID: 5 - Ejecutando: YIELD
+[TRACE] 03:58:29:064 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:29:108 CPU/(17883:17884): Datos enviados correctamente
+[TRACE] 03:58:29:151 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 9
+[INFO] 03:58:29:151 CPU/(17883:17884): Comenzar ejecucion del proceso: 9.
+[INFO] 03:58:29:151 CPU/(17883:17884): PID: 9 - Ejecutando: I/O 10
+[TRACE] 03:58:29:151 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:29:196 CPU/(17883:17884): Datos enviados correctamente
+[TRACE] 03:58:29:240 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:58:29:240 CPU/(17883:17884): Comenzar ejecucion del proceso: 5.
+[INFO] 03:58:29:240 CPU/(17883:17884): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 03:58:29:240 CPU/(17883:17884): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 03:58:29:240 CPU/(17883:17884): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 03:58:29:240 CPU/(17883:17884): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 03:58:29:240 CPU/(17883:17884): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 03:58:29:240 CPU/(17883:17884): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 03:58:29:240 CPU/(17883:17884): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 03:58:29:240 CPU/(17883:17884): PID: 5 - Ejecutando: EXIT
+[TRACE] 03:58:29:240 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:29:284 CPU/(17883:17884): Datos enviados correctamente
+[TRACE] 03:58:39:196 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 9
+[INFO] 03:58:39:196 CPU/(17883:17884): Comenzar ejecucion del proceso: 9.
+[INFO] 03:58:39:196 CPU/(17883:17884): PID: 9 - Ejecutando: SIGNAL DISCO
+[TRACE] 03:58:39:196 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:39:240 CPU/(17883:17884): Datos enviados correctamente
+[TRACE] 03:58:39:283 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 9
+[INFO] 03:58:39:283 CPU/(17883:17884): Comenzar ejecucion del proceso: 9.
+[INFO] 03:58:39:283 CPU/(17883:17884): PID: 9 - Ejecutando: MOV_IN BX 120
+[INFO] 03:58:39:283 CPU/(17883:17884): PID: 9 - Accion: Leer 
+[INFO] 03:58:39:283 CPU/(17883:17884): PID: 9 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 03:58:39:284 CPU/(17883:17884): PID: 9 - Ejecutando: YIELD
+[TRACE] 03:58:39:284 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:39:327 CPU/(17883:17884): Datos enviados correctamente
+[TRACE] 03:58:39:371 CPU/(17883:17884): Recibi contexto de ejecucion - PID: 9
+[INFO] 03:58:39:371 CPU/(17883:17884): Comenzar ejecucion del proceso: 9.
+[INFO] 03:58:39:371 CPU/(17883:17884): PID: 9 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 03:58:39:371 CPU/(17883:17884): PID: 9 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 03:58:39:371 CPU/(17883:17884): PID: 9 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 03:58:39:371 CPU/(17883:17884): PID: 9 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 03:58:39:371 CPU/(17883:17884): PID: 9 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 03:58:39:371 CPU/(17883:17884): PID: 9 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 03:58:39:371 CPU/(17883:17884): PID: 9 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 03:58:39:371 CPU/(17883:17884): PID: 9 - Ejecutando: EXIT
+[TRACE] 03:58:39:371 CPU/(17883:17884): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:58:39:416 CPU/(17883:17884): Datos enviados correctamente
+[INFO] 03:59:05:120 CPU/(17883:17884): Comenzar ejecucion del proceso: 9.
+[INFO] 04:04:21:677 CPU/(18822:18822): Logger creado
+[INFO] 04:04:21:678 CPU/(18822:18822): -------Valores del config-------
+[INFO] 04:04:21:678 CPU/(18822:18822): Retardo Instrucción = 1000
+[INFO] 04:04:21:678 CPU/(18822:18822): IP Memoria = 127.0.0.1
+[INFO] 04:04:21:678 CPU/(18822:18822): Puerto Memoria = 8003
+[INFO] 04:04:21:678 CPU/(18822:18822): Puerto Escucha = 8001
+[INFO] 04:04:21:679 CPU/(18822:18822): Tamanio maximo de segmentos = (null)
+[INFO] 04:04:21:679 CPU/(18822:18822): --------------------------------
+[INFO] 04:04:21:679 CPU/(18822:18822): ¡CPU iniciado correctamente!
+[TRACE] 04:04:21:679 CPU/(18822:18822): Listo para escuchar a mi cliente
+[INFO] 04:04:21:679 CPU/(18822:18822): Servidor listo para recibir al cliente
+[INFO] 04:04:21:679 CPU/(18822:18824): Conexion establecida con Memoria
+[TRACE] 04:04:24:466 CPU/(18822:18823): Se conecto un cliente!
+[TRACE] 04:04:24:473 CPU/(18822:18823): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:04:34:466 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:04:34:466 CPU/(18822:18823): Comenzar ejecucion del proceso: 5.
+[INFO] 04:04:34:466 CPU/(18822:18823): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:04:34:467 CPU/(18822:18823): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:467 CPU/(18822:18823): PID: 5 - Accion: Escribir 
+[INFO] 04:04:34:467 CPU/(18822:18823): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 04:04:34:467 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:34:508 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:34:552 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:04:34:552 CPU/(18822:18823): Comenzar ejecucion del proceso: 9.
+[INFO] 04:04:34:552 CPU/(18822:18823): PID: 9 - Ejecutando: SET AX HOLA
+[INFO] 04:04:34:553 CPU/(18822:18823): PID: 9 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:553 CPU/(18822:18823): PID: 9 - Accion: Escribir 
+[INFO] 04:04:34:553 CPU/(18822:18823): PID: 9 - Ejecutando: WAIT DISCO
+[TRACE] 04:04:34:553 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:34:596 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:34:640 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 10
+[INFO] 04:04:34:640 CPU/(18822:18823): Comenzar ejecucion del proceso: 10.
+[INFO] 04:04:34:640 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:641 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:641 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:641 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:641 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:641 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:641 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:642 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:642 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:642 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:643 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:643 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:643 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:643 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:643 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:643 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:644 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:644 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:644 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:646 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:646 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:646 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:646 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:646 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:646 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:647 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:647 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:647 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:648 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:648 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:648 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:648 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:648 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:648 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:649 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:649 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:649 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:651 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:651 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:651 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:651 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:651 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:651 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:652 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:652 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:652 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:653 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:653 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:653 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:653 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:653 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:653 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:654 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:654 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:655 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:658 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:658 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:658 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:658 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:658 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:658 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:660 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:660 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:660 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:661 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:661 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:661 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:661 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:661 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:661 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:662 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:662 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:662 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:663 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:663 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:664 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:664 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:664 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:664 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:666 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:666 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:666 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:667 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:667 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:667 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:667 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:667 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:667 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:668 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:668 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:668 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:670 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:670 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:670 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:670 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:670 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:670 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:671 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:671 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:671 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:673 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:673 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:673 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:673 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:673 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:673 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:675 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:675 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:675 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:676 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:676 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:676 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:676 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:676 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:676 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:678 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:678 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:678 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:680 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:680 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:681 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:681 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:681 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:681 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:682 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:682 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:682 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:683 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:683 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:683 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:683 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:683 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:683 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:684 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:684 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:684 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:685 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:685 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:685 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:686 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:686 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:686 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:687 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:687 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:687 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:688 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:688 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:688 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:688 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:688 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:688 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:690 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:690 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:690 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:693 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:693 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:693 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:693 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:693 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:693 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:695 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:695 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:695 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:697 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:697 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:697 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:697 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:697 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:697 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:698 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:698 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:698 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:700 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:700 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:700 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:700 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:700 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:700 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:701 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:701 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:701 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:702 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:702 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:702 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:703 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:703 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:703 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:704 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:704 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:704 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:705 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:705 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:705 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:705 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:705 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:705 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:706 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:706 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:706 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:707 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:708 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:708 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:708 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:708 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:708 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:709 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:709 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:709 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:710 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:710 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:710 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:710 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:710 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:710 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:712 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:712 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:712 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:714 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:714 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:714 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:714 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:714 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:714 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:715 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:715 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:715 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:716 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:716 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:717 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:717 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:717 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:717 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:718 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:718 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:718 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:720 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:720 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:720 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:720 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:720 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:720 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:722 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:722 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:722 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:723 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:723 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:723 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:723 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:723 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:723 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:725 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:725 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:725 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:728 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:728 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:728 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:728 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:728 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:728 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:729 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:729 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:729 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:731 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:731 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:731 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:731 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:731 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:731 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:732 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:732 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:732 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:734 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:734 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:734 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:734 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:734 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:734 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:737 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:738 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:738 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:739 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:739 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:739 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:739 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:739 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:739 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:740 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:740 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:740 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:742 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:742 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:742 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:742 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:742 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:742 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:744 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:744 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:744 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:746 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:746 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:746 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:746 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:746 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:746 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:747 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:747 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:747 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:748 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:748 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:748 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:749 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:749 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:749 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:750 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:750 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:750 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:752 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:752 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:752 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:752 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:752 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:752 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:754 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:754 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:754 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:755 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:755 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:755 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:755 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:755 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:755 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:757 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:758 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:758 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:760 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:760 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:760 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:760 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:760 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:760 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:762 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:762 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:762 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:763 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:763 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:763 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:763 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:763 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:763 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:765 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:765 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:765 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:767 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:767 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:767 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:34:767 CPU/(18822:18823): PID: 10 - Accion: Leer 
+[INFO] 04:04:34:767 CPU/(18822:18823): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:34:767 CPU/(18822:18823): PID: 10 - Ejecutando: SET AX VAAAA
+[INFO] 04:04:34:768 CPU/(18822:18823): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:768 CPU/(18822:18823): PID: 10 - Accion: Escribir 
+[INFO] 04:04:34:769 CPU/(18822:18823): PID: 10 - Ejecutando: YIELD
+[TRACE] 04:04:34:769 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:34:769 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:34:811 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 11
+[INFO] 04:04:34:811 CPU/(18822:18823): Comenzar ejecucion del proceso: 11.
+[INFO] 04:04:34:811 CPU/(18822:18823): PID: 11 - Ejecutando: SET AX PERO
+[INFO] 04:04:34:812 CPU/(18822:18823): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:04:34:813 CPU/(18822:18823): PID: 11 - Accion: Escribir 
+[INFO] 04:04:34:813 CPU/(18822:18823): PID: 11 - Ejecutando: WAIT DISCO
+[TRACE] 04:04:34:813 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:34:856 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:34:899 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:04:34:899 CPU/(18822:18823): Comenzar ejecucion del proceso: 5.
+[INFO] 04:04:34:899 CPU/(18822:18823): PID: 5 - Ejecutando: I/O 10
+[TRACE] 04:04:34:899 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:34:944 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:34:988 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 10
+[INFO] 04:04:34:988 CPU/(18822:18823): Comenzar ejecucion del proceso: 10.
+[INFO] 04:04:34:988 CPU/(18822:18823): PID: 10 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 04:04:34:988 CPU/(18822:18823): PID: 10 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 04:04:34:988 CPU/(18822:18823): PID: 10 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 04:04:34:988 CPU/(18822:18823): PID: 10 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 04:04:34:988 CPU/(18822:18823): PID: 10 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 04:04:34:988 CPU/(18822:18823): PID: 10 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 04:04:34:988 CPU/(18822:18823): PID: 10 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 04:04:34:988 CPU/(18822:18823): PID: 10 - Ejecutando: EXIT
+[TRACE] 04:04:34:988 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:35:033 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:44:944 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:04:44:944 CPU/(18822:18823): Comenzar ejecucion del proceso: 5.
+[INFO] 04:04:44:944 CPU/(18822:18823): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 04:04:44:944 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:44:988 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:45:032 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:04:45:032 CPU/(18822:18823): Comenzar ejecucion del proceso: 5.
+[INFO] 04:04:45:032 CPU/(18822:18823): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:45:032 CPU/(18822:18823): PID: 5 - Accion: Leer 
+[INFO] 04:04:45:032 CPU/(18822:18823): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:45:032 CPU/(18822:18823): PID: 5 - Ejecutando: YIELD
+[TRACE] 04:04:45:032 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:45:077 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:45:120 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:04:45:120 CPU/(18822:18823): Comenzar ejecucion del proceso: 9.
+[INFO] 04:04:45:120 CPU/(18822:18823): PID: 9 - Ejecutando: I/O 10
+[TRACE] 04:04:45:120 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:45:163 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:45:207 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:04:45:207 CPU/(18822:18823): Comenzar ejecucion del proceso: 5.
+[INFO] 04:04:45:207 CPU/(18822:18823): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 04:04:45:207 CPU/(18822:18823): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 04:04:45:207 CPU/(18822:18823): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 04:04:45:207 CPU/(18822:18823): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 04:04:45:207 CPU/(18822:18823): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 04:04:45:207 CPU/(18822:18823): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 04:04:45:207 CPU/(18822:18823): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 04:04:45:207 CPU/(18822:18823): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:04:45:207 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:45:252 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:55:164 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:04:55:164 CPU/(18822:18823): Comenzar ejecucion del proceso: 9.
+[INFO] 04:04:55:164 CPU/(18822:18823): PID: 9 - Ejecutando: SIGNAL DISCO
+[TRACE] 04:04:55:164 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:55:207 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:55:252 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:04:55:252 CPU/(18822:18823): Comenzar ejecucion del proceso: 9.
+[INFO] 04:04:55:252 CPU/(18822:18823): PID: 9 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:55:252 CPU/(18822:18823): PID: 9 - Accion: Leer 
+[INFO] 04:04:55:252 CPU/(18822:18823): PID: 9 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:55:252 CPU/(18822:18823): PID: 9 - Ejecutando: YIELD
+[TRACE] 04:04:55:252 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:55:296 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:55:339 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 11
+[INFO] 04:04:55:340 CPU/(18822:18823): Comenzar ejecucion del proceso: 11.
+[INFO] 04:04:55:340 CPU/(18822:18823): PID: 11 - Ejecutando: I/O 1
+[TRACE] 04:04:55:340 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:55:384 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:55:428 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:04:55:428 CPU/(18822:18823): Comenzar ejecucion del proceso: 9.
+[INFO] 04:04:55:428 CPU/(18822:18823): PID: 9 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 04:04:55:428 CPU/(18822:18823): PID: 9 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 04:04:55:428 CPU/(18822:18823): PID: 9 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 04:04:55:428 CPU/(18822:18823): PID: 9 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 04:04:55:428 CPU/(18822:18823): PID: 9 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 04:04:55:428 CPU/(18822:18823): PID: 9 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 04:04:55:428 CPU/(18822:18823): PID: 9 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 04:04:55:428 CPU/(18822:18823): PID: 9 - Ejecutando: EXIT
+[TRACE] 04:04:55:428 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:55:474 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:56:384 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 11
+[INFO] 04:04:56:384 CPU/(18822:18823): Comenzar ejecucion del proceso: 11.
+[INFO] 04:04:56:384 CPU/(18822:18823): PID: 11 - Ejecutando: SIGNAL DISCO
+[TRACE] 04:04:56:384 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:56:427 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:56:473 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 11
+[INFO] 04:04:56:473 CPU/(18822:18823): Comenzar ejecucion del proceso: 11.
+[INFO] 04:04:56:473 CPU/(18822:18823): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:04:56:473 CPU/(18822:18823): PID: 11 - Accion: Leer 
+[INFO] 04:04:56:473 CPU/(18822:18823): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:04:56:473 CPU/(18822:18823): PID: 11 - Ejecutando: YIELD
+[TRACE] 04:04:56:473 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:56:516 CPU/(18822:18823): Datos enviados correctamente
+[TRACE] 04:04:56:559 CPU/(18822:18823): Recibi contexto de ejecucion - PID: 11
+[INFO] 04:04:56:559 CPU/(18822:18823): Comenzar ejecucion del proceso: 11.
+[INFO] 04:04:56:559 CPU/(18822:18823): PID: 11 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 04:04:56:559 CPU/(18822:18823): PID: 11 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 04:04:56:559 CPU/(18822:18823): PID: 11 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 04:04:56:559 CPU/(18822:18823): PID: 11 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 04:04:56:559 CPU/(18822:18823): PID: 11 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 04:04:56:559 CPU/(18822:18823): PID: 11 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 04:04:56:559 CPU/(18822:18823): PID: 11 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 04:04:56:559 CPU/(18822:18823): PID: 11 - Ejecutando: EXIT
+[TRACE] 04:04:56:559 CPU/(18822:18823): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:04:56:604 CPU/(18822:18823): Datos enviados correctamente
+[INFO] 04:05:04:053 CPU/(18822:18823): Comenzar ejecucion del proceso: 11.
+[INFO] 04:07:38:719 CPU/(19319:19319): Logger creado
+[INFO] 04:07:38:720 CPU/(19319:19319): -------Valores del config-------
+[INFO] 04:07:38:720 CPU/(19319:19319): Retardo Instrucción = 1000
+[INFO] 04:07:38:720 CPU/(19319:19319): IP Memoria = 127.0.0.1
+[INFO] 04:07:38:721 CPU/(19319:19319): Puerto Memoria = 8003
+[INFO] 04:07:38:721 CPU/(19319:19319): Puerto Escucha = 8001
+[INFO] 04:07:38:721 CPU/(19319:19319): Tamanio maximo de segmentos = (null)
+[INFO] 04:07:38:721 CPU/(19319:19319): --------------------------------
+[INFO] 04:07:38:721 CPU/(19319:19319): ¡CPU iniciado correctamente!
+[TRACE] 04:07:38:721 CPU/(19319:19319): Listo para escuchar a mi cliente
+[INFO] 04:07:38:721 CPU/(19319:19319): Servidor listo para recibir al cliente
+[INFO] 04:07:38:721 CPU/(19319:19321): Conexion establecida con Memoria
+[TRACE] 04:07:39:466 CPU/(19319:19320): Se conecto un cliente!
+[TRACE] 04:07:39:466 CPU/(19319:19320): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:07:49:466 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:07:49:466 CPU/(19319:19320): Comenzar ejecucion del proceso: 5.
+[INFO] 04:07:49:466 CPU/(19319:19320): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:07:49:467 CPU/(19319:19320): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:467 CPU/(19319:19320): PID: 5 - Accion: Escribir 
+[INFO] 04:07:49:467 CPU/(19319:19320): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 04:07:49:467 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:07:49:508 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:07:49:552 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:07:49:552 CPU/(19319:19320): Comenzar ejecucion del proceso: 9.
+[INFO] 04:07:49:552 CPU/(19319:19320): PID: 9 - Ejecutando: SET AX HOLA
+[INFO] 04:07:49:553 CPU/(19319:19320): PID: 9 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:553 CPU/(19319:19320): PID: 9 - Accion: Escribir 
+[INFO] 04:07:49:553 CPU/(19319:19320): PID: 9 - Ejecutando: WAIT DISCO
+[TRACE] 04:07:49:553 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:07:49:596 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:07:49:639 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 10
+[INFO] 04:07:49:639 CPU/(19319:19320): Comenzar ejecucion del proceso: 10.
+[INFO] 04:07:49:639 CPU/(19319:19320): PID: 10 - Ejecutando: SET AX HOLA
+[INFO] 04:07:49:640 CPU/(19319:19320): PID: 10 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:640 CPU/(19319:19320): PID: 10 - Accion: Escribir 
+[INFO] 04:07:49:640 CPU/(19319:19320): PID: 10 - Ejecutando: WAIT DISCO
+[TRACE] 04:07:49:640 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:07:49:684 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:07:49:727 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 11
+[INFO] 04:07:49:727 CPU/(19319:19320): Comenzar ejecucion del proceso: 11.
+[INFO] 04:07:49:727 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:728 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:729 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:729 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:729 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:729 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:729 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:730 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:730 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:730 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:731 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:731 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:731 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:731 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:731 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:731 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:732 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:732 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:732 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:734 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:734 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:734 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:734 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:734 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:734 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:735 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:735 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:735 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:736 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:736 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:736 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:736 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:736 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:736 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:737 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:737 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:737 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:739 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:739 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:739 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:739 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:739 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:739 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:740 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:740 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:740 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:742 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:742 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:742 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:742 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:742 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:742 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:744 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:744 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:744 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:745 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:745 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:745 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:745 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:745 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:745 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:747 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:747 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:747 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:748 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:748 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:748 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:748 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:748 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:748 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:750 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:750 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:750 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:751 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:751 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:751 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:751 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:751 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:751 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:753 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:753 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:753 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:754 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:754 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:754 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:754 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:754 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:754 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:755 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:755 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:755 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:757 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:757 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:757 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:757 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:757 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:757 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:758 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:758 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:758 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:759 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:759 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:759 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:759 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:760 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:760 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:762 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:762 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:762 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:765 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:765 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:765 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:765 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:765 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:765 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:767 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:767 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:767 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:768 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:768 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:768 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:768 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:768 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:768 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:770 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:770 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:770 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:772 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:772 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:772 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:772 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:772 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:772 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:774 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:774 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:774 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:775 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:775 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:775 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:775 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:775 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:775 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:776 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:776 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:776 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:778 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:778 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:778 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:778 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:779 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:779 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:780 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:780 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:780 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:781 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:781 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:781 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:781 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:781 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:781 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:783 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:783 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:783 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:784 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:784 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:784 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:784 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:784 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:784 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:786 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:786 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:786 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:787 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:787 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:787 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:787 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:787 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:787 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:788 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:789 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:789 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:790 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:790 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:790 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:790 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:790 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:790 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:791 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:791 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:791 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:794 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:794 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:794 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:794 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:794 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:794 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:797 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:797 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:797 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:798 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:798 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:798 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:798 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:798 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:798 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:799 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:799 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:799 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:801 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:801 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:801 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:801 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:801 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:801 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:803 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:803 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:803 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:804 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:804 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:804 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:804 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:804 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:804 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:806 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:806 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:806 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:808 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:808 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:808 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:808 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:808 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:808 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:809 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:809 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:809 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:812 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:812 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:812 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:812 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:812 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:812 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:813 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:813 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:813 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:815 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:815 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:815 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:815 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:815 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:815 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:816 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:816 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:816 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:818 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:818 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:818 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:818 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:818 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:818 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:820 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:820 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:820 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:821 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:821 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:821 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:821 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:821 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:821 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:822 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:822 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:822 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:823 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:824 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:824 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:824 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:824 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:824 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:825 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:825 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:825 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:826 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:826 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:826 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:826 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:826 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:826 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:828 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:828 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:828 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:829 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:829 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:829 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:829 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:829 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:829 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:833 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:833 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:833 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:835 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:835 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:835 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:835 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:835 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:835 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:837 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:837 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:837 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:838 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:838 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:838 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:838 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:838 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:838 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:839 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:839 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:839 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:841 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:841 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:841 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:841 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:841 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:841 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:843 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:843 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:843 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:844 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:844 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:844 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:844 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:844 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:844 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:846 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:846 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:846 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:847 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:847 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:847 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:847 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:847 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:847 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:848 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:849 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:849 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:850 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:850 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:850 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:850 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:850 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:850 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:851 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:851 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:851 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:852 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:852 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:852 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_IN BX 120
+[INFO] 04:07:49:852 CPU/(19319:19320): PID: 11 - Accion: Leer 
+[INFO] 04:07:49:852 CPU/(19319:19320): PID: 11 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:07:49:853 CPU/(19319:19320): PID: 11 - Ejecutando: SET AX VAAAA
+[INFO] 04:07:49:854 CPU/(19319:19320): PID: 11 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:49:854 CPU/(19319:19320): PID: 11 - Accion: Escribir 
+[INFO] 04:07:49:854 CPU/(19319:19320): PID: 11 - Ejecutando: YIELD
+[TRACE] 04:07:49:854 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:07:49:854 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:07:49:895 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:07:49:895 CPU/(19319:19320): Comenzar ejecucion del proceso: 5.
+[INFO] 04:07:49:895 CPU/(19319:19320): PID: 5 - Ejecutando: I/O 10
+[TRACE] 04:07:49:895 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:07:49:939 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:07:49:984 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 11
+[INFO] 04:07:49:984 CPU/(19319:19320): Comenzar ejecucion del proceso: 11.
+[INFO] 04:07:49:984 CPU/(19319:19320): PID: 11 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 04:07:49:984 CPU/(19319:19320): PID: 11 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 04:07:49:984 CPU/(19319:19320): PID: 11 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 04:07:49:984 CPU/(19319:19320): PID: 11 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 04:07:49:984 CPU/(19319:19320): PID: 11 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 04:07:49:984 CPU/(19319:19320): PID: 11 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 04:07:49:984 CPU/(19319:19320): PID: 11 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 04:07:49:984 CPU/(19319:19320): PID: 11 - Ejecutando: EXIT
+[TRACE] 04:07:49:984 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:07:50:029 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:07:50:071 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 12
+[INFO] 04:07:50:071 CPU/(19319:19320): Comenzar ejecucion del proceso: 12.
+[INFO] 04:07:50:071 CPU/(19319:19320): PID: 12 - Ejecutando: SET AX PERO
+[INFO] 04:07:50:073 CPU/(19319:19320): PID: 12 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:07:50:073 CPU/(19319:19320): PID: 12 - Accion: Escribir 
+[INFO] 04:07:50:073 CPU/(19319:19320): PID: 12 - Ejecutando: WAIT DISCO
+[TRACE] 04:07:50:073 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:07:50:116 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:07:59:940 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:07:59:940 CPU/(19319:19320): Comenzar ejecucion del proceso: 5.
+[INFO] 04:07:59:940 CPU/(19319:19320): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 04:07:59:940 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:07:59:984 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:00:027 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:08:00:027 CPU/(19319:19320): Comenzar ejecucion del proceso: 5.
+[INFO] 04:08:00:027 CPU/(19319:19320): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 04:08:00:028 CPU/(19319:19320): PID: 5 - Accion: Leer 
+[INFO] 04:08:00:028 CPU/(19319:19320): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:08:00:028 CPU/(19319:19320): PID: 5 - Ejecutando: YIELD
+[TRACE] 04:08:00:028 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:00:072 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:00:115 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:08:00:115 CPU/(19319:19320): Comenzar ejecucion del proceso: 9.
+[INFO] 04:08:00:115 CPU/(19319:19320): PID: 9 - Ejecutando: I/O 10
+[TRACE] 04:08:00:115 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:00:159 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:00:204 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:08:00:204 CPU/(19319:19320): Comenzar ejecucion del proceso: 5.
+[INFO] 04:08:00:204 CPU/(19319:19320): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 04:08:00:204 CPU/(19319:19320): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 04:08:00:204 CPU/(19319:19320): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 04:08:00:204 CPU/(19319:19320): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 04:08:00:204 CPU/(19319:19320): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 04:08:00:204 CPU/(19319:19320): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 04:08:00:204 CPU/(19319:19320): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 04:08:00:204 CPU/(19319:19320): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:08:00:204 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:00:249 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:10:161 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:08:10:161 CPU/(19319:19320): Comenzar ejecucion del proceso: 9.
+[INFO] 04:08:10:161 CPU/(19319:19320): PID: 9 - Ejecutando: SIGNAL DISCO
+[TRACE] 04:08:10:161 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:10:204 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:10:247 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:08:10:247 CPU/(19319:19320): Comenzar ejecucion del proceso: 9.
+[INFO] 04:08:10:247 CPU/(19319:19320): PID: 9 - Ejecutando: MOV_IN BX 120
+[INFO] 04:08:10:247 CPU/(19319:19320): PID: 9 - Accion: Leer 
+[INFO] 04:08:10:247 CPU/(19319:19320): PID: 9 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:08:10:247 CPU/(19319:19320): PID: 9 - Ejecutando: YIELD
+[TRACE] 04:08:10:247 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:10:292 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:10:336 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 10
+[INFO] 04:08:10:336 CPU/(19319:19320): Comenzar ejecucion del proceso: 10.
+[INFO] 04:08:10:336 CPU/(19319:19320): PID: 10 - Ejecutando: I/O 10
+[TRACE] 04:08:10:336 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:10:379 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:10:423 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 9
+[INFO] 04:08:10:423 CPU/(19319:19320): Comenzar ejecucion del proceso: 9.
+[INFO] 04:08:10:423 CPU/(19319:19320): PID: 9 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 04:08:10:423 CPU/(19319:19320): PID: 9 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 04:08:10:423 CPU/(19319:19320): PID: 9 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 04:08:10:423 CPU/(19319:19320): PID: 9 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 04:08:10:423 CPU/(19319:19320): PID: 9 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 04:08:10:423 CPU/(19319:19320): PID: 9 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 04:08:10:423 CPU/(19319:19320): PID: 9 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 04:08:10:423 CPU/(19319:19320): PID: 9 - Ejecutando: EXIT
+[TRACE] 04:08:10:423 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:10:468 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:20:380 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 10
+[INFO] 04:08:20:380 CPU/(19319:19320): Comenzar ejecucion del proceso: 10.
+[INFO] 04:08:20:380 CPU/(19319:19320): PID: 10 - Ejecutando: SIGNAL DISCO
+[TRACE] 04:08:20:380 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:20:424 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:20:468 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 10
+[INFO] 04:08:20:468 CPU/(19319:19320): Comenzar ejecucion del proceso: 10.
+[INFO] 04:08:20:468 CPU/(19319:19320): PID: 10 - Ejecutando: MOV_IN BX 120
+[INFO] 04:08:20:468 CPU/(19319:19320): PID: 10 - Accion: Leer 
+[INFO] 04:08:20:468 CPU/(19319:19320): PID: 10 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:08:20:468 CPU/(19319:19320): PID: 10 - Ejecutando: YIELD
+[TRACE] 04:08:20:468 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:20:512 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:20:556 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 12
+[INFO] 04:08:20:556 CPU/(19319:19320): Comenzar ejecucion del proceso: 12.
+[INFO] 04:08:20:556 CPU/(19319:19320): PID: 12 - Ejecutando: I/O 1
+[TRACE] 04:08:20:556 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:20:599 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:20:643 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 10
+[INFO] 04:08:20:643 CPU/(19319:19320): Comenzar ejecucion del proceso: 10.
+[INFO] 04:08:20:643 CPU/(19319:19320): PID: 10 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 04:08:20:643 CPU/(19319:19320): PID: 10 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 04:08:20:643 CPU/(19319:19320): PID: 10 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 04:08:20:643 CPU/(19319:19320): PID: 10 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 04:08:20:643 CPU/(19319:19320): PID: 10 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 04:08:20:643 CPU/(19319:19320): PID: 10 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 04:08:20:643 CPU/(19319:19320): PID: 10 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 04:08:20:643 CPU/(19319:19320): PID: 10 - Ejecutando: EXIT
+[TRACE] 04:08:20:643 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:20:689 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:21:600 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 12
+[INFO] 04:08:21:600 CPU/(19319:19320): Comenzar ejecucion del proceso: 12.
+[INFO] 04:08:21:600 CPU/(19319:19320): PID: 12 - Ejecutando: SIGNAL DISCO
+[TRACE] 04:08:21:600 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:21:644 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:21:687 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 12
+[INFO] 04:08:21:687 CPU/(19319:19320): Comenzar ejecucion del proceso: 12.
+[INFO] 04:08:21:687 CPU/(19319:19320): PID: 12 - Ejecutando: MOV_IN BX 120
+[INFO] 04:08:21:687 CPU/(19319:19320): PID: 12 - Accion: Leer 
+[INFO] 04:08:21:687 CPU/(19319:19320): PID: 12 - Ejecutando: F_OPEN ARCHIVO
+[INFO] 04:08:21:687 CPU/(19319:19320): PID: 12 - Ejecutando: YIELD
+[TRACE] 04:08:21:687 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:21:732 CPU/(19319:19320): Datos enviados correctamente
+[TRACE] 04:08:21:775 CPU/(19319:19320): Recibi contexto de ejecucion - PID: 12
+[INFO] 04:08:21:775 CPU/(19319:19320): Comenzar ejecucion del proceso: 12.
+[INFO] 04:08:21:775 CPU/(19319:19320): PID: 12 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[INFO] 04:08:21:775 CPU/(19319:19320): PID: 12 - Ejecutando: F_SEEK ARCHIVO 10
+[INFO] 04:08:21:775 CPU/(19319:19320): PID: 12 - Ejecutando: CREATE_SEGMENT 1 128
+[INFO] 04:08:21:775 CPU/(19319:19320): PID: 12 - Ejecutando: F_WRITE ARCHIVO 4 4
+[INFO] 04:08:21:775 CPU/(19319:19320): PID: 12 - Ejecutando: F_READ ARCHIVO 16 4
+[INFO] 04:08:21:775 CPU/(19319:19320): PID: 12 - Ejecutando: DELETE_SEGMENT 1
+[INFO] 04:08:21:775 CPU/(19319:19320): PID: 12 - Ejecutando: F_CLOSE ARCHIVO
+[INFO] 04:08:21:775 CPU/(19319:19320): PID: 12 - Ejecutando: EXIT
+[TRACE] 04:08:21:775 CPU/(19319:19320): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:08:21:820 CPU/(19319:19320): Datos enviados correctamente
+[INFO] 04:08:30:146 CPU/(19319:19320): Comenzar ejecucion del proceso: 12.

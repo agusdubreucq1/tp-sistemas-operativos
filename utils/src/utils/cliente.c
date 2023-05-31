@@ -169,9 +169,9 @@ void eliminar_paquete(t_paquete* paquete)
 	free(paquete);
 }
 
-void liberar_conexion(int socket_cliente)
+void liberar_conexion(int socket_cliente, t_log* logger)
 {
+	log_trace(logger, "Cerre conexion %d", socket_cliente);
 	close(socket_cliente);
-	printf("Cerre conexion %d", socket_cliente);
 }
 

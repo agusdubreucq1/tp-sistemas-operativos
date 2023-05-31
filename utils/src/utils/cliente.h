@@ -31,7 +31,7 @@
 	void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio);
 	void enviar_paquete(t_paquete* paquete, int socket_cliente, t_log* logger, char* modulo);
 	void eliminar_paquete(t_paquete* paquete);
-	void liberar_conexion(int socket_cliente);
+	void liberar_conexion(int socket_cliente, t_log* logger);
 	void enviar_instruccion(char* mensaje, int socket_cliente);
 
 
