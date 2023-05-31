@@ -9,7 +9,7 @@ int main(void){
 		exit(1);
 	}
 
-	fileSystem_config = iniciar_config("../../config/Prueba_Deadlock/FileSystem.config", "FileSystem");
+	fileSystem_config = iniciar_config("../../config/FileSystem.config", "FileSystem");
 
 	if (fileSystem_config == NULL){
 		exit(2);
@@ -22,12 +22,11 @@ int main(void){
 	log_info(fileSystem_logger, "Servidor listo para recibir al cliente");
 
     printf("El path de superbloque es: %s\n",path_superbloque);
-
 	t_superBloque* superbloque = levantar_superBloque(path_superbloque); //revisar si le esta llegando bien el path...
-
-
     printf("Tamaño del bloque: %d\n", superbloque->tamanio_bloque); //En el enunciado tiene que tener valor de 64
     printf("Cantidad de bloques: %d\n", superbloque->cant_bloques); //En el enunciado tiene que tener valor de 65536
+
+    iniciar_bitmap(path_bitmap, superbloque);
 
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
@@ -94,3 +93,45 @@ t_superBloque* levantar_superBloque(char* path){
 	config_destroy(configSuperBloque);
 	return superbloque;
 }
+
+
+void iniciar_bitmap(char* path, t_superBloque* superbloque) {
+    FILE* bitmap_archivo = fopen(path, "rb");
+
+    if (bitmap_archivo == NULL) {
+        // El archivo no existe, lo creamos
+        bitmap_archivo = fopen(path, "wb");
+        if (bitmap_archivo == NULL) {
+            log_error(fileSystem_logger, "Error al crear el archivo");
+            return;
+        }
+
+        // Rellenamos el archivo con ceros
+        char zero = 0;
+        for (int i = 0; i < superbloque->cant_bloques / 8; i++) {
+            fwrite(&zero, sizeof(char), 1, bitmap_archivo);
+        }
+
+        // Reiniciamos el puntero de archivo al inicio
+        fseek(bitmap_archivo, 0L, SEEK_SET);
+    }
+
+    int size = 0;
+    char* buffer;
+    fseek(bitmap_archivo, 0L, SEEK_END);
+    size = ftell(bitmap_archivo);
+    fseek(bitmap_archivo, 0L, SEEK_SET);
+
+    buffer = malloc(size);
+    fread(buffer, size, 1, bitmap_archivo);
+    buffer = string_substring_until(buffer, size);
+
+    bitmap = bitarray_create(buffer, superbloque->cant_bloques / 8); // creamos el array de bits, con un tamaño de cant_bloques/8 porque es el espacio en bytes que necesita el bitmap
+
+
+    fclose(bitmap_archivo);
+
+    log_info(fileSystem_logger , "Bitmap iniciado");
+}
+
+
