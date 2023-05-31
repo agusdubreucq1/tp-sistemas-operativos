@@ -5567,3 +5567,1979 @@
 [INFO] 12:56:46:682 Memoria/(70478:70478): ¡Memoria iniciado correctamente!
 [TRACE] 12:56:46:683 Memoria/(70478:70478): Listo para escuchar a mi cliente
 [INFO] 12:56:46:683 Memoria/(70478:70478): Servidor listo para recibir al cliente
+[INFO] 12:59:07:841 Memoria/(70814:70814): Logger creado
+[INFO] 12:59:07:842 Memoria/(70814:70814): -------Valores del config-------
+[INFO] 12:59:07:842 Memoria/(70814:70814): puerto_escucha = 8003
+[INFO] 12:59:07:842 Memoria/(70814:70814): tamaño memoria = 4096
+[INFO] 12:59:07:842 Memoria/(70814:70814): tamaño segmento = 128
+[INFO] 12:59:07:842 Memoria/(70814:70814): cantidad de segmentos = 16
+[INFO] 12:59:07:842 Memoria/(70814:70814): retardo memoria = 1000
+[INFO] 12:59:07:842 Memoria/(70814:70814): retardo compactacion = 60000
+[INFO] 12:59:07:842 Memoria/(70814:70814): algoritmo asignacion = BEST
+[INFO] 12:59:07:842 Memoria/(70814:70814): --------------------------------
+[INFO] 12:59:07:843 Memoria/(70814:70814): ¡Memoria iniciado correctamente!
+[TRACE] 12:59:07:843 Memoria/(70814:70814): Listo para escuchar a mi cliente
+[INFO] 12:59:07:843 Memoria/(70814:70814): Servidor listo para recibir al cliente
+[INFO] 12:59:08:258 Memoria/(70814:70818): Se conecto un cliente!
+[TRACE] 12:59:08:258 Memoria/(70814:70818): Recibi Instruccion: Conectado al FileSystem
+[INFO] 12:59:08:863 Memoria/(70814:70817): Se conecto un cliente!
+[TRACE] 12:59:08:863 Memoria/(70814:70817): Recibi Instruccion: Conectado al CPU
+[INFO] 12:59:09:675 Memoria/(70814:70816): Se conecto un cliente!
+[TRACE] 12:59:09:675 Memoria/(70814:70816): Recibi Instruccion: Conectado al Kernel
+[TRACE] 12:59:19:676 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:764 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:764 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:766 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:767 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:767 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:768 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:770 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:770 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:771 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:772 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:772 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:773 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:775 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:775 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:778 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:780 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:780 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:781 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:783 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:783 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:785 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:786 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:786 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:788 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:790 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:790 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:792 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:793 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:793 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:795 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:796 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:796 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:797 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:799 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:799 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:801 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:802 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:802 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:803 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:805 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:805 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:806 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:808 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:808 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:809 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:810 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:810 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:812 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:813 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:813 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:814 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:817 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:817 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:819 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:821 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:821 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:824 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:825 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:825 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:826 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:828 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:828 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:829 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:830 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:831 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:832 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:834 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:834 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:835 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:836 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:837 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:839 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:840 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:840 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:842 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:843 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:843 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:844 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:846 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:846 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:848 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:849 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:849 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:851 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:854 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:854 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:856 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:857 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:857 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:859 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:861 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:861 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:862 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:863 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:863 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:865 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:867 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:867 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:868 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:870 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:870 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:872 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:873 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:873 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:875 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:876 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:876 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:878 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:879 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:879 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:881 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:882 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:882 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:884 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:886 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:886 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:888 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:890 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:59:19:890 Memoria/(70814:70817): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:59:19:891 Memoria/(70814:70817): Recibi Instruccion: MOV_OUT 120 AX
+[INFO] 21:02:40:005 Memoria/(116109:116109): Logger creado
+[INFO] 21:02:40:006 Memoria/(116109:116109): -------Valores del config-------
+[INFO] 21:02:40:006 Memoria/(116109:116109): puerto_escucha = 8003
+[INFO] 21:02:40:006 Memoria/(116109:116109): tamaño memoria = 4096
+[INFO] 21:02:40:006 Memoria/(116109:116109): tamaño segmento = 128
+[INFO] 21:02:40:006 Memoria/(116109:116109): cantidad de segmentos = 16
+[INFO] 21:02:40:006 Memoria/(116109:116109): retardo memoria = 1000
+[INFO] 21:02:40:006 Memoria/(116109:116109): retardo compactacion = 60000
+[INFO] 21:02:40:006 Memoria/(116109:116109): algoritmo asignacion = BEST
+[INFO] 21:02:40:007 Memoria/(116109:116109): --------------------------------
+[INFO] 21:02:40:007 Memoria/(116109:116109): ¡Memoria iniciado correctamente!
+[TRACE] 21:02:40:007 Memoria/(116109:116109): Listo para escuchar a mi cliente
+[INFO] 21:02:40:007 Memoria/(116109:116109): Servidor listo para recibir al cliente
+[INFO] 21:02:42:122 Memoria/(116109:116113): Se conecto un cliente!
+[TRACE] 21:02:42:123 Memoria/(116109:116113): Recibi Instruccion: Conectado al FileSystem
+[INFO] 21:02:44:216 Memoria/(116109:116112): Se conecto un cliente!
+[TRACE] 21:02:44:216 Memoria/(116109:116112): Recibi Instruccion: Conectado al CPU
+[INFO] 21:02:46:204 Memoria/(116109:116111): Se conecto un cliente!
+[TRACE] 21:02:46:204 Memoria/(116109:116111): Recibi Instruccion: Conectado al Kernel
+[TRACE] 21:02:56:206 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:292 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:292 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:293 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:294 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:294 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:296 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:298 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:298 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:300 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:302 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:302 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:303 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:304 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:304 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:306 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:307 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:307 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:308 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:310 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:310 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:311 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:312 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:312 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:314 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:315 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:315 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:317 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:319 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:319 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:320 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:322 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:322 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:323 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:325 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:325 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:327 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:328 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:328 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:329 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:331 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:331 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:334 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:337 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:337 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:338 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:339 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:339 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:340 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:343 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:343 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:344 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:345 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:345 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:347 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:348 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:349 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:350 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:351 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:351 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:353 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:355 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:355 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:356 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:357 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:357 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:359 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:360 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:360 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:362 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:363 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:363 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:365 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:366 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:366 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:367 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:369 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:369 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:371 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:375 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:375 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:377 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:378 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:378 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:380 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:381 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:381 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:382 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:384 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:384 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:386 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:387 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:387 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:389 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:391 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:391 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:393 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:394 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:394 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:396 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:398 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:398 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:399 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:402 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:402 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:403 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:404 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:405 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:406 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:407 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:407 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:409 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:412 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:412 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:414 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:415 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:415 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:417 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:419 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:419 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:02:56:420 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:02:56:465 Memoria/(116109:116112): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:03:06:683 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:03:07:860 Memoria/(116109:116111): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:03:07:860 Memoria/(116109:116111): Recibi Instruccion: DELETE_SEGMENT 1
+[TRACE] 21:03:07:947 Memoria/(116109:116111): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:03:07:948 Memoria/(116109:116111): Recibi Instruccion: DELETE_SEGMENT 1
+[TRACE] 21:03:08:079 Memoria/(116109:116112): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:03:08:211 Memoria/(116109:116111): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:03:08:211 Memoria/(116109:116111): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 21:08:50:243 Memoria/(116849:116849): Logger creado
+[INFO] 21:08:50:246 Memoria/(116849:116849): -------Valores del config-------
+[INFO] 21:08:50:246 Memoria/(116849:116849): puerto_escucha = 8003
+[INFO] 21:08:50:246 Memoria/(116849:116849): tamaño memoria = 4096
+[INFO] 21:08:50:246 Memoria/(116849:116849): tamaño segmento = 128
+[INFO] 21:08:50:246 Memoria/(116849:116849): cantidad de segmentos = 16
+[INFO] 21:08:50:246 Memoria/(116849:116849): retardo memoria = 1000
+[INFO] 21:08:50:246 Memoria/(116849:116849): retardo compactacion = 60000
+[INFO] 21:08:50:246 Memoria/(116849:116849): algoritmo asignacion = BEST
+[INFO] 21:08:50:246 Memoria/(116849:116849): --------------------------------
+[INFO] 21:08:50:246 Memoria/(116849:116849): ¡Memoria iniciado correctamente!
+[TRACE] 21:08:50:246 Memoria/(116849:116849): Listo para escuchar a mi cliente
+[INFO] 21:08:50:246 Memoria/(116849:116849): Servidor listo para recibir al cliente
+[INFO] 21:08:52:588 Memoria/(116849:116853): Se conecto un cliente!
+[TRACE] 21:08:52:589 Memoria/(116849:116853): Recibi Instruccion: Conectado al FileSystem
+[INFO] 21:08:54:831 Memoria/(116849:116852): Se conecto un cliente!
+[TRACE] 21:08:54:831 Memoria/(116849:116852): Recibi Instruccion: Conectado al CPU
+[INFO] 21:08:57:251 Memoria/(116849:116851): Se conecto un cliente!
+[TRACE] 21:08:57:252 Memoria/(116849:116851): Recibi Instruccion: Conectado al Kernel
+[TRACE] 21:09:07:253 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:340 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:340 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:341 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:342 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:342 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:346 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:350 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:350 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:351 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:352 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:352 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:354 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:355 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:355 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:356 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:358 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:358 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:359 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:360 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:360 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:363 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:364 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:364 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:365 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:367 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:367 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:369 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:370 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:370 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:371 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:373 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:373 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:374 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:376 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:376 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:377 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:379 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:379 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:382 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:384 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:384 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:385 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:387 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:387 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:388 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:389 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:389 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:391 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:392 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:392 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:394 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:396 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:396 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:398 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:400 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:400 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:401 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:403 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:403 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:405 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:406 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:406 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:408 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:409 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:409 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:411 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:412 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:412 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:413 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:414 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:414 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:416 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:417 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:417 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:418 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:419 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:420 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:421 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:422 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:422 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:423 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:425 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:425 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:426 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:427 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:427 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:429 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:430 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:430 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:432 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:433 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:433 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:434 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:435 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:435 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:438 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:439 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:439 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:443 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:445 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:445 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:446 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:448 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:448 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:450 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:451 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:451 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:453 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:455 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:455 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:456 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:458 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:458 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:459 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:461 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:461 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:462 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:464 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:464 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:465 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:509 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:598 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:598 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:600 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:601 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:601 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:602 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:603 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:603 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:605 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:606 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:606 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:607 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:608 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:608 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:610 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:611 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:611 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:613 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:615 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:615 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:617 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:618 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:618 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:620 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:621 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:621 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:623 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:624 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:624 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:626 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:627 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:627 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:628 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:631 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:631 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:632 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:634 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:634 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:635 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:636 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:636 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:637 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:639 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:640 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:641 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:643 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:643 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:644 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:647 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:647 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:648 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:650 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:650 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:651 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:653 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:653 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:655 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:656 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:656 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:657 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:658 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:658 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:662 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:665 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:665 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:666 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:668 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:668 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:670 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:671 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:671 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:673 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:675 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:675 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:676 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:677 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:678 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:679 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:680 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:680 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:681 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:683 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:683 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:685 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:686 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:686 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:687 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:689 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:689 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:690 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:692 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:692 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:694 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:695 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:695 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:697 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:701 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:701 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:703 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:705 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:705 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:706 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:707 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:707 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:709 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:711 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:711 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:712 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:714 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:714 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:715 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:717 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:717 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:719 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:720 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:720 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:722 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:723 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:07:723 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:07:728 Memoria/(116849:116852): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:09:17:904 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:18:035 Memoria/(116849:116851): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:09:18:035 Memoria/(116849:116851): Recibi Instruccion: DELETE_SEGMENT 1
+[TRACE] 21:09:19:167 Memoria/(116849:116851): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:09:19:167 Memoria/(116849:116851): Recibi Instruccion: DELETE_SEGMENT 1
+[TRACE] 21:09:19:255 Memoria/(116849:116851): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:09:19:255 Memoria/(116849:116851): Recibi Instruccion: DELETE_SEGMENT 1
+[TRACE] 21:09:19:387 Memoria/(116849:116852): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:09:19:519 Memoria/(116849:116851): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:09:19:519 Memoria/(116849:116851): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 21:25:10:235 Memoria/(118673:118673): Logger creado
+[INFO] 21:25:10:239 Memoria/(118673:118673): -------Valores del config-------
+[INFO] 21:25:10:239 Memoria/(118673:118673): puerto_escucha = 8003
+[INFO] 21:25:10:239 Memoria/(118673:118673): tamaño memoria = 4096
+[INFO] 21:25:10:239 Memoria/(118673:118673): tamaño segmento = 128
+[INFO] 21:25:10:239 Memoria/(118673:118673): cantidad de segmentos = 16
+[INFO] 21:25:10:239 Memoria/(118673:118673): retardo memoria = 1000
+[INFO] 21:25:10:240 Memoria/(118673:118673): retardo compactacion = 60000
+[INFO] 21:25:10:240 Memoria/(118673:118673): algoritmo asignacion = BEST
+[INFO] 21:25:10:240 Memoria/(118673:118673): --------------------------------
+[INFO] 21:25:10:240 Memoria/(118673:118673): ¡Memoria iniciado correctamente!
+[TRACE] 21:25:10:240 Memoria/(118673:118673): Listo para escuchar a mi cliente
+[INFO] 21:25:10:240 Memoria/(118673:118673): Servidor listo para recibir al cliente
+[INFO] 21:25:12:172 Memoria/(118673:118677): Se conecto un cliente!
+[TRACE] 21:25:12:172 Memoria/(118673:118677): Recibi Instruccion: Conectado al FileSystem
+[INFO] 21:25:14:507 Memoria/(118673:118676): Se conecto un cliente!
+[TRACE] 21:25:14:508 Memoria/(118673:118676): Recibi Instruccion: Conectado al CPU
+[INFO] 21:25:17:931 Memoria/(118673:118675): Se conecto un cliente!
+[TRACE] 21:25:17:931 Memoria/(118673:118675): Recibi Instruccion: Conectado al Kernel
+[TRACE] 21:25:27:932 Memoria/(118673:118676): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:26:23:866 Memoria/(118673:118676): Recibi Instruccion: MOV_IN BX 120
+[INFO] 21:28:09:831 Memoria/(119054:119054): Logger creado
+[INFO] 21:28:09:833 Memoria/(119054:119054): -------Valores del config-------
+[INFO] 21:28:09:833 Memoria/(119054:119054): puerto_escucha = 8003
+[INFO] 21:28:09:834 Memoria/(119054:119054): tamaño memoria = 4096
+[INFO] 21:28:09:834 Memoria/(119054:119054): tamaño segmento = 128
+[INFO] 21:28:09:834 Memoria/(119054:119054): cantidad de segmentos = 16
+[INFO] 21:28:09:834 Memoria/(119054:119054): retardo memoria = 1000
+[INFO] 21:28:09:834 Memoria/(119054:119054): retardo compactacion = 60000
+[INFO] 21:28:09:834 Memoria/(119054:119054): algoritmo asignacion = BEST
+[INFO] 21:28:09:834 Memoria/(119054:119054): --------------------------------
+[INFO] 21:28:09:834 Memoria/(119054:119054): ¡Memoria iniciado correctamente!
+[TRACE] 21:28:09:834 Memoria/(119054:119054): Listo para escuchar a mi cliente
+[INFO] 21:28:09:834 Memoria/(119054:119054): Servidor listo para recibir al cliente
+[INFO] 21:28:11:818 Memoria/(119054:119058): Se conecto un cliente!
+[TRACE] 21:28:11:818 Memoria/(119054:119058): Recibi Instruccion: Conectado al FileSystem
+[INFO] 21:28:14:337 Memoria/(119054:119057): Se conecto un cliente!
+[TRACE] 21:28:14:337 Memoria/(119054:119057): Recibi Instruccion: Conectado al CPU
+[INFO] 21:28:16:761 Memoria/(119054:119056): Se conecto un cliente!
+[TRACE] 21:28:16:761 Memoria/(119054:119056): Recibi Instruccion: Conectado al Kernel
+[TRACE] 21:28:26:762 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:848 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:848 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:849 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:852 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:852 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:855 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:858 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:858 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:859 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:860 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:860 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:861 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:863 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:863 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:864 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:866 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:866 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:868 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:869 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:869 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:871 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:872 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:872 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:873 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:874 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:875 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:876 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:879 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:879 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:880 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:882 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:882 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:885 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:888 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:888 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:890 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:891 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:891 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:893 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:894 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:895 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:896 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:897 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:897 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:898 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:900 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:900 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:901 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:903 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:903 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:905 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:906 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:906 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:907 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:909 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:909 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:911 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:913 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:913 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:914 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:915 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:915 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:917 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:918 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:918 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:921 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:922 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:922 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:924 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:926 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:926 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:927 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:928 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:929 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:930 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:932 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:932 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:933 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:934 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:934 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:936 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:937 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:937 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:939 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:940 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:940 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:941 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:943 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:943 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:944 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:946 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:946 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:948 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:949 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:949 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:950 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:951 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:951 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:953 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:954 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:954 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:955 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:957 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:957 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:958 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:959 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:959 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:961 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:964 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:964 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:967 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:968 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:968 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:970 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:971 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:971 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:972 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:974 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:26:974 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:26:975 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:020 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:108 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:108 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:109 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:110 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:110 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:112 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:114 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:114 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:115 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:116 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:116 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:117 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:119 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:119 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:120 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:122 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:122 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:123 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:125 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:125 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:127 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:129 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:129 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:131 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:132 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:132 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:133 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:135 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:135 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:136 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:137 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:137 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:139 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:140 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:140 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:142 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:143 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:143 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:145 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:146 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:146 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:148 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:149 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:149 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:150 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:151 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:152 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:153 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:154 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:154 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:156 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:157 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:157 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:160 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:162 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:163 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:165 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:166 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:166 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:168 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:169 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:169 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:170 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:172 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:172 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:173 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:174 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:174 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:176 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:178 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:178 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:179 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:181 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:181 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:182 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:184 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:184 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:185 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:187 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:187 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:188 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:189 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:189 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:192 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:195 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:195 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:196 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:197 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:198 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:199 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:200 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:200 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:202 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:204 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:204 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:206 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:208 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:208 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:209 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:211 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:211 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:213 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:214 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:214 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:216 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:217 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:217 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:219 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:220 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:220 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:222 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:223 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:223 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:226 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:229 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:229 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:231 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:232 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:28:27:232 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:28:27:234 Memoria/(119054:119057): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:29:16:289 Memoria/(119054:119057): Recibi Instruccion: MOV_IN BX 120
+[INFO] 21:30:47:873 Memoria/(119381:119381): Logger creado
+[INFO] 21:30:47:888 Memoria/(119381:119381): -------Valores del config-------
+[INFO] 21:30:47:888 Memoria/(119381:119381): puerto_escucha = 8003
+[INFO] 21:30:47:888 Memoria/(119381:119381): tamaño memoria = 4096
+[INFO] 21:30:47:888 Memoria/(119381:119381): tamaño segmento = 128
+[INFO] 21:30:47:888 Memoria/(119381:119381): cantidad de segmentos = 16
+[INFO] 21:30:47:888 Memoria/(119381:119381): retardo memoria = 1000
+[INFO] 21:30:47:889 Memoria/(119381:119381): retardo compactacion = 60000
+[INFO] 21:30:47:889 Memoria/(119381:119381): algoritmo asignacion = BEST
+[INFO] 21:30:47:889 Memoria/(119381:119381): --------------------------------
+[INFO] 21:30:47:889 Memoria/(119381:119381): ¡Memoria iniciado correctamente!
+[TRACE] 21:30:47:889 Memoria/(119381:119381): Listo para escuchar a mi cliente
+[INFO] 21:30:47:889 Memoria/(119381:119381): Servidor listo para recibir al cliente
+[INFO] 21:30:50:588 Memoria/(119381:119385): Se conecto un cliente!
+[TRACE] 21:30:50:588 Memoria/(119381:119385): Recibi Instruccion: Conectado al FileSystem
+[INFO] 21:30:52:985 Memoria/(119381:119384): Se conecto un cliente!
+[TRACE] 21:30:52:986 Memoria/(119381:119384): Recibi Instruccion: Conectado al CPU
+[INFO] 21:30:55:218 Memoria/(119381:119383): Se conecto un cliente!
+[TRACE] 21:30:55:219 Memoria/(119381:119383): Recibi Instruccion: Conectado al Kernel
+[TRACE] 21:31:05:220 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:308 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:308 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:309 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:310 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:310 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:312 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:314 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:314 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:315 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:319 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:319 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:321 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:322 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:323 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:324 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:325 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:325 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:327 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:328 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:328 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:330 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:331 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:331 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:333 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:334 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:334 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:336 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:338 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:338 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:339 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:340 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:340 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:342 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:343 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:343 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:344 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:346 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:346 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:348 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:349 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:349 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:352 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:353 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:353 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:355 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:357 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:357 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:358 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:360 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:360 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:361 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:362 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:362 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:364 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:365 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:365 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:366 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:368 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:368 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:370 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:371 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:371 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:373 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:375 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:375 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:376 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:378 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:378 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:379 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:383 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:383 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:386 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:387 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:387 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:388 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:390 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:390 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:392 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:397 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:397 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:399 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:401 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:401 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:402 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:404 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:404 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:405 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:406 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:407 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:408 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:411 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:411 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:413 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:415 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:415 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:418 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:420 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:420 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:421 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:423 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:423 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:424 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:426 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:426 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:428 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:429 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:429 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:431 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:432 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:432 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:434 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:435 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:435 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:436 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:439 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:439 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:440 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:442 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:442 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:444 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:488 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:576 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:576 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:577 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:578 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:578 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:579 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:581 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:581 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:583 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:584 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:584 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:586 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:588 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:588 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:591 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:592 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:592 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:594 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:595 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:595 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:597 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:599 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:599 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:600 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:601 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:602 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:603 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:605 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:605 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:608 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:611 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:611 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:612 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:614 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:615 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:616 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:617 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:617 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:620 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:622 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:622 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:623 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:625 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:625 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:626 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:627 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:627 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:630 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:631 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:631 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:632 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:634 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:634 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:638 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:640 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:641 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:642 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:643 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:643 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:645 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:647 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:647 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:648 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:651 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:651 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:652 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:653 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:653 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:655 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:656 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:656 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:658 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:659 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:659 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:661 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:663 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:663 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:664 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:665 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:666 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:667 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:668 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:668 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:670 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:671 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:671 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:673 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:676 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:676 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:678 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:679 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:679 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:681 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:683 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:683 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:685 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:686 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:686 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:688 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:689 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:689 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:691 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:692 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:692 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:694 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:695 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:695 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:697 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:699 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:699 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:700 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:701 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:701 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:705 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:708 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:708 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:709 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:711 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:711 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:31:05:713 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:05:887 Memoria/(119381:119383): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:31:05:887 Memoria/(119381:119383): Recibi Instruccion: DELETE_SEGMENT 1
+[TRACE] 21:31:05:932 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:06:063 Memoria/(119381:119383): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:31:06:063 Memoria/(119381:119383): Recibi Instruccion: DELETE_SEGMENT 1
+[TRACE] 21:31:06:108 Memoria/(119381:119384): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:31:58:868 Memoria/(119381:119384): Recibi Instruccion: MOV_IN BX 120
+[INFO] 22:28:36:163 Memoria/(124869:124869): Logger creado
+[INFO] 22:28:36:165 Memoria/(124869:124869): -------Valores del config-------
+[INFO] 22:28:36:165 Memoria/(124869:124869): puerto_escucha = 8003
+[INFO] 22:28:36:165 Memoria/(124869:124869): tamaño memoria = 4096
+[INFO] 22:28:36:165 Memoria/(124869:124869): tamaño segmento = 128
+[INFO] 22:28:36:165 Memoria/(124869:124869): cantidad de segmentos = 16
+[INFO] 22:28:36:165 Memoria/(124869:124869): retardo memoria = 1000
+[INFO] 22:28:36:165 Memoria/(124869:124869): retardo compactacion = 60000
+[INFO] 22:28:36:165 Memoria/(124869:124869): algoritmo asignacion = BEST
+[INFO] 22:28:36:165 Memoria/(124869:124869): --------------------------------
+[INFO] 22:28:36:165 Memoria/(124869:124869): ¡Memoria iniciado correctamente!
+[TRACE] 22:28:36:165 Memoria/(124869:124869): Listo para escuchar a mi cliente
+[INFO] 22:28:36:165 Memoria/(124869:124869): Servidor listo para recibir al cliente
+[INFO] 22:28:37:364 Memoria/(124869:124873): Se conecto un cliente!
+[TRACE] 22:28:37:364 Memoria/(124869:124873): Recibi Instruccion: Conectado al FileSystem
+[INFO] 22:28:39:821 Memoria/(124869:124872): Se conecto un cliente!
+[TRACE] 22:28:39:822 Memoria/(124869:124872): Recibi Instruccion: Conectado al CPU
+[INFO] 22:28:42:106 Memoria/(124869:124871): Se conecto un cliente!
+[TRACE] 22:28:42:106 Memoria/(124869:124871): Recibi Instruccion: Conectado al Kernel
+[TRACE] 22:28:52:107 Memoria/(124869:124872): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:28:52:192 Memoria/(124869:124872): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:29:49:304 Memoria/(124869:124872): Recibi Instruccion: MOV_IN BX 120
+[INFO] 22:32:16:695 Memoria/(125317:125317): Logger creado
+[INFO] 22:32:16:711 Memoria/(125317:125317): -------Valores del config-------
+[INFO] 22:32:16:711 Memoria/(125317:125317): puerto_escucha = 8003
+[INFO] 22:32:16:711 Memoria/(125317:125317): tamaño memoria = 4096
+[INFO] 22:32:16:711 Memoria/(125317:125317): tamaño segmento = 128
+[INFO] 22:32:16:711 Memoria/(125317:125317): cantidad de segmentos = 16
+[INFO] 22:32:16:711 Memoria/(125317:125317): retardo memoria = 1000
+[INFO] 22:32:16:712 Memoria/(125317:125317): retardo compactacion = 60000
+[INFO] 22:32:16:712 Memoria/(125317:125317): algoritmo asignacion = BEST
+[INFO] 22:32:16:712 Memoria/(125317:125317): --------------------------------
+[INFO] 22:32:16:712 Memoria/(125317:125317): ¡Memoria iniciado correctamente!
+[TRACE] 22:32:16:712 Memoria/(125317:125317): Listo para escuchar a mi cliente
+[INFO] 22:32:16:713 Memoria/(125317:125317): Servidor listo para recibir al cliente
+[INFO] 22:32:17:141 Memoria/(125317:125321): Se conecto un cliente!
+[TRACE] 22:32:17:141 Memoria/(125317:125321): Recibi Instruccion: Conectado al FileSystem
+[INFO] 22:32:17:581 Memoria/(125317:125320): Se conecto un cliente!
+[TRACE] 22:32:17:582 Memoria/(125317:125320): Recibi Instruccion: Conectado al CPU
+[INFO] 22:32:17:959 Memoria/(125317:125319): Se conecto un cliente!
+[TRACE] 22:32:17:959 Memoria/(125317:125319): Recibi Instruccion: Conectado al Kernel
+[TRACE] 22:32:27:960 Memoria/(125317:125320): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:33:17:538 Memoria/(125317:125320): Recibi Instruccion: MOV_IN BX 120
+[INFO] 22:34:52:203 Memoria/(125587:125587): Logger creado
+[INFO] 22:34:52:204 Memoria/(125587:125587): -------Valores del config-------
+[INFO] 22:34:52:204 Memoria/(125587:125587): puerto_escucha = 8003
+[INFO] 22:34:52:204 Memoria/(125587:125587): tamaño memoria = 4096
+[INFO] 22:34:52:204 Memoria/(125587:125587): tamaño segmento = 128
+[INFO] 22:34:52:204 Memoria/(125587:125587): cantidad de segmentos = 16
+[INFO] 22:34:52:204 Memoria/(125587:125587): retardo memoria = 1000
+[INFO] 22:34:52:204 Memoria/(125587:125587): retardo compactacion = 60000
+[INFO] 22:34:52:204 Memoria/(125587:125587): algoritmo asignacion = BEST
+[INFO] 22:34:52:204 Memoria/(125587:125587): --------------------------------
+[INFO] 22:34:52:205 Memoria/(125587:125587): ¡Memoria iniciado correctamente!
+[TRACE] 22:34:52:205 Memoria/(125587:125587): Listo para escuchar a mi cliente
+[INFO] 22:34:52:205 Memoria/(125587:125587): Servidor listo para recibir al cliente
+[INFO] 22:34:53:647 Memoria/(125587:125591): Se conecto un cliente!
+[TRACE] 22:34:53:648 Memoria/(125587:125591): Recibi Instruccion: Conectado al FileSystem
+[INFO] 22:34:54:511 Memoria/(125587:125590): Se conecto un cliente!
+[TRACE] 22:34:54:511 Memoria/(125587:125590): Recibi Instruccion: Conectado al CPU
+[INFO] 22:34:55:904 Memoria/(125587:125589): Se conecto un cliente!
+[TRACE] 22:34:55:904 Memoria/(125587:125589): Recibi Instruccion: Conectado al Kernel
+[TRACE] 22:35:05:907 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:05:992 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:05:992 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:05:993 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:05:995 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:05:995 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:05:996 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:05:997 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:05:997 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:05:998 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:000 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:000 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:002 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:003 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:004 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:005 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:006 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:007 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:008 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:010 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:010 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:011 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:013 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:013 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:015 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:016 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:016 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:017 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:019 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:019 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:020 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:022 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:022 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:023 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:024 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:024 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:026 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:028 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:028 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:029 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:030 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:030 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:032 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:034 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:034 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:035 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:039 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:039 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:041 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:043 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:043 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:044 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:046 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:046 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:047 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:049 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:049 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:051 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:052 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:052 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:054 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:055 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:055 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:057 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:059 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:059 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:061 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:062 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:062 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:063 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:065 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:065 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:066 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:067 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:067 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:069 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:070 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:070 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:071 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:073 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:073 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:074 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:076 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:076 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:078 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:079 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:079 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:081 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:083 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:083 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:085 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:086 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:086 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:088 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:090 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:090 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:091 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:093 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:093 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:095 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:097 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:097 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:098 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:100 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:100 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:102 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:103 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:103 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:104 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:106 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:106 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:108 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:109 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:109 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:111 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:113 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:113 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:115 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:116 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:35:06:116 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 22:35:06:117 Memoria/(125587:125590): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:37:20:360 Memoria/(125587:125590): Recibi Instruccion: MOV_IN BX 120
+[INFO] 22:50:59:124 Memoria/(127328:127328): Logger creado
+[INFO] 22:50:59:126 Memoria/(127328:127328): -------Valores del config-------
+[INFO] 22:50:59:126 Memoria/(127328:127328): puerto_escucha = 8003
+[INFO] 22:50:59:126 Memoria/(127328:127328): tamaño memoria = 4096
+[INFO] 22:50:59:127 Memoria/(127328:127328): tamaño segmento = 128
+[INFO] 22:50:59:127 Memoria/(127328:127328): cantidad de segmentos = 16
+[INFO] 22:50:59:127 Memoria/(127328:127328): retardo memoria = 1000
+[INFO] 22:50:59:127 Memoria/(127328:127328): retardo compactacion = 60000
+[INFO] 22:50:59:127 Memoria/(127328:127328): algoritmo asignacion = BEST
+[INFO] 22:50:59:127 Memoria/(127328:127328): --------------------------------
+[INFO] 22:50:59:127 Memoria/(127328:127328): ¡Memoria iniciado correctamente!
+[TRACE] 22:50:59:127 Memoria/(127328:127328): Listo para escuchar a mi cliente
+[INFO] 22:50:59:127 Memoria/(127328:127328): Servidor listo para recibir al cliente
+[INFO] 22:51:01:394 Memoria/(127328:127332): Se conecto un cliente!
+[TRACE] 22:51:01:394 Memoria/(127328:127332): Recibi Instruccion: Conectado al FileSystem
+[INFO] 22:51:04:106 Memoria/(127328:127331): Se conecto un cliente!
+[TRACE] 22:51:04:106 Memoria/(127328:127331): Recibi Instruccion: Conectado al CPU
+[INFO] 22:51:06:538 Memoria/(127328:127330): Se conecto un cliente!
+[TRACE] 22:51:06:538 Memoria/(127328:127330): Recibi Instruccion: Conectado al Kernel
+[INFO] 22:55:16:953 Memoria/(127783:127783): Logger creado
+[INFO] 22:55:16:954 Memoria/(127783:127783): -------Valores del config-------
+[INFO] 22:55:16:954 Memoria/(127783:127783): puerto_escucha = 8003
+[INFO] 22:55:16:954 Memoria/(127783:127783): tamaño memoria = 4096
+[INFO] 22:55:16:954 Memoria/(127783:127783): tamaño segmento = 128
+[INFO] 22:55:16:954 Memoria/(127783:127783): cantidad de segmentos = 16
+[INFO] 22:55:16:954 Memoria/(127783:127783): retardo memoria = 1000
+[INFO] 22:55:16:954 Memoria/(127783:127783): retardo compactacion = 60000
+[INFO] 22:55:16:955 Memoria/(127783:127783): algoritmo asignacion = BEST
+[INFO] 22:55:16:955 Memoria/(127783:127783): --------------------------------
+[INFO] 22:55:16:955 Memoria/(127783:127783): ¡Memoria iniciado correctamente!
+[TRACE] 22:55:16:955 Memoria/(127783:127783): Listo para escuchar a mi cliente
+[INFO] 22:55:16:955 Memoria/(127783:127783): Servidor listo para recibir al cliente
+[INFO] 22:55:17:743 Memoria/(127783:127787): Se conecto un cliente!
+[TRACE] 22:55:17:743 Memoria/(127783:127787): Recibi Instruccion: Conectado al FileSystem
+[INFO] 22:55:18:549 Memoria/(127783:127786): Se conecto un cliente!
+[TRACE] 22:55:18:550 Memoria/(127783:127786): Recibi Instruccion: Conectado al CPU
+[INFO] 22:55:19:268 Memoria/(127783:127785): Se conecto un cliente!
+[TRACE] 22:55:19:268 Memoria/(127783:127785): Recibi Instruccion: Conectado al Kernel
+[TRACE] 22:55:29:271 Memoria/(127783:127786): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 22:56:04:646 Memoria/(127783:127786): Recibi Instruccion: MOV_IN BX 120
+[INFO] 23:02:48:538 Memoria/(128676:128676): Logger creado
+[INFO] 23:02:48:539 Memoria/(128676:128676): -------Valores del config-------
+[INFO] 23:02:48:539 Memoria/(128676:128676): puerto_escucha = 8003
+[INFO] 23:02:48:539 Memoria/(128676:128676): tamaño memoria = 4096
+[INFO] 23:02:48:539 Memoria/(128676:128676): tamaño segmento = 128
+[INFO] 23:02:48:539 Memoria/(128676:128676): cantidad de segmentos = 16
+[INFO] 23:02:48:539 Memoria/(128676:128676): retardo memoria = 1000
+[INFO] 23:02:48:539 Memoria/(128676:128676): retardo compactacion = 60000
+[INFO] 23:02:48:539 Memoria/(128676:128676): algoritmo asignacion = BEST
+[INFO] 23:02:48:539 Memoria/(128676:128676): --------------------------------
+[INFO] 23:02:48:539 Memoria/(128676:128676): ¡Memoria iniciado correctamente!
+[TRACE] 23:02:48:539 Memoria/(128676:128676): Listo para escuchar a mi cliente
+[INFO] 23:02:48:539 Memoria/(128676:128676): Servidor listo para recibir al cliente
+[INFO] 23:02:49:172 Memoria/(128676:128680): Se conecto un cliente!
+[TRACE] 23:02:49:172 Memoria/(128676:128680): Recibi Instruccion: Conectado al FileSystem
+[INFO] 23:02:49:989 Memoria/(128676:128679): Se conecto un cliente!
+[TRACE] 23:02:49:989 Memoria/(128676:128679): Recibi Instruccion: Conectado al CPU
+[INFO] 23:02:50:615 Memoria/(128676:128678): Se conecto un cliente!
+[TRACE] 23:02:50:615 Memoria/(128676:128678): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:03:00:616 Memoria/(128676:128679): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:03:00:967 Memoria/(128676:128679): Recibi Instruccion: MOV_IN BX 120
+[INFO] 23:05:55:181 Memoria/(129014:129014): Logger creado
+[INFO] 23:05:55:182 Memoria/(129014:129014): -------Valores del config-------
+[INFO] 23:05:55:183 Memoria/(129014:129014): puerto_escucha = 8003
+[INFO] 23:05:55:183 Memoria/(129014:129014): tamaño memoria = 4096
+[INFO] 23:05:55:183 Memoria/(129014:129014): tamaño segmento = 128
+[INFO] 23:05:55:183 Memoria/(129014:129014): cantidad de segmentos = 16
+[INFO] 23:05:55:183 Memoria/(129014:129014): retardo memoria = 1000
+[INFO] 23:05:55:183 Memoria/(129014:129014): retardo compactacion = 60000
+[INFO] 23:05:55:183 Memoria/(129014:129014): algoritmo asignacion = BEST
+[INFO] 23:05:55:183 Memoria/(129014:129014): --------------------------------
+[INFO] 23:05:55:183 Memoria/(129014:129014): ¡Memoria iniciado correctamente!
+[TRACE] 23:05:55:183 Memoria/(129014:129014): Listo para escuchar a mi cliente
+[INFO] 23:05:55:183 Memoria/(129014:129014): Servidor listo para recibir al cliente
+[INFO] 23:05:59:229 Memoria/(129014:129018): Se conecto un cliente!
+[TRACE] 23:05:59:230 Memoria/(129014:129018): Recibi Instruccion: Conectado al FileSystem
+[INFO] 23:06:01:159 Memoria/(129014:129017): Se conecto un cliente!
+[TRACE] 23:06:01:159 Memoria/(129014:129017): Recibi Instruccion: Conectado al CPU
+[INFO] 23:06:03:047 Memoria/(129014:129016): Se conecto un cliente!
+[TRACE] 23:06:03:049 Memoria/(129014:129016): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:06:13:048 Memoria/(129014:129017): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:06:13:318 Memoria/(129014:129017): Recibi Instruccion: MOV_IN BX 120
+[INFO] 23:09:26:333 Memoria/(129421:129421): Logger creado
+[INFO] 23:09:26:334 Memoria/(129421:129421): -------Valores del config-------
+[INFO] 23:09:26:334 Memoria/(129421:129421): puerto_escucha = 8003
+[INFO] 23:09:26:334 Memoria/(129421:129421): tamaño memoria = 4096
+[INFO] 23:09:26:334 Memoria/(129421:129421): tamaño segmento = 128
+[INFO] 23:09:26:334 Memoria/(129421:129421): cantidad de segmentos = 16
+[INFO] 23:09:26:334 Memoria/(129421:129421): retardo memoria = 1000
+[INFO] 23:09:26:334 Memoria/(129421:129421): retardo compactacion = 60000
+[INFO] 23:09:26:334 Memoria/(129421:129421): algoritmo asignacion = BEST
+[INFO] 23:09:26:334 Memoria/(129421:129421): --------------------------------
+[INFO] 23:09:26:334 Memoria/(129421:129421): ¡Memoria iniciado correctamente!
+[TRACE] 23:09:26:334 Memoria/(129421:129421): Listo para escuchar a mi cliente
+[INFO] 23:09:26:334 Memoria/(129421:129421): Servidor listo para recibir al cliente
+[INFO] 23:09:27:059 Memoria/(129421:129425): Se conecto un cliente!
+[TRACE] 23:09:27:059 Memoria/(129421:129425): Recibi Instruccion: Conectado al FileSystem
+[INFO] 23:09:27:904 Memoria/(129421:129424): Se conecto un cliente!
+[TRACE] 23:09:27:905 Memoria/(129421:129424): Recibi Instruccion: Conectado al CPU
+[INFO] 23:09:28:702 Memoria/(129421:129423): Se conecto un cliente!
+[TRACE] 23:09:28:702 Memoria/(129421:129423): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:09:38:704 Memoria/(129421:129424): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:11:16:251 Memoria/(129421:129424): Recibi Instruccion: MOV_IN BX 120
+[INFO] 23:12:32:217 Memoria/(129791:129791): Logger creado
+[INFO] 23:12:32:217 Memoria/(129791:129791): -------Valores del config-------
+[INFO] 23:12:32:217 Memoria/(129791:129791): puerto_escucha = 8003
+[INFO] 23:12:32:217 Memoria/(129791:129791): tamaño memoria = 4096
+[INFO] 23:12:32:217 Memoria/(129791:129791): tamaño segmento = 128
+[INFO] 23:12:32:217 Memoria/(129791:129791): cantidad de segmentos = 16
+[INFO] 23:12:32:217 Memoria/(129791:129791): retardo memoria = 1000
+[INFO] 23:12:32:217 Memoria/(129791:129791): retardo compactacion = 60000
+[INFO] 23:12:32:217 Memoria/(129791:129791): algoritmo asignacion = BEST
+[INFO] 23:12:32:217 Memoria/(129791:129791): --------------------------------
+[INFO] 23:12:32:217 Memoria/(129791:129791): ¡Memoria iniciado correctamente!
+[TRACE] 23:12:32:218 Memoria/(129791:129791): Listo para escuchar a mi cliente
+[INFO] 23:12:32:218 Memoria/(129791:129791): Servidor listo para recibir al cliente
+[INFO] 23:12:39:327 Memoria/(129791:129795): Se conecto un cliente!
+[TRACE] 23:12:39:327 Memoria/(129791:129795): Recibi Instruccion: Conectado al FileSystem
+[INFO] 23:12:43:444 Memoria/(129791:129794): Se conecto un cliente!
+[TRACE] 23:12:43:444 Memoria/(129791:129794): Recibi Instruccion: Conectado al CPU
+[INFO] 23:12:50:604 Memoria/(129791:129793): Se conecto un cliente!
+[TRACE] 23:12:50:604 Memoria/(129791:129793): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:13:00:605 Memoria/(129791:129794): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:13:00:887 Memoria/(129791:129794): Recibi Instruccion: MOV_IN BX 120
+[INFO] 23:14:48:753 Memoria/(130111:130111): Logger creado
+[INFO] 23:14:48:754 Memoria/(130111:130111): -------Valores del config-------
+[INFO] 23:14:48:754 Memoria/(130111:130111): puerto_escucha = 8003
+[INFO] 23:14:48:754 Memoria/(130111:130111): tamaño memoria = 4096
+[INFO] 23:14:48:754 Memoria/(130111:130111): tamaño segmento = 128
+[INFO] 23:14:48:754 Memoria/(130111:130111): cantidad de segmentos = 16
+[INFO] 23:14:48:755 Memoria/(130111:130111): retardo memoria = 1000
+[INFO] 23:14:48:755 Memoria/(130111:130111): retardo compactacion = 60000
+[INFO] 23:14:48:755 Memoria/(130111:130111): algoritmo asignacion = BEST
+[INFO] 23:14:48:755 Memoria/(130111:130111): --------------------------------
+[INFO] 23:14:48:755 Memoria/(130111:130111): ¡Memoria iniciado correctamente!
+[TRACE] 23:14:48:756 Memoria/(130111:130111): Listo para escuchar a mi cliente
+[INFO] 23:14:48:756 Memoria/(130111:130111): Servidor listo para recibir al cliente
+[INFO] 23:14:50:445 Memoria/(130111:130115): Se conecto un cliente!
+[TRACE] 23:14:50:445 Memoria/(130111:130115): Recibi Instruccion: Conectado al FileSystem
+[INFO] 23:14:52:631 Memoria/(130111:130114): Se conecto un cliente!
+[TRACE] 23:14:52:631 Memoria/(130111:130114): Recibi Instruccion: Conectado al CPU
+[INFO] 23:14:54:776 Memoria/(130111:130113): Se conecto un cliente!
+[TRACE] 23:14:54:777 Memoria/(130111:130113): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:15:04:779 Memoria/(130111:130114): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:15:05:059 Memoria/(130111:130114): Recibi Instruccion: MOV_IN BX 120
+[INFO] 23:16:28:771 Memoria/(130328:130328): Logger creado
+[INFO] 23:16:28:771 Memoria/(130328:130328): -------Valores del config-------
+[INFO] 23:16:28:771 Memoria/(130328:130328): puerto_escucha = 8003
+[INFO] 23:16:28:771 Memoria/(130328:130328): tamaño memoria = 4096
+[INFO] 23:16:28:771 Memoria/(130328:130328): tamaño segmento = 128
+[INFO] 23:16:28:772 Memoria/(130328:130328): cantidad de segmentos = 16
+[INFO] 23:16:28:772 Memoria/(130328:130328): retardo memoria = 1000
+[INFO] 23:16:28:772 Memoria/(130328:130328): retardo compactacion = 60000
+[INFO] 23:16:28:772 Memoria/(130328:130328): algoritmo asignacion = BEST
+[INFO] 23:16:28:772 Memoria/(130328:130328): --------------------------------
+[INFO] 23:16:28:772 Memoria/(130328:130328): ¡Memoria iniciado correctamente!
+[TRACE] 23:16:28:772 Memoria/(130328:130328): Listo para escuchar a mi cliente
+[INFO] 23:16:28:772 Memoria/(130328:130328): Servidor listo para recibir al cliente
+[INFO] 23:16:29:116 Memoria/(130328:130332): Se conecto un cliente!
+[TRACE] 23:16:29:116 Memoria/(130328:130332): Recibi Instruccion: Conectado al FileSystem
+[INFO] 23:16:29:580 Memoria/(130328:130331): Se conecto un cliente!
+[TRACE] 23:16:29:580 Memoria/(130328:130331): Recibi Instruccion: Conectado al CPU
+[INFO] 23:16:30:045 Memoria/(130328:130330): Se conecto un cliente!
+[TRACE] 23:16:30:046 Memoria/(130328:130330): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:16:40:047 Memoria/(130328:130331): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:16:50:263 Memoria/(130328:130331): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:16:50:395 Memoria/(130328:130330): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 23:16:50:395 Memoria/(130328:130330): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 23:20:06:113 Memoria/(130685:130685): Logger creado
+[INFO] 23:20:06:114 Memoria/(130685:130685): -------Valores del config-------
+[INFO] 23:20:06:114 Memoria/(130685:130685): puerto_escucha = 8003
+[INFO] 23:20:06:114 Memoria/(130685:130685): tamaño memoria = 4096
+[INFO] 23:20:06:114 Memoria/(130685:130685): tamaño segmento = 128
+[INFO] 23:20:06:114 Memoria/(130685:130685): cantidad de segmentos = 16
+[INFO] 23:20:06:114 Memoria/(130685:130685): retardo memoria = 1000
+[INFO] 23:20:06:114 Memoria/(130685:130685): retardo compactacion = 60000
+[INFO] 23:20:06:114 Memoria/(130685:130685): algoritmo asignacion = BEST
+[INFO] 23:20:06:114 Memoria/(130685:130685): --------------------------------
+[INFO] 23:20:06:114 Memoria/(130685:130685): ¡Memoria iniciado correctamente!
+[TRACE] 23:20:06:115 Memoria/(130685:130685): Listo para escuchar a mi cliente
+[INFO] 23:20:06:115 Memoria/(130685:130685): Servidor listo para recibir al cliente
+[INFO] 23:20:07:442 Memoria/(130685:130689): Se conecto un cliente!
+[TRACE] 23:20:07:442 Memoria/(130685:130689): Recibi Instruccion: Conectado al FileSystem
+[INFO] 23:20:08:149 Memoria/(130685:130688): Se conecto un cliente!
+[TRACE] 23:20:08:149 Memoria/(130685:130688): Recibi Instruccion: Conectado al CPU
+[INFO] 23:20:09:039 Memoria/(130685:130687): Se conecto un cliente!
+[TRACE] 23:20:09:041 Memoria/(130685:130687): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:20:19:041 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:128 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:128 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:132 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:134 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:134 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:136 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:137 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:137 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:139 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:140 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:140 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:142 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:143 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:143 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:145 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:146 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:146 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:149 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:150 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:150 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:151 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:153 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:153 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:155 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:156 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:156 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:158 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:159 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:159 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:161 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:162 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:162 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:164 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:166 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:166 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:167 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:170 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:170 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:171 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:174 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:174 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:176 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:177 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:178 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:179 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:180 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:180 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:182 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:183 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:183 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:185 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:187 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:187 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:188 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:190 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:190 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:192 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:193 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:193 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:197 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:200 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:200 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:201 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:202 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:202 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:203 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:205 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:205 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:206 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:207 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:207 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:210 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:211 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:211 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:213 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:215 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:215 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:216 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:218 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:218 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:220 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:222 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:222 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:223 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:225 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:225 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:226 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:230 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:230 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:233 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:234 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:234 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:235 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:237 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:237 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:239 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:241 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:241 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:242 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:243 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:243 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:244 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:247 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:247 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:248 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:250 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:251 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:252 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:253 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:253 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:255 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:256 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:256 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:258 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:259 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:259 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:263 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:266 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:266 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:19:267 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:19:312 Memoria/(130685:130688): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:20:29:531 Memoria/(130685:130688): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:20:30:708 Memoria/(130685:130687): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 23:20:30:708 Memoria/(130685:130687): Recibi Instruccion: DELETE_SEGMENT 1
+[TRACE] 23:20:30:795 Memoria/(130685:130687): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 23:20:30:795 Memoria/(130685:130687): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 23:38:47:379 Memoria/(132518:132518): Logger creado
+[INFO] 23:38:47:380 Memoria/(132518:132518): -------Valores del config-------
+[INFO] 23:38:47:380 Memoria/(132518:132518): puerto_escucha = 8003
+[INFO] 23:38:47:380 Memoria/(132518:132518): tamaño memoria = 4096
+[INFO] 23:38:47:380 Memoria/(132518:132518): tamaño segmento = 128
+[INFO] 23:38:47:380 Memoria/(132518:132518): cantidad de segmentos = 16
+[INFO] 23:38:47:380 Memoria/(132518:132518): retardo memoria = 1000
+[INFO] 23:38:47:381 Memoria/(132518:132518): retardo compactacion = 60000
+[INFO] 23:38:47:381 Memoria/(132518:132518): algoritmo asignacion = BEST
+[INFO] 23:38:47:381 Memoria/(132518:132518): --------------------------------
+[INFO] 23:38:47:381 Memoria/(132518:132518): ¡Memoria iniciado correctamente!
+[TRACE] 23:38:47:381 Memoria/(132518:132518): Listo para escuchar a mi cliente
+[INFO] 23:38:47:381 Memoria/(132518:132518): Servidor listo para recibir al cliente
+[INFO] 23:38:48:868 Memoria/(132518:132522): Se conecto un cliente!
+[TRACE] 23:38:48:868 Memoria/(132518:132522): Recibi Instruccion: Conectado al FileSystem
+[INFO] 23:38:51:273 Memoria/(132518:132521): Se conecto un cliente!
+[TRACE] 23:38:51:273 Memoria/(132518:132521): Recibi Instruccion: Conectado al CPU
+[INFO] 23:38:53:612 Memoria/(132518:132520): Se conecto un cliente!
+[TRACE] 23:38:53:612 Memoria/(132518:132520): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:39:03:613 Memoria/(132518:132521): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:39:03:700 Memoria/(132518:132521): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:39:13:919 Memoria/(132518:132521): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:39:24:096 Memoria/(132518:132520): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 23:39:24:097 Memoria/(132518:132520): Recibi Instruccion: DELETE_SEGMENT 1
+[TRACE] 23:39:24:227 Memoria/(132518:132521): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:39:24:359 Memoria/(132518:132520): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 23:39:24:359 Memoria/(132518:132520): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 23:41:05:915 Memoria/(132759:132759): Logger creado
+[INFO] 23:41:05:915 Memoria/(132759:132759): -------Valores del config-------
+[INFO] 23:41:05:915 Memoria/(132759:132759): puerto_escucha = 8003
+[INFO] 23:41:05:915 Memoria/(132759:132759): tamaño memoria = 4096
+[INFO] 23:41:05:915 Memoria/(132759:132759): tamaño segmento = 128
+[INFO] 23:41:05:915 Memoria/(132759:132759): cantidad de segmentos = 16
+[INFO] 23:41:05:915 Memoria/(132759:132759): retardo memoria = 1000
+[INFO] 23:41:05:915 Memoria/(132759:132759): retardo compactacion = 60000
+[INFO] 23:41:05:915 Memoria/(132759:132759): algoritmo asignacion = BEST
+[INFO] 23:41:05:916 Memoria/(132759:132759): --------------------------------
+[INFO] 23:41:05:916 Memoria/(132759:132759): ¡Memoria iniciado correctamente!
+[TRACE] 23:41:05:916 Memoria/(132759:132759): Listo para escuchar a mi cliente
+[INFO] 23:41:05:916 Memoria/(132759:132759): Servidor listo para recibir al cliente
+[INFO] 23:41:06:572 Memoria/(132759:132763): Se conecto un cliente!
+[TRACE] 23:41:06:572 Memoria/(132759:132763): Recibi Instruccion: Conectado al FileSystem
+[INFO] 23:41:07:147 Memoria/(132759:132762): Se conecto un cliente!
+[TRACE] 23:41:07:147 Memoria/(132759:132762): Recibi Instruccion: Conectado al CPU
+[INFO] 23:41:07:694 Memoria/(132759:132761): Se conecto un cliente!
+[TRACE] 23:41:07:694 Memoria/(132759:132761): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:41:17:696 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:780 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:868 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:956 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:956 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:957 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:959 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:959 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:960 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:961 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:961 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:962 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:963 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:963 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:964 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:966 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:966 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:971 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:974 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:974 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:975 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:976 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:976 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:977 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:978 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:978 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:979 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:981 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:981 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:983 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:984 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:984 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:985 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:987 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:987 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:989 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:990 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:990 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:991 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:993 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:993 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:995 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:996 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:17:996 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:17:998 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:000 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:000 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:002 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:005 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:005 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:006 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:007 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:007 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:009 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:011 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:011 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:012 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:015 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:015 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:016 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:017 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:017 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:019 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:020 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:020 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:022 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:023 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:023 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:025 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:027 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:027 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:028 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:030 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:030 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:032 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:037 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:037 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:039 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:041 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:041 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:043 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:044 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:044 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:046 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:047 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:047 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:049 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:050 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:051 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:052 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:053 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:053 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:054 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:056 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:056 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:057 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:058 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:058 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:060 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:061 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:061 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:062 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:064 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:064 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:065 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:069 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:069 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:071 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:072 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:072 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:074 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:075 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:075 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:077 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:079 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:079 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:080 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:082 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:082 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:083 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:085 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:18:085 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 23:41:18:086 Memoria/(132759:132762): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 23:41:57:257 Memoria/(132759:132762): Recibi Instruccion: MOV_IN BX 120
+[INFO] 00:16:53:340 Memoria/(136376:136376): Logger creado
+[INFO] 00:16:53:341 Memoria/(136376:136376): -------Valores del config-------
+[INFO] 00:16:53:341 Memoria/(136376:136376): puerto_escucha = 8003
+[INFO] 00:16:53:341 Memoria/(136376:136376): tamaño memoria = 4096
+[INFO] 00:16:53:341 Memoria/(136376:136376): tamaño segmento = 128
+[INFO] 00:16:53:341 Memoria/(136376:136376): cantidad de segmentos = 16
+[INFO] 00:16:53:341 Memoria/(136376:136376): retardo memoria = 1000
+[INFO] 00:16:53:341 Memoria/(136376:136376): retardo compactacion = 60000
+[INFO] 00:16:53:341 Memoria/(136376:136376): algoritmo asignacion = BEST
+[INFO] 00:16:53:341 Memoria/(136376:136376): --------------------------------
+[INFO] 00:16:53:341 Memoria/(136376:136376): ¡Memoria iniciado correctamente!
+[TRACE] 00:16:53:341 Memoria/(136376:136376): Listo para escuchar a mi cliente
+[INFO] 00:16:53:341 Memoria/(136376:136376): Servidor listo para recibir al cliente
+[INFO] 00:16:54:391 Memoria/(136376:136380): Se conecto un cliente!
+[TRACE] 00:16:54:391 Memoria/(136376:136380): Recibi Instruccion: Conectado al FileSystem
+[INFO] 00:16:56:331 Memoria/(136376:136379): Se conecto un cliente!
+[TRACE] 00:16:56:331 Memoria/(136376:136379): Recibi Instruccion: Conectado al CPU
+[INFO] 00:16:59:685 Memoria/(136376:136378): Se conecto un cliente!
+[TRACE] 00:16:59:685 Memoria/(136376:136378): Recibi Instruccion: Conectado al Kernel
+[TRACE] 00:17:09:686 Memoria/(136376:136379): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 00:17:09:772 Memoria/(136376:136379): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 00:17:19:991 Memoria/(136376:136379): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 00:17:30:167 Memoria/(136376:136378): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 00:17:30:167 Memoria/(136376:136378): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 00:27:02:051 Memoria/(138069:138069): Logger creado
+[INFO] 00:27:02:053 Memoria/(138069:138069): -------Valores del config-------
+[INFO] 00:27:02:053 Memoria/(138069:138069): puerto_escucha = 8003
+[INFO] 00:27:02:053 Memoria/(138069:138069): tamaño memoria = 4096
+[INFO] 00:27:02:053 Memoria/(138069:138069): tamaño segmento = 128
+[INFO] 00:27:02:053 Memoria/(138069:138069): cantidad de segmentos = 16
+[INFO] 00:27:02:053 Memoria/(138069:138069): retardo memoria = 1000
+[INFO] 00:27:02:053 Memoria/(138069:138069): retardo compactacion = 60000
+[INFO] 00:27:02:054 Memoria/(138069:138069): algoritmo asignacion = BEST
+[INFO] 00:27:02:054 Memoria/(138069:138069): --------------------------------
+[INFO] 00:27:02:054 Memoria/(138069:138069): ¡Memoria iniciado correctamente!
+[TRACE] 00:27:02:054 Memoria/(138069:138069): Listo para escuchar a mi cliente
+[INFO] 00:27:02:054 Memoria/(138069:138069): Servidor listo para recibir al cliente
+[INFO] 00:27:03:034 Memoria/(138069:138073): Se conecto un cliente!
+[TRACE] 00:27:03:035 Memoria/(138069:138073): Recibi Instruccion: Conectado al FileSystem
+[INFO] 00:27:03:795 Memoria/(138069:138072): Se conecto un cliente!
+[TRACE] 00:27:03:796 Memoria/(138069:138072): Recibi Instruccion: Conectado al CPU
+[INFO] 00:27:04:291 Memoria/(138069:138071): Se conecto un cliente!
+[TRACE] 00:27:04:292 Memoria/(138069:138071): Recibi Instruccion: Conectado al Kernel
+[TRACE] 00:27:14:301 Memoria/(138069:138072): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 00:27:24:511 Memoria/(138069:138072): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 00:27:24:643 Memoria/(138069:138071): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 00:27:24:643 Memoria/(138069:138071): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 00:32:59:630 Memoria/(138960:138960): Logger creado
+[INFO] 00:32:59:632 Memoria/(138960:138960): -------Valores del config-------
+[INFO] 00:32:59:632 Memoria/(138960:138960): puerto_escucha = 8003
+[INFO] 00:32:59:632 Memoria/(138960:138960): tamaño memoria = 4096
+[INFO] 00:32:59:632 Memoria/(138960:138960): tamaño segmento = 128
+[INFO] 00:32:59:633 Memoria/(138960:138960): cantidad de segmentos = 16
+[INFO] 00:32:59:633 Memoria/(138960:138960): retardo memoria = 1000
+[INFO] 00:32:59:633 Memoria/(138960:138960): retardo compactacion = 60000
+[INFO] 00:32:59:633 Memoria/(138960:138960): algoritmo asignacion = BEST
+[INFO] 00:32:59:633 Memoria/(138960:138960): --------------------------------
+[INFO] 00:32:59:633 Memoria/(138960:138960): ¡Memoria iniciado correctamente!
+[TRACE] 00:32:59:633 Memoria/(138960:138960): Listo para escuchar a mi cliente
+[INFO] 00:32:59:633 Memoria/(138960:138960): Servidor listo para recibir al cliente
+[INFO] 00:33:00:396 Memoria/(138960:138964): Se conecto un cliente!
+[TRACE] 00:33:00:396 Memoria/(138960:138964): Recibi Instruccion: Conectado al FileSystem
+[INFO] 00:33:01:114 Memoria/(138960:138963): Se conecto un cliente!
+[TRACE] 00:33:01:115 Memoria/(138960:138963): Recibi Instruccion: Conectado al CPU
+[INFO] 00:33:05:126 Memoria/(138960:138962): Se conecto un cliente!
+[TRACE] 00:33:05:127 Memoria/(138960:138962): Recibi Instruccion: Conectado al Kernel
+[TRACE] 00:33:15:128 Memoria/(138960:138963): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 00:33:25:347 Memoria/(138960:138963): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 00:33:25:479 Memoria/(138960:138962): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 00:33:25:479 Memoria/(138960:138962): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 00:42:40:061 Memoria/(140007:140007): Logger creado
+[INFO] 00:42:40:062 Memoria/(140007:140007): -------Valores del config-------
+[INFO] 00:42:40:062 Memoria/(140007:140007): puerto_escucha = 8003
+[INFO] 00:42:40:062 Memoria/(140007:140007): tamaño memoria = 4096
+[INFO] 00:42:40:063 Memoria/(140007:140007): tamaño segmento = 128
+[INFO] 00:42:40:063 Memoria/(140007:140007): cantidad de segmentos = 16
+[INFO] 00:42:40:063 Memoria/(140007:140007): retardo memoria = 1000
+[INFO] 00:42:40:063 Memoria/(140007:140007): retardo compactacion = 60000
+[INFO] 00:42:40:063 Memoria/(140007:140007): algoritmo asignacion = BEST
+[INFO] 00:42:40:063 Memoria/(140007:140007): --------------------------------
+[INFO] 00:42:40:063 Memoria/(140007:140007): ¡Memoria iniciado correctamente!
+[TRACE] 00:42:40:063 Memoria/(140007:140007): Listo para escuchar a mi cliente
+[INFO] 00:42:40:063 Memoria/(140007:140007): Servidor listo para recibir al cliente
+[INFO] 00:42:40:874 Memoria/(140007:140011): Se conecto un cliente!
+[TRACE] 00:42:40:874 Memoria/(140007:140011): Recibi Instruccion: Conectado al FileSystem
+[INFO] 00:42:41:365 Memoria/(140007:140010): Se conecto un cliente!
+[TRACE] 00:42:41:365 Memoria/(140007:140010): Recibi Instruccion: Conectado al CPU
+[INFO] 00:42:44:013 Memoria/(140007:140009): Se conecto un cliente!
+[TRACE] 00:42:44:014 Memoria/(140007:140009): Recibi Instruccion: Conectado al Kernel
+[TRACE] 00:42:54:016 Memoria/(140007:140010): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 00:43:04:236 Memoria/(140007:140010): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 00:43:04:367 Memoria/(140007:140009): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 00:43:04:367 Memoria/(140007:140009): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 00:59:13:949 Memoria/(142085:142085): Logger creado
+[INFO] 00:59:13:952 Memoria/(142085:142085): -------Valores del config-------
+[INFO] 00:59:13:952 Memoria/(142085:142085): puerto_escucha = 8003
+[INFO] 00:59:13:952 Memoria/(142085:142085): tamaño memoria = 4096
+[INFO] 00:59:13:952 Memoria/(142085:142085): tamaño segmento = 128
+[INFO] 00:59:13:952 Memoria/(142085:142085): cantidad de segmentos = 16
+[INFO] 00:59:13:952 Memoria/(142085:142085): retardo memoria = 1000
+[INFO] 00:59:13:952 Memoria/(142085:142085): retardo compactacion = 60000
+[INFO] 00:59:13:952 Memoria/(142085:142085): algoritmo asignacion = BEST
+[INFO] 00:59:13:952 Memoria/(142085:142085): --------------------------------
+[INFO] 00:59:13:952 Memoria/(142085:142085): ¡Memoria iniciado correctamente!
+[TRACE] 00:59:13:952 Memoria/(142085:142085): Listo para escuchar a mi cliente
+[INFO] 00:59:13:952 Memoria/(142085:142085): Servidor listo para recibir al cliente
+[INFO] 00:59:14:626 Memoria/(142085:142089): Se conecto un cliente!
+[TRACE] 00:59:14:626 Memoria/(142085:142089): Recibi Instruccion: Conectado al FileSystem
+[INFO] 00:59:15:328 Memoria/(142085:142088): Se conecto un cliente!
+[TRACE] 00:59:15:329 Memoria/(142085:142088): Recibi Instruccion: Conectado al CPU
+[INFO] 00:59:16:132 Memoria/(142085:142087): Se conecto un cliente!
+[TRACE] 00:59:16:132 Memoria/(142085:142087): Recibi Instruccion: Conectado al Kernel
+[TRACE] 00:59:26:133 Memoria/(142085:142088): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 00:59:36:350 Memoria/(142085:142088): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 00:59:36:483 Memoria/(142085:142087): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 00:59:36:483 Memoria/(142085:142087): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 21:26:41:947 Memoria/(3018:3018): Logger creado
+[INFO] 21:26:41:949 Memoria/(3018:3018): -------Valores del config-------
+[INFO] 21:26:41:949 Memoria/(3018:3018): puerto_escucha = 8003
+[INFO] 21:26:41:949 Memoria/(3018:3018): tamaño memoria = 4096
+[INFO] 21:26:41:949 Memoria/(3018:3018): tamaño segmento = 128
+[INFO] 21:26:41:950 Memoria/(3018:3018): cantidad de segmentos = 16
+[INFO] 21:26:41:950 Memoria/(3018:3018): retardo memoria = 1000
+[INFO] 21:26:41:950 Memoria/(3018:3018): retardo compactacion = 60000
+[INFO] 21:26:41:950 Memoria/(3018:3018): algoritmo asignacion = BEST
+[INFO] 21:26:41:950 Memoria/(3018:3018): --------------------------------
+[INFO] 21:26:41:950 Memoria/(3018:3018): ¡Memoria iniciado correctamente!
+[TRACE] 21:26:41:950 Memoria/(3018:3018): Listo para escuchar a mi cliente
+[INFO] 21:26:41:950 Memoria/(3018:3018): Servidor listo para recibir al cliente
+[INFO] 21:26:43:975 Memoria/(3018:3022): Se conecto un cliente!
+[TRACE] 21:26:43:975 Memoria/(3018:3022): Recibi Instruccion: Conectado al FileSystem
+[INFO] 21:26:46:347 Memoria/(3018:3021): Se conecto un cliente!
+[TRACE] 21:26:46:347 Memoria/(3018:3021): Recibi Instruccion: Conectado al CPU
+[INFO] 21:26:48:239 Memoria/(3018:3020): Se conecto un cliente!
+[TRACE] 21:26:48:239 Memoria/(3018:3020): Recibi Instruccion: Conectado al Kernel
+[TRACE] 21:26:58:241 Memoria/(3018:3021): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:26:58:327 Memoria/(3018:3021): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:27:08:554 Memoria/(3018:3021): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 21:27:18:738 Memoria/(3018:3020): Recibi Instruccion: CREATE_SEGMENT 1 128
+[TRACE] 21:27:18:744 Memoria/(3018:3020): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 21:38:38:997 Memoria/(3204:3204): Logger creado
+[INFO] 21:38:38:999 Memoria/(3204:3204): -------Valores del config-------
+[INFO] 21:38:38:999 Memoria/(3204:3204): puerto_escucha = 8003
+[INFO] 21:38:38:999 Memoria/(3204:3204): tamaño memoria = 4096
+[INFO] 21:38:38:999 Memoria/(3204:3204): tamaño segmento = 128
+[INFO] 21:38:38:999 Memoria/(3204:3204): cantidad de segmentos = 16
+[INFO] 21:38:38:999 Memoria/(3204:3204): retardo memoria = 1000
+[INFO] 21:38:38:999 Memoria/(3204:3204): retardo compactacion = 60000
+[INFO] 21:38:39:000 Memoria/(3204:3204): algoritmo asignacion = BEST
+[INFO] 21:38:39:000 Memoria/(3204:3204): --------------------------------
+[INFO] 21:38:39:000 Memoria/(3204:3204): ¡Memoria iniciado correctamente!
+[TRACE] 21:38:39:000 Memoria/(3204:3204): Listo para escuchar a mi cliente
+[INFO] 21:38:39:000 Memoria/(3204:3204): Servidor listo para recibir al cliente
+[INFO] 21:38:43:850 Memoria/(3204:3208): Se conecto un cliente!
+[TRACE] 21:38:43:854 Memoria/(3204:3208): Recibi Instruccion: Conectado al FileSystem
+[INFO] 21:38:51:670 Memoria/(3204:3207): Se conecto un cliente!
+[TRACE] 21:38:51:671 Memoria/(3204:3207): Recibi Instruccion: Conectado al CPU
+[INFO] 21:39:07:189 Memoria/(3204:3206): Se conecto un cliente!
+[TRACE] 21:39:07:189 Memoria/(3204:3206): Recibi Instruccion: Conectado al Kernel
+[TRACE] 21:39:17:191 Memoria/(3204:3207): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:39:17:275 Memoria/(3204:3207): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:39:17:570 Memoria/(3204:3207): Recibi Instruccion: MOV_IN BX 120
+[INFO] 21:45:40:130 Memoria/(3677:3677): Logger creado
+[INFO] 21:45:40:139 Memoria/(3677:3677): -------Valores del config-------
+[INFO] 21:45:40:139 Memoria/(3677:3677): puerto_escucha = 8003
+[INFO] 21:45:40:139 Memoria/(3677:3677): tamaño memoria = 4096
+[INFO] 21:45:40:139 Memoria/(3677:3677): tamaño segmento = 128
+[INFO] 21:45:40:139 Memoria/(3677:3677): cantidad de segmentos = 16
+[INFO] 21:45:40:139 Memoria/(3677:3677): retardo memoria = 1000
+[INFO] 21:45:40:139 Memoria/(3677:3677): retardo compactacion = 60000
+[INFO] 21:45:40:139 Memoria/(3677:3677): algoritmo asignacion = BEST
+[INFO] 21:45:40:139 Memoria/(3677:3677): --------------------------------
+[INFO] 21:45:40:139 Memoria/(3677:3677): ¡Memoria iniciado correctamente!
+[TRACE] 21:45:40:139 Memoria/(3677:3677): Listo para escuchar a mi cliente
+[INFO] 21:45:40:139 Memoria/(3677:3677): Servidor listo para recibir al cliente
+[INFO] 21:47:21:965 Memoria/(3954:3954): Logger creado
+[INFO] 21:47:21:967 Memoria/(3954:3954): -------Valores del config-------
+[INFO] 21:47:21:967 Memoria/(3954:3954): puerto_escucha = 8003
+[INFO] 21:47:21:967 Memoria/(3954:3954): tamaño memoria = 4096
+[INFO] 21:47:21:967 Memoria/(3954:3954): tamaño segmento = 128
+[INFO] 21:47:21:967 Memoria/(3954:3954): cantidad de segmentos = 16
+[INFO] 21:47:21:967 Memoria/(3954:3954): retardo memoria = 1000
+[INFO] 21:47:21:967 Memoria/(3954:3954): retardo compactacion = 60000
+[INFO] 21:47:21:967 Memoria/(3954:3954): algoritmo asignacion = BEST
+[INFO] 21:47:21:967 Memoria/(3954:3954): --------------------------------
+[INFO] 21:47:21:967 Memoria/(3954:3954): ¡Memoria iniciado correctamente!
+[TRACE] 21:47:21:967 Memoria/(3954:3954): Listo para escuchar a mi cliente
+[INFO] 21:47:21:967 Memoria/(3954:3954): Servidor listo para recibir al cliente
+[INFO] 21:47:24:136 Memoria/(3954:3958): Se conecto un cliente!
+[TRACE] 21:47:24:136 Memoria/(3954:3958): Recibi Instruccion: Conectado al FileSystem
+[INFO] 21:47:31:788 Memoria/(3954:3957): Se conecto un cliente!
+[TRACE] 21:47:31:789 Memoria/(3954:3957): Recibi Instruccion: Conectado al CPU
+[INFO] 21:47:47:191 Memoria/(3954:3956): Se conecto un cliente!
+[TRACE] 21:47:47:191 Memoria/(3954:3956): Recibi Instruccion: Conectado al Kernel
+[TRACE] 21:47:57:193 Memoria/(3954:3957): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:47:57:279 Memoria/(3954:3957): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 21:47:57:570 Memoria/(3954:3957): Recibi Instruccion: MOV_IN BX 120

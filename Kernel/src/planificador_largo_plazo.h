@@ -16,6 +16,7 @@
 #include <utils/pcb.h>
 #include <pthread.h>
 #include <utils/utils.h>
+#include <semaphore.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --
@@ -28,6 +29,9 @@
 // ------------------------------------------------------------------------------------------
 
 	extern t_list* lista_new;
+	//extern sem_t semaforo_multiprogramacion;
+	//extern sem_t cantidad_procesos_new;
+	//extern sem_t cantidad_procesos_ready;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --

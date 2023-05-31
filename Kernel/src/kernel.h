@@ -57,7 +57,7 @@
 	pthread_t conexionFileSystem;
 	pthread_t conexionCPU;
 	pthread_t conexionMemoria;
-	pthread_t io_procesos;
+	//pthread_t io_procesos;
 	int socket_modulo;
 	int server_kernel;
 	int socket_fileSystem;
@@ -111,6 +111,7 @@
 	t_pcb* pcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
 	void ejecutar_io(t_thread_args* args);
+	void imprimirSemaforos();
 
 
 

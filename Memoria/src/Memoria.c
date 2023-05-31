@@ -117,8 +117,8 @@ void crear_estructuras(){
 	sem_wait(&semaforo_conexiones);
 	sem_wait(&semaforo_conexiones);
 
-	printf("EEFDEEDEDEDEDFRRRFFFR\n\n\n\n");
-	printf("todo listo");
+	//ACA ARMAMOS LAS ESTRUCTURAS
+
 }
 
 void cerrar_conexiones(){

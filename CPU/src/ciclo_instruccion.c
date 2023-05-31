@@ -32,8 +32,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   instruccion->parametro[1]);
 			usleep(retardo_instruccion);
 			registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], instruccion->parametro[1]);
-			imprimir_registros(contexto_de_ejecucion->registros_cpu);
-
+			//imprimir_registros(contexto_de_ejecucion->registros_cpu);
 			break;
 
 		case MOV_IN:
@@ -43,10 +42,8 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   instruccion->parametro[1]);
 			char mensaje_mov_in[30] = "MOV_IN ";
 
-			concatenar_mensaje_con_2_parametros(mensaje_mov_in[30], instruccion);
-
+			concatenar_mensaje_con_2_parametros(mensaje_mov_in, instruccion);
 			log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
-
 			enviar_mensaje(mensaje_mov_in, socket_memoria);
 			break;
 
@@ -57,7 +54,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   instruccion->parametro[1]);
 			char mensaje_mov_out[30] = "MOV_OUT ";
 
-			concatenar_mensaje_con_2_parametros(mensaje_mov_out[30], instruccion);
+			concatenar_mensaje_con_2_parametros(mensaje_mov_out, instruccion);
 
 			log_info(cpu_logger, "PID: %u - Accion: Escribir ", contexto_de_ejecucion->pid);
 
@@ -70,7 +67,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																instruccion->parametro[0]);
 
 			char mensaje_io[30] = "I_O ";
-			concatenar_mensaje_con_1_parametro(mensaje_io[30], instruccion);
+			concatenar_mensaje_con_1_parametro(mensaje_io, instruccion);
 			enviarContexto(mensaje_io);
 			salida = 0;
 			break;
@@ -80,7 +77,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																codigo_instruccion_string(instruccion->codigo_instruccion),
 																instruccion->parametro[0]);
 			char mensaje_f_open[30] = "F_OPEN ";
-			concatenar_mensaje_con_1_parametro(mensaje_f_open[30], instruccion);
+			concatenar_mensaje_con_1_parametro(mensaje_f_open, instruccion);
 			enviar_mensaje(mensaje_f_open, socket_Kernel);
 
 			break;
@@ -90,7 +87,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																codigo_instruccion_string(instruccion->codigo_instruccion),
 																instruccion->parametro[0]);
 			char mensaje_f_close[30] = "F_CLOSE ";
-			concatenar_mensaje_con_1_parametro(mensaje_f_close[30], instruccion);
+			concatenar_mensaje_con_1_parametro(mensaje_f_close, instruccion);
 			enviar_mensaje(mensaje_f_close, socket_Kernel);
 			break;
 
@@ -100,7 +97,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	instruccion->parametro[0],
 																	instruccion->parametro[1]);
 			char mensaje_f_seek[30] = "F_SEEK ";
-			concatenar_mensaje_con_2_parametros(mensaje_f_seek[30], instruccion);
+			concatenar_mensaje_con_2_parametros(mensaje_f_seek, instruccion);
 			enviar_mensaje(mensaje_f_seek, socket_Kernel);
 			break;
 
@@ -111,7 +108,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	   instruccion->parametro[1],
 																	   instruccion->parametro[2]);
 			char mensaje_f_read[30] = "F_READ ";
-			concatenar_mensaje_con_3_parametros(mensaje_f_read[30], instruccion);
+			concatenar_mensaje_con_3_parametros(mensaje_f_read, instruccion);
 			enviar_mensaje(mensaje_f_read, socket_Kernel);
 			break;
 
@@ -122,7 +119,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	   instruccion->parametro[1],
 																	   instruccion->parametro[2]);
 			char mensaje_f_write[30] = "F_WRITE ";
-			concatenar_mensaje_con_3_parametros(mensaje_f_write[30], instruccion);
+			concatenar_mensaje_con_3_parametros(mensaje_f_write, instruccion);
 			enviar_mensaje(mensaje_f_write, socket_Kernel);
 			break;
 
@@ -133,7 +130,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	instruccion->parametro[1]);
 			char mensaje_f_truncate[30] = "F_TRUNCATE ";
 
-			concatenar_mensaje_con_2_parametros(mensaje_f_truncate[30], instruccion);
+			concatenar_mensaje_con_2_parametros(mensaje_f_truncate, instruccion);
 
 			enviar_mensaje(mensaje_f_truncate, socket_Kernel);
 			break;
@@ -144,7 +141,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																instruccion->parametro[0]);
 
 			char str[30] = "WAIT ";
-			concatenar_mensaje_con_1_parametro(str[30], instruccion);
+			concatenar_mensaje_con_1_parametro(str, instruccion);
 			enviarContexto(str);
 			salida = 0;
 			break;
@@ -155,22 +152,22 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																instruccion->parametro[0]);
 
 			char str1[30] = "SIGNAL ";
-			concatenar_mensaje_con_1_parametro(str1[30], instruccion);
+			concatenar_mensaje_con_1_parametro(str1, instruccion);
 			enviarContexto(str1);
 			salida = 0;
 			break;
 
 		case CREATE_SEGMENT:
-					log_info(cpu_logger, "PID: %u - Ejecutando: %s %s %s",  contexto_de_ejecucion->pid,
-																			codigo_instruccion_string(instruccion->codigo_instruccion),
-																			instruccion->parametro[0],
-																			instruccion->parametro[1]);
-					char mensaje_create_segment[30] = "CREATE_SEGMENT ";
+			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s %s",  contexto_de_ejecucion->pid,
+																	codigo_instruccion_string(instruccion->codigo_instruccion),
+																	instruccion->parametro[0],
+																	instruccion->parametro[1]);
+			char mensaje_create_segment[30] = "CREATE_SEGMENT ";
 
-					concatenar_mensaje_con_2_parametros(mensaje_create_segment[30], instruccion);
+			concatenar_mensaje_con_2_parametros(mensaje_create_segment, instruccion);
 
-					enviar_mensaje(mensaje_create_segment, socket_Kernel);
-					break;
+			enviar_mensaje(mensaje_create_segment, socket_Kernel);
+			break;
 
 		case DELETE_SEGMENT:
 			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s", contexto_de_ejecucion->pid,
@@ -178,7 +175,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																instruccion->parametro[0]);
 			char mensaje_delete_segment[30] = "DELETE_SEGMENT ";
 
-			concatenar_mensaje_con_1_parametro(mensaje_delete_segment[30], instruccion);
+			concatenar_mensaje_con_1_parametro(mensaje_delete_segment, instruccion);
 
 			enviar_mensaje(mensaje_delete_segment, socket_Kernel);
 			break;
@@ -217,7 +214,7 @@ void enviarContexto(char* motivo){
 	//printf("\ntam_enviado: %ld\n", paquete->buffer->size + 2*sizeof(int));
 	//printf("\EL VALOR ES: %s\n", motivo);
 
-	enviar_paquete(paquete, socket_Kernel, cpu_logger, "cpu");
+	enviar_paquete(paquete, socket_Kernel, cpu_logger, "Kernel");
 }
 char* concatenar_mensaje_con_3_parametros(char mensaje[30], t_instruccion* instruccion){
 	strcat(mensaje, instruccion->parametro[0]);

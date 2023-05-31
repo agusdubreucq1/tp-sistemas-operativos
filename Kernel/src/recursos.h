@@ -23,6 +23,7 @@
 
 	extern pthread_mutex_t semaforo_ready;
 	extern sem_t cantidad_procesos_ready;
+	extern sem_t semaforo_multiprogramacion;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
