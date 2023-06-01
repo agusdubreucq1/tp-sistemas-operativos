@@ -111,13 +111,11 @@ void init_estructuras_planificacion(){
     lista_recursos = list_create();
 
     devolver_ejecucion = 0;
-    recibi_instruccion = 0;
+    //recibi_instruccion = 0;
 
     int i = 0;
 	char** ptr = recursos;
 	for (char* c = *ptr; c; c=*++ptr) {
-		/*char str[20] = "";
-		strcat(str, c);*/
 		char* str = string_new();
 		strcat(str, c);
 		uint32_t cantidad = atoi(instancias_recursos[i]);
@@ -160,52 +158,25 @@ void planificarLargoPlazo(){
 
 void planificarCortoPlazo(){
 	sleep(10);
-
 	while(1){
-		if(!(strcmp(algoritmo_planificacion, "FIFO"))){
-			if (recibi_instruccion == 0){
-				sem_wait(&cantidad_procesos_ready);
-				pthread_mutex_lock(&semaforo_ready);
-				if (devolver_ejecucion == 1){
-					list_remove_element(lista_ready, pcb_ejecutando);
-					pcb_a_ejecutar = pcb_ejecutando;
-					devolver_ejecucion = 0;
-				} else {
-					pcb_a_ejecutar = list_remove(lista_ready, 0);
-				}
-				pthread_mutex_unlock(&semaforo_ready);
-
-				pthread_mutex_lock(&semaforo_execute);
-				log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXEC);
-				pcb_a_ejecutar->estado = EXEC;
-				enviar_pcb(pcb_a_ejecutar);
-				recibir_mensaje_cpu();
-				pthread_mutex_unlock(&semaforo_execute);
-			} else {
-				recibir_mensaje_cpu();
-			}
-		} else{
-			if (recibi_instruccion == 0){
-				sem_wait(&cantidad_procesos_ready);
-				pthread_mutex_lock(&semaforo_ready);
-				if (devolver_ejecucion == 1){
-					list_remove_element(lista_ready, pcb_ejecutando);
-					pcb_a_ejecutar = pcb_ejecutando;
-					devolver_ejecucion = 0;
-				} else {
-					pcb_a_ejecutar = pcb_elegido_HRRN();
-				}
-				pthread_mutex_unlock(&semaforo_ready);
-				pthread_mutex_lock(&semaforo_execute);
-				log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXEC);
-				pcb_a_ejecutar->estado = EXEC;
-				enviar_pcb(pcb_a_ejecutar);
-				recibir_mensaje_cpu();
-				pthread_mutex_unlock(&semaforo_execute);
-			} else {
-				recibir_mensaje_cpu();
+		sem_wait(&cantidad_procesos_ready);
+		pthread_mutex_lock(&semaforo_ready);
+		if (devolver_ejecucion == 1){//para las instrucciones que luego de realizarlas, sigue el mismo proceso(como SIGNAL)
+			list_remove_element(lista_ready, pcb_ejecutando);
+			pcb_a_ejecutar = pcb_ejecutando;
+			devolver_ejecucion = 0;
+		}else{
+			if(!(strcmp(algoritmo_planificacion, "FIFO"))){
+				pcb_a_ejecutar = list_remove(lista_ready, 0);// si es FIFO saca el primero de ready
+			}else {
+				pcb_a_ejecutar = pcb_elegido_HRRN();
 			}
 		}
+		pthread_mutex_unlock(&semaforo_ready);
+		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXEC);
+		pcb_a_ejecutar->estado = EXEC;
+		enviar_pcb(pcb_a_ejecutar);
+		recibir_mensaje_cpu();
 	}
 }
 
@@ -250,10 +221,10 @@ void recibir_mensaje_cpu(){
 	cod_op = recibir_operacion(socket_cpu);
 	switch (cod_op) {
 		case MENSAJE:
-			char mensaje[30] = "";
+			/*char mensaje[30] = "";
 			strcat(mensaje, recibir_instruccion(socket_cpu, kernel_logger));
 			ejecutar_segun_motivo(mensaje);
-			recibi_instruccion = 1;
+			recibi_instruccion = 1;*///nunca enviamos mensaje por que siempre recibimos el contexto de ejecucion
 			break;
 		case PAQUETE:
 			int size;
@@ -293,7 +264,7 @@ void ejecutar_segun_motivo(char* motivo){
 			enviar_mensaje("-1", pcb_a_ejecutar->pid);
 			liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
 		} else {
-			descontar_recurso(list_get(lista_recursos, existeRecurso), pcb_a_ejecutar, kernel_logger);
+			descontar_recurso(list_get(lista_recursos, existeRecurso), pcb_a_ejecutar, kernel_logger);//vuelve a poner al proceso en ready
 			//imprimir_recurso(list_get(lista_recursos, existeRecurso));
 		}
 		break;
@@ -311,7 +282,7 @@ void ejecutar_segun_motivo(char* motivo){
 		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
 		break;
 	case SIGNAL:
-		estimar_rafaga(pcb_a_ejecutar);
+		//estimar_rafaga(pcb_a_ejecutar);-> no haria falta estimar rafaga por que sigue el mismo proceso
 		parametros = string_split(motivo, " ");
 		existeRecurso = recurso_existe(parametros[1]);
 
@@ -436,7 +407,7 @@ void ejecutar_io(t_thread_args* args){
 	sleep(args->duracion);
 	struct timeval tiempo;
 	gettimeofday(&tiempo, NULL);
-	args->pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
+	args->pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000; // actualiza la llegada a ready del proceso
 	ingresar_en_lista(args->pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 	free(args);
 	pthread_exit(0);
