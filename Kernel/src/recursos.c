@@ -14,15 +14,8 @@ int recurso_existe(char* nombre){
 
     for (int i = 0; i < list_size(lista_recursos); i++) {
     	t_recurso* recurso = list_get(lista_recursos, i);
-    	/*char** array_nombres = string_split(nombre, "\0");
-    	char** array_recurso_nombre = string_split(recurso->nombre, "\0");*/
 
-    	printf("\nRecurso Param %s\n", nombre);
-    	printf("\nRecurso Lista %s\n", recurso->nombre);
-    	printf("\nComparar %d\n", string_starts_with(nombre, recurso->nombre));
-
-        if (string_starts_with(nombre, recurso->nombre)) {
-        	printf("AASASASASA");
+        if (string_equals_ignore_case(nombre, recurso->nombre)) {
         	recurso_existe = true;
         	return i;
         }

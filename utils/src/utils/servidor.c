@@ -115,15 +115,13 @@ t_list* recibir_instrucciones(int socket_cliente, uint32_t* tamanio_recibido){
 		memcpy(valor, buffer+desplazamiento, tamanio);
 		desplazamiento+=tamanio;
 
-		char *token = strtok(valor, "\n");
+		char *token = strtok(valor, "\r\n");
 		while (token != NULL){
-			if(token[strlen(token)]=='\0'){
-				//printf("lo agrega /0\n");
-			}
+
 			//printf("token: %s, size token: %ld\n", token, sizeof(*token));
 			//printf("token[ult]: %c , token[ult+1]: %c \n", token[strlen(token)-1], token[strlen(token)]);
 			list_add(valores, token);
-			token = strtok(NULL, "\n");
+			token = strtok(NULL, "\r\n");
 		}
 	}
 
