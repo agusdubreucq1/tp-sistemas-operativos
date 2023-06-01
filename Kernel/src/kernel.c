@@ -268,6 +268,7 @@ void recibir_mensaje_cpu(){
 			motivo = deserializar_motivo(buffer, tam_recibido);
 			log_trace(kernel_logger, "Recibi contexto de ejecucion - PID: %d", pcb_a_ejecutar->pid);
 			ejecutar_segun_motivo(motivo);
+			recibi_instruccion=0;
 
 			*tam_recibido+=2*sizeof(int);
 			send(socket_cpu, tam_recibido, sizeof(int), 0);
