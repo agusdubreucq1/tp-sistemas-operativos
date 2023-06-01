@@ -22,7 +22,7 @@ t_instruccion* fetch_instruccion() {
 
 
 int ejecutar_instruccion(t_instruccion* instruccion){
-	int salida = 1;
+	int salida = 0;
 	switch(instruccion->codigo_instruccion) {
 
 		case SET:
@@ -33,6 +33,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			usleep(retardo_instruccion);
 			registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], instruccion->parametro[1]);
 			//imprimir_registros(contexto_de_ejecucion->registros_cpu);
+			salida = 1;
 			break;
 
 		case MOV_IN:
@@ -45,6 +46,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			concatenar_mensaje_con_2_parametros(mensaje_mov_in, instruccion);
 			log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
 			enviar_mensaje(mensaje_mov_in, socket_memoria);
+			salida = 1;
 			break;
 
 		case MOV_OUT:
@@ -59,6 +61,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			log_info(cpu_logger, "PID: %u - Accion: Escribir ", contexto_de_ejecucion->pid);
 
 			enviar_mensaje(mensaje_mov_out, socket_memoria);
+			salida = 1;
 			break;
 
 		case I_O:
@@ -69,7 +72,6 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			char mensaje_io[30] = "I_O ";
 			concatenar_mensaje_con_1_parametro(mensaje_io, instruccion);
 			enviarContexto(mensaje_io);
-			salida = 0;
 			break;
 
 		case F_OPEN:
@@ -78,7 +80,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																instruccion->parametro[0]);
 			char mensaje_f_open[30] = "F_OPEN ";
 			concatenar_mensaje_con_1_parametro(mensaje_f_open, instruccion);
-			enviar_mensaje(mensaje_f_open, socket_Kernel);
+			enviarContexto(mensaje_f_open);
 
 			break;
 
@@ -88,7 +90,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																instruccion->parametro[0]);
 			char mensaje_f_close[30] = "F_CLOSE ";
 			concatenar_mensaje_con_1_parametro(mensaje_f_close, instruccion);
-			enviar_mensaje(mensaje_f_close, socket_Kernel);
+			enviarContexto(mensaje_f_close);
 			break;
 
 		case F_SEEK:
@@ -98,7 +100,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	instruccion->parametro[1]);
 			char mensaje_f_seek[30] = "F_SEEK ";
 			concatenar_mensaje_con_2_parametros(mensaje_f_seek, instruccion);
-			enviar_mensaje(mensaje_f_seek, socket_Kernel);
+			enviarContexto(mensaje_f_seek);
 			break;
 
 		case F_READ:
@@ -109,7 +111,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	   instruccion->parametro[2]);
 			char mensaje_f_read[30] = "F_READ ";
 			concatenar_mensaje_con_3_parametros(mensaje_f_read, instruccion);
-			enviar_mensaje(mensaje_f_read, socket_Kernel);
+			enviarContexto(mensaje_f_read);
 			break;
 
 		case F_WRITE:
@@ -120,7 +122,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	   instruccion->parametro[2]);
 			char mensaje_f_write[30] = "F_WRITE ";
 			concatenar_mensaje_con_3_parametros(mensaje_f_write, instruccion);
-			enviar_mensaje(mensaje_f_write, socket_Kernel);
+			enviarContexto(mensaje_f_write);
 			break;
 
 		case F_TRUNCATE:
@@ -132,7 +134,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 			concatenar_mensaje_con_2_parametros(mensaje_f_truncate, instruccion);
 
-			enviar_mensaje(mensaje_f_truncate, socket_Kernel);
+			enviarContexto(mensaje_f_truncate);
 			break;
 
 		case WAIT:
@@ -143,7 +145,6 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			char str[30] = "WAIT ";
 			concatenar_mensaje_con_1_parametro(str, instruccion);
 			enviarContexto(str);
-			salida = 0;
 			break;
 
 		case SIGNAL:
@@ -154,7 +155,6 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			char str1[30] = "SIGNAL ";
 			concatenar_mensaje_con_1_parametro(str1, instruccion);
 			enviarContexto(str1);
-			salida = 0;
 			break;
 
 		case CREATE_SEGMENT:
@@ -166,7 +166,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 			concatenar_mensaje_con_2_parametros(mensaje_create_segment, instruccion);
 
-			enviar_mensaje(mensaje_create_segment, socket_Kernel);
+			enviarContexto(mensaje_create_segment);
 			break;
 
 		case DELETE_SEGMENT:
@@ -177,21 +177,19 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 			concatenar_mensaje_con_1_parametro(mensaje_delete_segment, instruccion);
 
-			enviar_mensaje(mensaje_delete_segment, socket_Kernel);
+			enviarContexto(mensaje_delete_segment);
 			break;
 
 		case YIELD:
 			log_info(cpu_logger, "PID: %u - Ejecutando: %s", contexto_de_ejecucion->pid,
 														     codigo_instruccion_string(instruccion->codigo_instruccion));
 			enviarContexto("YIELD");
-			salida = 0;
 			break;
 
 		case EXIT:
 			log_info(cpu_logger, "PID: %u - Ejecutando: %s", contexto_de_ejecucion->pid,
 														     codigo_instruccion_string(instruccion->codigo_instruccion));
 			enviarContexto("EXIT");
-			salida = 0;
 			break;
 
 		default:

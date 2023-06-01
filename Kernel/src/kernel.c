@@ -5,13 +5,13 @@ int main(void){
 
 	//signal(SIGINT, cerrar_conexiones);
 
-	kernel_logger = iniciar_logger("./../logs/logKernel.log", "Kernel");
+	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
 
 	if (kernel_logger == NULL){
 		exit(1);
 	}
 
-	kernel_config = iniciar_config("./../config/Kernel.config", "Kernel");
+	kernel_config = iniciar_config("../../config/Kernel.config", "Kernel");
 
 	if (kernel_config == NULL){
 		exit(2);
@@ -155,8 +155,6 @@ void planificarLargoPlazo(){
 
 		//mandar a memoria el proceso para iniciar estructuras
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
-		//sem_post(&cantidad_procesos_ready);
-
 	}
 }
 
@@ -355,18 +353,27 @@ void ejecutar_segun_motivo(char* motivo){
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Abrir Archivo: %s", pcb_a_ejecutar->pid, parametros[1]);
 		enviar_mensaje(motivo, socket_fileSystem);
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case F_CLOSE:
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Cerrar Archivo: %s", pcb_a_ejecutar->pid, parametros[1]);
 		enviar_mensaje(motivo, socket_fileSystem);
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case F_SEEK:
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Actualizar puntero Archivo: %s -> %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 		enviar_mensaje(motivo, socket_fileSystem);
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case F_READ:
@@ -376,6 +383,9 @@ void ejecutar_segun_motivo(char* motivo){
 				"- Direccion Memoria: %s "
 				"- Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2], parametros[3], parametros[4]);
 		enviar_mensaje(motivo, socket_fileSystem);
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case F_WRITE:
@@ -385,24 +395,36 @@ void ejecutar_segun_motivo(char* motivo){
 				"- Direccion Memoria: %s "
 				"- Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2], parametros[3], parametros[4]);
 		enviar_mensaje(motivo, socket_fileSystem);
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case F_TRUNCATE:
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Truncar Archivo: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 		enviar_mensaje(motivo, socket_fileSystem);
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case CREATE_SEGMENT:
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 		enviar_mensaje(motivo, socket_memoria);
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case DELETE_SEGMENT:
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 		enviar_mensaje(motivo, socket_memoria);
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	default:
