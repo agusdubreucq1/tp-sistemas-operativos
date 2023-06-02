@@ -5,13 +5,13 @@ int main(void){
 
 	//signal(SIGINT, cerrar_conexiones);
 
-	kernel_logger = iniciar_logger("./../logs/logKernel.log", "Kernel");
+	kernel_logger = iniciar_logger("../../logs/logKernel.log", "Kernel");
 
 	if (kernel_logger == NULL){
 		exit(1);
 	}
 
-	kernel_config = iniciar_config("./../config/Kernel.config", "Kernel");
+	kernel_config = iniciar_config("../../config/Kernel.config", "Kernel");
 
 	if (kernel_config == NULL){
 		exit(2);
