@@ -112,6 +112,8 @@
 	t_pcb* pcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
 	void ejecutar_io(t_thread_args* args);
+	void liberar_pcb(t_pcb* pcb);
+	void liberar_elemento_list(void* elemento);
 	void imprimirSemaforos();
 
 

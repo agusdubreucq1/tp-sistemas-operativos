@@ -280,6 +280,7 @@ void ejecutar_segun_motivo(char* motivo){
 		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SUCCESS ", pcb_a_ejecutar->pid);
 		enviar_mensaje("-1", pcb_a_ejecutar->pid);
 		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+		liberar_pcb(pcb_a_ejecutar);
 		break;
 	case SIGNAL:
 		//estimar_rafaga(pcb_a_ejecutar);-> no haria falta estimar rafaga por que sigue el mismo proceso
@@ -433,6 +434,17 @@ void cerrar_conexiones(){
 	close(socket_memoria);
 	close(socket_fileSystem);
 	exit(1);
+}
+
+void liberar_pcb(t_pcb* pcb){
+	free(pcb->registros_cpu);
+	list_destroy_and_destroy_elements(pcb->instrucciones, liberar_elemento_list);
+	list_destroy_and_destroy_elements(pcb->tabla_segmentos, liberar_elemento_list);
+	free(pcb);
+}
+
+void liberar_elemento_list(void* elemento){
+	free(elemento);
 }
 
 void imprimirSemaforos(){
