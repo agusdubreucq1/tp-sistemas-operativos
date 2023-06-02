@@ -28,6 +28,8 @@ int main(void){
 
     iniciar_bitmap(path_bitmap, superbloque);
 
+    crear_bloques(path_bloques, superbloque, 3, fileSystem_logger);
+
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
@@ -134,4 +136,52 @@ void iniciar_bitmap(char* path, t_superBloque* superbloque) {
     log_info(fileSystem_logger , "Bitmap iniciado");
 }
 
+void crear_bloques(char* path_bloques, t_superBloque* superbloque, int retardo, t_log* fileSystem_logger) {
+    int archivo_bloques_tam = superbloque->tamanio_bloque * superbloque->cant_bloques;
+
+    FILE* archivo = fopen(path_bloques, "r+b");
+    if (archivo == NULL) {
+        log_error(fileSystem_logger, "Error al abrir el archivo de bloques");
+        return;
+    }
+
+    void* mmapBlocks = malloc(archivo_bloques_tam);
+    if (mmapBlocks == NULL) {
+        log_error(fileSystem_logger, "Error al asignar memoria para mmapBlocks");
+        fclose(archivo);
+        return;
+    }
+
+    fread(mmapBlocks, archivo_bloques_tam, 1, archivo);
+
+    void* copia_bloques = malloc(archivo_bloques_tam);
+    if (copia_bloques == NULL) {
+        log_error(fileSystem_logger, "Error al asignar memoria para copia_bloques");
+        fclose(archivo);
+        free(mmapBlocks);
+        return;
+    }
+    int bloques_mapeados = 0;
+    int retardoenSegundos = retardo_en_segundos(retardo);
+    // no sé cómo hacer que pare el while si le pongo un 1 entonces pongo un criterio de paro
+    while(bloques_mapeados < superbloque->cant_bloques) {
+        sleep(retardoenSegundos );
+        log_info(fileSystem_logger, "Logueo por cada bloque");
+        memcpy(copia_bloques, mmapBlocks, archivo_bloques_tam);
+
+        fseek(archivo, 0, SEEK_SET);
+        fwrite(copia_bloques, archivo_bloques_tam, 1, archivo);
+
+        fflush(archivo);
+        bloques_mapeados++;
+    }
+
+    free(copia_bloques);
+    free(mmapBlocks);
+    fclose(archivo);
+}
+
+int retardo_en_segundos(int milisegundos){
+	return milisegundos/1000;
+}
 

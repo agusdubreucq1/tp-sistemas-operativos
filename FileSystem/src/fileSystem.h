@@ -67,5 +67,7 @@
 	t_bitarray* bitmap;
 
 	void iniciar_bitmap(char*path, t_superBloque* superbloque);
+	void crear_bloques(char* path_bloques, t_superBloque* superbloque, int retardo, t_log* logger_fileSystem);
+	int retardo_en_segundos(int milisegundos);
 
 #endif /* FILESYSTEM_H_ */
