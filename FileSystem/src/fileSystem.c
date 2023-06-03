@@ -28,7 +28,7 @@ int main(void){
 
     iniciar_bitmap(path_bitmap, superbloque);
 
-    crear_bloques(path_bloques, superbloque, 3, fileSystem_logger);
+    crear_bloques(path_bloques, superbloque, retardo_acceso_bloque, fileSystem_logger);
 
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
