@@ -132,7 +132,7 @@ void init_estructuras_planificacion(){
 
     pthread_mutex_init(&semaforo_new, NULL);
     pthread_mutex_init(&semaforo_ready, NULL);
-    pthread_mutex_init(&semaforo_execute, NULL);
+    //pthread_mutex_init(&semaforo_execute, NULL);
 
 }
 
@@ -156,8 +156,9 @@ void planificarLargoPlazo(){
 	}
 }
 
+
 void planificarCortoPlazo(){
-	sleep(10);
+	//sleep(10);
 	while(1){
 		sem_wait(&cantidad_procesos_ready);
 		pthread_mutex_lock(&semaforo_ready);

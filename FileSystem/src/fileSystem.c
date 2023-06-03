@@ -114,6 +114,7 @@ void iniciar_bitmap(char* path, t_superBloque* superbloque) {
             fwrite(&zero, sizeof(char), 1, bitmap_archivo);
         }
 
+
         // Reiniciamos el puntero de archivo al inicio
         fseek(bitmap_archivo, 0L, SEEK_SET);
     }
@@ -162,10 +163,10 @@ void crear_bloques(char* path_bloques, t_superBloque* superbloque, int retardo, 
         return;
     }
     int bloques_mapeados = 0;
-    int retardoenSegundos = retardo_en_segundos(retardo);
+    //int retardoenSegundos = retardo_en_segundos(retardo);
     // no sé cómo hacer que pare el while si le pongo un 1 entonces pongo un criterio de paro
     while(bloques_mapeados < superbloque->cant_bloques) {
-        sleep(retardoenSegundos );
+       // sleep(retardoenSegundos );
         log_info(fileSystem_logger, "Logueo por cada bloque");
         memcpy(copia_bloques, mmapBlocks, archivo_bloques_tam);
 
