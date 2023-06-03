@@ -114,6 +114,7 @@
 	void ejecutar_io(t_thread_args* args);
 	void liberar_pcb(t_pcb* pcb);
 	void liberar_elemento_list(void* elemento);
+	void liberar_contexto_kernel(t_pcb* pcb);
 	void imprimirSemaforos();
 
 

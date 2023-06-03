@@ -81,12 +81,13 @@ t_list* deserializar_tabla_segmentos(void* stream, int* desplazamiento){
 }
 
  char* deserializar_char(void* stream, int* desplazamiento, int tamanio){
-	 char* registro;
+	 char* registro= malloc(tamanio);
 
-	 registro = stream + *desplazamiento;
+	 memcpy(registro, stream + *desplazamiento, tamanio);
+	 //registro = stream + *desplazamiento;
 	 *desplazamiento+=tamanio;
 	 return registro;
-
+//hacer un malloc para despues liberar la memoria del buffer/
  }
 
 uint32_t deserializar_uint32(void* stream, int* desplazamiento){

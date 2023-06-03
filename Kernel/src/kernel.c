@@ -117,11 +117,12 @@ void init_estructuras_planificacion(){
 	char** ptr = recursos;
 	for (char* c = *ptr; c; c=*++ptr) {
 		char* str = string_new();
-		strcat(str, c);
+		string_append(&str, c);
 		uint32_t cantidad = atoi(instancias_recursos[i]);
 		t_recurso* recurso = crear_recurso(str,cantidad);
 		list_add(lista_recursos, recurso);
 		i++;
+		free(str);
 	}
 
     hora_inicio = (long long)tiempo.tv_sec * 1000 + (long long)tiempo.tv_usec / 1000;
@@ -183,10 +184,10 @@ void planificarCortoPlazo(){
 t_pcb* pcb_elegido_HRRN(){
 	int tcb_index = 0;
 	float ratio_mayor = 0.0;
-	t_pcb* pcb = malloc(sizeof(t_pcb));
+	t_pcb* pcb; /*= malloc(sizeof(t_pcb));*/
 	struct timeval hora_actual;
 	for (int i = 0; i < list_size(lista_ready); i++) {
-		t_pcb* pcb = list_get(lista_ready, i);
+		/*t_pcb* */pcb = list_get(lista_ready, i);
 		gettimeofday(&hora_actual, NULL);
 		int tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000) - pcb->tiempo_ready;
 		//int tiempo = (hora_actual.tv_sec * 1000000 + hora_actual.tv_usec) - pcb->tiempo_ready;
@@ -233,6 +234,7 @@ void recibir_mensaje_cpu(){
 			int* tam_recibido= malloc(sizeof(int));
 			buffer = recibir_buffer(&size, socket_cpu);
 
+			liberar_contexto_kernel(pcb_a_ejecutar);//liberar el contexto del pcb, xq va a tener otro
 			deserializar_contexto(buffer,tam_recibido, pcb_a_ejecutar);
 			motivo = deserializar_motivo(buffer, tam_recibido);
 			log_trace(kernel_logger, "Recibi contexto de ejecucion - PID: %d", pcb_a_ejecutar->pid);
@@ -241,6 +243,9 @@ void recibir_mensaje_cpu(){
 
 			*tam_recibido+=2*sizeof(int);
 			send(socket_cpu, tam_recibido, sizeof(int), 0);
+			free(tam_recibido);
+			free(buffer);
+			free(motivo);
 
 	}
 }
@@ -445,6 +450,10 @@ void liberar_pcb(t_pcb* pcb){
 
 void liberar_elemento_list(void* elemento){
 	free(elemento);
+}
+
+void liberar_contexto_kernel(t_pcb* pcb){
+	free(pcb->registros_cpu);
 }
 
 void imprimirSemaforos(){

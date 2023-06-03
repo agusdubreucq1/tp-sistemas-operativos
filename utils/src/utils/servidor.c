@@ -58,7 +58,7 @@ void* recibir_buffer(int* size, int socket_cliente){
 	void * buffer;
 
 	recv(socket_cliente, size, sizeof(int), MSG_WAITALL);
-	buffer = malloc(*size);
+	buffer = malloc(*size);           //liberado en recibir instrucciones
 	recv(socket_cliente, buffer, *size, MSG_WAITALL);
 
 	return buffer;
@@ -117,12 +117,13 @@ t_list* recibir_instrucciones(int socket_cliente, uint32_t* tamanio_recibido){
 
 		char *token = strtok(valor, "\r\n");
 		while (token != NULL){
-
+			char* token_copia = strdup(token);
 			//printf("token: %s, size token: %ld\n", token, sizeof(*token));
 			//printf("token[ult]: %c , token[ult+1]: %c \n", token[strlen(token)-1], token[strlen(token)]);
-			list_add(valores, token);
+			list_add(valores, token_copia);
 			token = strtok(NULL, "\r\n");
 		}
+		free(valor);
 	}
 
 	*tamanio_recibido = desplazamiento + sizeof(uint32_t) * 2;

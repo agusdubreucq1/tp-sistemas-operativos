@@ -22,18 +22,18 @@ t_pcb* crear_pcb(uint32_t pid, t_list* instrucciones, uint32_t estimacion){
 
 void init_registros(t_registros** registros){
 	*registros = malloc(sizeof(t_registros));
-	strcpy((*registros)->ax, "    ");
-	strcpy((*registros)->bx, "    ");
-	strcpy((*registros)->cx, "    ");
-	strcpy((*registros)->dx, "    ");
-	strcpy((*registros)->eax, "        ");
-	strcpy((*registros)->ebx, "        ");
-	strcpy((*registros)->ecx, "        ");
-	strcpy((*registros)->edx, "        ");
-	strcpy((*registros)->rax, "                ");
-	strcpy((*registros)->rbx, "                ");
-	strcpy((*registros)->rcx, "                ");
-	strcpy((*registros)->rdx, "                ");
+	strncpy((*registros)->ax, "    ",4);
+	strncpy((*registros)->bx, "    ",4);
+	strncpy((*registros)->cx, "    ",4);
+	strncpy((*registros)->dx, "    ",4);
+	strncpy((*registros)->eax, "        ",8);
+	strncpy((*registros)->ebx, "        ",8);
+	strncpy((*registros)->ecx, "        ",8);
+	strncpy((*registros)->edx, "        ",8);
+	strncpy((*registros)->rax, "                ",16);
+	strncpy((*registros)->rbx, "                ",16);
+	strncpy((*registros)->rcx, "                ",16);
+	strncpy((*registros)->rdx, "                ",16);
 }
 
 void init_segmento(t_list** tabla_segmentos){
