@@ -24,7 +24,7 @@ int main(void){
 	server_cpu = iniciar_servidor(IP_SERVER, puerto_escucha, cpu_logger);
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
 
-	contexto_de_ejecucion =  malloc(sizeof(t_contexto_ejecucion));
+	//contexto_de_ejecucion =  malloc(sizeof(t_contexto_ejecucion));
 
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
@@ -62,6 +62,7 @@ void* abrirSocketKernel(){
 		while(1){
 			recibir_mensaje_kernel();
 			comenzar_ciclo_instruccion(contexto_de_ejecucion);
+			liberar_contexto(contexto_de_ejecucion);
 		}
 
 	return "";
@@ -94,7 +95,20 @@ void recibir_mensaje_kernel(){
 			*tam_recibido+=2*sizeof(int);
 			send(socket_Kernel, tam_recibido, sizeof(int), 0);
 			log_trace(cpu_logger, "Recibi contexto de ejecucion - PID: %d", contexto_de_ejecucion->pid);
+			free(buffer);
+			free(tam_recibido);
 	}
+}
+
+void liberar_contexto(t_contexto_ejecucion* contexto_de_ejecucion){
+	free(contexto_de_ejecucion->registros_cpu);
+	list_destroy_and_destroy_elements(contexto_de_ejecucion->instrucciones, liberar_elemento_list);
+	list_destroy_and_destroy_elements(contexto_de_ejecucion->tabla_segmentos, liberar_elemento_list);
+	free(contexto_de_ejecucion);
+}
+
+void liberar_elemento_list(void* elemento){//poner en archivo a parte
+	free(elemento);
 }
 
 

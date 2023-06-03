@@ -47,19 +47,45 @@ char* deserializar_motivo(void* stream, int* desplazamiento){
 t_registros* deserializar_registros_cpu(void* stream, int* desplazamiento){
 	t_registros* registros=malloc(sizeof(t_registros));
 
-		strncpy(registros->ax, deserializar_char(stream, desplazamiento, 4), 4);
-		strncpy(registros->bx, deserializar_char(stream, desplazamiento, 4), 4);
-		strncpy(registros->cx, deserializar_char(stream, desplazamiento, 4), 4);
-		strncpy(registros->dx, deserializar_char(stream, desplazamiento, 4), 4);
-		strncpy(registros->eax, deserializar_char(stream, desplazamiento, 8), 8); /*-> usar strncpy, sino se copiara hasta encontrar un \0*/
-		strncpy(registros->ebx, deserializar_char(stream, desplazamiento, 8), 8);
-		strncpy(registros->ecx, deserializar_char(stream, desplazamiento, 8), 8);
-		strncpy(registros->edx, deserializar_char(stream, desplazamiento, 8), 8);
-		strncpy(registros->rax, deserializar_char(stream, desplazamiento, 16), 16);
-		strncpy(registros->rbx, deserializar_char(stream, desplazamiento, 16), 16);
-		strncpy(registros->rcx, deserializar_char(stream, desplazamiento, 16), 16);
-		strncpy(registros->rdx, deserializar_char(stream, desplazamiento, 16), 16);
+	char* str_ax = deserializar_char(stream, desplazamiento, 4);
+	char* str_bx = deserializar_char(stream, desplazamiento, 4);
+	char* str_cx = deserializar_char(stream, desplazamiento, 4);
+	char* str_dx = deserializar_char(stream, desplazamiento, 4);
+	char* str_eax = deserializar_char(stream, desplazamiento, 8);
+	char* str_ebx=deserializar_char(stream, desplazamiento, 8);
+	char* str_ecx = deserializar_char(stream, desplazamiento, 8);
+	char * str_edx = deserializar_char(stream, desplazamiento, 8);
+	char* str_rax =deserializar_char(stream, desplazamiento, 16);
+	char* str_rbx =deserializar_char(stream, desplazamiento, 16);
+	char* str_rcx =deserializar_char(stream, desplazamiento, 16);
+	char* str_rdx = deserializar_char(stream, desplazamiento, 16);
 
+
+	strncpy(registros->ax,str_ax , 4);
+	strncpy(registros->bx,str_bx, 4);
+	strncpy(registros->cx,str_cx , 4);
+	strncpy(registros->dx, str_dx, 4);
+	strncpy(registros->eax, str_eax, 8); /*-> usar strncpy, sino se copiara hasta encontrar un \0*/
+	strncpy(registros->ebx, str_ebx, 8);
+	strncpy(registros->ecx,str_ecx , 8);
+	strncpy(registros->edx,str_edx , 8);
+	strncpy(registros->rax,str_rax , 16);
+	strncpy(registros->rbx, str_rbx, 16);
+	strncpy(registros->rcx,str_rcx, 16);
+	strncpy(registros->rdx,str_rdx, 16);
+
+	free(str_ax);
+	free(str_bx);
+	free(str_cx);
+	free(str_dx);
+	free(str_eax);
+	free(str_ebx);
+	free(str_ecx);
+	free(str_edx);
+	free(str_rax);
+	free(str_rbx);
+	free(str_rcx);
+	free(str_rdx);
 
 	return registros;
 }
@@ -87,7 +113,6 @@ t_list* deserializar_tabla_segmentos(void* stream, int* desplazamiento){
 	 //registro = stream + *desplazamiento;
 	 *desplazamiento+=tamanio;
 	 return registro;
-//hacer un malloc para despues liberar la memoria del buffer/
  }
 
 uint32_t deserializar_uint32(void* stream, int* desplazamiento){

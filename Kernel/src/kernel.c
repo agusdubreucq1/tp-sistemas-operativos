@@ -407,6 +407,8 @@ void ejecutar_segun_motivo(char* motivo){
 	default:
 		break;
 	}
+	string_iterate_lines(parametros, (void*) free);
+	free(parametros);
 }
 
 void ejecutar_io(t_thread_args* args){
