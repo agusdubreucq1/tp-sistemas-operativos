@@ -24,7 +24,7 @@ int main(void){
 	server_cpu = iniciar_servidor(IP_SERVER, puerto_escucha, cpu_logger);
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
 
-	contexto_de_ejecucion =  malloc(sizeof(t_contexto_ejecucion));
+	//contexto_de_ejecucion =  malloc(sizeof(t_contexto_ejecucion));
 
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
@@ -95,8 +95,8 @@ void recibir_mensaje_kernel(){
 			*tam_recibido+=2*sizeof(int);
 			send(socket_Kernel, tam_recibido, sizeof(int), 0);
 			log_trace(cpu_logger, "Recibi contexto de ejecucion - PID: %d", contexto_de_ejecucion->pid);
-			//free(buffer);
-			//free(tam_recibido);
+			free(buffer);
+			free(tam_recibido);
 	}
 }
 
