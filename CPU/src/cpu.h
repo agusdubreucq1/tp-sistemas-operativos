@@ -61,8 +61,8 @@
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();
-	void liberar_elemento_list(void* elemento);
-	void liberar_contexto(t_contexto_ejecucion* contexto_de_ejecucion);
+	//void liberar_elemento_list(void* elemento);
+	//void liberar_contexto(t_contexto_ejecucion* contexto_de_ejecucion);
 	void cerrar_conexiones();
 
 
