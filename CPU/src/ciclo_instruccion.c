@@ -41,11 +41,21 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   codigo_instruccion_string(instruccion->codigo_instruccion),
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
-			char mensaje_mov_in[30] = "MOV_IN ";
 
+			int es_desplazamiento_valido = desplazamiento_valido(instruccion->parametro[0],
+															     atoi(instruccion->parametro[1]));
+
+			if(!es_desplazamiento_valido){
+				enviarContexto("MOV_IN SEG_FAULT");
+			}
+
+
+			/*
+			char mensaje_mov_in[30] = "MOV_IN ";
 			concatenar_mensaje_con_2_parametros(mensaje_mov_in, instruccion);
 			log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
 			enviar_mensaje(mensaje_mov_in, socket_memoria);
+			*/
 			salida = 1;
 			break;
 
