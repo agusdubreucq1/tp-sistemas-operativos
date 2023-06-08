@@ -42,7 +42,8 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
 
-			int es_desplazamiento_valido_in = desplazamiento_valido(instruccion->parametro[0],
+			int es_desplazamiento_valido_in = desplazamiento_valido(contexto_de_ejecucion->registros_cpu,
+																	instruccion->parametro[0],
 															        atoi(instruccion->parametro[1]));
 
 			if(!es_desplazamiento_valido_in){
@@ -65,7 +66,8 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
 
-			int es_desplazamiento_valido_out = desplazamiento_valido(instruccion->parametro[1],
+			int es_desplazamiento_valido_out = desplazamiento_valido(contexto_de_ejecucion->registros_cpu,
+																	 instruccion->parametro[1],
 																     atoi(instruccion->parametro[0]));
 
 			if(!es_desplazamiento_valido_out){
@@ -73,10 +75,10 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 				enviarContexto("MOV_OUT SEG_FAULT");
 			}
 			else {
-				char mensaje_mov_in[30] = "MOV_OUT ";
-				concatenar_mensaje_con_2_parametros(mensaje_mov_in, instruccion);
+				char mensaje_mov_out[30] = "MOV_OUT ";
+				concatenar_mensaje_con_2_parametros(mensaje_mov_out, instruccion);
 				log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
-				enviar_mensaje(mensaje_mov_in, socket_memoria);
+				enviar_mensaje(mensaje_mov_out, socket_memoria);
 			}
 
 			salida = 1;
