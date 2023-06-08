@@ -34,7 +34,7 @@
 
 	t_config* cpu_config;
 	u_int32_t retardo_instruccion;
-	char *tam_max_segmentos;
+	char *tam_max_segmento;
 	char *ip_memoria, *puerto_memoria, *puerto_escucha;
 
 // ------------------------------------------------------------------------------------------

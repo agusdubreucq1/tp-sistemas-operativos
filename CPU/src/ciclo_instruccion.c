@@ -41,11 +41,22 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   codigo_instruccion_string(instruccion->codigo_instruccion),
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
-			char mensaje_mov_in[30] = "MOV_IN ";
 
-			concatenar_mensaje_con_2_parametros(mensaje_mov_in, instruccion);
-			log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
-			enviar_mensaje(mensaje_mov_in, socket_memoria);
+			int es_desplazamiento_valido_in = desplazamiento_valido(contexto_de_ejecucion->registros_cpu,
+																	instruccion->parametro[0],
+															        atoi(instruccion->parametro[1]));
+
+			if(!es_desplazamiento_valido_in){
+				log_info(cpu_logger, "PID: %u - Error SEG_FAULT - Segmento: - Offset: - Tamaño: ", contexto_de_ejecucion->pid);
+				enviarContexto("MOV_IN SEG_FAULT");
+			}
+			else {
+				char mensaje_mov_in[30] = "MOV_IN ";
+				concatenar_mensaje_con_2_parametros(mensaje_mov_in, instruccion);
+				log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
+				enviar_mensaje(mensaje_mov_in, socket_memoria);
+			}
+
 			salida = 1;
 			break;
 
@@ -54,13 +65,22 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   codigo_instruccion_string(instruccion->codigo_instruccion),
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
-			char mensaje_mov_out[30] = "MOV_OUT ";
 
-			concatenar_mensaje_con_2_parametros(mensaje_mov_out, instruccion);
+			int es_desplazamiento_valido_out = desplazamiento_valido(contexto_de_ejecucion->registros_cpu,
+																	 instruccion->parametro[1],
+																     atoi(instruccion->parametro[0]));
 
-			log_info(cpu_logger, "PID: %u - Accion: Escribir ", contexto_de_ejecucion->pid);
+			if(!es_desplazamiento_valido_out){
+				log_info(cpu_logger, "PID: %u - Error SEG_FAULT - Segmento: - Offset: - Tamaño: ",contexto_de_ejecucion->pid);
+				enviarContexto("MOV_OUT SEG_FAULT");
+			}
+			else {
+				char mensaje_mov_out[30] = "MOV_OUT ";
+				concatenar_mensaje_con_2_parametros(mensaje_mov_out, instruccion);
+				log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
+				enviar_mensaje(mensaje_mov_out, socket_memoria);
+			}
 
-			enviar_mensaje(mensaje_mov_out, socket_memoria);
 			salida = 1;
 			break;
 

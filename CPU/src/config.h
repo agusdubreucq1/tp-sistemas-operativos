@@ -18,7 +18,7 @@
 // ------------------------------------------------------------------------------------------
 
 	extern u_int32_t retardo_instruccion;
-	extern char *tam_max_segmentos;
+	extern char *tam_max_segmento;
 	extern char *ip_memoria, *puerto_memoria, *puerto_escucha;
 
 // ------------------------------------------------------------------------------------------
