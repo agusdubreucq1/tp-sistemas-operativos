@@ -26948,3 +26948,41 @@
 [TRACE] 23:52:20:486 CPU/(197851:197852): Datos enviados correctamente
 [INFO] 23:52:20:486 CPU/(197851:197852): PID: 5 - Ejecutando: EXIT
 [TRACE] 23:52:20:486 CPU/(197851:197852): Datos enviados, esperando respuesta de Kernel...
+[INFO] 17:46:19:008 CPU/(4986:4986): Logger creado
+[INFO] 17:46:19:008 CPU/(4986:4986): -------Valores del config-------
+[INFO] 17:46:19:008 CPU/(4986:4986): Retardo Instrucción = 1000
+[INFO] 17:46:19:008 CPU/(4986:4986): IP Memoria = 127.0.0.1
+[INFO] 17:46:19:008 CPU/(4986:4986): Puerto Memoria = 8002
+[INFO] 17:46:19:008 CPU/(4986:4986): Puerto Escucha = 8001
+[INFO] 17:46:19:008 CPU/(4986:4986): Tamanio maximo de segmento = 128
+[INFO] 17:46:19:009 CPU/(4986:4986): --------------------------------
+[INFO] 17:46:19:009 CPU/(4986:4986): ¡CPU iniciado correctamente!
+[TRACE] 17:46:19:009 CPU/(4986:4986): Listo para escuchar a mi cliente
+[INFO] 17:46:19:009 CPU/(4986:4986): Servidor listo para recibir al cliente
+[INFO] 17:46:19:009 CPU/(4986:4988): Conexion establecida con Memoria
+[TRACE] 17:46:24:303 CPU/(4986:4987): Se conecto un cliente!
+[TRACE] 17:46:24:303 CPU/(4986:4987): Me llego el mensaje: Conectado al Kernel
+[TRACE] 17:46:27:326 CPU/(4986:4987): Recibi contexto de ejecucion - PID: 5
+[INFO] 17:46:27:326 CPU/(4986:4987): Comenzar ejecucion del proceso: 5.
+[INFO] 17:46:27:326 CPU/(4986:4987): PID: 5 - Ejecutando: SET AX AAAA
+[INFO] 17:46:27:327 CPU/(4986:4987): PID: 5 - Ejecutando: SET BX BBBB
+[INFO] 17:46:27:329 CPU/(4986:4987): PID: 5 - Ejecutando: SET CX CCCC
+[INFO] 17:46:27:331 CPU/(4986:4987): PID: 5 - Ejecutando: SET DX DDDD
+[INFO] 17:46:27:332 CPU/(4986:4987): PID: 5 - Ejecutando: SET EAX AAAAAAAA
+[INFO] 17:46:27:334 CPU/(4986:4987): PID: 5 - Ejecutando: SET EBX BBBBBBBB
+[INFO] 17:46:27:336 CPU/(4986:4987): PID: 5 - Ejecutando: SET ECX CCCCCCCC
+[INFO] 17:46:27:337 CPU/(4986:4987): PID: 5 - Ejecutando: SET EDX DDDDDDDD
+[INFO] 17:46:27:338 CPU/(4986:4987): PID: 5 - Ejecutando: SET RAX AAAAAAAAAAAAAAAA
+[INFO] 17:46:27:340 CPU/(4986:4987): PID: 5 - Ejecutando: SET RBX BBBBBBBBBBBBBBBB
+[INFO] 17:46:27:342 CPU/(4986:4987): PID: 5 - Ejecutando: SET RCX CCCCCCCCCCCCCCCC
+[INFO] 17:46:27:343 CPU/(4986:4987): PID: 5 - Ejecutando: SET RDX DDDDDDDDDDDDDDDD
+[INFO] 17:46:27:345 CPU/(4986:4987): PID: 5 - Ejecutando: YIELD
+[TRACE] 17:46:27:345 CPU/(4986:4987): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 17:46:27:370 CPU/(4986:4987): Datos enviados correctamente
+[TRACE] 17:46:27:414 CPU/(4986:4987): Recibi contexto de ejecucion - PID: 5
+[INFO] 17:46:27:414 CPU/(4986:4987): Comenzar ejecucion del proceso: 5.
+[INFO] 17:46:27:414 CPU/(4986:4987): PID: 5 - Ejecutando: SET RAX TCHOUAMENIAFUERA
+[INFO] 17:46:27:416 CPU/(4986:4987): PID: 5 - Ejecutando: SET RBX SEGUNDO_FRANCIA_
+[INFO] 17:46:27:417 CPU/(4986:4987): PID: 5 - Ejecutando: EXIT
+[TRACE] 17:46:27:417 CPU/(4986:4987): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 17:46:27:459 CPU/(4986:4987): Datos enviados correctamente
