@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <commons/string.h>
 #include <commons/log.h>
+#include <commons/bitarray.h>
 #include <utils/utils.h>
 #include <utils/servidor.h>
 #include <utils/cliente.h>
@@ -27,7 +28,8 @@
 
 	t_config* fileSystem_config;
 	char *ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
-	char *path_bitmap, *path_bloques, *path_fcb, *retardo_acceso_bloque;
+	char *path_bitmap, *path_bloques, *path_fcb;
+	u_int32_t retardo_acceso_bloque;
 
 // ------------------------------------------------------------------------------------------
 // -- Socket del proceso --
@@ -47,5 +49,25 @@
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();
+
+// ------------------------------------------------------------------------------------------
+// -- SUPER BLOQUE--
+// ------------------------------------------------------------------------------------------
+	typedef struct
+	{
+		int tamanio_bloque;
+		int cant_bloques;
+	}t_superBloque;
+
+	t_superBloque* levantar_superBloque(char*);
+
+// ------------------------------------------------------------------------------------------
+// -- BITMAP de BLOQUES--
+// ------------------------------------------------------------------------------------------
+	t_bitarray* bitmap;
+
+	void iniciar_bitmap(char*path, t_superBloque* superbloque);
+	void crear_bloques(char* path_bloques, t_superBloque* superbloque, int retardo, t_log* logger_fileSystem);
+	int retardo_en_segundos(int milisegundos);
 
 #endif /* FILESYSTEM_H_ */

@@ -14,8 +14,10 @@
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
 
-	void registros_put(t_registros* registros, char* registro, char* nuevo_valor);
-	void imprimir_registros(t_registros* registros);
-	void iniciar_registros(t_registros* registros);
+	void registros_put(t_registros*, char*, char*);
+	char* registros_get_value(t_registros*, char*);
+	int registros_get_size(t_registros*, char*);
+	void imprimir_registros(t_registros*);
+	void iniciar_registros(t_registros*);
 
 #endif

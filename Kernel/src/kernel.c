@@ -133,7 +133,7 @@ void init_estructuras_planificacion(){
 
     pthread_mutex_init(&semaforo_new, NULL);
     pthread_mutex_init(&semaforo_ready, NULL);
-    pthread_mutex_init(&semaforo_execute, NULL);
+    //pthread_mutex_init(&semaforo_execute, NULL);
 
 }
 
@@ -157,8 +157,9 @@ void planificarLargoPlazo(){
 	}
 }
 
+
 void planificarCortoPlazo(){
-	sleep(10);
+	//sleep(10);
 	while(1){
 		sem_wait(&cantidad_procesos_ready);
 		pthread_mutex_lock(&semaforo_ready);
@@ -402,6 +403,22 @@ void ejecutar_segun_motivo(char* motivo){
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
 		pcb_ejecutando = pcb_a_ejecutar;
+		break;
+
+	case MOV_IN: //CPU solo comunica a Kernel cuando hay SEG_FAULT
+		pcb_a_ejecutar->estado = EXITT;
+		sem_post(&semaforo_multiprogramacion);
+		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SEG_FAULT", pcb_a_ejecutar->pid);
+		enviar_mensaje("-1", pcb_a_ejecutar->pid);
+		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+		break;
+
+	case MOV_OUT: //CPU solo comunica a Kernel cuando hay SEG_FAULT
+		pcb_a_ejecutar->estado = EXITT;
+		sem_post(&semaforo_multiprogramacion);
+		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SEG_FAULT", pcb_a_ejecutar->pid);
+		enviar_mensaje("-1", pcb_a_ejecutar->pid);
+		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
 		break;
 
 	default:

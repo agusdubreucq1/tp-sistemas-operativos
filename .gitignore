@@ -41,6 +41,7 @@
 *.su
 *.idb
 *.pdb
+!makefile
 
 # Kernel Module Compile Results
 *.mod*
@@ -48,5 +49,5 @@
 .tmp_versions/
 modules.order
 Module.symvers
-Mkfile.old
+#Mkfile.old
 dkms.conf

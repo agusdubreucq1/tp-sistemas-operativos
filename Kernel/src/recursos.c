@@ -9,12 +9,8 @@
 
 int recurso_existe(char* nombre){
     int recurso_existe = -1;
-
-
-
     for (int i = 0; i < list_size(lista_recursos); i++) {
     	t_recurso* recurso = list_get(lista_recursos, i);
-
         if (string_equals_ignore_case(nombre, recurso->nombre)) {
         	recurso_existe = true;
         	return i;
