@@ -60,11 +60,16 @@ typedef struct registros_cpu{
 // ------------------------------------------------------------------------------------------
 
 typedef struct segmento{
-	int id;
-	int direccion_base;
-	int tamanio_segmento;
+	//int id;
+	void* direccion_base;
+	void* limite;
 } t_segmento;
 
+
+typedef struct tabla_de_segmento{
+	uint32_t pid;
+	t_list* segmentos;
+} t_tabla_segmentos;
 
 // ------------------------------------------------------------------------------------------
 // -- Kernel --
@@ -110,5 +115,6 @@ typedef struct args_io{
    t_pcb* pcb;
    int duracion;
 } t_thread_args;
+
 
 #endif /* SRC_DATOS_H_ */

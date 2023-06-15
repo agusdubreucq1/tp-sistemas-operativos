@@ -228,6 +228,7 @@ void enviarContexto(char* motivo){
 
 	enviar_paquete(paquete, socket_Kernel, cpu_logger, "Kernel");
 }
+
 char* concatenar_mensaje_con_3_parametros(char mensaje[30], t_instruccion* instruccion){
 	strcat(mensaje, instruccion->parametro[0]);
 	strcat(mensaje, " ");

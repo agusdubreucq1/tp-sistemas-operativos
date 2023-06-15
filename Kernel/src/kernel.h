@@ -23,6 +23,8 @@
 #include <sys/time.h>
 #include <utils/recurso.h>
 #include <utils/instruccion.h>
+#include "archivo.h"
+#include <string.h>
 
 
 #define IP_SERVER "127.0.0.1"
@@ -93,6 +95,13 @@
 	int existeRecurso;
 	int recibi_instruccion;
 
+	t_tabla_segmentos* tablaNueva;
+
+// ------------------------------------------------------------------------------------------
+// -- Estructuras FileSystem --
+// ------------------------------------------------------------------------------------------
+
+	t_list* lista_archivos_abiertos;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
@@ -113,6 +122,8 @@
 	void estimar_rafaga(t_pcb* pcb);
 	void ejecutar_io(t_thread_args* args);
 	void imprimirSemaforos();
+	char* recibir_mensaje_filesystem();
+	void recibir_mensaje_memoria();
 
 
 

@@ -13,6 +13,12 @@
 #include <utils/servidor.h>
 #include <utils/cliente.h>
 #include <utils/datos.h>
+#include "superbloque.h"
+#include "bitmap.h"
+#include "bloques.h"
+#include "fcb.h"
+#include <utils/instruccion.h>
+#include <semaphore.h>
 
 #define IP_SERVER "127.0.0.1"
 
@@ -43,31 +49,25 @@
 	pthread_t conexionMemoria;
 
 // ------------------------------------------------------------------------------------------
+// -- Estructuras FS--
+// ------------------------------------------------------------------------------------------
+
+	int tamanio_bloque;
+	int cant_bloques;
+	t_bitarray* bitmap;
+	t_list* lista_fcb;
+	sem_t espera_cerrar;
+
+
+// ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
 // ------------------------------------------------------------------------------------------
 
 	void* abrirSocketKernel();
-	void* conectarMemoria();
 	void recibir_mensaje_kernel();
-
-// ------------------------------------------------------------------------------------------
-// -- SUPER BLOQUE--
-// ------------------------------------------------------------------------------------------
-	typedef struct
-	{
-		int tamanio_bloque;
-		int cant_bloques;
-	}t_superBloque;
-
-	t_superBloque* levantar_superBloque(char*);
-
-// ------------------------------------------------------------------------------------------
-// -- BITMAP de BLOQUES--
-// ------------------------------------------------------------------------------------------
-	t_bitarray* bitmap;
-
-	void iniciar_bitmap(char*path, t_superBloque* superbloque);
-	void crear_bloques(char* path_bloques, t_superBloque* superbloque, int retardo, t_log* logger_fileSystem);
-	int retardo_en_segundos(int milisegundos);
+	void inicializar_estructuras();
+	void* conectarMemoria();
+	void recibir_mensaje_memoria();
+	void cerrar_fileSystem();
 
 #endif /* FILESYSTEM_H_ */

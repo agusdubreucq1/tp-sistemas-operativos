@@ -15,6 +15,8 @@
 #include <utils/cliente.h>
 #include <utils/datos.h>
 #include <semaphore.h>
+#include <utils/instruccion.h>
+#include "tablas_segmento.h"
 
 #define IP_SERVER "127.0.0.1"
 
@@ -46,12 +48,15 @@
 	int socket_cpu;
 	int socket_filesystem;
 
-	sem_t semaforo_conexiones;
+	sem_t sem_conexiones;
+	sem_t sem_kernel;
+	sem_t sem_cpu;
 
 // ------------------------------------------------------------------------------------------
 // -- Variables del proceso --
 // ------------------------------------------------------------------------------------------
 
+	t_list* tablas_segmentos;
 	t_list* tabla_segmentos;
 	t_segmento* segmento_cero;
 	void* memoria_fisica;
@@ -66,6 +71,6 @@
 	int abrir_socket();
 	void cerrar_conexiones();
 	void crear_estructuras();
-	t_segmento* crear_segmento(int, int, int);
+	void ejecutar_instruccion(char* motivo);
 
 #endif

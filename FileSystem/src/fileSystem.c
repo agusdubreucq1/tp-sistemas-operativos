@@ -21,28 +21,20 @@ int main(void){
 	server_fileSystem = iniciar_servidor(IP_SERVER, puerto_escucha, fileSystem_logger);
 	log_info(fileSystem_logger, "Servidor listo para recibir al cliente");
 
-    printf("El path de superbloque es: %s\n",path_superbloque);
-	t_superBloque* superbloque = levantar_superBloque(path_superbloque); //revisar si le esta llegando bien el path...
-    printf("Tamaño del bloque: %d\n", superbloque->tamanio_bloque); //En el enunciado tiene que tener valor de 64
-    printf("Cantidad de bloques: %d\n", superbloque->cant_bloques); //En el enunciado tiene que tener valor de 65536
-
-    iniciar_bitmap(path_bitmap, superbloque);
-
-    crear_bloques(path_bloques, superbloque, retardo_acceso_bloque, fileSystem_logger);
-
+	sem_init(&espera_cerrar, 0, 0);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
 	pthread_detach(conexionMemoria);
-	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
-	pthread_join(atender_kernel, NULL);
-	//abrirSocketKernel();
 
+	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
+	pthread_detach(atender_kernel);
+
+	inicializar_estructuras();
+	cerrar_fileSystem();
 	return EXIT_SUCCESS;
 }
 
 void* abrirSocketKernel(){
-
 	socket_Kernel = esperar_cliente(server_fileSystem, fileSystem_logger);
-
 
 	uint32_t resultOk = 0;
 	uint32_t resultError = -1;
@@ -64,7 +56,6 @@ void* abrirSocketKernel(){
 		recibir_mensaje_kernel();
 	}
 
-
 	return "";
 }
 
@@ -73,6 +64,13 @@ void* conectarMemoria(){
 	handshake(socket_memoria, 1, fileSystem_logger, "Memoria");
 
 	enviar_mensaje("Conectado al FileSystem", socket_memoria);
+
+	sem_post(&espera_cerrar);
+
+	while(1){
+		recibir_mensaje_memoria();
+	}
+
 	return "";
 }
 
@@ -81,61 +79,61 @@ void recibir_mensaje_kernel(){
 	cod_op = recibir_operacion(socket_Kernel);
 	switch (cod_op) {
 		case MENSAJE:
-			recibir_instruccion(socket_Kernel, fileSystem_logger);
+			char* mensaje = "";
+			strcat(mensaje, recibir_instruccion(socket_Kernel, fileSystem_logger));
+
 			break;
 		default: break;
 	}
 }
 
-t_superBloque* levantar_superBloque(char* path){
-	t_config* configSuperBloque = config_create(path);
-	t_superBloque* superbloque = malloc(sizeof(t_superBloque));
-	superbloque->tamanio_bloque = config_get_int_value(configSuperBloque, "BLOCK_SIZE");
-	superbloque->cant_bloques = config_get_int_value(configSuperBloque, "BLOCK_COUNT");
-	config_destroy(configSuperBloque);
-	return superbloque;
+void recibir_mensaje_memoria(){
+	int cod_op;
+	cod_op = recibir_operacion(socket_memoria);
+	switch (cod_op) {
+		case MENSAJE:
+			char* mensaje = "";
+			strcat(mensaje, recibir_instruccion(socket_memoria, fileSystem_logger));
+
+			break;
+		default: break;
+	}
+}
+
+void inicializar_estructuras(){
+
+	sem_wait(&espera_cerrar);
+
+	levantar_superBloque(path_superbloque, fileSystem_logger);
+	inicializar_bitmap();
+	inicializar_bloques();
+	//leer_fcb(prueba);
+
 }
 
 
-void iniciar_bitmap(char* path, t_superBloque* superbloque) {
-    FILE* bitmap_archivo = fopen(path, "rb");
+void ejecutar_instruccion(char* instruccion){
 
-    if (bitmap_archivo == NULL) {
-        // El archivo no existe, lo creamos
-        bitmap_archivo = fopen(path, "wb");
-        if (bitmap_archivo == NULL) {
-            log_error(fileSystem_logger, "Error al crear el archivo");
-            return;
-        }
+	char** parametros = string_split(instruccion, " ");
+	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(parametros[0]);
 
-        // Rellenamos el archivo con ceros
-        char zero = 0;
-        for (int i = 0; i < superbloque->cant_bloques / 8; i++) {
-            fwrite(&zero, sizeof(char), 1, bitmap_archivo);
-        }
+	switch(cod_instruccion) {
 
-
-        // Reiniciamos el puntero de archivo al inicio
-        fseek(bitmap_archivo, 0L, SEEK_SET);
-    }
-
-    int size = 0;
-    char* buffer;
-    fseek(bitmap_archivo, 0L, SEEK_END);
-    size = ftell(bitmap_archivo);
-    fseek(bitmap_archivo, 0L, SEEK_SET);
-
-    buffer = malloc(size);
-    fread(buffer, size, 1, bitmap_archivo);
-    buffer = string_substring_until(buffer, size);
-
-    bitmap = bitarray_create(buffer, superbloque->cant_bloques / 8); // creamos el array de bits, con un tamaño de cant_bloques/8 porque es el espacio en bytes que necesita el bitmap
-
-
-    fclose(bitmap_archivo);
-
-    log_info(fileSystem_logger , "Bitmap iniciado");
+	case F_OPEN:
+		parametros = string_split(instruccion, " ");
+		break;
+	default:
+		break;
+	}
 }
+
+void cerrar_fileSystem(){
+	sem_wait(&espera_cerrar);
+}
+/*
+
+
+
 
 void crear_bloques(char* path_bloques, t_superBloque* superbloque, int retardo, t_log* fileSystem_logger) {
     int archivo_bloques_tam = superbloque->tamanio_bloque * superbloque->cant_bloques;
@@ -185,4 +183,5 @@ void crear_bloques(char* path_bloques, t_superBloque* superbloque, int retardo, 
 int retardo_en_segundos(int milisegundos){
 	return milisegundos/1000;
 }
+*/
 

@@ -6,17 +6,20 @@
 C_SRCS += \
 ../src/Memoria.c \
 ../src/config.c \
-../src/espacio_de_memoria.c 
+../src/espacio_de_memoria.c \
+../src/tablas_segmento.c 
 
 C_DEPS += \
 ./src/Memoria.d \
 ./src/config.d \
-./src/espacio_de_memoria.d 
+./src/espacio_de_memoria.d \
+./src/tablas_segmento.d 
 
 OBJS += \
 ./src/Memoria.o \
 ./src/config.o \
-./src/espacio_de_memoria.o 
+./src/espacio_de_memoria.o \
+./src/tablas_segmento.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -31,7 +34,7 @@ src/%.o: ../src/%.c src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/Memoria.d ./src/Memoria.o ./src/config.d ./src/config.o ./src/espacio_de_memoria.d ./src/espacio_de_memoria.o
+	-$(RM) ./src/Memoria.d ./src/Memoria.o ./src/config.d ./src/config.o ./src/espacio_de_memoria.d ./src/espacio_de_memoria.o ./src/tablas_segmento.d ./src/tablas_segmento.o
 
 .PHONY: clean-src
 

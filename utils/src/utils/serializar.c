@@ -68,11 +68,24 @@ void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb){
 
 void serializar_tabla_segmentos(t_paquete* paquete, t_pcb* pcb){
 	int cant_segmentos = list_size(pcb->tabla_segmentos);
-		//printf("\n cant_segmentos: %d\n", cant_segmentos);
-		agregar_variable_a_paquete(paquete, &cant_segmentos, sizeof(int));
-		for(int j=0;list_size(pcb->tabla_segmentos)>j;j++){
-			agregar_a_paquete(paquete, list_get(pcb->tabla_segmentos,j), sizeof(t_segmento));
-			//printf("\n NO \n");
-		}
+	//printf("\n cant_segmentos: %d\n", cant_segmentos);
+	agregar_variable_a_paquete(paquete, &cant_segmentos, sizeof(int));
+	for(int j=0;j<list_size(pcb->tabla_segmentos);j++){
+		agregar_a_paquete(paquete, list_get(pcb->tabla_segmentos,j), sizeof(t_segmento));
+		//printf("\n NO \n");
+	}
 }
 
+t_paquete* serializar_segmentos(t_tabla_segmentos* tabla){
+	t_paquete* paquete = crear_paquete();
+	agregar_variable_a_paquete(paquete, &(tabla->pid), sizeof(int));
+	int cant_segmentos = list_size(tabla->segmentos);
+	agregar_variable_a_paquete(paquete, &cant_segmentos, sizeof(int));
+	for(int i = 0; i < list_size(tabla->segmentos); i++){
+		t_segmento* segmento = list_get(tabla->segmentos, i);
+		agregar_variable_a_paquete(paquete, &(segmento->direccion_base), sizeof(void*));
+		agregar_variable_a_paquete(paquete, &(segmento->limite), sizeof(void*));
+	}
+	printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
+	return paquete;
+}

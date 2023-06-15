@@ -26,10 +26,9 @@ int main(void) {
 	server_memoria = iniciar_servidor(IP_SERVER, puerto_escucha, memoria_logger);
 	log_info(memoria_logger, "Servidor listo para recibir al cliente");
 
-
-	sem_init(&semaforo_conexiones, 0, 0);
-	//sem_wait(&semaforo_conexiones);
-	//sem_wait(&semaforo_conexiones);
+	sem_init(&sem_conexiones, 0, 0);
+	sem_init(&sem_kernel, 0, 0);
+	sem_init(&sem_cpu, 0, 0);
 
 	pthread_create(&hilo_estructuras, NULL, (void *) crear_estructuras, NULL);
 	pthread_detach(hilo_estructuras);
@@ -43,31 +42,44 @@ int main(void) {
 	pthread_create(&hilo_conexion_Kernel, NULL, atenderKernel, NULL);
 	pthread_join(hilo_conexion_Kernel, NULL);
 
-
 	return EXIT_SUCCESS;
 }
 
 void* atenderKernel(){
-
-	int socket_kernel = abrir_socket();
-	sem_post(&semaforo_conexiones);
+	sem_wait(&sem_kernel);
+	socket_kernel = abrir_socket();
+	printf("Kernel %d", socket_kernel);
+	sem_post(&sem_conexiones);
 
 	while(1){
 		int cod_op = recibir_operacion(socket_kernel);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_instruccion(socket_kernel, memoria_logger);
+			char* recibi = recibir_instruccion(socket_kernel, memoria_logger);
+			//printf("AVER %s", recibi);
+			//char mensaje = "";
+			//strcat(mensaje, recibir_instruccion(socket_kernel, memoria_logger));
+			ejecutar_instruccion(recibi);
+			break;
+		case PAQUETE:
+			int size;
+			void* buffer;
+			int* tam_recibido= malloc(sizeof(int));
+			buffer = recibir_buffer(&size, socket_kernel);
+			*tam_recibido+=2*sizeof(int);
+			printf("\n\n\nTamano %d \n\n\n\n", *tam_recibido);
+			send(socket_kernel, tam_recibido, sizeof(int), 0);
+			//log_trace(memoria_logger, "Recibi contexto de ejecucion - PID: %d", contexto_de_ejecucion->pid);
 			break;
 		}
 	}
 	return "";
 }
 
-
 void* atenderCPU(){
-
-	int socket_cpu = abrir_socket();
-	sem_post(&semaforo_conexiones);
+	sem_wait(&sem_cpu);
+	socket_cpu = abrir_socket();
+	sem_post(&sem_kernel);
 
 	while(1){
 		int cod_op = recibir_operacion(socket_cpu);
@@ -82,8 +94,8 @@ void* atenderCPU(){
 
 void* atenderFileSystem(){
 
-	int socket_filesystem = abrir_socket();
-	sem_post(&semaforo_conexiones);
+	socket_filesystem = abrir_socket();
+	sem_post(&sem_cpu);
 
 	while(1){
 		int cod_op = recibir_operacion(socket_filesystem);
@@ -95,6 +107,28 @@ void* atenderFileSystem(){
 	}
 	return "";
 }
+
+
+void ejecutar_instruccion(char* motivo){
+	char** parametros = string_split(motivo, " ");
+	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(parametros[0]);
+
+	switch(cod_instruccion) {
+	case INICIAR:
+		parametros = string_split(motivo, " ");
+		t_tabla_segmentos* tabla = crear_tabla(atoi(parametros[1]));
+		//t_segmento* segmento = list_get(tabla->segmentos, 0);
+		//printf("\n\nDireccion de memoria: %p\n\n\n", segmento->direccion_base);
+		//printf("\n\nLimite: %p\n\n\n", segmento->limite);
+		enviar_segmentos(tabla, socket_kernel);
+		break;
+	default:
+		break;
+	}
+}
+
+
+
 
 int abrir_socket(){
 	int socket = esperar_cliente(server_memoria, memoria_logger);
@@ -113,18 +147,12 @@ int abrir_socket(){
 
 
 void crear_estructuras(){
-
-	sem_wait(&semaforo_conexiones);
-	sem_wait(&semaforo_conexiones);
-	sem_wait(&semaforo_conexiones);
+	sem_wait(&sem_conexiones);
 
 	memoria_fisica = reservar_espacio_memoria();
-	printf("\nsizeof(void*): %lu\n", sizeof(void*));
-	printf("\nEspacio de memoria reservado: %lu Bytes\nDireccion de memoria: %p\n", sizeof(memoria_fisica), memoria_fisica);
-	tabla_segmentos = list_create();
-	segmento_cero = crear_segmento(0, 0, atoi(tam_segmento_0));
-	list_add(tabla_segmentos, segmento_cero);
-
+	log_info(memoria_logger, "Espacio reservado: %s Bytes -> Direccion: %p", tam_memoria, memoria_fisica);
+	tablas_segmentos = list_create();
+	segmento_cero = crear_segmento(memoria_fisica, memoria_fisica + atoi(tam_segmento_0));
 }
 
 void cerrar_conexiones(){
@@ -134,18 +162,5 @@ void cerrar_conexiones(){
 	//close(socket_Kernel);
 	printf("cerre conexiones");
 	exit(1);
-}
-
-t_segmento* crear_segmento(int id, int base, int tamanio){
-
-	t_segmento* segmento = malloc(sizeof(t_segmento)); //recordar hacer el free
-	segmento->id = id;
-	segmento->direccion_base = base;
-	segmento->tamanio_segmento = tamanio;
-
-	printf("\nSegmento Cero Creado!\n");
-	printf("PID: %d , BASE: %d , TAMANIO: %d\n\n", segmento->id, segmento->direccion_base, segmento->tamanio_segmento);
-
-	return segmento;
 }
 

@@ -50,6 +50,7 @@ codigo_instruccion obtener_codigo_instruccion(char* codigo){
 	if(string_equals_ignore_case(codigo, "CREATE_SEGMENT"))	return CREATE_SEGMENT;
 	if(string_equals_ignore_case(codigo, "DELETE_SEGMENT"))	return DELETE_SEGMENT;
 	if(string_equals_ignore_case(codigo, "YIELD"))			return YIELD;
+	if(string_equals_ignore_case(codigo, "INICIAR"))		return INICIAR;
 	else										 			return EXIT;
 }
 
@@ -69,6 +70,7 @@ char* codigo_instruccion_string(codigo_instruccion codigo){
 	if(codigo == CREATE_SEGMENT)	return "CREATE_SEGMENT";
 	if(codigo == DELETE_SEGMENT) 	return "DELETE_SEGMENT";
 	if(codigo == YIELD) 			return "YIELD";
+	if(codigo == INICIAR) 			return "INICIAR";
 	else							return "EXIT";
 }
 

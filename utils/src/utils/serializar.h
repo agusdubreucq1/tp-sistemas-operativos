@@ -27,5 +27,6 @@ void agregar_variable_a_paquete(t_paquete* paquete, void* valor, int tamanio);
 void serializar_registros_cpu(t_paquete* paquete, t_registros* registro);
 void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb);
 void serializar_tabla_segmentos(t_paquete* paquete, t_pcb* pcb);
+t_paquete* serializar_segmentos(t_tabla_segmentos* tabla);
 
 #endif /* UTILS_SERIALIZAR_H_ */

@@ -4,18 +4,21 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/archivo.c \
 ../src/config.c \
 ../src/kernel.c \
 ../src/planificador_largo_plazo.c \
 ../src/recursos.c 
 
 C_DEPS += \
+./src/archivo.d \
 ./src/config.d \
 ./src/kernel.d \
 ./src/planificador_largo_plazo.d \
 ./src/recursos.d 
 
 OBJS += \
+./src/archivo.o \
 ./src/config.o \
 ./src/kernel.o \
 ./src/planificador_largo_plazo.o \
@@ -34,7 +37,7 @@ src/%.o: ../src/%.c src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/config.d ./src/config.o ./src/kernel.d ./src/kernel.o ./src/planificador_largo_plazo.d ./src/planificador_largo_plazo.o ./src/recursos.d ./src/recursos.o
+	-$(RM) ./src/archivo.d ./src/archivo.o ./src/config.d ./src/config.o ./src/kernel.d ./src/kernel.o ./src/planificador_largo_plazo.d ./src/planificador_largo_plazo.o ./src/recursos.d ./src/recursos.o
 
 .PHONY: clean-src
 

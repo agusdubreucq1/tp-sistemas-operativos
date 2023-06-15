@@ -110,6 +110,8 @@ void init_estructuras_planificacion(){
     lista_ready = list_create();
     lista_recursos = list_create();
 
+    lista_archivos_abiertos = list_create();
+
     devolver_ejecucion = 0;
     //recibi_instruccion = 0;
 
@@ -145,14 +147,62 @@ void planificarLargoPlazo(){
 		pthread_mutex_lock(&semaforo_new);
 		t_pcb* pcb = list_remove(lista_new, 0);
 		pthread_mutex_unlock(&semaforo_new);
+
+		char mensaje[30] = "INICIAR ";
+		char numero[10];
+
+		sprintf(numero, "%d", pcb->pid);
+		strcat(mensaje, numero);
+		enviar_mensaje(mensaje, socket_memoria);
+		recibir_mensaje_memoria();
+
 		struct timeval tiempo;
 		gettimeofday(&tiempo, NULL);
 		pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
 		//pcb->tiempo_ready = tiempo.tv_sec * 1000000 + tiempo.tv_usec;
 		//pcb->tiempo_ready = tiempo.tv_sec;
 
+
+
 		//mandar a memoria el proceso para iniciar estructuras
 		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+	}
+}
+
+void recibir_mensaje_memoria(){
+	int cod_op;
+	cod_op = recibir_operacion(socket_memoria);
+
+	switch (cod_op) {
+		case MENSAJE:
+			char* mensaje = "";
+			strcat(mensaje, recibir_instruccion(socket_memoria, kernel_logger));
+
+			break;
+		case PAQUETE:
+			printf("\n\n\n\nLLEGOOO\n\n\n\n");
+			int size;
+			void* buffer;
+			//char* motivo;
+			int* tam_recibido = malloc(sizeof(int));
+			*tam_recibido = 0;
+			buffer = recibir_buffer(&size, socket_memoria);
+			printf("\n\n\n\n\nBUFFFER %s\n\n\n\n", buffer);
+
+			tablaNueva = deserializar_segmentos(buffer, tam_recibido);
+			t_segmento* segmento = list_get(tablaNueva->segmentos, 0);
+			printf("\n\nDireccion de memoria: %p\n\n\n", segmento->direccion_base);
+			printf("\n\nLimite: %p\n\n\n", segmento->limite);
+			log_trace(kernel_logger, "Recibi Tabla de Segmentos - PID: %d", tablaNueva->pid);
+
+
+			//ejecutar_segun_motivo(motivo);
+			//recibi_instruccion=0;
+
+			*tam_recibido+=2*sizeof(int);
+			printf("\n\n\nTamana %d\n\n\n",*tam_recibido);
+			send(socket_memoria, tam_recibido, sizeof(int), 0);
+		default: break;
 	}
 }
 
@@ -324,7 +374,17 @@ void ejecutar_segun_motivo(char* motivo){
 	case F_OPEN:
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Abrir Archivo: %s", pcb_a_ejecutar->pid, parametros[1]);
-		enviar_mensaje(motivo, socket_fileSystem);
+
+		t_archivo* archivo_abrir = buscar_archivo_abierto(parametros[1]);
+
+		if(archivo_abrir != NULL){
+			printf("ABIERTO PERRI");
+		} else{
+			enviar_mensaje(motivo, socket_fileSystem);
+			char* mensaje = recibir_mensaje_filesystem();
+			printf("CERRADO PERRI");
+		}
+
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
 		pcb_ejecutando = pcb_a_ejecutar;
@@ -418,6 +478,20 @@ void ejecutar_segun_motivo(char* motivo){
 	default:
 		break;
 	}
+}
+
+char* recibir_mensaje_filesystem(){
+	int cod_op;
+	cod_op = recibir_operacion(socket_fileSystem);
+	char mensaje[30] = "";
+	strcat(mensaje, recibir_instruccion(socket_fileSystem, kernel_logger));
+	return mensaje;
+	/*switch (cod_op) {
+		case MENSAJE:
+			char mensaje[30] = "";
+			strcat(mensaje, recibir_instruccion(socket_fileSystem, kernel_logger));
+			break;
+	}*/
 }
 
 void ejecutar_io(t_thread_args* args){

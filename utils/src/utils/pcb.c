@@ -14,7 +14,8 @@ t_pcb* crear_pcb(uint32_t pid, t_list* instrucciones, uint32_t estimacion){
 	pcb->program_counter = 0;
 	pcb->estado = 0;
 	init_registros(&pcb->registros_cpu);
-	init_segmento(&pcb->tabla_segmentos);
+	pcb->tabla_segmentos = list_create();
+	//init_segmento(&pcb->tabla_segmentos);
 	pcb->estimado_rafaga = estimacion;
 	return pcb;
 }
@@ -112,9 +113,9 @@ void print_segmento(t_list* tabla_segmentos){
 	for(int i=0;i<list_size(tabla_segmentos);i++){
 		t_segmento* segmento = list_get(tabla_segmentos, i);
 		printf("Segmento:\n");
-		printf("Id = %d\n", segmento->id);
-		printf("Direccion = %d\n", segmento->direccion_base);
-		printf("Tamanio = %d\n", segmento->tamanio_segmento);
+		//printf("Id = %p\n", segmento->id);
+		printf("Direccion = %p\n", segmento->direccion_base);
+		printf("Tamanio = %p\n", segmento->limite);
 	}
 
 }
