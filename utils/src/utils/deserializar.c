@@ -120,18 +120,11 @@ t_list* deserializar_instrucciones(void* stream, int* desplazamiento){
 t_tabla_segmentos* deserializar_segmentos(void* stream, int* desplazamiento){
 	t_tabla_segmentos* tabla = malloc(sizeof(t_tabla_segmentos));
 	tabla->segmentos = list_create();
-	printf("\n\n\nVAAAA \n\n\n");
 	int pid = deserializar_uint32(stream, desplazamiento);
 	tabla->pid = pid;
-	printf("\n\n\nPIDDD %d\n\n\n", pid);
 	int cant_segmentos = deserializar_uint32(stream, desplazamiento);
-
-	//int tamanio = 0;
-
 	for(int j=0; j < cant_segmentos; j++){
 		t_segmento* segmento = malloc(sizeof(t_segmento));
-		//memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
-		//*desplazamiento += sizeof(int);
 		memcpy(&(segmento->direccion_base), stream + *desplazamiento, sizeof(void*));
 		*desplazamiento += sizeof(void*);
 		memcpy(&(segmento->limite), stream + *desplazamiento, sizeof(void*));

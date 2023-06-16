@@ -18,16 +18,17 @@
 // -- Variables --
 // ------------------------------------------------------------------------------------------
 
-extern 	t_log* memoria_logger;
-extern char* cant_segmentos;
-extern t_segmento* segmento_cero;
+	extern 	t_log* memoria_logger;
+	extern char* cant_segmentos;
+	extern t_segmento* segmento_cero;
+	extern int memoria_libre;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
 
-t_tabla_segmentos* crear_tabla(uint32_t pid);
-t_segmento* crear_segmento(void* base, void* tamanio);
-void enviar_segmentos(t_tabla_segmentos* tabla, int socket);
+	t_tabla_segmentos* crear_tabla(uint32_t pid);
+	t_segmento* crear_segmento(void* base, void* limite);
+	void enviar_segmentos(t_tabla_segmentos* tabla, int socket);
 
 #endif /* TABLAS_SEGMENTO_H_ */

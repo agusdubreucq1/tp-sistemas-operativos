@@ -33,8 +33,6 @@ int main(void){
 	pthread_join(atender_kernel, NULL);
 	//abrirSocketKernel();
 
-
-
 	return EXIT_SUCCESS;
 }
 

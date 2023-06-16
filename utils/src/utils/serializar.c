@@ -86,6 +86,6 @@ t_paquete* serializar_segmentos(t_tabla_segmentos* tabla){
 		agregar_variable_a_paquete(paquete, &(segmento->direccion_base), sizeof(void*));
 		agregar_variable_a_paquete(paquete, &(segmento->limite), sizeof(void*));
 	}
-	printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
+	//printf("tam_paquete: %ld\n", paquete->buffer->size + 2*sizeof(int));
 	return paquete;
 }

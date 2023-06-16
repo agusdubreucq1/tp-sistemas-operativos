@@ -104,9 +104,9 @@ void inicializar_estructuras(){
 
 	sem_wait(&espera_cerrar);
 
-	levantar_superBloque(path_superbloque, fileSystem_logger);
-	inicializar_bitmap();
-	inicializar_bloques();
+	//levantar_superBloque(path_superbloque, fileSystem_logger);
+	//inicializar_bitmap();
+	//inicializar_bloques();
 	//leer_fcb(prueba);
 
 }

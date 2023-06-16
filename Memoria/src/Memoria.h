@@ -17,17 +17,20 @@
 #include <semaphore.h>
 #include <utils/instruccion.h>
 #include "tablas_segmento.h"
+#include "bitmap_memoria.h"
+#include <commons/bitarray.h>
+#include <utils/deserializar.h>
 
 #define IP_SERVER "127.0.0.1"
 
 // ------------------------------------------------------------------------------------------
-// -- Logger del proceso --
+// -- Variables Logger --
 // ------------------------------------------------------------------------------------------
 
 	t_log* memoria_logger;
 
 // ------------------------------------------------------------------------------------------
-// -- Config del proceso --
+// -- Variables Config --
 // ------------------------------------------------------------------------------------------
 
 	t_config* memoria_config;
@@ -35,7 +38,7 @@
 	char *retardo_memoria, *retardo_compactacion;
 
 // ------------------------------------------------------------------------------------------
-// -- Socket del proceso --
+// -- Variables Socket --
 // ------------------------------------------------------------------------------------------
 
 	pthread_t hilo_conexion_Kernel;
@@ -53,16 +56,19 @@
 	sem_t sem_cpu;
 
 // ------------------------------------------------------------------------------------------
-// -- Variables del proceso --
+// -- Variables --
 // ------------------------------------------------------------------------------------------
 
 	t_list* tablas_segmentos;
 	t_list* tabla_segmentos;
 	t_segmento* segmento_cero;
 	void* memoria_fisica;
+	t_tabla_segmentos* tabla_recibida;
+	t_bitarray* bitmap;
+	int memoria_libre;
 
 // ------------------------------------------------------------------------------------------
-// -- Funciones del proceso --
+// -- Funciones --
 // ------------------------------------------------------------------------------------------
 
 	void* atenderKernel();

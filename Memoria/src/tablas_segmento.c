@@ -21,10 +21,12 @@ t_tabla_segmentos* crear_tabla(uint32_t pid){
 	return tabla;
 }
 
-t_segmento* crear_segmento(void* base, void* tamanio){
+t_segmento* crear_segmento(void* base, void* limite){
 	t_segmento* segmento = malloc(sizeof(t_segmento));
 	segmento->direccion_base = base;
-	segmento->limite = tamanio;
+	segmento->limite = limite;
+	memoria_libre -= (limite - base);
+	//printf("\nMemoria Libre %d \n", memoria_libre);
 	return segmento;
 }
 

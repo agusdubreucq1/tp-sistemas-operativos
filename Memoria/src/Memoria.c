@@ -56,18 +56,20 @@ void* atenderKernel(){
 		switch (cod_op) {
 		case MENSAJE:
 			char* recibi = recibir_instruccion(socket_kernel, memoria_logger);
-			//printf("AVER %s", recibi);
-			//char mensaje = "";
-			//strcat(mensaje, recibir_instruccion(socket_kernel, memoria_logger));
 			ejecutar_instruccion(recibi);
 			break;
 		case PAQUETE:
 			int size;
 			void* buffer;
 			int* tam_recibido= malloc(sizeof(int));
+			tam_recibido = 0;
 			buffer = recibir_buffer(&size, socket_kernel);
+
+			tabla_recibida = deserializar_segmentos(buffer, tam_recibido);
+			//t_segmento* segmento = list_get(tabla_recibida->segmentos, 0);
+			log_info(memoria_logger, "Recibi Tabla de Segmentos - PID: %d", tabla_recibida->pid);
+
 			*tam_recibido+=2*sizeof(int);
-			printf("\n\n\nTamano %d \n\n\n\n", *tam_recibido);
 			send(socket_kernel, tam_recibido, sizeof(int), 0);
 			//log_trace(memoria_logger, "Recibi contexto de ejecucion - PID: %d", contexto_de_ejecucion->pid);
 			break;
@@ -117,17 +119,19 @@ void ejecutar_instruccion(char* motivo){
 	case INICIAR:
 		parametros = string_split(motivo, " ");
 		t_tabla_segmentos* tabla = crear_tabla(atoi(parametros[1]));
-		//t_segmento* segmento = list_get(tabla->segmentos, 0);
-		//printf("\n\nDireccion de memoria: %p\n\n\n", segmento->direccion_base);
-		//printf("\n\nLimite: %p\n\n\n", segmento->limite);
 		enviar_segmentos(tabla, socket_kernel);
 		break;
+	/*case CREATE_SEGMENT: // LABURANDO ESTO
+		parametros = string_split(motivo, " ");
+		printf("\n PID: %s", parametros[3]);
+		printf("\n Segmento: %s", parametros[1]);
+		printf("\n Tamaño: %s", parametros[2]);
+		enviar_mensaje("Base", socket_kernel);
+		break;*/
 	default:
 		break;
 	}
 }
-
-
 
 
 int abrir_socket(){
@@ -150,8 +154,10 @@ void crear_estructuras(){
 	sem_wait(&sem_conexiones);
 
 	memoria_fisica = reservar_espacio_memoria();
+	memoria_libre = atoi(tam_memoria);
 	log_info(memoria_logger, "Espacio reservado: %s Bytes -> Direccion: %p", tam_memoria, memoria_fisica);
 	tablas_segmentos = list_create();
+	inicializar_bitmap();
 	segmento_cero = crear_segmento(memoria_fisica, memoria_fisica + atoi(tam_segmento_0));
 }
 
