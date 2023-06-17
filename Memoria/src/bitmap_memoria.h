@@ -13,6 +13,15 @@
 #include <stdio.h>
 
 // ------------------------------------------------------------------------------------------
+// -- Estructuras --
+// ------------------------------------------------------------------------------------------
+
+	typedef struct bitmap_aux {
+	int posicion;
+	int tamanio;
+} bitmap_aux;
+
+// ------------------------------------------------------------------------------------------
 // -- Variables --
 // ------------------------------------------------------------------------------------------
 
@@ -29,5 +38,7 @@ int validar_huecos_libres(t_bitarray*, int, int);
 void ocupar_bitmap(t_bitarray*, int, int);
 void liberar_bitmap(t_bitarray*, int, int);
 int first_fit_bitmap(t_bitarray*, int);
+int best_fit_bitmap(t_bitarray*, int);
+int worst_fit_bitmap(t_bitarray*, int);
 
 #endif /* BITMAP_MEMORIA_H_ */
