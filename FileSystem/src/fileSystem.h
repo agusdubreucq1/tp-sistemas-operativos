@@ -13,6 +13,12 @@
 #include <utils/servidor.h>
 #include <utils/cliente.h>
 #include <utils/datos.h>
+#include "superbloque.h"
+#include "bitmap.h"
+#include "bloques.h"
+#include "fcb.h"
+#include <utils/instruccion.h>
+#include <semaphore.h>
 
 #define IP_SERVER "127.0.0.1"
 
@@ -30,6 +36,7 @@
 	char *ip_memoria, *puerto_memoria, *puerto_escucha, *path_superbloque;
 	char *path_bitmap, *path_bloques, *path_fcb;
 	u_int32_t retardo_acceso_bloque;
+	t_list* lista_fcb;
 
 // ------------------------------------------------------------------------------------------
 // -- Socket del proceso --
@@ -49,25 +56,27 @@
 	void* abrirSocketKernel();
 	void* conectarMemoria();
 	void recibir_mensaje_kernel();
+	void inicializar_estructuras();
 
 // ------------------------------------------------------------------------------------------
 // -- SUPER BLOQUE--
 // ------------------------------------------------------------------------------------------
-	typedef struct
-	{
 		int tamanio_bloque;
 		int cant_bloques;
-	}t_superBloque;
 
-	t_superBloque* levantar_superBloque(char*);
 
 // ------------------------------------------------------------------------------------------
 // -- BITMAP de BLOQUES--
 // ------------------------------------------------------------------------------------------
 	t_bitarray* bitmap;
 
-	void iniciar_bitmap(char*path, t_superBloque* superbloque);
-	void crear_bloques(char* path_bloques, t_superBloque* superbloque, int retardo, t_log* logger_fileSystem);
-	int retardo_en_segundos(int milisegundos);
+
+	void recibir_mensaje_memoria();
+	void cerrar_fileSystem();
+	void ejecutar_instruccion(char* instruccion);
+	void inicializar_FCBs();
+	t_fcb* leer_fcb(char* nombre, uint32_t tamanio, uint32_t puntero_directo, uint32_t puntero_indirecto);
+	int existe_archivo(char* nombre);
+	void crear_archivo(char* nombre);
 
 #endif /* FILESYSTEM_H_ */
