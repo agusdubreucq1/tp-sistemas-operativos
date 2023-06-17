@@ -14806,3 +14806,129 @@
 [TRACE] 22:29:23:944 Memoria/(253612:253616): Se conecto un cliente!
 [INFO] 22:29:23:944 Memoria/(253612:253613): Espacio reservado: 4096 Bytes -> Direccion: 0x7fc01c000b70
 [TRACE] 22:29:23:947 Memoria/(253612:253616): Recibi Instruccion: Conectado al Kernel
+[INFO] 22:32:00:998 Memoria/(253976:253976): Logger creado
+[INFO] 22:32:01:001 Memoria/(253976:253976): -------Valores del config-------
+[INFO] 22:32:01:001 Memoria/(253976:253976): puerto_escucha = 8002
+[INFO] 22:32:01:001 Memoria/(253976:253976): tamaño memoria = 4096
+[INFO] 22:32:01:001 Memoria/(253976:253976): tamaño segmento = 128
+[INFO] 22:32:01:001 Memoria/(253976:253976): cantidad de segmentos = 16
+[INFO] 22:32:01:001 Memoria/(253976:253976): retardo memoria = 1000
+[INFO] 22:32:01:002 Memoria/(253976:253976): retardo compactacion = 60000
+[INFO] 22:32:01:002 Memoria/(253976:253976): algoritmo asignacion = BEST
+[INFO] 22:32:01:002 Memoria/(253976:253976): --------------------------------
+[INFO] 22:32:01:002 Memoria/(253976:253976): ¡Memoria iniciado correctamente!
+[TRACE] 22:32:01:002 Memoria/(253976:253976): Listo para escuchar a mi cliente
+[INFO] 22:32:01:002 Memoria/(253976:253976): Servidor listo para recibir al cliente
+[TRACE] 22:32:02:233 Memoria/(253976:253978): Se conecto un cliente!
+[TRACE] 22:32:02:234 Memoria/(253976:253978): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 22:32:02:794 Memoria/(253976:253979): Se conecto un cliente!
+[TRACE] 22:32:02:799 Memoria/(253976:253979): Recibi Instruccion: Conectado al CPU
+[TRACE] 22:32:03:400 Memoria/(253976:253980): Se conecto un cliente!
+[INFO] 22:32:03:401 Memoria/(253976:253977): Espacio reservado: 4096 Bytes -> Direccion: 0x7f22e4000b70
+[TRACE] 22:32:03:403 Memoria/(253976:253980): Recibi Instruccion: Conectado al Kernel
+[INFO] 22:36:19:707 Memoria/(254133:254133): Logger creado
+[INFO] 22:36:19:707 Memoria/(254133:254133): -------Valores del config-------
+[INFO] 22:36:19:707 Memoria/(254133:254133): puerto_escucha = 8002
+[INFO] 22:36:19:707 Memoria/(254133:254133): tamaño memoria = 4096
+[INFO] 22:36:19:707 Memoria/(254133:254133): tamaño segmento = 128
+[INFO] 22:36:19:707 Memoria/(254133:254133): cantidad de segmentos = 16
+[INFO] 22:36:19:707 Memoria/(254133:254133): retardo memoria = 1000
+[INFO] 22:36:19:708 Memoria/(254133:254133): retardo compactacion = 60000
+[INFO] 22:36:19:708 Memoria/(254133:254133): algoritmo asignacion = BEST
+[INFO] 22:36:19:708 Memoria/(254133:254133): --------------------------------
+[INFO] 22:36:19:709 Memoria/(254133:254133): ¡Memoria iniciado correctamente!
+[TRACE] 22:36:19:709 Memoria/(254133:254133): Listo para escuchar a mi cliente
+[INFO] 22:36:19:709 Memoria/(254133:254133): Servidor listo para recibir al cliente
+[TRACE] 22:36:20:620 Memoria/(254133:254135): Se conecto un cliente!
+[TRACE] 22:36:20:621 Memoria/(254133:254135): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 22:36:21:181 Memoria/(254133:254136): Se conecto un cliente!
+[TRACE] 22:36:21:181 Memoria/(254133:254136): Recibi Instruccion: Conectado al CPU
+[TRACE] 22:36:21:848 Memoria/(254133:254137): Se conecto un cliente!
+[INFO] 22:36:21:848 Memoria/(254133:254134): Espacio reservado: 4096 Bytes -> Direccion: 0x7fcfb0000b70
+[TRACE] 22:36:21:849 Memoria/(254133:254137): Recibi Instruccion: Conectado al Kernel
+[INFO] 22:37:46:258 Memoria/(254257:254257): Logger creado
+[INFO] 22:37:46:260 Memoria/(254257:254257): -------Valores del config-------
+[INFO] 22:37:46:260 Memoria/(254257:254257): puerto_escucha = 8002
+[INFO] 22:37:46:260 Memoria/(254257:254257): tamaño memoria = 4096
+[INFO] 22:37:46:260 Memoria/(254257:254257): tamaño segmento = 128
+[INFO] 22:37:46:260 Memoria/(254257:254257): cantidad de segmentos = 16
+[INFO] 22:37:46:260 Memoria/(254257:254257): retardo memoria = 1000
+[INFO] 22:37:46:260 Memoria/(254257:254257): retardo compactacion = 60000
+[INFO] 22:37:46:260 Memoria/(254257:254257): algoritmo asignacion = BEST
+[INFO] 22:37:46:260 Memoria/(254257:254257): --------------------------------
+[INFO] 22:37:46:260 Memoria/(254257:254257): ¡Memoria iniciado correctamente!
+[TRACE] 22:37:46:260 Memoria/(254257:254257): Listo para escuchar a mi cliente
+[INFO] 22:37:46:260 Memoria/(254257:254257): Servidor listo para recibir al cliente
+[TRACE] 22:37:47:452 Memoria/(254257:254259): Se conecto un cliente!
+[TRACE] 22:37:47:453 Memoria/(254257:254259): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 22:37:48:066 Memoria/(254257:254260): Se conecto un cliente!
+[TRACE] 22:37:48:067 Memoria/(254257:254260): Recibi Instruccion: Conectado al CPU
+[TRACE] 22:37:48:878 Memoria/(254257:254261): Se conecto un cliente!
+[INFO] 22:37:48:879 Memoria/(254257:254258): Espacio reservado: 4096 Bytes -> Direccion: 0x7f0520000b70
+[TRACE] 22:37:48:880 Memoria/(254257:254261): Recibi Instruccion: Conectado al Kernel
+[INFO] 22:38:45:581 Memoria/(254326:254326): Logger creado
+[INFO] 22:38:45:581 Memoria/(254326:254326): -------Valores del config-------
+[INFO] 22:38:45:582 Memoria/(254326:254326): puerto_escucha = 8002
+[INFO] 22:38:45:582 Memoria/(254326:254326): tamaño memoria = 4096
+[INFO] 22:38:45:582 Memoria/(254326:254326): tamaño segmento = 128
+[INFO] 22:38:45:582 Memoria/(254326:254326): cantidad de segmentos = 16
+[INFO] 22:38:45:582 Memoria/(254326:254326): retardo memoria = 1000
+[INFO] 22:38:45:582 Memoria/(254326:254326): retardo compactacion = 60000
+[INFO] 22:38:45:582 Memoria/(254326:254326): algoritmo asignacion = BEST
+[INFO] 22:38:45:582 Memoria/(254326:254326): --------------------------------
+[INFO] 22:38:45:583 Memoria/(254326:254326): ¡Memoria iniciado correctamente!
+[TRACE] 22:38:45:583 Memoria/(254326:254326): Listo para escuchar a mi cliente
+[INFO] 22:38:45:583 Memoria/(254326:254326): Servidor listo para recibir al cliente
+[INFO] 22:39:03:688 Memoria/(254346:254346): Logger creado
+[INFO] 22:39:03:690 Memoria/(254346:254346): -------Valores del config-------
+[INFO] 22:39:03:690 Memoria/(254346:254346): puerto_escucha = 8002
+[INFO] 22:39:03:690 Memoria/(254346:254346): tamaño memoria = 4096
+[INFO] 22:39:03:691 Memoria/(254346:254346): tamaño segmento = 128
+[INFO] 22:39:03:691 Memoria/(254346:254346): cantidad de segmentos = 16
+[INFO] 22:39:03:691 Memoria/(254346:254346): retardo memoria = 1000
+[INFO] 22:39:03:691 Memoria/(254346:254346): retardo compactacion = 60000
+[INFO] 22:39:03:691 Memoria/(254346:254346): algoritmo asignacion = BEST
+[INFO] 22:39:03:691 Memoria/(254346:254346): --------------------------------
+[INFO] 22:39:03:692 Memoria/(254346:254346): ¡Memoria iniciado correctamente!
+[TRACE] 22:39:03:692 Memoria/(254346:254346): Listo para escuchar a mi cliente
+[INFO] 22:39:03:692 Memoria/(254346:254346): Servidor listo para recibir al cliente
+[INFO] 22:39:31:438 Memoria/(254372:254372): Logger creado
+[INFO] 22:39:31:438 Memoria/(254372:254372): -------Valores del config-------
+[INFO] 22:39:31:438 Memoria/(254372:254372): puerto_escucha = 8002
+[INFO] 22:39:31:438 Memoria/(254372:254372): tamaño memoria = 4096
+[INFO] 22:39:31:439 Memoria/(254372:254372): tamaño segmento = 128
+[INFO] 22:39:31:439 Memoria/(254372:254372): cantidad de segmentos = 16
+[INFO] 22:39:31:439 Memoria/(254372:254372): retardo memoria = 1000
+[INFO] 22:39:31:439 Memoria/(254372:254372): retardo compactacion = 60000
+[INFO] 22:39:31:439 Memoria/(254372:254372): algoritmo asignacion = BEST
+[INFO] 22:39:31:439 Memoria/(254372:254372): --------------------------------
+[INFO] 22:39:31:439 Memoria/(254372:254372): ¡Memoria iniciado correctamente!
+[TRACE] 22:39:31:439 Memoria/(254372:254372): Listo para escuchar a mi cliente
+[INFO] 22:39:31:440 Memoria/(254372:254372): Servidor listo para recibir al cliente
+[TRACE] 22:39:32:629 Memoria/(254372:254374): Se conecto un cliente!
+[TRACE] 22:39:32:629 Memoria/(254372:254374): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 22:39:33:908 Memoria/(254372:254375): Se conecto un cliente!
+[TRACE] 22:39:33:908 Memoria/(254372:254375): Recibi Instruccion: Conectado al CPU
+[TRACE] 22:39:34:566 Memoria/(254372:254376): Se conecto un cliente!
+[INFO] 22:39:34:566 Memoria/(254372:254373): Espacio reservado: 4096 Bytes -> Direccion: 0x7f1648000b70
+[TRACE] 22:39:34:570 Memoria/(254372:254376): Recibi Instruccion: Conectado al Kernel
+[INFO] 22:41:05:042 Memoria/(254821:254821): Logger creado
+[INFO] 22:41:05:043 Memoria/(254821:254821): -------Valores del config-------
+[INFO] 22:41:05:043 Memoria/(254821:254821): puerto_escucha = 8002
+[INFO] 22:41:05:044 Memoria/(254821:254821): tamaño memoria = 4096
+[INFO] 22:41:05:044 Memoria/(254821:254821): tamaño segmento = 128
+[INFO] 22:41:05:044 Memoria/(254821:254821): cantidad de segmentos = 16
+[INFO] 22:41:05:045 Memoria/(254821:254821): retardo memoria = 1000
+[INFO] 22:41:05:045 Memoria/(254821:254821): retardo compactacion = 60000
+[INFO] 22:41:05:045 Memoria/(254821:254821): algoritmo asignacion = BEST
+[INFO] 22:41:05:045 Memoria/(254821:254821): --------------------------------
+[INFO] 22:41:05:045 Memoria/(254821:254821): ¡Memoria iniciado correctamente!
+[TRACE] 22:41:05:045 Memoria/(254821:254821): Listo para escuchar a mi cliente
+[INFO] 22:41:05:046 Memoria/(254821:254821): Servidor listo para recibir al cliente
+[TRACE] 22:41:06:142 Memoria/(254821:254823): Se conecto un cliente!
+[TRACE] 22:41:06:142 Memoria/(254821:254823): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 22:41:07:267 Memoria/(254821:254824): Se conecto un cliente!
+[TRACE] 22:41:07:268 Memoria/(254821:254824): Recibi Instruccion: Conectado al CPU
+[TRACE] 22:41:07:844 Memoria/(254821:254825): Se conecto un cliente!
+[INFO] 22:41:07:844 Memoria/(254821:254822): Espacio reservado: 4096 Bytes -> Direccion: 0x7ffa90000b70
+[TRACE] 22:41:07:849 Memoria/(254821:254825): Recibi Instruccion: Conectado al Kernel

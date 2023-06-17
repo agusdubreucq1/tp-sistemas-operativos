@@ -39,5 +39,6 @@ void ocupar_bitmap(t_bitarray*, int, int);
 void liberar_bitmap(t_bitarray*, int, int);
 int first_fit_bitmap(t_bitarray*, int);
 int best_fit_bitmap(t_bitarray*, int);
+int worst_fit_bitmap(t_bitarray*, int);
 
 #endif /* BITMAP_MEMORIA_H_ */
