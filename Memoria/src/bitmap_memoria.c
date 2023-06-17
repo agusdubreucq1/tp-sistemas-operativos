@@ -6,6 +6,7 @@
  */
 
 #include "bitmap_memoria.h"
+#include <commons/collections/list.h>
 
 void inicializar_bitmap(){
 
@@ -54,7 +55,9 @@ void liberar_bitmap(t_bitarray* bitmap, int inicio, int cant) {
 }
 
 int first_fit_bitmap(t_bitarray* bitmap, int tamanio) {
+
 	int cont_huecos_libres = 0;
+
 	for (int i = 0; i < bitmap->size; i++) {
 		if (cont_huecos_libres == tamanio) {
 			return i-tamanio;
@@ -69,5 +72,35 @@ int first_fit_bitmap(t_bitarray* bitmap, int tamanio) {
 			}
 		}
 	}
-	return -1;
+	return -1; //No hay disponibilidad contigua del bitmap
+}
+
+int best_fit_bitmap(t_bitarray* bitmap, int tamanio) {
+
+    int posicion_best_fit = -1;
+    int best_fit_size = bitmap->size + 1;
+    int fit_size_actual = 0;
+    int posicion_actual = -1;
+
+    for (int i = 0; i < bitmap->size; i++) {
+            if (bitarray_test_bit(bitmap, i) == 0) {
+                if (posicion_actual == -1) {
+                	posicion_actual = i;
+                }
+                fit_size_actual++;
+            } else {
+                if (fit_size_actual >= tamanio && fit_size_actual < best_fit_size) {
+                	posicion_best_fit = posicion_actual;
+                	best_fit_size = fit_size_actual;
+                }
+                posicion_actual = -1;
+                fit_size_actual = 0;
+            }
+        }
+
+        if (fit_size_actual >= tamanio && fit_size_actual < best_fit_size) {
+        	posicion_best_fit = posicion_actual;
+        }
+
+    return posicion_best_fit;
 }
