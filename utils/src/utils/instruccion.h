@@ -35,7 +35,8 @@ typedef enum {
 	 DELETE_SEGMENT,
 	 YIELD,
 	 EXIT,
-	 INICIAR
+	 INICIAR,
+	 SEGMENT
 }codigo_instruccion;
 
 typedef struct {

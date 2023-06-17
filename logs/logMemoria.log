@@ -14097,3 +14097,56 @@
 [TRACE] 22:21:18:990 Memoria/(256625:256628): Recibi Instruccion: MOV_IN BX 120
 [TRACE] 22:21:19:605 Memoria/(256625:256629): Recibi Instruccion: CREATE_SEGMENT 1 128 5
 [TRACE] 22:21:19:875 Memoria/(256625:256629): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 12:13:32:320 Memoria/(2935:2935): Logger creado
+[INFO] 12:13:32:322 Memoria/(2935:2935): -------Valores del config-------
+[INFO] 12:13:32:322 Memoria/(2935:2935): puerto_escucha = 8002
+[INFO] 12:13:32:322 Memoria/(2935:2935): tamaño memoria = 4096
+[INFO] 12:13:32:322 Memoria/(2935:2935): tamaño segmento = 128
+[INFO] 12:13:32:322 Memoria/(2935:2935): cantidad de segmentos = 16
+[INFO] 12:13:32:322 Memoria/(2935:2935): retardo memoria = 1000
+[INFO] 12:13:32:322 Memoria/(2935:2935): retardo compactacion = 60000
+[INFO] 12:13:32:322 Memoria/(2935:2935): algoritmo asignacion = BEST
+[INFO] 12:13:32:322 Memoria/(2935:2935): --------------------------------
+[INFO] 12:13:32:322 Memoria/(2935:2935): ¡Memoria iniciado correctamente!
+[TRACE] 12:13:32:322 Memoria/(2935:2935): Listo para escuchar a mi cliente
+[INFO] 12:13:32:322 Memoria/(2935:2935): Servidor listo para recibir al cliente
+[TRACE] 12:13:38:733 Memoria/(2935:2937): Se conecto un cliente!
+[TRACE] 12:13:38:733 Memoria/(2935:2937): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 12:13:49:011 Memoria/(2935:2938): Se conecto un cliente!
+[TRACE] 12:13:49:011 Memoria/(2935:2938): Recibi Instruccion: Conectado al CPU
+[TRACE] 12:14:28:081 Memoria/(2935:2939): Se conecto un cliente!
+[INFO] 12:14:28:082 Memoria/(2935:2936): Espacio reservado: 4096 Bytes -> Direccion: 0x7febd8000b70
+[TRACE] 12:14:28:087 Memoria/(2935:2939): Recibi Instruccion: Conectado al Kernel
+[TRACE] 12:14:35:716 Memoria/(2935:2939): Recibi Instruccion: INICIAR 8
+[TRACE] 12:14:35:717 Memoria/(2935:2939): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:15:19:986 Memoria/(2935:2939): Datos enviados correctamente
+[TRACE] 12:15:20:346 Memoria/(2935:2938): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:15:30:574 Memoria/(2935:2938): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:15:31:322 Memoria/(2935:2939): Recibi Instruccion: CREATE_SEGMENT 1 128 8
+[INFO] 12:19:20:962 Memoria/(3792:3792): Logger creado
+[INFO] 12:19:20:965 Memoria/(3792:3792): -------Valores del config-------
+[INFO] 12:19:20:965 Memoria/(3792:3792): puerto_escucha = 8002
+[INFO] 12:19:20:966 Memoria/(3792:3792): tamaño memoria = 4096
+[INFO] 12:19:20:966 Memoria/(3792:3792): tamaño segmento = 128
+[INFO] 12:19:20:966 Memoria/(3792:3792): cantidad de segmentos = 16
+[INFO] 12:19:20:966 Memoria/(3792:3792): retardo memoria = 1000
+[INFO] 12:19:20:966 Memoria/(3792:3792): retardo compactacion = 60000
+[INFO] 12:19:20:966 Memoria/(3792:3792): algoritmo asignacion = BEST
+[INFO] 12:19:20:966 Memoria/(3792:3792): --------------------------------
+[INFO] 12:19:20:966 Memoria/(3792:3792): ¡Memoria iniciado correctamente!
+[TRACE] 12:19:20:966 Memoria/(3792:3792): Listo para escuchar a mi cliente
+[INFO] 12:19:20:966 Memoria/(3792:3792): Servidor listo para recibir al cliente
+[TRACE] 12:19:21:874 Memoria/(3792:3794): Se conecto un cliente!
+[TRACE] 12:19:21:874 Memoria/(3792:3794): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 12:19:22:832 Memoria/(3792:3795): Se conecto un cliente!
+[TRACE] 12:19:22:832 Memoria/(3792:3795): Recibi Instruccion: Conectado al CPU
+[TRACE] 12:19:56:949 Memoria/(3792:3796): Se conecto un cliente!
+[INFO] 12:19:56:949 Memoria/(3792:3793): Espacio reservado: 4096 Bytes -> Direccion: 0x7fc1d4000b70
+[TRACE] 12:19:56:949 Memoria/(3792:3796): Recibi Instruccion: Conectado al Kernel
+[TRACE] 12:20:00:809 Memoria/(3792:3796): Recibi Instruccion: INICIAR 5
+[TRACE] 12:20:00:809 Memoria/(3792:3796): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:20:00:809 Memoria/(3792:3796): Datos enviados correctamente
+[TRACE] 12:20:00:810 Memoria/(3792:3795): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 12:20:11:027 Memoria/(3792:3795): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 12:20:11:590 Memoria/(3792:3796): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[TRACE] 12:20:11:863 Memoria/(3792:3796): Recibi Instruccion: DELETE_SEGMENT 1

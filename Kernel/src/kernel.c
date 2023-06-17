@@ -173,8 +173,7 @@ void recibir_mensaje_memoria(){
 
 	switch (cod_op) {
 		case MENSAJE:
-			char* mensaje = "";
-			strcat(mensaje, recibir_instruccion(socket_memoria, kernel_logger));
+			char* recibi = recibir_instruccion(socket_memoria, kernel_logger);
 			break;
 		case PAQUETE:
 			int size;
@@ -438,7 +437,7 @@ void ejecutar_segun_motivo(char* motivo){
 		strcat(motivo, numero);
 
 		enviar_mensaje(motivo, socket_memoria);
-		//recibir_mensaje_memoria();
+		recibir_mensaje_memoria();
 
 		printf("\n\nAAAAAAA\n\n");
 

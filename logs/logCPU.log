@@ -30055,3 +30055,168 @@
 [INFO] 22:21:20:011 CPU/(256639:256640): PID: 5 - Ejecutando: EXIT
 [TRACE] 22:21:20:011 CPU/(256639:256640): Datos enviados, esperando respuesta de Kernel...
 [TRACE] 22:21:20:055 CPU/(256639:256640): Datos enviados correctamente
+[INFO] 12:13:49:009 CPU/(2951:2951): Logger creado
+[INFO] 12:13:49:010 CPU/(2951:2951): -------Valores del config-------
+[INFO] 12:13:49:010 CPU/(2951:2951): Retardo Instrucción = 1000
+[INFO] 12:13:49:010 CPU/(2951:2951): IP Memoria = 127.0.0.1
+[INFO] 12:13:49:010 CPU/(2951:2951): Puerto Memoria = 8002
+[INFO] 12:13:49:010 CPU/(2951:2951): Puerto Escucha = 8001
+[INFO] 12:13:49:010 CPU/(2951:2951): Tamanio maximo de segmento = 128
+[INFO] 12:13:49:010 CPU/(2951:2951): --------------------------------
+[INFO] 12:13:49:010 CPU/(2951:2951): ¡CPU iniciado correctamente!
+[TRACE] 12:13:49:010 CPU/(2951:2951): Listo para escuchar a mi cliente
+[INFO] 12:13:49:011 CPU/(2951:2951): Servidor listo para recibir al cliente
+[INFO] 12:13:49:011 CPU/(2951:2953): Conexion establecida con Memoria
+[TRACE] 12:14:28:079 CPU/(2951:2952): Se conecto un cliente!
+[TRACE] 12:14:28:080 CPU/(2951:2952): Me llego el mensaje: Conectado al Kernel
+[TRACE] 12:15:20:345 CPU/(2951:2952): Recibi contexto de ejecucion - PID: 8
+[INFO] 12:15:20:345 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:15:20:345 CPU/(2951:2952): PID: 8 - Ejecutando: SET AX HOLA
+[INFO] 12:15:20:346 CPU/(2951:2952): PID: 8 - Ejecutando: MOV_OUT 120 AX
+[INFO] 12:15:20:346 CPU/(2951:2952): PID: 8 - Accion: Leer 
+[INFO] 12:15:20:346 CPU/(2951:2952): PID: 8 - Ejecutando: WAIT DISCO
+[TRACE] 12:15:20:346 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:15:20:393 CPU/(2951:2952): Datos enviados correctamente
+[TRACE] 12:15:20:438 CPU/(2951:2952): Recibi contexto de ejecucion - PID: 8
+[INFO] 12:15:20:438 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:15:20:438 CPU/(2951:2952): PID: 8 - Ejecutando: I/O 10
+[TRACE] 12:15:20:438 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:15:20:483 CPU/(2951:2952): Datos enviados correctamente
+[TRACE] 12:15:30:485 CPU/(2951:2952): Recibi contexto de ejecucion - PID: 8
+[INFO] 12:15:30:485 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:15:30:485 CPU/(2951:2952): PID: 8 - Ejecutando: SIGNAL DISCO
+[TRACE] 12:15:30:485 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:15:30:527 CPU/(2951:2952): Datos enviados correctamente
+[TRACE] 12:15:30:571 CPU/(2951:2952): Recibi contexto de ejecucion - PID: 8
+[INFO] 12:15:30:574 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:15:30:574 CPU/(2951:2952): PID: 8 - Ejecutando: MOV_IN BX 120
+[INFO] 12:15:30:574 CPU/(2951:2952): PID: 8 - Accion: Leer 
+[INFO] 12:15:30:574 CPU/(2951:2952): PID: 8 - Ejecutando: F_OPEN ARCHIVO
+[TRACE] 12:15:30:574 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:15:31:002 CPU/(2951:2952): Datos enviados correctamente
+[TRACE] 12:15:31:044 CPU/(2951:2952): Recibi contexto de ejecucion - PID: 8
+[INFO] 12:15:31:044 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:15:31:044 CPU/(2951:2952): PID: 8 - Ejecutando: YIELD
+[TRACE] 12:15:31:044 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:15:31:045 CPU/(2951:2952): Datos enviados correctamente
+[TRACE] 12:15:31:093 CPU/(2951:2952): Recibi contexto de ejecucion - PID: 8
+[INFO] 12:15:31:093 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:15:31:094 CPU/(2951:2952): PID: 8 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[TRACE] 12:15:31:094 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:15:31:138 CPU/(2951:2952): Datos enviados correctamente
+[TRACE] 12:15:31:182 CPU/(2951:2952): Recibi contexto de ejecucion - PID: 8
+[INFO] 12:15:31:182 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:15:31:182 CPU/(2951:2952): PID: 8 - Ejecutando: F_SEEK ARCHIVO 10
+[TRACE] 12:15:31:182 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:15:31:228 CPU/(2951:2952): Datos enviados correctamente
+[TRACE] 12:15:31:271 CPU/(2951:2952): Recibi contexto de ejecucion - PID: 8
+[INFO] 12:15:31:271 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:15:31:271 CPU/(2951:2952): PID: 8 - Ejecutando: CREATE_SEGMENT 1 128
+[TRACE] 12:15:31:271 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:17:02:587 CPU/(2951:2952): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:17:02:588 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:17:02:588 CPU/(2951:2952): PID: 8 - Ejecutando: F_WRITE ARCHIVO 4 4
+[TRACE] 12:17:02:588 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:17:02:589 CPU/(2951:2952): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:17:02:590 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:17:02:590 CPU/(2951:2952): PID: 8 - Ejecutando: F_READ ARCHIVO 16 4
+[TRACE] 12:17:02:590 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:17:02:590 CPU/(2951:2952): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:17:02:590 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:17:02:590 CPU/(2951:2952): PID: 8 - Ejecutando: DELETE_SEGMENT 1
+[TRACE] 12:17:02:590 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:17:02:590 CPU/(2951:2952): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:17:02:590 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:17:02:590 CPU/(2951:2952): PID: 8 - Ejecutando: F_CLOSE ARCHIVO
+[TRACE] 12:17:02:590 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:17:02:590 CPU/(2951:2952): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:17:02:591 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:17:02:591 CPU/(2951:2952): PID: 8 - Ejecutando: EXIT
+[TRACE] 12:17:02:591 CPU/(2951:2952): Datos enviados, esperando respuesta de Kernel...
+[ERROR] 12:17:02:591 CPU/(2951:2952): Han llegado menos bytes que los enviados por Kernel
+[INFO] 12:17:02:591 CPU/(2951:2952): Comenzar ejecucion del proceso: 8.
+[INFO] 12:19:22:829 CPU/(3803:3803): Logger creado
+[INFO] 12:19:22:831 CPU/(3803:3803): -------Valores del config-------
+[INFO] 12:19:22:831 CPU/(3803:3803): Retardo Instrucción = 1000
+[INFO] 12:19:22:831 CPU/(3803:3803): IP Memoria = 127.0.0.1
+[INFO] 12:19:22:831 CPU/(3803:3803): Puerto Memoria = 8002
+[INFO] 12:19:22:831 CPU/(3803:3803): Puerto Escucha = 8001
+[INFO] 12:19:22:831 CPU/(3803:3803): Tamanio maximo de segmento = 128
+[INFO] 12:19:22:831 CPU/(3803:3803): --------------------------------
+[INFO] 12:19:22:831 CPU/(3803:3803): ¡CPU iniciado correctamente!
+[TRACE] 12:19:22:831 CPU/(3803:3803): Listo para escuchar a mi cliente
+[INFO] 12:19:22:831 CPU/(3803:3803): Servidor listo para recibir al cliente
+[INFO] 12:19:22:832 CPU/(3803:3805): Conexion establecida con Memoria
+[TRACE] 12:19:56:949 CPU/(3803:3804): Se conecto un cliente!
+[TRACE] 12:19:56:949 CPU/(3803:3804): Me llego el mensaje: Conectado al Kernel
+[TRACE] 12:20:00:809 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:00:809 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:00:809 CPU/(3803:3804): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 12:20:00:810 CPU/(3803:3804): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 12:20:00:810 CPU/(3803:3804): PID: 5 - Accion: Leer 
+[INFO] 12:20:00:810 CPU/(3803:3804): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 12:20:00:810 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:00:851 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:00:894 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:00:894 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:00:894 CPU/(3803:3804): PID: 5 - Ejecutando: I/O 10
+[TRACE] 12:20:00:894 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:00:939 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:10:940 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:10:940 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:10:940 CPU/(3803:3804): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 12:20:10:940 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:10:982 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:027 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:027 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:027 CPU/(3803:3804): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 12:20:11:027 CPU/(3803:3804): PID: 5 - Accion: Leer 
+[INFO] 12:20:11:027 CPU/(3803:3804): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[TRACE] 12:20:11:027 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:11:256 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:299 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:299 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:299 CPU/(3803:3804): PID: 5 - Ejecutando: YIELD
+[TRACE] 12:20:11:299 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:11:299 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:350 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:350 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:350 CPU/(3803:3804): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[TRACE] 12:20:11:350 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:11:393 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:434 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:434 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:434 CPU/(3803:3804): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[TRACE] 12:20:11:434 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:11:487 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:539 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:539 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:539 CPU/(3803:3804): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[TRACE] 12:20:11:539 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:11:590 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:635 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:635 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:635 CPU/(3803:3804): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[TRACE] 12:20:11:635 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:11:675 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:723 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:723 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:723 CPU/(3803:3804): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[TRACE] 12:20:11:723 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:11:770 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:810 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:811 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:811 CPU/(3803:3804): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[TRACE] 12:20:11:811 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:11:863 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:907 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:907 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:907 CPU/(3803:3804): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[TRACE] 12:20:11:907 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:11:957 CPU/(3803:3804): Datos enviados correctamente
+[TRACE] 12:20:11:999 CPU/(3803:3804): Recibi contexto de ejecucion - PID: 5
+[INFO] 12:20:11:999 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.
+[INFO] 12:20:11:999 CPU/(3803:3804): PID: 5 - Ejecutando: EXIT
+[TRACE] 12:20:11:999 CPU/(3803:3804): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 12:20:12:043 CPU/(3803:3804): Datos enviados correctamente
+[INFO] 12:20:29:224 CPU/(3803:3804): Comenzar ejecucion del proceso: 5.

@@ -121,13 +121,13 @@ void ejecutar_instruccion(char* motivo){
 		t_tabla_segmentos* tabla = crear_tabla(atoi(parametros[1]));
 		enviar_segmentos(tabla, socket_kernel);
 		break;
-	/*case CREATE_SEGMENT: // LABURANDO ESTO
+	case CREATE_SEGMENT: // LABURANDO ESTO
 		parametros = string_split(motivo, " ");
 		printf("\n PID: %s", parametros[3]);
 		printf("\n Segmento: %s", parametros[1]);
 		printf("\n Tamaño: %s", parametros[2]);
-		enviar_mensaje("Base", socket_kernel);
-		break;*/
+		enviar_mensaje("SEGMENT", socket_kernel);
+		break;
 	default:
 		break;
 	}
