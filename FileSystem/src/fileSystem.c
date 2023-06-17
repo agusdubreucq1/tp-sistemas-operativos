@@ -136,8 +136,6 @@ void inicializar_FCBs(){
 					config_destroy(fcb_config);
 					free(path);
 	        	}
-
-
 	        }
 	        closedir(d);
 	    }
@@ -155,7 +153,6 @@ t_fcb* leer_fcb(char* nombre, uint32_t tamanio, uint32_t puntero_directo, uint32
 }
 
 int existe_archivo(char* nombre){
-	int valor=0;
 	for(int i=0; i<list_size(lista_fcb);i++){
 		t_fcb* fcb= list_get(lista_fcb, i);
 		if(string_equals_ignore_case(fcb->nombre_archivo, nombre)){
@@ -163,12 +160,32 @@ int existe_archivo(char* nombre){
 		}
 	}
 
-	return valor;
+	return 0;
 }
 
 void crear_archivo(char* nombre){
 	t_fcb* nuevo_fcb = crear_fcb(nombre);
 	list_add(lista_fcb, nuevo_fcb);
+}
+
+void cambiar_tamanio(char* archivo, int tamanio){
+	t_fcb* fcb = fcb_segun_nombre(archivo);
+	if(tamanio > fcb->tamano_archivo){
+		//agregar bloques
+	}else{
+		//liberar bloques
+	}
+	fcb->tamano_archivo = tamanio;
+}
+
+t_fcb* fcb_segun_nombre(char* archivo){
+	for(int i=0;i<list_size(lista_fcb);i++){
+		t_fcb* fcb = list_get(lista_fcb, i);
+		if(string_equals_ignore_case(fcb->nombre_archivo, archivo)){
+			return fcb;
+		}
+	}
+	return NULL;
 }
 
 void ejecutar_instruccion(char* instruccion){
@@ -191,7 +208,9 @@ void ejecutar_instruccion(char* instruccion){
 			break;
 		case F_TRUNCATE:
 			char* archivo_truncar = parametros[1];
+			int tamanio = atoi(parametros[2]);
 			printf("se solicito truncar el archivo: %s", archivo_truncar);
+			cambiar_tamanio(archivo_truncar, tamanio);
 			enviar_mensaje("el filesystem trunco el archivo", socket_Kernel);
 			break;
 		case F_WRITE:
