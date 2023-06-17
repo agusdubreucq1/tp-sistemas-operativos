@@ -13,11 +13,11 @@ t_tabla_segmentos* crear_tabla(uint32_t pid){
 	tabla->segmentos = list_create();
 	list_add_in_index(tabla->segmentos,0, segmento_cero);
 
-	for(int i = 1; i < atoi(cant_segmentos); i++){
+	/*for(int i = 1; i < atoi(cant_segmentos); i++){
 		//t_segmento* segmento = malloc(sizeof(t_segmento));
 		t_segmento* segmento = crear_segmento(NULL, NULL);
 		list_add_in_index(tabla->segmentos,i, segmento);
-	}
+	}*/
 	return tabla;
 }
 
@@ -58,5 +58,5 @@ void enviar_segmentos(t_tabla_segmentos* tabla, int socket){
 alg_asignacion obtener_algoritmo_asignacion(char* algoritmo){
 	if(string_equals_ignore_case(algoritmo, "FIRST")) 	return FIRST;
 	if(string_equals_ignore_case(algoritmo, "BEST"))	return BEST;
-	if(string_equals_ignore_case(algoritmo, "WORST"))	return WORST;
+	else	return WORST;
 }

@@ -37,6 +37,9 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			break;
 
 		case MOV_IN:
+			t_segmento* segmento = list_get(contexto_de_ejecucion->tabla_segmentos, 0);
+			printf("\n\n Segmento cer0 %p", segmento->direccion_base);
+
 			log_info(cpu_logger, "PID: %u - Ejecutando: %s %s %s", contexto_de_ejecucion->pid,
 																   codigo_instruccion_string(instruccion->codigo_instruccion),
 																   instruccion->parametro[0],

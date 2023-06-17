@@ -68,7 +68,7 @@ void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb){
 
 void serializar_tabla_segmentos(t_paquete* paquete, t_pcb* pcb){
 	int cant_segmentos = list_size(pcb->tabla_segmentos);
-	//printf("\n cant_segmentos: %d\n", cant_segmentos);
+	printf("\n cant_segmentos: %d\n", cant_segmentos);
 	agregar_variable_a_paquete(paquete, &cant_segmentos, sizeof(int));
 	for(int j=0;j<list_size(pcb->tabla_segmentos);j++){
 		agregar_a_paquete(paquete, list_get(pcb->tabla_segmentos,j), sizeof(t_segmento));

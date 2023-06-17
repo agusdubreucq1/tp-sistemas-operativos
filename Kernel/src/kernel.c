@@ -234,10 +234,10 @@ t_pcb* pcb_elegido_HRRN(){
 			tcb_index = i;
 		}
 
-		printf("\nPCB %d", pcb->pid);
-		printf("\nTiempo %d", tiempo);
-		printf("\nEstimado %d", pcb->estimado_rafaga);
-		printf("\nRatio %f\n", ratio);
+		//printf("\nPCB %d", pcb->pid);
+		//printf("\nTiempo %d", tiempo);
+		//printf("\nEstimado %d", pcb->estimado_rafaga);
+		//printf("\nRatio %f\n", ratio);
 
 	}
 	pcb = list_remove(lista_ready, tcb_index);

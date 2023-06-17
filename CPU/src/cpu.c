@@ -25,6 +25,8 @@ int main(void){
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
 
 	contexto_de_ejecucion =  malloc(sizeof(t_contexto_ejecucion));
+	contexto_de_ejecucion->tabla_segmentos = list_create();
+
 
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
 	pthread_create(&conexionMemoria, NULL, conectarMemoria, NULL);
