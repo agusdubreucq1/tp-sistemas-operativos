@@ -27,6 +27,23 @@ t_segmento* crear_segmento(void* base, void* limite){
 	segmento->limite = limite;
 	memoria_libre -= (limite - base);
 	//printf("\nMemoria Libre %d \n", memoria_libre);
+	alg_asignacion algoritmo = obtener_algoritmo_asignacion(algoritmo_asignacion);
+
+	switch(algoritmo) {
+
+		case FIRST:
+
+			break;
+
+		case BEST:
+			printf("Entre a BEST");
+			break;
+
+		case WORST:
+
+			break;
+	}
+
 	return segmento;
 }
 
@@ -36,4 +53,10 @@ void enviar_segmentos(t_tabla_segmentos* tabla, int socket){
 	int tamanio_tabla;
 	memcpy(&tamanio_tabla, paquete->buffer->stream, sizeof(int));
 	enviar_paquete(paquete, socket, memoria_logger, "kernel");
+}
+
+alg_asignacion obtener_algoritmo_asignacion(char* algoritmo){
+	if(string_equals_ignore_case(algoritmo, "FIRST")) 	return FIRST;
+	if(string_equals_ignore_case(algoritmo, "BEST"))	return BEST;
+	if(string_equals_ignore_case(algoritmo, "WORST"))	return WORST;
 }

@@ -13,6 +13,7 @@
 #include <commons/collections/list.h>
 #include <stdlib.h>
 #include <utils/serializar.h>
+#include <commons/string.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Variables --
@@ -22,6 +23,7 @@
 	extern char* cant_segmentos;
 	extern t_segmento* segmento_cero;
 	extern int memoria_libre;
+	extern char *algoritmo_asignacion;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
@@ -30,5 +32,6 @@
 	t_tabla_segmentos* crear_tabla(uint32_t pid);
 	t_segmento* crear_segmento(void* base, void* limite);
 	void enviar_segmentos(t_tabla_segmentos* tabla, int socket);
+	alg_asignacion obtener_algoritmo_asignacion(char*);
 
 #endif /* TABLAS_SEGMENTO_H_ */

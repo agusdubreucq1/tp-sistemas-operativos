@@ -158,6 +158,15 @@ void crear_estructuras(){
 	log_info(memoria_logger, "Espacio reservado: %s Bytes -> Direccion: %p", tam_memoria, memoria_fisica);
 	tablas_segmentos = list_create();
 	inicializar_bitmap();
+	imprimir_bitmap(bitmap);
+	ocupar_bitmap(bitmap, 50, 10);
+	printf("\n");
+	imprimir_bitmap(bitmap);
+	ocupar_bitmap(bitmap, 50, 5);
+	printf("\n");
+	imprimir_bitmap(bitmap);
+	int first_fit = first_fit_bitmap(bitmap, 128);
+	printf("\nPosicion First Fit: %d \n", first_fit);
 	segmento_cero = crear_segmento(memoria_fisica, memoria_fisica + atoi(tam_segmento_0));
 }
 

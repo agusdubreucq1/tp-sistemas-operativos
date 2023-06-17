@@ -25,5 +25,9 @@
 
 void inicializar_bitmap();
 void imprimir_bitmap(t_bitarray* bitmap);
+int validar_huecos_libres(t_bitarray*, int, int);
+void ocupar_bitmap(t_bitarray*, int, int);
+void liberar_bitmap(t_bitarray*, int, int);
+int first_fit_bitmap(t_bitarray*, int);
 
 #endif /* BITMAP_MEMORIA_H_ */

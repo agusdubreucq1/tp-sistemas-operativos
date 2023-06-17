@@ -71,6 +71,13 @@ typedef struct tabla_de_segmento{
 	t_list* segmentos;
 } t_tabla_segmentos;
 
+typedef enum
+{
+	FIRST,
+	BEST,
+	WORST
+} alg_asignacion;
+
 // ------------------------------------------------------------------------------------------
 // -- Kernel --
 // ------------------------------------------------------------------------------------------
