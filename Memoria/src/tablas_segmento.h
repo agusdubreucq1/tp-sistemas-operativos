@@ -14,6 +14,8 @@
 #include <stdlib.h>
 #include <utils/serializar.h>
 #include <commons/string.h>
+#include "bitmap_memoria.h"
+#include <commons/bitarray.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Variables --
@@ -24,14 +26,19 @@
 	extern t_segmento* segmento_cero;
 	extern int memoria_libre;
 	extern char *algoritmo_asignacion;
+	extern void* memoria_fisica;
+	extern t_bitarray* bitmap;
+	extern t_list* tablas_segmentos;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
 
 	t_tabla_segmentos* crear_tabla(uint32_t pid);
+	t_tabla_segmentos* buscar_tabla_proceso(uint32_t pid);
 	t_segmento* crear_segmento(void* base, void* limite);
 	void enviar_segmentos(t_tabla_segmentos* tabla, int socket);
 	alg_asignacion obtener_algoritmo_asignacion(char*);
+	char* elegir_hueco(int size);
 
 #endif /* TABLAS_SEGMENTO_H_ */

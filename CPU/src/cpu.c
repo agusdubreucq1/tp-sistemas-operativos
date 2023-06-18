@@ -92,8 +92,8 @@ void recibir_mensaje_kernel(){
 
 			contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
 
-			t_segmento* segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, 0);
-			printf("\n\n\nBNBNBNBN %p \n\n\n", segmento->direccion_base);
+			//t_segmento* segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, 0);
+			//printf("\n\n\nBNBNBNBN %p \n\n\n", segmento->direccion_base);
 
 			*tam_recibido+=2*sizeof(int);
 			send(socket_Kernel, tam_recibido, sizeof(int), 0);

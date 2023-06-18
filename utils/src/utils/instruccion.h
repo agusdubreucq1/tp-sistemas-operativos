@@ -36,7 +36,9 @@ typedef enum {
 	 YIELD,
 	 EXIT,
 	 INICIAR,
-	 SEGMENT
+	 SEGMENT,
+	 OUT,
+	 COMPACT
 }codigo_instruccion;
 
 typedef struct {

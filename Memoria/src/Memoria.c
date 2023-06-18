@@ -120,10 +120,31 @@ void ejecutar_instruccion(char* motivo){
 		break;
 	case CREATE_SEGMENT: // LABURANDO ESTO
 		parametros = string_split(motivo, " ");
-		printf("\n PID: %s", parametros[3]);
-		printf("\n Segmento: %s", parametros[1]);
-		printf("\n Tamaño: %s", parametros[2]);
-		enviar_mensaje("SEGMENT", socket_kernel);
+		char* mensaje = elegir_hueco(atoi(parametros[2]));
+
+		if(!(strcmp(mensaje, "OUT"))){
+			enviar_mensaje("OUT", socket_kernel);
+		} else if(!(strcmp(mensaje, "COMPACT"))){
+			enviar_mensaje("COMPACT", socket_kernel);
+		} else {
+			void* base_elegida = (void*) (memoria_fisica + atoi(mensaje));
+			void* limite_elegido = (void*) (base_elegida + atoi(parametros[2]));
+			t_segmento* segmento_nuevo = malloc(sizeof(t_segmento));
+			segmento_nuevo = crear_segmento(base_elegida, limite_elegido);
+			t_tabla_segmentos* tabla_buscada = buscar_tabla_proceso(atoi(parametros[3]));
+			list_add_in_index(tabla_buscada->segmentos, atoi(parametros[1]), segmento_nuevo);
+			//imprimir_bitmap(bitmap);
+
+			char motivo[30] = "SEGMENT ";
+			printf("\n\n\nBASE %p", base_elegida);
+			char numero[20];
+			sprintf(numero, "%p", base_elegida);
+			strcat(motivo, numero);
+
+			//printf("\n\n\n\nMOTIVO %s \n\n\n\n", motivo);
+
+			enviar_mensaje(motivo, socket_kernel);
+		}
 		break;
 	default:
 		break;
@@ -155,20 +176,6 @@ void crear_estructuras(){
 	log_info(memoria_logger, "Espacio reservado: %s Bytes -> Direccion: %p", tam_memoria, memoria_fisica);
 	tablas_segmentos = list_create();
 	inicializar_bitmap();
-	//imprimir_bitmap(bitmap);
-	//ocupar_bitmap(bitmap, 40, 10);
-	//printf("\n");
-	//imprimir_bitmap(bitmap);
-	//ocupar_bitmap(bitmap, 60, 20);
-	//ocupar_bitmap(bitmap, 85, 15);
-	//printf("\n");
-	//imprimir_bitmap(bitmap);
-	//int first_fit = first_fit_bitmap(bitmap, 35);
-	//printf("\nPosicion First Fit: %d \n", first_fit);
-	//int best_fit = best_fit_bitmap(bitmap, 3);
-	//printf("\nPosicion Best Fit: %d \n", best_fit);
-	//int worst_fit = worst_fit_bitmap(bitmap, 3);
-	//printf("\nPosicion Worst Fit: %d \n", worst_fit);
 	segmento_cero = crear_segmento(memoria_fisica, memoria_fisica + atoi(tam_segmento_0));
 }
 

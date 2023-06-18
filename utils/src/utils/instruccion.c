@@ -52,6 +52,8 @@ codigo_instruccion obtener_codigo_instruccion(char* codigo){
 	if(string_equals_ignore_case(codigo, "YIELD"))			return YIELD;
 	if(string_equals_ignore_case(codigo, "INICIAR"))		return INICIAR;
 	if(string_equals_ignore_case(codigo, "SEGMENT"))		return SEGMENT;
+	if(string_equals_ignore_case(codigo, "OUT"))			return OUT;
+	if(string_equals_ignore_case(codigo, "COMPACT"))		return COMPACT;
 	else										 			return EXIT;
 }
 
@@ -73,6 +75,8 @@ char* codigo_instruccion_string(codigo_instruccion codigo){
 	if(codigo == YIELD) 			return "YIELD";
 	if(codigo == INICIAR) 			return "INICIAR";
 	if(codigo == SEGMENT) 			return "SEGMENT";
+	if(codigo == OUT) 				return "OUT";
+	if(codigo == COMPACT) 			return "COMPACT";
 	else							return "EXIT";
 }
 

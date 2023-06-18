@@ -94,6 +94,7 @@
 	long long hora_inicio;
 	int existeRecurso;
 	int recibi_instruccion;
+	char ultima_instruccion[30];
 
 	t_tabla_segmentos* tablaNueva;
 
@@ -124,6 +125,7 @@
 	void imprimirSemaforos();
 	char* recibir_mensaje_filesystem();
 	void recibir_mensaje_memoria();
+	void ejecutar_motivo_memoria(char* motivo);
 
 
 
