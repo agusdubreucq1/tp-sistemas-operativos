@@ -48,7 +48,6 @@ int main(void) {
 void* atenderKernel(){
 	sem_wait(&sem_kernel);
 	socket_kernel = abrir_socket();
-	printf("Kernel %d", socket_kernel);
 	sem_post(&sem_conexiones);
 
 	while(1){
@@ -66,12 +65,10 @@ void* atenderKernel(){
 			buffer = recibir_buffer(&size, socket_kernel);
 
 			tabla_recibida = deserializar_segmentos(buffer, tam_recibido);
-			//t_segmento* segmento = list_get(tabla_recibida->segmentos, 0);
 			log_info(memoria_logger, "Recibi Tabla de Segmentos - PID: %d", tabla_recibida->pid);
 
 			*tam_recibido+=2*sizeof(int);
 			send(socket_kernel, tam_recibido, sizeof(int), 0);
-			//log_trace(memoria_logger, "Recibi contexto de ejecucion - PID: %d", contexto_de_ejecucion->pid);
 			break;
 		}
 	}
@@ -159,19 +156,19 @@ void crear_estructuras(){
 	tablas_segmentos = list_create();
 	inicializar_bitmap();
 	//imprimir_bitmap(bitmap);
-	ocupar_bitmap(bitmap, 40, 10);
-	printf("\n");
+	//ocupar_bitmap(bitmap, 40, 10);
+	//printf("\n");
 	//imprimir_bitmap(bitmap);
-	ocupar_bitmap(bitmap, 60, 20);
-	ocupar_bitmap(bitmap, 85, 15);
-	printf("\n");
-	imprimir_bitmap(bitmap);
-	int first_fit = first_fit_bitmap(bitmap, 35);
-	printf("\nPosicion First Fit: %d \n", first_fit);
-	int best_fit = best_fit_bitmap(bitmap, 3);
-	printf("\nPosicion Best Fit: %d \n", best_fit);
-	int worst_fit = worst_fit_bitmap(bitmap, 3);
-	printf("\nPosicion Worst Fit: %d \n", worst_fit);
+	//ocupar_bitmap(bitmap, 60, 20);
+	//ocupar_bitmap(bitmap, 85, 15);
+	//printf("\n");
+	//imprimir_bitmap(bitmap);
+	//int first_fit = first_fit_bitmap(bitmap, 35);
+	//printf("\nPosicion First Fit: %d \n", first_fit);
+	//int best_fit = best_fit_bitmap(bitmap, 3);
+	//printf("\nPosicion Best Fit: %d \n", best_fit);
+	//int worst_fit = worst_fit_bitmap(bitmap, 3);
+	//printf("\nPosicion Worst Fit: %d \n", worst_fit);
 	segmento_cero = crear_segmento(memoria_fisica, memoria_fisica + atoi(tam_segmento_0));
 }
 

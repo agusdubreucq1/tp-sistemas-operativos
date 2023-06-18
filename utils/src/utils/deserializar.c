@@ -20,7 +20,7 @@ t_contexto_ejecucion* deserializar_pcb(void* stream,int* bytes_recibidos){
 	contexto_deserializado->registros_cpu =  deserializar_registros_cpu(stream, &desplazamiento);
 	//print_registos(contexto_deserializado->registros_cpu);
 
-	contexto_deserializado->tabla_segmentos = deserializar_tabla_segmentos(stream, &desplazamiento);
+	contexto_deserializado->tabla_segmentos = deserializar_segmentos(stream, &desplazamiento);
 	//print_segmento(contexto_deserializado->tabla_segmentos);
 
 	*bytes_recibidos = desplazamiento;
@@ -129,7 +129,7 @@ t_tabla_segmentos* deserializar_segmentos(void* stream, int* desplazamiento){
 		*desplazamiento += sizeof(void*);
 		memcpy(&(segmento->limite), stream + *desplazamiento, sizeof(void*));
 		*desplazamiento += sizeof(void*);
-		list_add(tabla->segmentos, &segmento);
+		list_add(tabla->segmentos, segmento);
 	}
 	return tabla;
 }

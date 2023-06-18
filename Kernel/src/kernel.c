@@ -155,6 +155,7 @@ void planificarLargoPlazo(){
 		enviar_mensaje(mensaje, socket_memoria);
 		recibir_mensaje_memoria();
 
+		pcb->tabla_segmentos = tablaNueva;
 
 		struct timeval tiempo;
 		gettimeofday(&tiempo, NULL);
@@ -185,6 +186,10 @@ void recibir_mensaje_memoria(){
 			tablaNueva = deserializar_segmentos(buffer, tam_recibido);
 			log_info(kernel_logger, "Recibi Tabla de Segmentos - PID: %d", tablaNueva->pid);
 
+			//t_segmento* segmento2 = list_get(tablaNueva->segmentos, 0);
+			//printf("\n\n\nAEAEAEAEAE %p \n\n\n", segmento2->direccion_base);
+
+
 			*tam_recibido+=2*sizeof(int);
 			send(socket_memoria, tam_recibido, sizeof(int), 0);
 		default: break;
@@ -211,6 +216,11 @@ void planificarCortoPlazo(){
 		pthread_mutex_unlock(&semaforo_ready);
 		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXEC);
 		pcb_a_ejecutar->estado = EXEC;
+
+		t_segmento* segmento = malloc(sizeof(t_segmento));
+		segmento = list_get(pcb_a_ejecutar->tabla_segmentos->segmentos, 0);
+		printf("\n\n\nBNBNBNBN %p \n\n\n", segmento->direccion_base);
+
 		enviar_pcb(pcb_a_ejecutar);
 		recibir_mensaje_cpu();
 	}

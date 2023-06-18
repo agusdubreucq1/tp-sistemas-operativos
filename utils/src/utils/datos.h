@@ -96,7 +96,7 @@ typedef struct pcb {
 	t_list* instrucciones;
 	uint32_t program_counter;
 	t_registros* registros_cpu;
-	t_list* tabla_segmentos;
+	t_tabla_segmentos* tabla_segmentos;
 	uint32_t estimado_rafaga;
 	uint32_t tiempo_ready;
 	//uint32_t tabla_archivos;
@@ -108,7 +108,7 @@ typedef struct contexto_ejecucion {
 	t_list* instrucciones;
 	uint32_t program_counter;
 	t_registros* registros_cpu;
-	t_list* tabla_segmentos;
+	t_tabla_segmentos* tabla_segmentos;
 }t_contexto_ejecucion;
 
 

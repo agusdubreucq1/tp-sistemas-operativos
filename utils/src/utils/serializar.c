@@ -67,12 +67,13 @@ void serializar_instrucciones(t_paquete* paquete, t_pcb* pcb){
 }
 
 void serializar_tabla_segmentos(t_paquete* paquete, t_pcb* pcb){
-	int cant_segmentos = list_size(pcb->tabla_segmentos);
-	printf("\n cant_segmentos: %d\n", cant_segmentos);
+	agregar_variable_a_paquete(paquete, &(pcb->pid), sizeof(int));
+	int cant_segmentos = list_size(pcb->tabla_segmentos->segmentos);
 	agregar_variable_a_paquete(paquete, &cant_segmentos, sizeof(int));
-	for(int j=0;j<list_size(pcb->tabla_segmentos);j++){
-		agregar_a_paquete(paquete, list_get(pcb->tabla_segmentos,j), sizeof(t_segmento));
-		//printf("\n NO \n");
+	for(int i = 0; i < cant_segmentos; i++){
+		t_segmento* segmento = list_get(pcb->tabla_segmentos->segmentos, i);
+		agregar_variable_a_paquete(paquete, &(segmento->direccion_base), sizeof(void*));
+		agregar_variable_a_paquete(paquete, &(segmento->limite), sizeof(void*));
 	}
 }
 

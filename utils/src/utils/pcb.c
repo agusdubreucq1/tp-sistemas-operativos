@@ -14,7 +14,7 @@ t_pcb* crear_pcb(uint32_t pid, t_list* instrucciones, uint32_t estimacion){
 	pcb->program_counter = 0;
 	pcb->estado = 0;
 	init_registros(&pcb->registros_cpu);
-	pcb->tabla_segmentos = list_create();
+	pcb->tabla_segmentos = malloc(sizeof(t_tabla_segmentos));
 	//init_segmento(&pcb->tabla_segmentos);
 	pcb->estimado_rafaga = estimacion;
 	return pcb;
@@ -60,7 +60,7 @@ void print_pcb(t_pcb* pcb){
 	printf("Estimacion rafaga = %d\n", pcb->estimado_rafaga);
 	//list_iterate(pcb->instrucciones, (void*)iterator);
 	print_registos(pcb->registros_cpu);
-	print_segmento(pcb->tabla_segmentos);
+	//print_segmento(pcb->tabla_segmentos);
 }
 
 void print_contexto(t_contexto_ejecucion* contexto){
@@ -68,7 +68,7 @@ void print_contexto(t_contexto_ejecucion* contexto){
 	printf("PID = %d\n", contexto->pid);
 	printf("Program Counter = %u\n", contexto->program_counter);
 	print_registos(contexto->registros_cpu);
-	print_segmento(contexto->tabla_segmentos);
+	//print_segmento(contexto->tabla_segmentos);
 }
 
 

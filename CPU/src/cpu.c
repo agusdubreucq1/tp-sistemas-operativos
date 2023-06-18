@@ -25,7 +25,9 @@ int main(void){
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
 
 	contexto_de_ejecucion =  malloc(sizeof(t_contexto_ejecucion));
-	contexto_de_ejecucion->tabla_segmentos = list_create();
+	tabla_segmentos = malloc(sizeof(t_tabla_segmentos));
+	contexto_de_ejecucion->tabla_segmentos = tabla_segmentos;
+	contexto_de_ejecucion->tabla_segmentos->segmentos = list_create();
 
 
 	pthread_create(&atender_kernel, NULL, abrirSocketKernel, NULL);
@@ -41,7 +43,6 @@ int main(void){
 void* abrirSocketKernel(){
 
 		socket_Kernel = esperar_cliente(server_cpu, cpu_logger);
-
 
 		uint32_t resultOk = 0;
 		uint32_t resultError = -1;
@@ -90,6 +91,9 @@ void recibir_mensaje_kernel(){
 			buffer = recibir_buffer(&size, socket_Kernel);
 
 			contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
+
+			t_segmento* segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, 0);
+			printf("\n\n\nBNBNBNBN %p \n\n\n", segmento->direccion_base);
 
 			*tam_recibido+=2*sizeof(int);
 			send(socket_Kernel, tam_recibido, sizeof(int), 0);
