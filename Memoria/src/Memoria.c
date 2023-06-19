@@ -139,6 +139,7 @@ void ejecutar_instruccion(char* motivo){
 
 			//t_segmento* segmento_nuevo = malloc(sizeof(t_segmento));
 			//segmento_nuevo = crear_segmento(base_elegida, limite_elegido);
+			ocupar_bitmap(bitmap, base_elegida - memoria_fisica, atoi(parametros[2]));
 			log_info(memoria_logger, "PID: %s - Crear Segmento: %s - Base: %p - TAMAÑO: %s", parametros[3], parametros[1], base_elegida, parametros[2]);
 			t_tabla_segmentos* tabla_buscada = buscar_tabla_proceso(atoi(parametros[3]));
 			t_segmento* segmento_nuevo = list_get(tabla_buscada->segmentos, atoi(parametros[1]));
@@ -146,6 +147,7 @@ void ejecutar_instruccion(char* motivo){
 			segmento_nuevo->limite = limite_elegido;
 			//list_add_in_index(tabla_buscada->segmentos, atoi(parametros[1]), segmento_nuevo);
 			//imprimir_bitmap(bitmap);
+			//imprimir_segmentos(tabla_buscada);
 
 			char motivo[30] = "SEGMENT ";
 			char numero[20];
@@ -164,9 +166,18 @@ void ejecutar_instruccion(char* motivo){
 		log_info(memoria_logger, "PID: %s - Eliminar Segmento: %s - Base: %p - TAMAÑO: %u", parametros[2], parametros[1], segmento_a_borrar->direccion_base, size);
 		segmento_a_borrar->direccion_base = NULL;
 		segmento_a_borrar->limite = NULL;
+
+		//imprimir_segmentos(tabla_del_segmento);
+		enviar_segmentos(tabla_del_segmento, socket_kernel);
 		//imprimir_bitmap(bitmap);
 		//list_remove_element(self, element)(tabla_del_segmento->segmentos);
-
+		break;
+	case FINALIZAR:
+		parametros = string_split(motivo, " ");
+		t_tabla_segmentos* tabla_a_finalizar = buscar_tabla_proceso(atoi(parametros[1]));
+		borrar_tabla(tabla_a_finalizar);
+		list_remove_element(tablas_segmentos, tabla_a_finalizar);
+		log_info(memoria_logger, "Eliminación de Proceso PID: %s", parametros[1]);
 		break;
 	default:
 		break;

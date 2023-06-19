@@ -216,6 +216,7 @@ void ejecutar_motivo_memoria(char* motivo){
 	case SEGMENT:
 		parametros = string_split(motivo, " ");
 		instruccion = string_split(ultima_instruccion, " ");
+		memset(ultima_instruccion, 0, sizeof(ultima_instruccion));
 		t_segmento* segmento_nuevo = list_get(pcb_a_ejecutar->tabla_segmentos->segmentos, atoi(instruccion[1]));
 
 		uintptr_t dir = strtoull(parametros[1], NULL, 16);
@@ -223,12 +224,11 @@ void ejecutar_motivo_memoria(char* motivo){
 
 		segmento_nuevo->direccion_base = base;
 		segmento_nuevo->limite = base + atoi(instruccion[2]);
+		//imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
 
-		//list_add_in_index(pcb_a_ejecutar->tabla_segmentos->segmentos, atoi(instruccion[1]), segmento_nuevo);
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
 		pcb_ejecutando = pcb_a_ejecutar;
-
 		break;
 	case COMPACT:
 		break;
@@ -345,6 +345,11 @@ void ejecutar_segun_motivo(char* motivo){
 			log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
 			pcb_a_ejecutar->estado = EXITT;
 			sem_post(&semaforo_multiprogramacion);
+			char mensaje_mem[30] = "FINALIZAR ";
+			char numero_mem[4];
+			sprintf(numero_mem, "%d", pcb_a_ejecutar->pid);
+			strcat(mensaje_mem, numero_mem);
+			enviar_mensaje(mensaje_mem, socket_memoria);
 			enviar_mensaje("-1", pcb_a_ejecutar->pid);
 			liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
 		} else {
@@ -362,6 +367,11 @@ void ejecutar_segun_motivo(char* motivo){
 		pcb_a_ejecutar->estado = EXITT;
 		sem_post(&semaforo_multiprogramacion);
 		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SUCCESS ", pcb_a_ejecutar->pid);
+		char mensaje_mem[30] = "FINALIZAR ";
+		char numero_mem[4];
+		sprintf(numero_mem, "%d", pcb_a_ejecutar->pid);
+		strcat(mensaje_mem, numero_mem);
+		enviar_mensaje(mensaje_mem, socket_memoria);
 		enviar_mensaje("-1", pcb_a_ejecutar->pid);
 		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
 		break;
@@ -374,6 +384,11 @@ void ejecutar_segun_motivo(char* motivo){
 			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SIGNAL - %s ", pcb_a_ejecutar->pid, parametros[1]);
 			pcb_a_ejecutar->estado = EXITT;
 			sem_post(&semaforo_multiprogramacion);
+			char mensaje_mem[30] = "FINALIZAR ";
+			char numero_mem[4];
+			sprintf(numero_mem, "%d", pcb_a_ejecutar->pid);
+			strcat(mensaje_mem, numero_mem);
+			enviar_mensaje(mensaje_mem, socket_memoria);
 			enviar_mensaje("-1", pcb_a_ejecutar->pid);
 			liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
 		} else {
@@ -492,7 +507,7 @@ void ejecutar_segun_motivo(char* motivo){
 
 	case DELETE_SEGMENT:
 		parametros = string_split(motivo, " ");
-		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
+		log_info(kernel_logger, "PID: %d - Eliminar Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 
 		char numero_str[4];
 		sprintf(numero_str, "%d", pcb_a_ejecutar->pid);
@@ -500,7 +515,13 @@ void ejecutar_segun_motivo(char* motivo){
 		strcat(motivo, numero_str);
 		strcat(ultima_instruccion, motivo);
 
+		memset(ultima_instruccion, 0, sizeof(ultima_instruccion));
 		enviar_mensaje(motivo, socket_memoria);
+		recibir_mensaje_memoria();
+		pcb_a_ejecutar->tabla_segmentos = tablaNueva;
+		pcb_a_ejecutar->tabla_segmentos->segmentos = tablaNueva->segmentos;
+		//imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
+
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
 		pcb_ejecutando = pcb_a_ejecutar;

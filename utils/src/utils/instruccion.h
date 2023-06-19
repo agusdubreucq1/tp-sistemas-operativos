@@ -38,7 +38,8 @@ typedef enum {
 	 INICIAR,
 	 SEGMENT,
 	 OUT,
-	 COMPACT
+	 COMPACT,
+	 FINALIZAR
 }codigo_instruccion;
 
 typedef struct {
