@@ -32,7 +32,6 @@ int validar_huecos_libres(t_bitarray* bitmap, int inicio, int cant) {
 			huecos_validos = 0;
 		}
 	}
-
 	return huecos_validos;
 }
 

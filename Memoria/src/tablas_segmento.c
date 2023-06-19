@@ -15,16 +15,15 @@ t_tabla_segmentos* crear_tabla(uint32_t pid){
 	list_add_in_index(tabla->segmentos,0, segmento_cero);
 	log_info(memoria_logger, "Creación de Proceso PID: %u", pid);
 	for(int i = 1; i < atoi(cant_segmentos); i++){
-		//t_segmento* segmento = malloc(sizeof(t_segmento));
-		t_segmento* segmento = crear_segmento(NULL, NULL);
+		t_segmento* segmento = malloc(sizeof(t_segmento));
+		segmento = crear_segmento(NULL, NULL);
 		list_add_in_index(tabla->segmentos,i, segmento);
 	}
 	return tabla;
 }
 
 void borrar_tabla(t_tabla_segmentos* tabla){
-	int seg = list_size(tabla->segmentos);
-	for(int i = 1; i < seg; i++){
+	for(int i = 1; i < atoi(cant_segmentos); i++){
 		t_segmento* segmento = list_get(tabla->segmentos,i);
 		borrar_segmento(segmento->direccion_base, segmento->limite);
 	}
