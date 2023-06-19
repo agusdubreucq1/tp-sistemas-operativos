@@ -181,10 +181,17 @@ void ejecutar_instruccion(char* motivo){
 		log_info(memoria_logger, "Eliminación de Proceso PID: %s", parametros[1]);
 		break;
 	case MOV_IN:
+		parametros = string_split(motivo, " ");
 		log_info(memoria_logger, "ENTRE POR MOV_IN");
+
 		break;
 	case MOV_OUT:
+		parametros = string_split(motivo, " ");
 		log_info(memoria_logger, "ENTRE POR MOV_OUT");
+		log_info(memoria_logger,"%s", parametros[0]); //MOV_OUT
+		log_info(memoria_logger,"%s", parametros[1]); //0xdafsdfagas0f
+		log_info(memoria_logger,"%s", parametros[2]); //120
+
 		break;
 	default:
 		break;
