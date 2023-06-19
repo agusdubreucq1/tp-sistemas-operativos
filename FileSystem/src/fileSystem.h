@@ -19,6 +19,7 @@
 #include "fcb.h"
 #include <utils/instruccion.h>
 #include <semaphore.h>
+#include <math.h>
 
 #define IP_SERVER "127.0.0.1"
 
@@ -78,5 +79,7 @@
 	t_fcb* leer_fcb(char* nombre, uint32_t tamanio, uint32_t puntero_directo, uint32_t puntero_indirecto);
 	int existe_archivo(char* nombre);
 	void crear_archivo(char* nombre);
+	t_fcb* fcb_segun_nombre(char* archivo);
+	int redondearArriba(double x);
 
 #endif /* FILESYSTEM_H_ */

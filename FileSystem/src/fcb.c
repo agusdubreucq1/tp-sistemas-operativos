@@ -12,20 +12,32 @@ t_fcb* crear_fcb(char* nombre){
 	fcb_nuevo->nombre_archivo = string_new();
 	string_append(&fcb_nuevo->nombre_archivo, nombre);
 	fcb_nuevo->tamano_archivo = 0;
-	fcb_nuevo->puntero_directo = 0;
-	fcb_nuevo->puntero_indirecto = 0;
+	fcb_nuevo->puntero_directo = asignar_bloque();
+	fcb_nuevo->puntero_indirecto = asignar_bloque();
 	char* path = string_new();
 	string_append(&path, path_fcb);
 	string_append(&path, "/");
 	string_append(&path, nombre);
 	string_append(&path, ".dat");
 	FILE* f = fopen(path, "wr");
-	fprintf(f, "NOMBRE_ARCHIVO=%s\nTAMANIO_ARCHIVO=0\nPUNTERO_DIRECTO=0\nPUNTERO_INDIRECTO=0", nombre);
+	fprintf(f, "NOMBRE_ARCHIVO=%s\nTAMANIO_ARCHIVO=0\nPUNTERO_DIRECTO=%d\nPUNTERO_INDIRECTO=%d", nombre, fcb_nuevo->puntero_directo, fcb_nuevo->puntero_indirecto);
 	fclose(f);
 
 
 	return fcb_nuevo;
 }
+
+void grabar_fcb(t_fcb* fcb){
+	char* path = string_new();
+	string_append(&path, path_fcb);
+	string_append(&path, "/");
+	string_append(&path, fcb->nombre_archivo);
+	string_append(&path, ".dat");
+	FILE* f = fopen(path, "wr");
+	fprintf(f, "NOMBRE_ARCHIVO=%s\nTAMANIO_ARCHIVO=%d\nPUNTERO_DIRECTO=%d\nPUNTERO_INDIRECTO=%d", fcb->nombre_archivo, fcb->tamano_archivo, fcb->puntero_directo, fcb->puntero_indirecto);
+	fclose(f);
+}
+
 
 void inicializar_fcbs(){
     DIR* directory = opendir(path_fcb);

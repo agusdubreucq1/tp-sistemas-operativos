@@ -54,6 +54,23 @@ int bloque_libre(){
 			return i;
 		}
 	}
+	return -1;
+}
+
+uint32_t asignar_bloque(){
+	uint32_t bloque_a_asignar;
+	bloque_a_asignar = bloque_libre();
+	bitarray_set_bit(bitmap, bloque_a_asignar);
+
+	grabar_bitmap(bitmap);
+	return bloque_a_asignar;
+}
+
+void grabar_bitmap(t_bitarray* bitmap){
+	FILE* file = fopen(path_bitmap, "wb+");
+	char* data = bitmap->bitarray;
+	fwrite(data, 1, bitmap->size, file);
+	fclose(file);//vuelve a escribir todo el archivo con el nuevo valor de bitmap actual
 }
 
 void imprimir_bitmap(t_bitarray* bitmap){

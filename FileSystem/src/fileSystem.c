@@ -128,7 +128,9 @@ void inicializar_FCBs(){
 					char* nombre = config_get_string_value(fcb_config, "NOMBRE_ARCHIVO");
 					uint32_t tamanio = config_get_int_value(fcb_config, "TAMANIO_ARCHIVO");
 					uint32_t puntero_directo = config_get_int_value(fcb_config, "PUNTERO_DIRECTO");
+					printf("el puntero directo es: %d\n es igual a NULL:%d\n 0==NULL: %d\n", puntero_directo, puntero_directo==NULL, 0==NULL);
 					uint32_t puntero_indirecto = config_get_int_value(fcb_config, "PUNTERO_INDIRECTO");
+					printf("el puntero indirecto es: %d\n", puntero_indirecto);
 					printf("nombre: %s\n tamanio: %d\n pd: %d\n pi: %d\n", nombre, tamanio, puntero_directo, puntero_indirecto);
 
 					t_fcb* fcb = leer_fcb(nombre, tamanio, puntero_directo, puntero_indirecto);
@@ -169,14 +171,41 @@ void crear_archivo(char* nombre){
 }
 
 void cambiar_tamanio(char* archivo, int tamanio){
+	/*si cambio a tamaño 0, me los punteros me quedarian en 0? o tendrian un numero pero se tomaria como basura*/
 	t_fcb* fcb = fcb_segun_nombre(archivo);
+	int bloques_asignados = redondearArriba(fcb->tamano_archivo /(float)tamanio_bloque);
 	if(tamanio > fcb->tamano_archivo){
-		//agregar bloques
+		int bloques_a_agregar = redondearArriba((tamanio - fcb->tamano_archivo)/(float)tamanio_bloque);
+		for(int i=1; i<=bloques_a_agregar; i++){
+			if(bloques_asignados == 0){//si no tiene asignado un puntero directo
+				fcb->puntero_directo = asignar_bloque();
+			}else{
+				if(bloques_asignados<2){//si no tiene asignado un puntero indirecto
+					fcb->puntero_indirecto = asignar_bloque();
+				}
+				FILE* archivo_bloques = fopen(path_bloques, "wr");
+				uint32_t bloque_asignado = asignar_bloque();
+				int posicion = fcb->puntero_indirecto* tamanio_bloque + (bloques_asignados - 1)*4;//en el bloque de punteros, posicion segun los bloques ya asignados
+				fseek(archivo_bloques, posicion, SEEK_SET);
+				fwrite(&bloque_asignado,sizeof(uint32_t),1,archivo_bloques);
+				fclose(archivo_bloques);
+			}
+			bloques_asignados+=1;
+		}
+
 	}else{
+
 		//liberar bloques
 	}
 	fcb->tamano_archivo = tamanio;
+	grabar_fcb(fcb);
 }
+
+int redondearArriba(double x){
+	int i = (int)x;
+	return i + (x > i);
+}
+
 
 t_fcb* fcb_segun_nombre(char* archivo){
 	for(int i=0;i<list_size(lista_fcb);i++){
