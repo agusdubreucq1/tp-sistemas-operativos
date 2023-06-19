@@ -34,5 +34,6 @@
 
 	void iterator(char* value);
 	char* codigo_estado_string(estado_code codigo);
+	void imprimir_segmentos(t_tabla_segmentos* tabla);
 
 #endif /* SRC_UTILS_H_ */

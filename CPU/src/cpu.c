@@ -92,6 +92,7 @@ void recibir_mensaje_kernel(){
 
 			contexto_de_ejecucion = deserializar_pcb(buffer, tam_recibido);
 
+			imprimir_segmentos(contexto_de_ejecucion->tabla_segmentos);
 			//t_segmento* segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, 0);
 			//printf("\n\n\nBNBNBNBN %p \n\n\n", segmento->direccion_base);
 

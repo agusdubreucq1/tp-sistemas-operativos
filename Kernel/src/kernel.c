@@ -156,6 +156,7 @@ void planificarLargoPlazo(){
 		recibir_mensaje_memoria();
 
 		pcb->tabla_segmentos = tablaNueva;
+		pcb->tabla_segmentos->segmentos = tablaNueva->segmentos;
 
 		struct timeval tiempo;
 		gettimeofday(&tiempo, NULL);
@@ -185,6 +186,8 @@ void recibir_mensaje_memoria(){
 			buffer = recibir_buffer(&size, socket_memoria);
 
 			tablaNueva = deserializar_segmentos(buffer, tam_recibido);
+			//printf("SASASASASAS\n\n\n");
+			//imprimir_segmentos(tablaNueva);
 			log_info(kernel_logger, "Recibi Tabla de Segmentos - PID: %d", tablaNueva->pid);
 
 			*tam_recibido+=2*sizeof(int);
@@ -207,7 +210,10 @@ void ejecutar_motivo_memoria(char* motivo){
 		parametros = string_split(motivo, " ");
 		instruccion = string_split(ultima_instruccion, " ");
 		t_segmento* segmento_nuevo = malloc(sizeof(t_segmento));
-		void* base = (void*) parametros[1];
+
+		uintptr_t dir = strtoull(parametros[1], NULL, 16);
+		void* base = (void*)dir;
+
 		segmento_nuevo->direccion_base = base;
 		segmento_nuevo->limite = base + atoi(instruccion[2]);
 		list_add_in_index(pcb_a_ejecutar->tabla_segmentos->segmentos, atoi(instruccion[1]), segmento_nuevo);
@@ -471,7 +477,7 @@ void ejecutar_segun_motivo(char* motivo){
 		enviar_mensaje(motivo, socket_memoria);
 		recibir_mensaje_memoria();
 
-
+		imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
 
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;

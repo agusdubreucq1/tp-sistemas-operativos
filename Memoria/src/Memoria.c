@@ -136,7 +136,7 @@ void ejecutar_instruccion(char* motivo){
 			//imprimir_bitmap(bitmap);
 
 			char motivo[30] = "SEGMENT ";
-			printf("\n\n\nBASE %p", base_elegida);
+			//printf("\n\n\nBASE %p", base_elegida);
 			char numero[20];
 			sprintf(numero, "%p", base_elegida);
 			strcat(motivo, numero);

@@ -58,3 +58,12 @@ char* codigo_estado_string(estado_code codigo){
 	else							return "ERROR";
 }
 
+void imprimir_segmentos(t_tabla_segmentos* tabla){
+	int elementos = list_size(tabla->segmentos);
+	for(int i = 0; i < elementos; i++){
+		t_segmento* segmento = list_get(tabla->segmentos, i);
+		printf("\n Base %p\n", segmento->direccion_base);
+		printf("\n Limite %p\n", segmento->limite);
+	}
+}
+
