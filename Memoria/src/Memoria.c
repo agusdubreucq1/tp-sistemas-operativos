@@ -84,7 +84,8 @@ void* atenderCPU(){
 		int cod_op = recibir_operacion(socket_cpu);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_instruccion(socket_cpu, memoria_logger);
+			char* motivo = recibir_instruccion(socket_cpu, memoria_logger);
+			ejecutar_instruccion(motivo);
 			break;
 		}
 	}
@@ -167,6 +168,12 @@ void ejecutar_instruccion(char* motivo){
 		//imprimir_bitmap(bitmap);
 		//list_remove_element(self, element)(tabla_del_segmento->segmentos);
 
+		break;
+	case MOV_IN:
+		log_info(memoria_logger, "ENTRE POR MOV_IN");
+		break;
+	case MOV_OUT:
+		log_info(memoria_logger, "ENTRE POR MOV_OUT");
 		break;
 	default:
 		break;
