@@ -118,11 +118,18 @@ void ejecutar_instruccion(char* motivo){
 		t_tabla_segmentos* tabla = crear_tabla(atoi(parametros[1]));
 		enviar_segmentos(tabla, socket_kernel);
 		break;
-	case CREATE_SEGMENT: // LABURANDO ESTO
+	case CREATE_SEGMENT:
 		parametros = string_split(motivo, " ");
-		char* mensaje = elegir_hueco(atoi(parametros[2]));
+		//char* mensaje = elegir_hueco(atoi(parametros[2]));
+
+		char* mensaje = "OUT";
 
 		if(!(strcmp(mensaje, "OUT"))){
+			log_error(memoria_logger, "Out of memory - Cerrando PID: %s", parametros[3]);
+			log_info(memoria_logger, "Eliminación de Proceso PID: %s", parametros[3]);
+			t_tabla_segmentos* tabla_a_borrar = buscar_tabla_proceso(atoi(parametros[3]));
+			borrar_tabla(tabla_a_borrar);
+			list_remove_element(tablas_segmentos, tabla_a_borrar);
 			enviar_mensaje("OUT", socket_kernel);
 		} else if(!(strcmp(mensaje, "COMPACT"))){
 			enviar_mensaje("COMPACT", socket_kernel);
@@ -131,6 +138,7 @@ void ejecutar_instruccion(char* motivo){
 			void* limite_elegido = (void*) (base_elegida + atoi(parametros[2]));
 			t_segmento* segmento_nuevo = malloc(sizeof(t_segmento));
 			segmento_nuevo = crear_segmento(base_elegida, limite_elegido);
+			log_info(memoria_logger, "PID: %s - Crear Segmento: %s - Base: %p - TAMAÑO: %s", parametros[3], parametros[1], base_elegida, parametros[2]);
 			t_tabla_segmentos* tabla_buscada = buscar_tabla_proceso(atoi(parametros[3]));
 			list_add_in_index(tabla_buscada->segmentos, atoi(parametros[1]), segmento_nuevo);
 			//imprimir_bitmap(bitmap);
@@ -142,7 +150,6 @@ void ejecutar_instruccion(char* motivo){
 			strcat(motivo, numero);
 
 			//printf("\n\n\n\nMOTIVO %s \n\n\n\n", motivo);
-
 			enviar_mensaje(motivo, socket_kernel);
 		}
 		break;

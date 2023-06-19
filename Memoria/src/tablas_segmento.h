@@ -40,5 +40,8 @@
 	void enviar_segmentos(t_tabla_segmentos* tabla, int socket);
 	alg_asignacion obtener_algoritmo_asignacion(char*);
 	char* elegir_hueco(int size);
+	void borrar_segmento(void* base, void* limite);
+	void borrar_tabla(t_tabla_segmentos* tabla);
+
 
 #endif /* TABLAS_SEGMENTO_H_ */

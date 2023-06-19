@@ -16718,3 +16718,378 @@
 [TRACE] 00:17:44:586 Memoria/(4967:4970): Recibi Instruccion: MOV_OUT 120 AX
 [TRACE] 00:17:54:810 Memoria/(4967:4970): Recibi Instruccion: MOV_IN BX 120
 [TRACE] 00:17:55:609 Memoria/(4967:4971): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 00:58:25:698 Memoria/(5526:5526): Logger creado
+[INFO] 00:58:25:700 Memoria/(5526:5526): -------Valores del config-------
+[INFO] 00:58:25:700 Memoria/(5526:5526): puerto_escucha = 8002
+[INFO] 00:58:25:700 Memoria/(5526:5526): tamaño memoria = 4096
+[INFO] 00:58:25:700 Memoria/(5526:5526): tamaño segmento = 128
+[INFO] 00:58:25:700 Memoria/(5526:5526): cantidad de segmentos = 16
+[INFO] 00:58:25:700 Memoria/(5526:5526): retardo memoria = 1000
+[INFO] 00:58:25:700 Memoria/(5526:5526): retardo compactacion = 60000
+[INFO] 00:58:25:700 Memoria/(5526:5526): algoritmo asignacion = FIRST
+[INFO] 00:58:25:700 Memoria/(5526:5526): --------------------------------
+[INFO] 00:58:25:700 Memoria/(5526:5526): ¡Memoria iniciado correctamente!
+[TRACE] 00:58:25:700 Memoria/(5526:5526): Listo para escuchar a mi cliente
+[INFO] 00:58:25:700 Memoria/(5526:5526): Servidor listo para recibir al cliente
+[TRACE] 00:58:34:680 Memoria/(5526:5528): Se conecto un cliente!
+[TRACE] 00:58:34:680 Memoria/(5526:5528): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 00:58:55:401 Memoria/(5526:5529): Se conecto un cliente!
+[TRACE] 00:58:55:401 Memoria/(5526:5529): Recibi Instruccion: Conectado al CPU
+[TRACE] 00:59:08:502 Memoria/(5526:5530): Se conecto un cliente!
+[INFO] 00:59:08:502 Memoria/(5526:5527): Espacio reservado: 4096 Bytes -> Direccion: 0x7f9b1c000b70
+[TRACE] 00:59:08:502 Memoria/(5526:5530): Recibi Instruccion: Conectado al Kernel
+[TRACE] 00:59:24:706 Memoria/(5526:5530): Recibi Instruccion: INICIAR 5
+[TRACE] 00:59:24:706 Memoria/(5526:5530): Datos enviados, esperando respuesta de kernel...
+[TRACE] 00:59:24:706 Memoria/(5526:5530): Datos enviados correctamente
+[TRACE] 00:59:24:750 Memoria/(5526:5530): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[TRACE] 00:59:24:794 Memoria/(5526:5529): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 00:59:35:014 Memoria/(5526:5529): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 00:59:35:770 Memoria/(5526:5530): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 01:08:53:686 Memoria/(6578:6578): Logger creado
+[INFO] 01:08:53:689 Memoria/(6578:6578): -------Valores del config-------
+[INFO] 01:08:53:690 Memoria/(6578:6578): puerto_escucha = 8002
+[INFO] 01:08:53:690 Memoria/(6578:6578): tamaño memoria = 4096
+[INFO] 01:08:53:690 Memoria/(6578:6578): tamaño segmento = 128
+[INFO] 01:08:53:690 Memoria/(6578:6578): cantidad de segmentos = 16
+[INFO] 01:08:53:690 Memoria/(6578:6578): retardo memoria = 1000
+[INFO] 01:08:53:690 Memoria/(6578:6578): retardo compactacion = 60000
+[INFO] 01:08:53:690 Memoria/(6578:6578): algoritmo asignacion = FIRST
+[INFO] 01:08:53:690 Memoria/(6578:6578): --------------------------------
+[INFO] 01:08:53:690 Memoria/(6578:6578): ¡Memoria iniciado correctamente!
+[TRACE] 01:08:53:690 Memoria/(6578:6578): Listo para escuchar a mi cliente
+[INFO] 01:08:53:690 Memoria/(6578:6578): Servidor listo para recibir al cliente
+[TRACE] 01:08:57:628 Memoria/(6578:6580): Se conecto un cliente!
+[TRACE] 01:08:57:628 Memoria/(6578:6580): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 01:09:00:638 Memoria/(6578:6581): Se conecto un cliente!
+[TRACE] 01:09:00:639 Memoria/(6578:6581): Recibi Instruccion: Conectado al CPU
+[TRACE] 01:09:04:652 Memoria/(6578:6582): Se conecto un cliente!
+[INFO] 01:09:04:652 Memoria/(6578:6579): Espacio reservado: 4096 Bytes -> Direccion: 0x7f4f50000b70
+[TRACE] 01:09:04:653 Memoria/(6578:6582): Recibi Instruccion: Conectado al Kernel
+[TRACE] 01:09:07:468 Memoria/(6578:6582): Recibi Instruccion: INICIAR 5
+[TRACE] 01:09:07:468 Memoria/(6578:6582): Datos enviados, esperando respuesta de kernel...
+[TRACE] 01:09:07:468 Memoria/(6578:6582): Datos enviados correctamente
+[TRACE] 01:09:07:510 Memoria/(6578:6582): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[TRACE] 01:09:07:554 Memoria/(6578:6581): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:09:17:775 Memoria/(6578:6581): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:09:18:878 Memoria/(6578:6582): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 01:12:40:130 Memoria/(7087:7087): Logger creado
+[INFO] 01:12:40:132 Memoria/(7087:7087): -------Valores del config-------
+[INFO] 01:12:40:132 Memoria/(7087:7087): puerto_escucha = 8002
+[INFO] 01:12:40:132 Memoria/(7087:7087): tamaño memoria = 4096
+[INFO] 01:12:40:132 Memoria/(7087:7087): tamaño segmento = 128
+[INFO] 01:12:40:132 Memoria/(7087:7087): cantidad de segmentos = 16
+[INFO] 01:12:40:132 Memoria/(7087:7087): retardo memoria = 1000
+[INFO] 01:12:40:132 Memoria/(7087:7087): retardo compactacion = 60000
+[INFO] 01:12:40:132 Memoria/(7087:7087): algoritmo asignacion = FIRST
+[INFO] 01:12:40:132 Memoria/(7087:7087): --------------------------------
+[INFO] 01:12:40:132 Memoria/(7087:7087): ¡Memoria iniciado correctamente!
+[TRACE] 01:12:40:132 Memoria/(7087:7087): Listo para escuchar a mi cliente
+[INFO] 01:12:40:132 Memoria/(7087:7087): Servidor listo para recibir al cliente
+[TRACE] 01:12:47:295 Memoria/(7087:7089): Se conecto un cliente!
+[TRACE] 01:12:47:295 Memoria/(7087:7089): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 01:13:00:306 Memoria/(7087:7090): Se conecto un cliente!
+[TRACE] 01:13:00:306 Memoria/(7087:7090): Recibi Instruccion: Conectado al CPU
+[TRACE] 01:13:05:648 Memoria/(7087:7091): Se conecto un cliente!
+[INFO] 01:13:05:649 Memoria/(7087:7088): Espacio reservado: 4096 Bytes -> Direccion: 0x7fb214000b70
+[TRACE] 01:13:05:649 Memoria/(7087:7091): Recibi Instruccion: Conectado al Kernel
+[TRACE] 01:13:17:101 Memoria/(7087:7091): Recibi Instruccion: INICIAR 5
+[TRACE] 01:13:17:101 Memoria/(7087:7091): Datos enviados, esperando respuesta de kernel...
+[TRACE] 01:13:17:101 Memoria/(7087:7091): Datos enviados correctamente
+[TRACE] 01:13:17:143 Memoria/(7087:7091): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[TRACE] 01:13:17:186 Memoria/(7087:7090): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:13:27:406 Memoria/(7087:7090): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:13:28:188 Memoria/(7087:7091): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 01:23:08:549 Memoria/(8284:8284): Logger creado
+[INFO] 01:23:08:553 Memoria/(8284:8284): -------Valores del config-------
+[INFO] 01:23:08:553 Memoria/(8284:8284): puerto_escucha = 8002
+[INFO] 01:23:08:553 Memoria/(8284:8284): tamaño memoria = 4096
+[INFO] 01:23:08:553 Memoria/(8284:8284): tamaño segmento = 128
+[INFO] 01:23:08:553 Memoria/(8284:8284): cantidad de segmentos = 16
+[INFO] 01:23:08:553 Memoria/(8284:8284): retardo memoria = 1000
+[INFO] 01:23:08:553 Memoria/(8284:8284): retardo compactacion = 60000
+[INFO] 01:23:08:553 Memoria/(8284:8284): algoritmo asignacion = FIRST
+[INFO] 01:23:08:553 Memoria/(8284:8284): --------------------------------
+[INFO] 01:23:08:553 Memoria/(8284:8284): ¡Memoria iniciado correctamente!
+[TRACE] 01:23:08:553 Memoria/(8284:8284): Listo para escuchar a mi cliente
+[INFO] 01:23:08:553 Memoria/(8284:8284): Servidor listo para recibir al cliente
+[TRACE] 01:23:11:008 Memoria/(8284:8286): Se conecto un cliente!
+[TRACE] 01:23:11:008 Memoria/(8284:8286): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 01:23:14:156 Memoria/(8284:8287): Se conecto un cliente!
+[TRACE] 01:23:14:157 Memoria/(8284:8287): Recibi Instruccion: Conectado al CPU
+[TRACE] 01:23:16:927 Memoria/(8284:8288): Se conecto un cliente!
+[INFO] 01:23:16:928 Memoria/(8284:8285): Espacio reservado: 4096 Bytes -> Direccion: 0x7f8348000b70
+[TRACE] 01:23:16:928 Memoria/(8284:8288): Recibi Instruccion: Conectado al Kernel
+[TRACE] 01:23:25:511 Memoria/(8284:8288): Recibi Instruccion: INICIAR 5
+[TRACE] 01:23:25:511 Memoria/(8284:8288): Datos enviados, esperando respuesta de kernel...
+[TRACE] 01:23:25:511 Memoria/(8284:8288): Datos enviados correctamente
+[TRACE] 01:23:25:554 Memoria/(8284:8288): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[TRACE] 01:23:41:233 Memoria/(8284:8288): Recibi Instruccion: INICIAR 9
+[TRACE] 01:23:41:233 Memoria/(8284:8288): Datos enviados, esperando respuesta de kernel...
+[TRACE] 01:23:41:233 Memoria/(8284:8288): Datos enviados correctamente
+[TRACE] 01:23:41:234 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:23:46:450 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:23:47:104 Memoria/(8284:8288): Recibi Instruccion: CREATE_SEGMENT 1 128 9
+[TRACE] 01:23:59:946 Memoria/(8284:8288): Recibi Instruccion: INICIAR 5
+[TRACE] 01:23:59:946 Memoria/(8284:8288): Datos enviados, esperando respuesta de kernel...
+[TRACE] 01:23:59:947 Memoria/(8284:8288): Datos enviados correctamente
+[TRACE] 01:23:59:959 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:23:59:959 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:189 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:190 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:190 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:192 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:193 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:193 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:202 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:203 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:203 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:205 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:213 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:213 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:215 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:218 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:218 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:222 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:223 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:223 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:233 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:238 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:238 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:243 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:246 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:246 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:256 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:266 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:266 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:270 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:275 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:275 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:277 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:280 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:280 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:283 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:286 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:286 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:296 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:302 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:302 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:307 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:309 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:309 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:318 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:328 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:328 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:334 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:339 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:339 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:351 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:360 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:361 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:366 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:371 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:371 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:382 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:394 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:394 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:399 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:402 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:402 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:405 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:413 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:413 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:424 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:430 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:430 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:434 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:437 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:437 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:446 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:451 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:451 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:452 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:454 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:454 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:457 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:464 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:464 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:466 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:474 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:474 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:483 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:494 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:494 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:498 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:505 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:505 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:507 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:516 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:516 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:518 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:526 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:526 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:530 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:537 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:537 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:547 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:561 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:561 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:570 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:579 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:581 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:591 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:594 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:594 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:601 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:612 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:612 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:622 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:626 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:626 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:633 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:634 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:634 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:636 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:637 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:24:00:637 Memoria/(8284:8287): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 01:24:00:638 Memoria/(8284:8287): Recibi Instruccion: MOV_OUT 120 AX
+[INFO] 01:55:52:574 Memoria/(12284:12284): Logger creado
+[INFO] 01:55:52:576 Memoria/(12284:12284): -------Valores del config-------
+[INFO] 01:55:52:576 Memoria/(12284:12284): puerto_escucha = 8002
+[INFO] 01:55:52:576 Memoria/(12284:12284): tamaño memoria = 4096
+[INFO] 01:55:52:576 Memoria/(12284:12284): tamaño segmento = 128
+[INFO] 01:55:52:576 Memoria/(12284:12284): cantidad de segmentos = 16
+[INFO] 01:55:52:577 Memoria/(12284:12284): retardo memoria = 1000
+[INFO] 01:55:52:577 Memoria/(12284:12284): retardo compactacion = 60000
+[INFO] 01:55:52:577 Memoria/(12284:12284): algoritmo asignacion = FIRST
+[INFO] 01:55:52:577 Memoria/(12284:12284): --------------------------------
+[INFO] 01:55:52:577 Memoria/(12284:12284): ¡Memoria iniciado correctamente!
+[TRACE] 01:55:52:577 Memoria/(12284:12284): Listo para escuchar a mi cliente
+[INFO] 01:55:52:578 Memoria/(12284:12284): Servidor listo para recibir al cliente
+[TRACE] 01:55:58:571 Memoria/(12284:12286): Se conecto un cliente!
+[TRACE] 01:55:58:571 Memoria/(12284:12286): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 01:56:02:180 Memoria/(12284:12287): Se conecto un cliente!
+[TRACE] 01:56:02:180 Memoria/(12284:12287): Recibi Instruccion: Conectado al CPU
+[TRACE] 01:56:05:671 Memoria/(12284:12288): Se conecto un cliente!
+[INFO] 01:56:05:671 Memoria/(12284:12285): Espacio reservado: 4096 Bytes -> Direccion: 0x7f3380000b70
+[TRACE] 01:56:05:672 Memoria/(12284:12288): Recibi Instruccion: Conectado al Kernel
+[TRACE] 01:56:10:832 Memoria/(12284:12288): Recibi Instruccion: INICIAR 5
+[INFO] 01:56:10:832 Memoria/(12284:12288): Creación de Proceso PID: 5
+[TRACE] 01:56:10:832 Memoria/(12284:12288): Datos enviados, esperando respuesta de kernel...
+[TRACE] 01:56:10:833 Memoria/(12284:12288): Datos enviados correctamente
+[TRACE] 01:56:10:874 Memoria/(12284:12288): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[INFO] 01:56:10:874 Memoria/(12284:12288): PID: 5 - Crear Segmento: 1 - Base: 0x7f3380000bf0 - TAMAÑO: 128
+[TRACE] 01:56:47:374 Memoria/(12284:12287): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:56:47:376 Memoria/(12284:12287): Recibi Instruccion: MOV_IN BX 120
+[INFO] 01:58:14:921 Memoria/(12623:12623): Logger creado
+[INFO] 01:58:14:923 Memoria/(12623:12623): -------Valores del config-------
+[INFO] 01:58:14:923 Memoria/(12623:12623): puerto_escucha = 8002
+[INFO] 01:58:14:923 Memoria/(12623:12623): tamaño memoria = 4096
+[INFO] 01:58:14:923 Memoria/(12623:12623): tamaño segmento = 128
+[INFO] 01:58:14:924 Memoria/(12623:12623): cantidad de segmentos = 16
+[INFO] 01:58:14:924 Memoria/(12623:12623): retardo memoria = 1000
+[INFO] 01:58:14:924 Memoria/(12623:12623): retardo compactacion = 60000
+[INFO] 01:58:14:924 Memoria/(12623:12623): algoritmo asignacion = FIRST
+[INFO] 01:58:14:924 Memoria/(12623:12623): --------------------------------
+[INFO] 01:58:14:924 Memoria/(12623:12623): ¡Memoria iniciado correctamente!
+[TRACE] 01:58:14:924 Memoria/(12623:12623): Listo para escuchar a mi cliente
+[INFO] 01:58:14:924 Memoria/(12623:12623): Servidor listo para recibir al cliente
+[TRACE] 01:58:18:307 Memoria/(12623:12625): Se conecto un cliente!
+[TRACE] 01:58:18:307 Memoria/(12623:12625): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 01:58:21:374 Memoria/(12623:12626): Se conecto un cliente!
+[TRACE] 01:58:21:374 Memoria/(12623:12626): Recibi Instruccion: Conectado al CPU
+[TRACE] 01:58:23:784 Memoria/(12623:12627): Se conecto un cliente!
+[INFO] 01:58:23:785 Memoria/(12623:12624): Espacio reservado: 4096 Bytes -> Direccion: 0x7f9508000b70
+[TRACE] 01:58:23:785 Memoria/(12623:12627): Recibi Instruccion: Conectado al Kernel
+[TRACE] 01:58:28:451 Memoria/(12623:12627): Recibi Instruccion: INICIAR 5
+[INFO] 01:58:28:451 Memoria/(12623:12627): Creación de Proceso PID: 5
+[TRACE] 01:58:28:451 Memoria/(12623:12627): Datos enviados, esperando respuesta de kernel...
+[TRACE] 01:58:28:451 Memoria/(12623:12627): Datos enviados correctamente
+[TRACE] 01:58:28:494 Memoria/(12623:12627): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[INFO] 01:58:28:494 Memoria/(12623:12627): Eliminación de Proceso PID: 5
+[TRACE] 01:58:46:489 Memoria/(12623:12626): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 01:58:46:490 Memoria/(12623:12626): Recibi Instruccion: MOV_IN BX 120
+[INFO] 02:09:44:148 Memoria/(14183:14183): Logger creado
+[INFO] 02:09:44:151 Memoria/(14183:14183): -------Valores del config-------
+[INFO] 02:09:44:151 Memoria/(14183:14183): puerto_escucha = 8002
+[INFO] 02:09:44:151 Memoria/(14183:14183): tamaño memoria = 4096
+[INFO] 02:09:44:151 Memoria/(14183:14183): tamaño segmento = 128
+[INFO] 02:09:44:151 Memoria/(14183:14183): cantidad de segmentos = 16
+[INFO] 02:09:44:151 Memoria/(14183:14183): retardo memoria = 1000
+[INFO] 02:09:44:151 Memoria/(14183:14183): retardo compactacion = 60000
+[INFO] 02:09:44:151 Memoria/(14183:14183): algoritmo asignacion = FIRST
+[INFO] 02:09:44:151 Memoria/(14183:14183): --------------------------------
+[INFO] 02:09:44:152 Memoria/(14183:14183): ¡Memoria iniciado correctamente!
+[TRACE] 02:09:44:152 Memoria/(14183:14183): Listo para escuchar a mi cliente
+[INFO] 02:09:44:152 Memoria/(14183:14183): Servidor listo para recibir al cliente
+[TRACE] 02:09:46:434 Memoria/(14183:14185): Se conecto un cliente!
+[TRACE] 02:09:46:434 Memoria/(14183:14185): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 02:09:50:706 Memoria/(14183:14186): Se conecto un cliente!
+[TRACE] 02:09:50:706 Memoria/(14183:14186): Recibi Instruccion: Conectado al CPU
+[TRACE] 02:09:54:286 Memoria/(14183:14187): Se conecto un cliente!
+[INFO] 02:09:54:286 Memoria/(14183:14184): Espacio reservado: 4096 Bytes -> Direccion: 0x7fc92c000b70
+[TRACE] 02:09:54:287 Memoria/(14183:14187): Recibi Instruccion: Conectado al Kernel
+[TRACE] 02:10:00:873 Memoria/(14183:14187): Recibi Instruccion: INICIAR 5
+[INFO] 02:10:00:873 Memoria/(14183:14187): Creación de Proceso PID: 5
+[TRACE] 02:10:00:873 Memoria/(14183:14187): Datos enviados, esperando respuesta de kernel...
+[TRACE] 02:10:00:873 Memoria/(14183:14187): Datos enviados correctamente
+[TRACE] 02:10:00:914 Memoria/(14183:14187): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[INFO] 02:10:00:914 Memoria/(14183:14187): PID: 5 - Crear Segmento: 1 - Base: 0x7fc92c000bf0 - TAMAÑO: 128
+[TRACE] 02:10:00:958 Memoria/(14183:14186): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 02:10:11:178 Memoria/(14183:14186): Recibi Instruccion: MOV_IN BX 120
+[TRACE] 02:10:11:915 Memoria/(14183:14187): Recibi Instruccion: DELETE_SEGMENT 1
+[INFO] 02:12:10:750 Memoria/(14555:14555): Logger creado
+[INFO] 02:12:10:760 Memoria/(14555:14555): -------Valores del config-------
+[INFO] 02:12:10:760 Memoria/(14555:14555): puerto_escucha = 8002
+[INFO] 02:12:10:760 Memoria/(14555:14555): tamaño memoria = 4096
+[INFO] 02:12:10:760 Memoria/(14555:14555): tamaño segmento = 128
+[INFO] 02:12:10:760 Memoria/(14555:14555): cantidad de segmentos = 16
+[INFO] 02:12:10:760 Memoria/(14555:14555): retardo memoria = 1000
+[INFO] 02:12:10:761 Memoria/(14555:14555): retardo compactacion = 60000
+[INFO] 02:12:10:761 Memoria/(14555:14555): algoritmo asignacion = FIRST
+[INFO] 02:12:10:761 Memoria/(14555:14555): --------------------------------
+[INFO] 02:12:10:761 Memoria/(14555:14555): ¡Memoria iniciado correctamente!
+[TRACE] 02:12:10:761 Memoria/(14555:14555): Listo para escuchar a mi cliente
+[INFO] 02:12:10:761 Memoria/(14555:14555): Servidor listo para recibir al cliente
+[TRACE] 02:12:13:039 Memoria/(14555:14557): Se conecto un cliente!
+[TRACE] 02:12:13:040 Memoria/(14555:14557): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 02:12:16:603 Memoria/(14555:14558): Se conecto un cliente!
+[TRACE] 02:12:16:603 Memoria/(14555:14558): Recibi Instruccion: Conectado al CPU
+[TRACE] 02:12:19:070 Memoria/(14555:14559): Se conecto un cliente!
+[INFO] 02:12:19:070 Memoria/(14555:14556): Espacio reservado: 4096 Bytes -> Direccion: 0x7f066c000b70
+[TRACE] 02:12:19:070 Memoria/(14555:14559): Recibi Instruccion: Conectado al Kernel
+[TRACE] 02:12:22:755 Memoria/(14555:14559): Recibi Instruccion: INICIAR 5
+[INFO] 02:12:22:755 Memoria/(14555:14559): Creación de Proceso PID: 5
+[TRACE] 02:12:22:755 Memoria/(14555:14559): Datos enviados, esperando respuesta de kernel...
+[TRACE] 02:12:22:755 Memoria/(14555:14559): Datos enviados correctamente
+[TRACE] 02:12:22:799 Memoria/(14555:14559): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[ERROR] 02:12:22:799 Memoria/(14555:14559): Out of memory - Cerrando PID: 5
+[INFO] 02:12:22:799 Memoria/(14555:14559): Eliminación de Proceso PID: 5
+[TRACE] 02:12:40:038 Memoria/(14555:14558): Recibi Instruccion: MOV_OUT 120 AX
+[TRACE] 02:12:40:038 Memoria/(14555:14558): Recibi Instruccion: MOV_IN BX 120
+[INFO] 02:14:27:436 Memoria/(14870:14870): Logger creado
+[INFO] 02:14:27:438 Memoria/(14870:14870): -------Valores del config-------
+[INFO] 02:14:27:438 Memoria/(14870:14870): puerto_escucha = 8002
+[INFO] 02:14:27:438 Memoria/(14870:14870): tamaño memoria = 4096
+[INFO] 02:14:27:438 Memoria/(14870:14870): tamaño segmento = 128
+[INFO] 02:14:27:438 Memoria/(14870:14870): cantidad de segmentos = 16
+[INFO] 02:14:27:438 Memoria/(14870:14870): retardo memoria = 1000
+[INFO] 02:14:27:438 Memoria/(14870:14870): retardo compactacion = 60000
+[INFO] 02:14:27:439 Memoria/(14870:14870): algoritmo asignacion = FIRST
+[INFO] 02:14:27:439 Memoria/(14870:14870): --------------------------------
+[INFO] 02:14:27:439 Memoria/(14870:14870): ¡Memoria iniciado correctamente!
+[TRACE] 02:14:27:439 Memoria/(14870:14870): Listo para escuchar a mi cliente
+[INFO] 02:14:27:439 Memoria/(14870:14870): Servidor listo para recibir al cliente
+[TRACE] 02:14:31:495 Memoria/(14870:14872): Se conecto un cliente!
+[TRACE] 02:14:31:495 Memoria/(14870:14872): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 02:14:34:408 Memoria/(14870:14873): Se conecto un cliente!
+[TRACE] 02:14:34:409 Memoria/(14870:14873): Recibi Instruccion: Conectado al CPU
+[TRACE] 02:14:37:955 Memoria/(14870:14874): Se conecto un cliente!
+[INFO] 02:14:37:955 Memoria/(14870:14871): Espacio reservado: 4096 Bytes -> Direccion: 0x7f9204000b70
+[TRACE] 02:14:37:955 Memoria/(14870:14874): Recibi Instruccion: Conectado al Kernel
+[TRACE] 02:14:41:195 Memoria/(14870:14874): Recibi Instruccion: INICIAR 5
+[INFO] 02:14:41:195 Memoria/(14870:14874): Creación de Proceso PID: 5
+[TRACE] 02:14:41:195 Memoria/(14870:14874): Datos enviados, esperando respuesta de kernel...
+[TRACE] 02:14:41:196 Memoria/(14870:14874): Datos enviados correctamente
+[TRACE] 02:14:41:238 Memoria/(14870:14874): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[ERROR] 02:14:41:238 Memoria/(14870:14874): Out of memory - Cerrando PID: 5
+[INFO] 02:14:41:238 Memoria/(14870:14874): Eliminación de Proceso PID: 5

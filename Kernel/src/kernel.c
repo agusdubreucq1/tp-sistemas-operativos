@@ -205,6 +205,13 @@ void ejecutar_motivo_memoria(char* motivo){
 
 	switch(cod_instruccion) {
 	case OUT:
+		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
+		pcb_a_ejecutar->estado = EXITT;
+		sem_post(&semaforo_multiprogramacion);
+		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: OUT OF MEMORY ", pcb_a_ejecutar->pid);
+		enviar_mensaje("-1", pcb_a_ejecutar->pid);
+		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+		devolver_ejecucion = 0;
 		break;
 	case SEGMENT:
 		parametros = string_split(motivo, " ");
@@ -217,6 +224,11 @@ void ejecutar_motivo_memoria(char* motivo){
 		segmento_nuevo->direccion_base = base;
 		segmento_nuevo->limite = base + atoi(instruccion[2]);
 		list_add_in_index(pcb_a_ejecutar->tabla_segmentos->segmentos, atoi(instruccion[1]), segmento_nuevo);
+
+		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb_a_ejecutar;
+
 		break;
 	case COMPACT:
 		break;
@@ -477,11 +489,10 @@ void ejecutar_segun_motivo(char* motivo){
 		enviar_mensaje(motivo, socket_memoria);
 		recibir_mensaje_memoria();
 
-		imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
-
-		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
-		devolver_ejecucion = 1;
-		pcb_ejecutando = pcb_a_ejecutar;
+		//imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
+		//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		//devolver_ejecucion = 1;
+		//pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case DELETE_SEGMENT:
