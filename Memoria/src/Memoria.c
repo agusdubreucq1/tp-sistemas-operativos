@@ -189,7 +189,9 @@ void ejecutar_instruccion(char* motivo){
 		parametros = string_split(motivo, " ");
 		log_info(memoria_logger, "ENTRE POR MOV_OUT");
 		log_info(memoria_logger,"%s", parametros[0]); //MOV_OUT
-		log_info(memoria_logger,"%s", parametros[1]); //0xdafsdfagas0f
+		log_info(memoria_logger,"%p", parametros[1]); //0xdafsdfagas0f
+		char *nombreRegistro = parametros[1];
+		log_info(memoria_logger,"El nombre del registro es: %s\n", nombreRegistro); //quiero imprimir AX y no me sale
 		log_info(memoria_logger,"%s", parametros[2]); //120
 
 		break;

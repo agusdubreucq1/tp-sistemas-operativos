@@ -80,18 +80,17 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			}
 			else {
 				char mensaje_mov_out[30] = "";
-				concatenar_mensaje_con_2_parametros(mensaje_mov_out, instruccion);
-				log_info(cpu_logger, "PID: %u - Accion: Leer ", contexto_de_ejecucion->pid);
-
 				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[0]));
 				t_segmento* segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, num_segmento);
-				printf("\nDireccionBase: %p\n Limite: %p\n",segmento->direccion_base, segmento->limite);
+
+				printf("\nDireccionBase: %p\nLimite: 		%p\n",segmento->direccion_base, segmento->limite);
+
 				void *direccion_base = segmento->direccion_base ;
 				int desplazamiento_segmento = obtener_desplazamiento_segmento(atoi(instruccion->parametro[0]));
 
 				sprintf(mensaje_mov_out, "MOV_OUT %p %d", direccion_base, desplazamiento_segmento); //concatena direccionBase y Desplazamiento al mensaje a enviar
 
-				printf("\n Mensaje que le mandamos a memoria: %s", mensaje_mov_out);
+				printf("\n Mensaje que le mandamos a memoria: %s\n", mensaje_mov_out);
 
 				enviar_mensaje(mensaje_mov_out, socket_memoria);
 			}
