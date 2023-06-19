@@ -42,9 +42,9 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
 
-			t_segmento* segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, 0);
-			printf("\n\n Segmento cer0 %p", segmento->direccion_base);
-			printf("\n\n Segmento cer0 %p", segmento->limite);
+			//t_segmento* segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, 0);
+			//printf("\n\n Segmento cer0 %p", segmento->direccion_base);
+			//printf("\n\n Segmento cer0 %p", segmento->limite);
 
 			int es_desplazamiento_valido_in = desplazamiento_valido(contexto_de_ejecucion->registros_cpu,
 																	instruccion->parametro[0],

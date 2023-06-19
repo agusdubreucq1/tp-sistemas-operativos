@@ -42,6 +42,7 @@
 	char* elegir_hueco(int size);
 	void borrar_segmento(void* base, void* limite);
 	void borrar_tabla(t_tabla_segmentos* tabla);
+	int buscar_index_proceso(uint32_t pid);
 
 
 #endif /* TABLAS_SEGMENTO_H_ */

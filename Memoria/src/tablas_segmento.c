@@ -14,11 +14,11 @@ t_tabla_segmentos* crear_tabla(uint32_t pid){
 	list_add(tablas_segmentos, tabla);
 	list_add_in_index(tabla->segmentos,0, segmento_cero);
 	log_info(memoria_logger, "Creación de Proceso PID: %u", pid);
-	/*for(int i = 1; i < atoi(cant_segmentos); i++){
+	for(int i = 1; i < atoi(cant_segmentos); i++){
 		//t_segmento* segmento = malloc(sizeof(t_segmento));
 		t_segmento* segmento = crear_segmento(NULL, NULL);
 		list_add_in_index(tabla->segmentos,i, segmento);
-	}*/
+	}
 	return tabla;
 }
 
@@ -39,6 +39,17 @@ t_tabla_segmentos* buscar_tabla_proceso(uint32_t pid){
 		}
 	}
 	return NULL;
+}
+
+int buscar_index_proceso(uint32_t pid){
+	t_tabla_segmentos* tabla = malloc(sizeof(t_tabla_segmentos));
+	for (int i=0; i< list_size(tablas_segmentos); i++){
+		tabla = list_get(tablas_segmentos, i);
+		if (tabla->pid == pid){
+			return i;
+		}
+	}
+	return -1;
 }
 
 t_segmento* crear_segmento(void* base, void* limite){
