@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <commons/log.h>
+#include <stdint.h>
 
 extern t_log* fileSystem_logger;
 extern int tamanio_bloque;

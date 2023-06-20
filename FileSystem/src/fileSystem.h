@@ -80,6 +80,6 @@
 	int existe_archivo(char* nombre);
 	void crear_archivo(char* nombre);
 	t_fcb* fcb_segun_nombre(char* archivo);
-	int redondearArriba(double x);
+
 
 #endif /* FILESYSTEM_H_ */

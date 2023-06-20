@@ -105,6 +105,17 @@ void inicializar_estructuras(){
 	inicializar_bitmap();
 	inicializar_bloques();
 	inicializar_FCBs();
+
+	/*prueba para ver archivo de bloques
+	 * leerBloque(0);
+	leerBloque(1);
+	uint32_t num = 3;
+	FILE* file = fopen(path_bloques, "r+b");
+	fseek(file, 1*tamanio_bloque, SEEK_SET);
+	fwrite(&num,sizeof(uint32_t),1,file);
+	fclose(file);
+	leerBloque(1);*/
+
 	printf("todo creado");
 	//leer_fcb(prueba);
 
@@ -184,7 +195,7 @@ void cambiar_tamanio(char* archivo, int tamanio){
 				if(bloques_asignados<2){//si no tiene asignado un puntero indirecto
 					fcb->puntero_indirecto = asignar_bloque();
 				}
-				FILE* archivo_bloques = fopen(path_bloques, "wb");
+				FILE* archivo_bloques = fopen(path_bloques, "r+b");
 				uint32_t bloque_asignado = asignar_bloque();
 				int posicion = fcb->puntero_indirecto* tamanio_bloque + (bloques_asignados - 1)*4;//en el bloque de punteros, posicion segun los bloques ya asignados
 				printf("posicion: %d\nbloque_asignado: %d\n", posicion, bloque_asignado);
@@ -198,15 +209,16 @@ void cambiar_tamanio(char* archivo, int tamanio){
 		}
 		leerBloque(fcb->puntero_indirecto);
 
-	}else{
+	}else{//liberar el puntero indirectoooo
 		int bloques_a_liberar = bloques_asignados - bloques_necesarios(tamanio);
 		printf("\n bloques a liberar: %d\n", bloques_a_liberar);
 		for(int i=0;i<bloques_a_liberar;i++){
-			if(bloques_asignados<2){
+			if(bloques_asignados==1){
 				printf("liberando PD: %d\n", fcb->puntero_directo);
 				bitarray_clean_bit(bitmap, fcb->puntero_directo);
 			}else{
-				FILE* archivo_bloques = fopen(path_bloques, "rb");
+
+				FILE* archivo_bloques = fopen(path_bloques, "r+b");
 				int posicion = fcb->puntero_indirecto* tamanio_bloque + (bloques_asignados - 2)*4;
 				uint32_t bloque_a_liberar;
 				fseek(archivo_bloques, posicion, SEEK_SET);
@@ -214,6 +226,11 @@ void cambiar_tamanio(char* archivo, int tamanio){
 				printf("liberando PI: %d archivo bloques: %d\n", bloque_a_liberar, posicion);
 				bitarray_clean_bit(bitmap, bloque_a_liberar);
 				fclose(archivo_bloques);
+				if(bloques_asignados==2){
+					printf("\nlibero el puntero indirecto: %d \n", fcb->puntero_indirecto);
+					bitarray_clean_bit(bitmap, fcb->puntero_indirecto);//libero el bloque del puntero indirecto
+					imprimir_bitmap_20(bitmap);
+				}
 			}
 			bloques_asignados-=1;
 		}

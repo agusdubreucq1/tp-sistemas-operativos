@@ -9,11 +9,8 @@
 
 int inicializar_bitmap() {
 	int size = cant_bloques / 8;
-	/*if (size == 0) {
-	    size = 1;
-	    printf("cant_bloques: %d", cant_bloques);
-	}*/
 	char* bloque = malloc(size);
+	memset(bloque, 0, size);
 	bitmap = bitarray_create_with_mode(bloque, size, MSB_FIRST);
     if (bitmap == NULL) {
     	log_error(fileSystem_logger, "No se pudo crear el bitmap");
@@ -40,7 +37,7 @@ int inicializar_bitmap() {
         printf("archivo bitmap ya existia\n");
     }
 
-    imprimir_bitmap(bitmap);
+    imprimir_bitmap_20(bitmap);
 
     fclose(file);
     //free(bloque);
@@ -74,8 +71,8 @@ void grabar_bitmap(t_bitarray* bitmap){
 }
 
 void imprimir_bitmap(t_bitarray* bitmap){
-	printf("\nimprimiendo bitmap: \n");
-	printf("bitmap->size: %ld\n", bitmap->size);
+	printf("\nimprimiendo bitmap: \n[");
+	//printf("bitmap->size: %ld\n", bitmap->size);
 	for (int i = 0; i < bitmap->size*8; i++) {
     	//bitarray_clean_bit(bitmap, i);
         printf("%d ", bitarray_test_bit(bitmap, i));
@@ -84,12 +81,12 @@ void imprimir_bitmap(t_bitarray* bitmap){
 }
 
 void imprimir_bitmap_20(t_bitarray* bitmap){
-	printf("\nimprimiendo bitmap: \n");
-	printf("bitmap->size: %ld\n", bitmap->size);
+	printf("\n\nimprimiendo bitmap: \n[");
+	//printf("bitmap->size: %ld\n", bitmap->size);
 		for (int i = 0; i < 20; i++) {
 	    	//bitarray_clean_bit(bitmap, i);
 	        printf("%d ", bitarray_test_bit(bitmap, i));
 	    }
-		printf("\n\n");
+		printf("]\n\n");
 }
 
