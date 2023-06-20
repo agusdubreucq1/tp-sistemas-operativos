@@ -17,5 +17,6 @@ extern int cant_bloques;
 extern char* path_bloques;
 
 void inicializar_bloques();
+void leerBloque(int bloque);
 
 #endif /* BLOQUES_H_ */

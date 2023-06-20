@@ -12,15 +12,15 @@ t_fcb* crear_fcb(char* nombre){
 	fcb_nuevo->nombre_archivo = string_new();
 	string_append(&fcb_nuevo->nombre_archivo, nombre);
 	fcb_nuevo->tamano_archivo = 0;
-	fcb_nuevo->puntero_directo = asignar_bloque();
-	fcb_nuevo->puntero_indirecto = asignar_bloque();
+	fcb_nuevo->puntero_directo = NULL;
+	fcb_nuevo->puntero_indirecto = NULL;
 	char* path = string_new();
 	string_append(&path, path_fcb);
 	string_append(&path, "/");
 	string_append(&path, nombre);
 	string_append(&path, ".dat");
 	FILE* f = fopen(path, "wr");
-	fprintf(f, "NOMBRE_ARCHIVO=%s\nTAMANIO_ARCHIVO=0\nPUNTERO_DIRECTO=%d\nPUNTERO_INDIRECTO=%d", nombre, fcb_nuevo->puntero_directo, fcb_nuevo->puntero_indirecto);
+	fprintf(f, "NOMBRE_ARCHIVO=%s\nTAMANIO_ARCHIVO=0\nPUNTERO_DIRECTO=\nPUNTERO_INDIRECTO=", nombre);
 	fclose(f);
 
 

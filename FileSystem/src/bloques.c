@@ -14,7 +14,7 @@ void inicializar_bloques(){
 
     if (archivo_bloques == NULL) {
         // El archivo no existe, se crea y se trunca al tamaño deseado
-    	archivo_bloques = fopen(path_bloques, "w+");
+    	archivo_bloques = fopen(path_bloques, "wb+");
         if (archivo_bloques == NULL) {
             log_trace(fileSystem_logger, "No se pudo crear Archivo de Bloques");
             return;
@@ -40,4 +40,17 @@ void inicializar_bloques(){
         }*/
     }
     fclose(archivo_bloques);
+}
+
+void leerBloque(int bloque){
+	FILE* file = fopen(path_bloques, "rb");
+	fseek(file, bloque*64,SEEK_SET);
+	printf("imprimiendo bloque\n");
+	int puntero;
+	for(int i=0;i<16;i++){
+		fread(&puntero,4,1,file);
+		printf("%d ", puntero);
+	}
+	printf("\n");
+	fclose(file);
 }

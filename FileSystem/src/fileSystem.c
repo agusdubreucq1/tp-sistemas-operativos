@@ -128,7 +128,7 @@ void inicializar_FCBs(){
 					char* nombre = config_get_string_value(fcb_config, "NOMBRE_ARCHIVO");
 					uint32_t tamanio = config_get_int_value(fcb_config, "TAMANIO_ARCHIVO");
 					uint32_t puntero_directo = config_get_int_value(fcb_config, "PUNTERO_DIRECTO");
-					printf("el puntero directo es: %d\n es igual a NULL:%d\n 0==NULL: %d\n", puntero_directo, puntero_directo==NULL, 0==NULL);
+					//printf("el puntero directo es: %d\n es igual a NULL:%d\n 0==NULL: %d\n", puntero_directo, puntero_directo==NULL, 0==NULL);
 					uint32_t puntero_indirecto = config_get_int_value(fcb_config, "PUNTERO_INDIRECTO");
 					printf("el puntero indirecto es: %d\n", puntero_indirecto);
 					printf("nombre: %s\n tamanio: %d\n pd: %d\n pi: %d\n", nombre, tamanio, puntero_directo, puntero_indirecto);
@@ -171,11 +171,12 @@ void crear_archivo(char* nombre){
 }
 
 void cambiar_tamanio(char* archivo, int tamanio){
+	leerBloque(1);
 	/*si cambio a tamaño 0, me los punteros me quedarian en 0? o tendrian un numero pero se tomaria como basura*/
 	t_fcb* fcb = fcb_segun_nombre(archivo);
-	int bloques_asignados = redondearArriba(fcb->tamano_archivo /(float)tamanio_bloque);
+	int bloques_asignados = bloques_necesarios(fcb->tamano_archivo);
 	if(tamanio > fcb->tamano_archivo){
-		int bloques_a_agregar = redondearArriba((tamanio - fcb->tamano_archivo)/(float)tamanio_bloque);
+		int bloques_a_agregar = bloques_necesarios(tamanio)-bloques_asignados;
 		for(int i=1; i<=bloques_a_agregar; i++){
 			if(bloques_asignados == 0){//si no tiene asignado un puntero directo
 				fcb->puntero_directo = asignar_bloque();
@@ -183,28 +184,47 @@ void cambiar_tamanio(char* archivo, int tamanio){
 				if(bloques_asignados<2){//si no tiene asignado un puntero indirecto
 					fcb->puntero_indirecto = asignar_bloque();
 				}
-				FILE* archivo_bloques = fopen(path_bloques, "wr");
+				FILE* archivo_bloques = fopen(path_bloques, "wb");
 				uint32_t bloque_asignado = asignar_bloque();
 				int posicion = fcb->puntero_indirecto* tamanio_bloque + (bloques_asignados - 1)*4;//en el bloque de punteros, posicion segun los bloques ya asignados
+				printf("posicion: %d\nbloque_asignado: %d\n", posicion, bloque_asignado);
 				fseek(archivo_bloques, posicion, SEEK_SET);
+				//fprintf(archivo_bloques,"%u",bloque_asignado);
 				fwrite(&bloque_asignado,sizeof(uint32_t),1,archivo_bloques);
 				fclose(archivo_bloques);
+				leerBloque(1);
 			}
 			bloques_asignados+=1;
 		}
+		leerBloque(fcb->puntero_indirecto);
 
 	}else{
+		int bloques_a_liberar = bloques_asignados - bloques_necesarios(tamanio);
+		printf("\n bloques a liberar: %d\n", bloques_a_liberar);
+		for(int i=0;i<bloques_a_liberar;i++){
+			if(bloques_asignados<2){
+				printf("liberando PD: %d\n", fcb->puntero_directo);
+				bitarray_clean_bit(bitmap, fcb->puntero_directo);
+			}else{
+				FILE* archivo_bloques = fopen(path_bloques, "rb");
+				int posicion = fcb->puntero_indirecto* tamanio_bloque + (bloques_asignados - 2)*4;
+				uint32_t bloque_a_liberar;
+				fseek(archivo_bloques, posicion, SEEK_SET);
+				fread(&bloque_a_liberar, sizeof(uint32_t),1, archivo_bloques);
+				printf("liberando PI: %d archivo bloques: %d\n", bloque_a_liberar, posicion);
+				bitarray_clean_bit(bitmap, bloque_a_liberar);
+				fclose(archivo_bloques);
+			}
+			bloques_asignados-=1;
+		}
 
-		//liberar bloques
 	}
 	fcb->tamano_archivo = tamanio;
 	grabar_fcb(fcb);
+	grabar_bitmap(bitmap);
+	imprimir_bitmap_20(bitmap);
 }
 
-int redondearArriba(double x){
-	int i = (int)x;
-	return i + (x > i);
-}
 
 
 t_fcb* fcb_segun_nombre(char* archivo){
@@ -233,6 +253,7 @@ void ejecutar_instruccion(char* instruccion){
 				crear_archivo(archivo_abrir);
 				printf("el archivo: %s fue creado", archivo_abrir);
 			}
+			imprimir_bitmap_20(bitmap);
 			enviar_mensaje("el filesystem abrio el archivo", socket_Kernel);
 			break;
 		case F_TRUNCATE:

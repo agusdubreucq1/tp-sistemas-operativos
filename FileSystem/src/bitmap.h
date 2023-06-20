@@ -29,5 +29,6 @@ void imprimir_bitmap(t_bitarray* bitmap);
 uint32_t asignar_bloque();
 int bloque_libre();
 void grabar_bitmap(t_bitarray* bitmap);
+void imprimir_bitmap_20(t_bitarray* bitmap);
 
 #endif /* BITMAP_H_ */

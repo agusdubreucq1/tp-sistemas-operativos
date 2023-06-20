@@ -9,10 +9,10 @@
 
 int inicializar_bitmap() {
 	int size = cant_bloques / 8;
-	if (size == 0) {
+	/*if (size == 0) {
 	    size = 1;
 	    printf("cant_bloques: %d", cant_bloques);
-	}
+	}*/
 	char* bloque = malloc(size);
 	bitmap = bitarray_create_with_mode(bloque, size, MSB_FIRST);
     if (bitmap == NULL) {
@@ -81,5 +81,15 @@ void imprimir_bitmap(t_bitarray* bitmap){
         printf("%d ", bitarray_test_bit(bitmap, i));
     }
 	printf("\n\n");
+}
+
+void imprimir_bitmap_20(t_bitarray* bitmap){
+	printf("\nimprimiendo bitmap: \n");
+	printf("bitmap->size: %ld\n", bitmap->size);
+		for (int i = 0; i < 20; i++) {
+	    	//bitarray_clean_bit(bitmap, i);
+	        printf("%d ", bitarray_test_bit(bitmap, i));
+	    }
+		printf("\n\n");
 }
 
