@@ -189,10 +189,14 @@ void ejecutar_instruccion(char* motivo){
 		parametros = string_split(motivo, " ");
 		log_info(memoria_logger, "ENTRE POR MOV_OUT");
 		log_info(memoria_logger,"%s", parametros[0]); //MOV_OUT
-		log_info(memoria_logger,"%p", parametros[1]); //0xdafsdfagas0f
-		char *nombreRegistro = parametros[1];
-		log_info(memoria_logger,"El nombre del registro es: %s\n", nombreRegistro); //quiero imprimir AX y no me sale
-		log_info(memoria_logger,"%s", parametros[2]); //120
+		log_info(memoria_logger,"%p", parametros[1]); //dir_fisica
+		log_info(memoria_logger,"%s", parametros[2]); //AX valor
+
+
+		//Se graba en la direccion recibida (parametros[1]) + desplazamiento (parametros[2]), el valor de parametros[3] (el registro AX), la cantidad que pesa el parametro[3]
+		memcpy(parametros[1],&parametros[2],sizeof(parametros[2]));
+
+		printf("El valor de la direccion fisica recibida es: %p\n", parametros[1]);
 
 		break;
 	default:
