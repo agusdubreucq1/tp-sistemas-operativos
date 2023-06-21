@@ -191,9 +191,11 @@ void cambiar_tamanio(char* archivo, int tamanio){
 		for(int i=1; i<=bloques_a_agregar; i++){
 			if(bloques_asignados == 0){//si no tiene asignado un puntero directo
 				fcb->puntero_directo = asignar_bloque();
+				printf("\nse asigna el bloque: %d como puntero directo\n\n", fcb->puntero_directo);
 			}else{
 				if(bloques_asignados<2){//si no tiene asignado un puntero indirecto
 					fcb->puntero_indirecto = asignar_bloque();
+					printf("\nse asigna el bloque %d como el puntero indirecto\n\n", fcb->puntero_indirecto);
 				}
 				FILE* archivo_bloques = fopen(path_bloques, "r+b");
 				uint32_t bloque_asignado = asignar_bloque();
@@ -203,7 +205,7 @@ void cambiar_tamanio(char* archivo, int tamanio){
 				//fprintf(archivo_bloques,"%u",bloque_asignado);
 				fwrite(&bloque_asignado,sizeof(uint32_t),1,archivo_bloques);
 				fclose(archivo_bloques);
-				leerBloque(1);
+				leerBloque(fcb->puntero_indirecto);
 			}
 			bloques_asignados+=1;
 		}
@@ -266,8 +268,10 @@ void ejecutar_instruccion(char* instruccion){
 			printf("se solicito abrir el archivo: %s \n", archivo_abrir);
 			if(existe_archivo(archivo_abrir)){
 				printf("el archivo: %s ya existia\n", archivo_abrir);
+				log_info(fileSystem_logger, "abrir archivo: %s",archivo_abrir);
 			}else{
 				crear_archivo(archivo_abrir);
+				log_info(fileSystem_logger, "crear archivo: %s", archivo_abrir);
 				printf("el archivo: %s fue creado", archivo_abrir);
 			}
 			imprimir_bitmap_20(bitmap);
@@ -278,11 +282,15 @@ void ejecutar_instruccion(char* instruccion){
 			int tamanio = atoi(parametros[2]);
 			printf("se solicito truncar el archivo: %s", archivo_truncar);
 			cambiar_tamanio(archivo_truncar, tamanio);
+			log_info(fileSystem_logger, "truncar archivo: %s - tamaño: %d", archivo_truncar, tamanio);
 			enviar_mensaje("el filesystem trunco el archivo", socket_Kernel);
 			break;
 		case F_WRITE:
+			enviar_mensaje("se escribio el archivo", socket_Kernel);
+			printf("\nle envie el mensaje al kernel");
 			break;
 		case F_READ:
+			enviar_mensaje("se leyo el archivo", socket_Kernel);
 			break;
 		default:
 			break;

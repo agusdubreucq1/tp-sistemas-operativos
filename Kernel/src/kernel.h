@@ -4,6 +4,7 @@
 
 #include "config.h"
 #include "recursos.h"
+#include "archivo.h"
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -75,6 +76,7 @@
 	t_list* lista_new;
 	t_list* lista_ready;
 	t_list* lista_recursos;
+	t_list* lista_archivos_abiertos;
 
 	int devolver_ejecucion;
 	t_pcb* pcb_ejecutando;
@@ -87,6 +89,7 @@
 	pthread_mutex_t semaforo_new;
 	pthread_mutex_t semaforo_ready;
 	pthread_mutex_t semaforo_execute;
+	pthread_mutex_t sem_fileSystem;
 
 	struct timeval tiempo;
 	long long hora_inicio;
@@ -116,6 +119,8 @@
 	void liberar_elemento_list(void* elemento);
 	void liberar_contexto_kernel(t_pcb* pcb);
 	void imprimirSemaforos();
+	char* recibir_mensaje_filesystem();
+	void truncar(t_args_truncar* args);
 
 
 
