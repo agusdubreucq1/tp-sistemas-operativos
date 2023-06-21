@@ -13,6 +13,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <utils/datos.h>
+#include <commons/string.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Estructuras --
@@ -42,5 +43,8 @@ extern t_list* lista_archivos_abiertos;
 t_archivo* crear_archivo(char* nombre, int fcb);
 t_archivo* buscar_archivo_abierto(char* nombre_archivo);
 void agregar_archivo_tabla_del_proceso(t_archivo* archivo, t_pcb* pcb);
+//void cerrar_archivo(char* nombre_archivo, t_pcb* pcb);
+t_archivo_de_proceso* get_archivo_del_proceso(char* nombre_archivo, t_pcb* pcb);
+void listar_tabla_del_proceso(t_pcb* pcb);
 
 #endif /* ARCHIVO_H_ */

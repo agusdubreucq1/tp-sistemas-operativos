@@ -337,6 +337,7 @@ void ejecutar_segun_motivo(char* motivo){
 			t_archivo* archivo_abrir = buscar_archivo_abierto(parametros[1]);
 			//printf("archivo abrir")
 
+			listar_tabla_de_archivos_pcb(pcb_a_ejecutar);
 
 			if(archivo_abrir != NULL){
 				list_add(archivo_abrir->listaBloqueados, pcb_a_ejecutar);
@@ -358,7 +359,10 @@ void ejecutar_segun_motivo(char* motivo){
 				t_archivo* archivo_agregado = list_get(lista_archivos_abiertos, index);
 				printf("se agrego a la lista el archivo: %s\n ", archivo_agregado->nombre);
 
-				agregar_archivo_tabla_del_proceso(archivo_abrir, pcb_a_ejecutar);
+				printf("el archivo_creado->nombre: %s\n\n", archivo_creado->nombre);
+				listar_tabla_del_proceso(pcb_a_ejecutar);
+				agregar_archivo_tabla_del_proceso(archivo_creado, pcb_a_ejecutar);
+				listar_tabla_del_proceso(pcb_a_ejecutar);
 
 				printf("\nel archivo se abrio\n");
 				ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
@@ -366,7 +370,7 @@ void ejecutar_segun_motivo(char* motivo){
 				pcb_ejecutando = pcb_a_ejecutar;
 			}
 
-
+			listar_tabla_de_archivos_pcb(pcb_a_ejecutar);
 			break;
 
 	case F_CLOSE:
@@ -374,11 +378,15 @@ void ejecutar_segun_motivo(char* motivo){
 		//desbloquea al proceso que estaba en la lista de bloqueados
 		//si esa lista estaba vacia -> se saca de la tabla global de archivos abiertos
 		parametros = string_split(motivo, " ");
-		log_info(kernel_logger, "PID: %d - Cerrar Archivo: %s", pcb_a_ejecutar->pid, parametros[1]);
+		char* archivo_a_cerrar = parametros[1];
+		log_info(kernel_logger, "PID: %d - Cerrar Archivo: %s", pcb_a_ejecutar->pid, archivo_a_cerrar);
+		listar_tabla_de_archivos_pcb(pcb_a_ejecutar);
 		//enviar_mensaje(motivo, socket_fileSystem);
+		cerrar_archivo(archivo_a_cerrar, pcb_a_ejecutar);
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
 		pcb_ejecutando = pcb_a_ejecutar;
+		listar_tabla_de_archivos_pcb(pcb_a_ejecutar);
 		break;
 
 	case F_SEEK:
@@ -496,6 +504,44 @@ void truncar(t_args_truncar* args){
 	pthread_mutex_unlock(&sem_fileSystem);
 	ingresar_en_lista(args->pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 	estimar_rafaga(args->pcb);
+}
+
+void cerrar_archivo(char* nombre_archivo, t_pcb* pcb){
+	t_archivo_de_proceso* archivo_de_proceso = get_archivo_del_proceso(nombre_archivo, pcb);
+	if(archivo_de_proceso==NULL){
+		printf("\nno se encontro el archivo en la tabla de archivos del pcb\n\n");
+	}
+	t_archivo* archivo_a_cerrar = archivo_de_proceso->archivo;
+	//no encuentra el archivo
+	list_remove_element(pcb->tabla_archivos, archivo_de_proceso);
+	if(list_size(archivo_a_cerrar->listaBloqueados)==0){
+		list_remove_element(lista_archivos_abiertos, archivo_a_cerrar);
+	}else{
+
+		t_pcb* pcb_a_desbloquear = list_get(archivo_a_cerrar->listaBloqueados, 0);
+		list_remove_element(archivo_a_cerrar->listaBloqueados, pcb_a_desbloquear);
+		ingresar_en_lista(pcb_a_desbloquear, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		printf("\nPCB: %d desbloquedo xq pcb: %d cerro el archivo: %s\n\n",pcb_a_desbloquear->pid, pcb->pid, archivo_a_cerrar->nombre);
+	}
+}
+
+void listar_tabla_de_archivos_pcb(t_pcb* pcb){
+	if(list_size(pcb->tabla_archivos)==0){
+		printf("\nEl pcb: %d, no tiene archivos abiertos\n\n", pcb->pid);
+	}else{
+		printf("\nEl pcb: %d tiene estos archivos abiertos: \n", pcb->pid);
+		for(int i=0;i< list_size(pcb->tabla_archivos);i++){
+			t_archivo_de_proceso* archivo_proceso = list_get(pcb->tabla_archivos, i);
+			t_archivo* archivo = archivo_proceso->archivo;
+			printf("\n  %s->bloqueados: ", archivo->nombre);
+			for(int j=0;j<list_size(archivo->listaBloqueados);j++){
+				t_pcb* pcb_bloqueado = list_get(archivo->listaBloqueados, j);
+				printf(" %d", pcb_bloqueado->pid);
+			}
+
+		}
+		printf("\n\n");
+	}
 }
 
 void ejecutar_io(t_thread_args* args){
