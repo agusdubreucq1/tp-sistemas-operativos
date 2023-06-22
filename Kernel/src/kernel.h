@@ -126,6 +126,7 @@
 	void mandar_a_ready(t_pcb* pcb);
 	void actualizar_llegada_a_ready(t_pcb* pcb);
 	void finalizar_proceso(t_pcb* pcb, char* motivo);
+	void liberar_recursos(t_pcb* pcb);
 
 	//void listar_tabla_de_archivos_pcb(t_pcb* pcb);
 

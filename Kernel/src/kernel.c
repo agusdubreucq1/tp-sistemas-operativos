@@ -280,7 +280,7 @@ void ejecutar_segun_motivo(char* motivo){
 			ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 			devolver_ejecucion = 1;
 			pcb_ejecutando = pcb_a_ejecutar;
-			sumar_recurso(list_get(lista_recursos, existeRecurso), pcb_ejecutando->pid, kernel_logger);
+			sumar_recurso(list_get(lista_recursos, existeRecurso), pcb_ejecutando, kernel_logger);
 		}
 		break;
 
@@ -453,10 +453,17 @@ void finalizar_proceso(t_pcb* pcb, char* motivo){
 	sem_post(&semaforo_multiprogramacion);
 	log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb->pid, motivo);
 	enviar_mensaje("-1", pcb->pid);
-	//liberar_recursos(pcb);->IMPLEMENTAR
+	liberar_recursos(pcb);
 	liberar_archivos(pcb);
 	liberar_conexion(pcb->pid, kernel_logger);
 	liberar_pcb(pcb);
+}
+
+void liberar_recursos(t_pcb* pcb){
+	for(int i=0;i< list_size(pcb->recursos);i++){
+		t_recurso* recurso = list_get(pcb->recursos, i);
+		sumar_recurso(recurso, pcb, kernel_logger);
+	}
 }
 
 void liberar_archivos(t_pcb* pcb){

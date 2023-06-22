@@ -34,6 +34,6 @@
 	extern void mandar_a_ready(t_pcb* pcb);
 	int recurso_existe(char* nombre);
 	void descontar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger);
-	void sumar_recurso(t_recurso* recurso, int pid, t_log* logger);
+	void sumar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger);
 
 #endif /* RECURSOS_H_ */

@@ -88,6 +88,7 @@ typedef struct pcb {
 	uint32_t estimado_rafaga;
 	uint32_t tiempo_ready;
 	t_list* tabla_archivos;
+	t_list* recursos;
 	estado_code estado;
 }t_pcb;
 

@@ -17,6 +17,7 @@ t_pcb* crear_pcb(uint32_t pid, t_list* instrucciones, uint32_t estimacion){
 	init_segmento(&pcb->tabla_segmentos);
 	pcb->estimado_rafaga = estimacion;
 	pcb->tabla_archivos = list_create();
+	pcb->recursos = list_create();
 	return pcb;
 }
 

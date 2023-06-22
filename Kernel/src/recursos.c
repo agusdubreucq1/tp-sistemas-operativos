@@ -21,6 +21,7 @@ int recurso_existe(char* nombre){
 
 void descontar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger){
 	recurso->cantidad -= 1;
+	list_add(pcb->recursos, recurso);
 	log_info(logger, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, recurso->nombre, recurso->cantidad);
 	if (recurso->cantidad < 0){
 		estimar_rafaga(pcb);
@@ -35,9 +36,9 @@ void descontar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger){
 	}
 }
 
-void sumar_recurso(t_recurso* recurso, int pid, t_log* logger){
+void sumar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger){
 	recurso->cantidad += 1;
-	log_info(logger, "PID: %d - Signal: %s - Instancias: %d", pid, recurso->nombre, recurso->cantidad);
+	log_info(logger, "PID: %d - Signal: %s - Instancias: %d", pcb->pid, recurso->nombre, recurso->cantidad);
 	if (list_size(recurso->listaBloqueados) > 0){
 		t_pcb* pcb_bloqueado = list_remove(recurso->listaBloqueados, 0);
 		log_info(logger, "PID: %d - Desbloqueado por: %s", pcb_bloqueado->pid, recurso->nombre);
