@@ -17,7 +17,7 @@ void inicializar_bitmap(){
 	free(bloque);
 }
 
-void imprimir_bitmap(t_bitarray* bitmap){
+void imprimir_bitmap(){
 
 	for (int i = 0; i < bitmap->size; i++) {
     	//bitarray_clean_bit(bitmap, i);
@@ -25,7 +25,7 @@ void imprimir_bitmap(t_bitarray* bitmap){
     }
 }
 
-int validar_huecos_libres(t_bitarray* bitmap, int inicio, int cant) {
+int validar_huecos_libres(int inicio, int cant) {
 	int huecos_validos = 1;
 	for (int i=inicio; i<inicio+cant; i++) {
 		if (bitarray_test_bit(bitmap, i) == 1) {
@@ -35,8 +35,8 @@ int validar_huecos_libres(t_bitarray* bitmap, int inicio, int cant) {
 	return huecos_validos;
 }
 
-void ocupar_bitmap(t_bitarray* bitmap, int inicio, int cant) {
-	if (validar_huecos_libres(bitmap, inicio, cant)) {
+void ocupar_bitmap(int inicio, int cant) {
+	if (validar_huecos_libres(inicio, cant)) {
 		for (int i=inicio; i<inicio+cant; i++) {
 				bitarray_set_bit(bitmap, i);
 			}
@@ -47,13 +47,13 @@ void ocupar_bitmap(t_bitarray* bitmap, int inicio, int cant) {
 
 }
 
-void liberar_bitmap(t_bitarray* bitmap, int inicio, int cant) {
+void liberar_bitmap(int inicio, int cant) {
 	for (int i=inicio; i<inicio+cant; i++) {
 		bitarray_clean_bit(bitmap, i);
 		}
 }
 
-int first_fit_bitmap(t_bitarray* bitmap, int tamanio) {
+int first_fit_bitmap(int tamanio) {
 
 	int cont_huecos_libres = 0;
 
@@ -74,7 +74,7 @@ int first_fit_bitmap(t_bitarray* bitmap, int tamanio) {
 	return -1; //No hay disponibilidad contigua del bitmap
 }
 
-int best_fit_bitmap(t_bitarray* bitmap, int tamanio) {
+int best_fit_bitmap(int tamanio) {
 
     int posicion_best_fit = -1;
     int best_fit_size = bitmap->size + 1;
@@ -104,7 +104,7 @@ int best_fit_bitmap(t_bitarray* bitmap, int tamanio) {
     return posicion_best_fit;
 }
 
-int worst_fit_bitmap(t_bitarray* bitmap, int tamanio) {
+int worst_fit_bitmap(int tamanio) {
 
     int posicion_worst_fit = -1;
     int worst_fit_size = -1;
@@ -132,4 +132,16 @@ int worst_fit_bitmap(t_bitarray* bitmap, int tamanio) {
     }
 
     return posicion_worst_fit;
+}
+
+int devolver_posicion_bitmap_segun_direccion(void *direccion_memoria) {
+	printf("\nEntre a devolver_posicion_bitmap_segun_direccion!");
+	for (int i=0; i<bitmap->size; i++) {
+		if ((memoria_fisica+i) == direccion_memoria) {
+			printf("\n%p == %p\nEl hueco libre es: %d", memoria_fisica, direccion_memoria, i);
+			return i;
+		}
+	}
+
+	return -1;
 }

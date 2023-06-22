@@ -56,7 +56,7 @@ t_segmento* crear_segmento(void* base, void* limite){
 	segmento->direccion_base = base;
 	segmento->limite = limite;
 	memoria_libre -= (limite - base);
-	ocupar_bitmap(bitmap, (base - memoria_fisica), (limite - base));
+	ocupar_bitmap((base - memoria_fisica), (limite - base));
 	//printf("\nMemoria Libre %d \n", memoria_libre);
 	return segmento;
 }
@@ -64,7 +64,7 @@ t_segmento* crear_segmento(void* base, void* limite){
 
 void borrar_segmento(void* base, void* limite){
 	memoria_libre += (limite - base);
-	liberar_bitmap(bitmap, (base - memoria_fisica), (limite - base));
+	liberar_bitmap((base - memoria_fisica), (limite - base));
 	//printf("\nMemoria Libre %d \n", memoria_libre);
 }
 
@@ -76,13 +76,13 @@ char* elegir_hueco(int size){
 
 		switch(algoritmo) {
 			case FIRST:
-				retorno = first_fit_bitmap(bitmap, size);
+				retorno = first_fit_bitmap(size);
 				break;
 			case BEST:
-				retorno = best_fit_bitmap(bitmap, size);
+				retorno = best_fit_bitmap(size);
 				break;
 			case WORST:
-				retorno = worst_fit_bitmap(bitmap, size);
+				retorno = worst_fit_bitmap(size);
 				break;
 		}
 
