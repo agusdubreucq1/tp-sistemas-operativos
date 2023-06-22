@@ -324,6 +324,7 @@ void ejecutar_segun_motivo(char* motivo){
 				pthread_mutex_lock(&sem_fileSystem);
 				enviar_mensaje(motivo, socket_fileSystem);
 				char* mensaje_fopen = recibir_mensaje_filesystem();
+				free(mensaje_fopen);
 				pthread_mutex_unlock(&sem_fileSystem);
 				t_archivo* archivo_creado = crear_archivo(parametros[1]);
 				list_add(lista_archivos_abiertos, archivo_creado);
@@ -377,6 +378,7 @@ void ejecutar_segun_motivo(char* motivo){
 		//se recibe el OK
 		//se desbloquea
 		char* mensaje_fread = recibir_mensaje_filesystem();
+		free(mensaje_fread);
 		pthread_mutex_unlock(&sem_fileSystem);
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
@@ -395,6 +397,7 @@ void ejecutar_segun_motivo(char* motivo){
 		//se recibe el OK
 		//se desblo
 		char* mensaje_fwrite = recibir_mensaje_filesystem();
+		free(mensaje_fwrite);
 		pthread_mutex_unlock(&sem_fileSystem);
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
@@ -481,6 +484,7 @@ void truncar(t_args_truncar* args){
 	log_info(kernel_logger, "PID: %d - Bloqueado por: %s", pcb_a_ejecutar->pid, "truncate");
 	pcb_a_ejecutar->estado = BLOCKED;
 	char* mensaje = recibir_mensaje_filesystem();
+	free(mensaje);
 	pthread_mutex_unlock(&sem_fileSystem);
 	mandar_a_ready(args->pcb);
 

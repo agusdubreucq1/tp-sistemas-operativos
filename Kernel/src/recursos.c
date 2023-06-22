@@ -38,6 +38,7 @@ void descontar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger){
 
 void sumar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger){
 	recurso->cantidad += 1;
+	list_remove_element(pcb->recursos, recurso);
 	log_info(logger, "PID: %d - Signal: %s - Instancias: %d", pcb->pid, recurso->nombre, recurso->cantidad);
 	if (list_size(recurso->listaBloqueados) > 0){
 		t_pcb* pcb_bloqueado = list_remove(recurso->listaBloqueados, 0);
