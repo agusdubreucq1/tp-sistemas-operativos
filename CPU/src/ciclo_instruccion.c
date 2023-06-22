@@ -79,42 +79,26 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 				enviarContexto("MOV_OUT SEG_FAULT");
 			}
 			else {
-<<<<<<< HEAD
-				char mensaje_mov_out[30] = "";
+
 				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[0]));
 
-=======
 				char mensaje_mov_out[100] = "";
 
-				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[0]));
->>>>>>> sigoConMemoria
 				t_segmento* segmento = malloc(sizeof(t_segmento*));
 				segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, num_segmento);
-
-				char *valor_registro = malloc(registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]));
-				valor_registro = registros_get_value(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
-
-<<<<<<< HEAD
-				int size_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
-
 
 
 				printf("\nDireccionBase: %p\nLimite:   %p\n",segmento->direccion_base, segmento->limite);
 
-=======
->>>>>>> sigoConMemoria
+
 				void *direccion_base = segmento->direccion_base;
 				int desplazamiento_segmento = obtener_desplazamiento_segmento(atoi(instruccion->parametro[0]));
 				char* valor_registro = malloc(registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]));
 				valor_registro = registros_get_value(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
 				int tamanio_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
 
-<<<<<<< HEAD
-				sprintf(mensaje_mov_out, "MOV_OUT %p %s %d\n", direccion_base+desplazamiento_segmento, valor_registro,size_registro); //concatena el numero de seg, el despl y el valor
-=======
 				sprintf(mensaje_mov_out, "MOV_OUT %p %s %d", direccion_base+desplazamiento_segmento, valor_registro, tamanio_registro);
 				//concatena el numero de seg, la direccion a buscar, el valor y cuantos bytes escribir
->>>>>>> sigoConMemoria
 
 				printf("\n Mensaje que le mandamos a memoria: %s\n", mensaje_mov_out);
 
