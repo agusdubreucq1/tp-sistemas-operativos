@@ -170,7 +170,7 @@ void ejecutar_instruccion(char* motivo){
 
 		//imprimir_segmentos(tabla_del_segmento);
 		enviar_segmentos(tabla_del_segmento, socket_kernel);
-		imprimir_bitmap(bitmap);
+		//imprimir_bitmap(bitmap);
 		//list_remove_element(self, element)(tabla_del_segmento->segmentos);
 		break;
 	case FINALIZAR:
@@ -187,18 +187,14 @@ void ejecutar_instruccion(char* motivo){
 		break;
 	case MOV_OUT:
 		parametros = string_split(motivo, " ");
-		log_info(memoria_logger, "ENTRE POR MOV_OUT");
 		log_info(memoria_logger,"%s", parametros[0]); //MOV_OUT
 		log_info(memoria_logger,"%s", parametros[1]); //dir_fisica
 		log_info(memoria_logger,"%s", parametros[2]); //HOLA (si es AX)
+		log_info(memoria_logger,"%s", parametros[3]); //SIZE DEL REGISTRO
 
+		//Se graba en la direccion recibida (parametros[1]) el valor recibido, con el peso de ese registro
+		memcpy(parametros[1],parametros[2],atoi(parametros[3]));
 
-		//Se graba en la direccion recibida (parametros[1]) + desplazamiento (parametros[2]), el valor de parametros[3] (el registro AX), la cantidad que pesa el parametro[3]
-		memcpy(parametros[1],&parametros[2],sizeof(parametros[2]));
-
-		char *valor = parametros[1];
-
-		printf("El valor de la direccion fisica recibida es: %s\n", valor);
 
 		break;
 	default:

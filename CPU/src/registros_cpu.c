@@ -18,7 +18,7 @@ void registros_put(t_registros* registros, char* registro, char* nuevo_valor){
 
 char* registros_get_value(t_registros* registros, char *registro){
 
-	char *valor_retorno = "";
+	char *valor_retorno = malloc(registros_get_size(registros, registro)+1);
 
 	if(string_equals_ignore_case(registro, "ax")) 	strncpy(valor_retorno, registros->ax, 4);
 	if(string_equals_ignore_case(registro, "bx")) 	strncpy(valor_retorno, registros->bx, 4);
@@ -33,6 +33,7 @@ char* registros_get_value(t_registros* registros, char *registro){
 	if(string_equals_ignore_case(registro, "rcx")) 	strncpy(valor_retorno, registros->rcx, 16);
 	if(string_equals_ignore_case(registro, "rdx")) 	strncpy(valor_retorno, registros->rdx, 16);
 
+	strcat(valor_retorno, "\0");
 	return valor_retorno;
 }
 
