@@ -182,31 +182,26 @@ void ejecutar_instruccion(char* motivo){
 		log_info(memoria_logger, "Eliminación de Proceso PID: %s", parametros[1]);
 		break;
 	case MOV_IN:
-		parametros = string_split(motivo, " ");
 
+		parametros = string_split(motivo, " ");
 		void *direccion_fisica_mov_in = (void *)strtoul(parametros[1], NULL, 16);
 		int tamanio_mov_in = atoi(parametros[2]);
-		printf("\nString: %s Direccion: %lu Direccion 2: %p", parametros[1], strtoul(parametros[1], NULL, 16), direccion_fisica_mov_in);
-
-		char *valor_registro = direccion_fisica_mov_in;
-
-		printf("el valor que se encontro en la direccion fisica es: %s \n",(char*) valor_registro);
-
+		char *valor_registro = malloc(tamanio_mov_in + 1);
+		memcpy(valor_registro, direccion_fisica_mov_in, tamanio_mov_in);
+		valor_registro[tamanio_mov_in] = '\0';
+		printf("\nValor_registro: %s", valor_registro);
 		enviar_mensaje(valor_registro, socket_cpu);
 
 
 		break;
 	case MOV_OUT:
+
 		parametros = string_split(motivo, " ");
-		//imprimir_bitmap();
-		void *direccion_fisica = (void *)strtoul(parametros[1], NULL, 16);
+		void *direccion_fisica_mov_out = (void *)strtoul(parametros[1], NULL, 16);
 		char *valor = (char *)parametros[2];
-		int tamanio = atoi(parametros[3]);
-		printf("\nString: %s Direccion: %lu Direccion 2: %p", parametros[1], strtoul(parametros[1], NULL, 16), (void *)strtoul(parametros[1], NULL, 16));
-		memcpy(direccion_fisica, valor, tamanio);
-		//imprimir_memoria_segun_base_y_tam((void *)(uintptr_t)parametros[1], atoi(parametros[3]));
-		imprimir_memoria();
-		//Se graba en la direccion recibida (parametros[1]) + desplazamiento (parametros[2]), el valor de parametros[3] (el registro AX), la cantidad que pesa el parametro[3]
+		int tamanio_mov_out = atoi(parametros[3]);
+		memcpy(direccion_fisica_mov_out, valor, tamanio_mov_out);
+		//imprimir_memoria();
 
 		break;
 	default:

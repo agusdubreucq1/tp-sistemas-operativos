@@ -55,33 +55,33 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 				enviarContexto("MOV_IN SEG_FAULT");
 			}
 			else {
-				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[0]));
 
 				char mensaje_mov_in[100] = "";
 
 				t_segmento* segmento = malloc(sizeof(t_segmento*));
+				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[1]));
 				segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, num_segmento);
-
-
-				void *direccion_base = segmento->direccion_base;
 				int desplazamiento_segmento = obtener_desplazamiento_segmento(atoi(instruccion->parametro[1]));
-
+				void *direccion_base = segmento->direccion_base;
 				int tamanio_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0]);
 
 				sprintf(mensaje_mov_in, "MOV_IN %p %d", direccion_base+desplazamiento_segmento, tamanio_registro);
+				//concatena la direccion fisica y cuantos bytes leer
 
-				printf("\n Mensaje que le mandamos a memoria: %s\n", mensaje_mov_in);
 
-				//log_info(cpu_logger, "PID: %u - Accion: LEER - Segmento: %u - Direccion Fisica: %p - Valor: \n ",contexto_de_ejecucion->pid, num_segmento,direccion_base+desplazamiento_segmento);
+				log_info(cpu_logger, "PID: %u - Accion: LEER - Segmento: %u - Direccion Fisica: %p - Valor: \n ",
+									contexto_de_ejecucion->pid,
+									num_segmento,
+									direccion_base+desplazamiento_segmento);
+
 				enviar_mensaje(mensaje_mov_in, socket_memoria);
 
-				char *valor_registro_nuevo = malloc(tamanio_registro);
-				//valor_registro_nuevo = recibir_mensaje(socket_cpu, cpu_logger); //ME TIENE QUE LLEGAR DE ALGUNA FORMA EL VALOR QUE CONTIENE EL VALOR DE MEMORIA QUE SE LE PASO POR PARAMETRO (HOLA)
-				valor_registro_nuevo = "CUAC"; //si yo hardcodeo esto me llega BX CON CUAC. PERO EN AX queda el registro HOLACUAC... rari
+				char *valor_registro_nuevo = recibir_instruccion(socket_memoria, cpu_logger);
+				//valor_registro_nuevo[strlen(valor_registro_nuevo)] = '\0';
 
-				registros_put(contexto_de_ejecucion->registros_cpu,instruccion->parametro[0], valor_registro_nuevo);
-
-				imprimir_registros(contexto_de_ejecucion->registros_cpu);
+				registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], valor_registro_nuevo);
+				printf("\nValor del registro que me llega de MOV IN: %s", valor_registro_nuevo);
+				//imprimir_registros(contexto_de_ejecucion->registros_cpu);
 			}
 
 			salida = 1;
@@ -103,31 +103,27 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 			}
 			else {
 
-				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[0]));
-
 				char mensaje_mov_out[100] = "";
 
 				t_segmento* segmento = malloc(sizeof(t_segmento*));
+				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[0]));
 				segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, num_segmento);
-
-
-				printf("\nDireccionBase: %p\nLimite:   %p\n",segmento->direccion_base, segmento->limite);
-
-
-				void *direccion_base = segmento->direccion_base;
 				int desplazamiento_segmento = obtener_desplazamiento_segmento(atoi(instruccion->parametro[0]));
+				void *direccion_base = segmento->direccion_base;
 				char* valor_registro = malloc(registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]));
 				valor_registro = registros_get_value(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
+				//valor_registro[strlen(valor_registro)] = '\0';
 				int tamanio_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
 
 				sprintf(mensaje_mov_out, "MOV_OUT %p %s %d", direccion_base+desplazamiento_segmento, valor_registro, tamanio_registro);
-				//concatena el numero de seg, la direccion a buscar, el valor y cuantos bytes escribir
+				//concatena la direccion fisica, el valor y cuantos bytes escribir
 
-				printf("\n Mensaje que le mandamos a memoria: %s\n", mensaje_mov_out);
+				log_info(cpu_logger, "PID: %u - Accion: ESCRIBIR - Segmento: %u - Direccion Fisica: %p - Valor: %s\n ",
+									contexto_de_ejecucion->pid,
+									num_segmento,direccion_base+desplazamiento_segmento,
+									valor_registro);
 
-				log_info(cpu_logger, "PID: %u - Accion: ESCRIBIR - Segmento: %u - Direccion Fisica: %p - Valor: %s\n ",contexto_de_ejecucion->pid, num_segmento,direccion_base+desplazamiento_segmento, valor_registro);
 				enviar_mensaje(mensaje_mov_out, socket_memoria);
-
 
 			}
 
