@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #include "Memoria.h"
 
@@ -140,7 +141,7 @@ void ejecutar_instruccion(char* motivo){
 
 			//t_segmento* segmento_nuevo = malloc(sizeof(t_segmento));
 			//segmento_nuevo = crear_segmento(base_elegida, limite_elegido);
-			ocupar_bitmap(bitmap, base_elegida - memoria_fisica, atoi(parametros[2]));
+			ocupar_bitmap(base_elegida - memoria_fisica, atoi(parametros[2]));
 			log_info(memoria_logger, "PID: %s - Crear Segmento: %s - Base: %p - TAMAÑO: %s", parametros[3], parametros[1], base_elegida, parametros[2]);
 			t_tabla_segmentos* tabla_buscada = buscar_tabla_proceso(atoi(parametros[3]));
 			t_segmento* segmento_nuevo = list_get(tabla_buscada->segmentos, atoi(parametros[1]));
@@ -186,7 +187,9 @@ void ejecutar_instruccion(char* motivo){
 
 		break;
 	case MOV_OUT:
+
 		parametros = string_split(motivo, " ");
+<<<<<<< HEAD
 		log_info(memoria_logger,"%s", parametros[0]); //MOV_OUT
 		log_info(memoria_logger,"%s", parametros[1]); //dir_fisica
 		log_info(memoria_logger,"%s", parametros[2]); //HOLA (si es AX)
@@ -195,6 +198,17 @@ void ejecutar_instruccion(char* motivo){
 		//Se graba en la direccion recibida (parametros[1]) el valor recibido, con el peso de ese registro
 		memcpy(parametros[1],parametros[2],atoi(parametros[3]));
 
+=======
+		//imprimir_bitmap();
+		void *direccion_fisica = (void *)strtoul(parametros[1], NULL, 16);
+		char *valor = (char *)parametros[2];
+		int tamanio = atoi(parametros[3]);
+		printf("\nString: %s Direccion: %lu Direccion 2: %p", parametros[1], strtoul(parametros[1], NULL, 16), (void *)strtoul(parametros[1], NULL, 16));
+		memcpy(direccion_fisica, valor, tamanio);
+		//imprimir_memoria_segun_base_y_tam((void *)(uintptr_t)parametros[1], atoi(parametros[3]));
+		imprimir_memoria();
+		//Se graba en la direccion recibida (parametros[1]) + desplazamiento (parametros[2]), el valor de parametros[3] (el registro AX), la cantidad que pesa el parametro[3]
+>>>>>>> sigoConMemoria
 
 		break;
 	default:
