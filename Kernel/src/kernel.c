@@ -112,7 +112,6 @@ void init_estructuras_planificacion(){
     lista_archivos_abiertos = list_create();
 
     devolver_ejecucion = 0;
-    //recibi_instruccion = 0;
 
     int i = 0;
 	char** ptr = recursos;
@@ -136,7 +135,6 @@ void init_estructuras_planificacion(){
 
     pthread_mutex_init(&semaforo_new, NULL);
     pthread_mutex_init(&semaforo_ready, NULL);
-    //pthread_mutex_init(&semaforo_execute, NULL);
 
 }
 
@@ -149,14 +147,7 @@ void planificarLargoPlazo(){
 		pthread_mutex_lock(&semaforo_new);
 		t_pcb* pcb = list_remove(lista_new, 0);
 		pthread_mutex_unlock(&semaforo_new);
-		struct timeval tiempo;
-		gettimeofday(&tiempo, NULL);
-		pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
-		//pcb->tiempo_ready = tiempo.tv_sec * 1000000 + tiempo.tv_usec;
-		//pcb->tiempo_ready = tiempo.tv_sec;
-
-		//mandar a memoria el proceso para iniciar estructuras
-		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		mandar_a_ready(pcb);
 	}
 }
 
@@ -226,10 +217,6 @@ void recibir_mensaje_cpu(){
 	cod_op = recibir_operacion(socket_cpu);
 	switch (cod_op) {
 		case MENSAJE:
-			/*char mensaje[30] = "";
-			strcat(mensaje, recibir_instruccion(socket_cpu, kernel_logger));
-			ejecutar_segun_motivo(mensaje);
-			recibi_instruccion = 1;*///nunca enviamos mensaje por que siempre recibimos el contexto de ejecucion
 			break;
 		case PAQUETE:
 			int size;
@@ -335,17 +322,14 @@ void ejecutar_segun_motivo(char* motivo){
 			log_info(kernel_logger, "PID: %d - Abrir Archivo: %s", pcb_a_ejecutar->pid, parametros[1]);
 
 			t_archivo* archivo_abrir = buscar_archivo_abierto(parametros[1]);
-			//printf("archivo abrir")
-
-			listar_tabla_de_archivos_pcb(pcb_a_ejecutar);
 
 			if(archivo_abrir != NULL){
+				estimar_rafaga(pcb_a_ejecutar);
 				list_add(archivo_abrir->listaBloqueados, pcb_a_ejecutar);
 				log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, BLOCKED);
 				log_info(kernel_logger, "PID: %d - Bloqueado por: %s", pcb_a_ejecutar->pid, archivo_abrir->nombre);
 				pcb_a_ejecutar->estado = BLOCKED;
-				agregar_archivo_tabla_del_proceso(archivo_abrir, pcb_a_ejecutar);//lo agrega con el puntero en 0
-				//el archivo ya estaba abierto, se bloquea el proceso
+				agregar_archivo_al_proceso(archivo_abrir, pcb_a_ejecutar);//lo agrega con el puntero en 0
 				printf("el archivo: %s ya estaba abierto, el proceso: %d se bloquea", archivo_abrir->nombre,pcb_a_ejecutar->pid);
 			} else{
 				//se abre el archivo, si no existe, se crea. y se agrega a la tabla global de archivos abiertos y del proceso
@@ -354,47 +338,41 @@ void ejecutar_segun_motivo(char* motivo){
 				enviar_mensaje(motivo, socket_fileSystem);
 				char* mensaje_fopen = recibir_mensaje_filesystem();
 				pthread_mutex_unlock(&sem_fileSystem);
-				t_archivo* archivo_creado = crear_archivo(parametros[1], 1);
-				int index = list_add(lista_archivos_abiertos, archivo_creado);
-				t_archivo* archivo_agregado = list_get(lista_archivos_abiertos, index);
-				printf("se agrego a la lista el archivo: %s\n ", archivo_agregado->nombre);
+				t_archivo* archivo_creado = crear_archivo(parametros[1]);
+				list_add(lista_archivos_abiertos, archivo_creado);
 
 				printf("el archivo_creado->nombre: %s\n\n", archivo_creado->nombre);
-				listar_tabla_del_proceso(pcb_a_ejecutar);
-				agregar_archivo_tabla_del_proceso(archivo_creado, pcb_a_ejecutar);
-				listar_tabla_del_proceso(pcb_a_ejecutar);
+				agregar_archivo_al_proceso(archivo_creado, pcb_a_ejecutar);
 
-				printf("\nel archivo se abrio\n");
 				ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 				devolver_ejecucion = 1;
 				pcb_ejecutando = pcb_a_ejecutar;
 			}
-
-			listar_tabla_de_archivos_pcb(pcb_a_ejecutar);
 			break;
 
 	case F_CLOSE:
-		//cierra el archivo en la tabla del proceso con el archivo abierto
-		//desbloquea al proceso que estaba en la lista de bloqueados
-		//si esa lista estaba vacia -> se saca de la tabla global de archivos abiertos
+		/*cierra el archivo en la tabla del proceso con el archivo abierto
+		desbloquea al proceso que estaba en la lista de bloqueados
+		si esa lista estaba vacia -> se saca de la tabla global de archivos abiertos*/
 		parametros = string_split(motivo, " ");
 		char* archivo_a_cerrar = parametros[1];
-		log_info(kernel_logger, "PID: %d - Cerrar Archivo: %s", pcb_a_ejecutar->pid, archivo_a_cerrar);
-		listar_tabla_de_archivos_pcb(pcb_a_ejecutar);
-		//enviar_mensaje(motivo, socket_fileSystem);
 		cerrar_archivo(archivo_a_cerrar, pcb_a_ejecutar);
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
 		pcb_ejecutando = pcb_a_ejecutar;
-		listar_tabla_de_archivos_pcb(pcb_a_ejecutar);
 		break;
 
 	case F_SEEK:
 		//cambia el puntero que esta en la tabla de archivos del proceso
 		//IMPLEMENTAR
 		parametros = string_split(motivo, " ");
-		log_info(kernel_logger, "PID: %d - Actualizar puntero Archivo: %s -> %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
-		//enviar_mensaje(motivo, socket_fileSystem);
+		char* nombre_archivo = parametros[1];
+		uint32_t puntero = atoi(parametros[2]);
+		log_info(kernel_logger, "PID: %d - Actualizar puntero Archivo: %s -> %d", pcb_a_ejecutar->pid, nombre_archivo, puntero);
+
+		t_archivo* archivo_seek = get_archivo_del_proceso(nombre_archivo, pcb_a_ejecutar);
+		archivo_seek->puntero = puntero;
+
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
 		pcb_ejecutando = pcb_a_ejecutar;
@@ -437,6 +415,7 @@ void ejecutar_segun_motivo(char* motivo){
 		break;
 
 	case F_TRUNCATE:
+		estimar_rafaga(pcb_a_ejecutar);
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Truncar Archivo: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 		pthread_t p_truncar;
@@ -446,10 +425,6 @@ void ejecutar_segun_motivo(char* motivo){
 		strcpy(args->motivo, motivo);
 		pthread_create(&p_truncar, NULL ,(void*) truncar, args);
 		pthread_detach(p_truncar);
-
-		/*ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
-		devolver_ejecucion = 1;
-		pcb_ejecutando = pcb_a_ejecutar;*/
 		break;
 
 	case CREATE_SEGMENT:
@@ -493,6 +468,26 @@ void ejecutar_segun_motivo(char* motivo){
 	free(parametros);
 }
 
+void finalizar_proceso(t_pcb* pcb, char* motivo){
+	log_cambiar_estado(pcb_a_ejecutar->pid, pcb->estado, EXITT);
+	pcb->estado = EXITT;
+	sem_post(&semaforo_multiprogramacion);
+	log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb->pid, motivo);
+	enviar_mensaje("-1", pcb->pid);
+	//liberar_recursos(pcb);
+	liberar_archivos(pcb);
+	liberar_conexion(pcb->pid, kernel_logger);
+	liberar_pcb(pcb);
+
+}
+
+void liberar_archivos(t_pcb* pcb){
+	for(int i=0;i<list_size(pcb->tabla_archivos);i++){
+		t_archivo* archivo = list_get(pcb->tabla_archivos, i);
+		cerrar_archivo(archivo->nombre, pcb);
+	}
+}
+
 void truncar(t_args_truncar* args){
 
 	pthread_mutex_lock(&sem_fileSystem);
@@ -502,59 +497,61 @@ void truncar(t_args_truncar* args){
 	pcb_a_ejecutar->estado = BLOCKED;
 	char* mensaje = recibir_mensaje_filesystem();
 	pthread_mutex_unlock(&sem_fileSystem);
-	ingresar_en_lista(args->pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
-	estimar_rafaga(args->pcb);
+	mandar_a_ready(args->pcb);
+
+	free(args->motivo);
+	free(args);
 }
 
 void cerrar_archivo(char* nombre_archivo, t_pcb* pcb){
-	t_archivo_de_proceso* archivo_de_proceso = get_archivo_del_proceso(nombre_archivo, pcb);
-	if(archivo_de_proceso==NULL){
+	t_archivo* archivo = get_archivo_del_proceso(nombre_archivo, pcb);
+
+	log_info(kernel_logger, "PID: %d - Cerrar Archivo: %s", pcb->pid, archivo->nombre);
+	if(archivo==NULL){
 		printf("\nno se encontro el archivo en la tabla de archivos del pcb\n\n");
+		return;
 	}
-	t_archivo* archivo_a_cerrar = archivo_de_proceso->archivo;
-	//no encuentra el archivo
-	list_remove_element(pcb->tabla_archivos, archivo_de_proceso);
-	if(list_size(archivo_a_cerrar->listaBloqueados)==0){
-		list_remove_element(lista_archivos_abiertos, archivo_a_cerrar);
+	list_remove_element(pcb->tabla_archivos, archivo);
+	archivo->puntero=0;
+	if(list_size(archivo->listaBloqueados)==0){
+		list_remove_element(lista_archivos_abiertos, archivo);//si no hay procesos bloqueados, se saca de la tabla global
+		free(archivo->nombre);
+		list_destroy(archivo->listaBloqueados);
+		free(archivo);
 	}else{
-
-		t_pcb* pcb_a_desbloquear = list_get(archivo_a_cerrar->listaBloqueados, 0);
-		list_remove_element(archivo_a_cerrar->listaBloqueados, pcb_a_desbloquear);
-		ingresar_en_lista(pcb_a_desbloquear, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
-		printf("\nPCB: %d desbloquedo xq pcb: %d cerro el archivo: %s\n\n",pcb_a_desbloquear->pid, pcb->pid, archivo_a_cerrar->nombre);
+		t_pcb* pcb_a_desbloquear = list_get(archivo->listaBloqueados, 0);
+		list_remove_element(archivo->listaBloqueados, pcb_a_desbloquear);
+		mandar_a_ready(pcb_a_desbloquear);
+		printf("\nPCB: %d desbloquedo xq pcb: %d cerro el archivo: %s\n\n",pcb_a_desbloquear->pid, pcb->pid, archivo->nombre);
 	}
+
 }
 
-void listar_tabla_de_archivos_pcb(t_pcb* pcb){
-	if(list_size(pcb->tabla_archivos)==0){
-		printf("\nEl pcb: %d, no tiene archivos abiertos\n\n", pcb->pid);
-	}else{
-		printf("\nEl pcb: %d tiene estos archivos abiertos: \n", pcb->pid);
-		for(int i=0;i< list_size(pcb->tabla_archivos);i++){
-			t_archivo_de_proceso* archivo_proceso = list_get(pcb->tabla_archivos, i);
-			t_archivo* archivo = archivo_proceso->archivo;
-			printf("\n  %s->bloqueados: ", archivo->nombre);
-			for(int j=0;j<list_size(archivo->listaBloqueados);j++){
-				t_pcb* pcb_bloqueado = list_get(archivo->listaBloqueados, j);
-				printf(" %d", pcb_bloqueado->pid);
-			}
-
-		}
-		printf("\n\n");
-	}
-}
 
 void ejecutar_io(t_thread_args* args){
 	sleep(args->duracion);
-	struct timeval tiempo;
+	/*struct timeval tiempo;
 	gettimeofday(&tiempo, NULL);
 	args->pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000; // actualiza la llegada a ready del proceso
-	ingresar_en_lista(args->pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+	ingresar_en_lista(args->pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);*/
+	mandar_a_ready(args->pcb);
 	free(args);
 	pthread_exit(0);
 }
 
+void mandar_a_ready(t_pcb* pcb){
+	ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+	actualizar_llegada_a_ready(pcb);
+}
+
+void actualizar_llegada_a_ready(t_pcb* pcb){
+	struct timeval tiempo;
+	gettimeofday(&tiempo, NULL);
+	pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
+}
+
 void estimar_rafaga(t_pcb* pcb){
+	/*cada vez que el proceso se desaloja de la cpu*/
 	uint32_t tiempo_viejo = pcb->tiempo_ready;
 	uint32_t estimado_viejo = pcb->estimado_rafaga;
 	struct timeval tiempo;
@@ -572,12 +569,6 @@ char* recibir_mensaje_filesystem(){
 	char* mensaje= string_new();
 	string_append(&mensaje, recibir_instruccion(socket_fileSystem, kernel_logger));
 	return mensaje;
-	/*switch (cod_op) {
-		case MENSAJE:
-			char mensaje[30] = "";
-			strcat(mensaje, recibir_instruccion(socket_fileSystem, kernel_logger));
-			break;
-	}*/
 }
 
 

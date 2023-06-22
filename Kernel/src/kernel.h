@@ -122,8 +122,11 @@
 	char* recibir_mensaje_filesystem();
 	void truncar(t_args_truncar* args);
 	void cerrar_archivo(char* nombre_archivo, t_pcb* pcb);
+	void liberar_archivos(t_pcb* pcb);
+	void mandar_a_ready(t_pcb* pcb);
+	void actualizar_llegada_a_ready(t_pcb* pcb);
 
-	void listar_tabla_de_archivos_pcb(t_pcb* pcb);
+	//void listar_tabla_de_archivos_pcb(t_pcb* pcb);
 
 
 
