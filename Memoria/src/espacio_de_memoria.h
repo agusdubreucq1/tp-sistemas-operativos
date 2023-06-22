@@ -15,6 +15,7 @@
 // ------------------------------------------------------------------------------------------
 
 	void* reservar_espacio_memoria();
+	void imprimir_memoria_segun_base_y_tam(void *, int);
 	void imprimir_memoria();
 	//void escribir_mensaje_en_memoria(void *, char *, int);
 

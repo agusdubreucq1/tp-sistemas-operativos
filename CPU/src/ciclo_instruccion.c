@@ -79,7 +79,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 				enviarContexto("MOV_OUT SEG_FAULT");
 			}
 			else {
-				char mensaje_mov_out[50] = "";
+				char mensaje_mov_out[100] = "";
 
 				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[0]));
 				t_segmento* segmento = malloc(sizeof(t_segmento*));
@@ -100,6 +100,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 				log_info(cpu_logger, "PID: %u - Accion: ESCRIBIR - Segmento: %u - Direccion Fisica: %p - Valor: %s\n ",contexto_de_ejecucion->pid, num_segmento,direccion_base+desplazamiento_segmento, valor_registro);
 				enviar_mensaje(mensaje_mov_out, socket_memoria);
+
 
 			}
 

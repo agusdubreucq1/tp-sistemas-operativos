@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #include "Memoria.h"
 
@@ -188,8 +189,13 @@ void ejecutar_instruccion(char* motivo){
 	case MOV_OUT:
 
 		parametros = string_split(motivo, " ");
-		imprimir_bitmap();
-		memcpy(parametros[1], parametros[2], atoi(parametros[3]));
+		//imprimir_bitmap();
+		void *direccion_fisica = (void *)strtoul(parametros[1], NULL, 16);
+		char *valor = (char *)parametros[2];
+		int tamanio = atoi(parametros[3]);
+		printf("\nString: %s Direccion: %lu Direccion 2: %p", parametros[1], strtoul(parametros[1], NULL, 16), (void *)strtoul(parametros[1], NULL, 16));
+		memcpy(direccion_fisica, valor, tamanio);
+		//imprimir_memoria_segun_base_y_tam((void *)(uintptr_t)parametros[1], atoi(parametros[3]));
 		imprimir_memoria();
 		//Se graba en la direccion recibida (parametros[1]) + desplazamiento (parametros[2]), el valor de parametros[3] (el registro AX), la cantidad que pesa el parametro[3]
 

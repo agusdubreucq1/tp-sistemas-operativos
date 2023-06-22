@@ -16,12 +16,20 @@ void* reservar_espacio_memoria(){
 
 }
 
+void imprimir_memoria_segun_base_y_tam(void *base, int tamanio) {
+
+	printf("\nEntre a imprimir_memoria!");
+	for (int i=0; i<tamanio; i++) {
+		printf("\nValor en %p: %c", (base+i), *(char *)(base+i));
+	}
+}
+
 void imprimir_memoria() {
 
 	printf("\nEntre a imprimir_memoria!");
 	for (int i=0; i<atoi(tam_memoria); i++) {
 		if (*(char *)(memoria_fisica+i) != '\0') {
-			printf("\nValor en %p: %c", (memoria_fisica+i), *(char *)(memoria_fisica+i));
+			printf("\nPosicion bitmap: %d; Contenido en %p: %c", i,(memoria_fisica+i), *(char *)(memoria_fisica+i));
 		}
 	}
 }
