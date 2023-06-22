@@ -183,22 +183,21 @@ void ejecutar_instruccion(char* motivo){
 		break;
 	case MOV_IN:
 		parametros = string_split(motivo, " ");
-		log_info(memoria_logger, "ENTRE POR MOV_IN");
+
+		void *direccion_fisica_mov_in = (void *)strtoul(parametros[1], NULL, 16);
+		int tamanio_mov_in = atoi(parametros[2]);
+		printf("\nString: %s Direccion: %lu Direccion 2: %p", parametros[1], strtoul(parametros[1], NULL, 16), direccion_fisica_mov_in);
+
+		char *valor_registro = direccion_fisica_mov_in;
+
+		printf("el valor que se encontro en la direccion fisica es: %s \n",(char*) valor_registro);
+
+		enviar_mensaje(valor_registro, socket_cpu);
+
 
 		break;
 	case MOV_OUT:
-
 		parametros = string_split(motivo, " ");
-<<<<<<< HEAD
-		log_info(memoria_logger,"%s", parametros[0]); //MOV_OUT
-		log_info(memoria_logger,"%s", parametros[1]); //dir_fisica
-		log_info(memoria_logger,"%s", parametros[2]); //HOLA (si es AX)
-		log_info(memoria_logger,"%s", parametros[3]); //SIZE DEL REGISTRO
-
-		//Se graba en la direccion recibida (parametros[1]) el valor recibido, con el peso de ese registro
-		memcpy(parametros[1],parametros[2],atoi(parametros[3]));
-
-=======
 		//imprimir_bitmap();
 		void *direccion_fisica = (void *)strtoul(parametros[1], NULL, 16);
 		char *valor = (char *)parametros[2];
@@ -208,7 +207,6 @@ void ejecutar_instruccion(char* motivo){
 		//imprimir_memoria_segun_base_y_tam((void *)(uintptr_t)parametros[1], atoi(parametros[3]));
 		imprimir_memoria();
 		//Se graba en la direccion recibida (parametros[1]) + desplazamiento (parametros[2]), el valor de parametros[3] (el registro AX), la cantidad que pesa el parametro[3]
->>>>>>> sigoConMemoria
 
 		break;
 	default:

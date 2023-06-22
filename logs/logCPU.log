@@ -44227,3 +44227,549 @@
 [INFO] 03:54:59:295 CPU/(64821:64822): PID: 5 - Ejecutando: EXIT
 [TRACE] 03:54:59:295 CPU/(64821:64822): Datos enviados, esperando respuesta de Kernel...
 [TRACE] 03:54:59:340 CPU/(64821:64822): Datos enviados correctamente
+[INFO] 04:18:06:857 CPU/(66081:66081): Logger creado
+[INFO] 04:18:06:858 CPU/(66081:66081): -------Valores del config-------
+[INFO] 04:18:06:858 CPU/(66081:66081): Retardo Instrucción = 1000
+[INFO] 04:18:06:858 CPU/(66081:66081): IP Memoria = 127.0.0.1
+[INFO] 04:18:06:858 CPU/(66081:66081): Puerto Memoria = 8002
+[INFO] 04:18:06:858 CPU/(66081:66081): Puerto Escucha = 8001
+[INFO] 04:18:06:858 CPU/(66081:66081): Tamanio maximo de segmento = 128
+[INFO] 04:18:06:858 CPU/(66081:66081): --------------------------------
+[INFO] 04:18:06:858 CPU/(66081:66081): ¡CPU iniciado correctamente!
+[TRACE] 04:18:06:859 CPU/(66081:66081): Listo para escuchar a mi cliente
+[INFO] 04:18:06:859 CPU/(66081:66081): Servidor listo para recibir al cliente
+[INFO] 04:18:06:859 CPU/(66081:66083): Conexion establecida con Memoria
+[TRACE] 04:18:10:097 CPU/(66081:66082): Se conecto un cliente!
+[TRACE] 04:18:10:098 CPU/(66081:66082): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:18:16:592 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:16:592 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:16:592 CPU/(66081:66082): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:18:16:593 CPU/(66081:66082): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[TRACE] 04:18:16:593 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:16:635 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:16:678 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:16:679 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:16:679 CPU/(66081:66082): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:18:16:679 CPU/(66081:66082): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7f8cb0000be8 - Valor: HOLA
+ 
+[INFO] 04:18:16:679 CPU/(66081:66082): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 04:18:16:679 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:16:723 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:16:767 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:16:767 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:16:767 CPU/(66081:66082): PID: 5 - Ejecutando: I/O 10
+[TRACE] 04:18:16:767 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:16:811 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:26:812 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:26:812 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:26:812 CPU/(66081:66082): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 04:18:26:812 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:26:855 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:26:898 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:26:899 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:26:899 CPU/(66081:66082): PID: 5 - Ejecutando: MOV_IN BX 120
+[TRACE] 04:18:26:899 CPU/(66081:66082): Me llego el mensaje: E���[
+[INFO] 04:18:26:899 CPU/(66081:66082): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[TRACE] 04:18:26:899 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:063 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:107 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:107 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:107 CPU/(66081:66082): PID: 5 - Ejecutando: CREATE_SEGMENT 2 128
+[TRACE] 04:18:27:107 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:107 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:151 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:151 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:151 CPU/(66081:66082): PID: 5 - Ejecutando: YIELD
+[TRACE] 04:18:27:151 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:195 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:239 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:239 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:239 CPU/(66081:66082): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[TRACE] 04:18:27:239 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:284 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:327 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:327 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:327 CPU/(66081:66082): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[TRACE] 04:18:27:328 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:372 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:415 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:416 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:416 CPU/(66081:66082): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[TRACE] 04:18:27:416 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:460 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:503 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:503 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:503 CPU/(66081:66082): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[TRACE] 04:18:27:503 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:547 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:591 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:591 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:591 CPU/(66081:66082): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[TRACE] 04:18:27:591 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:635 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:679 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:679 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:679 CPU/(66081:66082): PID: 5 - Ejecutando: CREATE_SEGMENT 3 64
+[TRACE] 04:18:27:679 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:725 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:767 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:767 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:768 CPU/(66081:66082): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[TRACE] 04:18:27:768 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:812 CPU/(66081:66082): Datos enviados correctamente
+[TRACE] 04:18:27:855 CPU/(66081:66082): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:18:27:856 CPU/(66081:66082): Comenzar ejecucion del proceso: 5.
+[INFO] 04:18:27:856 CPU/(66081:66082): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:18:27:856 CPU/(66081:66082): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:18:27:899 CPU/(66081:66082): Datos enviados correctamente
+[INFO] 04:28:29:116 CPU/(66313:66313): Logger creado
+[INFO] 04:28:29:116 CPU/(66313:66313): -------Valores del config-------
+[INFO] 04:28:29:116 CPU/(66313:66313): Retardo Instrucción = 1000
+[INFO] 04:28:29:116 CPU/(66313:66313): IP Memoria = 127.0.0.1
+[INFO] 04:28:29:116 CPU/(66313:66313): Puerto Memoria = 8002
+[INFO] 04:28:29:117 CPU/(66313:66313): Puerto Escucha = 8001
+[INFO] 04:28:29:117 CPU/(66313:66313): Tamanio maximo de segmento = 128
+[INFO] 04:28:29:117 CPU/(66313:66313): --------------------------------
+[INFO] 04:28:29:117 CPU/(66313:66313): ¡CPU iniciado correctamente!
+[TRACE] 04:28:29:117 CPU/(66313:66313): Listo para escuchar a mi cliente
+[INFO] 04:28:29:117 CPU/(66313:66313): Servidor listo para recibir al cliente
+[INFO] 04:28:29:118 CPU/(66313:66315): Conexion establecida con Memoria
+[TRACE] 04:28:29:780 CPU/(66313:66314): Se conecto un cliente!
+[TRACE] 04:28:29:780 CPU/(66313:66314): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:28:30:359 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:30:359 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:30:359 CPU/(66313:66314): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:28:30:360 CPU/(66313:66314): PID: 5 - Ejecutando: CREATE_SEGMENT 1 128
+[TRACE] 04:28:30:360 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:30:399 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:30:443 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:30:443 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:30:443 CPU/(66313:66314): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:28:30:443 CPU/(66313:66314): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7f4db4000be8 - Valor: HOLA
+ 
+[INFO] 04:28:30:443 CPU/(66313:66314): PID: 5 - Ejecutando: WAIT DISCO
+[TRACE] 04:28:30:443 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:30:487 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:30:530 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:30:531 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:30:531 CPU/(66313:66314): PID: 5 - Ejecutando: I/O 10
+[TRACE] 04:28:30:531 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:30:575 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:40:575 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:40:575 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:40:575 CPU/(66313:66314): PID: 5 - Ejecutando: SIGNAL DISCO
+[TRACE] 04:28:40:575 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:40:619 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:40:663 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:40:663 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:40:663 CPU/(66313:66314): PID: 5 - Ejecutando: MOV_IN BX 120
+[TRACE] 04:28:40:663 CPU/(66313:66314): Me llego el mensaje: E�N�
+[INFO] 04:28:40:663 CPU/(66313:66314): PID: 5 - Ejecutando: F_OPEN ARCHIVO
+[TRACE] 04:28:40:663 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:40:854 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:40:895 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:40:895 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:40:895 CPU/(66313:66314): PID: 5 - Ejecutando: CREATE_SEGMENT 2 128
+[TRACE] 04:28:40:895 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:40:895 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:40:939 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:40:940 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:40:940 CPU/(66313:66314): PID: 5 - Ejecutando: YIELD
+[TRACE] 04:28:40:940 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:40:983 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:41:027 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:41:027 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:41:027 CPU/(66313:66314): PID: 5 - Ejecutando: F_TRUNCATE ARCHIVO 64
+[TRACE] 04:28:41:027 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:41:071 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:41:115 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:41:115 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:41:115 CPU/(66313:66314): PID: 5 - Ejecutando: F_SEEK ARCHIVO 10
+[TRACE] 04:28:41:115 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:41:159 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:41:203 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:41:203 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:41:203 CPU/(66313:66314): PID: 5 - Ejecutando: F_WRITE ARCHIVO 4 4
+[TRACE] 04:28:41:203 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:41:247 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:41:291 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:41:292 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:41:292 CPU/(66313:66314): PID: 5 - Ejecutando: F_READ ARCHIVO 16 4
+[TRACE] 04:28:41:292 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:41:336 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:41:379 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:41:380 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:41:380 CPU/(66313:66314): PID: 5 - Ejecutando: DELETE_SEGMENT 1
+[TRACE] 04:28:41:380 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:41:423 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:41:467 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:41:467 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:41:467 CPU/(66313:66314): PID: 5 - Ejecutando: CREATE_SEGMENT 3 64
+[TRACE] 04:28:41:467 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:41:511 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:41:555 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:41:555 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:41:555 CPU/(66313:66314): PID: 5 - Ejecutando: F_CLOSE ARCHIVO
+[TRACE] 04:28:41:555 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:41:599 CPU/(66313:66314): Datos enviados correctamente
+[TRACE] 04:28:41:643 CPU/(66313:66314): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:28:41:644 CPU/(66313:66314): Comenzar ejecucion del proceso: 5.
+[INFO] 04:28:41:644 CPU/(66313:66314): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:28:41:644 CPU/(66313:66314): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:28:41:688 CPU/(66313:66314): Datos enviados correctamente
+[INFO] 04:31:11:863 CPU/(66347:66347): Logger creado
+[INFO] 04:31:11:864 CPU/(66347:66347): -------Valores del config-------
+[INFO] 04:31:11:864 CPU/(66347:66347): Retardo Instrucción = 1000
+[INFO] 04:31:11:864 CPU/(66347:66347): IP Memoria = 127.0.0.1
+[INFO] 04:31:11:864 CPU/(66347:66347): Puerto Memoria = 8002
+[INFO] 04:31:11:864 CPU/(66347:66347): Puerto Escucha = 8001
+[INFO] 04:31:11:865 CPU/(66347:66347): Tamanio maximo de segmento = 128
+[INFO] 04:31:11:865 CPU/(66347:66347): --------------------------------
+[INFO] 04:31:11:865 CPU/(66347:66347): ¡CPU iniciado correctamente!
+[TRACE] 04:31:11:865 CPU/(66347:66347): Listo para escuchar a mi cliente
+[INFO] 04:31:11:865 CPU/(66347:66347): Servidor listo para recibir al cliente
+[INFO] 04:31:11:866 CPU/(66347:66349): Conexion establecida con Memoria
+[TRACE] 04:31:13:492 CPU/(66347:66348): Se conecto un cliente!
+[TRACE] 04:31:13:493 CPU/(66347:66348): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:31:14:894 CPU/(66347:66348): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:31:14:894 CPU/(66347:66348): Comenzar ejecucion del proceso: 5.
+[INFO] 04:31:14:894 CPU/(66347:66348): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:31:14:895 CPU/(66347:66348): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 04:31:14:895 CPU/(66347:66348): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:31:14:935 CPU/(66347:66348): Datos enviados correctamente
+[TRACE] 04:31:14:978 CPU/(66347:66348): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:31:14:979 CPU/(66347:66348): Comenzar ejecucion del proceso: 5.
+[INFO] 04:31:14:979 CPU/(66347:66348): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 04:31:14:979 CPU/(66347:66348): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:31:15:023 CPU/(66347:66348): Datos enviados correctamente
+[TRACE] 04:31:15:067 CPU/(66347:66348): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:31:15:067 CPU/(66347:66348): Comenzar ejecucion del proceso: 5.
+[INFO] 04:31:15:067 CPU/(66347:66348): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:31:15:067 CPU/(66347:66348): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7f3e28000be8 - Valor: HOLA
+ 
+[INFO] 04:31:15:067 CPU/(66347:66348): PID: 5 - Ejecutando: MOV_IN BX 120
+[TRACE] 04:31:15:067 CPU/(66347:66348): Me llego el mensaje: C6m(�
+[INFO] 04:31:15:067 CPU/(66347:66348): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:31:15:067 CPU/(66347:66348): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:31:15:111 CPU/(66347:66348): Datos enviados correctamente
+[INFO] 04:35:07:985 CPU/(66581:66581): Logger creado
+[INFO] 04:35:07:985 CPU/(66581:66581): -------Valores del config-------
+[INFO] 04:35:07:985 CPU/(66581:66581): Retardo Instrucción = 1000
+[INFO] 04:35:07:986 CPU/(66581:66581): IP Memoria = 127.0.0.1
+[INFO] 04:35:07:986 CPU/(66581:66581): Puerto Memoria = 8002
+[INFO] 04:35:07:986 CPU/(66581:66581): Puerto Escucha = 8001
+[INFO] 04:35:07:986 CPU/(66581:66581): Tamanio maximo de segmento = 128
+[INFO] 04:35:07:986 CPU/(66581:66581): --------------------------------
+[INFO] 04:35:07:986 CPU/(66581:66581): ¡CPU iniciado correctamente!
+[TRACE] 04:35:07:986 CPU/(66581:66581): Listo para escuchar a mi cliente
+[INFO] 04:35:07:987 CPU/(66581:66581): Servidor listo para recibir al cliente
+[INFO] 04:35:07:987 CPU/(66581:66583): Conexion establecida con Memoria
+[TRACE] 04:35:08:931 CPU/(66581:66582): Se conecto un cliente!
+[TRACE] 04:35:08:931 CPU/(66581:66582): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:35:11:624 CPU/(66581:66582): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:35:11:624 CPU/(66581:66582): Comenzar ejecucion del proceso: 5.
+[INFO] 04:35:11:624 CPU/(66581:66582): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:35:11:625 CPU/(66581:66582): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 04:35:11:625 CPU/(66581:66582): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:35:11:667 CPU/(66581:66582): Datos enviados correctamente
+[TRACE] 04:35:11:711 CPU/(66581:66582): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:35:11:711 CPU/(66581:66582): Comenzar ejecucion del proceso: 5.
+[INFO] 04:35:11:711 CPU/(66581:66582): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 04:35:11:711 CPU/(66581:66582): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:35:11:755 CPU/(66581:66582): Datos enviados correctamente
+[TRACE] 04:35:11:799 CPU/(66581:66582): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:35:11:799 CPU/(66581:66582): Comenzar ejecucion del proceso: 5.
+[INFO] 04:35:11:799 CPU/(66581:66582): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:35:11:799 CPU/(66581:66582): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7fb500000be8 - Valor: HOLA
+ 
+[INFO] 04:35:11:799 CPU/(66581:66582): PID: 5 - Ejecutando: MOV_IN BX 120
+[TRACE] 04:35:11:799 CPU/(66581:66582): Me llego el mensaje: C�p�
+[INFO] 04:35:11:799 CPU/(66581:66582): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:35:11:799 CPU/(66581:66582): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:35:11:843 CPU/(66581:66582): Datos enviados correctamente
+[INFO] 04:42:19:638 CPU/(67033:67033): Logger creado
+[INFO] 04:42:19:639 CPU/(67033:67033): -------Valores del config-------
+[INFO] 04:42:19:639 CPU/(67033:67033): Retardo Instrucción = 1000
+[INFO] 04:42:19:639 CPU/(67033:67033): IP Memoria = 127.0.0.1
+[INFO] 04:42:19:639 CPU/(67033:67033): Puerto Memoria = 8002
+[INFO] 04:42:19:639 CPU/(67033:67033): Puerto Escucha = 8001
+[INFO] 04:42:19:639 CPU/(67033:67033): Tamanio maximo de segmento = 128
+[INFO] 04:42:19:639 CPU/(67033:67033): --------------------------------
+[INFO] 04:42:19:639 CPU/(67033:67033): ¡CPU iniciado correctamente!
+[TRACE] 04:42:19:640 CPU/(67033:67033): Listo para escuchar a mi cliente
+[INFO] 04:42:19:640 CPU/(67033:67033): Servidor listo para recibir al cliente
+[INFO] 04:42:19:640 CPU/(67033:67035): Conexion establecida con Memoria
+[TRACE] 04:42:21:104 CPU/(67033:67034): Se conecto un cliente!
+[TRACE] 04:42:21:105 CPU/(67033:67034): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:42:23:357 CPU/(67033:67034): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:42:23:357 CPU/(67033:67034): Comenzar ejecucion del proceso: 5.
+[INFO] 04:42:23:357 CPU/(67033:67034): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:42:23:358 CPU/(67033:67034): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 04:42:23:358 CPU/(67033:67034): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:42:23:399 CPU/(67033:67034): Datos enviados correctamente
+[TRACE] 04:42:23:443 CPU/(67033:67034): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:42:23:443 CPU/(67033:67034): Comenzar ejecucion del proceso: 5.
+[INFO] 04:42:23:443 CPU/(67033:67034): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 04:42:23:443 CPU/(67033:67034): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:42:23:487 CPU/(67033:67034): Datos enviados correctamente
+[TRACE] 04:42:23:531 CPU/(67033:67034): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:42:23:531 CPU/(67033:67034): Comenzar ejecucion del proceso: 5.
+[INFO] 04:42:23:532 CPU/(67033:67034): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:42:23:532 CPU/(67033:67034): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7fc4bc000be8 - Valor: HOLA
+ 
+[INFO] 04:42:23:532 CPU/(67033:67034): PID: 5 - Ejecutando: MOV_IN BX 120
+[TRACE] 04:42:23:532 CPU/(67033:67034): Recibi Instruccion: 
+[INFO] 04:47:02:128 CPU/(67399:67399): Logger creado
+[INFO] 04:47:02:128 CPU/(67399:67399): -------Valores del config-------
+[INFO] 04:47:02:128 CPU/(67399:67399): Retardo Instrucción = 1000
+[INFO] 04:47:02:128 CPU/(67399:67399): IP Memoria = 127.0.0.1
+[INFO] 04:47:02:129 CPU/(67399:67399): Puerto Memoria = 8002
+[INFO] 04:47:02:129 CPU/(67399:67399): Puerto Escucha = 8001
+[INFO] 04:47:02:129 CPU/(67399:67399): Tamanio maximo de segmento = 128
+[INFO] 04:47:02:129 CPU/(67399:67399): --------------------------------
+[INFO] 04:47:02:129 CPU/(67399:67399): ¡CPU iniciado correctamente!
+[TRACE] 04:47:02:129 CPU/(67399:67399): Listo para escuchar a mi cliente
+[INFO] 04:47:02:129 CPU/(67399:67399): Servidor listo para recibir al cliente
+[INFO] 04:47:02:130 CPU/(67399:67401): Conexion establecida con Memoria
+[TRACE] 04:47:02:993 CPU/(67399:67400): Se conecto un cliente!
+[TRACE] 04:47:02:993 CPU/(67399:67400): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:47:04:256 CPU/(67399:67400): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:47:04:256 CPU/(67399:67400): Comenzar ejecucion del proceso: 5.
+[INFO] 04:47:04:256 CPU/(67399:67400): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:47:04:257 CPU/(67399:67400): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 04:47:04:257 CPU/(67399:67400): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:47:04:300 CPU/(67399:67400): Datos enviados correctamente
+[TRACE] 04:47:04:342 CPU/(67399:67400): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:47:04:343 CPU/(67399:67400): Comenzar ejecucion del proceso: 5.
+[INFO] 04:47:04:343 CPU/(67399:67400): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 04:47:04:343 CPU/(67399:67400): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:47:04:387 CPU/(67399:67400): Datos enviados correctamente
+[TRACE] 04:47:04:431 CPU/(67399:67400): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:47:04:431 CPU/(67399:67400): Comenzar ejecucion del proceso: 5.
+[INFO] 04:47:04:431 CPU/(67399:67400): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:47:04:431 CPU/(67399:67400): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7fade0000be8 - Valor: HOLA
+ 
+[INFO] 04:47:04:431 CPU/(67399:67400): PID: 5 - Ejecutando: MOV_IN BX 120
+[TRACE] 04:47:04:432 CPU/(67399:67400): Me llego el mensaje: C�=*d
+[INFO] 04:48:15:547 CPU/(67470:67470): Logger creado
+[INFO] 04:48:15:548 CPU/(67470:67470): -------Valores del config-------
+[INFO] 04:48:15:548 CPU/(67470:67470): Retardo Instrucción = 1000
+[INFO] 04:48:15:548 CPU/(67470:67470): IP Memoria = 127.0.0.1
+[INFO] 04:48:15:549 CPU/(67470:67470): Puerto Memoria = 8002
+[INFO] 04:48:15:549 CPU/(67470:67470): Puerto Escucha = 8001
+[INFO] 04:48:15:549 CPU/(67470:67470): Tamanio maximo de segmento = 128
+[INFO] 04:48:15:549 CPU/(67470:67470): --------------------------------
+[INFO] 04:48:15:549 CPU/(67470:67470): ¡CPU iniciado correctamente!
+[TRACE] 04:48:15:549 CPU/(67470:67470): Listo para escuchar a mi cliente
+[INFO] 04:48:15:549 CPU/(67470:67470): Servidor listo para recibir al cliente
+[INFO] 04:48:15:550 CPU/(67470:67472): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8002, reintentando...
+[TRACE] 04:48:16:452 CPU/(67470:67471): Se conecto un cliente!
+[TRACE] 04:48:16:452 CPU/(67470:67471): Me llego el mensaje: Conectado al Kernel
+[INFO] 04:48:16:550 CPU/(67470:67472): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8002, reintentando...
+[INFO] 04:48:17:551 CPU/(67470:67472): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8002, reintentando...
+[INFO] 04:48:18:551 CPU/(67470:67472): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8002, reintentando...
+[INFO] 04:48:19:552 CPU/(67470:67472): Hubo un fallo al conectarse al modulo Memoria 127.0.0.1:8002, reintentando...
+[INFO] 04:51:49:676 CPU/(68004:68004): Logger creado
+[INFO] 04:51:49:676 CPU/(68004:68004): -------Valores del config-------
+[INFO] 04:51:49:676 CPU/(68004:68004): Retardo Instrucción = 1000
+[INFO] 04:51:49:676 CPU/(68004:68004): IP Memoria = 127.0.0.1
+[INFO] 04:51:49:676 CPU/(68004:68004): Puerto Memoria = 8002
+[INFO] 04:51:49:677 CPU/(68004:68004): Puerto Escucha = 8001
+[INFO] 04:51:49:677 CPU/(68004:68004): Tamanio maximo de segmento = 128
+[INFO] 04:51:49:677 CPU/(68004:68004): --------------------------------
+[INFO] 04:51:49:677 CPU/(68004:68004): ¡CPU iniciado correctamente!
+[TRACE] 04:51:49:677 CPU/(68004:68004): Listo para escuchar a mi cliente
+[INFO] 04:51:49:677 CPU/(68004:68004): Servidor listo para recibir al cliente
+[INFO] 04:51:49:678 CPU/(68004:68006): Conexion establecida con Memoria
+[TRACE] 04:51:50:779 CPU/(68004:68005): Se conecto un cliente!
+[TRACE] 04:51:50:779 CPU/(68004:68005): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:51:52:581 CPU/(68004:68005): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:51:52:581 CPU/(68004:68005): Comenzar ejecucion del proceso: 5.
+[INFO] 04:51:52:581 CPU/(68004:68005): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:51:52:582 CPU/(68004:68005): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 04:51:52:582 CPU/(68004:68005): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:51:52:623 CPU/(68004:68005): Datos enviados correctamente
+[TRACE] 04:51:52:667 CPU/(68004:68005): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:51:52:667 CPU/(68004:68005): Comenzar ejecucion del proceso: 5.
+[INFO] 04:51:52:667 CPU/(68004:68005): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 04:51:52:667 CPU/(68004:68005): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:51:52:711 CPU/(68004:68005): Datos enviados correctamente
+[TRACE] 04:51:52:755 CPU/(68004:68005): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:51:52:755 CPU/(68004:68005): Comenzar ejecucion del proceso: 5.
+[INFO] 04:51:52:755 CPU/(68004:68005): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:51:52:755 CPU/(68004:68005): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7f7d90000be8 - Valor: HOLA
+ 
+[INFO] 04:51:52:755 CPU/(68004:68005): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 04:51:52:755 CPU/(68004:68005): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:51:52:755 CPU/(68004:68005): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:51:52:800 CPU/(68004:68005): Datos enviados correctamente
+[INFO] 04:53:30:071 CPU/(68088:68088): Logger creado
+[INFO] 04:53:30:072 CPU/(68088:68088): -------Valores del config-------
+[INFO] 04:53:30:072 CPU/(68088:68088): Retardo Instrucción = 1000
+[INFO] 04:53:30:072 CPU/(68088:68088): IP Memoria = 127.0.0.1
+[INFO] 04:53:30:072 CPU/(68088:68088): Puerto Memoria = 8002
+[INFO] 04:53:30:072 CPU/(68088:68088): Puerto Escucha = 8001
+[INFO] 04:53:30:072 CPU/(68088:68088): Tamanio maximo de segmento = 128
+[INFO] 04:53:30:072 CPU/(68088:68088): --------------------------------
+[INFO] 04:53:30:072 CPU/(68088:68088): ¡CPU iniciado correctamente!
+[TRACE] 04:53:30:073 CPU/(68088:68088): Listo para escuchar a mi cliente
+[INFO] 04:53:30:073 CPU/(68088:68088): Servidor listo para recibir al cliente
+[INFO] 04:53:30:073 CPU/(68088:68090): Conexion establecida con Memoria
+[TRACE] 04:53:30:877 CPU/(68088:68089): Se conecto un cliente!
+[TRACE] 04:53:30:877 CPU/(68088:68089): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:53:31:856 CPU/(68088:68089): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:53:31:856 CPU/(68088:68089): Comenzar ejecucion del proceso: 5.
+[INFO] 04:53:31:856 CPU/(68088:68089): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:53:31:857 CPU/(68088:68089): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 04:53:31:857 CPU/(68088:68089): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:53:31:899 CPU/(68088:68089): Datos enviados correctamente
+[TRACE] 04:53:31:943 CPU/(68088:68089): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:53:31:943 CPU/(68088:68089): Comenzar ejecucion del proceso: 5.
+[INFO] 04:53:31:943 CPU/(68088:68089): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 04:53:31:943 CPU/(68088:68089): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:53:31:987 CPU/(68088:68089): Datos enviados correctamente
+[TRACE] 04:53:32:030 CPU/(68088:68089): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:53:32:031 CPU/(68088:68089): Comenzar ejecucion del proceso: 5.
+[INFO] 04:53:32:031 CPU/(68088:68089): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:53:32:031 CPU/(68088:68089): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7fe4a4000be8 - Valor: HOLA
+ 
+[INFO] 04:53:32:031 CPU/(68088:68089): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 04:53:32:031 CPU/(68088:68089): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:53:32:031 CPU/(68088:68089): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:53:32:075 CPU/(68088:68089): Datos enviados correctamente
+[INFO] 04:55:30:773 CPU/(68241:68241): Logger creado
+[INFO] 04:55:30:774 CPU/(68241:68241): -------Valores del config-------
+[INFO] 04:55:30:774 CPU/(68241:68241): Retardo Instrucción = 1000
+[INFO] 04:55:30:774 CPU/(68241:68241): IP Memoria = 127.0.0.1
+[INFO] 04:55:30:774 CPU/(68241:68241): Puerto Memoria = 8002
+[INFO] 04:55:30:774 CPU/(68241:68241): Puerto Escucha = 8001
+[INFO] 04:55:30:774 CPU/(68241:68241): Tamanio maximo de segmento = 128
+[INFO] 04:55:30:774 CPU/(68241:68241): --------------------------------
+[INFO] 04:55:30:775 CPU/(68241:68241): ¡CPU iniciado correctamente!
+[TRACE] 04:55:30:775 CPU/(68241:68241): Listo para escuchar a mi cliente
+[INFO] 04:55:30:775 CPU/(68241:68241): Servidor listo para recibir al cliente
+[INFO] 04:55:30:775 CPU/(68241:68243): Conexion establecida con Memoria
+[TRACE] 04:55:31:620 CPU/(68241:68242): Se conecto un cliente!
+[TRACE] 04:55:31:620 CPU/(68241:68242): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:55:32:550 CPU/(68241:68242): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:55:32:550 CPU/(68241:68242): Comenzar ejecucion del proceso: 5.
+[INFO] 04:55:32:550 CPU/(68241:68242): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:55:32:551 CPU/(68241:68242): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 04:55:32:551 CPU/(68241:68242): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:55:32:591 CPU/(68241:68242): Datos enviados correctamente
+[TRACE] 04:55:32:634 CPU/(68241:68242): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:55:32:635 CPU/(68241:68242): Comenzar ejecucion del proceso: 5.
+[INFO] 04:55:32:635 CPU/(68241:68242): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 04:55:32:635 CPU/(68241:68242): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:55:32:679 CPU/(68241:68242): Datos enviados correctamente
+[TRACE] 04:55:32:723 CPU/(68241:68242): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:55:32:723 CPU/(68241:68242): Comenzar ejecucion del proceso: 5.
+[INFO] 04:55:32:723 CPU/(68241:68242): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:55:32:723 CPU/(68241:68242): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7fd9e8000be8 - Valor: HOLA
+ 
+[INFO] 04:55:32:723 CPU/(68241:68242): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 04:55:32:723 CPU/(68241:68242): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:55:32:723 CPU/(68241:68242): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:55:32:767 CPU/(68241:68242): Datos enviados correctamente
+[INFO] 04:59:19:501 CPU/(68481:68481): Logger creado
+[INFO] 04:59:19:502 CPU/(68481:68481): -------Valores del config-------
+[INFO] 04:59:19:502 CPU/(68481:68481): Retardo Instrucción = 1000
+[INFO] 04:59:19:502 CPU/(68481:68481): IP Memoria = 127.0.0.1
+[INFO] 04:59:19:502 CPU/(68481:68481): Puerto Memoria = 8002
+[INFO] 04:59:19:502 CPU/(68481:68481): Puerto Escucha = 8001
+[INFO] 04:59:19:502 CPU/(68481:68481): Tamanio maximo de segmento = 128
+[INFO] 04:59:19:502 CPU/(68481:68481): --------------------------------
+[INFO] 04:59:19:502 CPU/(68481:68481): ¡CPU iniciado correctamente!
+[TRACE] 04:59:19:503 CPU/(68481:68481): Listo para escuchar a mi cliente
+[INFO] 04:59:19:503 CPU/(68481:68481): Servidor listo para recibir al cliente
+[INFO] 04:59:19:503 CPU/(68481:68483): Conexion establecida con Memoria
+[TRACE] 04:59:23:681 CPU/(68481:68482): Se conecto un cliente!
+[TRACE] 04:59:23:681 CPU/(68481:68482): Me llego el mensaje: Conectado al Kernel
+[TRACE] 04:59:25:813 CPU/(68481:68482): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:59:25:813 CPU/(68481:68482): Comenzar ejecucion del proceso: 5.
+[INFO] 04:59:25:813 CPU/(68481:68482): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 04:59:25:814 CPU/(68481:68482): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 04:59:25:814 CPU/(68481:68482): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:59:25:855 CPU/(68481:68482): Datos enviados correctamente
+[TRACE] 04:59:25:898 CPU/(68481:68482): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:59:25:899 CPU/(68481:68482): Comenzar ejecucion del proceso: 5.
+[INFO] 04:59:25:899 CPU/(68481:68482): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 04:59:25:899 CPU/(68481:68482): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:59:25:943 CPU/(68481:68482): Datos enviados correctamente
+[TRACE] 04:59:25:986 CPU/(68481:68482): Recibi contexto de ejecucion - PID: 5
+[INFO] 04:59:25:986 CPU/(68481:68482): Comenzar ejecucion del proceso: 5.
+[INFO] 04:59:25:987 CPU/(68481:68482): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 04:59:25:987 CPU/(68481:68482): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7fc414000be8 - Valor: HOLA
+ 
+[INFO] 04:59:25:987 CPU/(68481:68482): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 04:59:25:987 CPU/(68481:68482): PID: 5 - Ejecutando: EXIT
+[TRACE] 04:59:25:987 CPU/(68481:68482): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 04:59:26:031 CPU/(68481:68482): Datos enviados correctamente
+[INFO] 05:00:46:521 CPU/(68584:68584): Logger creado
+[INFO] 05:00:46:521 CPU/(68584:68584): -------Valores del config-------
+[INFO] 05:00:46:521 CPU/(68584:68584): Retardo Instrucción = 1000
+[INFO] 05:00:46:521 CPU/(68584:68584): IP Memoria = 127.0.0.1
+[INFO] 05:00:46:521 CPU/(68584:68584): Puerto Memoria = 8002
+[INFO] 05:00:46:521 CPU/(68584:68584): Puerto Escucha = 8001
+[INFO] 05:00:46:521 CPU/(68584:68584): Tamanio maximo de segmento = 128
+[INFO] 05:00:46:522 CPU/(68584:68584): --------------------------------
+[INFO] 05:00:46:522 CPU/(68584:68584): ¡CPU iniciado correctamente!
+[TRACE] 05:00:46:522 CPU/(68584:68584): Listo para escuchar a mi cliente
+[INFO] 05:00:46:522 CPU/(68584:68584): Servidor listo para recibir al cliente
+[INFO] 05:00:46:522 CPU/(68584:68586): Conexion establecida con Memoria
+[TRACE] 05:00:47:294 CPU/(68584:68585): Se conecto un cliente!
+[TRACE] 05:00:47:294 CPU/(68584:68585): Me llego el mensaje: Conectado al Kernel
+[TRACE] 05:00:48:758 CPU/(68584:68585): Recibi contexto de ejecucion - PID: 5
+[INFO] 05:00:48:758 CPU/(68584:68585): Comenzar ejecucion del proceso: 5.
+[INFO] 05:00:48:758 CPU/(68584:68585): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 05:00:48:759 CPU/(68584:68585): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 05:00:48:759 CPU/(68584:68585): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 05:00:48:799 CPU/(68584:68585): Datos enviados correctamente
+[TRACE] 05:00:48:842 CPU/(68584:68585): Recibi contexto de ejecucion - PID: 5
+[INFO] 05:00:48:843 CPU/(68584:68585): Comenzar ejecucion del proceso: 5.
+[INFO] 05:00:48:843 CPU/(68584:68585): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 05:00:48:843 CPU/(68584:68585): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 05:00:48:887 CPU/(68584:68585): Datos enviados correctamente
+[TRACE] 05:00:48:930 CPU/(68584:68585): Recibi contexto de ejecucion - PID: 5
+[INFO] 05:00:48:931 CPU/(68584:68585): Comenzar ejecucion del proceso: 5.
+[INFO] 05:00:48:931 CPU/(68584:68585): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 05:00:48:931 CPU/(68584:68585): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7f2920000be8 - Valor: HOLA
+ 
+[INFO] 05:00:48:931 CPU/(68584:68585): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 05:00:48:931 CPU/(68584:68585): PID: 5 - Ejecutando: EXIT
+[TRACE] 05:00:48:931 CPU/(68584:68585): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 05:00:48:975 CPU/(68584:68585): Datos enviados correctamente
+[INFO] 05:03:13:572 CPU/(68838:68838): Logger creado
+[INFO] 05:03:13:572 CPU/(68838:68838): -------Valores del config-------
+[INFO] 05:03:13:573 CPU/(68838:68838): Retardo Instrucción = 1000
+[INFO] 05:03:13:573 CPU/(68838:68838): IP Memoria = 127.0.0.1
+[INFO] 05:03:13:573 CPU/(68838:68838): Puerto Memoria = 8002
+[INFO] 05:03:13:573 CPU/(68838:68838): Puerto Escucha = 8001
+[INFO] 05:03:13:573 CPU/(68838:68838): Tamanio maximo de segmento = 128
+[INFO] 05:03:13:573 CPU/(68838:68838): --------------------------------
+[INFO] 05:03:13:573 CPU/(68838:68838): ¡CPU iniciado correctamente!
+[TRACE] 05:03:13:574 CPU/(68838:68838): Listo para escuchar a mi cliente
+[INFO] 05:03:13:574 CPU/(68838:68838): Servidor listo para recibir al cliente
+[INFO] 05:03:13:574 CPU/(68838:68840): Conexion establecida con Memoria
+[TRACE] 05:03:14:432 CPU/(68838:68839): Se conecto un cliente!
+[TRACE] 05:03:14:432 CPU/(68838:68839): Me llego el mensaje: Conectado al Kernel
+[TRACE] 05:03:15:640 CPU/(68838:68839): Recibi contexto de ejecucion - PID: 5
+[INFO] 05:03:15:640 CPU/(68838:68839): Comenzar ejecucion del proceso: 5.
+[INFO] 05:03:15:640 CPU/(68838:68839): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 05:03:15:641 CPU/(68838:68839): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 05:03:15:642 CPU/(68838:68839): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 05:03:15:684 CPU/(68838:68839): Datos enviados correctamente
+[TRACE] 05:03:15:727 CPU/(68838:68839): Recibi contexto de ejecucion - PID: 5
+[INFO] 05:03:15:727 CPU/(68838:68839): Comenzar ejecucion del proceso: 5.
+[INFO] 05:03:15:727 CPU/(68838:68839): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 05:03:15:727 CPU/(68838:68839): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 05:03:15:771 CPU/(68838:68839): Datos enviados correctamente
+[TRACE] 05:03:15:815 CPU/(68838:68839): Recibi contexto de ejecucion - PID: 5
+[INFO] 05:03:15:815 CPU/(68838:68839): Comenzar ejecucion del proceso: 5.
+[INFO] 05:03:15:815 CPU/(68838:68839): PID: 5 - Ejecutando: MOV_OUT 120 AX
+[INFO] 05:03:15:815 CPU/(68838:68839): PID: 5 - Accion: ESCRIBIR - Segmento: 0 - Direccion Fisica: 0x7f4700000be8 - Valor: HOLA
+ 
+[INFO] 05:03:15:815 CPU/(68838:68839): PID: 5 - Ejecutando: MOV_IN BX 120
+[INFO] 05:03:15:815 CPU/(68838:68839): PID: 5 - Ejecutando: EXIT
+[TRACE] 05:03:15:815 CPU/(68838:68839): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 05:03:15:859 CPU/(68838:68839): Datos enviados correctamente
