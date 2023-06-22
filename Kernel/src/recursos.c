@@ -23,13 +23,15 @@ void descontar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger){
 	recurso->cantidad -= 1;
 	log_info(logger, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, recurso->nombre, recurso->cantidad);
 	if (recurso->cantidad < 0){
+		estimar_rafaga(pcb);
 		list_add(recurso->listaBloqueados, pcb);
 		log_cambiar_estado(pcb->pid, pcb->estado, BLOCKED);
 		log_info(logger, "PID: %d - Bloqueado por: %s", pcb->pid, recurso->nombre);
 		pcb->estado = BLOCKED;
 	} else {
-		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
-		//sem_post(&cantidad_procesos_ready);
+		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);//vuelve a ejecutar el mismo proceso
+		devolver_ejecucion = 1;
+		pcb_ejecutando = pcb;
 	}
 }
 
@@ -39,7 +41,6 @@ void sumar_recurso(t_recurso* recurso, int pid, t_log* logger){
 	if (list_size(recurso->listaBloqueados) > 0){
 		t_pcb* pcb_bloqueado = list_remove(recurso->listaBloqueados, 0);
 		log_info(logger, "PID: %d - Desbloqueado por: %s", pcb_bloqueado->pid, recurso->nombre);
-		ingresar_en_lista(pcb_bloqueado, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
-		//sem_post(&cantidad_procesos_ready);
+		mandar_a_ready(pcb_bloqueado);
 	}
 }

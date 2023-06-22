@@ -249,16 +249,12 @@ void ejecutar_segun_motivo(char* motivo){
 	switch(cod_instruccion) {
 
 	case WAIT:
-		estimar_rafaga(pcb_a_ejecutar);
+		//estimar_rafaga(pcb_a_ejecutar);-> solo se estima si el proceso de bloquea
 		char** parametros = string_split(motivo, " ");
 		existeRecurso = recurso_existe(parametros[1]);
 		if (existeRecurso == -1){
 			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: WAIT - %s ", pcb_a_ejecutar->pid, parametros[1]);
-			log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
-			pcb_a_ejecutar->estado = EXITT;
-			sem_post(&semaforo_multiprogramacion);
-			enviar_mensaje("-1", pcb_a_ejecutar->pid);
-			liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+			finalizar_proceso(pcb_a_ejecutar, "INVALID_RESOURCE");
 		} else {
 			descontar_recurso(list_get(lista_recursos, existeRecurso), pcb_a_ejecutar, kernel_logger);//vuelve a poner al proceso en ready
 			//imprimir_recurso(list_get(lista_recursos, existeRecurso));
@@ -270,13 +266,7 @@ void ejecutar_segun_motivo(char* motivo){
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		break;
 	case EXIT:
-		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
-		pcb_a_ejecutar->estado = EXITT;
-		sem_post(&semaforo_multiprogramacion);
-		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SUCCESS ", pcb_a_ejecutar->pid);
-		enviar_mensaje("-1", pcb_a_ejecutar->pid);
-		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
-		liberar_pcb(pcb_a_ejecutar);
+		finalizar_proceso(pcb_a_ejecutar, "SUCCESS");
 		break;
 	case SIGNAL:
 		//estimar_rafaga(pcb_a_ejecutar);-> no haria falta estimar rafaga por que sigue el mismo proceso
@@ -285,10 +275,7 @@ void ejecutar_segun_motivo(char* motivo){
 
 		if (existeRecurso == -1){
 			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SIGNAL - %s ", pcb_a_ejecutar->pid, parametros[1]);
-			pcb_a_ejecutar->estado = EXITT;
-			sem_post(&semaforo_multiprogramacion);
-			enviar_mensaje("-1", pcb_a_ejecutar->pid);
-			liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+			finalizar_proceso(pcb_a_ejecutar, "INVALID_RESOURCE");
 		} else {
 			ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 			devolver_ejecucion = 1;
@@ -446,19 +433,11 @@ void ejecutar_segun_motivo(char* motivo){
 		break;
 
 	case MOV_IN: //CPU solo comunica a Kernel cuando hay SEG_FAULT
-		pcb_a_ejecutar->estado = EXITT;
-		sem_post(&semaforo_multiprogramacion);
-		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SEG_FAULT", pcb_a_ejecutar->pid);
-		enviar_mensaje("-1", pcb_a_ejecutar->pid);
-		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+		finalizar_proceso(pcb_a_ejecutar, "SEG_FAULT");
 		break;
 
 	case MOV_OUT: //CPU solo comunica a Kernel cuando hay SEG_FAULT
-		pcb_a_ejecutar->estado = EXITT;
-		sem_post(&semaforo_multiprogramacion);
-		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SEG_FAULT", pcb_a_ejecutar->pid);
-		enviar_mensaje("-1", pcb_a_ejecutar->pid);
-		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+		finalizar_proceso(pcb_a_ejecutar, "SEG_FAULT");
 		break;
 
 	default:
@@ -474,11 +453,10 @@ void finalizar_proceso(t_pcb* pcb, char* motivo){
 	sem_post(&semaforo_multiprogramacion);
 	log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb->pid, motivo);
 	enviar_mensaje("-1", pcb->pid);
-	//liberar_recursos(pcb);
+	//liberar_recursos(pcb);->IMPLEMENTAR
 	liberar_archivos(pcb);
 	liberar_conexion(pcb->pid, kernel_logger);
 	liberar_pcb(pcb);
-
 }
 
 void liberar_archivos(t_pcb* pcb){

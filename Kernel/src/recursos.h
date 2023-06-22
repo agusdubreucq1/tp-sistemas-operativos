@@ -24,11 +24,14 @@
 
 	extern pthread_mutex_t semaforo_ready;
 	extern sem_t cantidad_procesos_ready;
+	extern int devolver_ejecucion;
+	extern t_pcb* pcb_ejecutando;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
-
+	extern void estimar_rafaga(t_pcb* pcb);
+	extern void mandar_a_ready(t_pcb* pcb);
 	int recurso_existe(char* nombre);
 	void descontar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger);
 	void sumar_recurso(t_recurso* recurso, int pid, t_log* logger);
