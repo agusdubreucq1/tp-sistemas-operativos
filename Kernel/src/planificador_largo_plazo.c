@@ -20,16 +20,19 @@ void ingresar_en_lista(t_pcb* pcb, t_list* lista, char* modulo, pthread_mutex_t*
 
 	if(strcmp(modulo, "READY")==0){
 		char* log_cola_ready = string_new();
-		strcat(log_cola_ready, "[");
+		string_append(&log_cola_ready, "[");
 		for(int i=0; i<list_size(lista); i++){
 			t_pcb* pcb_logueado = list_get(lista, i);
-			strcat(log_cola_ready, string_itoa(pcb_logueado->pid));
+			//char* string_pid = string_itoa(pcb_logueado->pid);
+			string_append(&log_cola_ready, string_itoa(pcb_logueado->pid));
+			//free(string_pid);
 			if(i!= (list_size(lista)-1)){
-				strcat(log_cola_ready, ", ");
+				string_append(&log_cola_ready, ", ");
 			}
 		}
-		strcat(log_cola_ready, "]");
+		string_append(&log_cola_ready, "]");
 		log_info(kernel_logger,"Cola Ready %s : %s",algoritmo_planificacion, log_cola_ready);
+		free(log_cola_ready);
 	}
 pthread_mutex_unlock(semaforo_mutex);
 }

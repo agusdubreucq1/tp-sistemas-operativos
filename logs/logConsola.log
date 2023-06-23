@@ -7903,7 +7903,6 @@ d��dU
 [TRACE] 14:04:50:172 Consola/(4376:4376): Datos enviados, esperando respuesta de Kernel...
 [TRACE] 14:04:50:173 Consola/(4376:4376): Datos enviados correctamente
 [INFO] 14:04:57:392 Consola/(4376:4376): Cerrando conexion
-<<<<<<< HEAD
 [INFO] 17:12:36:254 Consola/(21587:21587): Logger creado
 [INFO] 17:12:36:256 Consola/(21587:21587): ¡Consola iniciada correctamente!
 [INFO] 17:12:36:256 Consola/(21587:21587): -------Valores del config-------
@@ -9848,7 +9847,6 @@ d��dU
 [TRACE] 03:22:25:158 Consola/(23930:23930): Datos enviados, esperando respuesta de Kernel...
 [TRACE] 03:22:25:158 Consola/(23930:23930): Datos enviados correctamente
 [INFO] 03:22:36:524 Consola/(23930:23930): Cerrando conexion
-<<<<<<< HEAD
 [INFO] 04:09:45:158 Consola/(43373:43373): Logger creado
 [INFO] 04:09:45:216 Consola/(43373:43373): ¡Consola iniciada correctamente!
 [INFO] 04:09:45:216 Consola/(43373:43373): -------Valores del config-------
@@ -10080,7 +10078,6 @@ d��dU
 [TRACE] 10:36:48:441 Consola/(14198:14198): Datos enviados correctamente
 [INFO] 10:36:59:614 Consola/(14195:14195): Cerrando conexion
 [INFO] 10:37:09:957 Consola/(14198:14198): Cerrando conexion
->>>>>>> main
 [INFO] 17:58:46:121 Consola/(48011:48011): Logger creado
 [INFO] 17:58:46:122 Consola/(48011:48011): ¡Consola iniciada correctamente!
 [INFO] 17:58:46:122 Consola/(48011:48011): -------Valores del config-------
@@ -10331,7 +10328,6 @@ d��dU
 [TRACE] 01:42:36:821 Consola/(56519:56519): Datos enviados, esperando respuesta de Kernel...
 [TRACE] 01:42:36:821 Consola/(56519:56519): Datos enviados correctamente
 [INFO] 01:42:48:125 Consola/(56519:56519): Cerrando conexion
-<<<<<<< HEAD
 [INFO] 21:40:08:534 Consola/(57608:57608): Logger creado
 [INFO] 21:40:08:535 Consola/(57608:57608): ¡Consola iniciada correctamente!
 [INFO] 21:40:08:535 Consola/(57608:57608): -------Valores del config-------
@@ -11424,3 +11420,44 @@ d��dU
 [TRACE] 21:21:17:580 Consola/(273508:273508): Datos enviados, esperando respuesta de Kernel...
 [TRACE] 21:21:17:580 Consola/(273508:273508): Datos enviados correctamente
 [INFO] 21:21:17:584 Consola/(273508:273508): Cerrando conexion
+=======
+[INFO] 02:27:39:772 Consola/(3357:3357): Logger creado
+[INFO] 02:27:39:773 Consola/(3357:3357): ¡Consola iniciada correctamente!
+[INFO] 02:27:39:773 Consola/(3357:3357): -------Valores del config-------
+[INFO] 02:27:39:773 Consola/(3357:3357): Ip = 127.0.0.1
+[INFO] 02:27:39:773 Consola/(3357:3357): Puerto = 8000
+[INFO] 02:27:39:773 Consola/(3357:3357): --------------------------------
+[INFO] 02:27:39:775 Consola/(3357:3357): Conexion establecida con Kernel
+[TRACE] 02:27:39:775 Consola/(3357:3357): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:27:39:775 Consola/(3357:3357): Datos enviados correctamente
+[INFO] 02:27:41:011 Consola/(3359:3359): Logger creado
+[INFO] 02:27:41:012 Consola/(3359:3359): ¡Consola iniciada correctamente!
+[INFO] 02:27:41:012 Consola/(3359:3359): -------Valores del config-------
+[INFO] 02:27:41:012 Consola/(3359:3359): Ip = 127.0.0.1
+[INFO] 02:27:41:012 Consola/(3359:3359): Puerto = 8000
+[INFO] 02:27:41:012 Consola/(3359:3359): --------------------------------
+[INFO] 02:27:41:012 Consola/(3359:3359): Conexion establecida con Kernel
+[TRACE] 02:27:41:012 Consola/(3359:3359): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:27:41:013 Consola/(3359:3359): Datos enviados correctamente
+[INFO] 02:27:51:665 Consola/(3357:3357): Cerrando conexion
+[INFO] 02:27:51:666 Consola/(3359:3359): Cerrando conexion
+[INFO] 02:32:52:294 Consola/(3955:3955): Logger creado
+[INFO] 02:32:52:295 Consola/(3955:3955): ¡Consola iniciada correctamente!
+[INFO] 02:32:52:295 Consola/(3955:3955): -------Valores del config-------
+[INFO] 02:32:52:295 Consola/(3955:3955): Ip = 127.0.0.1
+[INFO] 02:32:52:295 Consola/(3955:3955): Puerto = 8000
+[INFO] 02:32:52:295 Consola/(3955:3955): --------------------------------
+[INFO] 02:32:52:296 Consola/(3955:3955): Conexion establecida con Kernel
+[TRACE] 02:32:52:296 Consola/(3955:3955): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:32:52:296 Consola/(3955:3955): Datos enviados correctamente
+[INFO] 02:32:53:521 Consola/(3961:3961): Logger creado
+[INFO] 02:32:53:521 Consola/(3961:3961): ¡Consola iniciada correctamente!
+[INFO] 02:32:53:521 Consola/(3961:3961): -------Valores del config-------
+[INFO] 02:32:53:521 Consola/(3961:3961): Ip = 127.0.0.1
+[INFO] 02:32:53:521 Consola/(3961:3961): Puerto = 8000
+[INFO] 02:32:53:521 Consola/(3961:3961): --------------------------------
+[INFO] 02:32:53:521 Consola/(3961:3961): Conexion establecida con Kernel
+[TRACE] 02:32:53:521 Consola/(3961:3961): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 02:32:53:521 Consola/(3961:3961): Datos enviados correctamente
+[INFO] 02:32:56:759 Consola/(3955:3955): Cerrando conexion
+[INFO] 02:32:57:638 Consola/(3961:3961): Cerrando conexion

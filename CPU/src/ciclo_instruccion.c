@@ -8,6 +8,7 @@ void comenzar_ciclo_instruccion() {
 	while(salida){
 		t_instruccion* instruccion = fetch_instruccion();
 		salida = ejecutar_instruccion(instruccion);
+		free(instruccion);
 	}
 }
 

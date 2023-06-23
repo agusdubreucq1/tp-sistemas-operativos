@@ -20,5 +20,8 @@ extern int cant_bloques;
 
 
 void levantar_superBloque(char* path, t_log* logger);
+int redondearArriba(double x);
+int bloques_necesarios(int bytes);
+
 
 #endif /* SUPERBLOQUE_H_ */
