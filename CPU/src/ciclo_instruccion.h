@@ -14,6 +14,7 @@
 #include <utils/cliente.h>
 #include <utils/serializar.h>
 #include <string.h>
+#include <utils/servidor.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Logger del proceso --

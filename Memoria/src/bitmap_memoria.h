@@ -27,18 +27,20 @@
 
 	extern char* tam_memoria;
 	extern t_bitarray* bitmap;
+	extern void *memoria_fisica;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
 // ------------------------------------------------------------------------------------------
 
 void inicializar_bitmap();
-void imprimir_bitmap(t_bitarray* bitmap);
-int validar_huecos_libres(t_bitarray*, int, int);
-void ocupar_bitmap(t_bitarray*, int, int);
-void liberar_bitmap(t_bitarray*, int, int);
-int first_fit_bitmap(t_bitarray*, int);
-int best_fit_bitmap(t_bitarray*, int);
-int worst_fit_bitmap(t_bitarray*, int);
+void imprimir_bitmap();
+int validar_huecos_libres(int, int);
+void ocupar_bitmap(int, int);
+void liberar_bitmap(int, int);
+int first_fit_bitmap(int);
+int best_fit_bitmap(int);
+int worst_fit_bitmap(int);
+int devolver_posicion_bitmap_segun_direccion(void *);
 
 #endif /* BITMAP_MEMORIA_H_ */

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #include "Memoria.h"
 
@@ -84,7 +85,8 @@ void* atenderCPU(){
 		int cod_op = recibir_operacion(socket_cpu);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_instruccion(socket_cpu, memoria_logger);
+			char* motivo = recibir_instruccion(socket_cpu, memoria_logger);
+			ejecutar_instruccion(motivo);
 			break;
 		}
 	}
@@ -139,7 +141,7 @@ void ejecutar_instruccion(char* motivo){
 
 			//t_segmento* segmento_nuevo = malloc(sizeof(t_segmento));
 			//segmento_nuevo = crear_segmento(base_elegida, limite_elegido);
-			ocupar_bitmap(bitmap, base_elegida - memoria_fisica, atoi(parametros[2]));
+			ocupar_bitmap(base_elegida - memoria_fisica, atoi(parametros[2]));
 			log_info(memoria_logger, "PID: %s - Crear Segmento: %s - Base: %p - TAMAÑO: %s", parametros[3], parametros[1], base_elegida, parametros[2]);
 			t_tabla_segmentos* tabla_buscada = buscar_tabla_proceso(atoi(parametros[3]));
 			t_segmento* segmento_nuevo = list_get(tabla_buscada->segmentos, atoi(parametros[1]));
@@ -178,6 +180,29 @@ void ejecutar_instruccion(char* motivo){
 		borrar_tabla(tabla_a_finalizar);
 		list_remove_element(tablas_segmentos, tabla_a_finalizar);
 		log_info(memoria_logger, "Eliminación de Proceso PID: %s", parametros[1]);
+		break;
+	case MOV_IN:
+
+		parametros = string_split(motivo, " ");
+		void *direccion_fisica_mov_in = (void *)strtoul(parametros[1], NULL, 16);
+		int tamanio_mov_in = atoi(parametros[2]);
+		char *valor_registro = malloc(tamanio_mov_in + 1);
+		memcpy(valor_registro, direccion_fisica_mov_in, tamanio_mov_in);
+		valor_registro[tamanio_mov_in] = '\0';
+		printf("\nValor_registro: %s", valor_registro);
+		enviar_mensaje(valor_registro, socket_cpu);
+
+
+		break;
+	case MOV_OUT:
+
+		parametros = string_split(motivo, " ");
+		void *direccion_fisica_mov_out = (void *)strtoul(parametros[1], NULL, 16);
+		char *valor = (char *)parametros[2];
+		int tamanio_mov_out = atoi(parametros[3]);
+		memcpy(direccion_fisica_mov_out, valor, tamanio_mov_out);
+		//imprimir_memoria();
+
 		break;
 	default:
 		break;

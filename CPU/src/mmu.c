@@ -26,7 +26,7 @@ int desplazamiento_valido(t_registros *registros, char *registro, int direccion_
 																			   registros_get_size(registros, registro),
 																			   desplazamiento_segmento);
 
-	if(desplazamiento_segmento >= atoi(tam_max_segmento)) {
+	if(desplazamiento_segmento > atoi(tam_max_segmento)) {
 		return 0;
 	}
 

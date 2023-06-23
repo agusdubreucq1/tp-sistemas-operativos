@@ -16,26 +16,6 @@ void registros_put(t_registros* registros, char* registro, char* nuevo_valor){
 	if(string_equals_ignore_case(registro, "rdx")) 	strncpy(registros->rdx, nuevo_valor, 16);
 }
 
-char* registros_get_value(t_registros* registros, char *registro){
-
-	char *valor_retorno = "";
-
-	if(string_equals_ignore_case(registro, "ax")) 	strncpy(valor_retorno, registros->ax, 4);
-	if(string_equals_ignore_case(registro, "bx")) 	strncpy(valor_retorno, registros->bx, 4);
-	if(string_equals_ignore_case(registro, "cx")) 	strncpy(valor_retorno, registros->cx, 4);
-	if(string_equals_ignore_case(registro, "dx")) 	strncpy(valor_retorno, registros->dx, 4);
-	if(string_equals_ignore_case(registro, "eax")) 	strncpy(valor_retorno, registros->eax, 8);
-	if(string_equals_ignore_case(registro, "ebx")) 	strncpy(valor_retorno, registros->ebx, 8);
-	if(string_equals_ignore_case(registro, "ecx")) 	strncpy(valor_retorno, registros->ecx, 8);
-	if(string_equals_ignore_case(registro, "edx")) 	strncpy(valor_retorno, registros->edx, 8);
-	if(string_equals_ignore_case(registro, "rax")) 	strncpy(valor_retorno, registros->rax, 16);
-	if(string_equals_ignore_case(registro, "rbx")) 	strncpy(valor_retorno, registros->rbx, 16);
-	if(string_equals_ignore_case(registro, "rcx")) 	strncpy(valor_retorno, registros->rcx, 16);
-	if(string_equals_ignore_case(registro, "rdx")) 	strncpy(valor_retorno, registros->rdx, 16);
-
-	return valor_retorno;
-}
-
 int registros_get_size(t_registros* registros, char *registro){
 
 	int size;
@@ -53,6 +33,27 @@ int registros_get_size(t_registros* registros, char *registro){
 	if(string_equals_ignore_case(registro, "rdx")) 	size = 16;
 
 	return size;
+}
+
+char* registros_get_value(t_registros* registros, char *registro){
+
+	char *valor_retorno = malloc(registros_get_size(registros, registro)+1);
+
+	if(string_equals_ignore_case(registro, "ax")) 	strncpy(valor_retorno, registros->ax, 4);
+	if(string_equals_ignore_case(registro, "bx")) 	strncpy(valor_retorno, registros->bx, 4);
+	if(string_equals_ignore_case(registro, "cx")) 	strncpy(valor_retorno, registros->cx, 4);
+	if(string_equals_ignore_case(registro, "dx")) 	strncpy(valor_retorno, registros->dx, 4);
+	if(string_equals_ignore_case(registro, "eax")) 	strncpy(valor_retorno, registros->eax, 8);
+	if(string_equals_ignore_case(registro, "ebx")) 	strncpy(valor_retorno, registros->ebx, 8);
+	if(string_equals_ignore_case(registro, "ecx")) 	strncpy(valor_retorno, registros->ecx, 8);
+	if(string_equals_ignore_case(registro, "edx")) 	strncpy(valor_retorno, registros->edx, 8);
+	if(string_equals_ignore_case(registro, "rax")) 	strncpy(valor_retorno, registros->rax, 16);
+	if(string_equals_ignore_case(registro, "rbx")) 	strncpy(valor_retorno, registros->rbx, 16);
+	if(string_equals_ignore_case(registro, "rcx")) 	strncpy(valor_retorno, registros->rcx, 16);
+	if(string_equals_ignore_case(registro, "rdx")) 	strncpy(valor_retorno, registros->rdx, 16);
+
+	strcat(valor_retorno, "\0");
+	return valor_retorno;
 }
 
 void iniciar_registros(t_registros* registros){
