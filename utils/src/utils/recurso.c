@@ -10,7 +10,7 @@
 t_recurso* crear_recurso(char* nombre, int cantidad){
 	t_recurso* recurso = malloc(sizeof(t_recurso));
 	recurso->nombre = string_new();
-	strcat(recurso->nombre,nombre);
+	string_append(&recurso->nombre,nombre);
 	recurso->cantidad = cantidad;
 	recurso->listaBloqueados = list_create();
 

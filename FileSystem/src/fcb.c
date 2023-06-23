@@ -7,14 +7,38 @@
 
 #include "fcb.h"
 
-t_fcb* crear_fcb(char* nombre, uint32_t directo, uint32_t indirecto){
-	t_fcb* fcb = malloc(sizeof(t_fcb));
-	fcb->nombre_archivo = nombre;
-	fcb->tamano_archivo = 0;
-	fcb->puntero_directo = directo;
-	fcb->puntero_indirecto = indirecto;
-	return fcb;
+
+t_fcb* crear_fcb(char* nombre){
+	t_fcb* fcb_nuevo= malloc(sizeof(t_fcb));
+	fcb_nuevo->nombre_archivo = string_new();
+	string_append(&fcb_nuevo->nombre_archivo, nombre);
+	fcb_nuevo->tamano_archivo = 0;
+	fcb_nuevo->puntero_directo = NULL;
+	fcb_nuevo->puntero_indirecto = NULL;
+	char* path = string_new();
+	string_append(&path, path_fcb);
+	string_append(&path, "/");
+	string_append(&path, nombre);
+	string_append(&path, ".dat");
+	FILE* f = fopen(path, "wr");
+	fprintf(f, "NOMBRE_ARCHIVO=%s\nTAMANIO_ARCHIVO=0\nPUNTERO_DIRECTO=\nPUNTERO_INDIRECTO=", nombre);
+	fclose(f);
+
+
+	return fcb_nuevo;
 }
+
+void grabar_fcb(t_fcb* fcb){
+	char* path = string_new();
+	string_append(&path, path_fcb);
+	string_append(&path, "/");
+	string_append(&path, fcb->nombre_archivo);
+	string_append(&path, ".dat");
+	FILE* f = fopen(path, "wr");
+	fprintf(f, "NOMBRE_ARCHIVO=%s\nTAMANIO_ARCHIVO=%d\nPUNTERO_DIRECTO=%d\nPUNTERO_INDIRECTO=%d", fcb->nombre_archivo, fcb->tamano_archivo, fcb->puntero_directo, fcb->puntero_indirecto);
+	fclose(f);
+}
+
 
 void inicializar_fcbs(){
     DIR* directory = opendir(path_fcb);
@@ -34,32 +58,5 @@ void inicializar_fcbs(){
     }
     closedir(directory);
 }
-
-void leer_fcb(char* nombre){
-	printf("AAAAAAAA");
-	//printf("Ruta %s", path_fcb);
-	//printf("Ruta %s", nombre);
-	char* path_archivo = "";
-	//printf("Ruta %s", path_archivo);
-	strcat(path_archivo, path_fcb);
-	printf("Ruta %s", path_archivo);
-
-	//strcat(path_archivo, "/");
-	//strcat(path_archivo, nombre);
-
-	//printf("Ruta %s", path_archivo);
-
-	/*t_config* config_fcb = config_create(path_fcb);
-
-	tamanio_bloque = config_get_int_value(configSuperBloque, "BLOCK_SIZE");
-	cant_bloques = config_get_int_value(configSuperBloque, "BLOCK_COUNT");
-	log_trace(logger, "Super Bloque Montado");
-	log_trace(logger, "Tamaño de Bloque: %d", tamanio_bloque);
-	log_trace(logger, "Cantidad de Bloques: %d", cant_bloques);
-	config_destroy(configSuperBloque);*/
-}
-
-
-
 
 

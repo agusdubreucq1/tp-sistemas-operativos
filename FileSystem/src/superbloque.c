@@ -16,3 +16,13 @@ void levantar_superBloque(char* path, t_log* logger){
 	log_trace(logger, "Cantidad de Bloques: %d", cant_bloques);
 	config_destroy(configSuperBloque);
 }
+
+
+int bloques_necesarios(int bytes){
+	return redondearArriba(bytes/(float)tamanio_bloque);
+}
+
+int redondearArriba(double x){
+	int i = (int)x;
+	return i + (x > i);
+}

@@ -14,7 +14,10 @@
 #include <string.h>
 #include <commons/collections/list.h>
 #include <commons/log.h>
+#include <commons/string.h>
 #include <stdlib.h>
+#include "bitmap.h"
+
 
 // ------------------------------------------------------------------------------------------
 // -- Estructuras--
@@ -35,8 +38,10 @@ extern t_log* fileSystem_logger;
 // ------------------------------------------------------------------------------------------
 
 
-t_fcb* crear_fcb(char* nombre, uint32_t directo, uint32_t indirecto);
+
+t_fcb* crear_fcb(char* nombre);
 void inicializar_fcbs();
-void leer_fcb(char* name);
+void grabar_fcb(t_fcb* fcb);
+//void leer_fcb(char* name);
 
 #endif /* FCB_H_ */

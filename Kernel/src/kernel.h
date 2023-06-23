@@ -4,6 +4,7 @@
 
 #include "config.h"
 #include "recursos.h"
+#include "archivo.h"
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -77,6 +78,7 @@
 	t_list* lista_new;
 	t_list* lista_ready;
 	t_list* lista_recursos;
+	t_list* lista_archivos_abiertos;
 
 	int devolver_ejecucion;
 	t_pcb* pcb_ejecutando;
@@ -89,6 +91,7 @@
 	pthread_mutex_t semaforo_new;
 	pthread_mutex_t semaforo_ready;
 	pthread_mutex_t semaforo_execute;
+	pthread_mutex_t sem_fileSystem;
 
 	struct timeval tiempo;
 	long long hora_inicio;
@@ -122,11 +125,19 @@
 	t_pcb* pcb_elegido_HRRN();
 	void estimar_rafaga(t_pcb* pcb);
 	void ejecutar_io(t_thread_args* args);
+	void liberar_pcb(t_pcb* pcb);
+	void liberar_elemento_list(void* elemento);
+	void liberar_contexto_kernel(t_pcb* pcb);
 	void imprimirSemaforos();
 	char* recibir_mensaje_filesystem();
 	void recibir_mensaje_memoria();
 	void ejecutar_motivo_memoria(char* motivo);
-
-
+	void truncar(t_args_truncar* args);
+	void cerrar_archivo(char* nombre_archivo, t_pcb* pcb);
+	void liberar_archivos(t_pcb* pcb);
+	void mandar_a_ready(t_pcb* pcb);
+	void actualizar_llegada_a_ready(t_pcb* pcb);
+	void finalizar_proceso(t_pcb* pcb, char* motivo);
+	void liberar_recursos(t_pcb* pcb);
 
 #endif /* KERNEL_H_ */
