@@ -76,7 +76,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 									direccion_base+desplazamiento_segmento);
 
 				enviar_mensaje(mensaje_mov_in, socket_memoria);
-				int cop_op = recibir_operacion(socket_memoria);
+				recibir_operacion(socket_memoria);
 
 				char *valor_registro_nuevo = recibir_instruccion(socket_memoria, cpu_logger);
 				//valor_registro_nuevo[strlen(valor_registro_nuevo)] = '\0';
