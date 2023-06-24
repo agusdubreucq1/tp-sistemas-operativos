@@ -13,6 +13,7 @@ void inicializar_bitmap(){
     char* bloque = (char*) malloc(atoi(tam_memoria)/8);
 
 	bitmap = bitarray_create_with_mode(bloque , atoi(tam_memoria)/8, MSB_FIRST);
+	liberar_bitmap(0, atoi(tam_memoria));
 	//imprimir_bitmap(bitmap);
 	free(bloque);
 }
