@@ -76,13 +76,14 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 									direccion_base+desplazamiento_segmento);
 
 				enviar_mensaje(mensaje_mov_in, socket_memoria);
+				int cop_op = recibir_operacion(socket_memoria);
 
 				char *valor_registro_nuevo = recibir_instruccion(socket_memoria, cpu_logger);
 				//valor_registro_nuevo[strlen(valor_registro_nuevo)] = '\0';
 
 				registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], valor_registro_nuevo);
 				printf("\nValor del registro que me llega de MOV IN: %s", valor_registro_nuevo);
-				//imprimir_registros(contexto_de_ejecucion->registros_cpu);
+				print_registos(contexto_de_ejecucion->registros_cpu);
 			}
 
 			salida = 1;
