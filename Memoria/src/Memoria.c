@@ -188,6 +188,7 @@ void ejecutar_instruccion(char* motivo){
 		int tamanio_mov_in = atoi(parametros[2]);
 		char *valor_registro = malloc(tamanio_mov_in + 1);
 		memcpy(valor_registro, direccion_fisica_mov_in, tamanio_mov_in);
+		usleep(atoi(retardo_memoria) * 1000);
 		valor_registro[tamanio_mov_in] = '\0';
 		printf("\nValor_registro: %s", valor_registro);
 		enviar_mensaje(valor_registro, socket_cpu);
@@ -201,6 +202,7 @@ void ejecutar_instruccion(char* motivo){
 		char *valor = (char *)parametros[2];
 		int tamanio_mov_out = atoi(parametros[3]);
 		memcpy(direccion_fisica_mov_out, valor, tamanio_mov_out);
+		usleep(atoi(retardo_memoria) * 1000);
 		//imprimir_memoria();
 
 		break;

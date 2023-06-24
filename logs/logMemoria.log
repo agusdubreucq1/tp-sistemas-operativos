@@ -22800,3 +22800,39 @@
 [TRACE] 02:32:57:462 Memoria/(3910:3914): Datos enviados correctamente
 [TRACE] 02:32:57:638 Memoria/(3910:3914): Recibi Instruccion: FINALIZAR 9
 [INFO] 02:32:57:638 Memoria/(3910:3914): Eliminación de Proceso PID: 9
+[INFO] 03:16:52:732 Memoria/(71325:71325): Logger creado
+[INFO] 03:16:52:733 Memoria/(71325:71325): -------Valores del config-------
+[INFO] 03:16:52:733 Memoria/(71325:71325): puerto_escucha = 8002
+[INFO] 03:16:52:733 Memoria/(71325:71325): tamaño memoria = 4096
+[INFO] 03:16:52:733 Memoria/(71325:71325): tamaño segmento = 128
+[INFO] 03:16:52:733 Memoria/(71325:71325): cantidad de segmentos = 16
+[INFO] 03:16:52:734 Memoria/(71325:71325): retardo memoria = 1000
+[INFO] 03:16:52:734 Memoria/(71325:71325): retardo compactacion = 60000
+[INFO] 03:16:52:734 Memoria/(71325:71325): algoritmo asignacion = FIRST
+[INFO] 03:16:52:734 Memoria/(71325:71325): --------------------------------
+[INFO] 03:16:52:734 Memoria/(71325:71325): ¡Memoria iniciado correctamente!
+[TRACE] 03:16:52:734 Memoria/(71325:71325): Listo para escuchar a mi cliente
+[INFO] 03:16:52:735 Memoria/(71325:71325): Servidor listo para recibir al cliente
+[TRACE] 03:16:53:411 Memoria/(71325:71327): Se conecto un cliente!
+[TRACE] 03:16:53:411 Memoria/(71325:71327): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 03:16:54:301 Memoria/(71325:71328): Se conecto un cliente!
+[TRACE] 03:16:54:302 Memoria/(71325:71328): Recibi Instruccion: Conectado al CPU
+[TRACE] 03:16:55:945 Memoria/(71325:71329): Se conecto un cliente!
+[INFO] 03:16:55:945 Memoria/(71325:71326): Espacio reservado: 4096 Bytes -> Direccion: 0x7f6688000b70
+[TRACE] 03:16:55:946 Memoria/(71325:71329): Recibi Instruccion: Conectado al Kernel
+[TRACE] 03:16:57:177 Memoria/(71325:71329): Recibi Instruccion: INICIAR 5
+[INFO] 03:16:57:177 Memoria/(71325:71329): Creación de Proceso PID: 5
+[TRACE] 03:16:57:177 Memoria/(71325:71329): Datos enviados, esperando respuesta de kernel...
+[TRACE] 03:16:57:177 Memoria/(71325:71329): Datos enviados correctamente
+[TRACE] 03:17:05:986 Memoria/(71325:71329): Recibi Instruccion: CREATE_SEGMENT 1 103 5
+[INFO] 03:17:05:986 Memoria/(71325:71329): PID: 5 - Crear Segmento: 1 - Base: 0x7f6688000bf0 - TAMAÑO: 103
+[TRACE] 03:17:06:074 Memoria/(71325:71329): Recibi Instruccion: CREATE_SEGMENT 2 64 5
+[INFO] 03:17:06:074 Memoria/(71325:71329): PID: 5 - Crear Segmento: 2 - Base: 0x7f6688000c57 - TAMAÑO: 64
+[TRACE] 03:17:06:118 Memoria/(71325:71328): Recibi Instruccion: MOV_OUT 0x7f6688000c38 HOLA? 4
+[TRACE] 03:17:07:118 Memoria/(71325:71328): Recibi Instruccion: MOV_IN 0x7f6688000c38 4
+[TRACE] 03:17:08:119 Memoria/(71325:71328): Recibi Instruccion: MOV_OUT 0x7f6688000c97 TROLAZOO 8
+[TRACE] 03:17:09:119 Memoria/(71325:71328): Recibi Instruccion: MOV_IN 0x7f6688000c97 8
+[TRACE] 03:17:10:119 Memoria/(71325:71328): Recibi Instruccion: MOV_IN 0x7f6688000c9b 4
+[TRACE] 03:17:11:121 Memoria/(71325:71328): Recibi Instruccion: MOV_OUT 0x7f6688000c98 ESPERMATOZOIDESS 16
+[TRACE] 03:17:11:121 Memoria/(71325:71329): Recibi Instruccion: FINALIZAR 5
+[INFO] 03:17:11:121 Memoria/(71325:71329): Eliminación de Proceso PID: 5

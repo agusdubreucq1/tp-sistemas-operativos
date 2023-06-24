@@ -45391,3 +45391,57 @@ c
 [INFO] 02:32:57:594 CPU/(3926:3927): PID: 9 - Ejecutando: EXIT
 [TRACE] 02:32:57:594 CPU/(3926:3927): Datos enviados, esperando respuesta de Kernel...
 [TRACE] 02:32:57:638 CPU/(3926:3927): Datos enviados correctamente
+[INFO] 03:16:54:300 CPU/(71333:71333): Logger creado
+[INFO] 03:16:54:300 CPU/(71333:71333): -------Valores del config-------
+[INFO] 03:16:54:300 CPU/(71333:71333): Retardo Instrucción = 1000
+[INFO] 03:16:54:300 CPU/(71333:71333): IP Memoria = 127.0.0.1
+[INFO] 03:16:54:300 CPU/(71333:71333): Puerto Memoria = 8002
+[INFO] 03:16:54:301 CPU/(71333:71333): Puerto Escucha = 8001
+[INFO] 03:16:54:301 CPU/(71333:71333): Tamanio maximo de segmento = 128
+[INFO] 03:16:54:301 CPU/(71333:71333): --------------------------------
+[INFO] 03:16:54:301 CPU/(71333:71333): ¡CPU iniciado correctamente!
+[TRACE] 03:16:54:301 CPU/(71333:71333): Listo para escuchar a mi cliente
+[INFO] 03:16:54:301 CPU/(71333:71333): Servidor listo para recibir al cliente
+[INFO] 03:16:54:302 CPU/(71333:71335): Conexion establecida con Memoria
+[TRACE] 03:16:55:947 CPU/(71333:71334): Se conecto un cliente!
+[TRACE] 03:16:55:947 CPU/(71333:71334): Me llego el mensaje: Conectado al Kernel
+[TRACE] 03:17:05:945 CPU/(71333:71334): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:17:05:945 CPU/(71333:71334): Comenzar ejecucion del proceso: 5.
+[INFO] 03:17:05:945 CPU/(71333:71334): PID: 5 - Ejecutando: SET AX HOLA
+[INFO] 03:17:05:946 CPU/(71333:71334): PID: 5 - Ejecutando: SET EAX TROLAZOO
+[INFO] 03:17:05:948 CPU/(71333:71334): PID: 5 - Ejecutando: SET RAX ESPERMATOZOIDESS
+[INFO] 03:17:05:949 CPU/(71333:71334): PID: 5 - Ejecutando: CREATE_SEGMENT 1 103
+[TRACE] 03:17:05:949 CPU/(71333:71334): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:17:05:987 CPU/(71333:71334): Datos enviados correctamente
+[TRACE] 03:17:06:030 CPU/(71333:71334): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:17:06:030 CPU/(71333:71334): Comenzar ejecucion del proceso: 5.
+[INFO] 03:17:06:030 CPU/(71333:71334): PID: 5 - Ejecutando: CREATE_SEGMENT 2 64
+[TRACE] 03:17:06:030 CPU/(71333:71334): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:17:06:074 CPU/(71333:71334): Datos enviados correctamente
+[TRACE] 03:17:06:118 CPU/(71333:71334): Recibi contexto de ejecucion - PID: 5
+[INFO] 03:17:06:118 CPU/(71333:71334): Comenzar ejecucion del proceso: 5.
+[INFO] 03:17:06:118 CPU/(71333:71334): PID: 5 - Ejecutando: MOV_OUT 200 AX
+[INFO] 03:17:06:118 CPU/(71333:71334): PID: 5 - Accion: ESCRIBIR - Segmento: 1 - Direccion Fisica: 0x7f6688000c38 - Valor: HOLA?
+ 
+[INFO] 03:17:06:118 CPU/(71333:71334): PID: 5 - Ejecutando: MOV_IN BX 200
+[INFO] 03:17:06:118 CPU/(71333:71334): PID: 5 - Accion: LEER - Segmento: 1 - Direccion Fisica: 0x7f6688000c38 - Valor: 
+ 
+[TRACE] 03:17:08:118 CPU/(71333:71334): Recibi Instruccion: HOLA
+[INFO] 03:17:08:118 CPU/(71333:71334): PID: 5 - Ejecutando: MOV_OUT 320 EAX
+[INFO] 03:17:08:119 CPU/(71333:71334): PID: 5 - Accion: ESCRIBIR - Segmento: 2 - Direccion Fisica: 0x7f6688000c97 - Valor: TROLAZOO
+ 
+[INFO] 03:17:08:119 CPU/(71333:71334): PID: 5 - Ejecutando: MOV_IN EDX 320
+[INFO] 03:17:08:119 CPU/(71333:71334): PID: 5 - Accion: LEER - Segmento: 2 - Direccion Fisica: 0x7f6688000c97 - Valor: 
+ 
+[TRACE] 03:17:10:119 CPU/(71333:71334): Recibi Instruccion: TROLAZOO
+[INFO] 03:17:10:119 CPU/(71333:71334): PID: 5 - Ejecutando: MOV_IN CX 324
+[INFO] 03:17:10:119 CPU/(71333:71334): PID: 5 - Accion: LEER - Segmento: 2 - Direccion Fisica: 0x7f6688000c9b - Valor: 
+ 
+[TRACE] 03:17:11:121 CPU/(71333:71334): Recibi Instruccion: AZOO
+[INFO] 03:17:11:121 CPU/(71333:71334): PID: 5 - Ejecutando: MOV_OUT 321 RAX
+[INFO] 03:17:11:121 CPU/(71333:71334): PID: 5 - Accion: ESCRIBIR - Segmento: 2 - Direccion Fisica: 0x7f6688000c98 - Valor: ESPERMATOZOIDESS
+ 
+[INFO] 03:17:11:121 CPU/(71333:71334): PID: 5 - Ejecutando: EXIT
+[TRACE] 03:17:11:121 CPU/(71333:71334): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 03:17:11:122 CPU/(71333:71334): Datos enviados correctamente
+[INFO] 03:17:24:119 CPU/(71333:71334): Comenzar ejecucion del proceso: 5.
