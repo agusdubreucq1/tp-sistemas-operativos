@@ -10,16 +10,16 @@
 
 void inicializar_bitmap(){
 
-    char* bloque = (char*) malloc(atoi(tam_memoria));
+    char* bloque = (char*) malloc(atoi(tam_memoria)/8);
 
-	bitmap = bitarray_create_with_mode(bloque ,atoi(tam_memoria), MSB_FIRST);
+	bitmap = bitarray_create_with_mode(bloque , atoi(tam_memoria)/8, MSB_FIRST);
 	//imprimir_bitmap(bitmap);
 	free(bloque);
 }
 
 void imprimir_bitmap(){
 
-	for (int i = 0; i < bitmap->size; i++) {
+	for (int i = 0; i < bitmap->size*8; i++) {
     	//bitarray_clean_bit(bitmap, i);
         printf("%d", bitarray_test_bit(bitmap, i));
     }
@@ -57,7 +57,7 @@ int first_fit_bitmap(int tamanio) {
 
 	int cont_huecos_libres = 0;
 
-	for (int i = 0; i < bitmap->size; i++) {
+	for (int i = 0; i < bitmap->size*8; i++) {
 		if (cont_huecos_libres == tamanio) {
 			return i-tamanio;
 			//Devuelve la primera posicion tal que bitmap[posicion] esta libre y tiene *tamanio* huecos libres contiguos
@@ -77,11 +77,11 @@ int first_fit_bitmap(int tamanio) {
 int best_fit_bitmap(int tamanio) {
 
     int posicion_best_fit = -1;
-    int best_fit_size = bitmap->size + 1;
+    int best_fit_size = bitmap->size*8 + 1;
     int fit_size_actual = 0;
     int posicion_actual = -1;
 
-    for (int i = 0; i < bitmap->size; i++) {
+    for (int i = 0; i < bitmap->size*8; i++) {
             if (bitarray_test_bit(bitmap, i) == 0) {
                 if (posicion_actual == -1) {
                 	posicion_actual = i;
@@ -111,7 +111,7 @@ int worst_fit_bitmap(int tamanio) {
     int fit_size_actual = 0;
     int posicion_actual = -1;
 
-    for (int i = 0; i < bitmap->size; i++) {
+    for (int i = 0; i < bitmap->size*8; i++) {
         if (bitarray_test_bit(bitmap, i) == 0) {
             if (posicion_actual == -1) {
             	posicion_actual = i;
@@ -136,7 +136,7 @@ int worst_fit_bitmap(int tamanio) {
 
 int devolver_posicion_bitmap_segun_direccion(void *direccion_memoria) {
 	printf("\nEntre a devolver_posicion_bitmap_segun_direccion!");
-	for (int i=0; i<bitmap->size; i++) {
+	for (int i=0; i<bitmap->size*8; i++) {
 		if ((memoria_fisica+i) == direccion_memoria) {
 			printf("\n%p == %p\nEl hueco libre es: %d", memoria_fisica, direccion_memoria, i);
 			return i;
