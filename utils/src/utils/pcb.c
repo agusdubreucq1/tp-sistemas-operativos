@@ -92,6 +92,7 @@ void print_registos(t_registros* registros){
 	print_registro("RBX",16, registros->rbx);
 	print_registro("RCX",16, registros->rcx);
 	print_registro("RDX",16, registros->rdx);
+	printf("\n\n");
 }
 
 void print_registro(char* nombre, int tamanio, char* registro){

@@ -48,5 +48,7 @@
 	char* concatenar_mensaje_con_3_parametros(char mensaje[30], t_instruccion* instruccion);
 	char* concatenar_mensaje_con_2_parametros(char mensaje[30], t_instruccion* instruccion);
 	char* concatenar_mensaje_con_1_parametro(char mensaje[30], t_instruccion* instruccion);
+	void liberar_contexto(t_contexto_ejecucion* contexto);
+	void liberar_elemento_list(void* elemento);
 
 #endif /* CICLO_DE_INSTRUCCION_H_ */

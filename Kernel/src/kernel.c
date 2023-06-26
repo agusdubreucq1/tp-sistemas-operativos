@@ -185,6 +185,7 @@ void recibir_mensaje_memoria(){
 
 			*tam_recibido+=2*sizeof(int);
 			send(socket_memoria, tam_recibido, sizeof(int), 0);
+			break;
 		default: break;
 	}
 }
@@ -317,8 +318,6 @@ void recibir_mensaje_cpu(){
 			send(socket_cpu, tam_recibido, sizeof(int), 0);
 			free(tam_recibido);
 			free(buffer);
-			free(motivo);
-
 	}
 }
 
@@ -506,8 +505,8 @@ void ejecutar_segun_motivo(char* motivo){
 
 		char numero[4];
 		sprintf(numero, "%d", pcb_a_ejecutar->pid);
-		strcat(motivo, " ");
-		strcat(motivo, numero);
+		string_append(&motivo, " ");
+		string_append(&motivo, numero);
 		strcat(ultima_instruccion, motivo);
 
 		enviar_mensaje(motivo, socket_memoria);
@@ -520,8 +519,8 @@ void ejecutar_segun_motivo(char* motivo){
 
 		char numero_str[4];
 		sprintf(numero_str, "%d", pcb_a_ejecutar->pid);
-		strcat(motivo, " ");
-		strcat(motivo, numero_str);
+		string_append(&motivo, " ");
+		string_append(&motivo, numero_str);
 		strcat(ultima_instruccion, motivo);
 
 		memset(ultima_instruccion, 0, sizeof(ultima_instruccion));
@@ -548,7 +547,6 @@ void ejecutar_segun_motivo(char* motivo){
 		break;
 	}
 	string_iterate_lines(parametros, (void*) free);
-	free(parametros);
 }
 
 void finalizar_proceso(t_pcb* pcb, char* motivo){
@@ -688,9 +686,6 @@ void liberar_elemento_list(void* elemento){
 	free(elemento);
 }
 
-void liberar_contexto_kernel(t_pcb* pcb){
-	free(pcb->registros_cpu);
-}
 
 void imprimirSemaforos(){
 	int semaphoreValue;
@@ -699,5 +694,9 @@ void imprimirSemaforos(){
 	printf("Semaforo Multi %d \n\n\n\n", semaphoreValue);
 	sem_getvalue(&cantidad_procesos_ready, &semaphoreValue);
 	printf("Semaforo Ready %d \n\n\n\n", semaphoreValue);
+}
+
+void liberar_contexto_kernel(t_pcb* pcb){
+	free(pcb->registros_cpu);
 }
 

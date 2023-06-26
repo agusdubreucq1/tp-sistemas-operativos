@@ -10,6 +10,7 @@ void comenzar_ciclo_instruccion() {
 		salida = ejecutar_instruccion(instruccion);
 		free(instruccion);
 	}
+	liberar_contexto(contexto_de_ejecucion);
 }
 
 t_instruccion* fetch_instruccion() {
@@ -107,12 +108,14 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 				char mensaje_mov_out[100] = "";
 
-				t_segmento* segmento = malloc(sizeof(t_segmento*));
+				t_segmento* segmento;
+				//= malloc(sizeof(t_segmento*));
 				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[0]));
 				segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, num_segmento);
 				int desplazamiento_segmento = obtener_desplazamiento_segmento(atoi(instruccion->parametro[0]));
 				void *direccion_base = segmento->direccion_base;
-				char* valor_registro = malloc(registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]));
+				char* valor_registro;
+				//= malloc(registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]));-> ya lo hace registros_get_value
 				valor_registro = registros_get_value(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
 				//valor_registro[strlen(valor_registro)] = '\0';
 				int tamanio_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
@@ -294,5 +297,16 @@ char* concatenar_mensaje_con_2_parametros(char mensaje[30], t_instruccion* instr
 char* concatenar_mensaje_con_1_parametro(char mensaje[30], t_instruccion* instruccion){
 	strcat(mensaje, instruccion->parametro[0]);
 	return mensaje;
+}
+
+void liberar_contexto(t_contexto_ejecucion* contexto){
+	free(contexto->registros_cpu);
+	list_destroy_and_destroy_elements(contexto->tabla_segmentos->segmentos, liberar_elemento_list);
+	free(contexto->tabla_segmentos);
+	free(contexto);
+}
+
+void liberar_elemento_list(void* elemento){
+	free(elemento);
 }
 

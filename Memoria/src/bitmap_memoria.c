@@ -11,11 +11,11 @@
 void inicializar_bitmap(){
 
     char* bloque = (char*) malloc(atoi(tam_memoria));
-
+    memset(bloque, 0, atoi(tam_memoria));
 	bitmap = bitarray_create_with_mode(bloque , atoi(tam_memoria), MSB_FIRST);
 	//liberar_bitmap(0, atoi(tam_memoria));
 	//imprimir_bitmap(bitmap);
-	free(bloque);
+	//free(bloque);-> no liberar el bloque, eso lo usa el bitmap todo el tiempo
 }
 
 void imprimir_bitmap(){
