@@ -303,6 +303,7 @@ void liberar_contexto(t_contexto_ejecucion* contexto){
 	free(contexto->registros_cpu);
 	list_destroy_and_destroy_elements(contexto->tabla_segmentos->segmentos, liberar_elemento_list);
 	free(contexto->tabla_segmentos);
+	list_destroy_and_destroy_elements(contexto->instrucciones, liberar_elemento_list);
 	free(contexto);
 }
 
