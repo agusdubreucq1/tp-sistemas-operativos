@@ -155,6 +155,7 @@ void planificarLargoPlazo(){
 		enviar_mensaje(mensaje, socket_memoria);
 		recibir_mensaje_memoria();
 
+		liberarTablaSegmentos(pcb);
 		pcb->tabla_segmentos = tablaNueva;
 		pcb->tabla_segmentos->segmentos = tablaNueva->segmentos;
 
@@ -170,21 +171,22 @@ void recibir_mensaje_memoria(){
 		case MENSAJE:
 			char* recibi = recibir_instruccion(socket_memoria, kernel_logger);
 			ejecutar_motivo_memoria(recibi);
+			free(recibi);
 			break;
 		case PAQUETE:
 			int size;
 			void* buffer;
-			int* tam_recibido = malloc(sizeof(int));
-			*tam_recibido = 0;
+			int tam_recibido = 0;
 			buffer = recibir_buffer(&size, socket_memoria);
 
-			tablaNueva = deserializar_segmentos(buffer, tam_recibido);
+			tablaNueva = deserializar_segmentos(buffer, &tam_recibido);
 			//printf("SASASASASAS\n\n\n");
 			//imprimir_segmentos(tablaNueva);
 			log_info(kernel_logger, "Recibi Tabla de Segmentos - PID: %d", tablaNueva->pid);
 
-			*tam_recibido+=2*sizeof(int);
-			send(socket_memoria, tam_recibido, sizeof(int), 0);
+			tam_recibido+=2*sizeof(int);
+			send(socket_memoria, &tam_recibido, sizeof(int), 0);
+			free(buffer);
 			break;
 		default: break;
 	}
@@ -199,16 +201,11 @@ void ejecutar_motivo_memoria(char* motivo){
 
 	switch(cod_instruccion) {
 	case OUT:
-		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
-		pcb_a_ejecutar->estado = EXITT;
-		sem_post(&semaforo_multiprogramacion);
-		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: OUT OF MEMORY ", pcb_a_ejecutar->pid);
-		enviar_mensaje("-1", pcb_a_ejecutar->pid);
-		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+		finalizar_proceso(pcb_a_ejecutar, "OUT OF MEMORY");
 		devolver_ejecucion = 0;
 		break;
 	case SEGMENT:
-		parametros = string_split(motivo, " ");
+		//parametros = string_split(motivo, " ");
 		instruccion = string_split(ultima_instruccion, " ");
 		memset(ultima_instruccion, 0, sizeof(ultima_instruccion));
 		t_segmento* segmento_nuevo = list_get(pcb_a_ejecutar->tabla_segmentos->segmentos, atoi(instruccion[1]));
@@ -304,27 +301,30 @@ void recibir_mensaje_cpu(){
 			int size;
 			void* buffer;
 			char* motivo;
-			int* tam_recibido= malloc(sizeof(int));
+			int tam_recibido= 0;
 			buffer = recibir_buffer(&size, socket_cpu);
 
 			liberar_contexto_kernel(pcb_a_ejecutar);//liberar el contexto del pcb, xq va a tener otro
-			deserializar_contexto(buffer,tam_recibido, pcb_a_ejecutar);
-			motivo = deserializar_motivo(buffer, tam_recibido);
+			deserializar_contexto(buffer,&tam_recibido, pcb_a_ejecutar);
+			motivo = deserializar_motivo(buffer, &tam_recibido);
 			log_trace(kernel_logger, "Recibi contexto de ejecucion - PID: %d", pcb_a_ejecutar->pid);
 			ejecutar_segun_motivo(motivo);
 			recibi_instruccion=0;
 
-			*tam_recibido+=2*sizeof(int);
-			send(socket_cpu, tam_recibido, sizeof(int), 0);
-			free(tam_recibido);
+			tam_recibido+=2*sizeof(int);
+			send(socket_cpu, &tam_recibido, sizeof(int), 0);
+			//free(tam_recibido);
 			free(buffer);
+			//free(motivo);
 	}
 }
 
 void ejecutar_segun_motivo(char* motivo){
 
-	char** parametros = string_split(motivo, " ");
+	char** parametros;
+	parametros = string_split(motivo, " ");
 	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(parametros[0]);
+
 
 	switch(cod_instruccion) {
 
@@ -526,6 +526,7 @@ void ejecutar_segun_motivo(char* motivo){
 		memset(ultima_instruccion, 0, sizeof(ultima_instruccion));
 		enviar_mensaje(motivo, socket_memoria);
 		recibir_mensaje_memoria();
+		liberarTablaSegmentos(pcb_a_ejecutar);
 		pcb_a_ejecutar->tabla_segmentos = tablaNueva;
 		pcb_a_ejecutar->tabla_segmentos->segmentos = tablaNueva->segmentos;
 		//imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
@@ -547,6 +548,7 @@ void ejecutar_segun_motivo(char* motivo){
 		break;
 	}
 	string_iterate_lines(parametros, (void*) free);
+	free(parametros);
 }
 
 void finalizar_proceso(t_pcb* pcb, char* motivo){
@@ -678,7 +680,9 @@ void cerrar_conexiones(){
 void liberar_pcb(t_pcb* pcb){
 	free(pcb->registros_cpu);
 	list_destroy_and_destroy_elements(pcb->instrucciones, liberar_elemento_list);
-	//list_destroy_and_destroy_elements(pcb->tabla_segmentos, liberar_elemento_list);->liberar de otra forma la tabla de segmentos
+	list_destroy_and_destroy_elements(pcb->recursos, liberar_elemento_list);
+	list_destroy_and_destroy_elements(pcb->tabla_archivos, liberar_elemento_list);
+	liberarTablaSegmentos(pcb);
 	free(pcb);
 }
 
@@ -694,6 +698,11 @@ void imprimirSemaforos(){
 	printf("Semaforo Multi %d \n\n\n\n", semaphoreValue);
 	sem_getvalue(&cantidad_procesos_ready, &semaphoreValue);
 	printf("Semaforo Ready %d \n\n\n\n", semaphoreValue);
+}
+
+void liberarTablaSegmentos(t_pcb* pcb){
+	list_destroy_and_destroy_elements(pcb->tabla_segmentos->segmentos, liberar_elemento_list);//->liberar de otra forma la tabla de segmentos
+	free(pcb->tabla_segmentos);
 }
 
 void liberar_contexto_kernel(t_pcb* pcb){
