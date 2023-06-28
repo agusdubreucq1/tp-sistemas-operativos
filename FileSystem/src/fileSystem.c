@@ -78,8 +78,11 @@ void recibir_mensaje_kernel(){
 	switch (cod_op) {
 		case MENSAJE:
 			char* mensaje = string_new();
-			string_append(&mensaje, recibir_instruccion(socket_Kernel, fileSystem_logger));
+			char* instruccion = recibir_instruccion(socket_Kernel, fileSystem_logger);
+			string_append(&mensaje, instruccion);
 			ejecutar_instruccion(mensaje);
+			free(mensaje);
+			free(instruccion);
 			break;
 		default: break;
 	}
@@ -91,7 +94,11 @@ void recibir_mensaje_memoria(){
 	switch (cod_op) {
 		case MENSAJE:
 			char* mensaje = string_new();
-			string_append(&mensaje, recibir_instruccion(socket_memoria, fileSystem_logger));
+			char* instruccion = recibir_instruccion(socket_memoria, fileSystem_logger);
+			string_append(&mensaje,instruccion);
+			//ejecutar
+			free(mensaje);
+			free(instruccion);
 			break;
 		default: break;
 	}
@@ -104,64 +111,9 @@ void inicializar_estructuras(){
 	inicializar_bloques();
 	inicializar_FCBs();
 
-	/*prueba para ver archivo de bloques
-	 * leerBloque(0);
-	leerBloque(1);
-	uint32_t num = 3;
-	FILE* file = fopen(path_bloques, "r+b");
-	fseek(file, 1*tamanio_bloque, SEEK_SET);
-	fwrite(&num,sizeof(uint32_t),1,file);
-	fclose(file);
-	leerBloque(1);*/
-
-	printf("todo creado");
-	//leer_fcb(prueba);
-
+	printf("todo creado\n");
 }
 
-void inicializar_FCBs(){
-	lista_fcb = list_create();
-	DIR *d;
-	struct dirent *dir;
-	    d = opendir(path_fcb);
-	    if (d) {
-	        while ((dir = readdir(d)) != NULL) {
-	        	if (dir->d_type == DT_REG) {
-					printf("%s\n", dir->d_name);
-					char* path = string_new();
-					string_append(&path, path_fcb);
-					string_append(&path, "/");
-					string_append(&path, dir->d_name);
-
-					t_config* fcb_config = config_create(path);
-					char* nombre = config_get_string_value(fcb_config, "NOMBRE_ARCHIVO");
-					uint32_t tamanio = config_get_int_value(fcb_config, "TAMANIO_ARCHIVO");
-					uint32_t puntero_directo = config_get_int_value(fcb_config, "PUNTERO_DIRECTO");
-					//printf("el puntero directo es: %d\n es igual a NULL:%d\n 0==NULL: %d\n", puntero_directo, puntero_directo==NULL, 0==NULL);
-					uint32_t puntero_indirecto = config_get_int_value(fcb_config, "PUNTERO_INDIRECTO");
-					printf("el puntero indirecto es: %d\n", puntero_indirecto);
-					printf("nombre: %s\n tamanio: %d\n pd: %d\n pi: %d\n", nombre, tamanio, puntero_directo, puntero_indirecto);
-
-					t_fcb* fcb = leer_fcb(nombre, tamanio, puntero_directo, puntero_indirecto);
-					list_add(lista_fcb, fcb);
-					config_destroy(fcb_config);
-					free(path);
-	        	}
-	        }
-	        closedir(d);
-	    }
-}
-
-t_fcb* leer_fcb(char* nombre, uint32_t tamanio, uint32_t puntero_directo, uint32_t puntero_indirecto){
-	t_fcb* fcb;
-	fcb = malloc(sizeof(t_fcb));
-	fcb->nombre_archivo = string_new();
-	string_append(&fcb->nombre_archivo, nombre);
-	fcb->tamano_archivo = tamanio;
-	fcb->puntero_directo = puntero_directo;
-	fcb->puntero_indirecto = puntero_indirecto;
-	return fcb;
-}
 
 int existe_archivo(char* nombre){
 	for(int i=0; i<list_size(lista_fcb);i++){
@@ -170,7 +122,6 @@ int existe_archivo(char* nombre){
 			return 1;
 		}
 	}
-
 	return 0;
 }
 
@@ -180,8 +131,6 @@ void crear_archivo(char* nombre){
 }
 
 void cambiar_tamanio(char* archivo, int tamanio){
-	leerBloque(1);
-	/*si cambio a tamaño 0, me los punteros me quedarian en 0? o tendrian un numero pero se tomaria como basura*/
 	t_fcb* fcb = fcb_segun_nombre(archivo);
 	int bloques_asignados = bloques_necesarios(fcb->tamano_archivo);
 	if(tamanio > fcb->tamano_archivo){
@@ -195,15 +144,10 @@ void cambiar_tamanio(char* archivo, int tamanio){
 					fcb->puntero_indirecto = asignar_bloque();
 					printf("\nse asigna el bloque %d como el puntero indirecto\n\n", fcb->puntero_indirecto);
 				}
-				FILE* archivo_bloques = fopen(path_bloques, "r+b");
 				uint32_t bloque_asignado = asignar_bloque();
 				int posicion = fcb->puntero_indirecto* tamanio_bloque + (bloques_asignados - 1)*4;//en el bloque de punteros, posicion segun los bloques ya asignados
-				printf("posicion: %d\nbloque_asignado: %d\n", posicion, bloque_asignado);
-				fseek(archivo_bloques, posicion, SEEK_SET);
-				//fprintf(archivo_bloques,"%u",bloque_asignado);
-				fwrite(&bloque_asignado,sizeof(uint32_t),1,archivo_bloques);
-				fclose(archivo_bloques);
-				leerBloque(fcb->puntero_indirecto);
+				printf("\nposicion: %d\nbloque_asignado: %d\n", posicion, bloque_asignado);
+				escribirArchivoBloques((void*)&bloque_asignado, posicion, sizeof(uint32_t));
 			}
 			bloques_asignados+=1;
 		}
@@ -217,15 +161,11 @@ void cambiar_tamanio(char* archivo, int tamanio){
 				printf("liberando PD: %d\n", fcb->puntero_directo);
 				bitarray_clean_bit(bitmap, fcb->puntero_directo);
 			}else{
-
-				FILE* archivo_bloques = fopen(path_bloques, "r+b");
 				int posicion = fcb->puntero_indirecto* tamanio_bloque + (bloques_asignados - 2)*4;
 				uint32_t bloque_a_liberar;
-				fseek(archivo_bloques, posicion, SEEK_SET);
-				fread(&bloque_a_liberar, sizeof(uint32_t),1, archivo_bloques);
-				printf("liberando PI: %d archivo bloques: %d\n", bloque_a_liberar, posicion);
+				leerArchivoBloques((void*)&bloque_a_liberar,posicion, sizeof(uint32_t));
+				printf("liberando bloque: %d\n", bloque_a_liberar);
 				bitarray_clean_bit(bitmap, bloque_a_liberar);
-				fclose(archivo_bloques);
 				if(bloques_asignados==2){
 					printf("\nlibero el puntero indirecto: %d \n", fcb->puntero_indirecto);
 					bitarray_clean_bit(bitmap, fcb->puntero_indirecto);//libero el bloque del puntero indirecto
@@ -243,16 +183,6 @@ void cambiar_tamanio(char* archivo, int tamanio){
 }
 
 
-
-t_fcb* fcb_segun_nombre(char* archivo){
-	for(int i=0;i<list_size(lista_fcb);i++){
-		t_fcb* fcb = list_get(lista_fcb, i);
-		if(string_equals_ignore_case(fcb->nombre_archivo, archivo)){
-			return fcb;
-		}
-	}
-	return NULL;
-}
 
 void ejecutar_instruccion(char* instruccion){
 	char** parametros = string_split(instruccion, " ");
@@ -277,7 +207,6 @@ void ejecutar_instruccion(char* instruccion){
 		case F_TRUNCATE:
 			char* archivo_truncar = parametros[1];
 			int tamanio = atoi(parametros[2]);
-			printf("se solicito truncar el archivo: %s", archivo_truncar);
 			cambiar_tamanio(archivo_truncar, tamanio);
 			log_info(fileSystem_logger, "truncar archivo: %s - tamaño: %d", archivo_truncar, tamanio);
 			enviar_mensaje("el filesystem trunco el archivo", socket_Kernel);
@@ -292,5 +221,7 @@ void ejecutar_instruccion(char* instruccion){
 		default:
 			break;
 	}
+	string_iterate_lines(parametros, (void*) free);
+	free(parametros);
 }
 

@@ -17,6 +17,7 @@
 #include <commons/string.h>
 #include <stdlib.h>
 #include "bitmap.h"
+#include <commons/config.h>
 
 
 // ------------------------------------------------------------------------------------------
@@ -32,6 +33,7 @@ typedef struct fcb {
 
 extern char* path_fcb;
 extern t_log* fileSystem_logger;
+extern t_list* lista_fcb;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
@@ -40,8 +42,11 @@ extern t_log* fileSystem_logger;
 
 
 t_fcb* crear_fcb(char* nombre);
-void inicializar_fcbs();
+//void inicializar_fcbs();
+void inicializar_FCBs();
 void grabar_fcb(t_fcb* fcb);
+t_fcb* fcb_segun_nombre(char* archivo);
+t_fcb* leer_fcb(char* nombre, uint32_t tamanio, uint32_t puntero_directo, uint32_t puntero_indirecto);
 //void leer_fcb(char* name);
 
 #endif /* FCB_H_ */

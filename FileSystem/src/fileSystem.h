@@ -70,13 +70,10 @@
 	void* conectarMemoria();
 	void recibir_mensaje_memoria();
 	void cerrar_fileSystem();
-
 	void ejecutar_instruccion(char* instruccion);
-	void inicializar_FCBs();
-	t_fcb* leer_fcb(char* nombre, uint32_t tamanio, uint32_t puntero_directo, uint32_t puntero_indirecto);
 	int existe_archivo(char* nombre);
 	void crear_archivo(char* nombre);
-	t_fcb* fcb_segun_nombre(char* archivo);
+
 
 
 // ------------------------------------------------------------------------------------------
