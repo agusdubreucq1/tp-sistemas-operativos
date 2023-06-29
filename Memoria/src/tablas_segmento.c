@@ -30,7 +30,8 @@ void borrar_tabla(t_tabla_segmentos* tabla){
 }
 
 t_tabla_segmentos* buscar_tabla_proceso(uint32_t pid){
-	t_tabla_segmentos* tabla = malloc(sizeof(t_tabla_segmentos));
+	t_tabla_segmentos* tabla;
+	//= malloc(sizeof(t_tabla_segmentos));
 	for (int i=0; i< list_size(tablas_segmentos); i++){
 		tabla = list_get(tablas_segmentos, i);
 		if (tabla->pid == pid){

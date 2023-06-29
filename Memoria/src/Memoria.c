@@ -57,6 +57,7 @@ void* atenderKernel(){
 		case MENSAJE:
 			char* recibi = recibir_instruccion(socket_kernel, memoria_logger);
 			ejecutar_instruccion(recibi);
+			free(recibi);
 			break;
 		case PAQUETE:
 			int size;
@@ -70,6 +71,7 @@ void* atenderKernel(){
 
 			*tam_recibido+=2*sizeof(int);
 			send(socket_kernel, tam_recibido, sizeof(int), 0);
+			free(buffer);
 			break;
 		}
 	}
@@ -87,6 +89,7 @@ void* atenderCPU(){
 		case MENSAJE:
 			char* motivo = recibir_instruccion(socket_cpu, memoria_logger);
 			ejecutar_instruccion(motivo);
+			free(motivo);
 			break;
 		}
 	}
@@ -102,7 +105,9 @@ void* atenderFileSystem(){
 		int cod_op = recibir_operacion(socket_filesystem);
 		switch (cod_op) {
 		case MENSAJE:
-			recibir_instruccion(socket_filesystem, memoria_logger);
+			char* instruccion = recibir_instruccion(socket_filesystem, memoria_logger);
+			//ejecutar
+			free(instruccion);
 			break;
 		}
 	}
@@ -133,6 +138,8 @@ void ejecutar_instruccion(char* motivo){
 			borrar_tabla(tabla_a_borrar);
 			list_remove_element(tablas_segmentos, tabla_a_borrar);
 			enviar_mensaje("OUT", socket_kernel);
+			list_destroy_and_destroy_elements(tabla_a_borrar->segmentos, liberar_elemento_list);
+			free(tabla_a_borrar);
 		} else if(!(strcmp(mensaje, "COMPACT"))){
 			enviar_mensaje("COMPACT", socket_kernel);
 		} else {
@@ -158,6 +165,7 @@ void ejecutar_instruccion(char* motivo){
 
 			enviar_mensaje(motivo, socket_kernel);
 		}
+		free(mensaje);
 		break;
 	case DELETE_SEGMENT:
 		parametros = string_split(motivo, " ");
@@ -173,12 +181,15 @@ void ejecutar_instruccion(char* motivo){
 		enviar_segmentos(tabla_del_segmento, socket_kernel);
 		//imprimir_bitmap(bitmap);
 		//list_remove_element(self, element)(tabla_del_segmento->segmentos);
+		//no hay que sacarlo de la t_list* tabla_del_segmento?
 		break;
 	case FINALIZAR:
 		parametros = string_split(motivo, " ");
 		t_tabla_segmentos* tabla_a_finalizar = buscar_tabla_proceso(atoi(parametros[1]));
 		borrar_tabla(tabla_a_finalizar);
 		list_remove_element(tablas_segmentos, tabla_a_finalizar);
+		list_destroy_and_destroy_elements(tabla_a_finalizar->segmentos, liberar_elemento_list);
+		free(tabla_a_finalizar);
 		log_info(memoria_logger, "Eliminación de Proceso PID: %s", parametros[1]);
 		break;
 	case MOV_IN:
@@ -192,8 +203,7 @@ void ejecutar_instruccion(char* motivo){
 		valor_registro[tamanio_mov_in] = '\0';
 		printf("\nValor_registro: %s", valor_registro);
 		enviar_mensaje(valor_registro, socket_cpu);
-
-
+		free(valor_registro);
 		break;
 	case MOV_OUT:
 
@@ -246,5 +256,9 @@ void cerrar_conexiones(){
 	//close(socket_Kernel);
 	printf("cerre conexiones");
 	exit(1);
+}
+
+void liberar_elemento_list(void* elemento){
+	free(elemento);
 }
 

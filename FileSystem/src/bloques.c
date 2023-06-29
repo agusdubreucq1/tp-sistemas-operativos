@@ -55,3 +55,17 @@ void leerBloque(int bloque){
 	printf("\n\n");
 	fclose(file);
 }
+
+void leerArchivoBloques(void* aLeer, int posicion, int cantidad){
+	FILE* archivo_bloques = fopen(path_bloques, "r+b");
+	fseek(archivo_bloques, posicion, SEEK_SET);
+	fread(aLeer, cantidad,1, archivo_bloques);
+	fclose(archivo_bloques);
+}
+
+void escribirArchivoBloques(void* aEscribir, int posicion, int cantidad){
+	FILE* archivo_bloques = fopen(path_bloques, "r+b");
+	fseek(archivo_bloques, posicion, SEEK_SET);
+	fwrite(aEscribir, cantidad,1, archivo_bloques);
+	fclose(archivo_bloques);
+}

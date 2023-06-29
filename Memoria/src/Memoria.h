@@ -78,5 +78,6 @@
 	void cerrar_conexiones();
 	void crear_estructuras();
 	void ejecutar_instruccion(char* motivo);
+	void liberar_elemento_list(void* elemento);
 
 #endif

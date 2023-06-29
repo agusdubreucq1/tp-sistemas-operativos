@@ -20,5 +20,7 @@ extern char* path_bloques;
 
 void inicializar_bloques();
 void leerBloque(int bloque);
+void leerArchivoBloques(void* aLeer, int posicion, int cantidad);
+void escribirArchivoBloques(void* aEscribir, int posicion, int cantidad);
 
 #endif /* BLOQUES_H_ */

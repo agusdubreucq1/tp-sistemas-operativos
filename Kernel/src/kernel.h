@@ -139,5 +139,6 @@
 	void actualizar_llegada_a_ready(t_pcb* pcb);
 	void finalizar_proceso(t_pcb* pcb, char* motivo);
 	void liberar_recursos(t_pcb* pcb);
+	void liberarTablaSegmentos(t_pcb* pcb);
 
 #endif /* KERNEL_H_ */
