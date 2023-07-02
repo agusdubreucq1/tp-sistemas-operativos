@@ -4,6 +4,7 @@
 #include "registros_cpu.h"
 #include <commons/string.h>
 #include <utils/datos.h>
+#include <stdint.h>
 //#include "cpu.h"
 
 // ------------------------------------------------------------------------------------------
@@ -11,6 +12,7 @@
 // ------------------------------------------------------------------------------------------
 
 	extern char *tam_max_segmento;
+	extern t_contexto_ejecucion* contexto_de_ejecucion;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
@@ -19,5 +21,6 @@
 	int obtener_num_segmento(int);
 	int obtener_desplazamiento_segmento(int);
 	int desplazamiento_valido(t_registros*, char*, int);
+	int direccion_fisica(int direccion_logica);
 
 #endif

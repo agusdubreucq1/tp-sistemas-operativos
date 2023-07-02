@@ -44,10 +44,6 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
 
-			//t_segmento* segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, 0);
-			//printf("\n\n Segmento cer0 %p", segmento->direccion_base);
-			//printf("\n\n Segmento cer0 %p", segmento->limite);
-
 			int es_desplazamiento_valido_in = desplazamiento_valido(contexto_de_ejecucion->registros_cpu,
 																	instruccion->parametro[0],
 															        atoi(instruccion->parametro[1]));
@@ -60,30 +56,25 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 				char mensaje_mov_in[100] = "";
 
-				t_segmento* segmento = malloc(sizeof(t_segmento*));
-				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[1]));
-				segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, num_segmento);
-				int desplazamiento_segmento = obtener_desplazamiento_segmento(atoi(instruccion->parametro[1]));
-				void *direccion_base = segmento->direccion_base;
+				int dir_logica = atoi(instruccion->parametro[1]);
+				int dir_fisica = direccion_fisica(dir_logica);
+
 				int tamanio_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0]);
 
-				sprintf(mensaje_mov_in, "MOV_IN %p %d", direccion_base+desplazamiento_segmento, tamanio_registro);
-				//concatena la direccion fisica y cuantos bytes leer
+				sprintf(mensaje_mov_in, "MOV_IN %p %d", (void *)(intptr_t)dir_fisica, tamanio_registro);//concatena la direccion fisica y cuantos bytes leer
 
-
-				log_info(cpu_logger, "PID: %u - Accion: LEER - Segmento: %u - Direccion Fisica: %p - Valor: \n ",
+				log_info(cpu_logger, "PID: %u - Accion: LEER - Direccion Fisica: %p - Tamaño:%d - Origen: CPU \n ",
 									contexto_de_ejecucion->pid,
-									num_segmento,
-									direccion_base+desplazamiento_segmento);
+									(void *)(intptr_t)dir_fisica,
+									tamanio_registro);
 
 				enviar_mensaje(mensaje_mov_in, socket_memoria);
 				recibir_operacion(socket_memoria);
 
 				char *valor_registro_nuevo = recibir_instruccion(socket_memoria, cpu_logger);
-				//valor_registro_nuevo[strlen(valor_registro_nuevo)] = '\0';
 
 				registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], valor_registro_nuevo);
-				printf("\nValor del registro que me llega de MOV IN: %s", valor_registro_nuevo);
+				printf("\nValor del registro que me llega de MOV IN: %s\n\n", valor_registro_nuevo);
 				print_registos(contexto_de_ejecucion->registros_cpu);
 			}
 
@@ -108,25 +99,18 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 				char mensaje_mov_out[100] = "";
 
-				t_segmento* segmento;
-				//= malloc(sizeof(t_segmento*));
-				int num_segmento = obtener_num_segmento(atoi(instruccion->parametro[0]));
-				segmento = list_get(contexto_de_ejecucion->tabla_segmentos->segmentos, num_segmento);
-				int desplazamiento_segmento = obtener_desplazamiento_segmento(atoi(instruccion->parametro[0]));
-				void *direccion_base = segmento->direccion_base;
+				int direccion_logica = atoi(instruccion->parametro[0]);
+				void* dir_fisica = (void *)(intptr_t)direccion_fisica(direccion_logica);
 				char* valor_registro;
-				//= malloc(registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]));-> ya lo hace registros_get_value
 				valor_registro = registros_get_value(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
-				//valor_registro[strlen(valor_registro)] = '\0';
 				int tamanio_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
 
-				sprintf(mensaje_mov_out, "MOV_OUT %p %s %d", direccion_base+desplazamiento_segmento, valor_registro, tamanio_registro);
-				//concatena la direccion fisica, el valor y cuantos bytes escribir
+				sprintf(mensaje_mov_out, "MOV_OUT %p %s %d", dir_fisica, valor_registro, tamanio_registro);//concatena la direccion fisica, el valor y cuantos bytes escribir
 
-				log_info(cpu_logger, "PID: %u - Accion: ESCRIBIR - Segmento: %u - Direccion Fisica: %p - Valor: %s\n ",
+				log_info(cpu_logger, "PID: %u - Accion: ESCRIBIR - Direccion Fisica: %p - Tamaño: %d - Origen: CPU\n ",
 									contexto_de_ejecucion->pid,
-									num_segmento,direccion_base+desplazamiento_segmento,
-									valor_registro);
+									(void *)(intptr_t)dir_fisica,//para castearlo a void*
+									tamanio_registro);
 
 				enviar_mensaje(mensaje_mov_out, socket_memoria);
 
