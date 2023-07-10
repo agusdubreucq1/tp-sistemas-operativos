@@ -30,6 +30,7 @@ int main(void) {
 	sem_init(&sem_conexiones, 0, 0);
 	sem_init(&sem_kernel, 0, 0);
 	sem_init(&sem_cpu, 0, 0);
+	pthread_mutex_init(&sem_execute_fileSystem, NULL);
 
 	pthread_create(&hilo_estructuras, NULL, (void *) crear_estructuras, NULL);
 	pthread_detach(hilo_estructuras);
@@ -105,8 +106,11 @@ void* atenderFileSystem(){
 		int cod_op = recibir_operacion(socket_filesystem);
 		switch (cod_op) {
 		case MENSAJE:
+			printf("\nRECIBI MENSJAE DE FILESYSTEM\n\n");
 			char* instruccion = recibir_instruccion(socket_filesystem, memoria_logger);
-			//ejecutar
+			pthread_mutex_lock(&sem_execute_fileSystem);
+			ejecutar_instruccion(instruccion);
+			pthread_mutex_unlock(&sem_execute_fileSystem);
 			free(instruccion);
 			break;
 		}
@@ -118,6 +122,7 @@ void* atenderFileSystem(){
 void ejecutar_instruccion(char* motivo){
 	char** parametros = string_split(motivo, " ");
 	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(parametros[0]);
+	printf("\nMEMORIA LIBRE %i\n", memoria_libre);
 
 	switch(cod_instruccion) {
 	case INICIAR:
@@ -143,20 +148,17 @@ void ejecutar_instruccion(char* motivo){
 		} else if(!(strcmp(mensaje, "COMPACT"))){
 			enviar_mensaje("COMPACT", socket_kernel);
 		} else {
-			void* base_elegida = (void*) (memoria_fisica + atoi(mensaje));
+			void* base_elegida = (void*) strtoul(mensaje, NULL, 16);
 			void* limite_elegido = (void*) (base_elegida + atoi(parametros[2]));
 
-			//t_segmento* segmento_nuevo = malloc(sizeof(t_segmento));
-			//segmento_nuevo = crear_segmento(base_elegida, limite_elegido);
-			ocupar_bitmap(base_elegida - memoria_fisica, atoi(parametros[2]));
 			log_info(memoria_logger, "PID: %s - Crear Segmento: %s - Base: %p - TAMAÑO: %s", parametros[3], parametros[1], base_elegida, parametros[2]);
 			t_tabla_segmentos* tabla_buscada = buscar_tabla_proceso(atoi(parametros[3]));
 			t_segmento* segmento_nuevo = list_get(tabla_buscada->segmentos, atoi(parametros[1]));
 			segmento_nuevo->direccion_base = base_elegida;
 			segmento_nuevo->limite = limite_elegido;
-			//list_add_in_index(tabla_buscada->segmentos, atoi(parametros[1]), segmento_nuevo);
-			//imprimir_bitmap(bitmap);
-			//imprimir_segmentos(tabla_buscada);
+			segmento_nuevo->libre = 0;
+			memoria_libre -= atoi(parametros[2]);
+			imprimir_segmentos(tabla_buscada);
 
 			char motivo[30] = "SEGMENT ";
 			char numero[20];
@@ -171,17 +173,10 @@ void ejecutar_instruccion(char* motivo){
 		parametros = string_split(motivo, " ");
 		t_tabla_segmentos* tabla_del_segmento = buscar_tabla_proceso(atoi(parametros[2]));
 		t_segmento* segmento_a_borrar = list_get(tabla_del_segmento->segmentos, atoi(parametros[1]));
-		borrar_segmento(segmento_a_borrar->direccion_base, segmento_a_borrar->limite);
 		int size = segmento_a_borrar->limite - segmento_a_borrar->direccion_base;
 		log_info(memoria_logger, "PID: %s - Eliminar Segmento: %s - Base: %p - TAMAÑO: %u", parametros[2], parametros[1], segmento_a_borrar->direccion_base, size);
-		segmento_a_borrar->direccion_base = NULL;
-		segmento_a_borrar->limite = NULL;
-
-		//imprimir_segmentos(tabla_del_segmento);
+		borrar_segmento(segmento_a_borrar);
 		enviar_segmentos(tabla_del_segmento, socket_kernel);
-		//imprimir_bitmap(bitmap);
-		//list_remove_element(self, element)(tabla_del_segmento->segmentos);
-		//no hay que sacarlo de la t_list* tabla_del_segmento?
 		break;
 	case FINALIZAR:
 		parametros = string_split(motivo, " ");
@@ -205,6 +200,7 @@ void ejecutar_instruccion(char* motivo){
 		enviar_mensaje(valor_registro, socket_cpu);
 		free(valor_registro);
 		break;
+
 	case MOV_OUT:
 
 		parametros = string_split(motivo, " ");
@@ -214,6 +210,22 @@ void ejecutar_instruccion(char* motivo){
 		memcpy(direccion_fisica_mov_out, valor, tamanio_mov_out);
 		usleep(atoi(retardo_memoria) * 1000);
 		//imprimir_memoria();
+		break;
+
+	case F_WRITE:
+		parametros = string_split(motivo, " ");
+		void *direccion_fisica_write = (void *)strtoul(parametros[1], NULL, 16);
+		int tamanio_write = atoi(parametros[2]);
+		char *valor_registro_write = malloc(tamanio_write + 1);
+		memcpy(valor_registro_write, direccion_fisica_write, tamanio_write);
+		usleep(atoi(retardo_memoria) * 1000);
+		valor_registro_write[tamanio_write] = '\0';
+		printf("\nValor_registro: %s", valor_registro_write);
+		enviar_mensaje(valor_registro_write, socket_filesystem);
+		free(valor_registro_write);
+
+		break;
+	case F_READ:
 
 		break;
 	default:
@@ -244,9 +256,15 @@ void crear_estructuras(){
 	memoria_fisica = reservar_espacio_memoria();
 	memoria_libre = atoi(tam_memoria);
 	log_info(memoria_logger, "Espacio reservado: %s Bytes -> Direccion: %p", tam_memoria, memoria_fisica);
+	algoritmo = obtener_algoritmo_asignacion(algoritmo_asignacion);
 	tablas_segmentos = list_create();
-	inicializar_bitmap();
-	segmento_cero = crear_segmento(memoria_fisica, memoria_fisica + atoi(tam_segmento_0));
+	lista_huecos = list_create();
+	hueco_inicial = crear_segmento(memoria_fisica, memoria_fisica + memoria_libre, 0, 1, 0);
+	list_add(lista_huecos, hueco_inicial);
+
+	char* base_elegida = elegir_hueco(atoi(tam_segmento_0));
+	void* base = (void*) strtoul(base_elegida, NULL, 16);
+	segmento_cero = crear_segmento(base, base + atoi(tam_segmento_0), 0, 0, 0);
 }
 
 void cerrar_conexiones(){

@@ -29,6 +29,8 @@
 	extern void* memoria_fisica;
 	extern t_bitarray* bitmap;
 	extern t_list* tablas_segmentos;
+	extern t_list* lista_huecos;
+	extern alg_asignacion algoritmo;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
@@ -36,13 +38,16 @@
 
 	t_tabla_segmentos* crear_tabla(uint32_t pid);
 	t_tabla_segmentos* buscar_tabla_proceso(uint32_t pid);
-	t_segmento* crear_segmento(void* base, void* limite);
+	t_segmento* crear_segmento(void* base, void* limite, uint32_t id, bool libre, uint32_t pid);
 	void enviar_segmentos(t_tabla_segmentos* tabla, int socket);
 	alg_asignacion obtener_algoritmo_asignacion(char*);
 	char* elegir_hueco(int size);
-	void borrar_segmento(void* base, void* limite);
+	void borrar_segmento(t_segmento* segmento);
 	void borrar_tabla(t_tabla_segmentos* tabla);
 	int buscar_index_proceso(uint32_t pid);
+	void insertar_ordernado(t_segmento* hueco);
+	void imprimir_huecos();
+
 
 
 #endif /* TABLAS_SEGMENTO_H_ */

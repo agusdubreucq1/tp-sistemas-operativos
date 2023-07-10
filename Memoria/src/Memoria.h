@@ -55,17 +55,22 @@
 	sem_t sem_kernel;
 	sem_t sem_cpu;
 
+	pthread_mutex_t sem_execute_fileSystem;
+
 // ------------------------------------------------------------------------------------------
 // -- Variables --
 // ------------------------------------------------------------------------------------------
 
 	t_list* tablas_segmentos;
+	t_list* lista_huecos;
 	t_list* tabla_segmentos;
 	t_segmento* segmento_cero;
+	t_segmento* hueco_inicial;
 	void* memoria_fisica;
 	t_tabla_segmentos* tabla_recibida;
 	t_bitarray* bitmap;
 	int memoria_libre;
+	alg_asignacion algoritmo;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --

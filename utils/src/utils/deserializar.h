@@ -29,6 +29,7 @@ t_list* deserializar_tabla_segmentos(void* stream, int* desplazamiento);
 uint32_t deserializar_uint32(void* stream, int* desplazamiento);
 t_list* deserializar_instrucciones(void* stream, int* desplazamiento);
 t_tabla_segmentos* deserializar_segmentos(void* stream, int* desplazamiento);
+bool deserializar_bool(void* stream, int* desplazamiento);
 
 
 

@@ -16,7 +16,7 @@ t_tabla_segmentos* crear_tabla(uint32_t pid){
 	log_info(memoria_logger, "Creación de Proceso PID: %u", pid);
 	for(int i = 1; i < atoi(cant_segmentos); i++){
 		t_segmento* segmento = malloc(sizeof(t_segmento));
-		segmento = crear_segmento(NULL, NULL);
+		segmento = crear_segmento(NULL, NULL, i, 1, pid);
 		list_add_in_index(tabla->segmentos,i, segmento);
 	}
 	return tabla;
@@ -25,7 +25,7 @@ t_tabla_segmentos* crear_tabla(uint32_t pid){
 void borrar_tabla(t_tabla_segmentos* tabla){
 	for(int i = 1; i < atoi(cant_segmentos); i++){
 		t_segmento* segmento = list_get(tabla->segmentos,i);
-		borrar_segmento(segmento->direccion_base, segmento->limite);
+		borrar_segmento(segmento);
 	}
 }
 
@@ -52,46 +52,91 @@ int buscar_index_proceso(uint32_t pid){
 	return -1;
 }
 
-t_segmento* crear_segmento(void* base, void* limite){
+t_segmento* crear_segmento(void* base, void* limite, uint32_t id, bool libre, uint32_t pid){
 	t_segmento* segmento = malloc(sizeof(t_segmento));
 	segmento->direccion_base = base;
 	segmento->limite = limite;
-	memoria_libre -= (limite - base);
-	ocupar_bitmap((base - memoria_fisica), (limite - base));
+	segmento->id = id;
+	segmento->libre = libre;
+	segmento->pid = pid;
+	if (libre == 0){
+		memoria_libre -= (limite - base);
+	}
+	//ocupar_bitmap((base - memoria_fisica), (limite - base));
 	//printf("\nMemoria Libre %d \n", memoria_libre);
 	return segmento;
 }
 
 
-void borrar_segmento(void* base, void* limite){
+/*void borrar_segmento(void* base, void* limite){
 	memoria_libre += (limite - base);
 	liberar_bitmap((base - memoria_fisica), (limite - base));
 	//printf("\nMemoria Libre %d \n", memoria_libre);
+}*/
+
+void borrar_segmento(t_segmento* segmento){
+	memoria_libre += (segmento->limite - segmento->direccion_base);
+	t_segmento* hueco_nuevo = malloc(sizeof(t_segmento));
+	hueco_nuevo->direccion_base = segmento->direccion_base;
+	hueco_nuevo->limite = segmento->limite;
+	hueco_nuevo->id = 0;
+	hueco_nuevo->pid = 0;
+	hueco_nuevo->libre = 1;
+	segmento->direccion_base = NULL;
+	segmento->limite = NULL;
+	segmento->libre = 1;
+	insertar_ordernado(hueco_nuevo);
+}
+
+void insertar_ordernado(t_segmento* hueco){
+	int elementos = list_size(lista_huecos);
+	for (int i = 0; i < elementos; i++) {
+		t_segmento* segmento = list_get(lista_huecos, i);
+		if (hueco->direccion_base < segmento->direccion_base){
+			if (hueco->limite == segmento->direccion_base){
+				segmento->direccion_base = hueco->direccion_base;
+				if(i > 0){
+					t_segmento* segmento_anterior = list_get(lista_huecos, i-1);
+					if (segmento->direccion_base == segmento_anterior->limite){
+						segmento_anterior->limite = segmento->limite;
+						list_remove(lista_huecos, i);
+					}
+				}
+				free(hueco);
+				return;
+			} else {
+				list_add_in_index(lista_huecos, i, hueco);
+				return;
+			}
+		}
+	}
+	list_add(lista_huecos, hueco);
 }
 
 
 char* elegir_hueco(int size){
 	if (size <= memoria_libre){
-		alg_asignacion algoritmo = obtener_algoritmo_asignacion(algoritmo_asignacion);
-		int retorno;
+		void* retorno;
 
 		switch(algoritmo) {
 			case FIRST:
-				retorno = first_fit_bitmap(size);
+				retorno = first_fit(size);
+				imprimir_huecos();
 				break;
 			case BEST:
-				retorno = best_fit_bitmap(size);
+				//retorno = best_fit_bitmap(size);
 				break;
 			case WORST:
-				retorno = worst_fit_bitmap(size);
+				//retorno = worst_fit_bitmap(size);
 				break;
 		}
 
-		if (retorno == -1){
+		if (retorno == NULL){
 			return "COMPACT";
 		} else {
 			char* num = malloc(20 * sizeof(char));
-			sprintf(num, "%d", retorno);
+			sprintf(num, "%p", retorno);
+			printf("\n NUM %s \n", num);
 			return num;
 		}
 	} else {
@@ -113,4 +158,14 @@ alg_asignacion obtener_algoritmo_asignacion(char* algoritmo){
 	if(string_equals_ignore_case(algoritmo, "FIRST")) 	return FIRST;
 	if(string_equals_ignore_case(algoritmo, "BEST"))	return BEST;
 	else	return WORST;
+}
+
+void imprimir_huecos(){
+	int elementos = list_size(lista_huecos);
+	for (int i = 0; i < elementos; i++) {
+		t_segmento* segmento = list_get(lista_huecos, i);
+		printf("\n\n Hueco %i", i);
+		printf("\n Base %p", segmento->direccion_base);
+		printf("\n Limite %p", segmento->limite);
+	}
 }

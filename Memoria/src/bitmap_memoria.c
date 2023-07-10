@@ -54,6 +54,36 @@ void liberar_bitmap(int inicio, int cant) {
 		}
 }
 
+int tamanio_segmento(t_segmento* segmento){
+ 	int tamanio = segmento->limite - segmento->direccion_base;
+	return tamanio;
+}
+
+void* first_fit(int tamanio) {
+	int elementos = list_size(lista_huecos);
+	for (int i = 0; i < elementos; i++) {
+		t_segmento* segmento = list_get(lista_huecos, i);
+		printf("\n TAMANO BUSCADO: %i \n", tamanio);
+		printf("\n HUECO TAMANO: %i \n", tamanio_segmento(segmento));
+
+		if (tamanio < tamanio_segmento(segmento)){
+			void* retornar = segmento->direccion_base;
+			segmento->direccion_base = segmento->direccion_base + tamanio;
+			return retornar;
+		} else if (tamanio == tamanio_segmento(segmento)){
+			void* retornar = segmento->direccion_base;
+			list_remove(lista_huecos, i);
+			return retornar;
+		} else {
+			printf("\n HUECO CHICO \n");
+		}
+	}
+	return NULL;
+}
+
+
+
+
 int first_fit_bitmap(int tamanio) {
 
 	int cont_huecos_libres = 0;

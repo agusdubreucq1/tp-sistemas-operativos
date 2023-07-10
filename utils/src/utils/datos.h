@@ -60,9 +60,11 @@ typedef struct registros_cpu{
 // ------------------------------------------------------------------------------------------
 
 typedef struct segmento{
-	//int id;
 	void* direccion_base;
 	void* limite;
+	uint32_t id;
+	uint32_t pid;
+	bool libre;
 } t_segmento;
 
 

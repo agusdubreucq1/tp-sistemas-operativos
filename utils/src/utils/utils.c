@@ -63,8 +63,10 @@ void imprimir_segmentos(t_tabla_segmentos* tabla){
 	for(int i = 0; i < elementos; i++){
 		t_segmento* segmento = list_get(tabla->segmentos, i);
 		printf("\n Segmento %u\n", i);
+		printf("ID %u\n", segmento->id);
 		printf("Base %p\n", segmento->direccion_base);
 		printf("Limite %p\n", segmento->limite);
+		printf("Libre %i\n", segmento->libre);
 	}
 }
 

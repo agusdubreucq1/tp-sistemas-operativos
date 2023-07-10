@@ -215,7 +215,8 @@ void ejecutar_motivo_memoria(char* motivo){
 
 		segmento_nuevo->direccion_base = base;
 		segmento_nuevo->limite = base + atoi(instruccion[2]);
-		//imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
+		segmento_nuevo->libre = 0;
+		imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
 
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
@@ -231,7 +232,7 @@ void ejecutar_motivo_memoria(char* motivo){
 
 
 void planificarCortoPlazo(){
-	sleep(10);
+	//sleep(10);
 	while(1){
 		sem_wait(&cantidad_procesos_ready);
 		pthread_mutex_lock(&semaforo_ready);
@@ -529,21 +530,21 @@ void ejecutar_segun_motivo(char* motivo){
 		liberarTablaSegmentos(pcb_a_ejecutar);
 		pcb_a_ejecutar->tabla_segmentos = tablaNueva;
 		pcb_a_ejecutar->tabla_segmentos->segmentos = tablaNueva->segmentos;
-		//imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
+		imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
 
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
 		pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
-	case MOV_IN: //CPU solo comunica a Kernel cuando hay SEG_FAULT
+	/*case MOV_IN: //CPU solo comunica a Kernel cuando hay SEG_FAULT
 		finalizar_proceso(pcb_a_ejecutar, "SEG_FAULT");
 		break;
 
 	case MOV_OUT: //CPU solo comunica a Kernel cuando hay SEG_FAULT
 		finalizar_proceso(pcb_a_ejecutar, "SEG_FAULT");
 		break;
-
+	*/
 	default:
 		break;
 	}
