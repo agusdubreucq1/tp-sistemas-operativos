@@ -127,9 +127,10 @@ typedef struct args_io{
    int duracion;
 } t_thread_args;
 
-typedef struct args_truncar{
+typedef struct args_fileSystem{
 	t_pcb* pcb;
 	char* motivo;
-}t_args_truncar;
+}t_args_fileSystem;
+
 
 #endif /* SRC_DATOS_H_ */

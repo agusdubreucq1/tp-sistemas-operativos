@@ -73,6 +73,13 @@
 	void ejecutar_instruccion(char* instruccion);
 	int existe_archivo(char* nombre);
 	void crear_archivo(char* nombre);
+	void leer(char* archivo, void* aLeer, int puntero, int tamanio);
+	void escribir(char* archivo, void* aEscribir, int puntero, int tamanio);
+	int posicionArchivoBloques(int num_bloque, int offset);
+	int bloqueLogicoAFisico(t_fcb* fcb, int num_bloque);
+	int offsetSegunPuntero(int puntero);
+	int bloqueSegunPuntero(int puntero);
+	int min(int num1, int num2);
 
 
 

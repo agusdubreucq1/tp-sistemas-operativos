@@ -65,9 +65,9 @@ void* conectarMemoria(){
 
 	sem_post(&espera_cerrar);
 
-	while(1){
-		recibir_mensaje_memoria();
-	}
+	/*while(1){
+		//recibir_mensaje_memoria();
+	}*/
 
 	return "";
 }
@@ -182,6 +182,79 @@ void cambiar_tamanio(char* archivo, int tamanio){
 	imprimir_bitmap_20(bitmap);
 }
 
+int bloqueSegunPuntero(int puntero){
+	return puntero/tamanio_bloque;
+}
+
+int offsetSegunPuntero(int puntero){
+	return puntero % tamanio_bloque;
+}
+
+int bloqueLogicoAFisico(t_fcb* fcb, int num_bloque){
+	int bloque_fisico;
+	if(num_bloque == 0){
+		return fcb->puntero_directo;
+	}else{
+		int posicion = fcb->puntero_indirecto * tamanio_bloque + (num_bloque - 1)*sizeof(uint32_t);
+		leerArchivoBloques((void*)&bloque_fisico, posicion, sizeof(uint32_t));
+		return bloque_fisico;
+	}
+}
+
+int posicionArchivoBloques(int num_bloque, int offset){
+	return num_bloque*tamanio_bloque + offset;
+}
+
+void escribir(char* archivo, void* aEscribir, int puntero, int tamanio){
+	int tam_escrito = 0;
+	log_trace(fileSystem_logger, "escribiendo archivo: %s", archivo);
+	while(tam_escrito < tamanio){
+		int tam_a_escribir_max = tamanio_bloque - (puntero % tamanio_bloque);
+		int tam_a_escribir = min(tamanio - tam_escrito, tam_a_escribir_max);
+		t_fcb* fcb = fcb_segun_nombre(archivo);
+		int bloque_logico = bloqueSegunPuntero(puntero);
+		int bloque_fisico = bloqueLogicoAFisico(fcb, bloque_logico);
+		int offset = offsetSegunPuntero(puntero);
+		int posicion = posicionArchivoBloques(bloque_fisico, offset);
+		escribirArchivoBloques(aEscribir + tam_escrito, posicion, tam_a_escribir);
+
+		tam_escrito += tam_a_escribir;
+		puntero += tam_a_escribir;
+	}
+
+
+}
+
+int min(int num1, int num2){
+	if(num1 < num2){
+		return num1;
+	}else{
+		return num2;
+	}
+}
+
+void leer(char* archivo, void* aLeer, int puntero, int tamanio){
+	int tam_leido = 0;
+	log_trace(fileSystem_logger, "leyendo archivo: %s", archivo);
+	while(tam_leido < tamanio){
+		int tam_a_leer_max = tamanio_bloque - (puntero % tamanio_bloque);
+		int tam_a_leer = min(tamanio-tam_leido, tam_a_leer_max);
+		t_fcb* fcb = fcb_segun_nombre(archivo);
+		int bloque_logico = bloqueSegunPuntero(puntero);
+		int bloque_fisico = bloqueLogicoAFisico(fcb, bloque_logico);
+		int offset = offsetSegunPuntero(puntero);
+		int posicion = posicionArchivoBloques(bloque_fisico, offset);
+		leerArchivoBloques(aLeer + tam_leido, posicion, tam_a_leer);
+
+		tam_leido += tam_a_leer;
+		puntero += tam_a_leer;
+	}
+
+}
+
+
+
+
 
 
 void ejecutar_instruccion(char* instruccion){
@@ -205,18 +278,43 @@ void ejecutar_instruccion(char* instruccion){
 			enviar_mensaje("el filesystem abrio el archivo", socket_Kernel);
 			break;
 		case F_TRUNCATE:
+			log_info(fileSystem_logger, "instruccion: %s", instruccion);
 			char* archivo_truncar = parametros[1];
 			int tamanio = atoi(parametros[2]);
 			cambiar_tamanio(archivo_truncar, tamanio);
-			log_info(fileSystem_logger, "truncar archivo: %s - tamaño: %d", archivo_truncar, tamanio);
+			//log_info(fileSystem_logger, "truncar archivo: %s - tamaño: %d", archivo_truncar, tamanio);
 			enviar_mensaje("el filesystem trunco el archivo", socket_Kernel);
 			break;
 		case F_WRITE:
+			log_info(fileSystem_logger, "instruccion: %s", instruccion);
+			char mensaje[100]="";
+			char* direccion_fisica = parametros[2];
+			int tamanio_write = atoi(parametros[3]);
+			int puntero_write = atoi(parametros[4]);
+			char* archivo_write = parametros[1];
+			sprintf(mensaje, "F_WRITE %s %d", direccion_fisica,tamanio_write);
+			enviar_mensaje(mensaje, socket_memoria);
+			char* aEscribir = recibirMensaje(socket_memoria, fileSystem_logger);
+			escribir(archivo_write, (void*)aEscribir, puntero_write, tamanio_write);
 			enviar_mensaje("se escribio el archivo", socket_Kernel);
-			printf("\nle envie el mensaje al kernel");
+			free(aEscribir);
+			//free(mensaje);
 			break;
 		case F_READ:
+			log_info(fileSystem_logger, "instruccion: %s", instruccion);
+			char* archivo_read = parametros[1];
+			char* direccion_fisica_read = parametros[2];
+			int tamanio_read = atoi(parametros[3]);
+			int puntero_read = atoi(parametros[4]);
+			char* aLeer = malloc(tamanio_read + 1);
+			char mensaje_read[100]= "";
+			leer(archivo_read, (void*)aLeer, puntero_read, tamanio_read);
+			aLeer[tamanio_read] = '\0';
+			sprintf(mensaje_read, "MOV_OUT %s %s %d", direccion_fisica_read, aLeer, tamanio_read);
+			enviar_mensaje(mensaje_read, socket_memoria);
 			enviar_mensaje("se leyo el archivo", socket_Kernel);
+			//free(mensaje_read);
+			free(aLeer);
 			break;
 		default:
 			break;
@@ -224,4 +322,3 @@ void ejecutar_instruccion(char* instruccion){
 	string_iterate_lines(parametros, (void*) free);
 	free(parametros);
 }
-

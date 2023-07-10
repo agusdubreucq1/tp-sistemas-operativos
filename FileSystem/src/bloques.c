@@ -64,6 +64,7 @@ void leerArchivoBloques(void* aLeer, int posicion, int cantidad){
 }
 
 void escribirArchivoBloques(void* aEscribir, int posicion, int cantidad){
+	log_trace(fileSystem_logger, "escribiendo archivo pos: %d , cant: %d", posicion, cantidad);
 	FILE* archivo_bloques = fopen(path_bloques, "r+b");
 	fseek(archivo_bloques, posicion, SEEK_SET);
 	fwrite(aEscribir, cantidad,1, archivo_bloques);

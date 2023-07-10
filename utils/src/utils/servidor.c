@@ -64,6 +64,11 @@ void* recibir_buffer(int* size, int socket_cliente){
 	return buffer;
 }
 
+char* recibirMensaje(int socket_cliente, t_log* logger){
+	recibir_operacion(socket_cliente);
+	return recibir_instruccion(socket_cliente, logger);
+}
+
 void recibir_mensaje(int socket_cliente, t_log* logger)
 {
 	int size;

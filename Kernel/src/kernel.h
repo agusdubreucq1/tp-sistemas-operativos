@@ -92,6 +92,7 @@
 	pthread_mutex_t semaforo_ready;
 	pthread_mutex_t semaforo_execute;
 	pthread_mutex_t sem_fileSystem;
+	pthread_mutex_t sem_memoria;
 
 	struct timeval tiempo;
 	long long hora_inicio;
@@ -132,7 +133,7 @@
 	char* recibir_mensaje_filesystem();
 	void recibir_mensaje_memoria();
 	void ejecutar_motivo_memoria(char* motivo);
-	void truncar(t_args_truncar* args);
+	void accionFileSystem(t_args_fileSystem* args);
 	void cerrar_archivo(char* nombre_archivo, t_pcb* pcb);
 	void liberar_archivos(t_pcb* pcb);
 	void mandar_a_ready(t_pcb* pcb);

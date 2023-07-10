@@ -33,6 +33,7 @@
 	void cerrar_conexion(int socket_cliente);
 	void cerrar_consola(int socket_cliente);
 	char* recibir_instruccion(int socket_cliente, t_log* logger);
+	char* recibirMensaje(int socket_cliente, t_log* logger);
 
 
 #endif /* SRC_SERVIDOR_H_ */
