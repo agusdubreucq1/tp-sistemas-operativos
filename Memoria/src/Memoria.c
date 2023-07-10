@@ -146,7 +146,9 @@ void ejecutar_instruccion(char* motivo){
 			list_destroy_and_destroy_elements(tabla_a_borrar->segmentos, liberar_elemento_list);
 			free(tabla_a_borrar);
 		} else if(!(strcmp(mensaje, "COMPACT"))){
+			//pthread_mutex_lock(&sem_execute_fileSystem);
 			enviar_mensaje("COMPACT", socket_kernel);
+			//pthread_mutex_unlock(&sem_execute_fileSystem);
 		} else {
 			void* base_elegida = (void*) strtoul(mensaje, NULL, 16);
 			void* limite_elegido = (void*) (base_elegida + atoi(parametros[2]));
