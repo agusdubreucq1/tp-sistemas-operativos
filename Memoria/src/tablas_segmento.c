@@ -121,7 +121,7 @@ char* elegir_hueco(int size){
 		switch(algoritmo) {
 			case FIRST:
 				retorno = first_fit(size);
-				imprimir_huecos();
+				//imprimir_huecos();
 				break;
 			case BEST:
 				//retorno = best_fit_bitmap(size);
@@ -136,7 +136,7 @@ char* elegir_hueco(int size){
 		} else {
 			char* num = malloc(20 * sizeof(char));
 			sprintf(num, "%p", retorno);
-			printf("\n NUM %s \n", num);
+			//printf("\n NUM %s \n", num);
 			return num;
 		}
 	} else {

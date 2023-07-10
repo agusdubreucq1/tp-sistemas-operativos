@@ -63,8 +63,8 @@ void* first_fit(int tamanio) {
 	int elementos = list_size(lista_huecos);
 	for (int i = 0; i < elementos; i++) {
 		t_segmento* segmento = list_get(lista_huecos, i);
-		printf("\n TAMANO BUSCADO: %i \n", tamanio);
-		printf("\n HUECO TAMANO: %i \n", tamanio_segmento(segmento));
+		//printf("\n TAMANO BUSCADO: %i \n", tamanio);
+		//printf("\n HUECO TAMANO: %i \n", tamanio_segmento(segmento));
 
 		if (tamanio < tamanio_segmento(segmento)){
 			void* retornar = segmento->direccion_base;

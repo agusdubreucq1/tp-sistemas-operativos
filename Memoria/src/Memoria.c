@@ -122,7 +122,7 @@ void* atenderFileSystem(){
 void ejecutar_instruccion(char* motivo){
 	char** parametros = string_split(motivo, " ");
 	codigo_instruccion cod_instruccion = obtener_codigo_instruccion(parametros[0]);
-	printf("\nMEMORIA LIBRE %i\n", memoria_libre);
+	//printf("\nMEMORIA LIBRE %i\n", memoria_libre);
 
 	switch(cod_instruccion) {
 	case INICIAR:
@@ -158,7 +158,7 @@ void ejecutar_instruccion(char* motivo){
 			segmento_nuevo->limite = limite_elegido;
 			segmento_nuevo->libre = 0;
 			memoria_libre -= atoi(parametros[2]);
-			imprimir_segmentos(tabla_buscada);
+			//imprimir_segmentos(tabla_buscada);
 
 			char motivo[30] = "SEGMENT ";
 			char numero[20];
