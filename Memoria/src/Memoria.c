@@ -135,7 +135,7 @@ void ejecutar_instruccion(char* motivo){
 		char* mensaje = elegir_hueco(atoi(parametros[2]));
 
 		//char* mensaje = "OUT";
-		imprimir_huecos(lista_huecos);
+		//imprimir_huecos(lista_huecos);
 		if(!(strcmp(mensaje, "OUT"))){
 			log_error(memoria_logger, "Out of memory - Cerrando PID: %s", parametros[3]);
 			//enviar_mensaje("OUT", socket_kernel);

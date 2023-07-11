@@ -99,45 +99,59 @@ void fin_segmento(t_segmento* segmento, int index){
 void compactar_perrito(){
 	t_list* lista_compactacion;
 	lista_compactacion = list_create();
+
 	int tablas = list_size(tablas_segmentos);
 	list_add(lista_compactacion, segmento_cero);
 	for (int i = 0; i < tablas; i++) {
 		t_tabla_segmentos* tabla = list_get(tablas_segmentos, i);
-		imprimir_segmentos(tabla);
+		//imprimir_segmentos(tabla);
 		int segmentos = list_size(tabla->segmentos);
 		for (int j = 1; j < segmentos; j++) {
 			t_segmento* segmento = list_get(tabla->segmentos, j);
 			if (segmento->libre == 0){
 				list_add(lista_compactacion, segmento);
-				//insertar_ordernado(segmento, lista_compactacion, 0);
 			}
 		}
 	}
 
-	printf("\n\n HUECOS \n\n");
-	int huecos = list_size(lista_huecos);
-	imprimir_huecos(lista_huecos);
-	for (int i = 0; i < huecos; i++) {
-		t_segmento* hueco = list_get(lista_huecos, i);
-		list_add(lista_compactacion, hueco);
-	}
-	list_sorted(comparator);
-	printf("\n\n COMPACTA \n\n");
-	imprimir_huecos(lista_compactacion);
-	//compacta(lista_compactacion);
+	list_sort(lista_compactacion, comparator);
+	//imprimir_huecos(lista_compactacion);
+	compacta(lista_compactacion);
 }
 
+
+
 void compacta(t_list* lista){
-	int elementos = list_size(lista)-1;
+	int elementos = list_size(lista);
+	void* ultimo_limite;
 	for (int i = 1; i < elementos; i++) {
+		t_segmento* segmento_anterior = list_get(lista, i-1);
 		t_segmento* segmento = list_get(lista, i);
-		t_segmento* segmento_sig = list_get(lista, i+1);
-		int tamanio = tamanio_segmento(segmento_sig);
-		if (segmento->libre == 1){
-			//segmento_sig;
+
+		if(segmento->direccion_base != segmento_anterior->limite){
+			int tamanio = tamanio_segmento(segmento);
+			char *valor_registro = malloc(tamanio + 1);
+			memcpy(valor_registro, segmento->direccion_base, tamanio);
+
+			segmento->direccion_base = segmento_anterior->limite;
+			segmento->limite = (void*) (segmento_anterior->limite + tamanio);
+			ultimo_limite = segmento->limite;
+
+			memcpy(segmento->direccion_base, valor_registro, tamanio);
 		}
 	}
+	t_segmento* hueco_compacto = malloc(sizeof(t_segmento));
+	hueco_compacto->direccion_base =  ultimo_limite;
+	hueco_compacto->limite =  (void*) (memoria_fisica + atoi(tam_memoria));
+	hueco_compacto->libre =  1;
+	hueco_compacto->pid =  0;
+	hueco_compacto->id =  0;
+
+	list_destroy_and_destroy_elements(lista_huecos, liberar_elemento);
+	lista_huecos = list_create();
+	list_add(lista_huecos, hueco_compacto);
 }
+
 
 
 
@@ -223,6 +237,7 @@ void imprimir_huecos(t_list* lista){
 		t_segmento* segmento = list_get(lista, i);
 		printf("\n\n Segmento %i", i);
 		printf("\n Pid %u", segmento->pid);
+		printf("\n Libre %u", segmento->libre);
 		printf("\n Base %p", segmento->direccion_base);
 		printf("\n Limite %p", segmento->limite);
 		printf("\n");
@@ -231,4 +246,10 @@ void imprimir_huecos(t_list* lista){
 
 void liberar_elemento(void* elemento){
 	free(elemento);
+}
+
+bool comparator(void *a, void *b) {
+    t_segmento* seg_a = (t_segmento *)a;
+    t_segmento* seg_b = (t_segmento *)b;
+    return seg_a->direccion_base < seg_b->direccion_base;
 }

@@ -32,6 +32,8 @@
 	extern t_list* lista_huecos;
 	extern alg_asignacion algoritmo;
 	extern t_list* tablas_segmentos;
+	extern void* memoria_fisica;
+	extern char* tam_memoria;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
@@ -53,6 +55,7 @@
 	void unificar_espacios();
 	void compactar_perrito();
 	void compacta(t_list* lista);
+	bool comparator(void *a, void *b);
 
 
 
