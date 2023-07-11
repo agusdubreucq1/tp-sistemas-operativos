@@ -46,6 +46,8 @@ int best_fit_bitmap(int);
 int worst_fit_bitmap(int);
 int devolver_posicion_bitmap_segun_direccion(void *);
 int tamanio_segmento(t_segmento* segmento);
-void* first_fit(int tamanio);
+void* first_fit(int);
+void* best_fit(int);
+void* worst_fit(int);
 
 #endif /* BITMAP_MEMORIA_H_ */

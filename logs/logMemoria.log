@@ -27214,3 +27214,49 @@
 [TRACE] 16:16:30:368 Memoria/(278132:278136): Datos enviados correctamente
 [TRACE] 16:16:30:455 Memoria/(278132:278136): Recibi Instruccion: CREATE_SEGMENT 5 680 5
 [TRACE] 16:16:30:455 Memoria/(278132:278136): Recibi Instruccion: COMPACT
+[INFO] 22:59:57:171 Memoria/(343903:343903): Logger creado
+[INFO] 22:59:57:171 Memoria/(343903:343903): -------Valores del config-------
+[INFO] 22:59:57:172 Memoria/(343903:343903): puerto_escucha = 8002
+[INFO] 22:59:57:172 Memoria/(343903:343903): tamaño memoria = 4096
+[INFO] 22:59:57:172 Memoria/(343903:343903): tamaño segmento = 128
+[INFO] 22:59:57:172 Memoria/(343903:343903): cantidad de segmentos = 16
+[INFO] 22:59:57:172 Memoria/(343903:343903): retardo memoria = 1000
+[INFO] 22:59:57:172 Memoria/(343903:343903): retardo compactacion = 60000
+[INFO] 22:59:57:172 Memoria/(343903:343903): algoritmo asignacion = BEST
+[INFO] 22:59:57:172 Memoria/(343903:343903): --------------------------------
+[INFO] 22:59:57:173 Memoria/(343903:343903): ¡Memoria iniciado correctamente!
+[TRACE] 22:59:57:173 Memoria/(343903:343903): Listo para escuchar a mi cliente
+[INFO] 22:59:57:173 Memoria/(343903:343903): Servidor listo para recibir al cliente
+[TRACE] 22:59:58:527 Memoria/(343903:343905): Se conecto un cliente!
+[TRACE] 22:59:58:528 Memoria/(343903:343905): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 23:00:00:106 Memoria/(343903:343906): Se conecto un cliente!
+[TRACE] 23:00:00:107 Memoria/(343903:343906): Recibi Instruccion: Conectado al CPU
+[TRACE] 23:00:01:059 Memoria/(343903:343907): Se conecto un cliente!
+[INFO] 23:00:01:059 Memoria/(343903:343904): Espacio reservado: 4096 Bytes -> Direccion: 0x7f74c0000b70
+[TRACE] 23:00:01:060 Memoria/(343903:343907): Recibi Instruccion: Conectado al Kernel
+[TRACE] 23:00:01:996 Memoria/(343903:343907): Recibi Instruccion: INICIAR 5
+[INFO] 23:00:01:996 Memoria/(343903:343907): Creación de Proceso PID: 5
+[TRACE] 23:00:01:997 Memoria/(343903:343907): Datos enviados, esperando respuesta de kernel...
+[TRACE] 23:00:01:998 Memoria/(343903:343907): Datos enviados correctamente
+[TRACE] 23:00:01:999 Memoria/(343903:343907): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[INFO] 23:00:01:999 Memoria/(343903:343907): PID: 5 - Crear Segmento: 1 - Base: 0x7f74c0000bf0 - TAMAÑO: 128
+[TRACE] 23:00:02:000 Memoria/(343903:343907): Recibi Instruccion: CREATE_SEGMENT 2 136 5
+[INFO] 23:00:02:000 Memoria/(343903:343907): PID: 5 - Crear Segmento: 2 - Base: 0x7f74c0000c70 - TAMAÑO: 136
+[TRACE] 23:00:02:001 Memoria/(343903:343907): Recibi Instruccion: CREATE_SEGMENT 3 128 5
+[INFO] 23:00:02:001 Memoria/(343903:343907): PID: 5 - Crear Segmento: 3 - Base: 0x7f74c0000cf8 - TAMAÑO: 128
+[TRACE] 23:00:02:002 Memoria/(343903:343907): Recibi Instruccion: CREATE_SEGMENT 4 128 5
+[INFO] 23:00:02:002 Memoria/(343903:343907): PID: 5 - Crear Segmento: 4 - Base: 0x7f74c0000d78 - TAMAÑO: 128
+[TRACE] 23:00:02:007 Memoria/(343903:343907): Recibi Instruccion: CREATE_SEGMENT 5 128 5
+[INFO] 23:00:02:007 Memoria/(343903:343907): PID: 5 - Crear Segmento: 5 - Base: 0x7f74c0000df8 - TAMAÑO: 128
+[TRACE] 23:00:02:008 Memoria/(343903:343907): Recibi Instruccion: DELETE_SEGMENT 2 5
+[INFO] 23:00:02:008 Memoria/(343903:343907): PID: 5 - Eliminar Segmento: 2 - Base: 0x7f74c0000c70 - TAMAÑO: 136
+[TRACE] 23:00:02:008 Memoria/(343903:343907): Datos enviados, esperando respuesta de kernel...
+[TRACE] 23:00:02:009 Memoria/(343903:343907): Datos enviados correctamente
+[TRACE] 23:00:02:052 Memoria/(343903:343907): Recibi Instruccion: DELETE_SEGMENT 4 5
+[INFO] 23:00:02:052 Memoria/(343903:343907): PID: 5 - Eliminar Segmento: 4 - Base: 0x7f74c0000d78 - TAMAÑO: 128
+[TRACE] 23:00:02:052 Memoria/(343903:343907): Datos enviados, esperando respuesta de kernel...
+[TRACE] 23:00:02:052 Memoria/(343903:343907): Datos enviados correctamente
+[TRACE] 23:00:02:095 Memoria/(343903:343907): Recibi Instruccion: CREATE_SEGMENT 6 128 5
+[INFO] 23:00:02:095 Memoria/(343903:343907): PID: 5 - Crear Segmento: 6 - Base: 0x7f74c0000d78 - TAMAÑO: 128
+[TRACE] 23:00:02:096 Memoria/(343903:343907): Recibi Instruccion: FINALIZAR 5
+[INFO] 23:00:02:096 Memoria/(343903:343907): Eliminación de Proceso PID: 5

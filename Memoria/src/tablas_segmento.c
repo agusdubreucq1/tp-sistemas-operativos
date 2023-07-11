@@ -195,10 +195,10 @@ char* elegir_hueco(int size){
 				//imprimir_huecos();
 				break;
 			case BEST:
-				//retorno = best_fit_bitmap(size);
+				retorno = best_fit(size);
 				break;
 			case WORST:
-				//retorno = worst_fit_bitmap(size);
+				retorno = worst_fit(size);
 				break;
 		}
 
@@ -240,6 +240,7 @@ void imprimir_huecos(t_list* lista){
 		printf("\n Libre %u", segmento->libre);
 		printf("\n Base %p", segmento->direccion_base);
 		printf("\n Limite %p", segmento->limite);
+		printf("\n Tamanio hueco: %ld", segmento->limite - segmento->direccion_base);
 		printf("\n");
 	}
 }

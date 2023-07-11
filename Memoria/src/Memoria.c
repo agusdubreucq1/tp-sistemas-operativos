@@ -179,6 +179,7 @@ void ejecutar_instruccion(char* motivo){
 		int size = segmento_a_borrar->limite - segmento_a_borrar->direccion_base;
 		log_info(memoria_logger, "PID: %s - Eliminar Segmento: %s - Base: %p - TAMAÑO: %u", parametros[2], parametros[1], segmento_a_borrar->direccion_base, size);
 		borrar_segmento(segmento_a_borrar);
+		imprimir_huecos(lista_huecos);
 		enviar_segmentos(tabla_del_segmento, socket_kernel);
 		break;
 	case FINALIZAR:

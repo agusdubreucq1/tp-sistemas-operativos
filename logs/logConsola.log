@@ -12652,3 +12652,13 @@ d��dU
 [TRACE] 16:16:29:973 Consola/(278155:278155): Datos enviados, esperando respuesta de Kernel...
 [TRACE] 16:16:29:973 Consola/(278155:278155): Datos enviados correctamente
 [INFO] 16:16:47:584 Consola/(278155:278155): Cerrando conexion
+[INFO] 23:00:01:994 Consola/(343926:343926): Logger creado
+[INFO] 23:00:01:994 Consola/(343926:343926): ¡Consola iniciada correctamente!
+[INFO] 23:00:01:994 Consola/(343926:343926): -------Valores del config-------
+[INFO] 23:00:01:995 Consola/(343926:343926): Ip = 127.0.0.1
+[INFO] 23:00:01:995 Consola/(343926:343926): Puerto = 8000
+[INFO] 23:00:01:995 Consola/(343926:343926): --------------------------------
+[INFO] 23:00:01:995 Consola/(343926:343926): Conexion establecida con Kernel
+[TRACE] 23:00:01:996 Consola/(343926:343926): Datos enviados, esperando respuesta de Kernel...
+[TRACE] 23:00:01:996 Consola/(343926:343926): Datos enviados correctamente
+[INFO] 23:00:02:096 Consola/(343926:343926): Cerrando conexion
