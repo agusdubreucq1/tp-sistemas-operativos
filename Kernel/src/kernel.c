@@ -204,7 +204,16 @@ void ejecutar_motivo_memoria(char* motivo){
 
 	switch(cod_instruccion) {
 	case OUT:
-		finalizar_proceso(pcb_a_ejecutar, "OUT OF MEMORY");
+		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
+		pcb_a_ejecutar->estado = EXITT;
+		sem_post(&semaforo_multiprogramacion);
+		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: OUT OF MEMORY", pcb_a_ejecutar->pid);
+		enviar_mensaje("-1", pcb_a_ejecutar->pid);
+		liberar_recursos(pcb_a_ejecutar);
+		liberar_archivos(pcb_a_ejecutar);
+		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+		liberar_pcb(pcb_a_ejecutar);
+		//finalizar_proceso(pcb_a_ejecutar, "OUT OF MEMORY");
 		devolver_ejecucion = 0;
 		break;
 	case SEGMENT:
@@ -225,6 +234,7 @@ void ejecutar_motivo_memoria(char* motivo){
 		//pcb_ejecutando = pcb_a_ejecutar;
 		break;
 	case COMPACT:
+		enviar_mensaje("COMPACT", socket_memoria);
 		break;
 	default:
 		break;

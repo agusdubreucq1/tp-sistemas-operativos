@@ -74,8 +74,6 @@ void* first_fit(int tamanio) {
 			void* retornar = segmento->direccion_base;
 			list_remove(lista_huecos, i);
 			return retornar;
-		} else {
-			printf("\n HUECO CHICO \n");
 		}
 	}
 	return NULL;

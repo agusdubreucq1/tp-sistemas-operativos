@@ -31,6 +31,7 @@
 	extern t_list* tablas_segmentos;
 	extern t_list* lista_huecos;
 	extern alg_asignacion algoritmo;
+	extern t_list* tablas_segmentos;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
@@ -45,8 +46,13 @@
 	void borrar_segmento(t_segmento* segmento);
 	void borrar_tabla(t_tabla_segmentos* tabla);
 	int buscar_index_proceso(uint32_t pid);
-	void insertar_ordernado(t_segmento* hueco);
-	void imprimir_huecos();
+	void insertar_ordernado(t_segmento* hueco, t_list* lista, bool unificar);
+	void imprimir_huecos(t_list* lista);
+	void liberar_elemento(void* elemento);
+	void fin_segmento(t_segmento* segmento, int index);
+	void unificar_espacios();
+	void compactar_perrito();
+	void compacta(t_list* lista);
 
 
 

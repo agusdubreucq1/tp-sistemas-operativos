@@ -135,15 +135,16 @@ void ejecutar_instruccion(char* motivo){
 		char* mensaje = elegir_hueco(atoi(parametros[2]));
 
 		//char* mensaje = "OUT";
-
+		imprimir_huecos(lista_huecos);
 		if(!(strcmp(mensaje, "OUT"))){
 			log_error(memoria_logger, "Out of memory - Cerrando PID: %s", parametros[3]);
+			//enviar_mensaje("OUT", socket_kernel);
 			log_info(memoria_logger, "Eliminación de Proceso PID: %s", parametros[3]);
 			t_tabla_segmentos* tabla_a_borrar = buscar_tabla_proceso(atoi(parametros[3]));
 			borrar_tabla(tabla_a_borrar);
 			list_remove_element(tablas_segmentos, tabla_a_borrar);
 			enviar_mensaje("OUT", socket_kernel);
-			list_destroy_and_destroy_elements(tabla_a_borrar->segmentos, liberar_elemento_list);
+			//list_destroy_and_destroy_elements(tabla_a_borrar->segmentos, liberar_elemento_list);
 			free(tabla_a_borrar);
 		} else if(!(strcmp(mensaje, "COMPACT"))){
 			//pthread_mutex_lock(&sem_execute_fileSystem);
@@ -169,7 +170,7 @@ void ejecutar_instruccion(char* motivo){
 
 			enviar_mensaje(motivo, socket_kernel);
 		}
-		free(mensaje);
+		//free(mensaje);
 		break;
 	case DELETE_SEGMENT:
 		parametros = string_split(motivo, " ");
@@ -229,6 +230,11 @@ void ejecutar_instruccion(char* motivo){
 		break;
 	case F_READ:
 
+		break;
+	case COMPACT:
+		pthread_mutex_lock(&sem_execute_fileSystem);
+		compactar_perrito();
+		pthread_mutex_unlock(&sem_execute_fileSystem);
 		break;
 	default:
 		break;
