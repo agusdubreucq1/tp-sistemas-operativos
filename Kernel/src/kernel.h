@@ -26,6 +26,7 @@
 #include <utils/instruccion.h>
 #include "archivo.h"
 #include <string.h>
+#include <commons/process.h>
 
 
 #define IP_SERVER "127.0.0.1"

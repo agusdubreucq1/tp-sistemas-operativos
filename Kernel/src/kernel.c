@@ -40,8 +40,11 @@ int main(void){
     pthread_detach(planificador_corto_plazo);
 
     while(1){
-        int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
-        pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) &conexion_consola);
+    	int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
+    	//printf("\n consola: %d\n", conexion_consola);
+    	int *conexion_ptr = malloc(sizeof(int));
+    	*conexion_ptr = conexion_consola;
+    	pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) conexion_ptr);
         pthread_detach(atender_consolas);
     }
 
@@ -79,12 +82,16 @@ void* recibirProcesos(int* p_conexion) {
 	int conexion = *p_conexion;
 	uint32_t resultOk = 0;
 	uint32_t resultError = -1;
+	//printf("\nconexion: %d, hilo: %d\n", conexion, process_get_thread_id());
 
 	recv(conexion, &respuesta, sizeof(uint32_t), MSG_WAITALL);
-	if(respuesta == 1)
+	//printf("\n consola: %d, hilo: %d respuesta: %d\n", conexion, process_get_thread_id(),respuesta);
+	if(respuesta == 1){
 	   send(conexion, &resultOk, sizeof(uint32_t), 0);
-	else
+	}
+	else{
 	   send(conexion, &resultError, sizeof(uint32_t), 0);
+	}
 
 	t_list* lista;
 	int cod_op = recibir_operacion(conexion);
