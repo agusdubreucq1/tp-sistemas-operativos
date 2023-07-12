@@ -55,6 +55,7 @@ codigo_instruccion obtener_codigo_instruccion(char* codigo){
 	if(string_equals_ignore_case(codigo, "OUT"))			return OUT;
 	if(string_equals_ignore_case(codigo, "COMPACT"))		return COMPACT;
 	if(string_equals_ignore_case(codigo, "FINALIZAR"))		return FINALIZAR;
+	if(string_equals_ignore_case(codigo, "F_CREATE"))		return F_CREATE;
 	else										 			return EXIT;
 }
 

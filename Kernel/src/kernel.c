@@ -418,7 +418,18 @@ void ejecutar_segun_motivo(char* motivo){
 				pthread_mutex_lock(&sem_fileSystem);
 				enviar_mensaje(motivo, socket_fileSystem);
 				char* mensaje_fopen = recibir_mensaje_filesystem();
-				free(mensaje_fopen);
+				if(string_equals_ignore_case(mensaje_fopen, "OK")){
+					free(mensaje_fopen);
+					printf("\n estaba creado\n");
+				}else{
+					char f_create[100]="";
+					sprintf(f_create, "F_CREATE %s", parametros[1]);
+					enviar_mensaje(f_create, socket_fileSystem);
+					char* mensaje_create = recibir_mensaje_filesystem();
+					printf("\nse creo\n");
+					free(mensaje_create);
+				}
+
 				pthread_mutex_unlock(&sem_fileSystem);
 				t_archivo* archivo_creado = crear_archivo(parametros[1]);
 				list_add(lista_archivos_abiertos, archivo_creado);

@@ -298,15 +298,18 @@ void ejecutar_instruccion(char* instruccion){
 			char* archivo_abrir = parametros[1];
 			printf("se solicito abrir el archivo: %s \n", archivo_abrir);
 			if(existe_archivo(archivo_abrir)){
-				//printf("el archivo: %s ya existia\n", archivo_abrir);
 				log_info(fileSystem_logger, "abrir archivo: %s",archivo_abrir);
+				enviar_mensaje("OK", socket_Kernel);
 			}else{
-				crear_archivo(archivo_abrir);
-				log_info(fileSystem_logger, "crear archivo: %s", archivo_abrir);
-				//printf("el archivo: %s fue creado", archivo_abrir);
+				enviar_mensaje("NO EXISTE", socket_Kernel);
 			}
-			//imprimir_bitmap_20(bitmap);
-			enviar_mensaje("el filesystem abrio el archivo", socket_Kernel);
+			break;
+		case F_CREATE:
+			parametros = string_split(instruccion, " ");
+			char* archivo_crear = parametros[1];
+			crear_archivo(archivo_crear);
+			log_info(fileSystem_logger, "crear archivo: %s", archivo_crear);
+			enviar_mensaje("OK", socket_Kernel);
 			break;
 		case F_TRUNCATE:
 
