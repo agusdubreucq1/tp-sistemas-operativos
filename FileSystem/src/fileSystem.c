@@ -152,7 +152,7 @@ void agrandar(t_fcb* fcb, int asignados, int necesarios){
 			for(int i=0; i<agregar; i++){
 				agregar_bloque(fcb, &asignados);
 			}
-			usleep(retardo_acceso_bloque);
+			usleep(retardo_acceso_bloque*1000);
 			log_info(fileSystem_logger, "Acceso Bloque - Archivo: %s - Bloque Archivo:%s - Bloque File System %d",fcb->nombre_archivo, "puntero", fcb->puntero_indirecto);
 		}
 }

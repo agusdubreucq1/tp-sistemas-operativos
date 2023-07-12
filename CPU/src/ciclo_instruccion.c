@@ -32,7 +32,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   codigo_instruccion_string(instruccion->codigo_instruccion),
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
-			usleep(retardo_instruccion);
+			usleep(retardo_instruccion*1000);
 			registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], instruccion->parametro[1]);
 			//imprimir_registros(contexto_de_ejecucion->registros_cpu);
 			salida = 1;
