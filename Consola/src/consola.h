@@ -23,14 +23,15 @@
 
 	t_config* consola_config;
 	char *ip_kernel, *puerto_kernel;
-	int conexion_kernel;
-	t_paquete* paquete;
+	//int conexion_kernel;
+	//t_paquete* paquete;
+	pthread_mutex_t semaforo;
 
 // ------------------------------------------------------------------------------------------
 // -- Parser --
 // ------------------------------------------------------------------------------------------
 
-	char* buffer;
+	//char* buffer;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --

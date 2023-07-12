@@ -52,10 +52,10 @@
 // -- Socket del proceso --
 // ------------------------------------------------------------------------------------------
 
-	uint32_t respuesta;
-	uint32_t resultOk;
-	uint32_t resultError;
-	pthread_t atender_consolas;
+	//uint32_t respuesta;
+	//uint32_t resultOk;
+	//uint32_t resultError;
+	//pthread_t atender_consolas;
 	pthread_t planificador_largo_plazo;
 	pthread_t planificador_corto_plazo;
 	pthread_t conexionFileSystem;

@@ -39,8 +39,11 @@ int main(void){
     pthread_create(&planificador_corto_plazo, NULL, (void*) planificarCortoPlazo, NULL);
     pthread_detach(planificador_corto_plazo);
 
+
     while(1){
+    	pthread_t atender_consolas;
         int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
+        printf("CONEXION %d", conexion_consola);
         pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) &conexion_consola);
         pthread_detach(atender_consolas);
     }
@@ -77,14 +80,18 @@ void* conectarMemoria(){
 
 void* recibirProcesos(int* p_conexion) {
 	int conexion = *p_conexion;
-	uint32_t resultOk = 0;
-	uint32_t resultError = -1;
+	//uint32_t resultOk = 0;
+	//uint32_t resultError = -1;
+	//uint32_t result;
 
-	recv(conexion, &respuesta, sizeof(uint32_t), MSG_WAITALL);
-	if(respuesta == 1)
+	//recv(conexion, &result, sizeof(uint32_t), MSG_WAITALL);
+	//printf("\n\n RECIBI %u\n\n", result);
+	//send(conexion, &resultOk, sizeof(uint32_t), 0);
+	/*if(result == 1){
 	   send(conexion, &resultOk, sizeof(uint32_t), 0);
-	else
+	}else{
 	   send(conexion, &resultError, sizeof(uint32_t), 0);
+	}*/
 
 	t_list* lista;
 	int cod_op = recibir_operacion(conexion);
@@ -271,7 +278,7 @@ void ejecutar_motivo_memoria(char* motivo){
 
 
 void planificarCortoPlazo(){
-	sleep(10);
+	//sleep(10);
 	while(1){
 		if (devolver_ejecucion == 1){//para las instrucciones que luego de realizarlas, sigue el mismo proceso(como SIGNAL)
 			/*list_remove_element(lista_ready, pcb_ejecutando);
@@ -300,9 +307,10 @@ t_pcb* pcb_elegido_HRRN(){
 	float ratio_mayor = 0.0;
 	t_pcb* pcb; /*= malloc(sizeof(t_pcb));*/
 	struct timeval hora_actual;
+	gettimeofday(&hora_actual, NULL);
 	for (int i = 0; i < list_size(lista_ready); i++) {
 		/*t_pcb* */pcb = list_get(lista_ready, i);
-		gettimeofday(&hora_actual, NULL);
+
 		int tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000) - pcb->tiempo_ready;
 		//int tiempo = (hora_actual.tv_sec * 1000000 + hora_actual.tv_usec) - pcb->tiempo_ready;
 		//int tiempo = (hora_actual.tv_sec + hora_actual.tv_sec) - pcb->tiempo_ready;
@@ -313,11 +321,12 @@ t_pcb* pcb_elegido_HRRN(){
 			tcb_index = i;
 		}
 
+		/*
 		printf("\nPCB %d", pcb->pid);
 		printf("\nTiempo %d", tiempo);
 		printf("\nEstimado %d", pcb->estimado_rafaga);
 		printf("\nRatio %f\n", ratio);
-
+		 */
 	}
 	pcb = list_remove(lista_ready, tcb_index);
 	return pcb;
