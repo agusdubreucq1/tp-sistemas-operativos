@@ -37,8 +37,8 @@ int main(int argc, char** argv) {
 	int conexion_kernel = crear_conexion(ip_kernel, puerto_kernel, consola_logger, "Kernel");
 
 	printf(" SOCKET %d", conexion_kernel);
-	//uint32_t mandar = 1;
-	//handshake(conexion_kernel, mandar, consola_logger, "Kernel");
+	uint32_t mandar = 1;
+	handshake(conexion_kernel, mandar, consola_logger, "Kernel");
 
 	char* buffer = parsearInstrucciones(argv[2]);
 
