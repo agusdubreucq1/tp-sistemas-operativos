@@ -101,7 +101,7 @@ void* best_fit(int tamanio) {
 		else if (desperdicio == 0) {
 			best_fit = hueco->direccion_base;
 			list_remove(lista_huecos, i);
-			printf("\nEl mejor hueco es: %p", best_fit);
+			//printf("\nEl mejor hueco es: %p", best_fit);
 			return best_fit;
 		}
 	}
@@ -110,8 +110,8 @@ void* best_fit(int tamanio) {
 		best_hueco->direccion_base = best_hueco->direccion_base + tamanio;
 	}
 
-	printf("\nEl mejor hueco es: %p", best_fit);
-	imprimir_huecos(lista_huecos);
+	//printf("\nEl mejor hueco es: %p", best_fit);
+	//imprimir_huecos(lista_huecos);
 
 	return best_fit;
 }
@@ -150,7 +150,7 @@ void* worst_fit(int tamanio) {
 		}
 	}
 
-	imprimir_huecos(lista_huecos);
+	//imprimir_huecos(lista_huecos);
 	return worst_fit;
 }
 

@@ -79,6 +79,7 @@
 	t_list* lista_ready;
 	t_list* lista_recursos;
 	t_list* lista_archivos_abiertos;
+	t_list* lista_pcbs;
 
 	int devolver_ejecucion;
 	t_pcb* pcb_ejecutando;
@@ -141,5 +142,6 @@
 	void finalizar_proceso(t_pcb* pcb, char* motivo);
 	void liberar_recursos(t_pcb* pcb);
 	void liberarTablaSegmentos(t_pcb* pcb);
+	t_pcb* buscar_pcb(t_list* lista, uint32_t pid_buscado);
 
 #endif /* KERNEL_H_ */

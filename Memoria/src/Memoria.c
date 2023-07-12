@@ -106,7 +106,7 @@ void* atenderFileSystem(){
 		int cod_op = recibir_operacion(socket_filesystem);
 		switch (cod_op) {
 		case MENSAJE:
-			printf("\nRECIBI MENSJAE DE FILESYSTEM\n\n");
+			//printf("\nRECIBI MENSJAE DE FILESYSTEM\n\n");
 			char* instruccion = recibir_instruccion(socket_filesystem, memoria_logger);
 			pthread_mutex_lock(&sem_execute_fileSystem);
 			ejecutar_instruccion(instruccion);
@@ -179,7 +179,7 @@ void ejecutar_instruccion(char* motivo){
 		int size = segmento_a_borrar->limite - segmento_a_borrar->direccion_base;
 		log_info(memoria_logger, "PID: %s - Eliminar Segmento: %s - Base: %p - TAMAÑO: %u", parametros[2], parametros[1], segmento_a_borrar->direccion_base, size);
 		borrar_segmento(segmento_a_borrar);
-		imprimir_huecos(lista_huecos);
+		//imprimir_huecos(lista_huecos);
 		enviar_segmentos(tabla_del_segmento, socket_kernel);
 		break;
 	case FINALIZAR:
@@ -187,7 +187,7 @@ void ejecutar_instruccion(char* motivo){
 		t_tabla_segmentos* tabla_a_finalizar = buscar_tabla_proceso(atoi(parametros[1]));
 		borrar_tabla(tabla_a_finalizar);
 		list_remove_element(tablas_segmentos, tabla_a_finalizar);
-		list_destroy_and_destroy_elements(tabla_a_finalizar->segmentos, liberar_elemento_list);
+		//list_destroy_and_destroy_elements(tabla_a_finalizar->segmentos, liberar_elemento_list);
 		free(tabla_a_finalizar);
 		log_info(memoria_logger, "Eliminación de Proceso PID: %s", parametros[1]);
 		break;
@@ -236,6 +236,12 @@ void ejecutar_instruccion(char* motivo){
 		pthread_mutex_lock(&sem_execute_fileSystem);
 		compactar_perrito();
 		pthread_mutex_unlock(&sem_execute_fileSystem);
+		int elementos = list_size(tablas_segmentos);
+		printf("\n ELEMENTOS %i \n", elementos);
+		for (int i = 0; i < elementos; i++){
+			t_tabla_segmentos* tabla = list_get(tablas_segmentos, i);
+			enviar_segmentos(tabla, socket_kernel);
+		}
 		break;
 	default:
 		break;

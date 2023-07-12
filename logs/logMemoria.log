@@ -27260,3 +27260,1070 @@
 [INFO] 23:00:02:095 Memoria/(343903:343907): PID: 5 - Crear Segmento: 6 - Base: 0x7f74c0000d78 - TAMAÑO: 128
 [TRACE] 23:00:02:096 Memoria/(343903:343907): Recibi Instruccion: FINALIZAR 5
 [INFO] 23:00:02:096 Memoria/(343903:343907): Eliminación de Proceso PID: 5
+[INFO] 10:13:19:242 Memoria/(26623:26623): Logger creado
+[INFO] 10:13:19:244 Memoria/(26623:26623): -------Valores del config-------
+[INFO] 10:13:19:244 Memoria/(26623:26623): puerto_escucha = 8002
+[INFO] 10:13:19:244 Memoria/(26623:26623): tamaño memoria = 4096
+[INFO] 10:13:19:244 Memoria/(26623:26623): tamaño segmento = 128
+[INFO] 10:13:19:244 Memoria/(26623:26623): cantidad de segmentos = 16
+[INFO] 10:13:19:244 Memoria/(26623:26623): retardo memoria = 1000
+[INFO] 10:13:19:244 Memoria/(26623:26623): retardo compactacion = 60000
+[INFO] 10:13:19:244 Memoria/(26623:26623): algoritmo asignacion = BEST
+[INFO] 10:13:19:244 Memoria/(26623:26623): --------------------------------
+[INFO] 10:13:19:244 Memoria/(26623:26623): ¡Memoria iniciado correctamente!
+[TRACE] 10:13:19:244 Memoria/(26623:26623): Listo para escuchar a mi cliente
+[INFO] 10:13:19:244 Memoria/(26623:26623): Servidor listo para recibir al cliente
+[TRACE] 10:13:23:627 Memoria/(26623:26625): Se conecto un cliente!
+[TRACE] 10:13:23:627 Memoria/(26623:26625): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 10:13:36:539 Memoria/(26623:26626): Se conecto un cliente!
+[TRACE] 10:13:36:540 Memoria/(26623:26626): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:13:40:980 Memoria/(26623:26627): Se conecto un cliente!
+[INFO] 10:13:40:980 Memoria/(26623:26624): Espacio reservado: 4096 Bytes -> Direccion: 0x7fe4c0000b70
+[TRACE] 10:13:40:980 Memoria/(26623:26627): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:14:19:516 Memoria/(26623:26627): Recibi Instruccion: INICIAR 5
+[INFO] 10:14:19:516 Memoria/(26623:26627): Creación de Proceso PID: 5
+[TRACE] 10:14:19:516 Memoria/(26623:26627): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:14:19:516 Memoria/(26623:26627): Datos enviados correctamente
+[INFO] 10:17:08:863 Memoria/(27454:27454): Logger creado
+[INFO] 10:17:08:864 Memoria/(27454:27454): -------Valores del config-------
+[INFO] 10:17:08:864 Memoria/(27454:27454): puerto_escucha = 8002
+[INFO] 10:17:08:865 Memoria/(27454:27454): tamaño memoria = 4096
+[INFO] 10:17:08:865 Memoria/(27454:27454): tamaño segmento = 128
+[INFO] 10:17:08:865 Memoria/(27454:27454): cantidad de segmentos = 16
+[INFO] 10:17:08:865 Memoria/(27454:27454): retardo memoria = 1000
+[INFO] 10:17:08:865 Memoria/(27454:27454): retardo compactacion = 60000
+[INFO] 10:17:08:865 Memoria/(27454:27454): algoritmo asignacion = BEST
+[INFO] 10:17:08:865 Memoria/(27454:27454): --------------------------------
+[INFO] 10:17:08:865 Memoria/(27454:27454): ¡Memoria iniciado correctamente!
+[TRACE] 10:17:08:865 Memoria/(27454:27454): Listo para escuchar a mi cliente
+[INFO] 10:17:08:865 Memoria/(27454:27454): Servidor listo para recibir al cliente
+[TRACE] 10:17:09:386 Memoria/(27454:27456): Se conecto un cliente!
+[TRACE] 10:17:09:386 Memoria/(27454:27456): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 10:17:09:980 Memoria/(27454:27457): Se conecto un cliente!
+[TRACE] 10:17:09:980 Memoria/(27454:27457): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:17:11:880 Memoria/(27454:27458): Se conecto un cliente!
+[INFO] 10:17:11:881 Memoria/(27454:27455): Espacio reservado: 4096 Bytes -> Direccion: 0x7f6138000b70
+[TRACE] 10:17:11:881 Memoria/(27454:27458): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:17:13:957 Memoria/(27454:27458): Recibi Instruccion: INICIAR 7
+[INFO] 10:17:13:957 Memoria/(27454:27458): Creación de Proceso PID: 7
+[TRACE] 10:17:13:957 Memoria/(27454:27458): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:17:13:959 Memoria/(27454:27458): Datos enviados correctamente
+[INFO] 10:18:34:610 Memoria/(27644:27644): Logger creado
+[INFO] 10:18:34:611 Memoria/(27644:27644): -------Valores del config-------
+[INFO] 10:18:34:611 Memoria/(27644:27644): puerto_escucha = 8002
+[INFO] 10:18:34:611 Memoria/(27644:27644): tamaño memoria = 4096
+[INFO] 10:18:34:611 Memoria/(27644:27644): tamaño segmento = 128
+[INFO] 10:18:34:611 Memoria/(27644:27644): cantidad de segmentos = 16
+[INFO] 10:18:34:611 Memoria/(27644:27644): retardo memoria = 1000
+[INFO] 10:18:34:611 Memoria/(27644:27644): retardo compactacion = 60000
+[INFO] 10:18:34:611 Memoria/(27644:27644): algoritmo asignacion = BEST
+[INFO] 10:18:34:611 Memoria/(27644:27644): --------------------------------
+[INFO] 10:18:34:611 Memoria/(27644:27644): ¡Memoria iniciado correctamente!
+[TRACE] 10:18:34:611 Memoria/(27644:27644): Listo para escuchar a mi cliente
+[INFO] 10:18:34:611 Memoria/(27644:27644): Servidor listo para recibir al cliente
+[INFO] 10:18:47:375 Memoria/(27673:27673): Logger creado
+[INFO] 10:18:47:375 Memoria/(27673:27673): -------Valores del config-------
+[INFO] 10:18:47:376 Memoria/(27673:27673): puerto_escucha = 8002
+[INFO] 10:18:47:376 Memoria/(27673:27673): tamaño memoria = 4096
+[INFO] 10:18:47:376 Memoria/(27673:27673): tamaño segmento = 128
+[INFO] 10:18:47:376 Memoria/(27673:27673): cantidad de segmentos = 16
+[INFO] 10:18:47:376 Memoria/(27673:27673): retardo memoria = 1000
+[INFO] 10:18:47:376 Memoria/(27673:27673): retardo compactacion = 60000
+[INFO] 10:18:47:376 Memoria/(27673:27673): algoritmo asignacion = BEST
+[INFO] 10:18:47:376 Memoria/(27673:27673): --------------------------------
+[INFO] 10:18:47:376 Memoria/(27673:27673): ¡Memoria iniciado correctamente!
+[TRACE] 10:18:47:376 Memoria/(27673:27673): Listo para escuchar a mi cliente
+[INFO] 10:18:47:376 Memoria/(27673:27673): Servidor listo para recibir al cliente
+[TRACE] 10:18:48:093 Memoria/(27673:27675): Se conecto un cliente!
+[TRACE] 10:18:48:093 Memoria/(27673:27675): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 10:18:49:813 Memoria/(27673:27676): Se conecto un cliente!
+[TRACE] 10:18:49:813 Memoria/(27673:27676): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:18:53:869 Memoria/(27673:27677): Se conecto un cliente!
+[INFO] 10:18:53:869 Memoria/(27673:27674): Espacio reservado: 4096 Bytes -> Direccion: 0x7f613c000b70
+[TRACE] 10:18:53:869 Memoria/(27673:27677): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:18:56:847 Memoria/(27673:27677): Recibi Instruccion: INICIAR 5
+[INFO] 10:18:56:847 Memoria/(27673:27677): Creación de Proceso PID: 5
+[TRACE] 10:18:56:847 Memoria/(27673:27677): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:18:56:847 Memoria/(27673:27677): Datos enviados correctamente
+[TRACE] 10:19:00:006 Memoria/(27673:27677): Recibi Instruccion: INICIAR 9
+[INFO] 10:19:00:006 Memoria/(27673:27677): Creación de Proceso PID: 9
+[TRACE] 10:19:00:006 Memoria/(27673:27677): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:19:00:006 Memoria/(27673:27677): Datos enviados correctamente
+[TRACE] 10:19:03:910 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[INFO] 10:19:03:910 Memoria/(27673:27677): PID: 5 - Crear Segmento: 1 - Base: 0x7f613c000bf0 - TAMAÑO: 128
+[TRACE] 10:19:03:998 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 2 136 5
+[INFO] 10:19:03:998 Memoria/(27673:27677): PID: 5 - Crear Segmento: 2 - Base: 0x7f613c000c70 - TAMAÑO: 136
+[TRACE] 10:19:04:086 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 3 128 5
+[INFO] 10:19:04:086 Memoria/(27673:27677): PID: 5 - Crear Segmento: 3 - Base: 0x7f613c000cf8 - TAMAÑO: 128
+[TRACE] 10:19:04:174 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 4 128 5
+[INFO] 10:19:04:174 Memoria/(27673:27677): PID: 5 - Crear Segmento: 4 - Base: 0x7f613c000d78 - TAMAÑO: 128
+[TRACE] 10:19:04:263 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 5 128 5
+[INFO] 10:19:04:263 Memoria/(27673:27677): PID: 5 - Crear Segmento: 5 - Base: 0x7f613c000df8 - TAMAÑO: 128
+[TRACE] 10:19:04:350 Memoria/(27673:27677): Recibi Instruccion: DELETE_SEGMENT 2 5
+[INFO] 10:19:04:350 Memoria/(27673:27677): PID: 5 - Eliminar Segmento: 2 - Base: 0x7f613c000c70 - TAMAÑO: 136
+[TRACE] 10:19:04:350 Memoria/(27673:27677): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:19:04:350 Memoria/(27673:27677): Datos enviados correctamente
+[TRACE] 10:19:04:438 Memoria/(27673:27677): Recibi Instruccion: DELETE_SEGMENT 4 5
+[INFO] 10:19:04:438 Memoria/(27673:27677): PID: 5 - Eliminar Segmento: 4 - Base: 0x7f613c000d78 - TAMAÑO: 128
+[TRACE] 10:19:04:438 Memoria/(27673:27677): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:19:04:438 Memoria/(27673:27677): Datos enviados correctamente
+[TRACE] 10:19:04:526 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 6 128 5
+[INFO] 10:19:04:526 Memoria/(27673:27677): PID: 5 - Crear Segmento: 6 - Base: 0x7f613c000d78 - TAMAÑO: 128
+[TRACE] 10:19:04:614 Memoria/(27673:27677): Recibi Instruccion: FINALIZAR 5
+[INFO] 10:19:04:614 Memoria/(27673:27677): Eliminación de Proceso PID: 5
+[TRACE] 10:19:04:702 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 1 128 9
+[INFO] 10:19:04:702 Memoria/(27673:27677): PID: 9 - Crear Segmento: 1 - Base: 0x7f613c000bf0 - TAMAÑO: 128
+[TRACE] 10:19:04:790 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 2 136 9
+[INFO] 10:19:04:790 Memoria/(27673:27677): PID: 9 - Crear Segmento: 2 - Base: 0x7f613c000c70 - TAMAÑO: 136
+[TRACE] 10:19:04:878 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 3 128 9
+[INFO] 10:19:04:878 Memoria/(27673:27677): PID: 9 - Crear Segmento: 3 - Base: 0x7f613c000cf8 - TAMAÑO: 128
+[TRACE] 10:19:04:965 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 4 128 9
+[INFO] 10:19:04:966 Memoria/(27673:27677): PID: 9 - Crear Segmento: 4 - Base: 0x7f613c000d78 - TAMAÑO: 128
+[TRACE] 10:19:05:054 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 5 128 9
+[INFO] 10:19:05:054 Memoria/(27673:27677): PID: 9 - Crear Segmento: 5 - Base: 0x7f613c000df8 - TAMAÑO: 128
+[TRACE] 10:19:05:141 Memoria/(27673:27677): Recibi Instruccion: DELETE_SEGMENT 2 9
+[INFO] 10:19:05:141 Memoria/(27673:27677): PID: 9 - Eliminar Segmento: 2 - Base: 0x7f613c000c70 - TAMAÑO: 136
+[TRACE] 10:19:05:142 Memoria/(27673:27677): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:19:05:142 Memoria/(27673:27677): Datos enviados correctamente
+[TRACE] 10:19:05:230 Memoria/(27673:27677): Recibi Instruccion: DELETE_SEGMENT 4 9
+[INFO] 10:19:05:230 Memoria/(27673:27677): PID: 9 - Eliminar Segmento: 4 - Base: 0x7f613c000d78 - TAMAÑO: 128
+[TRACE] 10:19:05:230 Memoria/(27673:27677): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:19:05:230 Memoria/(27673:27677): Datos enviados correctamente
+[TRACE] 10:19:05:318 Memoria/(27673:27677): Recibi Instruccion: CREATE_SEGMENT 6 128 9
+[INFO] 10:19:05:318 Memoria/(27673:27677): PID: 9 - Crear Segmento: 6 - Base: 0x7f613c000d78 - TAMAÑO: 128
+[TRACE] 10:19:05:406 Memoria/(27673:27677): Recibi Instruccion: FINALIZAR 9
+[INFO] 10:26:39:953 Memoria/(29827:29827): Logger creado
+[INFO] 10:26:40:005 Memoria/(29827:29827): -------Valores del config-------
+[INFO] 10:26:40:007 Memoria/(29827:29827): puerto_escucha = 8002
+[INFO] 10:26:40:007 Memoria/(29827:29827): tamaño memoria = 4096
+[INFO] 10:26:40:008 Memoria/(29827:29827): tamaño segmento = 128
+[INFO] 10:26:40:008 Memoria/(29827:29827): cantidad de segmentos = 16
+[INFO] 10:26:40:008 Memoria/(29827:29827): retardo memoria = 1000
+[INFO] 10:26:40:008 Memoria/(29827:29827): retardo compactacion = 60000
+[INFO] 10:26:40:009 Memoria/(29827:29827): algoritmo asignacion = BEST
+[INFO] 10:26:40:009 Memoria/(29827:29827): --------------------------------
+[INFO] 10:26:40:009 Memoria/(29827:29827): ¡Memoria iniciado correctamente!
+[TRACE] 10:26:40:019 Memoria/(29827:29827): Listo para escuchar a mi cliente
+[INFO] 10:26:40:019 Memoria/(29827:29827): Servidor listo para recibir al cliente
+[TRACE] 10:26:41:112 Memoria/(29827:29829): Se conecto un cliente!
+[TRACE] 10:26:41:118 Memoria/(29827:29829): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 10:26:41:763 Memoria/(29827:29830): Se conecto un cliente!
+[TRACE] 10:26:41:764 Memoria/(29827:29830): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:26:42:340 Memoria/(29827:29831): Se conecto un cliente!
+[INFO] 10:26:42:343 Memoria/(29827:29828): Espacio reservado: 4096 Bytes -> Direccion: 0x4ab51e0
+[TRACE] 10:26:42:353 Memoria/(29827:29831): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:26:43:708 Memoria/(29827:29831): Recibi Instruccion: INICIAR 5
+[INFO] 10:26:43:709 Memoria/(29827:29831): Creación de Proceso PID: 5
+[TRACE] 10:26:43:715 Memoria/(29827:29831): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:26:43:715 Memoria/(29827:29831): Datos enviados correctamente
+[TRACE] 10:26:45:170 Memoria/(29827:29831): Recibi Instruccion: INICIAR 9
+[INFO] 10:26:45:171 Memoria/(29827:29831): Creación de Proceso PID: 9
+[TRACE] 10:26:45:171 Memoria/(29827:29831): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:26:45:171 Memoria/(29827:29831): Datos enviados correctamente
+[TRACE] 10:26:52:382 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[INFO] 10:26:52:383 Memoria/(29827:29831): PID: 5 - Crear Segmento: 1 - Base: 0x4ab5260 - TAMAÑO: 128
+[TRACE] 10:26:52:473 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 2 136 5
+[INFO] 10:26:52:473 Memoria/(29827:29831): PID: 5 - Crear Segmento: 2 - Base: 0x4ab52e0 - TAMAÑO: 136
+[TRACE] 10:26:52:562 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 3 128 5
+[INFO] 10:26:52:562 Memoria/(29827:29831): PID: 5 - Crear Segmento: 3 - Base: 0x4ab5368 - TAMAÑO: 128
+[TRACE] 10:26:52:651 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 4 128 5
+[INFO] 10:26:52:651 Memoria/(29827:29831): PID: 5 - Crear Segmento: 4 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:26:52:738 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 5 128 5
+[INFO] 10:26:52:739 Memoria/(29827:29831): PID: 5 - Crear Segmento: 5 - Base: 0x4ab5468 - TAMAÑO: 128
+[TRACE] 10:26:52:826 Memoria/(29827:29831): Recibi Instruccion: DELETE_SEGMENT 2 5
+[INFO] 10:26:52:827 Memoria/(29827:29831): PID: 5 - Eliminar Segmento: 2 - Base: 0x4ab52e0 - TAMAÑO: 136
+[TRACE] 10:26:52:831 Memoria/(29827:29831): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:26:52:831 Memoria/(29827:29831): Datos enviados correctamente
+[TRACE] 10:26:52:914 Memoria/(29827:29831): Recibi Instruccion: DELETE_SEGMENT 4 5
+[INFO] 10:26:52:915 Memoria/(29827:29831): PID: 5 - Eliminar Segmento: 4 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:26:52:915 Memoria/(29827:29831): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:26:52:915 Memoria/(29827:29831): Datos enviados correctamente
+[TRACE] 10:26:53:002 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 6 128 5
+[INFO] 10:26:53:003 Memoria/(29827:29831): PID: 5 - Crear Segmento: 6 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:26:53:090 Memoria/(29827:29831): Recibi Instruccion: FINALIZAR 5
+[INFO] 10:26:53:095 Memoria/(29827:29831): Eliminación de Proceso PID: 5
+[TRACE] 10:26:53:178 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 1 128 9
+[INFO] 10:26:53:179 Memoria/(29827:29831): PID: 9 - Crear Segmento: 1 - Base: 0x4ab5260 - TAMAÑO: 128
+[TRACE] 10:26:53:266 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 2 136 9
+[INFO] 10:26:53:267 Memoria/(29827:29831): PID: 9 - Crear Segmento: 2 - Base: 0x4ab52e0 - TAMAÑO: 136
+[TRACE] 10:26:53:354 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 3 128 9
+[INFO] 10:26:53:354 Memoria/(29827:29831): PID: 9 - Crear Segmento: 3 - Base: 0x4ab5368 - TAMAÑO: 128
+[TRACE] 10:26:53:442 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 4 128 9
+[INFO] 10:26:53:443 Memoria/(29827:29831): PID: 9 - Crear Segmento: 4 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:26:53:530 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 5 128 9
+[INFO] 10:26:53:531 Memoria/(29827:29831): PID: 9 - Crear Segmento: 5 - Base: 0x4ab5468 - TAMAÑO: 128
+[TRACE] 10:26:53:618 Memoria/(29827:29831): Recibi Instruccion: DELETE_SEGMENT 2 9
+[INFO] 10:26:53:618 Memoria/(29827:29831): PID: 9 - Eliminar Segmento: 2 - Base: 0x4ab52e0 - TAMAÑO: 136
+[TRACE] 10:26:53:619 Memoria/(29827:29831): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:26:53:620 Memoria/(29827:29831): Datos enviados correctamente
+[TRACE] 10:26:53:706 Memoria/(29827:29831): Recibi Instruccion: DELETE_SEGMENT 4 9
+[INFO] 10:26:53:706 Memoria/(29827:29831): PID: 9 - Eliminar Segmento: 4 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:26:53:706 Memoria/(29827:29831): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:26:53:706 Memoria/(29827:29831): Datos enviados correctamente
+[TRACE] 10:26:53:794 Memoria/(29827:29831): Recibi Instruccion: CREATE_SEGMENT 6 128 9
+[INFO] 10:26:53:794 Memoria/(29827:29831): PID: 9 - Crear Segmento: 6 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:26:53:883 Memoria/(29827:29831): Recibi Instruccion: FINALIZAR 9
+[INFO] 10:26:53:885 Memoria/(29827:29831): Eliminación de Proceso PID: 9
+[INFO] 10:28:47:900 Memoria/(30088:30088): Logger creado
+[INFO] 10:28:47:951 Memoria/(30088:30088): -------Valores del config-------
+[INFO] 10:28:47:952 Memoria/(30088:30088): puerto_escucha = 8002
+[INFO] 10:28:47:952 Memoria/(30088:30088): tamaño memoria = 4096
+[INFO] 10:28:47:953 Memoria/(30088:30088): tamaño segmento = 128
+[INFO] 10:28:47:953 Memoria/(30088:30088): cantidad de segmentos = 16
+[INFO] 10:28:47:953 Memoria/(30088:30088): retardo memoria = 1000
+[INFO] 10:28:47:953 Memoria/(30088:30088): retardo compactacion = 60000
+[INFO] 10:28:47:954 Memoria/(30088:30088): algoritmo asignacion = BEST
+[INFO] 10:28:47:954 Memoria/(30088:30088): --------------------------------
+[INFO] 10:28:47:954 Memoria/(30088:30088): ¡Memoria iniciado correctamente!
+[TRACE] 10:28:47:963 Memoria/(30088:30088): Listo para escuchar a mi cliente
+[INFO] 10:28:47:963 Memoria/(30088:30088): Servidor listo para recibir al cliente
+[TRACE] 10:28:48:924 Memoria/(30088:30090): Se conecto un cliente!
+[TRACE] 10:28:48:935 Memoria/(30088:30090): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 10:28:49:691 Memoria/(30088:30091): Se conecto un cliente!
+[TRACE] 10:28:49:692 Memoria/(30088:30091): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:28:50:252 Memoria/(30088:30092): Se conecto un cliente!
+[INFO] 10:28:50:257 Memoria/(30088:30089): Espacio reservado: 4096 Bytes -> Direccion: 0x4ab51e0
+[TRACE] 10:28:50:264 Memoria/(30088:30092): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:28:51:272 Memoria/(30088:30092): Recibi Instruccion: INICIAR 5
+[INFO] 10:28:51:275 Memoria/(30088:30092): Creación de Proceso PID: 5
+[TRACE] 10:28:51:281 Memoria/(30088:30092): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:28:51:282 Memoria/(30088:30092): Datos enviados correctamente
+[TRACE] 10:28:52:087 Memoria/(30088:30092): Recibi Instruccion: INICIAR 9
+[INFO] 10:28:52:088 Memoria/(30088:30092): Creación de Proceso PID: 9
+[TRACE] 10:28:52:088 Memoria/(30088:30092): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:28:52:088 Memoria/(30088:30092): Datos enviados correctamente
+[TRACE] 10:29:00:294 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[INFO] 10:29:00:295 Memoria/(30088:30092): PID: 5 - Crear Segmento: 1 - Base: 0x4ab5260 - TAMAÑO: 128
+[TRACE] 10:29:00:382 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 2 136 5
+[INFO] 10:29:00:382 Memoria/(30088:30092): PID: 5 - Crear Segmento: 2 - Base: 0x4ab52e0 - TAMAÑO: 136
+[TRACE] 10:29:00:470 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 3 128 5
+[INFO] 10:29:00:470 Memoria/(30088:30092): PID: 5 - Crear Segmento: 3 - Base: 0x4ab5368 - TAMAÑO: 128
+[TRACE] 10:29:00:558 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 4 128 5
+[INFO] 10:29:00:558 Memoria/(30088:30092): PID: 5 - Crear Segmento: 4 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:29:00:646 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 5 128 5
+[INFO] 10:29:00:646 Memoria/(30088:30092): PID: 5 - Crear Segmento: 5 - Base: 0x4ab5468 - TAMAÑO: 128
+[TRACE] 10:29:00:734 Memoria/(30088:30092): Recibi Instruccion: DELETE_SEGMENT 2 5
+[INFO] 10:29:00:735 Memoria/(30088:30092): PID: 5 - Eliminar Segmento: 2 - Base: 0x4ab52e0 - TAMAÑO: 136
+[TRACE] 10:29:00:738 Memoria/(30088:30092): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:29:00:738 Memoria/(30088:30092): Datos enviados correctamente
+[TRACE] 10:29:00:822 Memoria/(30088:30092): Recibi Instruccion: DELETE_SEGMENT 4 5
+[INFO] 10:29:00:822 Memoria/(30088:30092): PID: 5 - Eliminar Segmento: 4 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:29:00:823 Memoria/(30088:30092): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:29:00:823 Memoria/(30088:30092): Datos enviados correctamente
+[TRACE] 10:29:00:910 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 6 128 5
+[INFO] 10:29:00:910 Memoria/(30088:30092): PID: 5 - Crear Segmento: 6 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:29:00:998 Memoria/(30088:30092): Recibi Instruccion: FINALIZAR 5
+[INFO] 10:29:01:004 Memoria/(30088:30092): Eliminación de Proceso PID: 5
+[TRACE] 10:29:01:086 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 1 128 9
+[INFO] 10:29:01:087 Memoria/(30088:30092): PID: 9 - Crear Segmento: 1 - Base: 0x4ab5260 - TAMAÑO: 128
+[TRACE] 10:29:01:174 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 2 136 9
+[INFO] 10:29:01:174 Memoria/(30088:30092): PID: 9 - Crear Segmento: 2 - Base: 0x4ab52e0 - TAMAÑO: 136
+[TRACE] 10:29:01:262 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 3 128 9
+[INFO] 10:29:01:262 Memoria/(30088:30092): PID: 9 - Crear Segmento: 3 - Base: 0x4ab5368 - TAMAÑO: 128
+[TRACE] 10:29:01:350 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 4 128 9
+[INFO] 10:29:01:350 Memoria/(30088:30092): PID: 9 - Crear Segmento: 4 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:29:01:438 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 5 128 9
+[INFO] 10:29:01:438 Memoria/(30088:30092): PID: 9 - Crear Segmento: 5 - Base: 0x4ab5468 - TAMAÑO: 128
+[TRACE] 10:29:01:526 Memoria/(30088:30092): Recibi Instruccion: DELETE_SEGMENT 2 9
+[INFO] 10:29:01:526 Memoria/(30088:30092): PID: 9 - Eliminar Segmento: 2 - Base: 0x4ab52e0 - TAMAÑO: 136
+[TRACE] 10:29:01:530 Memoria/(30088:30092): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:29:01:532 Memoria/(30088:30092): Datos enviados correctamente
+[TRACE] 10:29:01:618 Memoria/(30088:30092): Recibi Instruccion: DELETE_SEGMENT 4 9
+[INFO] 10:29:01:618 Memoria/(30088:30092): PID: 9 - Eliminar Segmento: 4 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:29:01:618 Memoria/(30088:30092): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:29:01:618 Memoria/(30088:30092): Datos enviados correctamente
+[TRACE] 10:29:01:706 Memoria/(30088:30092): Recibi Instruccion: CREATE_SEGMENT 6 128 9
+[INFO] 10:29:01:706 Memoria/(30088:30092): PID: 9 - Crear Segmento: 6 - Base: 0x4ab53e8 - TAMAÑO: 128
+[TRACE] 10:29:01:795 Memoria/(30088:30092): Recibi Instruccion: FINALIZAR 9
+[INFO] 10:29:01:797 Memoria/(30088:30092): Eliminación de Proceso PID: 9
+[INFO] 10:32:55:675 Memoria/(30562:30562): Logger creado
+[INFO] 10:32:55:676 Memoria/(30562:30562): -------Valores del config-------
+[INFO] 10:32:55:676 Memoria/(30562:30562): puerto_escucha = 8002
+[INFO] 10:32:55:676 Memoria/(30562:30562): tamaño memoria = 4096
+[INFO] 10:32:55:676 Memoria/(30562:30562): tamaño segmento = 128
+[INFO] 10:32:55:676 Memoria/(30562:30562): cantidad de segmentos = 16
+[INFO] 10:32:55:676 Memoria/(30562:30562): retardo memoria = 1000
+[INFO] 10:32:55:676 Memoria/(30562:30562): retardo compactacion = 60000
+[INFO] 10:32:55:676 Memoria/(30562:30562): algoritmo asignacion = BEST
+[INFO] 10:32:55:676 Memoria/(30562:30562): --------------------------------
+[INFO] 10:32:55:676 Memoria/(30562:30562): ¡Memoria iniciado correctamente!
+[TRACE] 10:32:55:676 Memoria/(30562:30562): Listo para escuchar a mi cliente
+[INFO] 10:32:55:676 Memoria/(30562:30562): Servidor listo para recibir al cliente
+[TRACE] 10:32:56:756 Memoria/(30562:30564): Se conecto un cliente!
+[TRACE] 10:32:56:756 Memoria/(30562:30564): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 10:32:57:243 Memoria/(30562:30565): Se conecto un cliente!
+[TRACE] 10:32:57:243 Memoria/(30562:30565): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:32:57:932 Memoria/(30562:30566): Se conecto un cliente!
+[INFO] 10:32:57:932 Memoria/(30562:30563): Espacio reservado: 4096 Bytes -> Direccion: 0x7fc724000b70
+[TRACE] 10:32:57:932 Memoria/(30562:30566): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:32:59:148 Memoria/(30562:30566): Recibi Instruccion: INICIAR 5
+[INFO] 10:32:59:148 Memoria/(30562:30566): Creación de Proceso PID: 5
+[TRACE] 10:32:59:148 Memoria/(30562:30566): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:32:59:148 Memoria/(30562:30566): Datos enviados correctamente
+[TRACE] 10:32:59:722 Memoria/(30562:30566): Recibi Instruccion: INICIAR 9
+[INFO] 10:32:59:722 Memoria/(30562:30566): Creación de Proceso PID: 9
+[TRACE] 10:32:59:722 Memoria/(30562:30566): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:32:59:722 Memoria/(30562:30566): Datos enviados correctamente
+[TRACE] 10:33:07:974 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[INFO] 10:33:07:974 Memoria/(30562:30566): PID: 5 - Crear Segmento: 1 - Base: 0x7fc724000bf0 - TAMAÑO: 128
+[TRACE] 10:33:08:062 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 2 136 5
+[INFO] 10:33:08:062 Memoria/(30562:30566): PID: 5 - Crear Segmento: 2 - Base: 0x7fc724000c70 - TAMAÑO: 136
+[TRACE] 10:33:08:150 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 3 128 5
+[INFO] 10:33:08:150 Memoria/(30562:30566): PID: 5 - Crear Segmento: 3 - Base: 0x7fc724000cf8 - TAMAÑO: 128
+[TRACE] 10:33:08:237 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 4 128 5
+[INFO] 10:33:08:238 Memoria/(30562:30566): PID: 5 - Crear Segmento: 4 - Base: 0x7fc724000d78 - TAMAÑO: 128
+[TRACE] 10:33:08:326 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 5 128 5
+[INFO] 10:33:08:326 Memoria/(30562:30566): PID: 5 - Crear Segmento: 5 - Base: 0x7fc724000df8 - TAMAÑO: 128
+[TRACE] 10:33:08:414 Memoria/(30562:30566): Recibi Instruccion: DELETE_SEGMENT 2 5
+[INFO] 10:33:08:414 Memoria/(30562:30566): PID: 5 - Eliminar Segmento: 2 - Base: 0x7fc724000c70 - TAMAÑO: 136
+[TRACE] 10:33:08:414 Memoria/(30562:30566): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:33:08:414 Memoria/(30562:30566): Datos enviados correctamente
+[TRACE] 10:33:08:502 Memoria/(30562:30566): Recibi Instruccion: DELETE_SEGMENT 4 5
+[INFO] 10:33:08:502 Memoria/(30562:30566): PID: 5 - Eliminar Segmento: 4 - Base: 0x7fc724000d78 - TAMAÑO: 128
+[TRACE] 10:33:08:502 Memoria/(30562:30566): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:33:08:502 Memoria/(30562:30566): Datos enviados correctamente
+[TRACE] 10:33:08:589 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 6 128 5
+[INFO] 10:33:08:589 Memoria/(30562:30566): PID: 5 - Crear Segmento: 6 - Base: 0x7fc724000d78 - TAMAÑO: 128
+[TRACE] 10:33:08:678 Memoria/(30562:30566): Recibi Instruccion: FINALIZAR 5
+[INFO] 10:33:08:678 Memoria/(30562:30566): Eliminación de Proceso PID: 5
+[TRACE] 10:33:08:766 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 1 128 9
+[INFO] 10:33:08:766 Memoria/(30562:30566): PID: 9 - Crear Segmento: 1 - Base: 0x7fc724000bf0 - TAMAÑO: 128
+[TRACE] 10:33:08:854 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 2 136 9
+[INFO] 10:33:08:854 Memoria/(30562:30566): PID: 9 - Crear Segmento: 2 - Base: 0x7fc724000c70 - TAMAÑO: 136
+[TRACE] 10:33:08:941 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 3 128 9
+[INFO] 10:33:08:941 Memoria/(30562:30566): PID: 9 - Crear Segmento: 3 - Base: 0x7fc724000cf8 - TAMAÑO: 128
+[TRACE] 10:33:09:030 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 4 128 9
+[INFO] 10:33:09:030 Memoria/(30562:30566): PID: 9 - Crear Segmento: 4 - Base: 0x7fc724000d78 - TAMAÑO: 128
+[TRACE] 10:33:09:118 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 5 128 9
+[INFO] 10:33:09:118 Memoria/(30562:30566): PID: 9 - Crear Segmento: 5 - Base: 0x7fc724000df8 - TAMAÑO: 128
+[TRACE] 10:33:09:206 Memoria/(30562:30566): Recibi Instruccion: DELETE_SEGMENT 2 9
+[INFO] 10:33:09:206 Memoria/(30562:30566): PID: 9 - Eliminar Segmento: 2 - Base: 0x7fc724000c70 - TAMAÑO: 136
+[TRACE] 10:33:09:206 Memoria/(30562:30566): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:33:09:206 Memoria/(30562:30566): Datos enviados correctamente
+[TRACE] 10:33:09:294 Memoria/(30562:30566): Recibi Instruccion: DELETE_SEGMENT 4 9
+[INFO] 10:33:09:294 Memoria/(30562:30566): PID: 9 - Eliminar Segmento: 4 - Base: 0x7fc724000d78 - TAMAÑO: 128
+[TRACE] 10:33:09:294 Memoria/(30562:30566): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:33:09:294 Memoria/(30562:30566): Datos enviados correctamente
+[TRACE] 10:33:09:382 Memoria/(30562:30566): Recibi Instruccion: CREATE_SEGMENT 6 128 9
+[INFO] 10:33:09:382 Memoria/(30562:30566): PID: 9 - Crear Segmento: 6 - Base: 0x7fc724000d78 - TAMAÑO: 128
+[TRACE] 10:33:09:470 Memoria/(30562:30566): Recibi Instruccion: FINALIZAR 9
+[INFO] 10:35:32:529 Memoria/(30879:30879): Logger creado
+[INFO] 10:35:32:530 Memoria/(30879:30879): -------Valores del config-------
+[INFO] 10:35:32:530 Memoria/(30879:30879): puerto_escucha = 8002
+[INFO] 10:35:32:530 Memoria/(30879:30879): tamaño memoria = 4096
+[INFO] 10:35:32:530 Memoria/(30879:30879): tamaño segmento = 128
+[INFO] 10:35:32:530 Memoria/(30879:30879): cantidad de segmentos = 16
+[INFO] 10:35:32:530 Memoria/(30879:30879): retardo memoria = 1000
+[INFO] 10:35:32:530 Memoria/(30879:30879): retardo compactacion = 60000
+[INFO] 10:35:32:530 Memoria/(30879:30879): algoritmo asignacion = BEST
+[INFO] 10:35:32:530 Memoria/(30879:30879): --------------------------------
+[INFO] 10:35:32:530 Memoria/(30879:30879): ¡Memoria iniciado correctamente!
+[TRACE] 10:35:32:531 Memoria/(30879:30879): Listo para escuchar a mi cliente
+[INFO] 10:35:32:531 Memoria/(30879:30879): Servidor listo para recibir al cliente
+[TRACE] 10:35:33:244 Memoria/(30879:30881): Se conecto un cliente!
+[TRACE] 10:35:33:245 Memoria/(30879:30881): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 10:35:33:651 Memoria/(30879:30882): Se conecto un cliente!
+[TRACE] 10:35:33:651 Memoria/(30879:30882): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:35:34:054 Memoria/(30879:30883): Se conecto un cliente!
+[INFO] 10:35:34:054 Memoria/(30879:30880): Espacio reservado: 4096 Bytes -> Direccion: 0x7fea98000b70
+[TRACE] 10:35:34:054 Memoria/(30879:30883): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:35:34:617 Memoria/(30879:30883): Recibi Instruccion: INICIAR 5
+[INFO] 10:35:34:618 Memoria/(30879:30883): Creación de Proceso PID: 5
+[TRACE] 10:35:34:618 Memoria/(30879:30883): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:35:34:618 Memoria/(30879:30883): Datos enviados correctamente
+[TRACE] 10:35:35:193 Memoria/(30879:30883): Recibi Instruccion: INICIAR 9
+[INFO] 10:35:35:193 Memoria/(30879:30883): Creación de Proceso PID: 9
+[TRACE] 10:35:35:193 Memoria/(30879:30883): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:35:35:193 Memoria/(30879:30883): Datos enviados correctamente
+[TRACE] 10:35:44:098 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 1 128 5
+[INFO] 10:35:44:098 Memoria/(30879:30883): PID: 5 - Crear Segmento: 1 - Base: 0x7fea98000bf0 - TAMAÑO: 128
+[TRACE] 10:35:44:186 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 2 136 5
+[INFO] 10:35:44:186 Memoria/(30879:30883): PID: 5 - Crear Segmento: 2 - Base: 0x7fea98000c70 - TAMAÑO: 136
+[TRACE] 10:35:44:273 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 3 128 5
+[INFO] 10:35:44:273 Memoria/(30879:30883): PID: 5 - Crear Segmento: 3 - Base: 0x7fea98000cf8 - TAMAÑO: 128
+[TRACE] 10:35:44:362 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 4 128 5
+[INFO] 10:35:44:362 Memoria/(30879:30883): PID: 5 - Crear Segmento: 4 - Base: 0x7fea98000d78 - TAMAÑO: 128
+[TRACE] 10:35:44:450 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 5 128 5
+[INFO] 10:35:44:450 Memoria/(30879:30883): PID: 5 - Crear Segmento: 5 - Base: 0x7fea98000df8 - TAMAÑO: 128
+[TRACE] 10:35:44:538 Memoria/(30879:30883): Recibi Instruccion: DELETE_SEGMENT 2 5
+[INFO] 10:35:44:538 Memoria/(30879:30883): PID: 5 - Eliminar Segmento: 2 - Base: 0x7fea98000c70 - TAMAÑO: 136
+[TRACE] 10:35:44:538 Memoria/(30879:30883): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:35:44:538 Memoria/(30879:30883): Datos enviados correctamente
+[TRACE] 10:35:44:626 Memoria/(30879:30883): Recibi Instruccion: DELETE_SEGMENT 4 5
+[INFO] 10:35:44:626 Memoria/(30879:30883): PID: 5 - Eliminar Segmento: 4 - Base: 0x7fea98000d78 - TAMAÑO: 128
+[TRACE] 10:35:44:626 Memoria/(30879:30883): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:35:44:626 Memoria/(30879:30883): Datos enviados correctamente
+[TRACE] 10:35:44:715 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 6 128 5
+[INFO] 10:35:44:715 Memoria/(30879:30883): PID: 5 - Crear Segmento: 6 - Base: 0x7fea98000d78 - TAMAÑO: 128
+[TRACE] 10:35:44:803 Memoria/(30879:30883): Recibi Instruccion: FINALIZAR 5
+[INFO] 10:35:44:803 Memoria/(30879:30883): Eliminación de Proceso PID: 5
+[TRACE] 10:35:44:890 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 1 128 9
+[INFO] 10:35:44:890 Memoria/(30879:30883): PID: 9 - Crear Segmento: 1 - Base: 0x7fea98000bf0 - TAMAÑO: 128
+[TRACE] 10:35:44:978 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 2 136 9
+[INFO] 10:35:44:978 Memoria/(30879:30883): PID: 9 - Crear Segmento: 2 - Base: 0x7fea98000c70 - TAMAÑO: 136
+[TRACE] 10:35:45:065 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 3 128 9
+[INFO] 10:35:45:066 Memoria/(30879:30883): PID: 9 - Crear Segmento: 3 - Base: 0x7fea98000cf8 - TAMAÑO: 128
+[TRACE] 10:35:45:153 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 4 128 9
+[INFO] 10:35:45:154 Memoria/(30879:30883): PID: 9 - Crear Segmento: 4 - Base: 0x7fea98000d78 - TAMAÑO: 128
+[TRACE] 10:35:45:242 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 5 128 9
+[INFO] 10:35:45:242 Memoria/(30879:30883): PID: 9 - Crear Segmento: 5 - Base: 0x7fea98000df8 - TAMAÑO: 128
+[TRACE] 10:35:45:330 Memoria/(30879:30883): Recibi Instruccion: DELETE_SEGMENT 2 9
+[INFO] 10:35:45:330 Memoria/(30879:30883): PID: 9 - Eliminar Segmento: 2 - Base: 0x7fea98000c70 - TAMAÑO: 136
+[TRACE] 10:35:45:330 Memoria/(30879:30883): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:35:45:330 Memoria/(30879:30883): Datos enviados correctamente
+[TRACE] 10:35:45:419 Memoria/(30879:30883): Recibi Instruccion: DELETE_SEGMENT 4 9
+[INFO] 10:35:45:419 Memoria/(30879:30883): PID: 9 - Eliminar Segmento: 4 - Base: 0x7fea98000d78 - TAMAÑO: 128
+[TRACE] 10:35:45:419 Memoria/(30879:30883): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:35:45:419 Memoria/(30879:30883): Datos enviados correctamente
+[TRACE] 10:35:45:506 Memoria/(30879:30883): Recibi Instruccion: CREATE_SEGMENT 6 128 9
+[INFO] 10:35:45:506 Memoria/(30879:30883): PID: 9 - Crear Segmento: 6 - Base: 0x7fea98000d78 - TAMAÑO: 128
+[TRACE] 10:35:45:594 Memoria/(30879:30883): Recibi Instruccion: FINALIZAR 9
+[INFO] 10:35:45:594 Memoria/(30879:30883): Eliminación de Proceso PID: 9
+[INFO] 10:43:08:934 Memoria/(32336:32336): Logger creado
+[INFO] 10:43:08:936 Memoria/(32336:32336): -------Valores del config-------
+[INFO] 10:43:08:936 Memoria/(32336:32336): puerto_escucha = 8002
+[INFO] 10:43:08:936 Memoria/(32336:32336): tamaño memoria = 4096
+[INFO] 10:43:08:936 Memoria/(32336:32336): tamaño segmento = 128
+[INFO] 10:43:08:936 Memoria/(32336:32336): cantidad de segmentos = 16
+[INFO] 10:43:08:936 Memoria/(32336:32336): retardo memoria = 1000
+[INFO] 10:43:08:936 Memoria/(32336:32336): retardo compactacion = 60000
+[INFO] 10:43:08:936 Memoria/(32336:32336): algoritmo asignacion = BEST
+[INFO] 10:43:08:936 Memoria/(32336:32336): --------------------------------
+[INFO] 10:43:08:936 Memoria/(32336:32336): ¡Memoria iniciado correctamente!
+[TRACE] 10:43:08:936 Memoria/(32336:32336): Listo para escuchar a mi cliente
+[INFO] 10:43:08:937 Memoria/(32336:32336): Servidor listo para recibir al cliente
+[TRACE] 10:43:10:224 Memoria/(32336:32338): Se conecto un cliente!
+[TRACE] 10:43:10:224 Memoria/(32336:32338): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:43:10:913 Memoria/(32336:32339): Se conecto un cliente!
+[TRACE] 10:43:10:913 Memoria/(32336:32339): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:43:11:823 Memoria/(32336:32339): Recibi Instruccion: INICIAR 5
+[INFO] 10:44:41:574 Memoria/(32524:32524): Logger creado
+[INFO] 10:44:41:576 Memoria/(32524:32524): -------Valores del config-------
+[INFO] 10:44:41:576 Memoria/(32524:32524): puerto_escucha = 8002
+[INFO] 10:44:41:576 Memoria/(32524:32524): tamaño memoria = 4096
+[INFO] 10:44:41:576 Memoria/(32524:32524): tamaño segmento = 128
+[INFO] 10:44:41:576 Memoria/(32524:32524): cantidad de segmentos = 16
+[INFO] 10:44:41:576 Memoria/(32524:32524): retardo memoria = 1000
+[INFO] 10:44:41:576 Memoria/(32524:32524): retardo compactacion = 60000
+[INFO] 10:44:41:576 Memoria/(32524:32524): algoritmo asignacion = BEST
+[INFO] 10:44:41:576 Memoria/(32524:32524): --------------------------------
+[INFO] 10:44:41:576 Memoria/(32524:32524): ¡Memoria iniciado correctamente!
+[TRACE] 10:44:41:577 Memoria/(32524:32524): Listo para escuchar a mi cliente
+[INFO] 10:44:41:577 Memoria/(32524:32524): Servidor listo para recibir al cliente
+[TRACE] 10:44:44:204 Memoria/(32524:32526): Se conecto un cliente!
+[TRACE] 10:44:44:205 Memoria/(32524:32526): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:44:45:885 Memoria/(32524:32527): Se conecto un cliente!
+[TRACE] 10:44:45:885 Memoria/(32524:32527): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:44:46:758 Memoria/(32524:32527): Recibi Instruccion: INICIAR 5
+[INFO] 10:47:19:149 Memoria/(33060:33060): Logger creado
+[INFO] 10:47:19:158 Memoria/(33060:33060): -------Valores del config-------
+[INFO] 10:47:19:159 Memoria/(33060:33060): puerto_escucha = 8002
+[INFO] 10:47:19:159 Memoria/(33060:33060): tamaño memoria = 4096
+[INFO] 10:47:19:159 Memoria/(33060:33060): tamaño segmento = 128
+[INFO] 10:47:19:159 Memoria/(33060:33060): cantidad de segmentos = 16
+[INFO] 10:47:19:159 Memoria/(33060:33060): retardo memoria = 1000
+[INFO] 10:47:19:159 Memoria/(33060:33060): retardo compactacion = 60000
+[INFO] 10:47:19:159 Memoria/(33060:33060): algoritmo asignacion = BEST
+[INFO] 10:47:19:159 Memoria/(33060:33060): --------------------------------
+[INFO] 10:47:19:159 Memoria/(33060:33060): ¡Memoria iniciado correctamente!
+[TRACE] 10:47:19:159 Memoria/(33060:33060): Listo para escuchar a mi cliente
+[INFO] 10:47:19:159 Memoria/(33060:33060): Servidor listo para recibir al cliente
+[TRACE] 10:47:21:481 Memoria/(33060:33062): Se conecto un cliente!
+[TRACE] 10:47:21:482 Memoria/(33060:33062): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:47:25:678 Memoria/(33060:33063): Se conecto un cliente!
+[TRACE] 10:47:25:678 Memoria/(33060:33063): Recibi Instruccion: Conectado al Kernel
+[INFO] 10:48:44:115 Memoria/(33225:33225): Logger creado
+[INFO] 10:48:44:117 Memoria/(33225:33225): -------Valores del config-------
+[INFO] 10:48:44:117 Memoria/(33225:33225): puerto_escucha = 8002
+[INFO] 10:48:44:117 Memoria/(33225:33225): tamaño memoria = 4096
+[INFO] 10:48:44:117 Memoria/(33225:33225): tamaño segmento = 128
+[INFO] 10:48:44:117 Memoria/(33225:33225): cantidad de segmentos = 16
+[INFO] 10:48:44:117 Memoria/(33225:33225): retardo memoria = 1000
+[INFO] 10:48:44:117 Memoria/(33225:33225): retardo compactacion = 60000
+[INFO] 10:48:44:117 Memoria/(33225:33225): algoritmo asignacion = BEST
+[INFO] 10:48:44:118 Memoria/(33225:33225): --------------------------------
+[INFO] 10:48:44:118 Memoria/(33225:33225): ¡Memoria iniciado correctamente!
+[TRACE] 10:48:44:118 Memoria/(33225:33225): Listo para escuchar a mi cliente
+[INFO] 10:48:44:118 Memoria/(33225:33225): Servidor listo para recibir al cliente
+[TRACE] 10:48:46:232 Memoria/(33225:33227): Se conecto un cliente!
+[TRACE] 10:48:46:232 Memoria/(33225:33227): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:48:48:590 Memoria/(33225:33228): Se conecto un cliente!
+[TRACE] 10:48:48:591 Memoria/(33225:33228): Recibi Instruccion: Conectado al Kernel
+[INFO] 10:52:12:008 Memoria/(33839:33839): Logger creado
+[INFO] 10:52:12:010 Memoria/(33839:33839): -------Valores del config-------
+[INFO] 10:52:12:010 Memoria/(33839:33839): puerto_escucha = 8002
+[INFO] 10:52:12:010 Memoria/(33839:33839): tamaño memoria = 4096
+[INFO] 10:52:12:010 Memoria/(33839:33839): tamaño segmento = 128
+[INFO] 10:52:12:010 Memoria/(33839:33839): cantidad de segmentos = 16
+[INFO] 10:52:12:010 Memoria/(33839:33839): retardo memoria = 1000
+[INFO] 10:52:12:010 Memoria/(33839:33839): retardo compactacion = 60000
+[INFO] 10:52:12:010 Memoria/(33839:33839): algoritmo asignacion = BEST
+[INFO] 10:52:12:011 Memoria/(33839:33839): --------------------------------
+[INFO] 10:52:12:011 Memoria/(33839:33839): ¡Memoria iniciado correctamente!
+[TRACE] 10:52:12:011 Memoria/(33839:33839): Listo para escuchar a mi cliente
+[INFO] 10:52:12:011 Memoria/(33839:33839): Servidor listo para recibir al cliente
+[INFO] 10:55:32:652 Memoria/(34196:34196): Logger creado
+[INFO] 10:55:32:654 Memoria/(34196:34196): -------Valores del config-------
+[INFO] 10:55:32:654 Memoria/(34196:34196): puerto_escucha = 8002
+[INFO] 10:55:32:654 Memoria/(34196:34196): tamaño memoria = 4096
+[INFO] 10:55:32:654 Memoria/(34196:34196): tamaño segmento = 128
+[INFO] 10:55:32:654 Memoria/(34196:34196): cantidad de segmentos = 16
+[INFO] 10:55:32:654 Memoria/(34196:34196): retardo memoria = 1000
+[INFO] 10:55:32:654 Memoria/(34196:34196): retardo compactacion = 60000
+[INFO] 10:55:32:654 Memoria/(34196:34196): algoritmo asignacion = BEST
+[INFO] 10:55:32:654 Memoria/(34196:34196): --------------------------------
+[INFO] 10:55:32:655 Memoria/(34196:34196): ¡Memoria iniciado correctamente!
+[TRACE] 10:55:32:655 Memoria/(34196:34196): Listo para escuchar a mi cliente
+[INFO] 10:55:32:655 Memoria/(34196:34196): Servidor listo para recibir al cliente
+[TRACE] 10:55:34:409 Memoria/(34196:34198): Se conecto un cliente!
+[TRACE] 10:55:34:409 Memoria/(34196:34198): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 10:55:37:029 Memoria/(34196:34199): Se conecto un cliente!
+[TRACE] 10:55:37:029 Memoria/(34196:34199): Recibi Instruccion: Conectado al CPU
+[TRACE] 10:55:40:303 Memoria/(34196:34200): Se conecto un cliente!
+[INFO] 10:55:40:303 Memoria/(34196:34197): Espacio reservado: 4096 Bytes -> Direccion: 0x7faa68000b70
+[TRACE] 10:55:40:304 Memoria/(34196:34200): Recibi Instruccion: Conectado al Kernel
+[TRACE] 10:55:45:074 Memoria/(34196:34200): Recibi Instruccion: INICIAR 5
+[INFO] 10:55:45:074 Memoria/(34196:34200): Creación de Proceso PID: 5
+[TRACE] 10:55:45:074 Memoria/(34196:34200): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:55:45:074 Memoria/(34196:34200): Datos enviados correctamente
+[TRACE] 10:55:45:429 Memoria/(34196:34200): Recibi Instruccion: INICIAR 9
+[INFO] 10:55:45:429 Memoria/(34196:34200): Creación de Proceso PID: 9
+[TRACE] 10:55:45:429 Memoria/(34196:34200): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:55:45:429 Memoria/(34196:34200): Datos enviados correctamente
+[TRACE] 10:55:45:841 Memoria/(34196:34200): Recibi Instruccion: INICIAR 10
+[INFO] 10:55:45:841 Memoria/(34196:34200): Creación de Proceso PID: 10
+[TRACE] 10:55:45:841 Memoria/(34196:34200): Datos enviados, esperando respuesta de kernel...
+[TRACE] 10:55:45:841 Memoria/(34196:34200): Datos enviados correctamente
+[TRACE] 10:55:50:610 Memoria/(34196:34200): Recibi Instruccion: FINALIZAR 5
+[INFO] 10:55:50:610 Memoria/(34196:34200): Eliminación de Proceso PID: 5
+[TRACE] 10:55:51:930 Memoria/(34196:34200): Recibi Instruccion: FINALIZAR 9
+[INFO] 10:55:51:930 Memoria/(34196:34200): Eliminación de Proceso PID: 9
+[TRACE] 10:55:52:018 Memoria/(34196:34200): Recibi Instruccion: FINALIZAR 10
+[INFO] 10:55:52:018 Memoria/(34196:34200): Eliminación de Proceso PID: 10
+[INFO] 11:12:23:816 Memoria/(35914:35914): Logger creado
+[INFO] 11:12:23:817 Memoria/(35914:35914): -------Valores del config-------
+[INFO] 11:12:23:817 Memoria/(35914:35914): puerto_escucha = 8002
+[INFO] 11:12:23:817 Memoria/(35914:35914): tamaño memoria = 4096
+[INFO] 11:12:23:817 Memoria/(35914:35914): tamaño segmento = 128
+[INFO] 11:12:23:818 Memoria/(35914:35914): cantidad de segmentos = 16
+[INFO] 11:12:23:818 Memoria/(35914:35914): retardo memoria = 1000
+[INFO] 11:12:23:818 Memoria/(35914:35914): retardo compactacion = 60000
+[INFO] 11:12:23:818 Memoria/(35914:35914): algoritmo asignacion = BEST
+[INFO] 11:12:23:818 Memoria/(35914:35914): --------------------------------
+[INFO] 11:12:23:818 Memoria/(35914:35914): ¡Memoria iniciado correctamente!
+[TRACE] 11:12:23:818 Memoria/(35914:35914): Listo para escuchar a mi cliente
+[INFO] 11:12:23:818 Memoria/(35914:35914): Servidor listo para recibir al cliente
+[TRACE] 11:12:24:368 Memoria/(35914:35916): Se conecto un cliente!
+[TRACE] 11:12:24:368 Memoria/(35914:35916): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 11:12:25:010 Memoria/(35914:35917): Se conecto un cliente!
+[TRACE] 11:12:25:010 Memoria/(35914:35917): Recibi Instruccion: Conectado al CPU
+[TRACE] 11:12:25:611 Memoria/(35914:35918): Se conecto un cliente!
+[INFO] 11:12:25:612 Memoria/(35914:35915): Espacio reservado: 4096 Bytes -> Direccion: 0x7fb2d0000b70
+[TRACE] 11:12:25:612 Memoria/(35914:35918): Recibi Instruccion: Conectado al Kernel
+[TRACE] 11:12:26:414 Memoria/(35914:35918): Recibi Instruccion: INICIAR 5
+[INFO] 11:12:26:414 Memoria/(35914:35918): Creación de Proceso PID: 5
+[TRACE] 11:12:26:414 Memoria/(35914:35918): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:12:26:415 Memoria/(35914:35918): Datos enviados correctamente
+[TRACE] 11:12:26:886 Memoria/(35914:35918): Recibi Instruccion: INICIAR 9
+[INFO] 11:12:26:886 Memoria/(35914:35918): Creación de Proceso PID: 9
+[TRACE] 11:12:26:886 Memoria/(35914:35918): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:12:26:886 Memoria/(35914:35918): Datos enviados correctamente
+[TRACE] 11:12:27:750 Memoria/(35914:35918): Recibi Instruccion: INICIAR 10
+[INFO] 11:12:27:750 Memoria/(35914:35918): Creación de Proceso PID: 10
+[TRACE] 11:12:27:750 Memoria/(35914:35918): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:12:27:750 Memoria/(35914:35918): Datos enviados correctamente
+[TRACE] 11:12:35:918 Memoria/(35914:35918): Recibi Instruccion: FINALIZAR 5
+[INFO] 11:12:35:918 Memoria/(35914:35918): Eliminación de Proceso PID: 5
+[TRACE] 11:12:37:239 Memoria/(35914:35918): Recibi Instruccion: FINALIZAR 9
+[INFO] 11:12:37:239 Memoria/(35914:35918): Eliminación de Proceso PID: 9
+[TRACE] 11:12:37:326 Memoria/(35914:35918): Recibi Instruccion: FINALIZAR 10
+[INFO] 11:12:37:326 Memoria/(35914:35918): Eliminación de Proceso PID: 10
+[INFO] 11:19:05:729 Memoria/(36730:36730): Logger creado
+[INFO] 11:19:05:731 Memoria/(36730:36730): -------Valores del config-------
+[INFO] 11:19:05:731 Memoria/(36730:36730): puerto_escucha = 8002
+[INFO] 11:19:05:731 Memoria/(36730:36730): tamaño memoria = 4096
+[INFO] 11:19:05:731 Memoria/(36730:36730): tamaño segmento = 128
+[INFO] 11:19:05:731 Memoria/(36730:36730): cantidad de segmentos = 16
+[INFO] 11:19:05:731 Memoria/(36730:36730): retardo memoria = 1000
+[INFO] 11:19:05:731 Memoria/(36730:36730): retardo compactacion = 60000
+[INFO] 11:19:05:731 Memoria/(36730:36730): algoritmo asignacion = BEST
+[INFO] 11:19:05:731 Memoria/(36730:36730): --------------------------------
+[INFO] 11:19:05:731 Memoria/(36730:36730): ¡Memoria iniciado correctamente!
+[TRACE] 11:19:05:731 Memoria/(36730:36730): Listo para escuchar a mi cliente
+[INFO] 11:19:05:731 Memoria/(36730:36730): Servidor listo para recibir al cliente
+[TRACE] 11:19:06:999 Memoria/(36730:36732): Se conecto un cliente!
+[TRACE] 11:19:07:000 Memoria/(36730:36732): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 11:19:07:722 Memoria/(36730:36733): Se conecto un cliente!
+[TRACE] 11:19:07:722 Memoria/(36730:36733): Recibi Instruccion: Conectado al CPU
+[TRACE] 11:19:08:225 Memoria/(36730:36734): Se conecto un cliente!
+[INFO] 11:19:08:226 Memoria/(36730:36731): Espacio reservado: 4096 Bytes -> Direccion: 0x7fa740000b70
+[TRACE] 11:19:08:226 Memoria/(36730:36734): Recibi Instruccion: Conectado al Kernel
+[TRACE] 11:19:12:096 Memoria/(36730:36734): Recibi Instruccion: INICIAR 5
+[INFO] 11:19:12:096 Memoria/(36730:36734): Creación de Proceso PID: 5
+[TRACE] 11:19:12:096 Memoria/(36730:36734): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:19:12:096 Memoria/(36730:36734): Datos enviados correctamente
+[TRACE] 11:19:12:394 Memoria/(36730:36734): Recibi Instruccion: INICIAR 9
+[INFO] 11:19:12:394 Memoria/(36730:36734): Creación de Proceso PID: 9
+[TRACE] 11:19:12:394 Memoria/(36730:36734): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:19:12:394 Memoria/(36730:36734): Datos enviados correctamente
+[TRACE] 11:19:12:790 Memoria/(36730:36734): Recibi Instruccion: INICIAR 10
+[INFO] 11:19:12:790 Memoria/(36730:36734): Creación de Proceso PID: 10
+[TRACE] 11:19:12:790 Memoria/(36730:36734): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:19:12:790 Memoria/(36730:36734): Datos enviados correctamente
+[TRACE] 11:19:18:534 Memoria/(36730:36734): Recibi Instruccion: FINALIZAR 5
+[INFO] 11:19:18:534 Memoria/(36730:36734): Eliminación de Proceso PID: 5
+[TRACE] 11:19:19:854 Memoria/(36730:36734): Recibi Instruccion: FINALIZAR 9
+[INFO] 11:19:19:854 Memoria/(36730:36734): Eliminación de Proceso PID: 9
+[TRACE] 11:19:19:942 Memoria/(36730:36734): Recibi Instruccion: FINALIZAR 10
+[INFO] 11:19:19:942 Memoria/(36730:36734): Eliminación de Proceso PID: 10
+[INFO] 11:24:26:944 Memoria/(37355:37355): Logger creado
+[INFO] 11:24:26:946 Memoria/(37355:37355): -------Valores del config-------
+[INFO] 11:24:26:946 Memoria/(37355:37355): puerto_escucha = 8002
+[INFO] 11:24:26:946 Memoria/(37355:37355): tamaño memoria = 4096
+[INFO] 11:24:26:946 Memoria/(37355:37355): tamaño segmento = 128
+[INFO] 11:24:26:946 Memoria/(37355:37355): cantidad de segmentos = 16
+[INFO] 11:24:26:946 Memoria/(37355:37355): retardo memoria = 1000
+[INFO] 11:24:26:946 Memoria/(37355:37355): retardo compactacion = 60000
+[INFO] 11:24:26:946 Memoria/(37355:37355): algoritmo asignacion = BEST
+[INFO] 11:24:26:946 Memoria/(37355:37355): --------------------------------
+[INFO] 11:24:26:946 Memoria/(37355:37355): ¡Memoria iniciado correctamente!
+[TRACE] 11:24:26:946 Memoria/(37355:37355): Listo para escuchar a mi cliente
+[INFO] 11:24:26:946 Memoria/(37355:37355): Servidor listo para recibir al cliente
+[TRACE] 11:24:27:509 Memoria/(37355:37357): Se conecto un cliente!
+[TRACE] 11:24:27:509 Memoria/(37355:37357): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 11:24:28:263 Memoria/(37355:37358): Se conecto un cliente!
+[TRACE] 11:24:28:263 Memoria/(37355:37358): Recibi Instruccion: Conectado al CPU
+[TRACE] 11:24:29:648 Memoria/(37355:37359): Se conecto un cliente!
+[INFO] 11:24:29:648 Memoria/(37355:37356): Espacio reservado: 4096 Bytes -> Direccion: 0x7f9f90000b70
+[TRACE] 11:24:29:650 Memoria/(37355:37359): Recibi Instruccion: Conectado al Kernel
+[TRACE] 11:24:33:570 Memoria/(37355:37359): Recibi Instruccion: INICIAR 7
+[INFO] 11:24:33:570 Memoria/(37355:37359): Creación de Proceso PID: 7
+[TRACE] 11:24:33:570 Memoria/(37355:37359): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:24:33:573 Memoria/(37355:37359): Datos enviados correctamente
+[TRACE] 11:24:33:937 Memoria/(37355:37359): Recibi Instruccion: INICIAR 9
+[INFO] 11:24:33:938 Memoria/(37355:37359): Creación de Proceso PID: 9
+[TRACE] 11:24:33:938 Memoria/(37355:37359): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:24:33:938 Memoria/(37355:37359): Datos enviados correctamente
+[TRACE] 11:24:34:725 Memoria/(37355:37359): Recibi Instruccion: INICIAR 10
+[INFO] 11:24:34:725 Memoria/(37355:37359): Creación de Proceso PID: 10
+[TRACE] 11:24:34:725 Memoria/(37355:37359): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:24:34:725 Memoria/(37355:37359): Datos enviados correctamente
+[TRACE] 11:24:39:972 Memoria/(37355:37359): Recibi Instruccion: FINALIZAR 7
+[INFO] 11:24:39:972 Memoria/(37355:37359): Eliminación de Proceso PID: 7
+[TRACE] 11:24:41:295 Memoria/(37355:37359): Recibi Instruccion: FINALIZAR 9
+[INFO] 11:24:41:296 Memoria/(37355:37359): Eliminación de Proceso PID: 9
+[TRACE] 11:24:41:383 Memoria/(37355:37359): Recibi Instruccion: FINALIZAR 10
+[INFO] 11:24:41:383 Memoria/(37355:37359): Eliminación de Proceso PID: 10
+[INFO] 11:27:53:309 Memoria/(37726:37726): Logger creado
+[INFO] 11:27:53:310 Memoria/(37726:37726): -------Valores del config-------
+[INFO] 11:27:53:310 Memoria/(37726:37726): puerto_escucha = 8002
+[INFO] 11:27:53:310 Memoria/(37726:37726): tamaño memoria = 4096
+[INFO] 11:27:53:310 Memoria/(37726:37726): tamaño segmento = 128
+[INFO] 11:27:53:311 Memoria/(37726:37726): cantidad de segmentos = 16
+[INFO] 11:27:53:311 Memoria/(37726:37726): retardo memoria = 1000
+[INFO] 11:27:53:311 Memoria/(37726:37726): retardo compactacion = 60000
+[INFO] 11:27:53:311 Memoria/(37726:37726): algoritmo asignacion = BEST
+[INFO] 11:27:53:311 Memoria/(37726:37726): --------------------------------
+[INFO] 11:27:53:311 Memoria/(37726:37726): ¡Memoria iniciado correctamente!
+[TRACE] 11:27:53:311 Memoria/(37726:37726): Listo para escuchar a mi cliente
+[INFO] 11:27:53:311 Memoria/(37726:37726): Servidor listo para recibir al cliente
+[TRACE] 11:27:54:644 Memoria/(37726:37728): Se conecto un cliente!
+[TRACE] 11:27:54:644 Memoria/(37726:37728): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 11:27:55:585 Memoria/(37726:37729): Se conecto un cliente!
+[TRACE] 11:27:55:585 Memoria/(37726:37729): Recibi Instruccion: Conectado al CPU
+[TRACE] 11:27:57:318 Memoria/(37726:37730): Se conecto un cliente!
+[INFO] 11:27:57:319 Memoria/(37726:37727): Espacio reservado: 4096 Bytes -> Direccion: 0x7fd4e0000b70
+[TRACE] 11:27:57:319 Memoria/(37726:37730): Recibi Instruccion: Conectado al Kernel
+[TRACE] 11:28:02:513 Memoria/(37726:37730): Recibi Instruccion: INICIAR 8
+[INFO] 11:28:02:514 Memoria/(37726:37730): Creación de Proceso PID: 8
+[TRACE] 11:28:02:514 Memoria/(37726:37730): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:28:02:517 Memoria/(37726:37730): Datos enviados correctamente
+[TRACE] 11:28:02:773 Memoria/(37726:37730): Recibi Instruccion: INICIAR 9
+[INFO] 11:28:02:773 Memoria/(37726:37730): Creación de Proceso PID: 9
+[TRACE] 11:28:02:773 Memoria/(37726:37730): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:28:02:773 Memoria/(37726:37730): Datos enviados correctamente
+[TRACE] 11:28:03:168 Memoria/(37726:37730): Recibi Instruccion: INICIAR 10
+[INFO] 11:28:03:168 Memoria/(37726:37730): Creación de Proceso PID: 10
+[TRACE] 11:28:03:168 Memoria/(37726:37730): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:28:03:169 Memoria/(37726:37730): Datos enviados correctamente
+[TRACE] 11:28:07:632 Memoria/(37726:37730): Recibi Instruccion: FINALIZAR 8
+[INFO] 11:28:07:632 Memoria/(37726:37730): Eliminación de Proceso PID: 8
+[TRACE] 11:28:08:951 Memoria/(37726:37730): Recibi Instruccion: FINALIZAR 9
+[INFO] 11:28:08:951 Memoria/(37726:37730): Eliminación de Proceso PID: 9
+[TRACE] 11:28:09:038 Memoria/(37726:37730): Recibi Instruccion: FINALIZAR 10
+[INFO] 11:28:09:038 Memoria/(37726:37730): Eliminación de Proceso PID: 10
+[INFO] 11:30:53:138 Memoria/(38079:38079): Logger creado
+[INFO] 11:30:53:139 Memoria/(38079:38079): -------Valores del config-------
+[INFO] 11:30:53:139 Memoria/(38079:38079): puerto_escucha = 8002
+[INFO] 11:30:53:140 Memoria/(38079:38079): tamaño memoria = 4096
+[INFO] 11:30:53:140 Memoria/(38079:38079): tamaño segmento = 128
+[INFO] 11:30:53:140 Memoria/(38079:38079): cantidad de segmentos = 16
+[INFO] 11:30:53:140 Memoria/(38079:38079): retardo memoria = 1000
+[INFO] 11:30:53:140 Memoria/(38079:38079): retardo compactacion = 60000
+[INFO] 11:30:53:140 Memoria/(38079:38079): algoritmo asignacion = BEST
+[INFO] 11:30:53:140 Memoria/(38079:38079): --------------------------------
+[INFO] 11:30:53:140 Memoria/(38079:38079): ¡Memoria iniciado correctamente!
+[TRACE] 11:30:53:140 Memoria/(38079:38079): Listo para escuchar a mi cliente
+[INFO] 11:30:53:140 Memoria/(38079:38079): Servidor listo para recibir al cliente
+[TRACE] 11:30:53:998 Memoria/(38079:38081): Se conecto un cliente!
+[TRACE] 11:30:53:998 Memoria/(38079:38081): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 11:30:54:739 Memoria/(38079:38082): Se conecto un cliente!
+[TRACE] 11:30:54:740 Memoria/(38079:38082): Recibi Instruccion: Conectado al CPU
+[TRACE] 11:30:56:201 Memoria/(38079:38083): Se conecto un cliente!
+[INFO] 11:30:56:204 Memoria/(38079:38080): Espacio reservado: 4096 Bytes -> Direccion: 0x7faf08000b70
+[TRACE] 11:30:56:231 Memoria/(38079:38083): Recibi Instruccion: Conectado al Kernel
+[TRACE] 11:30:56:270 Memoria/(38079:38083): Recibi Instruccion: INICIAR 7
+[INFO] 11:30:56:270 Memoria/(38079:38083): Creación de Proceso PID: 7
+[TRACE] 11:30:56:270 Memoria/(38079:38083): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:30:56:272 Memoria/(38079:38083): Datos enviados correctamente
+[TRACE] 11:30:56:625 Memoria/(38079:38083): Recibi Instruccion: INICIAR 9
+[INFO] 11:30:56:625 Memoria/(38079:38083): Creación de Proceso PID: 9
+[TRACE] 11:30:56:625 Memoria/(38079:38083): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:30:56:625 Memoria/(38079:38083): Datos enviados correctamente
+[TRACE] 11:30:57:048 Memoria/(38079:38083): Recibi Instruccion: INICIAR 10
+[INFO] 11:30:57:048 Memoria/(38079:38083): Creación de Proceso PID: 10
+[TRACE] 11:30:57:048 Memoria/(38079:38083): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:30:57:048 Memoria/(38079:38083): Datos enviados correctamente
+[TRACE] 11:31:06:548 Memoria/(38079:38083): Recibi Instruccion: FINALIZAR 7
+[INFO] 11:31:06:548 Memoria/(38079:38083): Eliminación de Proceso PID: 7
+[TRACE] 11:31:07:868 Memoria/(38079:38083): Recibi Instruccion: FINALIZAR 9
+[INFO] 11:31:07:868 Memoria/(38079:38083): Eliminación de Proceso PID: 9
+[TRACE] 11:31:07:954 Memoria/(38079:38083): Recibi Instruccion: FINALIZAR 10
+[INFO] 11:31:07:954 Memoria/(38079:38083): Eliminación de Proceso PID: 10
+[INFO] 11:39:20:041 Memoria/(39319:39319): Logger creado
+[INFO] 11:39:20:042 Memoria/(39319:39319): -------Valores del config-------
+[INFO] 11:39:20:042 Memoria/(39319:39319): puerto_escucha = 8002
+[INFO] 11:39:20:042 Memoria/(39319:39319): tamaño memoria = 4096
+[INFO] 11:39:20:042 Memoria/(39319:39319): tamaño segmento = 128
+[INFO] 11:39:20:042 Memoria/(39319:39319): cantidad de segmentos = 16
+[INFO] 11:39:20:042 Memoria/(39319:39319): retardo memoria = 1000
+[INFO] 11:39:20:042 Memoria/(39319:39319): retardo compactacion = 60000
+[INFO] 11:39:20:042 Memoria/(39319:39319): algoritmo asignacion = BEST
+[INFO] 11:39:20:042 Memoria/(39319:39319): --------------------------------
+[INFO] 11:39:20:042 Memoria/(39319:39319): ¡Memoria iniciado correctamente!
+[TRACE] 11:39:20:042 Memoria/(39319:39319): Listo para escuchar a mi cliente
+[INFO] 11:39:20:043 Memoria/(39319:39319): Servidor listo para recibir al cliente
+[TRACE] 11:39:21:209 Memoria/(39319:39321): Se conecto un cliente!
+[TRACE] 11:39:21:209 Memoria/(39319:39321): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 11:39:22:167 Memoria/(39319:39322): Se conecto un cliente!
+[TRACE] 11:39:22:167 Memoria/(39319:39322): Recibi Instruccion: Conectado al CPU
+[TRACE] 11:39:24:623 Memoria/(39319:39323): Se conecto un cliente!
+[INFO] 11:39:24:623 Memoria/(39319:39320): Espacio reservado: 4096 Bytes -> Direccion: 0x7f8558000b70
+[TRACE] 11:39:24:624 Memoria/(39319:39323): Recibi Instruccion: Conectado al Kernel
+[TRACE] 11:39:27:926 Memoria/(39319:39323): Recibi Instruccion: INICIAR 5
+[INFO] 11:39:27:926 Memoria/(39319:39323): Creación de Proceso PID: 5
+[TRACE] 11:39:27:926 Memoria/(39319:39323): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:39:27:926 Memoria/(39319:39323): Datos enviados correctamente
+[TRACE] 11:39:28:345 Memoria/(39319:39323): Recibi Instruccion: INICIAR 9
+[INFO] 11:39:28:345 Memoria/(39319:39323): Creación de Proceso PID: 9
+[TRACE] 11:39:28:345 Memoria/(39319:39323): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:39:28:345 Memoria/(39319:39323): Datos enviados correctamente
+[TRACE] 11:39:28:982 Memoria/(39319:39323): Recibi Instruccion: INICIAR 10
+[INFO] 11:39:28:982 Memoria/(39319:39323): Creación de Proceso PID: 10
+[TRACE] 11:39:28:982 Memoria/(39319:39323): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:39:28:982 Memoria/(39319:39323): Datos enviados correctamente
+[TRACE] 11:39:34:930 Memoria/(39319:39323): Recibi Instruccion: FINALIZAR 5
+[INFO] 11:39:34:930 Memoria/(39319:39323): Eliminación de Proceso PID: 5
+[TRACE] 11:39:36:250 Memoria/(39319:39323): Recibi Instruccion: FINALIZAR 9
+[INFO] 11:39:36:250 Memoria/(39319:39323): Eliminación de Proceso PID: 9
+[TRACE] 11:39:36:338 Memoria/(39319:39323): Recibi Instruccion: FINALIZAR 10
+[INFO] 11:39:36:338 Memoria/(39319:39323): Eliminación de Proceso PID: 10
+[INFO] 11:49:32:567 Memoria/(40451:40451): Logger creado
+[INFO] 11:49:32:568 Memoria/(40451:40451): -------Valores del config-------
+[INFO] 11:49:32:569 Memoria/(40451:40451): puerto_escucha = 8002
+[INFO] 11:49:32:569 Memoria/(40451:40451): tamaño memoria = 4096
+[INFO] 11:49:32:569 Memoria/(40451:40451): tamaño segmento = 128
+[INFO] 11:49:32:569 Memoria/(40451:40451): cantidad de segmentos = 16
+[INFO] 11:49:32:569 Memoria/(40451:40451): retardo memoria = 1000
+[INFO] 11:49:32:569 Memoria/(40451:40451): retardo compactacion = 60000
+[INFO] 11:49:32:569 Memoria/(40451:40451): algoritmo asignacion = BEST
+[INFO] 11:49:32:569 Memoria/(40451:40451): --------------------------------
+[INFO] 11:49:32:569 Memoria/(40451:40451): ¡Memoria iniciado correctamente!
+[TRACE] 11:49:32:570 Memoria/(40451:40451): Listo para escuchar a mi cliente
+[INFO] 11:49:32:570 Memoria/(40451:40451): Servidor listo para recibir al cliente
+[TRACE] 11:49:33:994 Memoria/(40451:40453): Se conecto un cliente!
+[TRACE] 11:49:33:994 Memoria/(40451:40453): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 11:49:34:845 Memoria/(40451:40454): Se conecto un cliente!
+[TRACE] 11:49:34:845 Memoria/(40451:40454): Recibi Instruccion: Conectado al CPU
+[TRACE] 11:49:35:458 Memoria/(40451:40455): Se conecto un cliente!
+[INFO] 11:49:35:458 Memoria/(40451:40452): Espacio reservado: 4096 Bytes -> Direccion: 0x7f40b0000b70
+[TRACE] 11:49:35:458 Memoria/(40451:40455): Recibi Instruccion: Conectado al Kernel
+[TRACE] 11:57:05:709 Memoria/(40451:40455): Recibi Instruccion: INICIAR 10
+[INFO] 11:57:05:709 Memoria/(40451:40455): Creación de Proceso PID: 10
+[TRACE] 11:57:05:711 Memoria/(40451:40455): Datos enviados, esperando respuesta de kernel...
+[TRACE] 11:57:05:711 Memoria/(40451:40455): Datos enviados correctamente
+[TRACE] 11:57:05:846 Memoria/(40451:40455): Recibi Instruccion: FINALIZAR 10
+[INFO] 11:57:05:846 Memoria/(40451:40455): Eliminación de Proceso PID: 10
+[INFO] 12:05:55:107 Memoria/(42225:42225): Logger creado
+[INFO] 12:05:55:109 Memoria/(42225:42225): -------Valores del config-------
+[INFO] 12:05:55:109 Memoria/(42225:42225): puerto_escucha = 8002
+[INFO] 12:05:55:109 Memoria/(42225:42225): tamaño memoria = 4096
+[INFO] 12:05:55:109 Memoria/(42225:42225): tamaño segmento = 128
+[INFO] 12:05:55:109 Memoria/(42225:42225): cantidad de segmentos = 16
+[INFO] 12:05:55:109 Memoria/(42225:42225): retardo memoria = 1000
+[INFO] 12:05:55:109 Memoria/(42225:42225): retardo compactacion = 60000
+[INFO] 12:05:55:109 Memoria/(42225:42225): algoritmo asignacion = BEST
+[INFO] 12:05:55:109 Memoria/(42225:42225): --------------------------------
+[INFO] 12:05:55:110 Memoria/(42225:42225): ¡Memoria iniciado correctamente!
+[TRACE] 12:05:55:110 Memoria/(42225:42225): Listo para escuchar a mi cliente
+[INFO] 12:05:55:110 Memoria/(42225:42225): Servidor listo para recibir al cliente
+[TRACE] 12:05:56:795 Memoria/(42225:42227): Se conecto un cliente!
+[TRACE] 12:05:56:795 Memoria/(42225:42227): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 12:05:57:994 Memoria/(42225:42228): Se conecto un cliente!
+[TRACE] 12:05:57:995 Memoria/(42225:42228): Recibi Instruccion: Conectado al CPU
+[TRACE] 12:05:58:728 Memoria/(42225:42229): Se conecto un cliente!
+[INFO] 12:05:58:728 Memoria/(42225:42226): Espacio reservado: 4096 Bytes -> Direccion: 0x7f9a94000b70
+[TRACE] 12:05:58:729 Memoria/(42225:42229): Recibi Instruccion: Conectado al Kernel
+[TRACE] 12:36:06:378 Memoria/(42225:42229): Recibi Instruccion: INICIAR 5
+[INFO] 12:36:06:379 Memoria/(42225:42229): Creación de Proceso PID: 5
+[TRACE] 12:36:06:381 Memoria/(42225:42229): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:36:06:381 Memoria/(42225:42229): Datos enviados correctamente
+[TRACE] 12:36:06:523 Memoria/(42225:42229): Recibi Instruccion: FINALIZAR 5
+[INFO] 12:36:06:523 Memoria/(42225:42229): Eliminación de Proceso PID: 5
+[TRACE] 12:36:06:709 Memoria/(42225:42229): Recibi Instruccion: INICIAR 9
+[INFO] 12:36:06:709 Memoria/(42225:42229): Creación de Proceso PID: 9
+[TRACE] 12:36:06:709 Memoria/(42225:42229): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:36:06:709 Memoria/(42225:42229): Datos enviados correctamente
+[TRACE] 12:36:07:454 Memoria/(42225:42229): Recibi Instruccion: FINALIZAR 9
+[INFO] 12:36:07:454 Memoria/(42225:42229): Eliminación de Proceso PID: 9
+[TRACE] 12:36:07:583 Memoria/(42225:42229): Recibi Instruccion: INICIAR 5
+[INFO] 12:36:07:583 Memoria/(42225:42229): Creación de Proceso PID: 5
+[TRACE] 12:36:07:583 Memoria/(42225:42229): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:36:07:584 Memoria/(42225:42229): Datos enviados correctamente
+[TRACE] 12:36:08:330 Memoria/(42225:42229): Recibi Instruccion: FINALIZAR 5
+[INFO] 12:36:08:330 Memoria/(42225:42229): Eliminación de Proceso PID: 5
+[TRACE] 12:39:14:014 Memoria/(42225:42229): Recibi Instruccion: INICIAR 9
+[INFO] 12:39:14:015 Memoria/(42225:42229): Creación de Proceso PID: 9
+[TRACE] 12:39:14:015 Memoria/(42225:42229): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:39:14:016 Memoria/(42225:42229): Datos enviados correctamente
+[TRACE] 12:39:14:058 Memoria/(42225:42229): Recibi Instruccion: INICIAR 5
+[INFO] 12:39:14:058 Memoria/(42225:42229): Creación de Proceso PID: 5
+[TRACE] 12:39:14:058 Memoria/(42225:42229): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:39:14:059 Memoria/(42225:42229): Datos enviados correctamente
+[TRACE] 12:39:14:102 Memoria/(42225:42229): Recibi Instruccion: INICIAR 10
+[INFO] 12:39:14:102 Memoria/(42225:42229): Creación de Proceso PID: 10
+[TRACE] 12:39:14:102 Memoria/(42225:42229): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:39:14:102 Memoria/(42225:42229): Datos enviados correctamente
+[TRACE] 12:39:14:763 Memoria/(42225:42229): Recibi Instruccion: FINALIZAR 10
+[INFO] 12:39:14:763 Memoria/(42225:42229): Eliminación de Proceso PID: 10
+[TRACE] 12:39:15:378 Memoria/(42225:42229): Recibi Instruccion: FINALIZAR 9
+[INFO] 12:39:15:378 Memoria/(42225:42229): Eliminación de Proceso PID: 9
+[TRACE] 12:39:15:730 Memoria/(42225:42229): Recibi Instruccion: FINALIZAR 5
+[INFO] 12:39:15:730 Memoria/(42225:42229): Eliminación de Proceso PID: 5
+[INFO] 12:44:04:457 Memoria/(46038:46038): Logger creado
+[INFO] 12:44:04:460 Memoria/(46038:46038): -------Valores del config-------
+[INFO] 12:44:04:460 Memoria/(46038:46038): puerto_escucha = 8002
+[INFO] 12:44:04:460 Memoria/(46038:46038): tamaño memoria = 4096
+[INFO] 12:44:04:460 Memoria/(46038:46038): tamaño segmento = 128
+[INFO] 12:44:04:460 Memoria/(46038:46038): cantidad de segmentos = 16
+[INFO] 12:44:04:460 Memoria/(46038:46038): retardo memoria = 1000
+[INFO] 12:44:04:460 Memoria/(46038:46038): retardo compactacion = 60000
+[INFO] 12:44:04:460 Memoria/(46038:46038): algoritmo asignacion = BEST
+[INFO] 12:44:04:460 Memoria/(46038:46038): --------------------------------
+[INFO] 12:44:04:460 Memoria/(46038:46038): ¡Memoria iniciado correctamente!
+[TRACE] 12:44:04:461 Memoria/(46038:46038): Listo para escuchar a mi cliente
+[INFO] 12:44:04:461 Memoria/(46038:46038): Servidor listo para recibir al cliente
+[TRACE] 12:44:05:330 Memoria/(46038:46040): Se conecto un cliente!
+[TRACE] 12:44:05:331 Memoria/(46038:46040): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 12:44:05:963 Memoria/(46038:46041): Se conecto un cliente!
+[TRACE] 12:44:05:964 Memoria/(46038:46041): Recibi Instruccion: Conectado al CPU
+[TRACE] 12:44:06:622 Memoria/(46038:46042): Se conecto un cliente!
+[INFO] 12:44:06:622 Memoria/(46038:46039): Espacio reservado: 4096 Bytes -> Direccion: 0x7fd0d8000b70
+[TRACE] 12:44:06:622 Memoria/(46038:46042): Recibi Instruccion: Conectado al Kernel
+[TRACE] 12:44:09:387 Memoria/(46038:46042): Recibi Instruccion: INICIAR 9
+[INFO] 12:44:09:387 Memoria/(46038:46042): Creación de Proceso PID: 9
+[TRACE] 12:44:09:387 Memoria/(46038:46042): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:44:09:387 Memoria/(46038:46042): Datos enviados correctamente
+[TRACE] 12:44:09:429 Memoria/(46038:46042): Recibi Instruccion: INICIAR 10
+[INFO] 12:44:09:429 Memoria/(46038:46042): Creación de Proceso PID: 10
+[TRACE] 12:44:09:429 Memoria/(46038:46042): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:44:09:430 Memoria/(46038:46042): Datos enviados correctamente
+[TRACE] 12:44:09:778 Memoria/(46038:46042): Recibi Instruccion: FINALIZAR 10
+[INFO] 12:44:09:778 Memoria/(46038:46042): Eliminación de Proceso PID: 10
+[TRACE] 12:44:10:306 Memoria/(46038:46042): Recibi Instruccion: FINALIZAR 9
+[INFO] 12:44:10:306 Memoria/(46038:46042): Eliminación de Proceso PID: 9
+[INFO] 12:45:54:590 Memoria/(46276:46276): Logger creado
+[INFO] 12:45:54:592 Memoria/(46276:46276): -------Valores del config-------
+[INFO] 12:45:54:592 Memoria/(46276:46276): puerto_escucha = 8002
+[INFO] 12:45:54:592 Memoria/(46276:46276): tamaño memoria = 4096
+[INFO] 12:45:54:592 Memoria/(46276:46276): tamaño segmento = 128
+[INFO] 12:45:54:592 Memoria/(46276:46276): cantidad de segmentos = 16
+[INFO] 12:45:54:592 Memoria/(46276:46276): retardo memoria = 1000
+[INFO] 12:45:54:592 Memoria/(46276:46276): retardo compactacion = 60000
+[INFO] 12:45:54:592 Memoria/(46276:46276): algoritmo asignacion = BEST
+[INFO] 12:45:54:592 Memoria/(46276:46276): --------------------------------
+[INFO] 12:45:54:592 Memoria/(46276:46276): ¡Memoria iniciado correctamente!
+[TRACE] 12:45:54:592 Memoria/(46276:46276): Listo para escuchar a mi cliente
+[INFO] 12:45:54:592 Memoria/(46276:46276): Servidor listo para recibir al cliente
+[TRACE] 12:45:55:071 Memoria/(46276:46278): Se conecto un cliente!
+[TRACE] 12:45:55:071 Memoria/(46276:46278): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 12:45:55:750 Memoria/(46276:46279): Se conecto un cliente!
+[TRACE] 12:45:55:750 Memoria/(46276:46279): Recibi Instruccion: Conectado al CPU
+[TRACE] 12:45:56:343 Memoria/(46276:46280): Se conecto un cliente!
+[INFO] 12:45:56:343 Memoria/(46276:46277): Espacio reservado: 4096 Bytes -> Direccion: 0x7f419c000b70
+[TRACE] 12:45:56:344 Memoria/(46276:46280): Recibi Instruccion: Conectado al Kernel
+[TRACE] 12:45:58:302 Memoria/(46276:46280): Recibi Instruccion: INICIAR 10
+[INFO] 12:45:58:302 Memoria/(46276:46280): Creación de Proceso PID: 10
+[TRACE] 12:45:58:302 Memoria/(46276:46280): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:45:58:302 Memoria/(46276:46280): Datos enviados correctamente
+[TRACE] 12:46:07:090 Memoria/(46276:46280): Recibi Instruccion: FINALIZAR 10
+[INFO] 12:46:07:090 Memoria/(46276:46280): Eliminación de Proceso PID: 10
+[INFO] 12:48:36:678 Memoria/(46733:46733): Logger creado
+[INFO] 12:48:36:680 Memoria/(46733:46733): -------Valores del config-------
+[INFO] 12:48:36:680 Memoria/(46733:46733): puerto_escucha = 8002
+[INFO] 12:48:36:680 Memoria/(46733:46733): tamaño memoria = 4096
+[INFO] 12:48:36:680 Memoria/(46733:46733): tamaño segmento = 128
+[INFO] 12:48:36:680 Memoria/(46733:46733): cantidad de segmentos = 16
+[INFO] 12:48:36:680 Memoria/(46733:46733): retardo memoria = 1000
+[INFO] 12:48:36:680 Memoria/(46733:46733): retardo compactacion = 60000
+[INFO] 12:48:36:680 Memoria/(46733:46733): algoritmo asignacion = BEST
+[INFO] 12:48:36:680 Memoria/(46733:46733): --------------------------------
+[INFO] 12:48:36:680 Memoria/(46733:46733): ¡Memoria iniciado correctamente!
+[TRACE] 12:48:36:680 Memoria/(46733:46733): Listo para escuchar a mi cliente
+[INFO] 12:48:36:680 Memoria/(46733:46733): Servidor listo para recibir al cliente
+[TRACE] 12:48:37:926 Memoria/(46733:46735): Se conecto un cliente!
+[TRACE] 12:48:37:926 Memoria/(46733:46735): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 12:48:38:974 Memoria/(46733:46736): Se conecto un cliente!
+[TRACE] 12:48:38:974 Memoria/(46733:46736): Recibi Instruccion: Conectado al CPU
+[TRACE] 12:48:39:990 Memoria/(46733:46737): Se conecto un cliente!
+[INFO] 12:48:39:990 Memoria/(46733:46734): Espacio reservado: 4096 Bytes -> Direccion: 0x7f41e8000b70
+[TRACE] 12:48:39:990 Memoria/(46733:46737): Recibi Instruccion: Conectado al Kernel
+[TRACE] 12:48:42:145 Memoria/(46733:46737): Recibi Instruccion: INICIAR 5
+[INFO] 12:48:42:145 Memoria/(46733:46737): Creación de Proceso PID: 5
+[TRACE] 12:48:42:145 Memoria/(46733:46737): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:48:42:145 Memoria/(46733:46737): Datos enviados correctamente
+[TRACE] 12:48:42:186 Memoria/(46733:46737): Recibi Instruccion: INICIAR 9
+[INFO] 12:48:42:186 Memoria/(46733:46737): Creación de Proceso PID: 9
+[TRACE] 12:48:42:186 Memoria/(46733:46737): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:48:42:186 Memoria/(46733:46737): Datos enviados correctamente
+[TRACE] 12:48:42:230 Memoria/(46733:46737): Recibi Instruccion: INICIAR 10
+[INFO] 12:48:42:230 Memoria/(46733:46737): Creación de Proceso PID: 10
+[TRACE] 12:48:42:230 Memoria/(46733:46737): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:48:42:230 Memoria/(46733:46737): Datos enviados correctamente
+[TRACE] 12:48:50:386 Memoria/(46733:46737): Recibi Instruccion: FINALIZAR 9
+[INFO] 12:48:50:386 Memoria/(46733:46737): Eliminación de Proceso PID: 9
+[TRACE] 12:48:51:618 Memoria/(46733:46737): Recibi Instruccion: FINALIZAR 5
+[INFO] 12:48:51:618 Memoria/(46733:46737): Eliminación de Proceso PID: 5
+[TRACE] 12:48:51:706 Memoria/(46733:46737): Recibi Instruccion: FINALIZAR 10
+[INFO] 12:48:51:706 Memoria/(46733:46737): Eliminación de Proceso PID: 10
+[INFO] 12:50:34:924 Memoria/(46963:46963): Logger creado
+[INFO] 12:50:34:928 Memoria/(46963:46963): -------Valores del config-------
+[INFO] 12:50:34:928 Memoria/(46963:46963): puerto_escucha = 8002
+[INFO] 12:50:34:928 Memoria/(46963:46963): tamaño memoria = 4096
+[INFO] 12:50:34:928 Memoria/(46963:46963): tamaño segmento = 128
+[INFO] 12:50:34:929 Memoria/(46963:46963): cantidad de segmentos = 16
+[INFO] 12:50:34:929 Memoria/(46963:46963): retardo memoria = 1000
+[INFO] 12:50:34:929 Memoria/(46963:46963): retardo compactacion = 60000
+[INFO] 12:50:34:929 Memoria/(46963:46963): algoritmo asignacion = BEST
+[INFO] 12:50:34:929 Memoria/(46963:46963): --------------------------------
+[INFO] 12:50:34:929 Memoria/(46963:46963): ¡Memoria iniciado correctamente!
+[TRACE] 12:50:34:929 Memoria/(46963:46963): Listo para escuchar a mi cliente
+[INFO] 12:50:34:929 Memoria/(46963:46963): Servidor listo para recibir al cliente
+[TRACE] 12:50:36:283 Memoria/(46963:46965): Se conecto un cliente!
+[TRACE] 12:50:36:283 Memoria/(46963:46965): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 12:50:38:245 Memoria/(46963:46966): Se conecto un cliente!
+[TRACE] 12:50:38:246 Memoria/(46963:46966): Recibi Instruccion: Conectado al CPU
+[TRACE] 12:50:39:933 Memoria/(46963:46967): Se conecto un cliente!
+[INFO] 12:50:39:933 Memoria/(46963:46964): Espacio reservado: 4096 Bytes -> Direccion: 0x7fdb90000b70
+[TRACE] 12:50:39:933 Memoria/(46963:46967): Recibi Instruccion: Conectado al Kernel
+[TRACE] 12:50:45:783 Memoria/(46963:46967): Recibi Instruccion: INICIAR 5
+[INFO] 12:50:45:783 Memoria/(46963:46967): Creación de Proceso PID: 5
+[TRACE] 12:50:45:783 Memoria/(46963:46967): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:50:45:784 Memoria/(46963:46967): Datos enviados correctamente
+[TRACE] 12:50:45:830 Memoria/(46963:46967): Recibi Instruccion: INICIAR 9
+[INFO] 12:50:45:830 Memoria/(46963:46967): Creación de Proceso PID: 9
+[TRACE] 12:50:45:830 Memoria/(46963:46967): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:50:45:832 Memoria/(46963:46967): Datos enviados correctamente
+[TRACE] 12:50:45:874 Memoria/(46963:46967): Recibi Instruccion: INICIAR 10
+[INFO] 12:50:45:874 Memoria/(46963:46967): Creación de Proceso PID: 10
+[TRACE] 12:50:45:874 Memoria/(46963:46967): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:50:45:874 Memoria/(46963:46967): Datos enviados correctamente
+[TRACE] 12:50:50:415 Memoria/(46963:46967): Recibi Instruccion: FINALIZAR 10
+[INFO] 12:50:50:415 Memoria/(46963:46967): Eliminación de Proceso PID: 10
+[TRACE] 12:50:51:559 Memoria/(46963:46967): Recibi Instruccion: FINALIZAR 5
+[INFO] 12:50:51:559 Memoria/(46963:46967): Eliminación de Proceso PID: 5
+[TRACE] 12:50:51:646 Memoria/(46963:46967): Recibi Instruccion: FINALIZAR 9
+[INFO] 12:50:51:646 Memoria/(46963:46967): Eliminación de Proceso PID: 9
+[INFO] 12:58:57:355 Memoria/(47979:47979): Logger creado
+[INFO] 12:58:57:357 Memoria/(47979:47979): -------Valores del config-------
+[INFO] 12:58:57:357 Memoria/(47979:47979): puerto_escucha = 8002
+[INFO] 12:58:57:357 Memoria/(47979:47979): tamaño memoria = 4096
+[INFO] 12:58:57:357 Memoria/(47979:47979): tamaño segmento = 128
+[INFO] 12:58:57:357 Memoria/(47979:47979): cantidad de segmentos = 16
+[INFO] 12:58:57:357 Memoria/(47979:47979): retardo memoria = 1000
+[INFO] 12:58:57:357 Memoria/(47979:47979): retardo compactacion = 60000
+[INFO] 12:58:57:357 Memoria/(47979:47979): algoritmo asignacion = BEST
+[INFO] 12:58:57:357 Memoria/(47979:47979): --------------------------------
+[INFO] 12:58:57:357 Memoria/(47979:47979): ¡Memoria iniciado correctamente!
+[TRACE] 12:58:57:357 Memoria/(47979:47979): Listo para escuchar a mi cliente
+[INFO] 12:58:57:357 Memoria/(47979:47979): Servidor listo para recibir al cliente
+[INFO] 12:59:08:891 Memoria/(48006:48006): Logger creado
+[INFO] 12:59:08:891 Memoria/(48006:48006): -------Valores del config-------
+[INFO] 12:59:08:891 Memoria/(48006:48006): puerto_escucha = 8002
+[INFO] 12:59:08:891 Memoria/(48006:48006): tamaño memoria = 4096
+[INFO] 12:59:08:891 Memoria/(48006:48006): tamaño segmento = 128
+[INFO] 12:59:08:891 Memoria/(48006:48006): cantidad de segmentos = 16
+[INFO] 12:59:08:891 Memoria/(48006:48006): retardo memoria = 1000
+[INFO] 12:59:08:891 Memoria/(48006:48006): retardo compactacion = 60000
+[INFO] 12:59:08:891 Memoria/(48006:48006): algoritmo asignacion = BEST
+[INFO] 12:59:08:891 Memoria/(48006:48006): --------------------------------
+[INFO] 12:59:08:891 Memoria/(48006:48006): ¡Memoria iniciado correctamente!
+[TRACE] 12:59:08:891 Memoria/(48006:48006): Listo para escuchar a mi cliente
+[INFO] 12:59:08:891 Memoria/(48006:48006): Servidor listo para recibir al cliente
+[TRACE] 12:59:10:304 Memoria/(48006:48008): Se conecto un cliente!
+[TRACE] 12:59:10:305 Memoria/(48006:48008): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 12:59:13:852 Memoria/(48006:48009): Se conecto un cliente!
+[TRACE] 12:59:13:852 Memoria/(48006:48009): Recibi Instruccion: Conectado al CPU
+[TRACE] 12:59:15:665 Memoria/(48006:48010): Se conecto un cliente!
+[INFO] 12:59:15:665 Memoria/(48006:48007): Espacio reservado: 4096 Bytes -> Direccion: 0x7f68dc000b70
+[TRACE] 12:59:15:666 Memoria/(48006:48010): Recibi Instruccion: Conectado al Kernel
+[TRACE] 12:59:17:873 Memoria/(48006:48010): Recibi Instruccion: INICIAR 10
+[INFO] 12:59:17:873 Memoria/(48006:48010): Creación de Proceso PID: 10
+[TRACE] 12:59:17:873 Memoria/(48006:48010): Datos enviados, esperando respuesta de kernel...
+[TRACE] 12:59:17:873 Memoria/(48006:48010): Datos enviados correctamente
+[TRACE] 12:59:26:414 Memoria/(48006:48010): Recibi Instruccion: FINALIZAR 10
+[INFO] 12:59:26:414 Memoria/(48006:48010): Eliminación de Proceso PID: 10
+[INFO] 13:00:54:247 Memoria/(48205:48205): Logger creado
+[INFO] 13:00:54:248 Memoria/(48205:48205): -------Valores del config-------
+[INFO] 13:00:54:248 Memoria/(48205:48205): puerto_escucha = 8002
+[INFO] 13:00:54:248 Memoria/(48205:48205): tamaño memoria = 4096
+[INFO] 13:00:54:248 Memoria/(48205:48205): tamaño segmento = 128
+[INFO] 13:00:54:248 Memoria/(48205:48205): cantidad de segmentos = 16
+[INFO] 13:00:54:248 Memoria/(48205:48205): retardo memoria = 1000
+[INFO] 13:00:54:248 Memoria/(48205:48205): retardo compactacion = 60000
+[INFO] 13:00:54:248 Memoria/(48205:48205): algoritmo asignacion = BEST
+[INFO] 13:00:54:248 Memoria/(48205:48205): --------------------------------
+[INFO] 13:00:54:248 Memoria/(48205:48205): ¡Memoria iniciado correctamente!
+[TRACE] 13:00:54:248 Memoria/(48205:48205): Listo para escuchar a mi cliente
+[INFO] 13:00:54:248 Memoria/(48205:48205): Servidor listo para recibir al cliente
+[TRACE] 13:00:54:833 Memoria/(48205:48207): Se conecto un cliente!
+[TRACE] 13:00:54:833 Memoria/(48205:48207): Recibi Instruccion: Conectado al FileSystem
+[TRACE] 13:00:55:389 Memoria/(48205:48208): Se conecto un cliente!
+[TRACE] 13:00:55:389 Memoria/(48205:48208): Recibi Instruccion: Conectado al CPU
+[TRACE] 13:00:56:027 Memoria/(48205:48209): Se conecto un cliente!
+[INFO] 13:00:56:027 Memoria/(48205:48206): Espacio reservado: 4096 Bytes -> Direccion: 0x7f6b90000b70
+[TRACE] 13:00:56:027 Memoria/(48205:48209): Recibi Instruccion: Conectado al Kernel
+[TRACE] 13:00:58:900 Memoria/(48205:48209): Recibi Instruccion: INICIAR 5
+[INFO] 13:00:58:900 Memoria/(48205:48209): Creación de Proceso PID: 5
+[TRACE] 13:00:58:900 Memoria/(48205:48209): Datos enviados, esperando respuesta de kernel...
+[TRACE] 13:00:58:901 Memoria/(48205:48209): Datos enviados correctamente
+[TRACE] 13:00:58:942 Memoria/(48205:48209): Recibi Instruccion: INICIAR 9
+[INFO] 13:00:58:942 Memoria/(48205:48209): Creación de Proceso PID: 9
+[TRACE] 13:00:58:942 Memoria/(48205:48209): Datos enviados, esperando respuesta de kernel...
+[TRACE] 13:00:58:942 Memoria/(48205:48209): Datos enviados correctamente
+[TRACE] 13:00:58:995 Memoria/(48205:48209): Recibi Instruccion: INICIAR 10
+[INFO] 13:00:58:995 Memoria/(48205:48209): Creación de Proceso PID: 10
+[TRACE] 13:00:58:995 Memoria/(48205:48209): Datos enviados, esperando respuesta de kernel...
+[TRACE] 13:00:58:995 Memoria/(48205:48209): Datos enviados correctamente
+[TRACE] 13:01:06:422 Memoria/(48205:48209): Recibi Instruccion: FINALIZAR 9
+[INFO] 13:01:06:422 Memoria/(48205:48209): Eliminación de Proceso PID: 9
+[TRACE] 13:01:07:655 Memoria/(48205:48209): Recibi Instruccion: FINALIZAR 5
+[INFO] 13:01:07:655 Memoria/(48205:48209): Eliminación de Proceso PID: 5
+[TRACE] 13:01:07:742 Memoria/(48205:48209): Recibi Instruccion: FINALIZAR 10
+[INFO] 13:01:07:742 Memoria/(48205:48209): Eliminación de Proceso PID: 10
+[TRACE] 13:03:56:706 Memoria/(48205:48209): Recibi Instruccion: INICIAR 9
+[INFO] 13:03:56:707 Memoria/(48205:48209): Creación de Proceso PID: 9
+[TRACE] 13:03:56:707 Memoria/(48205:48209): Datos enviados, esperando respuesta de kernel...
+[TRACE] 13:03:56:708 Memoria/(48205:48209): Datos enviados correctamente
+[TRACE] 13:03:56:838 Memoria/(48205:48209): Recibi Instruccion: FINALIZAR 9
+[INFO] 13:03:56:838 Memoria/(48205:48209): Eliminación de Proceso PID: 9

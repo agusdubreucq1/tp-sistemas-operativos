@@ -110,6 +110,7 @@ void init_estructuras_planificacion(){
     lista_ready = list_create();
     lista_recursos = list_create();
     lista_archivos_abiertos = list_create();
+    lista_pcbs = list_create();
 
     devolver_ejecucion = 0;
 
@@ -126,6 +127,7 @@ void init_estructuras_planificacion(){
 	}
 
     hora_inicio = (long long)tiempo.tv_sec * 1000 + (long long)tiempo.tv_usec / 1000;
+    //hora_inicio = (long long)tiempo.tv_sec * 1000000 + (long long)tiempo.tv_usec;
     sem_init(&semaforo_multiprogramacion, 0, grado_maximo_multiprogramacion);
 
     sem_init(&cantidad_procesos_new, 0, 0);
@@ -162,6 +164,7 @@ void planificarLargoPlazo(){
 		pcb->tabla_segmentos = tablaNueva;
 		pcb->tabla_segmentos->segmentos = tablaNueva->segmentos;
 
+		list_add(lista_pcbs,pcb);
 		mandar_a_ready(pcb);
 	}
 }
@@ -195,6 +198,16 @@ void recibir_mensaje_memoria(){
 	}
 }
 
+t_pcb* buscar_pcb(t_list* lista, uint32_t pid_buscado){
+	int elementos = list_size(lista);
+	for (int i = 0; i < elementos; i++) {
+		t_pcb* pcb = list_get(lista, i);
+		if (pid_buscado == pcb->pid){
+			return pcb;
+		}
+	}
+	return NULL;
+}
 
 void ejecutar_motivo_memoria(char* motivo){
 
@@ -209,6 +222,7 @@ void ejecutar_motivo_memoria(char* motivo){
 		sem_post(&semaforo_multiprogramacion);
 		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: OUT OF MEMORY", pcb_a_ejecutar->pid);
 		enviar_mensaje("-1", pcb_a_ejecutar->pid);
+		list_remove_element(lista_pcbs, pcb_a_ejecutar);
 		liberar_recursos(pcb_a_ejecutar);
 		liberar_archivos(pcb_a_ejecutar);
 		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
@@ -234,7 +248,19 @@ void ejecutar_motivo_memoria(char* motivo){
 		//pcb_ejecutando = pcb_a_ejecutar;
 		break;
 	case COMPACT:
+		log_info(kernel_logger, "Compactacion: Se solicito compactacion");
 		enviar_mensaje("COMPACT", socket_memoria);
+		int elementos = list_size(lista_pcbs);
+		printf("\n ELEMENTOS %i \n", elementos);
+		for(int i = 0; i < elementos; i++){
+			recibir_mensaje_memoria();
+			t_pcb* pcb_modificar = buscar_pcb(lista_pcbs, tablaNueva->pid);
+
+			liberarTablaSegmentos(pcb_modificar);
+			pcb_modificar->tabla_segmentos = tablaNueva;
+			pcb_modificar->tabla_segmentos->segmentos = tablaNueva->segmentos;
+		}
+		log_info(kernel_logger, "Se finalizao el proceso de compactacion");
 		break;
 	default:
 		break;
@@ -273,9 +299,10 @@ t_pcb* pcb_elegido_HRRN(){
 	float ratio_mayor = 0.0;
 	t_pcb* pcb; /*= malloc(sizeof(t_pcb));*/
 	struct timeval hora_actual;
+	gettimeofday(&hora_actual, NULL);
 	for (int i = 0; i < list_size(lista_ready); i++) {
 		/*t_pcb* */pcb = list_get(lista_ready, i);
-		gettimeofday(&hora_actual, NULL);
+
 		int tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000) - pcb->tiempo_ready;
 		//int tiempo = (hora_actual.tv_sec * 1000000 + hora_actual.tv_usec) - pcb->tiempo_ready;
 		//int tiempo = (hora_actual.tv_sec + hora_actual.tv_sec) - pcb->tiempo_ready;
@@ -347,6 +374,7 @@ void ejecutar_segun_motivo(char* motivo){
 		existeRecurso = recurso_existe(parametros[1]);
 		if (existeRecurso == -1){
 			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: WAIT - %s ", pcb_a_ejecutar->pid, parametros[1]);
+			list_remove_element(lista_pcbs, pcb_a_ejecutar);
 			finalizar_proceso(pcb_a_ejecutar, "INVALID_RESOURCE");
 		} else {
 			descontar_recurso(list_get(lista_recursos, existeRecurso), pcb_a_ejecutar, kernel_logger);//vuelve a poner al proceso en ready
@@ -359,6 +387,7 @@ void ejecutar_segun_motivo(char* motivo){
 		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		break;
 	case EXIT:
+		list_remove_element(lista_pcbs, pcb_a_ejecutar);
 		finalizar_proceso(pcb_a_ejecutar, "SUCCESS");
 		break;
 	case SIGNAL:
@@ -368,6 +397,7 @@ void ejecutar_segun_motivo(char* motivo){
 
 		if (existeRecurso == -1){
 			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SIGNAL - %s ", pcb_a_ejecutar->pid, parametros[1]);
+			list_remove_element(lista_pcbs, pcb_a_ejecutar);
 			finalizar_proceso(pcb_a_ejecutar, "INVALID_RESOURCE");
 
 		} else {
@@ -669,6 +699,7 @@ void actualizar_llegada_a_ready(t_pcb* pcb){
 	struct timeval tiempo;
 	gettimeofday(&tiempo, NULL);
 	pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
+	//pcb->tiempo_ready = tiempo.tv_sec * 1000000 + tiempo.tv_usec;
 }
 
 void estimar_rafaga(t_pcb* pcb){
@@ -685,8 +716,9 @@ void estimar_rafaga(t_pcb* pcb){
 }
 
 char* recibir_mensaje_filesystem(){
-	int cod_op;
-	cod_op = recibir_operacion(socket_fileSystem);
+	//int cod_op;
+	//cod_op = recibir_operacion(socket_fileSystem);
+	recibir_operacion(socket_fileSystem);
 	char* mensaje= string_new();
 	string_append(&mensaje, recibir_instruccion(socket_fileSystem, kernel_logger));
 	return mensaje;
