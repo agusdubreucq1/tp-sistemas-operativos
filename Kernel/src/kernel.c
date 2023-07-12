@@ -128,6 +128,7 @@ void init_estructuras_planificacion(){
 
     hora_inicio = (long long)tiempo.tv_sec * 1000 + (long long)tiempo.tv_usec / 1000;
     //hora_inicio = (long long)tiempo.tv_sec * 1000000 + (long long)tiempo.tv_usec;
+    //hora_inicio = (long long)tiempo.tv_sec + (long long)tiempo.tv_sec;
     sem_init(&semaforo_multiprogramacion, 0, grado_maximo_multiprogramacion);
 
     sem_init(&cantidad_procesos_new, 0, 0);
@@ -270,7 +271,7 @@ void ejecutar_motivo_memoria(char* motivo){
 
 
 void planificarCortoPlazo(){
-	//sleep(10);
+	sleep(10);
 	while(1){
 		if (devolver_ejecucion == 1){//para las instrucciones que luego de realizarlas, sigue el mismo proceso(como SIGNAL)
 			/*list_remove_element(lista_ready, pcb_ejecutando);
@@ -299,10 +300,9 @@ t_pcb* pcb_elegido_HRRN(){
 	float ratio_mayor = 0.0;
 	t_pcb* pcb; /*= malloc(sizeof(t_pcb));*/
 	struct timeval hora_actual;
-	gettimeofday(&hora_actual, NULL);
 	for (int i = 0; i < list_size(lista_ready); i++) {
 		/*t_pcb* */pcb = list_get(lista_ready, i);
-
+		gettimeofday(&hora_actual, NULL);
 		int tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000) - pcb->tiempo_ready;
 		//int tiempo = (hora_actual.tv_sec * 1000000 + hora_actual.tv_usec) - pcb->tiempo_ready;
 		//int tiempo = (hora_actual.tv_sec + hora_actual.tv_sec) - pcb->tiempo_ready;
@@ -313,10 +313,10 @@ t_pcb* pcb_elegido_HRRN(){
 			tcb_index = i;
 		}
 
-		//printf("\nPCB %d", pcb->pid);
-		//printf("\nTiempo %d", tiempo);
-		//printf("\nEstimado %d", pcb->estimado_rafaga);
-		//printf("\nRatio %f\n", ratio);
+		printf("\nPCB %d", pcb->pid);
+		printf("\nTiempo %d", tiempo);
+		printf("\nEstimado %d", pcb->estimado_rafaga);
+		printf("\nRatio %f\n", ratio);
 
 	}
 	pcb = list_remove(lista_ready, tcb_index);
@@ -700,6 +700,7 @@ void actualizar_llegada_a_ready(t_pcb* pcb){
 	gettimeofday(&tiempo, NULL);
 	pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
 	//pcb->tiempo_ready = tiempo.tv_sec * 1000000 + tiempo.tv_usec;
+	//pcb->tiempo_ready = tiempo.tv_sec + tiempo.tv_sec;
 }
 
 void estimar_rafaga(t_pcb* pcb){
