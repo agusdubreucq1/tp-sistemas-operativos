@@ -80,6 +80,10 @@
 	int offsetSegunPuntero(int puntero);
 	int bloqueSegunPuntero(int puntero);
 	int min(int num1, int num2);
+	void achicar(t_fcb* fcb, int asignados, int necesarios);
+	void liberar_bloque(t_fcb* fcb, int* asignados);
+	void agrandar(t_fcb* fcb, int asignados, int necesarios);
+	void agregar_bloque(t_fcb* fcb, int* asignados);
 
 
 

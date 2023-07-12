@@ -41,10 +41,11 @@ int main(void){
 
 
     while(1){
-    	pthread_t atender_consolas;
-        int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
-        printf("CONEXION %d", conexion_consola);
-        pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) &conexion_consola);
+    	int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
+    	//printf("\n consola: %d\n", conexion_consola);
+    	int *conexion_ptr = malloc(sizeof(int));
+    	*conexion_ptr = conexion_consola;
+    	pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) conexion_ptr);
         pthread_detach(atender_consolas);
     }
 
@@ -80,18 +81,19 @@ void* conectarMemoria(){
 
 void* recibirProcesos(int* p_conexion) {
 	int conexion = *p_conexion;
-	//uint32_t resultOk = 0;
-	//uint32_t resultError = -1;
-	//uint32_t result;
+	uint32_t resultOk = 0;
+	uint32_t resultError = -1;
+	uint32_t respuesta;
+	//printf("\nconexion: %d, hilo: %d\n", conexion, process_get_thread_id());
 
-	//recv(conexion, &result, sizeof(uint32_t), MSG_WAITALL);
-	//printf("\n\n RECIBI %u\n\n", result);
-	//send(conexion, &resultOk, sizeof(uint32_t), 0);
-	/*if(result == 1){
+	recv(conexion, &respuesta, sizeof(uint32_t), MSG_WAITALL);
+	//printf("\n consola: %d, hilo: %d respuesta: %d\n", conexion, process_get_thread_id(),respuesta);
+	if(respuesta == 1){
 	   send(conexion, &resultOk, sizeof(uint32_t), 0);
-	}else{
+	}
+	else{
 	   send(conexion, &resultError, sizeof(uint32_t), 0);
-	}*/
+	}
 
 	t_list* lista;
 	int cod_op = recibir_operacion(conexion);
@@ -457,7 +459,18 @@ void ejecutar_segun_motivo(char* motivo){
 				pthread_mutex_lock(&sem_fileSystem);
 				enviar_mensaje(motivo, socket_fileSystem);
 				char* mensaje_fopen = recibir_mensaje_filesystem();
-				free(mensaje_fopen);
+				if(string_equals_ignore_case(mensaje_fopen, "OK")){
+					free(mensaje_fopen);
+					printf("\n estaba creado\n");
+				}else{
+					char f_create[100]="";
+					sprintf(f_create, "F_CREATE %s", parametros[1]);
+					enviar_mensaje(f_create, socket_fileSystem);
+					char* mensaje_create = recibir_mensaje_filesystem();
+					printf("\nse creo\n");
+					free(mensaje_create);
+				}
+
 				pthread_mutex_unlock(&sem_fileSystem);
 				t_archivo* archivo_creado = crear_archivo(parametros[1]);
 				list_add(lista_archivos_abiertos, archivo_creado);

@@ -104,6 +104,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 				char* valor_registro;
 				valor_registro = registros_get_value(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
 				int tamanio_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
+				valor_registro[tamanio_registro]='\0';
 
 				sprintf(mensaje_mov_out, "MOV_OUT %p %s %d", dir_fisica, valor_registro, tamanio_registro);//concatena la direccion fisica, el valor y cuantos bytes escribir
 

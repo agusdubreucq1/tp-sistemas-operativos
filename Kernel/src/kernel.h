@@ -26,6 +26,7 @@
 #include <utils/instruccion.h>
 #include "archivo.h"
 #include <string.h>
+#include <commons/process.h>
 
 
 #define IP_SERVER "127.0.0.1"
@@ -55,7 +56,7 @@
 	//uint32_t respuesta;
 	//uint32_t resultOk;
 	//uint32_t resultError;
-	//pthread_t atender_consolas;
+	pthread_t atender_consolas;
 	pthread_t planificador_largo_plazo;
 	pthread_t planificador_corto_plazo;
 	pthread_t conexionFileSystem;

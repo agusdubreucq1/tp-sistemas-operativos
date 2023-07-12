@@ -48,19 +48,30 @@ int inicializar_bitmap() {
 
 
 int bloque_libre(){
+	printf("\nBuscando bloque libre -----------\n");
 	for(int i=0;i<bitmap->size*8; i++){
+		log_info(fileSystem_logger, "Acceso a Bitmap - Bloque: %d - Estado: %d", i, bitarray_test_bit(bitmap, i));
 		if(bitarray_test_bit(bitmap, i)==0){
+			printf("----------------------------\n");
 			return i;
 		}
 	}
 	return -1;
 }
 
+void desasignar_bloque(uint32_t bloque){
+	log_info(fileSystem_logger, "Acceso a Bitmap - Bloque: %d - Estado: %d", bloque, bitarray_test_bit(bitmap, bloque));
+	bitarray_clean_bit(bitmap, bloque);
+	log_info(fileSystem_logger, "Acceso a Bitmap - Bloque: %d - Estado: %d", bloque, bitarray_test_bit(bitmap, bloque));
+}
+
 uint32_t asignar_bloque(){
 	uint32_t bloque_a_asignar;
 	bloque_a_asignar = bloque_libre();
 	bitarray_set_bit(bitmap, bloque_a_asignar);
-
+	printf("\nAsignado------\n");
+	log_info(fileSystem_logger, "Acceso a Bitmap - Bloque: %d - Estado: %d", bloque_a_asignar, bitarray_test_bit(bitmap, bloque_a_asignar));
+	printf("-------------------\n");
 	grabar_bitmap(bitmap);
 	return bloque_a_asignar;
 }
