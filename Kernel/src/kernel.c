@@ -41,6 +41,7 @@ int main(void){
 
 
     while(1){
+    	//usleep(1000);
     	int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
     	//printf("\n consola: %d\n", conexion_consola);
     	int *conexion_ptr = malloc(sizeof(int));
@@ -85,7 +86,7 @@ void* recibirProcesos(int* p_conexion) {
 	uint32_t resultError = -1;
 	uint32_t respuesta;
 	//printf("\nconexion: %d, hilo: %d\n", conexion, process_get_thread_id());
-
+	//pthread_mutex_lock(&sem_procesos);
 	recv(conexion, &respuesta, sizeof(uint32_t), MSG_WAITALL);
 	//printf("\n consola: %d, hilo: %d respuesta: %d\n", conexion, process_get_thread_id(),respuesta);
 	if(respuesta == 1){
@@ -110,6 +111,7 @@ void* recibirProcesos(int* p_conexion) {
 		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new, &cantidad_procesos_new, NEW);
 		break;
 	}
+	//pthread_mutex_unlock(&sem_procesos);
 	return "";
 }
 
@@ -148,6 +150,7 @@ void init_estructuras_planificacion(){
 
     pthread_mutex_init(&semaforo_new, NULL);
     pthread_mutex_init(&semaforo_ready, NULL);
+
 
 }
 
@@ -299,9 +302,18 @@ void planificarCortoPlazo(){
 			pcb_a_ejecutar->estado = EXEC;
 		}
 
+		pcb_a_ejecutar->llegada_cpu = tiempo_actual();
 		enviar_pcb(pcb_a_ejecutar);
 		recibir_mensaje_cpu();
 	}
+}
+
+uint32_t tiempo_actual(){
+	/*en milisegundos*/
+	struct timeval hora_actual;
+	gettimeofday(&hora_actual, NULL);
+	uint32_t tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000);
+	return tiempo;
 }
 
 t_pcb* pcb_elegido_HRRN(){
@@ -323,12 +335,12 @@ t_pcb* pcb_elegido_HRRN(){
 			tcb_index = i;
 		}
 
-		/*
-		printf("\nPCB %d", pcb->pid);
+
+		/*printf("\nPCB %d", pcb->pid);
 		printf("\nTiempo %d", tiempo);
 		printf("\nEstimado %d", pcb->estimado_rafaga);
-		printf("\nRatio %f\n", ratio);
-		 */
+		printf("\nRatio %f\n", ratio);*/
+
 	}
 	pcb = list_remove(lista_ready, tcb_index);
 	return pcb;
@@ -395,7 +407,8 @@ void ejecutar_segun_motivo(char* motivo){
 
 	case YIELD:
 		estimar_rafaga(pcb_a_ejecutar);
-		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		mandar_a_ready(pcb_a_ejecutar);
+		//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		break;
 	case EXIT:
 		list_remove_element(lista_pcbs, pcb_a_ejecutar);
@@ -727,15 +740,17 @@ void actualizar_llegada_a_ready(t_pcb* pcb){
 
 void estimar_rafaga(t_pcb* pcb){
 	/*cada vez que el proceso se desaloja de la cpu*/
-	uint32_t tiempo_viejo = pcb->tiempo_ready;
+	//uint32_t tiempo_viejo = pcb->tiempo_ready;
 	uint32_t estimado_viejo = pcb->estimado_rafaga;
-	struct timeval tiempo;
-	gettimeofday(&tiempo, NULL);
-	pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000; // milisec
+	uint32_t tiempoActual = tiempo_actual();
+	uint32_t tiempo_ejecucion = tiempoActual - pcb->llegada_cpu;
+	//pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000; // milisec
 	//pcb->tiempo_ready = tiempo.tv_sec * 1000000 + tiempo.tv_usec; //micro
 	//pcb->tiempo_ready = tiempo.tv_sec; //seg
 	float alpha = 1 - hrrn_alfa;
-	pcb->estimado_rafaga = (alpha * estimado_viejo + hrrn_alfa * (pcb->tiempo_ready - tiempo_viejo));
+	pcb->estimado_rafaga = (alpha * estimado_viejo + hrrn_alfa * tiempo_ejecucion);
+
+	//printf("\n\nestimado_viejo: %d,  estimado actual: %d, tiempo que tardo en cpu: %d\n\n", estimado_viejo, pcb->estimado_rafaga, tiempo_ejecucion);
 }
 
 char* recibir_mensaje_filesystem(){

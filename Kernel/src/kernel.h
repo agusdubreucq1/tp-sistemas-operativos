@@ -95,6 +95,7 @@
 	pthread_mutex_t semaforo_execute;
 	pthread_mutex_t sem_fileSystem;
 	pthread_mutex_t sem_memoria;
+	pthread_mutex_t sem_procesos;
 
 	struct timeval tiempo;
 	long long hora_inicio;
@@ -144,5 +145,6 @@
 	void liberar_recursos(t_pcb* pcb);
 	void liberarTablaSegmentos(t_pcb* pcb);
 	t_pcb* buscar_pcb(t_list* lista, uint32_t pid_buscado);
+	uint32_t tiempo_actual();
 
 #endif /* KERNEL_H_ */
