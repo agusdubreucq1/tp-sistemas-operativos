@@ -134,8 +134,8 @@
 	void liberar_contexto_kernel(t_pcb* pcb);
 	void imprimirSemaforos();
 	char* recibir_mensaje_filesystem();
-	void recibir_mensaje_memoria();
-	void ejecutar_motivo_memoria(char* motivo);
+	void recibir_mensaje_memoria(char*);
+	void ejecutar_motivo_memoria(char* motivo, char*);
 	void accionFileSystem(t_args_fileSystem* args);
 	void cerrar_archivo(char* nombre_archivo, t_pcb* pcb);
 	void liberar_archivos(t_pcb* pcb);

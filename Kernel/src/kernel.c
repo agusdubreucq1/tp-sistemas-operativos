@@ -170,7 +170,7 @@ void planificarLargoPlazo(){
 		strcat(mensaje, numero);
 		pthread_mutex_lock(&sem_memoria);
 		enviar_mensaje(mensaje, socket_memoria);
-		recibir_mensaje_memoria();
+		recibir_mensaje_memoria("");
 		pthread_mutex_unlock(&sem_memoria);
 
 		liberarTablaSegmentos(pcb);
@@ -182,14 +182,14 @@ void planificarLargoPlazo(){
 	}
 }
 
-void recibir_mensaje_memoria(){
+void recibir_mensaje_memoria(char* inst){
 	int cod_op;
 	cod_op = recibir_operacion(socket_memoria);
 
 	switch (cod_op) {
 		case MENSAJE:
 			char* recibi = recibir_instruccion(socket_memoria, kernel_logger);
-			ejecutar_motivo_memoria(recibi);
+			ejecutar_motivo_memoria(recibi, inst);
 			free(recibi);
 			break;
 		case PAQUETE:
@@ -222,7 +222,7 @@ t_pcb* buscar_pcb(t_list* lista, uint32_t pid_buscado){
 	return NULL;
 }
 
-void ejecutar_motivo_memoria(char* motivo){
+void ejecutar_motivo_memoria(char* motivo, char* inst){
 
 	char** parametros = string_split(motivo, " ");
 	char** instruccion = string_split(ultima_instruccion, " ");
@@ -266,7 +266,7 @@ void ejecutar_motivo_memoria(char* motivo){
 		int elementos = list_size(lista_pcbs);
 		printf("\n ELEMENTOS %i \n", elementos);
 		for(int i = 0; i < elementos; i++){
-			recibir_mensaje_memoria();
+			recibir_mensaje_memoria("");
 			t_pcb* pcb_modificar = buscar_pcb(lista_pcbs, tablaNueva->pid);
 
 			liberarTablaSegmentos(pcb_modificar);
@@ -274,6 +274,9 @@ void ejecutar_motivo_memoria(char* motivo){
 			pcb_modificar->tabla_segmentos->segmentos = tablaNueva->segmentos;
 		}
 		log_info(kernel_logger, "Se finalizo el proceso de compactacion");
+
+		enviar_mensaje(inst, socket_memoria);
+		recibir_mensaje_memoria("");
 		break;
 	default:
 		break;
@@ -599,7 +602,7 @@ void ejecutar_segun_motivo(char* motivo){
 
 		pthread_mutex_lock(&sem_memoria);
 		enviar_mensaje(motivo, socket_memoria);
-		recibir_mensaje_memoria();
+		recibir_mensaje_memoria(motivo);
 		pthread_mutex_unlock(&sem_memoria);
 		}
 		break;
@@ -617,7 +620,7 @@ void ejecutar_segun_motivo(char* motivo){
 		memset(ultima_instruccion, 0, sizeof(ultima_instruccion));
 		pthread_mutex_lock(&sem_memoria);
 		enviar_mensaje(motivo, socket_memoria);
-		recibir_mensaje_memoria();
+		recibir_mensaje_memoria("");
 		pthread_mutex_unlock(&sem_memoria);
 		liberarTablaSegmentos(pcb_a_ejecutar);
 		pcb_a_ejecutar->tabla_segmentos = tablaNueva;
@@ -788,7 +791,7 @@ void liberar_pcb(t_pcb* pcb){
 }
 
 void liberar_elemento_list(void* elemento){
-	free(elemento);
+	//free(elemento);
 }
 
 
