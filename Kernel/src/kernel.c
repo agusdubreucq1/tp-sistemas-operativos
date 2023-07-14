@@ -273,7 +273,7 @@ void ejecutar_motivo_memoria(char* motivo){
 			pcb_modificar->tabla_segmentos = tablaNueva;
 			pcb_modificar->tabla_segmentos->segmentos = tablaNueva->segmentos;
 		}
-		log_info(kernel_logger, "Se finalizao el proceso de compactacion");
+		log_info(kernel_logger, "Se finalizo el proceso de compactacion");
 		break;
 	default:
 		break;
