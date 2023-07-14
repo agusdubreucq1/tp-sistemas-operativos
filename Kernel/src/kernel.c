@@ -234,7 +234,7 @@ void ejecutar_motivo_memoria(char* motivo, char* inst){
 		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
 		pcb_a_ejecutar->estado = EXITT;
 		sem_post(&semaforo_multiprogramacion);
-		log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: OUT OF MEMORY", pcb_a_ejecutar->pid);
+		log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: OUT OF MEMORY", pcb_a_ejecutar->pid);
 		enviar_mensaje("-1", pcb_a_ejecutar->pid);
 		list_remove_element(lista_pcbs, pcb_a_ejecutar);
 		liberar_recursos(pcb_a_ejecutar);
@@ -596,7 +596,7 @@ void ejecutar_segun_motivo(char* motivo){
 		parametros = string_split(motivo, " ");
 
 		if(!strcmp(parametros[1],"OUT_OF_MEMORY")){
-			log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: OUT OF MEMORY", pcb_a_ejecutar->pid);
+			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SEGMENTO MAYOR AL PERMITIDO", pcb_a_ejecutar->pid);
 			finalizar_proceso(pcb_a_ejecutar, "OUT_OF_MEMORY");
 		}else{
 		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
@@ -666,7 +666,7 @@ void finalizar_proceso(t_pcb* pcb, char* motivo){
 	enviar_mensaje(mensaje_mem, socket_memoria);
 	pthread_mutex_unlock(&sem_memoria);
 
-	log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb->pid, motivo);
+	log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb->pid, motivo);
 	enviar_mensaje("-1", pcb->pid);
 	liberar_recursos(pcb);
 	liberar_archivos(pcb);
