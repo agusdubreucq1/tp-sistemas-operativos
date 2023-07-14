@@ -616,7 +616,7 @@ void ejecutar_segun_motivo(char* motivo){
 
 	case DELETE_SEGMENT:
 		parametros = string_split(motivo, " ");
-		log_info(kernel_logger, "PID: %d - Eliminar Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
+		log_info(kernel_logger, "PID: %d - Eliminar Segmento - Id segmento: %s", pcb_a_ejecutar->pid, parametros[1]);
 
 		char numero_str[4];
 		sprintf(numero_str, "%d", pcb_a_ejecutar->pid);
