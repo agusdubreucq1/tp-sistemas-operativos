@@ -13,6 +13,7 @@
 
 	extern char *tam_max_segmento;
 	extern t_contexto_ejecucion* contexto_de_ejecucion;
+	extern t_log* cpu_logger;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones del proceso --
@@ -21,6 +22,6 @@
 	int obtener_num_segmento(int);
 	int obtener_desplazamiento_segmento(int);
 	int desplazamiento_valido(t_registros*, char*, int);
-	int direccion_fisica(int direccion_logica);
+	void* direccion_fisica(int direccion_logica);
 
 #endif

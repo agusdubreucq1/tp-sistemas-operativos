@@ -96,13 +96,13 @@ t_list* deserializar_tabla_segmentos(void* stream, int* desplazamiento){
 	int tamanio;
 
 	for(int j=0; j<cant_segmentos; j++){
-			t_segmento segmento;
-			memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
-			*desplazamiento += sizeof(int);
-			memcpy(&segmento, stream + *desplazamiento, sizeof(t_segmento));
-			*desplazamiento += sizeof(t_segmento);
-			list_add(tabla_segmentos, &segmento);
-		}
+		t_segmento segmento;
+		memcpy(&tamanio, stream + *desplazamiento, sizeof(int));
+		*desplazamiento += sizeof(int);
+		memcpy(&segmento, stream + *desplazamiento, sizeof(t_segmento));
+		*desplazamiento += sizeof(t_segmento);
+		list_add(tabla_segmentos, &segmento);
+	}
 	return tabla_segmentos;
 }
 
@@ -120,6 +120,15 @@ uint32_t deserializar_uint32(void* stream, int* desplazamiento){
 
 	variable = stream + *desplazamiento;
 	*desplazamiento+= sizeof(uint32_t);
+
+	return *variable;
+}
+
+bool deserializar_bool(void* stream, int* desplazamiento){
+	bool* variable;
+
+	variable = stream + *desplazamiento;
+	*desplazamiento+= sizeof(bool);
 
 	return *variable;
 }
@@ -155,8 +164,16 @@ t_tabla_segmentos* deserializar_segmentos(void* stream, int* desplazamiento){
 		*desplazamiento += sizeof(void*);
 		memcpy(&(segmento->limite), stream + *desplazamiento, sizeof(void*));
 		*desplazamiento += sizeof(void*);
+		segmento->pid = pid;
+		segmento->id = j;
+		if(segmento->direccion_base != NULL){
+			segmento->libre = 0;
+		} else{
+			segmento->libre = 1;
+		}
+
 		list_add(tabla->segmentos, segmento);
+
 	}
 	return tabla;
 }
-

@@ -19,6 +19,6 @@ char* parsearInstrucciones(char* path){
 		caracter[0] = c;
 		string_append(&buffer, caracter);
 	}
-
+	fclose(archivo);
 	return buffer;
 }

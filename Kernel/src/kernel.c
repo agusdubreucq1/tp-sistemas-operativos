@@ -39,9 +39,14 @@ int main(void){
     pthread_create(&planificador_corto_plazo, NULL, (void*) planificarCortoPlazo, NULL);
     pthread_detach(planificador_corto_plazo);
 
+
     while(1){
-        int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
-        pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) &conexion_consola);
+    	//usleep(1000);
+    	int conexion_consola = esperar_cliente(server_kernel, kernel_logger);
+    	//printf("\n consola: %d\n", conexion_consola);
+    	int *conexion_ptr = malloc(sizeof(int));
+    	*conexion_ptr = conexion_consola;
+    	pthread_create(&atender_consolas, NULL, (void*) recibirProcesos, (void*) conexion_ptr);
         pthread_detach(atender_consolas);
     }
 
@@ -79,12 +84,17 @@ void* recibirProcesos(int* p_conexion) {
 	int conexion = *p_conexion;
 	uint32_t resultOk = 0;
 	uint32_t resultError = -1;
-
+	uint32_t respuesta;
+	//printf("\nconexion: %d, hilo: %d\n", conexion, process_get_thread_id());
+	//pthread_mutex_lock(&sem_procesos);
 	recv(conexion, &respuesta, sizeof(uint32_t), MSG_WAITALL);
-	if(respuesta == 1)
+	//printf("\n consola: %d, hilo: %d respuesta: %d\n", conexion, process_get_thread_id(),respuesta);
+	if(respuesta == 1){
 	   send(conexion, &resultOk, sizeof(uint32_t), 0);
-	else
+	}
+	else{
 	   send(conexion, &resultError, sizeof(uint32_t), 0);
+	}
 
 	t_list* lista;
 	int cod_op = recibir_operacion(conexion);
@@ -101,6 +111,7 @@ void* recibirProcesos(int* p_conexion) {
 		ingresar_en_lista(nuevo_pcb, lista_new, "NEW", &semaforo_new, &cantidad_procesos_new, NEW);
 		break;
 	}
+	//pthread_mutex_unlock(&sem_procesos);
 	return "";
 }
 
@@ -110,8 +121,10 @@ void init_estructuras_planificacion(){
     lista_ready = list_create();
     lista_recursos = list_create();
     lista_archivos_abiertos = list_create();
+    lista_pcbs = list_create();
 
     devolver_ejecucion = 0;
+    fileSystem_ejecutando =0;
 
     int i = 0;
 	char** ptr = recursos;
@@ -126,15 +139,19 @@ void init_estructuras_planificacion(){
 	}
 
     hora_inicio = (long long)tiempo.tv_sec * 1000 + (long long)tiempo.tv_usec / 1000;
+    //hora_inicio = (long long)tiempo.tv_sec * 1000000 + (long long)tiempo.tv_usec;
+    //hora_inicio = (long long)tiempo.tv_sec + (long long)tiempo.tv_sec;
     sem_init(&semaforo_multiprogramacion, 0, grado_maximo_multiprogramacion);
 
     sem_init(&cantidad_procesos_new, 0, 0);
     sem_init(&cantidad_procesos_ready, 0, 0);
 
     pthread_mutex_init(&sem_fileSystem, NULL);
+    pthread_mutex_init(&sem_memoria, NULL);
 
     pthread_mutex_init(&semaforo_new, NULL);
     pthread_mutex_init(&semaforo_ready, NULL);
+
 
 }
 
@@ -152,25 +169,28 @@ void planificarLargoPlazo(){
 		char numero[10];
 		sprintf(numero, "%d", pcb->pid);
 		strcat(mensaje, numero);
+		pthread_mutex_lock(&sem_memoria);
 		enviar_mensaje(mensaje, socket_memoria);
-		recibir_mensaje_memoria();
+		recibir_mensaje_memoria("");
+		pthread_mutex_unlock(&sem_memoria);
 
 		liberarTablaSegmentos(pcb);
 		pcb->tabla_segmentos = tablaNueva;
 		pcb->tabla_segmentos->segmentos = tablaNueva->segmentos;
 
+		list_add(lista_pcbs,pcb);
 		mandar_a_ready(pcb);
 	}
 }
 
-void recibir_mensaje_memoria(){
+void recibir_mensaje_memoria(char* inst){
 	int cod_op;
 	cod_op = recibir_operacion(socket_memoria);
 
 	switch (cod_op) {
 		case MENSAJE:
 			char* recibi = recibir_instruccion(socket_memoria, kernel_logger);
-			ejecutar_motivo_memoria(recibi);
+			ejecutar_motivo_memoria(recibi, inst);
 			free(recibi);
 			break;
 		case PAQUETE:
@@ -192,8 +212,18 @@ void recibir_mensaje_memoria(){
 	}
 }
 
+t_pcb* buscar_pcb(t_list* lista, uint32_t pid_buscado){
+	int elementos = list_size(lista);
+	for (int i = 0; i < elementos; i++) {
+		t_pcb* pcb = list_get(lista, i);
+		if (pid_buscado == pcb->pid){
+			return pcb;
+		}
+	}
+	return NULL;
+}
 
-void ejecutar_motivo_memoria(char* motivo){
+void ejecutar_motivo_memoria(char* motivo, char* inst){
 
 	char** parametros = string_split(motivo, " ");
 	char** instruccion = string_split(ultima_instruccion, " ");
@@ -201,7 +231,17 @@ void ejecutar_motivo_memoria(char* motivo){
 
 	switch(cod_instruccion) {
 	case OUT:
-		finalizar_proceso(pcb_a_ejecutar, "OUT OF MEMORY");
+		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXITT);
+		pcb_a_ejecutar->estado = EXITT;
+		sem_post(&semaforo_multiprogramacion);
+		log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: OUT OF MEMORY", pcb_a_ejecutar->pid);
+		enviar_mensaje("-1", pcb_a_ejecutar->pid);
+		list_remove_element(lista_pcbs, pcb_a_ejecutar);
+		liberar_recursos(pcb_a_ejecutar);
+		liberar_archivos(pcb_a_ejecutar);
+		liberar_conexion(pcb_a_ejecutar->pid, kernel_logger);
+		liberar_pcb(pcb_a_ejecutar);
+		//finalizar_proceso(pcb_a_ejecutar, "OUT OF MEMORY");
 		devolver_ejecucion = 0;
 		break;
 	case SEGMENT:
@@ -217,11 +257,33 @@ void ejecutar_motivo_memoria(char* motivo){
 		segmento_nuevo->limite = base + atoi(instruccion[2]);
 		//imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
 
-		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
-		pcb_ejecutando = pcb_a_ejecutar;
+		//pcb_ejecutando = pcb_a_ejecutar;
 		break;
 	case COMPACT:
+		if(fileSystem_ejecutando){
+			log_info(kernel_logger, "Compactacion: Esperando Fin de Operaciones de FS");
+		}
+		pthread_mutex_lock(&sem_fileSystem);
+		log_info(kernel_logger, "Compactacion: Se solicito compactacion");
+
+		enviar_mensaje("COMPACT", socket_memoria);
+		int elementos = list_size(lista_pcbs);
+		printf("\n ELEMENTOS %i \n", elementos);
+		for(int i = 0; i < elementos; i++){
+			recibir_mensaje_memoria("");
+			t_pcb* pcb_modificar = buscar_pcb(lista_pcbs, tablaNueva->pid);
+
+			liberarTablaSegmentos(pcb_modificar);
+			pcb_modificar->tabla_segmentos = tablaNueva;
+			pcb_modificar->tabla_segmentos->segmentos = tablaNueva->segmentos;
+		}
+		log_info(kernel_logger, "Se finalizo el proceso de compactacion");
+
+		enviar_mensaje(inst, socket_memoria);
+		recibir_mensaje_memoria("");
+		pthread_mutex_unlock(&sem_fileSystem);
 		break;
 	default:
 		break;
@@ -231,28 +293,37 @@ void ejecutar_motivo_memoria(char* motivo){
 
 
 void planificarCortoPlazo(){
-	sleep(10);
+	//sleep(10);
 	while(1){
-		sem_wait(&cantidad_procesos_ready);
-		pthread_mutex_lock(&semaforo_ready);
 		if (devolver_ejecucion == 1){//para las instrucciones que luego de realizarlas, sigue el mismo proceso(como SIGNAL)
-			list_remove_element(lista_ready, pcb_ejecutando);
-			pcb_a_ejecutar = pcb_ejecutando;
+			/*list_remove_element(lista_ready, pcb_ejecutando);
+			pcb_a_ejecutar = pcb_ejecutando;*/
 			devolver_ejecucion = 0;
 		}else{
+			sem_wait(&cantidad_procesos_ready);
+			pthread_mutex_lock(&semaforo_ready);
 			if(!(strcmp(algoritmo_planificacion, "FIFO"))){
 				pcb_a_ejecutar = list_remove(lista_ready, 0);// si es FIFO saca el primero de ready
 			}else {
 				pcb_a_ejecutar = pcb_elegido_HRRN();
 			}
+			pthread_mutex_unlock(&semaforo_ready);
+			log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXEC);
+			pcb_a_ejecutar->estado = EXEC;
 		}
-		pthread_mutex_unlock(&semaforo_ready);
-		log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, EXEC);
-		pcb_a_ejecutar->estado = EXEC;
 
+		pcb_a_ejecutar->llegada_cpu = tiempo_actual();
 		enviar_pcb(pcb_a_ejecutar);
 		recibir_mensaje_cpu();
 	}
+}
+
+uint32_t tiempo_actual(){
+	/*en milisegundos*/
+	struct timeval hora_actual;
+	gettimeofday(&hora_actual, NULL);
+	uint32_t tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000);
+	return tiempo;
 }
 
 t_pcb* pcb_elegido_HRRN(){
@@ -260,9 +331,10 @@ t_pcb* pcb_elegido_HRRN(){
 	float ratio_mayor = 0.0;
 	t_pcb* pcb; /*= malloc(sizeof(t_pcb));*/
 	struct timeval hora_actual;
+	gettimeofday(&hora_actual, NULL);
 	for (int i = 0; i < list_size(lista_ready); i++) {
 		/*t_pcb* */pcb = list_get(lista_ready, i);
-		gettimeofday(&hora_actual, NULL);
+
 		int tiempo = (hora_actual.tv_sec * 1000 + hora_actual.tv_usec / 1000) - pcb->tiempo_ready;
 		//int tiempo = (hora_actual.tv_sec * 1000000 + hora_actual.tv_usec) - pcb->tiempo_ready;
 		//int tiempo = (hora_actual.tv_sec + hora_actual.tv_sec) - pcb->tiempo_ready;
@@ -273,10 +345,11 @@ t_pcb* pcb_elegido_HRRN(){
 			tcb_index = i;
 		}
 
-		//printf("\nPCB %d", pcb->pid);
-		//printf("\nTiempo %d", tiempo);
-		//printf("\nEstimado %d", pcb->estimado_rafaga);
-		//printf("\nRatio %f\n", ratio);
+
+		/*printf("\nPCB %d", pcb->pid);
+		printf("\nTiempo %d", tiempo);
+		printf("\nEstimado %d", pcb->estimado_rafaga);
+		printf("\nRatio %f\n", ratio);*/
 
 	}
 	pcb = list_remove(lista_ready, tcb_index);
@@ -334,6 +407,7 @@ void ejecutar_segun_motivo(char* motivo){
 		existeRecurso = recurso_existe(parametros[1]);
 		if (existeRecurso == -1){
 			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: WAIT - %s ", pcb_a_ejecutar->pid, parametros[1]);
+			list_remove_element(lista_pcbs, pcb_a_ejecutar);
 			finalizar_proceso(pcb_a_ejecutar, "INVALID_RESOURCE");
 		} else {
 			descontar_recurso(list_get(lista_recursos, existeRecurso), pcb_a_ejecutar, kernel_logger);//vuelve a poner al proceso en ready
@@ -343,9 +417,11 @@ void ejecutar_segun_motivo(char* motivo){
 
 	case YIELD:
 		estimar_rafaga(pcb_a_ejecutar);
-		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		mandar_a_ready(pcb_a_ejecutar);
+		//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		break;
 	case EXIT:
+		list_remove_element(lista_pcbs, pcb_a_ejecutar);
 		finalizar_proceso(pcb_a_ejecutar, "SUCCESS");
 		break;
 	case SIGNAL:
@@ -355,13 +431,14 @@ void ejecutar_segun_motivo(char* motivo){
 
 		if (existeRecurso == -1){
 			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SIGNAL - %s ", pcb_a_ejecutar->pid, parametros[1]);
+			list_remove_element(lista_pcbs, pcb_a_ejecutar);
 			finalizar_proceso(pcb_a_ejecutar, "INVALID_RESOURCE");
 
 		} else {
-			ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+			//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 			devolver_ejecucion = 1;
-			pcb_ejecutando = pcb_a_ejecutar;
-			sumar_recurso(list_get(lista_recursos, existeRecurso), pcb_ejecutando, kernel_logger);
+			//pcb_ejecutando = pcb_a_ejecutar;
+			sumar_recurso(list_get(lista_recursos, existeRecurso), pcb_a_ejecutar, kernel_logger);
 		}
 		break;
 
@@ -405,7 +482,18 @@ void ejecutar_segun_motivo(char* motivo){
 				pthread_mutex_lock(&sem_fileSystem);
 				enviar_mensaje(motivo, socket_fileSystem);
 				char* mensaje_fopen = recibir_mensaje_filesystem();
-				free(mensaje_fopen);
+				if(string_equals_ignore_case(mensaje_fopen, "OK")){
+					free(mensaje_fopen);
+					printf("\n estaba creado\n");
+				}else{
+					char f_create[100]="";
+					sprintf(f_create, "F_CREATE %s", parametros[1]);
+					enviar_mensaje(f_create, socket_fileSystem);
+					char* mensaje_create = recibir_mensaje_filesystem();
+					printf("\nse creo\n");
+					free(mensaje_create);
+				}
+
 				pthread_mutex_unlock(&sem_fileSystem);
 				t_archivo* archivo_creado = crear_archivo(parametros[1]);
 				list_add(lista_archivos_abiertos, archivo_creado);
@@ -413,9 +501,9 @@ void ejecutar_segun_motivo(char* motivo){
 				printf("el archivo_creado->nombre: %s\n\n", archivo_creado->nombre);
 				agregar_archivo_al_proceso(archivo_creado, pcb_a_ejecutar);
 
-				ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+				//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 				devolver_ejecucion = 1;
-				pcb_ejecutando = pcb_a_ejecutar;
+				//pcb_ejecutando = pcb_a_ejecutar;
 			}
 			break;
 
@@ -426,9 +514,9 @@ void ejecutar_segun_motivo(char* motivo){
 		parametros = string_split(motivo, " ");
 		char* archivo_a_cerrar = parametros[1];
 		cerrar_archivo(archivo_a_cerrar, pcb_a_ejecutar);
-		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
-		pcb_ejecutando = pcb_a_ejecutar;
+		//pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case F_SEEK:
@@ -442,47 +530,52 @@ void ejecutar_segun_motivo(char* motivo){
 		t_archivo* archivo_seek = get_archivo_del_proceso(nombre_archivo, pcb_a_ejecutar);
 		archivo_seek->puntero = puntero;
 
-		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
-		pcb_ejecutando = pcb_a_ejecutar;
+		//pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case F_READ:
 		parametros = string_split(motivo, " ");
+		char* nom_archivo = parametros[1];
+		t_archivo* archivo_read = get_archivo_del_proceso(nom_archivo, pcb_a_ejecutar);
 		log_info(kernel_logger, "PID: %d - Leer Archivo: %s "
-				"- Puntero: %s "
+				"- Puntero: %d "
 				"- Direccion Memoria: %s "
-				"- Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2], parametros[3], parametros[4]);
-		pthread_mutex_lock(&sem_fileSystem);
-		enviar_mensaje(motivo, socket_fileSystem);
-		//se bloquea el proceso en un hilo
-		//se recibe el OK
-		//se desbloquea
-		char* mensaje_fread = recibir_mensaje_filesystem();
-		free(mensaje_fread);
-		pthread_mutex_unlock(&sem_fileSystem);
-		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
-		devolver_ejecucion = 1;
-		pcb_ejecutando = pcb_a_ejecutar;
+				"- Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], archivo_read->puntero, parametros[2], parametros[3]);
+
+		char* puntero_read = string_itoa(archivo_read->puntero);
+		string_append(&motivo, " ");
+		string_append(&motivo, puntero_read);
+		pthread_t p_read;
+		t_args_fileSystem* args_read = malloc(sizeof(t_args_fileSystem));
+		args_read->motivo = malloc(strlen(motivo)+1);
+		args_read->pcb = pcb_a_ejecutar;
+		strcpy(args_read->motivo, motivo);
+		pthread_create(&p_read, NULL ,(void*) accionFileSystem, args_read);
+		pthread_detach(p_read);
+
 		break;
 
 	case F_WRITE:
 		parametros = string_split(motivo, " ");
+		char* nombre_arch = parametros[1];
+		t_archivo* archivo_write = get_archivo_del_proceso(nombre_arch, pcb_a_ejecutar);
 		log_info(kernel_logger, "PID: %d - Escribir Archivo: %s "
-				"- Puntero: %s "
+				"- Puntero: %d "
 				"- Direccion Memoria: %s "
-				"- Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2], parametros[3], parametros[4]);
-		pthread_mutex_lock(&sem_fileSystem);
-		enviar_mensaje(motivo, socket_fileSystem);
-		//se bloquea el proceso en un hilo
-		//se recibe el OK
-		//se desblo
-		char* mensaje_fwrite = recibir_mensaje_filesystem();
-		free(mensaje_fwrite);
-		pthread_mutex_unlock(&sem_fileSystem);
-		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
-		devolver_ejecucion = 1;
-		pcb_ejecutando = pcb_a_ejecutar;
+				"- Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], archivo_write->puntero, parametros[2], parametros[3]);
+
+		char* puntero_write = string_itoa(archivo_write->puntero);
+		string_append(&motivo, " ");
+		string_append(&motivo, puntero_write);
+		pthread_t p_write;
+		t_args_fileSystem* args_write = malloc(sizeof(t_args_fileSystem));
+		args_write->motivo = malloc(strlen(motivo)+1);
+		args_write->pcb = pcb_a_ejecutar;
+		strcpy(args_write->motivo, motivo);
+		pthread_create(&p_write, NULL ,(void*) accionFileSystem, args_write);
+		pthread_detach(p_write);
 		break;
 
 	case F_TRUNCATE:
@@ -490,17 +583,22 @@ void ejecutar_segun_motivo(char* motivo){
 		parametros = string_split(motivo, " ");
 		log_info(kernel_logger, "PID: %d - Truncar Archivo: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 		pthread_t p_truncar;
-		t_args_truncar* args = malloc(sizeof(t_args_truncar));
+		t_args_fileSystem* args = malloc(sizeof(t_args_fileSystem));
 		args->motivo = malloc(strlen(motivo)+1);
 		args->pcb = pcb_a_ejecutar;
 		strcpy(args->motivo, motivo);
-		pthread_create(&p_truncar, NULL ,(void*) truncar, args);
+		pthread_create(&p_truncar, NULL ,(void*) accionFileSystem, args);
 		pthread_detach(p_truncar);
 		break;
 
 	case CREATE_SEGMENT:
 
 		parametros = string_split(motivo, " ");
+
+		if(!strcmp(parametros[1],"OUT_OF_MEMORY")){
+			log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: SEGMENTO MAYOR AL PERMITIDO", pcb_a_ejecutar->pid);
+			finalizar_proceso(pcb_a_ejecutar, "OUT_OF_MEMORY");
+		}else{
 		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 
 		char numero[4];
@@ -509,8 +607,11 @@ void ejecutar_segun_motivo(char* motivo){
 		string_append(&motivo, numero);
 		strcat(ultima_instruccion, motivo);
 
+		pthread_mutex_lock(&sem_memoria);
 		enviar_mensaje(motivo, socket_memoria);
-		recibir_mensaje_memoria();
+		recibir_mensaje_memoria(motivo);
+		pthread_mutex_unlock(&sem_memoria);
+		}
 		break;
 
 	case DELETE_SEGMENT:
@@ -524,16 +625,18 @@ void ejecutar_segun_motivo(char* motivo){
 		strcat(ultima_instruccion, motivo);
 
 		memset(ultima_instruccion, 0, sizeof(ultima_instruccion));
+		pthread_mutex_lock(&sem_memoria);
 		enviar_mensaje(motivo, socket_memoria);
-		recibir_mensaje_memoria();
+		recibir_mensaje_memoria("");
+		pthread_mutex_unlock(&sem_memoria);
 		liberarTablaSegmentos(pcb_a_ejecutar);
 		pcb_a_ejecutar->tabla_segmentos = tablaNueva;
 		pcb_a_ejecutar->tabla_segmentos->segmentos = tablaNueva->segmentos;
 		//imprimir_segmentos(pcb_a_ejecutar->tabla_segmentos);
 
-		ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
+		//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
 		devolver_ejecucion = 1;
-		pcb_ejecutando = pcb_a_ejecutar;
+		//pcb_ejecutando = pcb_a_ejecutar;
 		break;
 
 	case MOV_IN: //CPU solo comunica a Kernel cuando hay SEG_FAULT
@@ -559,9 +662,11 @@ void finalizar_proceso(t_pcb* pcb, char* motivo){
 	char numero_mem[4];
 	sprintf(numero_mem, "%d", pcb_a_ejecutar->pid);
 	strcat(mensaje_mem, numero_mem);
+	pthread_mutex_lock(&sem_memoria);
 	enviar_mensaje(mensaje_mem, socket_memoria);
+	pthread_mutex_unlock(&sem_memoria);
 
-	log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb->pid, motivo);
+	log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb->pid, motivo);
 	enviar_mensaje("-1", pcb->pid);
 	liberar_recursos(pcb);
 	liberar_archivos(pcb);
@@ -583,16 +688,19 @@ void liberar_archivos(t_pcb* pcb){
 	}
 }
 
-void truncar(t_args_truncar* args){
-
+void accionFileSystem(t_args_fileSystem* args){//para TRUNCATE, READ Y WRITE
+	char** parametros = string_split(args->motivo, " ");
+	printf("\nEL MOTIVO ES: %s\n\n", args->motivo);
 	pthread_mutex_lock(&sem_fileSystem);
+	fileSystem_ejecutando = 1;
 	enviar_mensaje(args->motivo, socket_fileSystem);
-	log_cambiar_estado(pcb_a_ejecutar->pid, pcb_a_ejecutar->estado, BLOCKED);
-	log_info(kernel_logger, "PID: %d - Bloqueado por: %s", pcb_a_ejecutar->pid, "truncate");
-	pcb_a_ejecutar->estado = BLOCKED;
+	log_cambiar_estado(args->pcb->pid, args->pcb->estado, BLOCKED);
+	log_info(kernel_logger, "PID: %d - Bloqueado por: %s", args->pcb->pid, parametros[1]);
+	args->pcb->estado = BLOCKED;
 	char* mensaje = recibir_mensaje_filesystem();
 	free(mensaje);
 	pthread_mutex_unlock(&sem_fileSystem);
+	fileSystem_ejecutando = 0;
 	mandar_a_ready(args->pcb);
 
 	free(args->motivo);
@@ -644,24 +752,29 @@ void actualizar_llegada_a_ready(t_pcb* pcb){
 	struct timeval tiempo;
 	gettimeofday(&tiempo, NULL);
 	pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000;
+	//pcb->tiempo_ready = tiempo.tv_sec * 1000000 + tiempo.tv_usec;
+	//pcb->tiempo_ready = tiempo.tv_sec + tiempo.tv_sec;
 }
 
 void estimar_rafaga(t_pcb* pcb){
 	/*cada vez que el proceso se desaloja de la cpu*/
-	uint32_t tiempo_viejo = pcb->tiempo_ready;
+	//uint32_t tiempo_viejo = pcb->tiempo_ready;
 	uint32_t estimado_viejo = pcb->estimado_rafaga;
-	struct timeval tiempo;
-	gettimeofday(&tiempo, NULL);
-	pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000; // milisec
+	uint32_t tiempoActual = tiempo_actual();
+	uint32_t tiempo_ejecucion = tiempoActual - pcb->llegada_cpu;
+	//pcb->tiempo_ready = tiempo.tv_sec * 1000 + tiempo.tv_usec / 1000; // milisec
 	//pcb->tiempo_ready = tiempo.tv_sec * 1000000 + tiempo.tv_usec; //micro
 	//pcb->tiempo_ready = tiempo.tv_sec; //seg
 	float alpha = 1 - hrrn_alfa;
-	pcb->estimado_rafaga = (alpha * estimado_viejo + hrrn_alfa * (pcb->tiempo_ready - tiempo_viejo));
+	pcb->estimado_rafaga = (alpha * estimado_viejo + hrrn_alfa * tiempo_ejecucion);
+
+	//printf("\n\nestimado_viejo: %d,  estimado actual: %d, tiempo que tardo en cpu: %d\n\n", estimado_viejo, pcb->estimado_rafaga, tiempo_ejecucion);
 }
 
 char* recibir_mensaje_filesystem(){
-	int cod_op;
-	cod_op = recibir_operacion(socket_fileSystem);
+	//int cod_op;
+	//cod_op = recibir_operacion(socket_fileSystem);
+	recibir_operacion(socket_fileSystem);
 	char* mensaje= string_new();
 	string_append(&mensaje, recibir_instruccion(socket_fileSystem, kernel_logger));
 	return mensaje;
@@ -687,7 +800,7 @@ void liberar_pcb(t_pcb* pcb){
 }
 
 void liberar_elemento_list(void* elemento){
-	free(elemento);
+	//free(elemento);
 }
 
 
@@ -708,4 +821,3 @@ void liberarTablaSegmentos(t_pcb* pcb){
 void liberar_contexto_kernel(t_pcb* pcb){
 	free(pcb->registros_cpu);
 }
-

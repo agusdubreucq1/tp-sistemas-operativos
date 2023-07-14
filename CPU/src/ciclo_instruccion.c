@@ -32,7 +32,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																   codigo_instruccion_string(instruccion->codigo_instruccion),
 																   instruccion->parametro[0],
 																   instruccion->parametro[1]);
-			usleep(retardo_instruccion);
+			usleep(retardo_instruccion*1000);
 			registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], instruccion->parametro[1]);
 			//imprimir_registros(contexto_de_ejecucion->registros_cpu);
 			salida = 1;
@@ -57,15 +57,15 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 				char mensaje_mov_in[100] = "";
 
 				int dir_logica = atoi(instruccion->parametro[1]);
-				int dir_fisica = direccion_fisica(dir_logica);
+				void* dir_fisica = direccion_fisica(dir_logica);
 
 				int tamanio_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0]);
 
-				sprintf(mensaje_mov_in, "MOV_IN %p %d", (void *)(intptr_t)dir_fisica, tamanio_registro);//concatena la direccion fisica y cuantos bytes leer
+				sprintf(mensaje_mov_in, "MOV_IN %p %d", dir_fisica, tamanio_registro);//concatena la direccion fisica y cuantos bytes leer
 
 				log_info(cpu_logger, "PID: %u - Accion: LEER - Direccion Fisica: %p - Tamaño:%d - Origen: CPU \n ",
 									contexto_de_ejecucion->pid,
-									(void *)(intptr_t)dir_fisica,
+									dir_fisica,
 									tamanio_registro);
 
 				enviar_mensaje(mensaje_mov_in, socket_memoria);
@@ -100,16 +100,17 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 				char mensaje_mov_out[100] = "";
 
 				int direccion_logica = atoi(instruccion->parametro[0]);
-				void* dir_fisica = (void *)(intptr_t)direccion_fisica(direccion_logica);
+				void* dir_fisica = direccion_fisica(direccion_logica);
 				char* valor_registro;
 				valor_registro = registros_get_value(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
 				int tamanio_registro = registros_get_size(contexto_de_ejecucion->registros_cpu, instruccion->parametro[1]);
+				valor_registro[tamanio_registro]='\0';
 
 				sprintf(mensaje_mov_out, "MOV_OUT %p %s %d", dir_fisica, valor_registro, tamanio_registro);//concatena la direccion fisica, el valor y cuantos bytes escribir
 
 				log_info(cpu_logger, "PID: %u - Accion: ESCRIBIR - Direccion Fisica: %p - Tamaño: %d - Origen: CPU\n ",
 									contexto_de_ejecucion->pid,
-									(void *)(intptr_t)dir_fisica,//para castearlo a void*
+									dir_fisica,//para castearlo a void*
 									tamanio_registro);
 
 				enviar_mensaje(mensaje_mov_out, socket_memoria);
@@ -164,8 +165,12 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	   instruccion->parametro[0],
 																	   instruccion->parametro[1],
 																	   instruccion->parametro[2]);
-			char mensaje_f_read[30] = "F_READ ";
-			concatenar_mensaje_con_3_parametros(mensaje_f_read, instruccion);
+			char mensaje_f_read[100] = "";
+			int dir_logica = atoi(instruccion->parametro[1]);
+			void* dir_fisica_read = direccion_fisica(dir_logica);
+			int tamanio = atoi(instruccion->parametro[2]);
+			sprintf(mensaje_f_read, "F_READ %s %p %d", instruccion->parametro[0], dir_fisica_read, tamanio);
+			//concatenar_mensaje_con_3_parametros(mensaje_f_read, instruccion);
 			enviarContexto(mensaje_f_read);
 			break;
 
@@ -175,8 +180,14 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	   instruccion->parametro[0],
 																	   instruccion->parametro[1],
 																	   instruccion->parametro[2]);
-			char mensaje_f_write[30] = "F_WRITE ";
-			concatenar_mensaje_con_3_parametros(mensaje_f_write, instruccion);
+			char mensaje_f_write[100] = "";
+			int dir_logica_write = atoi(instruccion->parametro[1]);
+			printf("\ndir_logica: %d\n\n", dir_logica_write);
+			void* dir_fisica_write = direccion_fisica(dir_logica_write);
+			printf("\ndir_fisica: %p\n\n", dir_fisica_write);
+			int tamanio_write = atoi(instruccion->parametro[2]);
+			sprintf(mensaje_f_write, "F_WRITE %s %p %d", instruccion->parametro[0], dir_fisica_write, tamanio_write);
+			//concatenar_mensaje_con_3_parametros(mensaje_f_read, instruccion);
 			enviarContexto(mensaje_f_write);
 			break;
 
@@ -221,7 +232,12 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 			concatenar_mensaje_con_2_parametros(mensaje_create_segment, instruccion);
 
+			if(atoi(instruccion->parametro[1]) > atoi(tam_max_segmento)){
+				log_info(cpu_logger, "PID: %u - Error OUT_OF_MEMORY - Segmento: - Offset: - Tamaño: ",contexto_de_ejecucion->pid);
+				enviarContexto("CREATE_SEGMENT OUT_OF_MEMORY");
+			}else{
 			enviarContexto(mensaje_create_segment);
+			}
 			break;
 
 		case DELETE_SEGMENT:
@@ -257,6 +273,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 
 void enviarContexto(char* motivo){
+	log_trace(cpu_logger, "enviando a kernel: %s", motivo);
 	t_paquete* paquete;
 	paquete = serializar_contexto(contexto_de_ejecucion);
 	agregar_a_paquete(paquete, motivo, strlen(motivo)+1);
@@ -294,4 +311,3 @@ void liberar_contexto(t_contexto_ejecucion* contexto){
 void liberar_elemento_list(void* elemento){
 	free(elemento);
 }
-

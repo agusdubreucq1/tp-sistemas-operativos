@@ -30,9 +30,9 @@ void descontar_recurso(t_recurso* recurso, t_pcb* pcb, t_log* logger){
 		log_info(logger, "PID: %d - Bloqueado por: %s", pcb->pid, recurso->nombre);
 		pcb->estado = BLOCKED;
 	} else {
-		ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);//vuelve a ejecutar el mismo proceso
+		//ingresar_en_lista(pcb, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);//vuelve a ejecutar el mismo proceso
 		devolver_ejecucion = 1;
-		pcb_ejecutando = pcb;
+		//pcb_ejecutando = pcb;
 	}
 }
 

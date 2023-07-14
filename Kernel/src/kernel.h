@@ -26,6 +26,7 @@
 #include <utils/instruccion.h>
 #include "archivo.h"
 #include <string.h>
+#include <commons/process.h>
 
 
 #define IP_SERVER "127.0.0.1"
@@ -52,9 +53,9 @@
 // -- Socket del proceso --
 // ------------------------------------------------------------------------------------------
 
-	uint32_t respuesta;
-	uint32_t resultOk;
-	uint32_t resultError;
+	//uint32_t respuesta;
+	//uint32_t resultOk;
+	//uint32_t resultError;
 	pthread_t atender_consolas;
 	pthread_t planificador_largo_plazo;
 	pthread_t planificador_corto_plazo;
@@ -79,8 +80,10 @@
 	t_list* lista_ready;
 	t_list* lista_recursos;
 	t_list* lista_archivos_abiertos;
+	t_list* lista_pcbs;
 
 	int devolver_ejecucion;
+	int fileSystem_ejecutando;
 	t_pcb* pcb_ejecutando;
 	t_pcb* pcb_a_ejecutar;
 
@@ -92,6 +95,8 @@
 	pthread_mutex_t semaforo_ready;
 	pthread_mutex_t semaforo_execute;
 	pthread_mutex_t sem_fileSystem;
+	pthread_mutex_t sem_memoria;
+	pthread_mutex_t sem_procesos;
 
 	struct timeval tiempo;
 	long long hora_inicio;
@@ -130,9 +135,9 @@
 	void liberar_contexto_kernel(t_pcb* pcb);
 	void imprimirSemaforos();
 	char* recibir_mensaje_filesystem();
-	void recibir_mensaje_memoria();
-	void ejecutar_motivo_memoria(char* motivo);
-	void truncar(t_args_truncar* args);
+	void recibir_mensaje_memoria(char*);
+	void ejecutar_motivo_memoria(char* motivo, char*);
+	void accionFileSystem(t_args_fileSystem* args);
 	void cerrar_archivo(char* nombre_archivo, t_pcb* pcb);
 	void liberar_archivos(t_pcb* pcb);
 	void mandar_a_ready(t_pcb* pcb);
@@ -140,5 +145,7 @@
 	void finalizar_proceso(t_pcb* pcb, char* motivo);
 	void liberar_recursos(t_pcb* pcb);
 	void liberarTablaSegmentos(t_pcb* pcb);
+	t_pcb* buscar_pcb(t_list* lista, uint32_t pid_buscado);
+	uint32_t tiempo_actual();
 
 #endif /* KERNEL_H_ */

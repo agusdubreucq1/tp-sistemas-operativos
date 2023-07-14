@@ -14,6 +14,9 @@ int main(int argc, char** argv) {
     	return EXIT_FAILURE;
     }
 
+
+    //pthread_mutex_init(&semaforo, NULL);
+
     consola_logger = iniciar_logger("../../logs/logConsola.log", "Consola");
 
 	if (consola_logger == NULL){
@@ -30,13 +33,16 @@ int main(int argc, char** argv) {
 
 	leer_configs(consola_logger, consola_config);
 
-	buffer = parsearInstrucciones(argv[2]);
+	printf("IP %s PUERTO %s", ip_kernel, puerto_kernel);
+	int conexion_kernel = crear_conexion(ip_kernel, puerto_kernel, consola_logger, "Kernel");
 
-	conexion_kernel = crear_conexion(ip_kernel, puerto_kernel, consola_logger, "Kernel");
-	handshake(conexion_kernel, 1, consola_logger, "Kernel");
+	printf(" SOCKET %d", conexion_kernel);
+	uint32_t mandar = 1;
+	handshake(conexion_kernel, mandar, consola_logger, "Kernel");
 
-	paquete = crear_paquete();
+	char* buffer = parsearInstrucciones(argv[2]);
 
+	t_paquete* paquete = crear_paquete();
 	agregar_a_paquete(paquete, buffer, strlen(buffer) + 1);
 
 	enviar_paquete(paquete, conexion_kernel, consola_logger, "Kernel");
@@ -49,7 +55,9 @@ int main(int argc, char** argv) {
 
 void terminar_programa(int conexion, t_log *logger, t_config* config){
 	cerrar_consola(conexion);
+	pthread_mutex_lock(&semaforo);
 	log_info(logger, "Cerrando conexion");
+	pthread_mutex_unlock(&semaforo);
 	log_destroy(logger);
 	config_destroy(config);
 	close(conexion);

@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <utils/datos.h>
 
 // ------------------------------------------------------------------------------------------
 // -- Estructuras --
@@ -20,7 +21,7 @@
 	typedef struct bitmap_aux {
 	int posicion;
 	int tamanio;
-} bitmap_aux;
+	} bitmap_aux;
 
 // ------------------------------------------------------------------------------------------
 // -- Variables --
@@ -29,6 +30,7 @@
 	extern char* tam_memoria;
 	extern t_bitarray* bitmap;
 	extern void *memoria_fisica;
+	extern t_list* lista_huecos;
 
 // ------------------------------------------------------------------------------------------
 // -- Funciones --
@@ -43,5 +45,9 @@ int first_fit_bitmap(int);
 int best_fit_bitmap(int);
 int worst_fit_bitmap(int);
 int devolver_posicion_bitmap_segun_direccion(void *);
+int tamanio_segmento(t_segmento* segmento);
+void* first_fit(int);
+void* best_fit(int);
+void* worst_fit(int);
 
 #endif /* BITMAP_MEMORIA_H_ */

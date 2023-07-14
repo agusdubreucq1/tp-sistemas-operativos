@@ -60,9 +60,11 @@ typedef struct registros_cpu{
 // ------------------------------------------------------------------------------------------
 
 typedef struct segmento{
-	//int id;
 	void* direccion_base;
 	void* limite;
+	uint32_t id;
+	uint32_t pid;
+	bool libre;
 } t_segmento;
 
 
@@ -99,6 +101,7 @@ typedef struct pcb {
 	t_tabla_segmentos* tabla_segmentos;
 	uint32_t estimado_rafaga;
 	uint32_t tiempo_ready;
+	uint32_t llegada_cpu;
 	t_list* tabla_archivos;
 	t_list* recursos;
 	estado_code estado;
@@ -125,9 +128,10 @@ typedef struct args_io{
    int duracion;
 } t_thread_args;
 
-typedef struct args_truncar{
+typedef struct args_fileSystem{
 	t_pcb* pcb;
 	char* motivo;
-}t_args_truncar;
+}t_args_fileSystem;
+
 
 #endif /* SRC_DATOS_H_ */

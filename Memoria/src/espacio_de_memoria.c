@@ -34,21 +34,3 @@ void imprimir_memoria() {
 	}
 }
 
-/*
-void escribir_mensaje_en_memoria(void *direccion_fisica, char *valor, int tamanio) {
-	printf("\nEntre a escribir_mensaje_en_memoria!");
-	int posicion_bitmap = devolver_posicion_bitmap_segun_direccion(direccion_fisica);
-	if (validar_huecos_libres(posicion_bitmap, tamanio)) {
-		printf("\nHay huecos libres para ocupar");
-		//Aca deberiamos meter un semaforo
-		memcpy(direccion_fisica, valor, tamanio);
-		ocupar_bitmap(posicion_bitmap, tamanio);
-		imprimir_memoria();
-		imprimir_bitmap();
-	}
-	else {
-		printf("\nNo se puede escribir en la memoria porque está ocupada");
-	}
-
-}
-*/
