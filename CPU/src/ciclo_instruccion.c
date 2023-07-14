@@ -232,7 +232,12 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 
 			concatenar_mensaje_con_2_parametros(mensaje_create_segment, instruccion);
 
+			if(atoi(instruccion->parametro[1]) > atoi(tam_max_segmento)){
+				log_info(cpu_logger, "PID: %u - Error OUT_OF_MEMORY - Segmento: - Offset: - Tamaño: ",contexto_de_ejecucion->pid);
+				enviarContexto("CREATE_SEGMENT OUT_OF_MEMORY");
+			}else{
 			enviarContexto(mensaje_create_segment);
+			}
 			break;
 
 		case DELETE_SEGMENT:

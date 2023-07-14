@@ -150,7 +150,7 @@ void ejecutar_instruccion(char* motivo){
 			//pthread_mutex_lock(&sem_execute_fileSystem);
 			enviar_mensaje("COMPACT", socket_kernel);
 			//pthread_mutex_unlock(&sem_execute_fileSystem);
-		} else {
+		} else{
 			void* base_elegida = (void*) strtoul(mensaje, NULL, 16);
 			void* limite_elegido = (void*) (base_elegida + atoi(parametros[2]));
 

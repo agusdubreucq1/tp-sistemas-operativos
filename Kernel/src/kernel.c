@@ -584,6 +584,11 @@ void ejecutar_segun_motivo(char* motivo){
 	case CREATE_SEGMENT:
 
 		parametros = string_split(motivo, " ");
+
+		if(!strcmp(parametros[1],"OUT_OF_MEMORY")){
+			log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: OUT OF MEMORY", pcb_a_ejecutar->pid);
+			finalizar_proceso(pcb_a_ejecutar, "OUT_OF_MEMORY");
+		}else{
 		log_info(kernel_logger, "PID: %d - Crear Segmento - ID: %s - Tamaño: %s", pcb_a_ejecutar->pid, parametros[1], parametros[2]);
 
 		char numero[4];
@@ -596,6 +601,7 @@ void ejecutar_segun_motivo(char* motivo){
 		enviar_mensaje(motivo, socket_memoria);
 		recibir_mensaje_memoria();
 		pthread_mutex_unlock(&sem_memoria);
+		}
 		break;
 
 	case DELETE_SEGMENT:
