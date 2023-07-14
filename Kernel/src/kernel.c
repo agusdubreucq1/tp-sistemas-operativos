@@ -124,6 +124,7 @@ void init_estructuras_planificacion(){
     lista_pcbs = list_create();
 
     devolver_ejecucion = 0;
+    fileSystem_ejecutando =0;
 
     int i = 0;
 	char** ptr = recursos;
@@ -261,7 +262,12 @@ void ejecutar_motivo_memoria(char* motivo, char* inst){
 		//pcb_ejecutando = pcb_a_ejecutar;
 		break;
 	case COMPACT:
+		if(fileSystem_ejecutando){
+			log_info(kernel_logger, "Compactacion: Esperando Fin de Operaciones de FS");
+		}
+		pthread_mutex_lock(&sem_fileSystem);
 		log_info(kernel_logger, "Compactacion: Se solicito compactacion");
+
 		enviar_mensaje("COMPACT", socket_memoria);
 		int elementos = list_size(lista_pcbs);
 		printf("\n ELEMENTOS %i \n", elementos);
@@ -277,6 +283,7 @@ void ejecutar_motivo_memoria(char* motivo, char* inst){
 
 		enviar_mensaje(inst, socket_memoria);
 		recibir_mensaje_memoria("");
+		pthread_mutex_unlock(&sem_fileSystem);
 		break;
 	default:
 		break;
@@ -685,6 +692,7 @@ void accionFileSystem(t_args_fileSystem* args){//para TRUNCATE, READ Y WRITE
 	char** parametros = string_split(args->motivo, " ");
 	printf("\nEL MOTIVO ES: %s\n\n", args->motivo);
 	pthread_mutex_lock(&sem_fileSystem);
+	fileSystem_ejecutando = 1;
 	enviar_mensaje(args->motivo, socket_fileSystem);
 	log_cambiar_estado(args->pcb->pid, args->pcb->estado, BLOCKED);
 	log_info(kernel_logger, "PID: %d - Bloqueado por: %s", args->pcb->pid, parametros[1]);
@@ -692,6 +700,7 @@ void accionFileSystem(t_args_fileSystem* args){//para TRUNCATE, READ Y WRITE
 	char* mensaje = recibir_mensaje_filesystem();
 	free(mensaje);
 	pthread_mutex_unlock(&sem_fileSystem);
+	fileSystem_ejecutando = 0;
 	mandar_a_ready(args->pcb);
 
 	free(args->motivo);

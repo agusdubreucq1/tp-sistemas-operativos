@@ -83,6 +83,7 @@
 	t_list* lista_pcbs;
 
 	int devolver_ejecucion;
+	int fileSystem_ejecutando;
 	t_pcb* pcb_ejecutando;
 	t_pcb* pcb_a_ejecutar;
 
