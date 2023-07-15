@@ -666,7 +666,7 @@ void finalizar_proceso(t_pcb* pcb, char* motivo){
 	enviar_mensaje(mensaje_mem, socket_memoria);
 	pthread_mutex_unlock(&sem_memoria);
 
-	log_error(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb->pid, motivo);
+	log_info(kernel_logger, "Finaliza el proceso PID: %d - Motivo: %s ", pcb->pid, motivo);
 	enviar_mensaje("-1", pcb->pid);
 	liberar_recursos(pcb);
 	liberar_archivos(pcb);

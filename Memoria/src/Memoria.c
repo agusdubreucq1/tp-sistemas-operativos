@@ -235,6 +235,7 @@ void ejecutar_instruccion(char* motivo){
 	case COMPACT:
 		pthread_mutex_lock(&sem_execute_fileSystem);
 		compactar_perrito();
+		usleep(atoi(retardo_compactacion)*1000);
 		pthread_mutex_unlock(&sem_execute_fileSystem);
 		int elementos = list_size(tablas_segmentos);
 		//printf("\n ELEMENTOS %i \n", elementos);
