@@ -21,7 +21,7 @@ int main(void){
 
 	//iniciar_servidor_cpu();
 
-	server_cpu = iniciar_servidor(IP_SERVER, puerto_escucha, cpu_logger);
+	server_cpu = iniciar_servidor(NULL, puerto_escucha, cpu_logger);
 	log_info(cpu_logger, "Servidor listo para recibir al cliente");
 
 
