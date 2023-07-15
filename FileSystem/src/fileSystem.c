@@ -18,7 +18,7 @@ int main(void){
 	leer_configs(fileSystem_config, fileSystem_logger);
 	log_info(fileSystem_logger, "¡File System iniciado correctamente!");
 
-	server_fileSystem = iniciar_servidor(IP_SERVER, puerto_escucha, fileSystem_logger);
+	server_fileSystem = iniciar_servidor(NULL, puerto_escucha, fileSystem_logger);
 	log_info(fileSystem_logger, "Servidor listo para recibir al cliente");
 
 	inicializar_estructuras();
