@@ -24,7 +24,7 @@ int main(void) {
 	leer_configs(memoria_config, memoria_logger);
 	log_info(memoria_logger, "¡Memoria iniciado correctamente!");
 
-	server_memoria = iniciar_servidor(IP_SERVER, puerto_escucha, memoria_logger);
+	server_memoria = iniciar_servidor(NULL, puerto_escucha, memoria_logger);
 	log_info(memoria_logger, "Servidor listo para recibir al cliente");
 
 	sem_init(&sem_conexiones, 0, 0);
