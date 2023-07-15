@@ -24,10 +24,10 @@ int desplazamiento_valido(t_registros *registros, char *registro, int direccion_
 	int limite = (intptr_t)segmento->limite;
 	int base = (intptr_t)segmento->direccion_base;
 
-	printf("\nDesplazamiento + Tamanio_a_leer/escribir de %s: %d + %d = %d\n", registro,
+	/*printf("\nDesplazamiento + Tamanio_a_leer/escribir de %s: %d + %d = %d\n", registro,
 																			   obtener_desplazamiento_segmento(direccion_logica),
 																			   registros_get_size(registros, registro),
-																			   desplazamiento_segmento);
+																			   desplazamiento_segmento);*/
 
 	if((base+desplazamiento_segmento) > limite) {
 		return 0;

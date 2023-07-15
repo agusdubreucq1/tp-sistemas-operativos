@@ -33,10 +33,10 @@ int main(int argc, char** argv) {
 
 	leer_configs(consola_logger, consola_config);
 
-	printf("IP %s PUERTO %s", ip_kernel, puerto_kernel);
+	//printf("IP %s PUERTO %s", ip_kernel, puerto_kernel);
 	int conexion_kernel = crear_conexion(ip_kernel, puerto_kernel, consola_logger, "Kernel");
 
-	printf(" SOCKET %d", conexion_kernel);
+	//printf(" SOCKET %d", conexion_kernel);
 	uint32_t mandar = 1;
 	handshake(conexion_kernel, mandar, consola_logger, "Kernel");
 

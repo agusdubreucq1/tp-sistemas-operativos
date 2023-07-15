@@ -22,7 +22,7 @@ void imprimir_bitmap(){
 
 	for (int i = 0; i < bitmap->size; i++) {
     	//bitarray_clean_bit(bitmap, i);
-        printf("%d", bitarray_test_bit(bitmap, i));
+        //printf("%d", bitarray_test_bit(bitmap, i));
     }
 }
 
@@ -43,7 +43,7 @@ void ocupar_bitmap(int inicio, int cant) {
 			}
 	}
 	else {
-		printf("\nLos huecos donde se desea escribir no estan libres");
+		//printf("\nLos huecos donde se desea escribir no estan libres");
 	}
 
 }
@@ -239,10 +239,10 @@ int worst_fit_bitmap(int tamanio) {
 }
 
 int devolver_posicion_bitmap_segun_direccion(void *direccion_memoria) {
-	printf("\nEntre a devolver_posicion_bitmap_segun_direccion!");
+	//printf("\nEntre a devolver_posicion_bitmap_segun_direccion!");
 	for (int i=0; i<bitmap->size; i++) {
 		if ((memoria_fisica+i) == direccion_memoria) {
-			printf("\n%p == %p\nEl hueco libre es: %d", memoria_fisica, direccion_memoria, i);
+			//printf("\n%p == %p\nEl hueco libre es: %d", memoria_fisica, direccion_memoria, i);
 			return i;
 		}
 	}

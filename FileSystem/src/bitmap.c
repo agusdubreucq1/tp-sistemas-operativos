@@ -35,7 +35,7 @@ int inicializar_bitmap() {
     	log_trace(fileSystem_logger, "Creando Bitmap desde archivo -> bitmap.dat");
         fread(bitmap->bitarray, 1, (cant_bloques) / 8, file);
 
-        printf("archivo bitmap ya existia\n");
+        //printf("archivo bitmap ya existia\n");
     }
 
     imprimir_bitmap_20(bitmap);
@@ -48,11 +48,11 @@ int inicializar_bitmap() {
 
 
 int bloque_libre(){
-	printf("\nBuscando bloque libre -----------\n");
+	//printf("\nBuscando bloque libre -----------\n");
 	for(int i=0;i<bitmap->size*8; i++){
 		log_info(fileSystem_logger, "Acceso a Bitmap - Bloque: %d - Estado: %d", i, bitarray_test_bit(bitmap, i));
 		if(bitarray_test_bit(bitmap, i)==0){
-			printf("----------------------------\n");
+			//printf("----------------------------\n");
 			return i;
 		}
 	}
@@ -69,9 +69,9 @@ uint32_t asignar_bloque(){
 	uint32_t bloque_a_asignar;
 	bloque_a_asignar = bloque_libre();
 	bitarray_set_bit(bitmap, bloque_a_asignar);
-	printf("\nAsignado------\n");
+	//printf("\nAsignado------\n");
 	log_info(fileSystem_logger, "Acceso a Bitmap - Bloque: %d - Estado: %d", bloque_a_asignar, bitarray_test_bit(bitmap, bloque_a_asignar));
-	printf("-------------------\n");
+	//printf("-------------------\n");
 	grabar_bitmap(bitmap);
 	return bloque_a_asignar;
 }
@@ -84,22 +84,22 @@ void grabar_bitmap(t_bitarray* bitmap){
 }
 
 void imprimir_bitmap(t_bitarray* bitmap){
-	printf("\nimprimiendo bitmap: \n[");
+	//printf("\nimprimiendo bitmap: \n[");
 	//printf("bitmap->size: %ld\n", bitmap->size);
 	for (int i = 0; i < bitmap->size*8; i++) {
     	//bitarray_clean_bit(bitmap, i);
-        printf("%d ", bitarray_test_bit(bitmap, i));
+       // printf("%d ", bitarray_test_bit(bitmap, i));
     }
-	printf("\n\n");
+	//printf("\n\n");
 }
 
 void imprimir_bitmap_20(t_bitarray* bitmap){
-	printf("\n\nimprimiendo bitmap: \n[");
+	//printf("\n\nimprimiendo bitmap: \n[");
 	//printf("bitmap->size: %ld\n", bitmap->size);
 		for (int i = 0; i < 20; i++) {
 	    	//bitarray_clean_bit(bitmap, i);
-	        printf("%d ", bitarray_test_bit(bitmap, i));
+	       // printf("%d ", bitarray_test_bit(bitmap, i));
 	    }
-		printf("]\n\n");
+		//printf("]\n\n");
 }
 

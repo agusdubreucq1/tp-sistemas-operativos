@@ -46,13 +46,13 @@ void inicializar_bloques(){
 void leerBloque(int bloque){
 	FILE* file = fopen(path_bloques, "rb");
 	fseek(file, bloque*64,SEEK_SET);
-	printf("\n\nimprimiendo bloque %d\n", bloque);
+	//printf("\n\nimprimiendo bloque %d\n", bloque);
 	uint32_t puntero;
 	for(int i=0;i<16;i++){
 		fread(&puntero,4,1,file);
-		printf("%d ", puntero);
+		//printf("%d ", puntero);
 	}
-	printf("\n\n");
+	//printf("\n\n");
 	fclose(file);
 }
 

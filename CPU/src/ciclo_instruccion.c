@@ -74,7 +74,7 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 				char *valor_registro_nuevo = recibir_instruccion(socket_memoria, cpu_logger);
 
 				registros_put(contexto_de_ejecucion->registros_cpu, instruccion->parametro[0], valor_registro_nuevo);
-				printf("\nValor del registro que me llega de MOV IN: %s\n\n", valor_registro_nuevo);
+				//printf("\nValor del registro que me llega de MOV IN: %s\n\n", valor_registro_nuevo);
 				print_registos(contexto_de_ejecucion->registros_cpu);
 			}
 
@@ -182,9 +182,9 @@ int ejecutar_instruccion(t_instruccion* instruccion){
 																	   instruccion->parametro[2]);
 			char mensaje_f_write[100] = "";
 			int dir_logica_write = atoi(instruccion->parametro[1]);
-			printf("\ndir_logica: %d\n\n", dir_logica_write);
+			//printf("\ndir_logica: %d\n\n", dir_logica_write);
 			void* dir_fisica_write = direccion_fisica(dir_logica_write);
-			printf("\ndir_fisica: %p\n\n", dir_fisica_write);
+			//printf("\ndir_fisica: %p\n\n", dir_fisica_write);
 			int tamanio_write = atoi(instruccion->parametro[2]);
 			sprintf(mensaje_f_write, "F_WRITE %s %p %d", instruccion->parametro[0], dir_fisica_write, tamanio_write);
 			//concatenar_mensaje_con_3_parametros(mensaje_f_read, instruccion);

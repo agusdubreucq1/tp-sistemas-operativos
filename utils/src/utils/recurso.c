@@ -18,7 +18,7 @@ t_recurso* crear_recurso(char* nombre, int cantidad){
 }
 
 void imprimir_recurso(t_recurso* recurso){
-	printf("Recurso: %s", recurso->nombre);
-	printf("Cantidad: %i", recurso->cantidad);
+	//printf("Recurso: %s", recurso->nombre);
+	//printf("Cantidad: %i", recurso->cantidad);
 	//printf("Procesos Bloqueados: \n");
 }

@@ -78,7 +78,7 @@ void inicializar_FCBs(){
 					uint32_t tamanio = config_get_int_value(fcb_config, "TAMANIO_ARCHIVO");
 					uint32_t puntero_directo = config_get_int_value(fcb_config, "PUNTERO_DIRECTO");
 					uint32_t puntero_indirecto = config_get_int_value(fcb_config, "PUNTERO_INDIRECTO");
-					printf("----------\n-nombre: %s\n-tamanio: %d\n-pd: %d\n-pi: %d\n----------\n\n", nombre, tamanio, puntero_directo, puntero_indirecto);
+					//printf("----------\n-nombre: %s\n-tamanio: %d\n-pd: %d\n-pi: %d\n----------\n\n", nombre, tamanio, puntero_directo, puntero_indirecto);
 
 					t_fcb* fcb = leer_fcb(nombre, tamanio, puntero_directo, puntero_indirecto);
 					list_add(lista_fcb, fcb);

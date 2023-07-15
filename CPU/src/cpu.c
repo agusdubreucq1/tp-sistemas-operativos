@@ -123,6 +123,6 @@ void cerrar_conexiones(){
 	close(server_cpu);
 	//close(socket_Kernel);
 	close(socket_memoria);
-	printf("cerre conexiones");
+	//printf("cerre conexiones");
 	exit(1);
 }

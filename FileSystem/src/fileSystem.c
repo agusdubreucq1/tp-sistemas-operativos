@@ -111,7 +111,7 @@ void inicializar_estructuras(){
 	inicializar_bloques();
 	inicializar_FCBs();
 
-	printf("todo creado\n");
+	//printf("todo creado\n");
 }
 
 
@@ -159,16 +159,16 @@ void agrandar(t_fcb* fcb, int asignados, int necesarios){
 
 void liberar_bloque(t_fcb* fcb, int* asignados){
 	if((*asignados)==1){
-		printf("liberando PD: %d\n", fcb->puntero_directo);
+		//printf("liberando PD: %d\n", fcb->puntero_directo);
 		desasignar_bloque(fcb->puntero_directo);
 	}else{
 		int posicion = fcb->puntero_indirecto* tamanio_bloque + ((*asignados) - 2)*4;
 		uint32_t bloque_a_liberar;
 		leerArchivoBloques((void*)&bloque_a_liberar,posicion, sizeof(uint32_t));
-		printf("liberando bloque: %d\n", bloque_a_liberar);
+		//printf("liberando bloque: %d\n", bloque_a_liberar);
 		desasignar_bloque(bloque_a_liberar);
 		if((*asignados)==2){
-			printf("\nlibero el puntero indirecto: %d \n", fcb->puntero_indirecto);
+			//printf("\nlibero el puntero indirecto: %d \n", fcb->puntero_indirecto);
 			desasignar_bloque(fcb->puntero_indirecto);//libero el bloque del puntero indirecto
 			//imprimir_bitmap_20(bitmap);
 		}
@@ -178,7 +178,7 @@ void liberar_bloque(t_fcb* fcb, int* asignados){
 
 void achicar(t_fcb* fcb, int asignados, int necesarios){
 	int liberar =asignados - necesarios;
-	printf("\n bloques a liberar: %d\n", liberar);
+	//printf("\n bloques a liberar: %d\n", liberar);
 	if(asignados==1 && necesarios==0){
 		desasignar_bloque(fcb->puntero_directo);
 	}else{
@@ -296,7 +296,7 @@ void ejecutar_instruccion(char* instruccion){
 		case F_OPEN:
 			parametros = string_split(instruccion, " ");
 			char* archivo_abrir = parametros[1];
-			printf("se solicito abrir el archivo: %s \n", archivo_abrir);
+			//printf("se solicito abrir el archivo: %s \n", archivo_abrir);
 			if(existe_archivo(archivo_abrir)){
 				log_info(fileSystem_logger, "abrir archivo: %s",archivo_abrir);
 				enviar_mensaje("OK", socket_Kernel);

@@ -270,7 +270,7 @@ void ejecutar_motivo_memoria(char* motivo, char* inst){
 
 		enviar_mensaje("COMPACT", socket_memoria);
 		int elementos = list_size(lista_pcbs);
-		printf("\n ELEMENTOS %i \n", elementos);
+		//printf("\n ELEMENTOS %i \n", elementos);
 		for(int i = 0; i < elementos; i++){
 			recibir_mensaje_memoria("");
 			t_pcb* pcb_modificar = buscar_pcb(lista_pcbs, tablaNueva->pid);
@@ -475,7 +475,7 @@ void ejecutar_segun_motivo(char* motivo){
 				log_info(kernel_logger, "PID: %d - Bloqueado por: %s", pcb_a_ejecutar->pid, archivo_abrir->nombre);
 				pcb_a_ejecutar->estado = BLOCKED;
 				agregar_archivo_al_proceso(archivo_abrir, pcb_a_ejecutar);//lo agrega con el puntero en 0
-				printf("el archivo: %s ya estaba abierto, el proceso: %d se bloquea", archivo_abrir->nombre,pcb_a_ejecutar->pid);
+				//printf("el archivo: %s ya estaba abierto, el proceso: %d se bloquea", archivo_abrir->nombre,pcb_a_ejecutar->pid);
 			} else{
 				//se abre el archivo, si no existe, se crea. y se agrega a la tabla global de archivos abiertos y del proceso
 				//IMPLEMENTAR
@@ -484,13 +484,13 @@ void ejecutar_segun_motivo(char* motivo){
 				char* mensaje_fopen = recibir_mensaje_filesystem();
 				if(string_equals_ignore_case(mensaje_fopen, "OK")){
 					free(mensaje_fopen);
-					printf("\n estaba creado\n");
+					//printf("\n estaba creado\n");
 				}else{
 					char f_create[100]="";
 					sprintf(f_create, "F_CREATE %s", parametros[1]);
 					enviar_mensaje(f_create, socket_fileSystem);
 					char* mensaje_create = recibir_mensaje_filesystem();
-					printf("\nse creo\n");
+					//printf("\nse creo\n");
 					free(mensaje_create);
 				}
 
@@ -498,7 +498,7 @@ void ejecutar_segun_motivo(char* motivo){
 				t_archivo* archivo_creado = crear_archivo(parametros[1]);
 				list_add(lista_archivos_abiertos, archivo_creado);
 
-				printf("el archivo_creado->nombre: %s\n\n", archivo_creado->nombre);
+				//printf("el archivo_creado->nombre: %s\n\n", archivo_creado->nombre);
 				agregar_archivo_al_proceso(archivo_creado, pcb_a_ejecutar);
 
 				//ingresar_en_lista(pcb_a_ejecutar, lista_ready, "READY", &semaforo_ready, &cantidad_procesos_ready, READY);
@@ -690,7 +690,7 @@ void liberar_archivos(t_pcb* pcb){
 
 void accionFileSystem(t_args_fileSystem* args){//para TRUNCATE, READ Y WRITE
 	char** parametros = string_split(args->motivo, " ");
-	printf("\nEL MOTIVO ES: %s\n\n", args->motivo);
+	//printf("\nEL MOTIVO ES: %s\n\n", args->motivo);
 	pthread_mutex_lock(&sem_fileSystem);
 	fileSystem_ejecutando = 1;
 	enviar_mensaje(args->motivo, socket_fileSystem);
@@ -712,7 +712,7 @@ void cerrar_archivo(char* nombre_archivo, t_pcb* pcb){
 
 	log_info(kernel_logger, "PID: %d - Cerrar Archivo: %s", pcb->pid, archivo->nombre);
 	if(archivo==NULL){
-		printf("\nno se encontro el archivo en la tabla de archivos del pcb\n\n");
+		//printf("\nno se encontro el archivo en la tabla de archivos del pcb\n\n");
 		return;
 	}
 	list_remove_element(pcb->tabla_archivos, archivo);
@@ -726,7 +726,7 @@ void cerrar_archivo(char* nombre_archivo, t_pcb* pcb){
 		t_pcb* pcb_a_desbloquear = list_get(archivo->listaBloqueados, 0);
 		list_remove_element(archivo->listaBloqueados, pcb_a_desbloquear);
 		mandar_a_ready(pcb_a_desbloquear);
-		printf("\nPCB: %d desbloquedo xq pcb: %d cerro el archivo: %s\n\n",pcb_a_desbloquear->pid, pcb->pid, archivo->nombre);
+		//printf("\nPCB: %d desbloquedo xq pcb: %d cerro el archivo: %s\n\n",pcb_a_desbloquear->pid, pcb->pid, archivo->nombre);
 	}
 
 }
@@ -806,11 +806,11 @@ void liberar_elemento_list(void* elemento){
 
 void imprimirSemaforos(){
 	int semaphoreValue;
-	printf("\n\n\n\nElementos %d ",list_size(lista_ready));
+	//printf("\n\n\n\nElementos %d ",list_size(lista_ready));
 	sem_getvalue(&semaforo_multiprogramacion, &semaphoreValue);
-	printf("Semaforo Multi %d \n\n\n\n", semaphoreValue);
+	//printf("Semaforo Multi %d \n\n\n\n", semaphoreValue);
 	sem_getvalue(&cantidad_procesos_ready, &semaphoreValue);
-	printf("Semaforo Ready %d \n\n\n\n", semaphoreValue);
+	//printf("Semaforo Ready %d \n\n\n\n", semaphoreValue);
 }
 
 void liberarTablaSegmentos(t_pcb* pcb){

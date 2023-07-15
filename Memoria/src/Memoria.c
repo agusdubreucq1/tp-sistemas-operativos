@@ -200,7 +200,7 @@ void ejecutar_instruccion(char* motivo){
 		memcpy(valor_registro, direccion_fisica_mov_in, tamanio_mov_in);
 		usleep(atoi(retardo_memoria) * 1000);
 		valor_registro[tamanio_mov_in] = '\0';
-		printf("\nValor_registro: %s", valor_registro);
+		//printf("\nValor_registro: %s", valor_registro);
 		enviar_mensaje(valor_registro, socket_cpu);
 		free(valor_registro);
 		break;
@@ -224,7 +224,7 @@ void ejecutar_instruccion(char* motivo){
 		memcpy(valor_registro_write, direccion_fisica_write, tamanio_write);
 		usleep(atoi(retardo_memoria) * 1000);
 		valor_registro_write[tamanio_write] = '\0';
-		printf("\nValor_registro: %s", valor_registro_write);
+		//printf("\nValor_registro: %s", valor_registro_write);
 		enviar_mensaje(valor_registro_write, socket_filesystem);
 		free(valor_registro_write);
 
@@ -237,7 +237,7 @@ void ejecutar_instruccion(char* motivo){
 		compactar_perrito();
 		pthread_mutex_unlock(&sem_execute_fileSystem);
 		int elementos = list_size(tablas_segmentos);
-		printf("\n ELEMENTOS %i \n", elementos);
+		//printf("\n ELEMENTOS %i \n", elementos);
 		for (int i = 0; i < elementos; i++){
 			t_tabla_segmentos* tabla = list_get(tablas_segmentos, i);
 			enviar_segmentos(tabla, socket_kernel);
@@ -283,11 +283,11 @@ void crear_estructuras(){
 }
 
 void cerrar_conexiones(){
-	printf("\ncerrando conexiones\n");
+	//printf("\ncerrando conexiones\n");
 
 	close(server_memoria);
 	//close(socket_Kernel);
-	printf("cerre conexiones");
+	//printf("cerre conexiones");
 	exit(1);
 }
 

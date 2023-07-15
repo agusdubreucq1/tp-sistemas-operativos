@@ -235,13 +235,13 @@ void imprimir_huecos(t_list* lista){
 	int elementos = list_size(lista);
 	for (int i = 0; i < elementos; i++) {
 		t_segmento* segmento = list_get(lista, i);
-		printf("\n\n Segmento %i", i);
+		/*printf("\n\n Segmento %i", i);
 		printf("\n Pid %u", segmento->pid);
 		printf("\n Libre %u", segmento->libre);
 		printf("\n Base %p", segmento->direccion_base);
 		printf("\n Limite %p", segmento->limite);
 		printf("\n Tamanio hueco: %ld", segmento->limite - segmento->direccion_base);
-		printf("\n");
+		printf("\n");*/
 	}
 }
 
