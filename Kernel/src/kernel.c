@@ -20,7 +20,7 @@ int main(void){
 	leer_configs(kernel_config, kernel_logger);
 	log_info(kernel_logger, "¡Kernel iniciado correctamente!");
 
-	server_kernel = iniciar_servidor(IP_SERVER, puerto_escucha, kernel_logger);
+	server_kernel = iniciar_servidor(NULL, puerto_escucha, kernel_logger);
 	log_info(kernel_logger, "Servidor listo para recibir al cliente");
 
 	init_estructuras_planificacion();
